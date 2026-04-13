@@ -1,0 +1,71 @@
+/* ─── Placeholder / Coming Soon Pages ─── */
+
+.placeholder-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+    padding: 2rem;
+    animation: placeholderFadeIn 0.5s ease-out;
+}
+
+@keyframes placeholderFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.placeholder-icon {
+    font-size: var(--typo-xl);
+    margin-bottom: 1.5rem;
+    animation: placeholderBounce 2s ease-in-out infinite;
+}
+
+@keyframes placeholderBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.placeholder-page h1 {
+    font-size: var(--typo-l);
+    font-weight: 700;
+    color: var(--text-primary, #1e293b);
+    margin: 0 0 0.5rem 0;
+}
+
+.placeholder-desc {
+    color: var(--text-secondary, #64748b);
+    font-size: var(--typo-s);
+    margin: 0 0 1.5rem 0;
+    max-width: 400px;
+    line-height: 1.5;
+}
+
+.placeholder-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    font-size: var(--typo-xs);
+    font-weight: 600;
+    padding: 0.4rem 1.2rem;
+    border-radius: 999px;
+    letter-spacing: 0.03em;
+    box-shadow: 0 2px 12px rgba(99, 102, 241, 0.3);
+}

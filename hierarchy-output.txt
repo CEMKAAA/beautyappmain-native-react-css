@@ -1,0 +1,321 @@
+COMPLETE ELEMENT HIERARCHY FROM computed-styles.json
+======================================================================
+
+el-0 <div> [self-BpXBNj] {h:880px, bg:rgb(255, 255, 255), d:flex, mw:100%}
+  el-1 <div> [fWGGPm] {w:72px, h:880px, d:flex}
+    el-2 <div> [nvr__wrapper-JKxO7Z] {w:72px, h:880px, z:725, bg:rgb(13, 13, 13), d:flex, dir:column, brw:1px, mw:72px, pt:8px}
+      el-3 <div> [oClUcX] {w:71px, h:864px, d:flex, dir:column, ovx:hidden, ovy:auto}
+        el-4 <div> [fWGGPm] {w:71px, h:864px, d:flex, dir:column}
+          el-5 <div> [] {w:72px, h:572px}
+            el-6 <div> [] {w:72px, h:52px}
+              el-7 <div> [] {w:72px, h:52px}
+                el-8 <a> [nvri__touch-target-tcvzaM] {w:72px, h:52px, d:flex, pt:4px}
+                  el-9 <div> [_XdG-5] {w:44px, pos:relative, bg:rgba(255, 255, 255, 0), d:flex, transition:scale, background-color, dur:0.2s, 0.2s, rad:8px}
+                    el-10 <span> [d_inline-flex] {w:28px, pos:relative, d:flex}
+                      el-11 <svg> [] {w:28px, pos:absolute, ovx:hidden, ovy:hidden}
+                        el-12 <path> [] {w:auto, d:inline}
+            el-13 <div> [] {w:72px, h:52px}
+              el-14 <div> [] {w:72px, h:52px}
+                el-15 <a> [nvri__touch-target-tcvzaM] {w:72px, h:52px, d:flex, pt:4px}
+                  el-16 <div> [_XdG-5] {w:44px, pos:relative, bg:rgba(255, 255, 255, 0), d:flex, transition:scale, background-color, dur:0.2s, 0.2s, rad:8px}
+                    el-17 <span> [d_inline-flex] {w:28px, pos:relative, d:flex}
+                      el-18 <svg> [] {w:28px, pos:absolute, ovx:hidden, ovy:hidden}
+                        el-19 <path> [] {w:auto, d:inline}
+            el-20 <div> [] {w:72px, h:52px}
+              el-21 <div> [] {w:72px, h:52px}
+                el-22 <button> [ring_none] {w:72px, h:52px, pos:relative, d:flex, pt:4px}
+                  el-23 <div> [_XdG-5] {w:44px, pos:relative, bg:rgb(105, 80, 243), d:flex, transition:scale, background-color, dur:0.2s, 0.2s, rad:8px}
+                    el-24 <span> [d_inline-flex] {w:28px, pos:relative, d:flex}
+                      el-25 <svg> [] {w:28px, pos:absolute, ovx:hidden, ovy:hidden}
+                        el-26 <path> [] {w:auto, d:inline}
+                        el-27 <path> [] {w:auto, d:inline}
+            el-28 <div> [] {w:72px, h:52px}
+              el-29 <div> [] {w:72px, h:52px}
+                el-30 <button> [ring_none] {w:72px, h:52px, pos:relative, d:flex, pt:4px}
+                  el-31 <div> [_XdG-5] {w:44px, pos:relative, bg:rgba(255, 255, 255, 0), d:flex, transition:scale, background-color, dur:0.2s, 0.2s, rad:8px}
+                    el-32 <span> [d_inline-flex] {w:28px, pos:relative, d:flex}
+                      el-33 <svg> [] {w:28px, pos:absolute, ovx:hidden, ovy:hidden}
+                        el-34 <path> [] {w:auto, d:inline}
+                        el-35 <path> [] {w:auto, d:inline}
+            el-36 <div> [] {w:72px, h:52px}
+              el-37 <div> [] {w:72px, h:52px}
+                el-38 <button> [ring_none] {w:72px, h:52px, pos:relative, d:flex, pt:4px}
+                  el-39 <div> [_XdG-5] {w:44px, pos:relative, bg:rgba(255, 255, 255, 0), d:flex, transition:scale, background-color, dur:0.2s, 0.2s, rad:8px}
+                    el-40 <span> [d_inline-flex] {w:28px, pos:relative, d:flex}
+                      el-41 <svg> [] {w:28px, pos:absolute, ovx:hidden, ovy:hidden}
+                        el-42 <path> [] {w:auto, d:inline}
+            el-43 <div> [] {w:72px, h:52px}
+              el-44 <div> [] {w:72px, h:52px}
+                el-45 <button> [ring_none] {w:72px, h:52px, pos:relative, d:flex, pt:4px}
+                  el-46 <div> [_XdG-5] {w:44px, pos:relative, bg:rgba(255, 255, 255, 0), d:flex, transition:scale, background-color, dur:0.2s, 0.2s, rad:8px}
+                    el-47 <span> [d_inline-flex] {w:28px, pos:relative, d:flex}
+                      el-48 <svg> [] {w:28px, pos:absolute, ovx:hidden, ovy:hidden}
+                        el-49 <path> [] {w:auto, d:inline}
+            el-50 <div> [] {w:72px, h:52px}
+              el-51 <div> [] {w:72px, h:52px}
+                el-52 <button> [ring_none] {w:72px, h:52px, pos:relative, d:flex, pt:4px}
+                  el-53 <div> [_XdG-5] {w:44px, pos:relative, bg:rgba(255, 255, 255, 0), d:flex, transition:scale, background-color, dur:0.2s, 0.2s, rad:8px}
+                    el-54 <span> [d_inline-flex] {w:28px, pos:relative, d:flex}
+                      el-55 <span> [rtl-icon] {w:auto, d:none}
+                        el-56 <svg> [] {w:auto, pos:absolute, ovx:hidden, ovy:hidden}
+                          el-57 <path> [] {w:auto, d:inline}
+                      el-58 <span> [ltr-icon] {w:0px, h:28px}
+                        el-59 <svg> [] {w:28px, pos:absolute, ovx:hidden, ovy:hidden}
+                          el-60 <path> [] {w:auto, d:inline}
+            el-61 <div> [] {w:72px, h:52px}
+              el-62 <div> [] {w:72px, h:52px}
+                el-63 <button> [ring_none] {w:72px, h:52px, pos:relative, d:flex, pt:4px}
+                  el-64 <div> [_XdG-5] {w:44px, pos:relative, bg:rgba(255, 255, 255, 0), d:flex, transition:scale, background-color, dur:0.2s, 0.2s, rad:8px}
+                    el-65 <span> [d_inline-flex] {w:28px, pos:relative, d:flex}
+                      el-66 <svg> [] {w:28px, pos:absolute, ovx:hidden, ovy:hidden}
+                        el-67 <path> [] {w:auto, d:inline}
+                    el-68 <div> [nvri__indicator-positioner-EXC] {w:8px, pos:absolute, l:32px, t:4px}
+                      el-69 <div> [nvri__indicator-AZRa3A] {w:8px, bg:rgb(105, 80, 243), rounded}
+            el-70 <div> [] {w:72px, h:52px}
+              el-71 <div> [] {w:72px, h:52px}
+                el-72 <a> [nvri__touch-target-tcvzaM] {w:72px, h:52px, d:flex, pt:4px}
+                  el-73 <div> [_XdG-5] {w:44px, pos:relative, bg:rgba(255, 255, 255, 0), d:flex, transition:scale, background-color, dur:0.2s, 0.2s, rad:8px}
+                    el-74 <span> [d_inline-flex] {w:28px, pos:relative, d:flex}
+                      el-75 <svg> [] {w:28px, pos:absolute, ovx:hidden, ovy:hidden}
+                        el-76 <path> [] {w:auto, d:inline}
+            el-77 <div> [] {w:72px, h:52px}
+              el-78 <div> [] {w:72px, h:52px}
+                el-79 <a> [nvri__touch-target-tcvzaM] {w:72px, h:52px, d:flex, pt:4px}
+                  el-80 <div> [_XdG-5] {w:44px, pos:relative, bg:rgba(255, 255, 255, 0), d:flex, transition:scale, background-color, dur:0.2s, 0.2s, rad:8px}
+                    el-81 <span> [d_inline-flex] {w:28px, pos:relative, d:flex}
+                      el-82 <svg> [] {w:28px, pos:absolute, ovx:hidden, ovy:hidden}
+                        el-83 <path> [] {w:auto, d:inline}
+            el-84 <div> [] {w:72px, h:52px}
+              el-85 <div> [] {w:72px, h:52px}
+                el-86 <a> [nvri__touch-target-tcvzaM] {w:72px, h:52px, d:flex, pt:4px}
+                  el-87 <div> [_XdG-5] {w:44px, pos:relative, bg:rgba(255, 255, 255, 0), d:flex, transition:scale, background-color, dur:0.2s, 0.2s, rad:8px}
+                    el-88 <span> [d_inline-flex] {w:28px, pos:relative, d:flex}
+                      el-89 <svg> [] {w:28px, pos:absolute, ovx:hidden, ovy:hidden}
+                        el-90 <path> [] {w:auto, d:inline}
+          el-91 <div> [nvr__footer-uaY3WO] {w:72px, h:60px, d:flex, dir:column}
+            el-92 <div> [] {w:72px, h:52px}
+              el-93 <button> [ring_none] {w:72px, h:52px, pos:relative, d:flex, pt:4px}
+                el-94 <div> [_XdG-5] {w:44px, pos:relative, bg:rgba(255, 255, 255, 0), d:flex, transition:scale, background-color, dur:0.2s, 0.2s, rad:8px}
+                  el-95 <span> [d_inline-flex] {w:28px, pos:relative, d:flex}
+                    el-96 <svg> [] {w:28px, pos:absolute, ovx:hidden, ovy:hidden}
+                      el-97 <path> [] {w:auto, d:inline}
+                      el-98 <path> [] {w:auto, d:inline}
+    el-99 <div> [nvm__animation-wrapper-z0kWGA] {w:230px, h:880px, pos:absolute, z:718, ovx:auto, ovy:hidden, l:72px, t:65px, transition:transform, dur:0.3s, pr:22px}
+      el-100 <div> [nvm__wrapper-I6ypQK] {w:208px, h:880px, pos:relative, z:745, bg:rgb(255, 255, 255), transition:opacity, transform, dur:0.2s, 0.2s}
+        el-101 <div> [nvm__button-wrapper-SC9kO6] {w:36px, pos:absolute, z:750, l:208px, t:18px, tf:matrix(1, 0, 0, 1, -18, 0), transition:inset-inline-start, dur:0.5s}
+          el-102 <button> [ring_none] {w:36px, pos:relative, d:inline-flex, transition:max-inline-size, dur:0.2s, mw:100%, rounded}
+            el-103 <div> [d_inline-flex] {w:36px, bg:rgb(255, 255, 255), d:flex, transition:background-color, border-color, transfor, dur:0.1s, 0.1s, 0.1s, 0., brw:1px, mw:100%, pl:15px, pr:15px, rounded, gap:8px}
+              el-104 <span> [d_inherit] {w:1px, pos:absolute, d:flex, ovx:hidden, ovy:hidden, l:17.5px, t:17.5px, gap:8px}
+                el-105 <span> [_-wK_Hi] {w:1px, h:20px, ovx:hidden, ovy:hidden, mw:100%, fs:15px, fw:500} "Collapse Navigation Menu"
+              el-106 <span> [d_inline-flex] {w:20px, d:flex}
+                el-107 <span> [d_inline-flex] {w:20px, pos:relative, d:flex}
+                  el-108 <span> [rtl-icon] {w:auto, d:none}
+                    el-109 <svg> [] {w:auto, pos:absolute, ovx:hidden, ovy:hidden}
+                      el-110 <path> [] {w:auto, d:inline}
+                  el-111 <span> [ltr-icon] {w:0px, h:20px}
+                    el-112 <svg> [] {w:20px, pos:absolute, ovx:hidden, ovy:hidden}
+                      el-113 <path> [] {w:auto, d:inline}
+        el-114 <div> [nvm__container-IVfIzc] {w:208px, h:880px, ovx:hidden, ovy:hidden, transition:width, max-width, padding-inline, box-sh, dur:0.5s, 0.5s, 0.5s, 0., brw:1px, mw:208px, pt:24px, pl:8px, pr:8px}
+          el-115 <div> [nvm__menu-LqoAzG] {w:192px, h:296px, transition:opacity, transform, dur:0.2s, 0.5s}
+            el-116 <div> [fWGGPm] {w:192px, h:296px, d:flex, dir:column}
+              el-117 <p> [_-wK_Hi] {w:192px, h:24px, pl:16px, pr:16px, fs:17px, fw:600} "Sales"
+              el-118 <div> [fWGGPm] {w:192px, h:44px, d:flex, dir:column}
+                el-119 <a> [_XdG-5] {w:192px, h:44px, pos:relative, bg:rgba(19, 19, 19, 0), transition:background-color, dur:0.2s, pt:12px, pl:16px, pr:16px, rad:8px, gap:12px}
+                  el-120 <p> [_-wK_Hi] {w:160px, h:20px, fs:15px, fw:500} "Daily sales summary"
+              el-121 <div> [fWGGPm] {w:192px, h:44px, d:flex, dir:column}
+                el-122 <a> [_XdG-5] {w:192px, h:44px, pos:relative, bg:rgba(19, 19, 19, 0), transition:background-color, dur:0.2s, pt:12px, pl:16px, pr:16px, rad:8px, gap:12px}
+                  el-123 <p> [_-wK_Hi] {w:160px, h:20px, fs:15px, fw:500} "Appointments"
+              el-124 <div> [fWGGPm] {w:192px, h:44px, d:flex, dir:column}
+                el-125 <a> [_XdG-5] {w:192px, h:44px, pos:relative, bg:rgb(240, 240, 255), transition:background-color, dur:0.2s, pt:12px, pl:16px, pr:16px, rad:8px, gap:12px}
+                  el-126 <p> [_-wK_Hi] {w:160px, h:20px, fs:15px, fw:500} "Sales"
+              el-127 <div> [fWGGPm] {w:192px, h:44px, d:flex, dir:column}
+                el-128 <a> [_XdG-5] {w:192px, h:44px, pos:relative, bg:rgba(19, 19, 19, 0), transition:background-color, dur:0.2s, pt:12px, pl:16px, pr:16px, rad:8px, gap:12px}
+                  el-129 <p> [_-wK_Hi] {w:160px, h:20px, fs:15px, fw:500} "Payments"
+              el-130 <div> [fWGGPm] {w:192px, h:44px, d:flex, dir:column}
+                el-131 <a> [_XdG-5] {w:192px, h:44px, pos:relative, bg:rgba(19, 19, 19, 0), transition:background-color, dur:0.2s, pt:12px, pl:16px, pr:16px, rad:8px, gap:12px}
+                  el-132 <p> [_-wK_Hi] {w:160px, h:20px, fs:15px, fw:500} "Gift cards sold"
+              el-133 <div> [fWGGPm] {w:192px, h:44px, d:flex, dir:column}
+                el-134 <a> [_XdG-5] {w:192px, h:44px, pos:relative, bg:rgba(19, 19, 19, 0), transition:background-color, dur:0.2s, pt:12px, pl:16px, pr:16px, rad:8px, gap:12px}
+                  el-135 <p> [_-wK_Hi] {w:160px, h:20px, fs:15px, fw:500} "Memberships sold"
+  el-136 <div> [contentWrapper-zwjDAd] {w:1266px, h:880px, pos:relative, bg:rgb(255, 255, 255), d:flex, dir:column, ovx:hidden, ovy:hidden}
+    el-137 <div> [fWGGPm] {w:1266px, h:880px, d:flex}
+      el-138 <div> [nvmp__placeholder-xOVz_t] {w:208px, h:880px, transition:min-width, max-width, dur:0.5s, 0.5s, mw:208px}
+      el-139 <div> [self-pkFbk5] {w:1058px, h:880px, d:flex, dir:column, ovx:hidden, ovy:auto}
+        el-140 <div> [self-bR5ILf] {w:1058px, h:880px, bg:rgb(255, 255, 255), ovx:auto, ovy:auto}
+          el-141 <div> [content-pMZAKF] {w:1058px, h:880px, pos:relative, z:9, d:flex, dir:column}
+            el-142 <div> [self-gxCdkm] {w:1058px, h:880px, bg:rgb(255, 255, 255), d:flex, transition:transform, dur:0.4s}
+              el-143 <div> [content-njFc8B] {w:1058px, h:880px, d:flex, dir:column, mw:100%, pt:40px, pl:40px, pr:40px}
+                el-144 <div> [self-J7ilv9] {w:978px, h:84px, d:flex}
+                  el-145 <div> [content-p6DY0Z] {w:713.031px, h:60px, d:flex, dir:column}
+                    el-146 <div> [title-deXVvO] {w:713.031px, h:36px, d:flex}
+                      el-147 <h1> [_-wK_Hi] {w:66.2344px, h:36px, d:flex, fs:28px, fw:600} "Sales"
+                    el-148 <p> [_-wK_Hi] {w:713.031px, h:20px, fs:15px} "View, filter and export the history of y"
+                      el-149 <a> [_XdG-5] {w:auto, pos:relative, d:inline, fs:15px} "Learn more"
+                  el-150 <div> [suffix-U4CnvG] {w:248.969px, h:60px, d:flex}
+                    el-151 <div> [] {w:133.688px, h:48px}
+                      el-152 <div> [fWGGPm] {w:133.688px, h:48px, d:flex}
+                        el-153 <button> [ring_none] {w:133.688px, h:48px, pos:relative, d:flex, transition:max-inline-size, dur:0.2s, mw:100%, rounded}
+                          el-154 <div> [d_inline-flex] {w:133.688px, h:48px, bg:rgb(255, 255, 255), d:flex, transition:background-color, border-color, transfor, dur:0.1s, 0.1s, 0.1s, 0., brw:1px, mw:100%, pl:19px, pr:19px, rounded, gap:8px}
+                            el-155 <span> [d_inherit] {w:61.6875px, h:24px, d:flex, gap:8px}
+                              el-156 <span> [_-wK_Hi] {w:61.6875px, h:24px, ovx:hidden, ovy:hidden, mw:100%, fs:17px, fw:600} "Options"
+                            el-157 <span> [d_inline-flex] {w:24px, d:flex}
+                              el-158 <span> [d_inline-flex] {w:24px, pos:relative, d:flex}
+                                el-159 <svg> [] {w:24px, pos:absolute, ovx:hidden, ovy:hidden}
+                                  el-160 <path> [] {w:auto, d:inline}
+                    el-161 <button> [ring_none] {w:107.281px, h:48px, pos:relative, d:flex, transition:max-inline-size, dur:0.2s, mw:100%, rounded}
+                      el-162 <div> [d_inline-flex] {w:107.281px, h:48px, bg:rgb(13, 13, 13), d:flex, transition:background-color, border-color, transfor, dur:0.1s, 0.1s, 0.1s, 0., brw:1px, mw:100%, pl:19px, pr:19px, rounded, gap:8px}
+                        el-163 <span> [d_inherit] {w:67.2812px, h:24px, d:flex, gap:8px}
+                          el-164 <span> [_-wK_Hi] {w:67.2812px, h:24px, ovx:hidden, ovy:hidden, mw:100%, fs:17px, fw:600} "Add new"
+                el-165 <div> [fWGGPm] {w:978px, h:60px, d:flex, dir:column}
+                  el-166 <div> [DVguB9] {w:978px, h:36px, pos:relative, z:0, bg:rgb(255, 255, 255), d:flex}
+                    el-167 <div> [g37jmn] {w:64px, h:36px, pos:absolute, z:1, transition:opacity, dur:0.5s}
+                    el-168 <div> [U5qW9O] {w:978px, h:36px, pos:relative, d:flex, ovx:auto, ovy:auto}
+                      el-169 <div> [yZs45m] {w:0px, h:36px, pos:relative, l:16px}
+                      el-170 <div> [cXuEu_] {w:67px, h:36px, pos:absolute, tf:matrix(1, 0, 0, 1, 0, 0), transition:transform, width, dur:0.3s, 0.1s}
+                      el-171 <ul> [yLdoy7] {w:146.406px, h:36px, d:flex, gap:4px}
+                        el-172 <li> [oLabDu] {w:67.4844px, h:36px, pos:relative, d:flex, ovx:hidden, ovy:hidden, transition:color, dur:0.15s, pl:16px, pr:16px, rounded, gap:8px}
+                          el-173 <span> [_-wK_Hi] {w:35.4844px, h:20px, ovx:hidden, ovy:hidden, mw:200px, fs:15px, fw:600} "Sales"
+                        el-174 <li> [oLabDu] {w:74.9219px, h:36px, pos:relative, d:flex, ovx:hidden, ovy:hidden, transition:color, dur:0.15s, pl:16px, pr:16px, rounded, gap:8px}
+                          el-175 <span> [_-wK_Hi] {w:42.9219px, h:20px, ovx:hidden, ovy:hidden, mw:200px, fs:15px, fw:600} "Drafts"
+                      el-176 <div> [yZs45m] {w:0px, h:36px, pos:relative, l:-16px}
+                    el-177 <div> [g37jmn] {w:64px, h:36px, pos:absolute, z:1, l:857px, transition:opacity, dur:0.5s}
+                el-178 <div> [fWGGPm] {w:978px, h:84px, d:flex, dir:column}
+                  el-179 <div> [f-a_UE] {w:978px, h:68px, bg:rgb(249, 249, 249), d:flex, dir:column, pt:16px, pl:16px, pr:16px, rad:8px, gap:16px}
+                    el-180 <div> [wQhyFE] {w:946px, h:36px, d:grid, mw:100%, gap:12px}
+                      el-181 <div> [qc1v2E] {w:481.141px, h:36px, d:flex, gap:12px}
+                        el-182 <div> [fWGGPm] {w:481.141px, h:36px, d:flex, gap:12px}
+                          el-183 <div> [max-w-is_fullWidth] {w:256px, h:36px, d:flex, dir:column, mw:100%, gap:4px}
+                            el-184 <label> [d_flex] {w:1px, pos:absolute, d:flex, ovx:hidden, ovy:hidden, l:56px, t:200px}
+                              el-185 <span> [textStyle_body.s.semibold] {w:47.3594px, h:1px, fs:15px, fw:600} "Search"
+                            el-186 <div> [d_flex] {w:256px, h:36px, d:flex, gap:8px}
+                              el-187 <div> [d_flex] {w:256px, h:36px, pos:relative, bg:rgb(255, 255, 255), d:flex, transition:background-color, border-color, dur:0.1s, 0.1s, brw:1px, rounded}
+                                el-188 <div> [d_flex] {w:32px, h:34px, d:flex, pl:12px}
+                                  el-189 <span> [d_inline-flex] {w:20px, pos:relative, d:flex}
+                                    el-190 <svg> [] {w:20px, pos:absolute, ovx:hidden, ovy:hidden}
+                                      el-191 <path> [] {w:auto, d:inline}
+                                el-192 <input> [pos_relative] {w:222px, h:34px, pos:relative, bg:rgba(19, 19, 19, 0), ovx:clip, ovy:clip, pt:16px, pl:8px, pr:16px, fs:15px, rounded}
+                          el-193 <button> [self-MQ44_S] {w:99.75px, h:36px, pos:relative, d:flex, dir:row-reverse, dur:0.12s, fs:17px, fw:600, gap:0px}
+                            el-194 <div> [group] {w:99.75px, h:36px, d:flex, transition:max-inline-size, dur:0.2s, mw:100%, fs:17px, fw:600, rounded}
+                              el-195 <div> [d_inline-flex] {w:99.75px, h:36px, bg:rgb(255, 255, 255), d:flex, transition:background-color, border-color, transfor, dur:0.1s, 0.1s, 0.1s, 0., brw:1px, mw:100%, pl:15px, pr:15px, fs:17px, fw:600, rounded, gap:8px}
+                                el-196 <span> [d_inherit] {w:39.75px, h:20px, d:flex, fs:17px, fw:600, gap:8px}
+                                  el-197 <span> [_-wK_Hi] {w:39.75px, h:20px, ovx:hidden, ovy:hidden, mw:100%, fs:15px, fw:500} "Today"
+                                el-198 <span> [d_inline-flex] {w:20px, d:flex, fs:17px, fw:600}
+                                  el-199 <span> [d_inline-flex] {w:20px, pos:relative, d:flex, fs:17px, fw:600}
+                                    el-200 <svg> [] {w:20px, pos:absolute, ovx:hidden, ovy:hidden, fs:17px, fw:600}
+                                      el-201 <path> [] {w:auto, d:inline, fs:17px, fw:600}
+                          el-202 <button> [ring_none] {w:101.391px, h:36px, pos:relative, d:flex, transition:max-inline-size, dur:0.2s, mw:100%, rounded}
+                            el-203 <div> [d_inline-flex] {w:101.391px, h:36px, bg:rgb(255, 255, 255), d:flex, transition:background-color, border-color, transfor, dur:0.1s, 0.1s, 0.1s, 0., brw:1px, mw:100%, pl:15px, pr:15px, rounded, gap:8px}
+                              el-204 <span> [d_inherit] {w:41.3906px, h:20px, d:flex, gap:8px}
+                                el-205 <span> [_-wK_Hi] {w:41.3906px, h:20px, ovx:hidden, ovy:hidden, mw:100%, fs:15px, fw:500} "Filters"
+                              el-206 <span> [d_inline-flex] {w:20px, d:flex}
+                                el-207 <span> [d_inline-flex] {w:20px, pos:relative, d:flex}
+                                  el-208 <svg> [] {w:20px, pos:absolute, ovx:hidden, ovy:hidden}
+                                    el-209 <path> [] {w:auto, d:inline}
+                      el-210 <div> [qc1v2E] {w:220.422px, h:36px, d:flex, gap:12px}
+                      el-211 <div> [qc1v2E] {w:220.438px, h:36px, d:flex, gap:12px}
+                        el-212 <div> [] {w:106.859px, h:36px}
+                          el-213 <div> [fWGGPm] {w:106.859px, h:36px, d:flex}
+                            el-214 <button> [ring_none] {w:106.859px, h:36px, pos:relative, d:flex, transition:max-inline-size, dur:0.2s, mw:100%, rounded}
+                              el-215 <div> [d_inline-flex] {w:106.859px, h:36px, bg:rgb(255, 255, 255), d:flex, transition:background-color, border-color, transfor, dur:0.1s, 0.1s, 0.1s, 0., brw:1px, mw:100%, pl:15px, pr:15px, rounded, gap:8px}
+                                el-216 <span> [d_inherit] {w:46.8594px, h:20px, d:flex, gap:8px}
+                                  el-217 <span> [_-wK_Hi] {w:46.8594px, h:20px, ovx:hidden, ovy:hidden, mw:100%, fs:15px, fw:500} "Sort by"
+                                el-218 <span> [d_inline-flex] {w:20px, d:flex}
+                                  el-219 <span> [d_inline-flex] {w:20px, pos:relative, d:flex}
+                                    el-220 <svg> [] {w:20px, pos:absolute, ovx:hidden, ovy:hidden}
+                                      el-221 <path> [] {w:auto, d:inline}
+                el-222 <div> [self-sEdCr8] {w:978px, h:572px, d:flex, dir:column}
+                  el-223 <div> [self-sEdCr8] {w:978px, h:572px, pos:relative, d:flex, dir:column}
+                    el-224 <table> [self-sEdCr8] {w:978px, h:218.562px, bg:rgb(255, 255, 255), d:table, dir:column}
+                      el-225 <colgroup> [] {w:978px, h:218.562px, d:table-column-group}
+                        el-226 <col> [] {w:163px, h:218.562px, d:table-column}
+                        el-227 <col> [] {w:163px, h:218.562px, d:table-column}
+                        el-228 <col> [] {w:163px, h:218.562px, d:table-column}
+                        el-229 <col> [] {w:163px, h:218.562px, d:table-column}
+                        el-230 <col> [] {w:163px, h:218.562px, d:table-column}
+                        el-231 <col> [] {w:163px, h:218.562px, d:table-column}
+                      el-232 <thead> [head-SwOVVl] {w:978px, h:50.5625px, pos:sticky, z:1, bg:rgb(255, 255, 255), d:table-header-group}
+                        el-233 <tr> [headerRow-V5KbXY] {w:978px, h:50.5625px, d:table-row}
+                          el-234 <th> [self-A5FHsP] {w:163px, h:50.5625px, d:table-cell, pt:16px, pl:16px, pr:8px, fw:600}
+                            el-235 <div> [self-LTKcdd] {w:100%, h:auto, bg:rgb(255, 255, 255), d:inline, transition:box-shadow, border-color, background-col, dur:0.15s, 0.15s, 0.15s, fw:600}
+                              el-236 <div> [self-sEdCr8] {w:139px, h:18.5625px, d:flex, fw:600}
+                                el-237 <div> [self-sEdCr8] {w:37.1562px, h:18.5625px, d:flex, dir:column, fw:600} "Sale #"
+                                el-238 <div> [self-sEdCr8] {w:16px, d:flex, dir:column, fw:600}
+                                  el-239 <span> [d_inline-flex] {w:20px, pos:relative, d:flex, fw:600}
+                                    el-240 <svg> [] {w:20px, pos:absolute, ovx:hidden, ovy:hidden, fw:600}
+                                      el-241 <path> [] {w:auto, d:inline, fw:600}
+                          el-242 <th> [self-A5FHsP] {w:163px, h:50.5625px, d:table-cell, pt:16px, pl:8px, pr:8px, fw:600}
+                            el-243 <div> [self-LTKcdd] {w:100%, h:auto, bg:rgb(255, 255, 255), d:inline, transition:box-shadow, border-color, background-col, dur:0.15s, 0.15s, 0.15s, fw:600}
+                              el-244 <div> [self-sEdCr8] {w:147px, h:18.5625px, d:flex, fw:600}
+                                el-245 <div> [self-sEdCr8] {w:35.375px, h:18.5625px, d:flex, dir:column, fw:600} "Client"
+                                el-246 <div> [self-sEdCr8] {w:16px, d:flex, dir:column, fw:600}
+                                  el-247 <span> [d_inline-flex] {w:20px, pos:relative, d:flex, fw:600}
+                                    el-248 <svg> [] {w:20px, pos:absolute, ovx:hidden, ovy:hidden, fw:600}
+                                      el-249 <path> [] {w:auto, d:inline, fw:600}
+                          el-250 <th> [self-A5FHsP] {w:163px, h:50.5625px, d:table-cell, pt:16px, pl:8px, pr:8px, fw:600}
+                            el-251 <div> [self-LTKcdd] {w:100%, h:auto, bg:rgb(255, 255, 255), d:inline, transition:box-shadow, border-color, background-col, dur:0.15s, 0.15s, 0.15s, fw:600}
+                              el-252 <div> [self-sEdCr8] {w:147px, h:18.5625px, d:flex, fw:600}
+                                el-253 <div> [self-sEdCr8] {w:38.0938px, h:18.5625px, d:flex, dir:column, fw:600} "Status"
+                          el-254 <th> [self-A5FHsP] {w:163px, h:50.5625px, d:table-cell, pt:16px, pl:8px, pr:8px, fw:600}
+                            el-255 <div> [self-LTKcdd] {w:100%, h:auto, bg:rgb(255, 255, 255), d:inline, transition:box-shadow, border-color, background-col, dur:0.15s, 0.15s, 0.15s, fw:600}
+                              el-256 <div> [self-sEdCr8] {w:147px, h:18.5625px, d:flex, fw:600}
+                                el-257 <div> [self-sEdCr8] {w:54.4219px, h:18.5625px, d:flex, dir:column, fw:600} "Sale date"
+                                el-258 <div> [self-sEdCr8] {w:16px, d:flex, dir:column, fw:600}
+                                  el-259 <span> [d_inline-flex] {w:20px, pos:relative, d:flex, fw:600}
+                                    el-260 <svg> [] {w:20px, pos:absolute, ovx:hidden, ovy:hidden, fw:600}
+                                      el-261 <path> [] {w:auto, d:inline, fw:600}
+                          el-262 <th> [self-A5FHsP] {w:163px, h:50.5625px, d:table-cell, pt:16px, pl:8px, pr:8px, fw:600}
+                            el-263 <div> [self-LTKcdd] {w:100%, h:auto, bg:rgb(255, 255, 255), d:inline, transition:box-shadow, border-color, background-col, dur:0.15s, 0.15s, 0.15s, fw:600}
+                              el-264 <div> [self-sEdCr8] {w:147px, h:18.5625px, d:flex, fw:600}
+                                el-265 <div> [self-sEdCr8] {w:24.2969px, h:18.5625px, d:flex, dir:column, fw:600} "Tips"
+                                el-266 <div> [self-sEdCr8] {w:16px, d:flex, dir:column, fw:600}
+                                  el-267 <span> [d_inline-flex] {w:20px, pos:relative, d:flex, fw:600}
+                                    el-268 <svg> [] {w:20px, pos:absolute, ovx:hidden, ovy:hidden, fw:600}
+                                      el-269 <path> [] {w:auto, d:inline, fw:600}
+                          el-270 <th> [self-A5FHsP] {w:163px, h:50.5625px, d:table-cell, pt:16px, pl:8px, pr:16px, fw:600}
+                            el-271 <div> [self-LTKcdd] {w:100%, h:auto, bg:rgb(255, 255, 255), d:inline, transition:box-shadow, border-color, background-col, dur:0.15s, 0.15s, 0.15s, fw:600}
+                              el-272 <div> [self-sEdCr8] {w:139px, h:18.5625px, d:flex, fw:600}
+                                el-273 <div> [self-sEdCr8] {w:64.4531px, h:18.5625px, d:flex, dir:column, fw:600} "Gross total"
+                                el-274 <div> [self-sEdCr8] {w:16px, d:flex, dir:column, fw:600}
+                                  el-275 <span> [d_inline-flex] {w:20px, pos:relative, d:flex, fw:600}
+                                    el-276 <svg> [] {w:20px, pos:absolute, ovx:hidden, ovy:hidden, fw:600}
+                                      el-277 <path> [] {w:auto, d:inline, fw:600}
+                      el-278 <tbody> [] {w:978px, h:113.5px, d:table-row-group}
+                        el-279 <tr> [self-Grl8EV] {w:978px, h:56.5px, d:table-row, fs:14px}
+                          el-280 <td> [self-aEV5RQ] {w:163px, h:56.5px, d:table-cell, pt:16px, pl:16px, pr:8px, fs:14px}
+                            el-281 <a> [_XdG-5] {w:auto, pos:relative, d:inline, fs:14px}
+                              el-282 <span> [_-wK_Hi] {w:auto, d:inline, fs:14px} "6"
+                          el-283 <td> [self-aEV5RQ] {w:163px, h:56.5px, d:table-cell, pt:16px, pl:8px, pr:8px, fs:14px}
+                            el-284 <div> [self-sEdCr8] {w:147px, h:16px, d:flex, dir:column, fs:14px} "Walk-In"
+                          el-285 <td> [self-aEV5RQ] {w:163px, h:56.5px, d:table-cell, ovx:auto, ovy:auto, pt:16px, pl:8px, pr:8px, fs:14px}
+                            el-286 <div> [bx-sh_[inset_0_0_0_1px_var(--c] {w:89.9531px, h:24px, bg:rgb(237, 251, 233), d:inline-flex, pl:12px, pr:12px, fw:500, rounded, gap:4px}
+                              el-287 <span> [ov_hidden] {w:65.9531px, h:16px, ovx:hidden, ovy:hidden, mw:100%, fw:500} "Completed"
+                          el-288 <td> [self-aEV5RQ] {w:163px, h:56.5px, d:table-cell, pt:16px, pl:8px, pr:8px, fs:14px}
+                            el-289 <div> [self-sEdCr8] {w:147px, h:16px, d:flex, dir:column, fs:14px} "22 Feb 2026, 17:04"
+                          el-290 <td> [self-aEV5RQ] {w:163px, h:56.5px, d:table-cell, pt:16px, pl:8px, pr:8px, fs:14px}
+                            el-291 <div> [self-sEdCr8] {w:147px, h:16px, d:flex, dir:column, fs:14px} "TRY 0.00"
+                          el-292 <td> [self-aEV5RQ] {w:163px, h:56.5px, d:table-cell, pt:16px, pl:8px, pr:16px, fs:14px}
+                            el-293 <div> [self-sEdCr8] {w:139px, h:16px, d:flex, dir:column, fs:14px} "TRY 600.00"
+                        el-294 <tr> [self-Grl8EV] {w:978px, h:57px, d:table-row, fs:14px}
+                          el-295 <td> [self-aEV5RQ] {w:163px, h:57px, d:table-cell, pt:16px, pl:16px, pr:8px, fs:14px}
+                            el-296 <a> [_XdG-5] {w:auto, pos:relative, d:inline, fs:14px}
+                              el-297 <span> [_-wK_Hi] {w:auto, d:inline, fs:14px} "5"
+                          el-298 <td> [self-aEV5RQ] {w:163px, h:57px, d:table-cell, pt:16px, pl:8px, pr:8px, fs:14px}
+                            el-299 <div> [self-sEdCr8] {w:147px, h:16px, d:flex, dir:column, fs:14px} "Walk-In"
+                          el-300 <td> [self-aEV5RQ] {w:163px, h:57px, d:table-cell, ovx:auto, ovy:auto, pt:16px, pl:8px, pr:8px, fs:14px}
+                            el-301 <div> [bx-sh_[inset_0_0_0_1px_var(--c] {w:74.6094px, h:24px, bg:rgb(255, 247, 219), d:inline-flex, pl:12px, pr:12px, fw:500, rounded, gap:4px}
+                              el-302 <span> [ov_hidden] {w:50.6094px, h:16px, ovx:hidden, ovy:hidden, mw:100%, fw:500} "Part Paid"
+                          el-303 <td> [self-aEV5RQ] {w:163px, h:57px, d:table-cell, pt:16px, pl:8px, pr:8px, fs:14px}
+                            el-304 <div> [self-sEdCr8] {w:147px, h:16px, d:flex, dir:column, fs:14px} "22 Feb 2026, 00:39"
+                          el-305 <td> [self-aEV5RQ] {w:163px, h:57px, d:table-cell, pt:16px, pl:8px, pr:8px, fs:14px}
+                            el-306 <div> [self-sEdCr8] {w:147px, h:16px, d:flex, dir:column, fs:14px} "TRY 0.00"
+                          el-307 <td> [self-aEV5RQ] {w:163px, h:57px, d:table-cell, pt:16px, pl:8px, pr:16px, fs:14px}
+                            el-308 <div> [self-sEdCr8] {w:139px, h:16px, d:flex, dir:column, fs:14px} "TRY 40.00"
+                      el-309 <tfoot> [self-DiwsBY] {w:978px, h:54.5px, d:table-footer-group}
+                        el-310 <tr> [] {w:978px, h:54.5px, d:table-row}
+                          el-311 <td> [] {w:978px, h:54.5px, d:table-cell, pt:18px, pl:8px, pr:8px, fs:14px}
+                            el-312 <div> [self-vkyLwR] {w:962px, h:18px, pos:relative, d:flex, transition:min-height, dur:0.3s, mw:100%, fs:14px}
+                              el-313 <div> [children-hRE2Xw] {w:962px, h:18px, d:flex, dir:column, mw:100%, fs:14px}
+                                el-314 <div> [self-sEdCr8] {w:962px, h:18px, d:flex, dir:column, fs:14px}
+                                  el-315 <span> [self-sEdCr8] {w:962px, h:18px, d:flex, dir:column, fs:14px} "Showing 2 of 2 results"
+                              el-316 <div> [loader-Jufcsm] {w:962px, h:18px, pos:absolute, z:100, d:flex, ovx:hidden, ovy:hidden, transition:opacity, dur:0.3s, fs:14px}
+                    el-317 <div> [erd_scroll_detection_container] {w:0px, z:-1, d:none, ovx:hidden, ovy:hidden}

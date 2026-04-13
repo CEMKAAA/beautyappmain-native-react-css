@@ -1,0 +1,936 @@
+/* ═══════════════════════════════════════════════════
+   AppointmentsPanel — Pixel-perfect from computed-styles.json
+   136 elements, scoped under .apt-root
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-0: Root container ── */
+.apt-root {
+    position: relative;
+    width: 480px;
+    height: 100%;
+    overflow: hidden;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+/* ── el-1: Grid layout (5 areas) ── */
+.apt-grid {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "title"
+        "body"
+        "footer"
+        "footerEnd";
+    grid-template-rows: 0px 68px 1fr 0px 0px;
+    grid-template-columns: 480px;
+    height: 100%;
+    max-height: 100%;
+    background-color: #f9f9f9;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.apt-grid::-webkit-scrollbar {
+    display: none;
+}
+
+/* ── el-2: Header slot (sticky) ── */
+.apt-header-slot {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+    z-index: 7;
+    height: 0;
+    overflow: hidden;
+}
+
+/* ── el-3: Header bg spacer ── */
+.apt-header-bg {
+    height: 72px;
+    background-color: #f9f9f9;
+    width: 100%;
+}
+
+/* ── el-4: Scroll header overlay ── */
+.apt-scroll-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* ── el-5: Floating header bar ── */
+.apt-floating-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 72px;
+    max-width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    background-color: #f9f9f9;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+/* ── el-6: Header inner row ── */
+.apt-header-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 0 32px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* ── el-7: Back button (hidden) ── */
+.apt-back-btn {
+    display: none;
+}
+
+/* ── el-8: Title wrapper (scroll title, hidden by default) ── */
+.apt-scroll-title-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.2s ease;
+}
+
+/* ── el-9: Scroll title text ── */
+.apt-scroll-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #0d0d0d;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* ── el-10: Close button area ── */
+.apt-close-area {
+    display: flex;
+    justify-content: flex-end;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+/* ── el-11: Close icon wrapper ── */
+.apt-close-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.apt-close-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+/* ── el-12: Title area ── */
+.apt-title-area {
+    grid-area: title;
+    height: 68px;
+    background-color: #f9f9f9;
+    z-index: 8;
+    will-change: opacity;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.apt-title-area::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #f9f9f9;
+}
+
+/* ── el-13: Hidden prefix ── */
+.apt-title-prefix {
+    display: none;
+}
+
+/* ── el-14: Title padding ── */
+.apt-title-padding {
+    padding: 0 32px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ── el-15: Title grid ── */
+.apt-title-grid {
+    display: grid;
+    grid-template-areas:
+        "prefix title action"
+        "empty description description";
+    grid-template-columns: 0px 1fr 0px;
+    grid-template-rows: 36px 0px;
+    padding-top: 32px;
+    box-sizing: border-box;
+}
+
+/* ── el-16: Action slot ── */
+.apt-title-action {
+    grid-area: action;
+    width: 0px;
+}
+
+/* ── el-17: Title slot ── */
+.apt-title-slot {
+    grid-area: title;
+}
+
+/* ── el-18: Hidden div ── */
+.apt-title-hidden {
+    display: none;
+}
+
+/* ── el-19: Title inner flex ── */
+.apt-title-inner {
+    display: flex;
+    align-items: center;
+    min-height: 36px;
+}
+
+/* ── el-20: Page title h1 ── */
+.apt-page-title {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 32px;
+    color: #0d0d0d;
+    margin: 0;
+}
+
+/* ── el-21: Title overlap spacer ── */
+.apt-title-spacer {
+    position: relative;
+    top: -52px;
+    height: 0;
+}
+
+/* ── el-22: Body area ── */
+.apt-body {
+    grid-area: body;
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+/* ── el-23: Content flex container ── */
+.apt-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══════════════════════════════════════════════════
+   TAB BAR
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-24: Tab bar container ── */
+.apt-tabs {
+    display: flex;
+    align-items: center;
+    height: 36px;
+    z-index: 0;
+    position: relative;
+    background-color: #f9f9f9;
+}
+
+
+
+/* ── el-25: Tab scroll container ── */
+.apt-tabs-scroll {
+    display: flex;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    position: relative;
+    z-index: 1;
+    height: 40px;
+}
+
+.apt-tabs-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* ── el-26: Tab indicator (animated pill) ── */
+.apt-tab-indicator {
+    position: absolute;
+    height: 38px;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s cubic-bezier(0.85, 0, 0.15, 1), width 0.3s cubic-bezier(0.85, 0, 0.15, 1);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.apt-tab-indicator::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    height: 30px;
+    border-radius: 999px;
+    opacity: 0;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    transition: opacity 0.1s ease-in-out;
+    z-index: 2;
+}
+
+.apt-tab-indicator::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 38px;
+    border-radius: 999px;
+    background-color: #0d0d0d;
+    will-change: transform, inline-size;
+}
+
+/* ── el-27: Tab list ── */
+.apt-tab-list {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    row-gap: 4px;
+    list-style: none;
+    margin: 0;
+    margin-right: 4px;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    height: 38px;
+}
+
+/* ── el-28/30/32: Tab items ── */
+.apt-tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 0 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    transition: color 0.15s ease;
+    position: relative;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.apt-tab:hover {
+    color: #0d0d0d;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.apt-tab:active {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Active tab: white text (indicator behind) */
+.apt-tab--active {
+    color: #ffffff;
+}
+
+.apt-tab--active:hover {
+    background-color: transparent;
+}
+
+/* ── el-29/31/33: Tab text ── */
+.apt-tab-text {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    pointer-events: none;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ── el-34: "More" button wrapper ── */
+.apt-more-wrap {
+    border: 1px solid transparent;
+    border-radius: 999px;
+    flex-shrink: 0;
+    display: flex;
+}
+
+/* ── el-35: "More" button ── */
+.apt-more-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 36px;
+    padding: 0 16px;
+    border-radius: 999px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: color 0.15s ease;
+    color: #0d0d0d;
+}
+
+.apt-more-btn:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.apt-more-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ── el-36: "More" text ── */
+.apt-more-text {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+/* ── el-37: Chevron wrapper ── */
+.apt-more-chevron {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.apt-more-chevron svg {
+    width: 20px;
+    height: 20px;
+    fill: #0d0d0d;
+}
+
+/* ═══════════════════════════════════════════════════
+   APPOINTMENT LIST
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-40: Tab panel ── */
+.apt-panel {
+    display: block;
+}
+
+/* ── el-41: List container ── */
+.apt-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 24px;
+    flex-grow: 1;
+}
+
+/* ── el-42: Month list ── */
+.apt-month-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── el-43: Month group ── */
+.apt-month-group {
+    list-style: none;
+}
+
+/* ── el-44: Month label ── */
+.apt-month-label {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #767676;
+    margin: 0 0 12px 0;
+    display: block;
+}
+
+/* ── el-45: Day list ── */
+.apt-day-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ═══════════════════════════════════════════════════
+   APPOINTMENT CARD ROW (Repeating Pattern)
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-46/91: Appointment row ── */
+.apt-row {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+}
+
+/* ── el-47/92: Timeline column ── */
+.apt-timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 24px;
+    padding-top: 6px;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+/* ── el-48/93: Calendar badge ── */
+.apt-timeline-badge {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    border-radius: 999px;
+    background-color: #0d0d0d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 2px #ffffff;
+    flex-shrink: 0;
+}
+
+/* ── el-49/94: Icon wrapper ── */
+.apt-timeline-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.apt-timeline-icon svg {
+    width: 16px;
+    height: 16px;
+    fill: #ffffff;
+}
+
+/* ── el-52/97: Timeline line ── */
+.apt-timeline-line {
+    width: 2px;
+    flex-grow: 1;
+    border: 1px solid #d3d3d3;
+    border-radius: 999px;
+    display: block;
+}
+
+/* ── el-53/98: Card outer area ── */
+.apt-card-outer {
+    padding-top: 6px;
+    padding-bottom: 24px;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.apt-row:last-child .apt-card-outer {
+    padding-bottom: 0;
+}
+
+/* ── el-54/99: Card container ── */
+.apt-card-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    isolation: isolate;
+}
+
+/* ── el-55/100: Card click button (overlay) ── */
+.apt-card-btn {
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    appearance: none;
+    outline: none;
+}
+
+.apt-card-btn::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 11px;
+    opacity: 0;
+    box-shadow: 0 0 0 3px rgba(13, 13, 13, 0.5);
+    transition: opacity 0.15s ease;
+    pointer-events: none;
+}
+
+.apt-card-btn:focus-visible::before {
+    opacity: 1;
+}
+
+/* ── el-56/101: Card visual body ── */
+.apt-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: background-color 0.1s ease, box-shadow 0.1s ease, transform 0.1s ease;
+    position: relative;
+}
+
+/* Card hover/active (via parent) */
+.apt-card-container:hover .apt-card {
+    background-color: #f5f5f5;
+}
+
+.apt-card-container:active .apt-card {
+    background-color: #ebebeb;
+}
+
+/* ── el-57/102: Card border overlay ── */
+.apt-card-border {
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 0 1px #e5e5e5;
+    z-index: 2000;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+/* Hover/active border states */
+.apt-card-container:hover .apt-card-border {
+    box-shadow: inset 0 0 0 1px #d3d3d3;
+}
+
+.apt-card-container:active .apt-card-border {
+    box-shadow: inset 0 0 0 1px #c5c5c5;
+}
+
+/* ── el-58/103: Card content padding ── */
+.apt-card-padding {
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 1;
+}
+
+/* ── el-59/104: Content wrapper ── */
+.apt-card-wrap {
+    width: 100%;
+    min-width: 0;
+}
+
+/* ── el-60/105: Content column ── */
+.apt-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ═══════════════════════════════════════════════════
+   CARD HEADER SECTION
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-61/106: Header section ── */
+.apt-card-header {
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+}
+
+/* ── el-62/107: Title + badge row ── */
+.apt-card-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ── el-63/108: "Appointment" title ── */
+.apt-card-title {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #0d0d0d;
+    margin: 0;
+}
+
+/* ── el-64/109: Status badge ── */
+.apt-status-badge {
+    display: flex;
+    align-items: center;
+    height: 24px;
+    padding: 0 12px;
+    border-radius: 999px;
+}
+
+.apt-status-badge--booked {
+    background-color: #eaf1fd;
+    box-shadow: inset 0 0 0 1px #eaf1fd;
+    color: #2d76ec;
+}
+
+.apt-status-badge--started {
+    background-color: #edfbe9;
+    box-shadow: inset 0 0 0 1px #d2f6c9;
+    color: #1f8900;
+}
+
+.apt-status-badge--confirmed {
+    background-color: #edfbe9;
+    box-shadow: inset 0 0 0 1px #d2f6c9;
+    color: #1f8900;
+}
+
+.apt-status-badge--completed {
+    background-color: #f5f5f5;
+    box-shadow: inset 0 0 0 1px #e5e5e5;
+    color: #767676;
+}
+
+.apt-status-badge--cancelled {
+    background-color: #fef1f1;
+    box-shadow: inset 0 0 0 1px #fdd;
+    color: #d32f2f;
+}
+
+.apt-status-badge--noshow {
+    background-color: #fff8e1;
+    box-shadow: inset 0 0 0 1px #ffecb3;
+    color: #f57f17;
+}
+
+/* ── el-65/110: Badge text ── */
+.apt-status-text {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ── el-66/111: Subtitle row ── */
+.apt-card-subtitle {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+}
+
+/* ── el-67/112: Date text ── */
+.apt-card-date {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #767676;
+    margin: 0;
+}
+
+/* ── el-68/113: Staff info flex ── */
+.apt-card-staff {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+/* ── el-69/114 + el-70/115: Dot + staff name ── */
+.apt-card-dot {
+    font-size: 13px;
+    line-height: 16px;
+    color: #767676;
+    margin: 0;
+}
+
+.apt-card-staff-name {
+    font-size: 13px;
+    line-height: 16px;
+    color: #767676;
+    margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════
+   SERVICE SECTION
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-71/116: Services section ── */
+.apt-services {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* ── el-72/117: Service row wrapper ── */
+.apt-service-row {
+    display: flex;
+    flex-direction: row;
+}
+
+/* ── el-73/118: Service item ── */
+.apt-service-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+/* ── el-74/119: Service name group ── */
+.apt-service-group {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* ── el-75/120: Name + price row ── */
+.apt-service-name-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ── el-76/121: Service name ── */
+.apt-service-name {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #0d0d0d;
+    margin: 0;
+}
+
+/* ── el-77/122: Service price ── */
+.apt-service-price {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #0d0d0d;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* ── el-78/123: Service detail row ── */
+.apt-service-detail {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+/* ── el-79–83 / el-124–128: Detail text ── */
+.apt-service-detail-text {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #767676;
+    margin: 0;
+}
+
+/* ── el-84/129: Separator ── */
+.apt-separator {
+    height: 6px;
+    padding-top: 6px;
+    padding-left: 8px;
+    box-sizing: content-box;
+}
+
+/* ═══════════════════════════════════════════════════
+   FOOTER / CHECKOUT BUTTON
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-85/130: Footer row ── */
+.apt-card-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+/* ── el-86/131: Button wrapper ── */
+.apt-checkout-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* ── el-87/132: Checkout button ── */
+.apt-checkout-btn {
+    height: 36px;
+    border-radius: 999px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    pointer-events: all;
+    position: relative;
+    z-index: 2;
+    font-family: inherit;
+}
+
+.apt-checkout-btn::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 999px;
+    opacity: 0;
+    box-shadow: 0 0 0 3px rgba(13, 13, 13, 0.5);
+    transition: opacity 0.15s ease;
+    pointer-events: none;
+}
+
+.apt-checkout-btn:focus-visible::before {
+    opacity: 1;
+}
+
+/* ── el-88/133: Button inner ── */
+.apt-checkout-inner {
+    display: flex;
+    align-items: center;
+    height: 36px;
+    background-color: #ffffff;
+    border: 1px solid #d3d3d3;
+    border-radius: 999px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    transition: background-color 0.1s ease, border-color 0.1s ease, transform 0.1s ease;
+}
+
+.apt-checkout-btn:hover .apt-checkout-inner {
+    background-color: #f5f5f5;
+    border-color: #bfbfbf;
+}
+
+.apt-checkout-btn:active .apt-checkout-inner {
+    transform: scale(0.96);
+    background-color: #ebebeb;
+    border-color: #b3b3b3;
+}
+
+/* ── el-89/134: Text wrapper ── */
+.apt-checkout-label-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ── el-90/135: "Checkout" text ── */
+.apt-checkout-label {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #0d0d0d;
+}

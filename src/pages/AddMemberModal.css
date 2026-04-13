@@ -1,0 +1,1227 @@
+/* ═══════════════════════════════════════════════════
+   AddMemberModal — Exact Fresha Replica
+   Source: computed-styles.json → full_analysis.md
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-0: Overlay ── */
+.am-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(19, 19, 19, 0.25);
+    display: flex;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.am-overlay--open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ── el-1: Transform wrapper ── */
+.am-transform {
+    min-height: 100%;
+    width: 100%;
+    transform: translateY(24px);
+    opacity: 0;
+    transition:
+        transform 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        opacity 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.am-overlay--open .am-transform {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* ── el-2: Scroll container ── */
+.am-scroll {
+    flex-grow: 1;
+    max-height: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior-block: none;
+}
+
+/* ── el-3: Dialog panel ── */
+.am-dialog {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(19, 19, 19, 0.08) 0px 2px 8px 0px,
+        rgba(19, 19, 19, 0.12) 0px 4px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* ══════════════════════════════════════════
+   STICKY HEADER (el-5)
+   ══════════════════════════════════════════ */
+.am-header {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    height: 72px;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    transition: box-shadow 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    width: 100%;
+    z-index: 10;
+}
+
+.am-header--scrolled {
+    box-shadow: rgba(19, 19, 19, 0.08) 0px 2px 8px 0px;
+}
+
+/* el-6: Header inner */
+.am-header__inner {
+    align-items: center;
+    column-gap: 48px;
+    display: flex;
+    height: 72px;
+    max-width: 1440px;
+    min-height: 72px;
+    padding-left: 32px;
+    padding-right: 32px;
+    row-gap: 48px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* el-8: Title column — hidden by default, fades in on scroll */
+.am-header__title-col {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.am-header--scrolled .am-header__title-col {
+    opacity: 1;
+}
+
+/* el-9: Title text */
+.am-header__title {
+    font-size: 20px;
+    font-weight: 600;
+    height: 28px;
+    line-height: 28px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+    color: rgb(13, 13, 13);
+}
+
+/* el-10: Buttons area */
+.am-header__actions {
+    display: flex;
+    height: 48px;
+    justify-content: flex-end;
+}
+
+/* el-11: Button row */
+.am-header__btn-row {
+    column-gap: 12px;
+    display: flex;
+    height: 48px;
+    row-gap: 12px;
+}
+
+/* ══════════════════════════════════════════
+   CLOSE BUTTON (el-14)
+   ══════════════════════════════════════════ */
+.am-btn-close {
+    align-items: center;
+    appearance: none;
+    background: none;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    display: flex;
+    height: 48px;
+    max-width: 100%;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    position: relative;
+    text-align: center;
+    padding: 0;
+    font-family: inherit;
+    transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.am-btn-close::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px,
+        rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    pointer-events: none;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.am-btn-close:focus-visible::before {
+    opacity: 1;
+}
+
+/* el-15: Close button inner */
+.am-btn-close__inner {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    height: 48px;
+    padding: 0 19px;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 999px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(13, 13, 13);
+    column-gap: 8px;
+    scale: 1;
+    transition:
+        background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+@media (hover: hover) {
+    .am-btn-close:hover .am-btn-close__inner {
+        background-color: rgba(0, 0, 0, 0.04);
+        border-color: rgba(0, 0, 0, 0.20);
+    }
+}
+
+.am-btn-close:active .am-btn-close__inner {
+    scale: 0.96;
+    background-color: rgba(0, 0, 0, 0.06);
+    border-color: rgba(0, 0, 0, 0.24);
+}
+
+/* el-16: Close icon wrap (18×18) */
+.am-btn-close__icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+}
+
+/* el-17: Close icon container */
+.am-btn-close__icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.am-btn-close__icon svg {
+    position: absolute;
+    inset: 0;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    fill: rgb(13, 13, 13);
+}
+
+/* el-17: Close text */
+.am-btn-close__text {
+    font-size: 17px;
+    font-weight: 600;
+    height: 24px;
+    line-height: 24px;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgb(13, 13, 13);
+}
+
+/* ══════════════════════════════════════════
+   ADD BUTTON (el-19) — Primary
+   ══════════════════════════════════════════ */
+.am-btn-add {
+    align-items: center;
+    appearance: none;
+    background: none;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    display: flex;
+    height: 48px;
+    max-width: 100%;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    font-family: inherit;
+    transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.am-btn-add::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px,
+        rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    pointer-events: none;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.am-btn-add:focus-visible::before {
+    opacity: 1;
+}
+
+/* el-20: Add button inner — primary variant */
+.am-btn-add__inner {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    height: 48px;
+    padding: 0 19px;
+    border: 1px solid rgb(13, 13, 13);
+    border-radius: 999px;
+    background-color: rgb(13, 13, 13);
+    color: rgb(255, 255, 255);
+    column-gap: 8px;
+    scale: 1;
+    transition:
+        background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+@media (hover: hover) {
+    .am-btn-add:hover .am-btn-add__inner {
+        background-color: #2a2a2a;
+        border-color: #2a2a2a;
+    }
+}
+
+.am-btn-add:active .am-btn-add__inner {
+    scale: 0.96;
+    background-color: #1a1a1a;
+    border-color: #1a1a1a;
+}
+
+/* el-21: Add button text */
+.am-btn-add__text {
+    font-size: 17px;
+    font-weight: 600;
+    height: 24px;
+    line-height: 24px;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgb(255, 255, 255);
+}
+
+/* ══════════════════════════════════════════
+   MAIN CONTENT (el-23 → el-26)
+   ══════════════════════════════════════════ */
+
+/* el-23: Content area */
+.am-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 1184px;
+    margin: 0 auto;
+    padding-top: 36px;
+    padding-bottom: 96px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* el-31: Large page title "Add team member" */
+.am-page-title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 44px;
+    color: rgb(13, 13, 13);
+    margin: 0;
+    margin-bottom: 32px;
+    width: 100%;
+    max-width: 1184px;
+}
+
+/* el-26: 2-column grid */
+.am-grid {
+    display: grid;
+    grid-template-columns: 296px 1fr;
+    grid-template-areas: "sidebar content";
+    column-gap: 96px;
+    width: 100%;
+    max-width: 1184px;
+    align-items: flex-start;
+}
+
+/* ══════════════════════════════════════════
+   CONTENT COLUMN (grid-area: content)
+   ══════════════════════════════════════════ */
+.am-main {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    max-width: 792px;
+}
+
+/* ══════════════════════════════════════════
+   SECTION (Profile / Work Details)
+   ══════════════════════════════════════════ */
+.am-section__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    color: rgb(13, 13, 13);
+    margin: 0;
+}
+
+.am-section__desc {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(118, 118, 118);
+    margin: 0;
+    margin-top: 4px;
+}
+
+/* ══════════════════════════════════════════
+   FORM GRID (el-42) — 12-column
+   ══════════════════════════════════════════ */
+.am-form-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 16px;
+    row-gap: 24px;
+    width: 100%;
+    padding-top: 24px;
+}
+
+/* Column spans */
+.am-span-6 {
+    grid-column: span 6;
+}
+
+.am-span-12 {
+    grid-column: span 12;
+}
+
+/* ══════════════════════════════════════════
+   AVATAR (el-44–57)
+   ══════════════════════════════════════════ */
+.am-avatar-container {
+    grid-column: span 12;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.am-avatar {
+    width: 192px;
+    height: 192px;
+    border-radius: 999px;
+    background-color: rgb(240, 240, 255);
+    border: 1px solid rgb(240, 240, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition:
+        background-color 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        border-color 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+/* Person icon SVG (el-47/el-48) */
+.am-avatar__person {
+    width: 96px;
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.am-avatar__person svg {
+    width: 96px;
+    height: 96px;
+    fill: rgb(105, 80, 243);
+}
+
+/* Camera edit button (el-50/el-53) */
+.am-avatar__edit {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    background-color: rgb(242, 242, 242);
+    box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px 0px, rgb(255, 255, 255) 0px 0px 0px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+}
+
+.am-avatar__edit svg {
+    width: 16px;
+    height: 16px;
+    fill: rgb(118, 118, 118);
+}
+
+/* ══════════════════════════════════════════
+   FORM FIELD (shared pattern)
+   ══════════════════════════════════════════ */
+.am-field {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 4px;
+    max-width: 100%;
+}
+
+/* Label (el-59, shared) */
+.am-field__label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: default;
+    height: 20px;
+}
+
+.am-field__label-text {
+    font-size: 15px;
+    font-weight: 600;
+    height: 20px;
+    color: rgb(13, 13, 13);
+}
+
+.am-field__label-required {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(13, 13, 13);
+}
+
+.am-field__label-counter {
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(118, 118, 118);
+}
+
+/* Input row (gap between date parts) */
+.am-field__row {
+    display: flex;
+    flex-grow: 1;
+    gap: 8px;
+    height: 48px;
+}
+
+/* Input wrapper (el-62, shared) */
+.am-input-wrap {
+    display: flex;
+    flex-grow: 1;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 8px;
+    height: 48px;
+    max-height: 48px;
+    position: relative;
+    box-sizing: border-box;
+    transition:
+        background-color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+        border-color 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.am-input-wrap:focus-within {
+    border-color: rgb(13, 13, 13);
+}
+
+/* ::before focus ring */
+.am-input-wrap::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border-radius: 8px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px,
+        rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    pointer-events: none;
+    transition: opacity 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.am-input-wrap:focus-within::before {
+    opacity: 1;
+}
+
+/* Input element (el-63, shared) */
+.am-input {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    padding: 16px;
+    background-color: transparent;
+    color: rgb(13, 13, 13);
+    font-size: 15px;
+    font-family: inherit;
+    border-radius: 8px;
+    height: 46px;
+    overflow: clip;
+}
+
+.am-input::placeholder {
+    color: rgb(191, 191, 191);
+    text-transform: none;
+}
+
+/* Textarea (el-1015) */
+.am-textarea-wrap {
+    display: flex;
+    flex-grow: 1;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 8px;
+    height: 122px;
+    position: relative;
+    box-sizing: border-box;
+    transition:
+        background-color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+        border-color 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.am-textarea-wrap:focus-within {
+    border-color: rgb(13, 13, 13);
+}
+
+.am-textarea-wrap::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border-radius: 8px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px,
+        rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    pointer-events: none;
+    transition: opacity 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.am-textarea-wrap:focus-within::before {
+    opacity: 1;
+}
+
+.am-textarea {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    padding: 16px;
+    background-color: transparent;
+    color: rgb(13, 13, 13);
+    font-size: 15px;
+    font-family: inherit;
+    border-radius: 8px;
+    min-height: 120px;
+    resize: vertical;
+    overflow-wrap: break-word;
+}
+
+.am-textarea::placeholder {
+    color: rgb(191, 191, 191);
+    text-transform: none;
+}
+
+/* Helper text (el-943, el-1009) */
+.am-field__helper {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(118, 118, 118);
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    margin: 0;
+}
+
+/* ══════════════════════════════════════════
+   PHONE NUMBER PREFIX (el-80)
+   ══════════════════════════════════════════ */
+.am-phone-group {
+    display: flex;
+    flex-grow: 1;
+    gap: 8px;
+    height: 48px;
+}
+
+/* Prefix wrapper (el-80) */
+.am-phone-prefix {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 8px;
+    height: 48px;
+    max-height: 48px;
+    max-width: 105px;
+    width: 105px;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition:
+        background-color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+        border-color 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.am-phone-prefix::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border-radius: 8px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px,
+        rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    pointer-events: none;
+    transition: opacity 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.am-phone-prefix:focus-within::before {
+    opacity: 1;
+}
+
+/* Display text (el-83) */
+.am-phone-prefix__display {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    padding: 16px;
+    padding-right: 8px;
+    min-width: 0;
+    color: rgb(13, 13, 13);
+    font-size: 15px;
+}
+
+.am-phone-prefix__text {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 0;
+}
+
+/* Hidden select overlay (el-84) */
+.am-phone-prefix__select {
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    margin: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    padding: 16px;
+    background: inherit;
+    font-size: 15px;
+}
+
+/* Chevron icon (el-341) */
+.am-phone-prefix__chevron {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    white-space: nowrap;
+    color: rgb(118, 118, 118);
+    padding-right: 16px;
+}
+
+.am-phone-prefix__chevron svg {
+    width: 20px;
+    height: 20px;
+    fill: rgb(13, 13, 13);
+}
+
+/* ══════════════════════════════════════════
+   SELECT FIELD (Country/Employment Type)
+   ══════════════════════════════════════════ */
+.am-select-wrap {
+    display: flex;
+    flex-grow: 1;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 8px;
+    height: 48px;
+    max-height: 48px;
+    position: relative;
+    box-sizing: border-box;
+    font-size: 15px;
+    transition:
+        background-color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+        border-color 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.am-select-wrap:focus-within {
+    border-color: rgb(13, 13, 13);
+}
+
+.am-select-wrap::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border-radius: 8px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px,
+        rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    pointer-events: none;
+    font-size: 15px;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.am-select-wrap:focus-within::before {
+    opacity: 1;
+}
+
+/* Display text container (el-993) */
+.am-select__display {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    padding: 16px;
+    padding-right: 8px;
+    min-width: 0;
+    cursor: pointer;
+}
+
+.am-select__placeholder {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 0;
+    color: rgb(191, 191, 191);
+    font-size: 15px;
+}
+
+.am-select__value {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 0;
+    color: rgb(13, 13, 13);
+    font-size: 15px;
+}
+
+/* Hidden select (el-995) */
+.am-select__native {
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    margin: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    padding: 16px;
+    background: inherit;
+    font-size: 15px;
+}
+
+/* Chevron (el-999) */
+.am-select__chevron {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    white-space: nowrap;
+    color: rgb(118, 118, 118);
+    padding-right: 16px;
+}
+
+.am-select__chevron svg {
+    width: 20px;
+    height: 20px;
+    fill: rgb(13, 13, 13);
+    pointer-events: none;
+}
+
+/* ══════════════════════════════════════════
+   DATE FIELD (Birthday/Start/End)
+   ══════════════════════════════════════════ */
+.am-date-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 16px;
+    row-gap: 24px;
+    grid-column: span 12;
+}
+
+.am-date-col-8 {
+    grid-column: span 8;
+}
+
+.am-date-col-4 {
+    grid-column: span 4;
+}
+
+/* Calendar icon suffix (el-978) */
+.am-input-suffix {
+    display: flex;
+    align-items: center;
+    cursor: text;
+    white-space: nowrap;
+    color: rgb(118, 118, 118);
+    padding-right: 16px;
+}
+
+.am-input-suffix svg {
+    width: 20px;
+    height: 20px;
+    fill: rgb(118, 118, 118);
+}
+
+/* ══════════════════════════════════════════
+   COLOR PICKER (el-898–935)
+   ══════════════════════════════════════════ */
+.am-color-container {
+    grid-column: span 12;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.am-color-label {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(13, 13, 13);
+    height: 20px;
+}
+
+.am-color-grid {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 506px;
+    margin-left: -8px;
+}
+
+/* Color swatch outer (el-902) */
+.am-color-swatch {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 4px;
+    border: 1px solid rgb(255, 255, 255);
+    box-sizing: border-box;
+    transition: border 0.25s;
+}
+
+.am-color-swatch--selected {
+    border: 2px solid rgb(105, 80, 243);
+}
+
+/* Color swatch inner (el-903) */
+.am-color-swatch__inner {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+/* ══════════════════════════════════════════
+   HR SEPARATOR
+   ══════════════════════════════════════════ */
+.am-separator {
+    grid-column: span 12;
+    background-color: rgb(229, 229, 229);
+    height: 1px;
+    border: none;
+    margin: 0;
+}
+
+.am-section-separator {
+    background-color: rgb(229, 229, 229);
+    height: 1px;
+    border: none;
+    margin: 0;
+    width: 100%;
+}
+
+/* ══════════════════════════════════════════
+   SIDEBAR NAVIGATION (el-1017)
+   ══════════════════════════════════════════ */
+.am-sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    max-width: 296px;
+    width: 296px;
+    position: sticky;
+    top: 108px;
+}
+
+.am-sidebar__inner {
+    min-width: 266px;
+    width: 296px;
+}
+
+/* el-1019: #navigation */
+.am-nav {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    isolation: isolate;
+    width: 296px;
+    font-family: 'Roobert PRO', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* el-1020: #inner-navigation */
+.am-nav__card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 16px;
+    overflow: hidden;
+    transition:
+        background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        box-shadow 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+    position: relative;
+}
+
+/* el-1021: Border ring overlay */
+.am-nav__border {
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    box-shadow: rgb(229, 229, 229) 0px 0px 0px 1px inset;
+    pointer-events: none;
+    z-index: 2000;
+}
+
+/* el-1022: Content container */
+.am-nav__content {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 32px;
+}
+
+/* el-1023: Nav list */
+.am-nav__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 0;
+    margin: -8px -20px;
+    padding: 8px 20px;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.am-nav__divider-container+.am-nav__group {
+    margin-top: 24px;
+}
+
+/* Group (el-1024) */
+.am-nav__group {
+    list-style: none;
+}
+
+/* Group header (el-1025) */
+.am-nav__group-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 8px;
+    gap: 8px;
+}
+
+/* Group title (el-1026) */
+.am-nav__group-title {
+    flex-grow: 1;
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    color: rgb(13, 13, 13);
+}
+
+/* Sub list (el-1027) */
+.am-nav__sublist {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Nav item (el-1029) */
+.am-nav__item {
+    position: relative;
+    cursor: pointer;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    display: flex;
+    align-items: center;
+    height: 44px;
+    box-sizing: border-box;
+    margin: 0 -16px;
+    padding: 12px 16px;
+    gap: 12px;
+    border-radius: 8px;
+    background-color: transparent;
+    transition:
+        color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+        background-color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+        border-color 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+    list-style: none;
+}
+
+.am-nav__item--active {
+    background-color: rgba(19, 19, 19, 0.04);
+}
+
+@media (hover: hover) {
+    .am-nav__item:hover {
+        background-color: rgba(19, 19, 19, 0.04);
+    }
+}
+
+/* Hidden button overlay (el-1030) */
+.am-nav__item-btn {
+    appearance: none;
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    border-radius: 8px;
+    padding: 0;
+}
+
+.am-nav__item-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px,
+        rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    pointer-events: none;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.am-nav__item-btn:focus-visible::before {
+    opacity: 1;
+}
+
+/* Item text (el-1032) */
+.am-nav__item-text {
+    flex-grow: 1;
+    overflow: hidden;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgb(13, 13, 13);
+}
+
+/* Badge (el-1052) */
+.am-nav__badge {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: content-box;
+    border-radius: 999px;
+    box-shadow: rgb(229, 229, 229) 0px 0px 0px 1px,
+        rgb(255, 255, 255) 0px 0px 0px 2px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(118, 118, 118);
+    min-width: 12px;
+    min-height: 20px;
+    max-height: 20px;
+    padding: 0 4px;
+    pointer-events: none;
+}
+
+.am-nav__badge-text {
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    color: rgb(118, 118, 118);
+}
+
+/* Group separator */
+.am-nav__divider-container {
+    list-style: none;
+}
+
+.am-nav__divider {
+    background-color: rgb(229, 229, 229);
+    height: 1px;
+    border: none;
+    margin: 8px 0;
+    box-sizing: content-box;
+}

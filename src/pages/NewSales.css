@@ -1,0 +1,1267 @@
+/* ========== CSS Variables ========== */
+:root {
+    --color-foreground-neutral: #0d0d0d;
+    --color-foreground-neutral-faded: #767676;
+    --color-foreground-accent: #6950f3;
+    --color-foreground-accentHover: #5f49d6;
+    --color-background-page: #f5f5f5;
+    --color-background-surface: #ffffff;
+    --color-background-transparent-hover: rgba(0, 0, 0, 0.05);
+    --color-background-transparent-active: rgba(0, 0, 0, 0.1);
+    --color-border-default: #d3d3d3;
+    --color-border-defaultFaded: #e5e5e5;
+}
+
+/* ===== el-0: Root ===== */
+.ns-root {
+    font-family: 'Roboto Pro', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+}
+
+/* ===== el-1: White background scroll wrapper ===== */
+.ns-root__inner {
+    background-color: rgb(255, 255, 255);
+    flex: 1;
+    min-height: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+    width: 100%;
+}
+
+/* ===== el-2: Content positioner ===== */
+.ns-root__padded {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 9;
+}
+
+/* ===== el-3: Centered flex-grow wrapper ===== */
+.ns-root__constrained {
+    background-color: rgb(255, 255, 255);
+    box-sizing: content-box;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    transition: transform 0.4s ease-in-out;
+    width: 100%;
+}
+
+/* ===== el-4: Padded content column ===== */
+.ns-root__main {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    min-height: 100%;
+    padding: 40px;
+    width: 100%;
+}
+
+/* ===== el-5: Page Header Section ===== */
+.ns-header {
+    display: flex;
+    padding-bottom: 24px;
+    width: 100%;
+}
+
+/* ===== el-6: Header title content ===== */
+.ns-header__top {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+/* ===== el-7: Title row ===== */
+.ns-header__title-group {
+    align-items: center;
+    display: flex;
+}
+
+/* ===== el-8: h1 "Sales" ===== */
+.ns-header__title {
+    align-items: center;
+    display: flex;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+    margin: 0;
+}
+
+/* ===== el-9: Description paragraph ===== */
+.ns-header__desc {
+    color: rgb(118, 118, 118);
+    font-size: 15px;
+    margin: 0;
+    margin-top: 4px;
+}
+
+/* ===== el-10: "Learn more" link ===== */
+.ns-header__learn-more {
+    border-radius: 4px;
+    color: rgb(105, 80, 243);
+    cursor: pointer;
+    display: inline;
+    font-size: 15px;
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.ns-header__learn-more::before {
+    content: "";
+    border-radius: 4px;
+    position: absolute;
+    inset: 0;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.ns-header__learn-more:focus-visible::before {
+    opacity: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .ns-header__learn-more:hover {
+        color: rgb(95, 73, 214);
+    }
+}
+
+.ns-header__learn-more:visited {
+    color: rgb(105, 80, 243);
+}
+
+/* ===== el-11: Action Buttons Container ===== */
+.ns-header__actions {
+    align-items: center;
+    display: flex;
+    margin-left: 16px;
+}
+
+/* ===== Header Button Base Wrapper (el-12, el-22 outer div) ===== */
+.ns-btn-wrap {
+    display: flex;
+}
+
+/* ===== el-14: Options Button (pill, outlined) ===== */
+.ns-btn--options {
+    align-items: center;
+    appearance: button;
+    background: none;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    display: flex;
+    height: 48px;
+    max-width: 100%;
+    outline: 2px solid rgba(0, 0, 0, 0);
+    outline-offset: 2px;
+    position: relative;
+    text-align: center;
+    transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    padding: 0;
+}
+
+.ns-btn--options::before {
+    content: "";
+    border-radius: 999px;
+    position: absolute;
+    inset: 0;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.ns-btn--options:focus-visible::before {
+    opacity: 1;
+}
+
+/* ===== el-15: Options Button Inner ===== */
+.ns-btn--options .ns-btn__inner {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 999px;
+    border: 1px solid rgb(211, 211, 211);
+    column-gap: 8px;
+    cursor: pointer;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    max-width: 100%;
+    padding-left: 19px;
+    padding-right: 19px;
+    row-gap: 8px;
+    scale: 1;
+    text-align: center;
+    transition:
+        background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        padding 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        gap 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .ns-btn--options:hover .ns-btn__inner {
+        background-color: rgb(242, 242, 242);
+        border-color: rgb(179, 179, 179);
+        scale: 1;
+    }
+}
+
+.ns-btn--options:active .ns-btn__inner {
+    background-color: rgb(229, 229, 229);
+    border-color: rgb(163, 163, 163);
+    scale: 0.96;
+}
+
+/* ===== el-16: Button content span ===== */
+.ns-btn__content {
+    align-items: center;
+    display: flex;
+    column-gap: 8px;
+    row-gap: 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ===== el-17: Button text label (Options/Add new) ===== */
+.ns-btn__label {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ===== el-18/19: Button icon wrapper ===== */
+.ns-btn__icon-wrap {
+    display: flex;
+}
+
+.ns-btn__icon-wrap .ns-icon {
+    display: flex;
+    flex-shrink: 0;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+
+.ns-btn__icon-wrap .ns-icon svg {
+    position: absolute;
+    inset: 0;
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+    fill: currentColor;
+}
+
+/* ===== el-22: Add New Button (pill, filled black) ===== */
+.ns-btn--add-new {
+    align-items: center;
+    appearance: button;
+    background: none;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    display: flex;
+    height: 48px;
+    margin-left: 8px;
+    max-width: 100%;
+    outline: 2px solid rgba(0, 0, 0, 0);
+    outline-offset: 2px;
+    position: relative;
+    text-align: center;
+    transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    padding: 0;
+}
+
+.ns-btn--add-new::before {
+    content: "";
+    border-radius: 999px;
+    position: absolute;
+    inset: 0;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.ns-btn--add-new:focus-visible::before {
+    opacity: 1;
+}
+
+.ns-btn--add-new .ns-btn__inner {
+    align-items: center;
+    background-color: rgb(13, 13, 13);
+    border-radius: 999px;
+    border: 1px solid rgb(13, 13, 13);
+    color: rgb(255, 255, 255);
+    column-gap: 8px;
+    cursor: pointer;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    max-width: 100%;
+    padding-left: 19px;
+    padding-right: 19px;
+    row-gap: 8px;
+    scale: 1;
+    text-align: center;
+    transition:
+        background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        padding 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        gap 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .ns-btn--add-new:hover .ns-btn__inner {
+        background-color: rgb(38, 38, 38);
+        border-color: rgb(38, 38, 38);
+        scale: 1;
+    }
+}
+
+.ns-btn--add-new:active .ns-btn__inner {
+    background-color: rgb(51, 51, 51);
+    border-color: rgb(51, 51, 51);
+    scale: 0.96;
+}
+
+.ns-btn--add-new .ns-btn__label {
+    color: rgb(255, 255, 255);
+}
+
+
+
+/* ========== TAB BAR (el-26..38) ========== */
+
+/* ===== el-26: Tab bar outer ===== */
+.ns-tabbar {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 24px;
+}
+
+/* ===== el-27: Tab bar inner ===== */
+.ns-tabbar__inner {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    height: 36px;
+    position: relative;
+    z-index: 0;
+}
+
+.ns-tabbar__inner::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 36px;
+}
+
+/* ===== el-28: Left gradient (scroll indicator, opacity 0) ===== */
+.ns-tabbar__gradient--left {
+    position: absolute;
+    inset: 0;
+    right: auto;
+    width: 64px;
+    height: 36px;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(255, 255, 255));
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* ===== el-38: Right gradient (scroll indicator, opacity 0) ===== */
+.ns-tabbar__gradient--right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: auto;
+    width: 64px;
+    height: 36px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(255, 255, 255));
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* ===== el-29: Scrollable tabs container ===== */
+.ns-tabbar__scroll {
+    display: flex;
+    height: 36px;
+    overflow-x: auto;
+    overflow-y: auto;
+    position: relative;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    width: 100%;
+}
+
+.ns-tabbar__scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* ===== el-30: Left spacer ===== */
+.ns-tabbar__spacer--left {
+    height: 36px;
+    position: relative;
+    left: 16px;
+    right: -16px;
+    width: 0;
+    flex-shrink: 0;
+}
+
+/* ===== el-37: Right spacer ===== */
+.ns-tabbar__spacer--right {
+    height: 36px;
+    position: relative;
+    left: -16px;
+    right: 16px;
+    width: 0;
+    flex-shrink: 0;
+}
+
+/* ===== el-31: Active pill indicator ===== */
+.ns-tabbar__indicator {
+    position: absolute;
+    height: 36px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transition: transform 0.3s ease, width 0.1s ease;
+    pointer-events: none;
+}
+
+.ns-tabbar__indicator::before {
+    content: "";
+    border-radius: 999px;
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+    z-index: 2;
+}
+
+.ns-tabbar__indicator::after {
+    content: "";
+    background-color: rgb(13, 13, 13);
+    border-radius: 999px;
+    position: absolute;
+    inset: 0;
+    will-change: transform, inline-size;
+}
+
+/* ===== el-32: Tab list (ul) ===== */
+.ns-tab-list {
+    align-items: center;
+    column-gap: 4px;
+    display: flex;
+    height: 36px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 4px;
+    row-gap: 4px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== el-33/35: Tab items (li) ===== */
+.ns-tab-item {
+    align-items: center;
+    border-radius: 999px;
+    column-gap: 8px;
+    cursor: pointer;
+    display: flex;
+    height: 36px;
+    list-style-type: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    row-gap: 8px;
+    white-space: nowrap;
+    touch-action: manipulation;
+    transition: color 0.15s;
+    user-select: none;
+}
+
+.ns-tab-item--active {
+    color: rgb(255, 255, 255);
+}
+
+.ns-tab-item--inactive {
+    color: inherit;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .ns-tab-item--inactive:hover {
+        color: rgb(13, 13, 13);
+    }
+}
+
+/* ===== el-34/36: Tab text (span) ===== */
+.ns-tab-item__text {
+    font-size: 15px;
+    font-weight: 600;
+    height: 20px;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    user-select: none;
+}
+
+/* ========== FILTER TOOLBAR (el-39..82) ========== */
+
+/* ===== el-39: Filter section outer ===== */
+.ns-filter {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 16px;
+}
+
+/* ===== el-40: Filter section inner ===== */
+.ns-filter__inner {
+    background-color: rgb(249, 249, 249);
+    border-radius: 8px;
+    column-gap: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    row-gap: 16px;
+}
+
+/* ===== el-41: Toolbar grid (3 columns) ===== */
+.ns-toolbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 12px;
+    row-gap: 12px;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+/* ===== el-42: Left column ===== */
+.ns-toolbar__left {
+    align-items: start;
+    column-gap: 12px;
+    display: flex;
+    height: 36px;
+    justify-content: flex-start;
+    row-gap: 12px;
+    white-space: nowrap;
+}
+
+/* ===== el-43: Left column inner (search + buttons) ===== */
+.ns-toolbar__left-inner {
+    column-gap: 12px;
+    display: flex;
+    height: 36px;
+    justify-content: flex-start;
+    row-gap: 12px;
+    white-space: nowrap;
+}
+
+/* ===== el-44..53: Search Box ===== */
+.ns-search {
+    column-gap: 4px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 36px;
+    max-width: 100%;
+    row-gap: 4px;
+}
+
+.ns-search__wrap {
+    display: flex;
+    flex-grow: 1;
+    height: 36px;
+    max-height: 36px;
+    border-radius: 999px;
+    border: 1px solid rgb(211, 211, 211);
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    transition:
+        background-color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+        border-color 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.ns-search__wrap:focus-within {
+    border-color: rgb(13, 13, 13);
+}
+
+.ns-search__icon-container {
+    display: flex;
+    align-items: center;
+    color: rgb(118, 118, 118);
+    cursor: text;
+    padding-left: 12px;
+    white-space: nowrap;
+}
+
+.ns-search__icon {
+    display: flex;
+    flex-shrink: 0;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    color: rgb(118, 118, 118);
+}
+
+.ns-search__icon svg {
+    position: absolute;
+    inset: 0;
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+    fill: currentColor;
+}
+
+.ns-search__input {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    padding: 16px 16px 16px 8px;
+    background-color: transparent;
+    color: rgb(13, 13, 13);
+    font-size: 15px;
+    height: 34px;
+    border-radius: 999px;
+    white-space: nowrap;
+    overflow: clip;
+}
+
+.ns-search__input::placeholder {
+    color: rgb(163, 163, 163);
+    text-transform: none;
+}
+
+/* ===== el-54: Today button ===== */
+.ns-toolbar-btn--today {
+    align-items: start;
+    appearance: button;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 17px;
+    font-weight: 600;
+    height: 36px;
+    justify-content: center;
+    min-height: 36px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    transition-duration: 0.12s;
+    transition-timing-function: linear;
+    user-select: none;
+    padding: 0;
+    column-gap: 0;
+    row-gap: 0;
+}
+
+.ns-toolbar-btn--today::before {
+    content: "";
+    border-radius: 8px;
+    cursor: pointer;
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 0;
+}
+
+.ns-toolbar-btn--today::after {
+    content: "";
+    cursor: pointer;
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 0;
+}
+
+/* ===== el-71: Center column (empty) ===== */
+.ns-toolbar__center {
+    align-items: start;
+    column-gap: 12px;
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    row-gap: 12px;
+    white-space: nowrap;
+}
+
+/* ===== el-72: Right column ===== */
+.ns-toolbar__right {
+    align-items: start;
+    column-gap: 12px;
+    display: flex;
+    height: 36px;
+    justify-content: flex-end;
+    row-gap: 12px;
+    white-space: nowrap;
+}
+
+/* ===== Filter Toolbar Button Base (Today inner, Filters, Sort by) ===== */
+.ns-toolbar-btn {
+    align-items: center;
+    appearance: button;
+    background: none;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    display: flex;
+    height: 36px;
+    max-width: 100%;
+    outline: 2px solid rgba(0, 0, 0, 0);
+    outline-offset: 2px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    padding: 0;
+}
+
+.ns-toolbar-btn::before {
+    content: "";
+    border-radius: 999px;
+    position: absolute;
+    inset: 0;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.ns-toolbar-btn:focus-visible::before {
+    opacity: 1;
+}
+
+.ns-toolbar-btn__inner {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 999px;
+    border: 1px solid rgb(211, 211, 211);
+    column-gap: 8px;
+    cursor: pointer;
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    row-gap: 8px;
+    scale: 1;
+    text-align: center;
+    white-space: nowrap;
+    user-select: none;
+    transition:
+        background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        padding 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        gap 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .ns-toolbar-btn:hover .ns-toolbar-btn__inner {
+        background-color: rgb(242, 242, 242);
+        border-color: rgb(179, 179, 179);
+        scale: 1;
+    }
+}
+
+.ns-toolbar-btn:active .ns-toolbar-btn__inner {
+    background-color: rgb(229, 229, 229);
+    border-color: rgb(163, 163, 163);
+    scale: 0.96;
+}
+
+.ns-toolbar-btn__content {
+    align-items: center;
+    display: flex;
+    column-gap: 8px;
+    row-gap: 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ns-toolbar-btn__label {
+    font-size: 15px;
+    font-weight: 500;
+    height: 20px;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ns-toolbar-btn__icon-wrap {
+    display: flex;
+}
+
+.ns-toolbar-btn__icon {
+    display: flex;
+    flex-shrink: 0;
+    height: 20px;
+    width: 20px;
+    position: relative;
+}
+
+.ns-toolbar-btn__icon svg {
+    position: absolute;
+    inset: 0;
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+    fill: currentColor;
+}
+
+/* ========== DATA TABLE (el-83..178) ========== */
+
+/* ===== el-83: Table section ===== */
+.ns-table-section {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+}
+
+/* ===== el-84: Table inner (overflow scroll) ===== */
+.ns-table-inner {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+    overflow-x: auto;
+    width: 100%;
+}
+
+/* ===== el-85: Table ===== */
+.ns-table {
+    background-color: rgb(255, 255, 255);
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}
+
+/* ===== el-86: Colgroup ===== */
+.ns-table col {
+    width: 16.6667%;
+}
+
+/* ===== el-93: Thead ===== */
+.ns-table thead {
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* ===== el-94: Header row ===== */
+.ns-table thead tr {
+    box-shadow: rgb(211, 211, 211) 0px -1px 0px 0px inset;
+}
+
+/* ===== Header cells (th) ===== */
+.ns-table th {
+    border-collapse: collapse;
+    box-shadow: rgb(211, 211, 211) 0px -1px 0px 0px inset;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 16px 8px;
+    text-align: left;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.ns-table th:first-child {
+    padding-left: 16px;
+}
+
+.ns-table th:last-child {
+    padding-right: 16px;
+}
+
+/* ===== Sort Area wrapper ===== */
+.ns-sort-area {
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    cursor: default;
+    display: inline;
+    width: 100%;
+    transition:
+        box-shadow 0.15s ease-in-out,
+        border-color 0.15s ease-in-out,
+        background-color 0.15s ease-in-out;
+}
+
+.ns-sort-area--sortable {
+    cursor: pointer;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .ns-sort-area--sortable:hover {
+        background-color: rgb(242, 242, 242);
+        box-shadow: rgb(211, 211, 211) 0px 0px 0px 4px;
+    }
+}
+
+/* ===== Sort Area Row (flex row) ===== */
+.ns-sort-row {
+    display: flex;
+    flex-grow: 1;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.ns-sort-row--right {
+    justify-content: end;
+}
+
+/* ===== Header label (text) ===== */
+.ns-sort-label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.ns-sort-label--right {
+    text-align: right;
+}
+
+/* ===== Sort indicator ===== */
+.ns-sort-indicator {
+    align-items: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    height: 16px;
+    justify-content: center;
+    margin-left: 8px;
+    margin-right: -2px;
+    margin-top: 2px;
+    width: 16px;
+}
+
+.ns-sort-indicator .ns-icon--sort {
+    display: flex;
+    flex-shrink: 0;
+    height: 20px;
+    width: 20px;
+    position: relative;
+}
+
+.ns-sort-indicator .ns-icon--sort svg {
+    position: absolute;
+    inset: 0;
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+    fill: rgb(13, 13, 13);
+}
+
+/* ========== TBODY (el-139) ========== */
+
+/* ===== Data rows ===== */
+.ns-table tbody tr {
+    line-height: 16px;
+    vertical-align: middle;
+    border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+.ns-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .ns-table tbody tr.ns-row--highlightable:hover {
+        background-color: var(--color-background-transparent-hover);
+    }
+}
+
+@media (hover: none) {
+
+    .ns-table tbody tr.ns-row--highlightable:hover,
+    .ns-table tbody tr.ns-row--highlightable:active {
+        background-color: transparent;
+    }
+}
+
+.ns-table tbody tr.ns-row--highlightable:active {
+    background-color: var(--color-background-transparent-hover);
+}
+
+.ns-table tbody tr.ns-row--highlightable {
+    cursor: pointer;
+}
+
+/* ===== Data cells (td) ===== */
+.ns-table td {
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 16px;
+    overflow-wrap: break-word;
+    padding: 16px 8px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.ns-table td:first-child {
+    padding-left: 16px;
+}
+
+.ns-table td:last-child {
+    padding-right: 16px;
+}
+
+.ns-table td.ns-td--right {
+    text-align: right;
+}
+
+.ns-table td.ns-td--scrollable {
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+/* ===== Cell content div ===== */
+.ns-cell-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    line-height: 16px;
+    overflow-wrap: break-word;
+}
+
+.ns-cell-content--right {
+    text-align: right;
+}
+
+/* ===== Sale # Link (el-142/157) ===== */
+.ns-sale-link {
+    border-radius: 4px;
+    color: rgb(105, 80, 243);
+    cursor: pointer;
+    display: inline;
+    outline-color: rgb(105, 80, 243);
+    overflow-wrap: break-word;
+    position: relative;
+    text-decoration: none;
+    line-height: 16px;
+}
+
+.ns-sale-link::before {
+    content: "";
+    border-radius: 4px;
+    position: absolute;
+    inset: 0;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.ns-sale-link:focus-visible::before {
+    opacity: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .ns-sale-link:hover {
+        color: rgb(95, 73, 214);
+        text-decoration: underline;
+    }
+}
+
+.ns-sale-link:visited {
+    color: rgb(105, 80, 243);
+}
+
+.ns-sale-link span {
+    color: inherit;
+    display: inline;
+    line-height: 16px;
+    overflow-wrap: break-word;
+}
+
+/* ===== Status Badge (el-147/162) ===== */
+.ns-badge {
+    align-items: center;
+    border-radius: 999px;
+    column-gap: 4px;
+    display: inline-flex;
+    font-size: 13px;
+    font-weight: 500;
+    justify-content: center;
+    line-height: 16px;
+    min-height: 24px;
+    min-width: 24px;
+    padding: 0 12px;
+    row-gap: 4px;
+}
+
+.ns-badge--completed {
+    background-color: rgb(237, 251, 233);
+    box-shadow: rgb(210, 246, 201) 0px 0px 0px 1px inset;
+    color: rgb(31, 137, 0);
+}
+
+.ns-badge--part-paid {
+    background-color: rgb(255, 247, 219);
+    box-shadow: rgb(255, 239, 178) 0px 0px 0px 1px inset;
+    color: rgb(183, 87, 11);
+}
+
+.ns-badge--unpaid {
+    background-color: rgb(255, 237, 237);
+    box-shadow: rgb(255, 213, 213) 0px 0px 0px 1px inset;
+    color: rgb(204, 51, 51);
+}
+
+.ns-badge--voided {
+    background-color: rgb(243, 243, 243);
+    box-shadow: rgb(229, 229, 229) 0px 0px 0px 1px inset;
+    color: rgb(118, 118, 118);
+}
+
+.ns-badge--refunded {
+    background-color: rgb(243, 243, 243);
+    box-shadow: rgb(229, 229, 229) 0px 0px 0px 1px inset;
+    color: rgb(118, 118, 118);
+}
+
+.ns-badge__text {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ========== TFOOT (el-170..177) ========== */
+
+.ns-table tfoot tr {
+    border-top: 1px solid rgb(229, 229, 229);
+}
+
+.ns-table tfoot td {
+    color: rgb(118, 118, 118);
+    line-height: 18px;
+    padding: 18px 8px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* ===== Pagination wrapper (el-173) ===== */
+.ns-pagination {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    max-width: 100%;
+    min-height: 18px;
+    position: relative;
+    transition: min-height 0.3s;
+}
+
+.ns-pagination__children {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 0;
+    max-width: 100%;
+}
+
+.ns-pagination__text-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.ns-pagination__text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    color: rgb(118, 118, 118);
+    line-height: 18px;
+    text-align: center;
+}
+
+/* ===== Loader overlay (el-177) ===== */
+.ns-pagination__loader {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.3s;
+    visibility: hidden;
+    z-index: 100;
+}
+
+/* ===== el-178: Scroll detection container (hidden) ===== */
+.ns-scroll-detection {
+    display: none;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    z-index: -1;
+    animation-duration: 0.1s;
+    animation-name: erd_scroll_detection_container_animation;
+}
+
+@keyframes erd_scroll_detection_container_animation {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,20 @@
+el-59 table {"display": "table", "height": "53px", "width": "1560px", "border-color": "rgb(128, 128, 128)"}
+el-141 table {"display": "table", "height": "336px", "width": "1560px"}
+el-61 col {"display": "table-column", "height": "53px", "min-width": "250px", "width": "305.594px"}
+el-62 col {"display": "table-column", "height": "53px", "min-width": "150px", "width": "177px"}
+el-63 col {"display": "table-column", "height": "53px", "min-width": "150px", "width": "177px"}
+el-64 col {"display": "table-column", "height": "53px", "min-width": "150px", "width": "177px"}
+el-65 col {"display": "table-column", "height": "53px", "min-width": "150px", "width": "177px"}
+el-66 col {"display": "table-column", "height": "53px", "min-width": "150px", "width": "177px"}
+el-67 col {"display": "table-column", "height": "53px", "min-width": "150px", "width": "177px"}
+el-68 col {"display": "table-column", "height": "53px", "min-width": "100px", "width": "121.781px"}
+el-69 col {"display": "table-column", "height": "53px", "min-width": "68px", "width": "70.625px"}
+el-143 col {"display": "table-column", "height": "336px", "min-width": "250px", "width": "305.859px"}
+el-144 col {"display": "table-column", "height": "336px", "min-width": "150px", "width": "177.125px"}
+el-145 col {"display": "table-column", "height": "336px", "min-width": "150px", "width": "177.125px"}
+el-146 col {"display": "table-column", "height": "336px", "min-width": "150px", "width": "177.125px"}
+el-147 col {"display": "table-column", "height": "336px", "min-width": "150px", "width": "177.125px"}
+el-148 col {"display": "table-column", "height": "336px", "min-width": "150px", "width": "177.125px"}
+el-149 col {"display": "table-column", "height": "336px", "min-width": "150px", "width": "177.125px"}
+el-150 col {"display": "table-column", "height": "336px", "min-width": "100px", "width": "120.719px"}
+el-151 col {"display": "table-column", "height": "336px", "min-width": "68px", "width": "70.6719px"}

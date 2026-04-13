@@ -1,0 +1,2712 @@
+/* ═══════════════════════════════════════════════════
+   Appointment Calendar — Fresha-Matching Light Theme
+   ═══════════════════════════════════════════════════ */
+
+/* ─── Container ─── */
+.cal-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    color: #1a1a2e;
+}
+
+/* ─── Pick Mode Bar ─── */
+.cal-pick-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background: linear-gradient(135deg, #6366f1, #818cf8);
+    color: #fff;
+    padding: 10px 24px;
+    font-size: var(--typo-s);
+    font-weight: 600;
+    z-index: 10;
+    animation: calSlideDown 0.3s ease;
+}
+
+@keyframes calSlideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.cal-pick-bar-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: var(--typo-xs);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cal-pick-bar-btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/* ─── Toolbar (Fresha: --spacing-200 padding, --spacing-100 gap) ─── */
+.cal-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border-bottom: 1px solid #e5e5e5;
+    flex-shrink: 0;
+    gap: 8px;
+    background: #f9f9f9;
+    min-height: 36px;
+}
+
+
+
+.cal-toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cal-toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cal-btn {
+    background: #fff;
+    border: 1px solid #d3d3d3;
+    color: #0d0d0d;
+    padding: 0 16px;
+    border-radius: 999px;
+    font: 500 var(--typo-s)/var(--typo-s-lh) var(--font-family);
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+    white-space: nowrap;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.cal-btn:hover {
+    background: #f2f2f2;
+    border-color: #d3d3d3;
+}
+
+.cal-btn:active {
+    scale: 0.97;
+}
+
+/* ─── Button Group (Fresha: joined buttons, shared border) ─── */
+.cal-btn-group {
+    display: inline-flex;
+}
+
+.cal-btn-group .cal-btn-group-item {
+    border-radius: 0;
+    margin-left: -1px;
+}
+
+.cal-btn-group .cal-btn-group-item:first-child {
+    border-radius: 999px 0 0 999px;
+    margin-left: 0;
+}
+
+.cal-btn-group .cal-btn-group-item:last-child {
+    border-radius: 0 999px 999px 0;
+}
+
+.cal-btn-group .cal-btn-group-item:only-child {
+    border-radius: 999px;
+}
+
+/* Date button in nav group — Fresha: min-width:175px, max-width:175px */
+.cal-btn-group-date {
+    min-width: 175px;
+    max-width: 175px;
+    font-weight: 600;
+}
+
+/* Icon-only button in group — Fresha: width:40px */
+.cal-btn-group-icon {
+    width: 40px;
+    padding: 0;
+}
+
+/* View dropdown button — Fresha: min-width:86px */
+.cal-btn-group-view {
+    min-width: 86px;
+}
+
+.cal-btn svg {
+    flex-shrink: 0;
+}
+
+/* ─── Standalone Icon Buttons (Fresha: ghost / borderless) ─── */
+/* ─── Staff Filter Dropdown ─── */
+@keyframes calDropIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ─── View Toggle (Fresha segment buttons) ─── */
+/* ─── Add Dropdown ─── */
+/* ═══════════════════════════════════════════
+   STAFF FILTER DROPDOWN — Fresha-style
+   ═══════════════════════════════════════════ */
+
+.cal-staff-filter {
+    position: relative;
+}
+
+.cal-staff-filter-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    height: 36px;
+    padding: 0 16px;
+    border: 1px solid #d3d3d3;
+    border-radius: 999px;
+    background: #fff;
+    font: 500 var(--typo-s)/var(--typo-s-lh) var(--font-family);
+    color: #0d0d0d;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.cal-staff-filter-btn:hover {
+    background: #f2f2f2;
+    border-color: #d3d3d3;
+}
+
+.cal-staff-filter-btn:active {
+    scale: 0.97;
+}
+
+.cal-staff-filter-btn svg {
+    flex-shrink: 0;
+    color: #0d0d0d;
+    transition: transform 0.2s;
+}
+
+.cal-staff-filter-btn.is-open svg {
+    transform: rotate(180deg);
+}
+
+/* Overlay backdrop */
+.cal-staff-overlay,
+.cal-view-overlay,
+.cal-add-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background: rgba(13, 22, 25, 0.15);
+    animation: calDropdownOverlayIn 0.15s ease;
+}
+
+@keyframes calDropdownOverlayIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Dropdown popover */
+.cal-staff-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    z-index: 1000;
+    width: 320px;
+    max-height: 480px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+    animation: calStaffDropIn 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cal-staff-dropdown::-webkit-scrollbar {
+    width: 4px;
+}
+
+.cal-staff-dropdown::-webkit-scrollbar-thumb {
+    background: #d4d4d4;
+    border-radius: 4px;
+}
+
+@keyframes calStaffDropIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Dropdown inner padding sections */
+.cal-staff-dropdown-group {
+    padding: 8px 12px;
+}
+
+.cal-staff-dropdown-group+.cal-staff-dropdown-group {
+    padding-top: 0;
+}
+
+/* Quick filter options (Scheduled team, All team, You) */
+.cal-staff-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 40px;
+    padding: 8px 12px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: var(--typo-s);
+    font-weight: 600;
+    color: #0d1619;
+    text-align: left;
+    border-radius: 8px;
+    transition: background-color 0.12s ease;
+    position: relative;
+}
+
+.cal-staff-option:hover {
+    background: #f5f5f7;
+}
+
+.cal-staff-option--active {
+    background: rgba(105, 80, 243, 0.08);
+    color: #0d1619;
+}
+
+.cal-staff-option--active:hover {
+    background: rgba(105, 80, 243, 0.12);
+}
+
+/* Option icon (SVG container) */
+.cal-staff-option-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    color: #0d1619;
+}
+
+.cal-staff-option--active .cal-staff-option-icon {
+    color: #6950F3;
+}
+
+/* Option avatar (for "You" row) */
+/* Divider */
+.cal-staff-divider {
+    height: 1px;
+    background: #e8e8e8;
+    margin: 4px 12px;
+    border: none;
+}
+
+/* Section header (Team members + Clear all) */
+.cal-staff-section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 10px 12px 6px 12px;
+}
+
+.cal-staff-section-label {
+    font-size: var(--typo-xs);
+    font-weight: 600;
+    color: #0d1619;
+    letter-spacing: 0.3px;
+}
+
+.cal-staff-clear {
+    background: none;
+    border: none;
+    font-size: var(--typo-xs);
+    font-weight: 600;
+    color: #6950F3;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+    transition: color 0.12s;
+}
+
+.cal-staff-clear:hover {
+    color: #5640d6;
+    text-decoration: underline;
+}
+
+.cal-staff-member .cal-staff-name {
+    font-size: var(--typo-s);
+    font-weight: 600;
+    line-height: var(--typo-s-lh);
+    color: #0d1619;
+}
+
+/* Team member row */
+.cal-staff-member {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 40px;
+    padding: 6px 12px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.12s ease;
+    position: relative;
+    font-size: var(--typo-s);
+    font-weight: 600;
+    color: #0d1619;
+    text-align: left;
+}
+
+.cal-staff-member:hover {
+    background: #f5f5f7;
+}
+
+/* Custom checkbox — Fresha exact */
+.cal-staff-cb {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.cal-staff-cb input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.cal-staff-cb-box {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    border: 1px solid #c0c0c0;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.cal-staff-cb input:checked+.cal-staff-cb-box {
+    background: #6950F3;
+    border-color: #6950F3;
+}
+
+.cal-staff-cb:hover .cal-staff-cb-box {
+    border-color: #999;
+}
+
+.cal-staff-cb input:checked:hover+.cal-staff-cb-box {
+    background: #5a41e0;
+    border-color: #5a41e0;
+}
+
+/* CSS-drawn checkmark — Fresha exact (two rotated spans) */
+.cal-staff-cb-check {
+    display: flex;
+    flex-direction: column;
+    transform: translate(0, -2px) rotate(-45deg);
+    opacity: 0;
+    transition: opacity 0.12s ease;
+}
+
+.cal-staff-cb input:checked+.cal-staff-cb-box .cal-staff-cb-check {
+    opacity: 1;
+}
+
+/* Vertical bar of checkmark */
+.cal-staff-cb-check-v {
+    display: block;
+    width: 2px;
+    height: 6.5px;
+    background: #fff;
+    border-radius: 2px;
+    transform-origin: top;
+}
+
+/* Horizontal bar of checkmark */
+.cal-staff-cb-check-h {
+    display: block;
+    width: 13px;
+    height: 2px;
+    position: relative;
+    margin-top: -1.75px;
+    background: #fff;
+    border-radius: 2px;
+    transform-origin: left;
+}
+
+/* Member avatar in the list */
+.cal-staff-avatar-sm {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--typo-2xs);
+    font-weight: 600;
+    color: #fff;
+}
+
+/* Member name */
+.cal-staff-name {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: var(--typo-xs);
+    font-weight: 500;
+    color: #0d1619;
+}
+
+/* ═══════════════════════════════════════════
+   VIEW MODE DROPDOWN — Fresha-exact
+   ═══════════════════════════════════════════ */
+
+.cal-view-filter {
+    position: relative;
+    display: inline-flex;
+}
+
+.cal-view-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+}
+
+.cal-view-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    width: 200px;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    animation: calViewDropIn 0.15s ease;
+}
+
+@keyframes calViewDropIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cal-view-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 8px 12px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: var(--typo-s);
+    font-weight: 600;
+    color: #0d0d0d;
+    line-height: 20px;
+    transition: background-color 0.12s ease;
+    position: relative;
+    min-height: 40px;
+}
+
+.cal-view-option:hover {
+    background: #f5f5f7;
+}
+
+.cal-view-option--active {
+    background: #f0edfe;
+}
+
+.cal-view-option--active:hover {
+    background: #f0edfe;
+}
+
+.cal-view-option-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    pointer-events: none;
+}
+
+.cal-view-option-icon svg {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    inset: 0;
+}
+
+.cal-btn-group-view.is-open svg {
+    transform: rotate(180deg);
+}
+
+.cal-btn-group-view svg {
+    transition: transform 0.2s;
+}
+
+/* ═══════════════════════════════════════════
+   ADD (EKLE) BUTTON & DROPDOWN — Fresha-exact
+   ═══════════════════════════════════════════ */
+
+.cal-add-wrap {
+    position: relative;
+    display: inline-flex;
+}
+
+.cal-btn--primary {
+    background: #0D0D0D;
+    color: #fff;
+    border-color: #0D0D0D;
+    border-radius: 999px;
+}
+
+.cal-btn--primary:hover {
+    background: #2a2a2a;
+    border-color: #2a2a2a;
+}
+
+.cal-btn--primary:active {
+    scale: 0.97;
+}
+
+.cal-btn--primary svg {
+    transition: transform 0.2s;
+}
+
+.cal-btn--primary.is-open svg {
+    transform: rotate(180deg);
+}
+
+.cal-add-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+}
+
+.cal-add-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    width: 220px;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    animation: calViewDropIn 0.15s ease;
+}
+
+.cal-add-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 8px 12px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: var(--typo-s);
+    font-weight: 600;
+    color: #0d0d0d;
+    line-height: 20px;
+    transition: background-color 0.12s ease;
+    position: relative;
+    min-height: 40px;
+}
+
+.cal-add-option:hover {
+    background: #f5f5f7;
+}
+
+.cal-add-option:active {
+    background: #ececec;
+}
+
+.cal-add-option-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    pointer-events: none;
+}
+
+.cal-add-option-icon svg {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    inset: 0;
+}
+
+/* ═══════════════════════════════════════════
+   DAY VIEW GRID — Fresha-exact layout
+   ═══════════════════════════════════════════ */
+
+/*
+ * 4-quadrant CSS Grid:
+ *  ┌──────────┬───────────────────────┐
+ *  │ time-    │  headers-scroll       │  110px sticky top
+ *  │ corner   │  (staff headers)      │
+ *  ├──────────┼───────────────────────┤
+ *  │ time-col │  grid-scroll          │  flex-1 scrollable
+ *  │ (48px)   │  (main calendar)      │
+ *  └──────────┴───────────────────────┘
+ */
+
+.cal-day-container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    grid-template-rows: 110px auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #fff;
+    min-height: 0;
+}
+
+/* ── Top-left corner (time column header spacer) ── */
+.cal-time-corner {
+    grid-column: 1;
+    grid-row: 1;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 61;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    box-shadow: 0 6px 4px rgba(13, 22, 25, 0.06);
+    clip-path: inset(-7px 0 -10px -7px);
+}
+
+/* ── Staff Headers (top row, scrolls horizontally with grid) ── */
+.cal-headers-scroll {
+    grid-column: 2;
+    grid-row: 1;
+    position: sticky;
+    top: 0;
+    z-index: 52;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 6px 4px rgba(13, 22, 25, 0.06);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.cal-headers-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.cal-headers-row {
+    display: flex;
+    min-width: 100%;
+    height: 100%;
+}
+
+.cal-header-cell {
+    flex: 1 1 0;
+    min-width: 140px;
+    display: flex;
+    position: relative;
+    background: #fff;
+}
+
+.cal-header-cell-inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 4px;
+    background: transparent;
+    flex-grow: 1;
+}
+
+.cal-header-label-wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.cal-header-cell-btn {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 8px;
+    transition: background-color 0.1s, box-shadow 0.1s, transform 0.1s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Fresha-exact: trigger component — flex column center gap:8px (gap-default-100 = 8px) */
+.cal-header-trigger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.cal-header-cell-btn:hover {
+    background-color: #f2f2f2;
+}
+
+.cal-header-cell-btn:active {
+    scale: 0.97;
+}
+
+/* Fresha-exact: avatar wrapper — inline-block, 44px, rounded, 2px border, isolation isolate
+   Border color = transparent (was white).
+   ::after = outer ring glow (box-shadow with blue accent, 3px expand)
+   ::before = hit area expansion (5px expand) */
+.cal-header-avatar-wrap {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    border-radius: 999px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #fff;
+    isolation: isolate;
+    z-index: 0;
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    min-height: 60px;
+    flex-shrink: 0;
+    transition: background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+}
+
+/* Fresha: ::after = outer ring shadow (align with 2px border edge) */
+.cal-header-avatar-wrap::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-radius: inherit;
+    transition: box-shadow 0.15s ease-in-out, transform 0.15s ease-in-out;
+    inset-block-start: -2px;
+    inset-inline-start: -2px;
+    box-shadow: 0 0 0 2px #A5DFF8;
+}
+
+/* On hover: scale ring slightly */
+.cal-header-cell-btn:hover .cal-header-avatar-wrap::after {
+    transform: scale(1.05);
+}
+
+/* Fresha: ::before = invisible hit area expansion (5px each side) */
+.cal-header-avatar-wrap::before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 10px) !important;
+    height: calc(100% + 10px) !important;
+    border-radius: inherit;
+    inset-block-start: -5px !important;
+    inset-inline-start: -5px !important;
+}
+
+/* Fresha-exact: avatar-inner — flex center, overflow hidden, rounded, 100%, children transition scale */
+.cal-header-avatar-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 999px;
+    width: 100%;
+    height: 100%;
+}
+
+.cal-header-avatar-inner>* {
+    transition: scale 0.15s ease-in-out;
+    transition-delay: 0.05s;
+}
+
+/* Fresha-exact: avatar circle — 100% of parent (44px), rounded, initials */
+.cal-header-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-size: var(--typo-s);
+    font-weight: 700;
+    color: #fff;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
+/* Fresha-exact: name row — flex, center aligned, padding 0 4px, relative */
+.cal-header-name-wrap {
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+    max-width: 100%;
+    position: relative;
+}
+
+/* Fresha-exact: name text — semibold xs, center aligned, 2-line clamp, word-break */
+.cal-header-name {
+    margin: 0;
+    margin-inline-end: auto;
+    font: 600 var(--typo-xs)/var(--typo-xs-lh) var(--font-family);
+    color: #0d0d0d;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-word;
+    white-space: nowrap;
+}
+
+
+
+/* ── Time Column (left side, scrolls vertically) ── */
+.cal-time-col {
+    grid-column: 1;
+    grid-row: 2;
+    position: sticky;
+    left: 0;
+    z-index: 60;
+    width: 48px;
+    background: #fff;
+}
+
+.cal-time-intervals {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.cal-time-interval {
+    height: 96px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-right: 8px;
+    box-sizing: border-box;
+}
+
+.cal-time-interval--first .cal-time-text {
+    opacity: 0;
+    /* hide 00:00 label like Fresha */
+}
+
+.cal-time-text {
+    font: 600 var(--typo-xs)/var(--typo-xs-lh) var(--font-family);
+    color: #0d0d0d;
+    transform: translateY(-8px);
+    white-space: nowrap;
+}
+
+.cal-time-border {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    background: #e5e5e5;
+}
+
+/* Fresha-exact: Current time pill in time column */
+.cal-time-now-pill {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 20px;
+    margin-top: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #e53935;
+    border-radius: 10px;
+    background: #fff;
+    color: #e53935;
+    font: 600 13px/11px var(--font-family);
+    z-index: 61;
+    pointer-events: none;
+    box-sizing: border-box;
+}
+
+/* ── Main Grid Area (scrollable) ── */
+.cal-grid-scroll {
+    grid-column: 2;
+    grid-row: 2;
+    overflow: auto;
+    position: relative;
+    /* Crosshatch background for closed/non-working hours (Fresha: neutral-faded) */
+    background-color: #f2f2f2;
+    background-image:
+        linear-gradient(45deg, transparent 46%, #e5e5e5 49%, #e5e5e5 51%, transparent 55%);
+    background-size: 8px 8px;
+}
+
+.cal-grid-scroll {
+    overflow: visible;
+}
+
+.cal-grid-inner {
+    position: relative;
+    min-width: 100%;
+}
+
+/* ── Working-hours Highlight (white overlay on crosshatch) ── */
+.cal-highlight {
+    position: absolute;
+    background: #fff;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ── Column Dividers ── */
+.cal-col-dividers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.cal-col-divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #d3d3d3;
+}
+
+/* ── Horizontal Lines (every 15 min) ── */
+.cal-h-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.cal-h-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid #e5e5e5;
+    opacity: 0.32;
+}
+
+.cal-h-line--hour {
+    opacity: 1;
+}
+
+/* ── Staff Event Columns (absolute layers) ── */
+.cal-events-col {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+}
+
+/* ─── Individual Cell Slots (Fresha-exact hover effect) ─── */
+.cal-cell-slot {
+    position: absolute;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 3;
+    transition: background-color 0.12s ease;
+}
+
+/* Hover: show pill with lavender bg, thin border */
+.cal-cell-slot:hover .cal-cell-time,
+.cal-cell-slot--hovered .cal-cell-time {
+    opacity: 1;
+    background-color: #f0f0ff;
+    border-width: 1px;
+    border-color: #c4b5fd;
+}
+
+/* Active: show pill with border, no lavender bg */
+.cal-cell-slot--active .cal-cell-time {
+    opacity: 1;
+    background-color: transparent;
+    border-color: #6950f3;
+}
+
+/* Time pill base styles */
+.cal-cell-time {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    user-select: none;
+    z-index: 51;
+    white-space: nowrap;
+    overflow: hidden;
+    font: 500 13px/16px var(--font-family);
+    color: #6950f3;
+    border: 2px solid transparent;
+    background-color: transparent;
+    border-radius: 4px;
+    margin: 1px;
+    padding: 2px 5px 2px 7px;
+    /* Hidden by default */
+    opacity: 0;
+    transition: opacity 0.12s ease, border-color 0.12s ease;
+}
+
+/* ─── Quick Actions Popover (Fresha-exact from div[43]) ─── */
+
+/* Overlay: Fresha uses #13131340 */
+.cal-quick-actions-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: #13131340;
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Popover container: elevated white, border-radius 12px, min-width 280px */
+.cal-quick-actions {
+    position: absolute;
+    z-index: 100000;
+    display: inline-flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.04);
+    min-width: 280px;
+    padding: 0;
+    overflow: auto;
+    scrollbar-width: none;
+    animation: calQuickActionsIn 0.2s ease-in-out;
+}
+
+.cal-quick-actions::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes calQuickActionsIn {
+    from {
+        opacity: 0;
+        transform: scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Header: Fresha padding 8px 12px 8px 24px, bg neutral (#f5f5f5), flex row */
+.cal-qa-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px 8px 24px;
+    background-color: #f5f5f5;
+    width: 100%;
+    color: #0d0d0d;
+}
+
+/* Time label: Fresha font 600 17px/24px (body-m-semibold) */
+.cal-qa-time {
+    font: 600 17px/24px var(--font-family);
+    color: #0d0d0d;
+    margin: 0;
+}
+
+/* Close button: Fresha sizing-450 = 36px, icon sizing-250 = 20px */
+.cal-qa-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border: 1px solid transparent;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #0d0d0d;
+    transition: background 0.15s ease-out, transform 0.15s ease-out;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.cal-qa-close:hover {
+    background: rgba(19, 19, 19, 0.06);
+}
+
+.cal-qa-close:active {
+    background: rgba(19, 19, 19, 0.1);
+    transform: scale(0.96);
+}
+
+.cal-qa-close svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Menu body: Fresha padding 16px 24px */
+.cal-qa-menu {
+    list-style: none;
+    margin: 0;
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    flex-grow: 1;
+}
+
+/* Menu item: Fresha min-height 40px (sizing-500), border-radius 8px, gap 8px */
+.cal-qa-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    margin: 0 -12px;
+    border-radius: 8px;
+    cursor: pointer;
+    /* Fresha font: 600 15px/20px — bold to match add dropdown */
+    font: 600 15px/20px var(--font-family);
+    color: #0d0d0d;
+    transition: background 0.15s ease-in-out, color 0.15s ease-in-out;
+    border: none;
+    background: transparent;
+    width: calc(100% + 24px);
+    text-align: left;
+    white-space: nowrap;
+    min-height: 40px;
+}
+
+.cal-qa-item:hover {
+    background: rgba(19, 19, 19, 0.06);
+}
+
+.cal-qa-item:active {
+    background: rgba(19, 19, 19, 0.1);
+}
+
+/* Menu item icon: Fresha sizing-250 = 20px */
+.cal-qa-item-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    color: #0d0d0d;
+    pointer-events: none;
+}
+
+.cal-qa-item-icon svg {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Quick actions settings link (4th item in Fresha) */
+/* ─── Appointment Block ─── */
+.cal-appt-block {
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    border-radius: 4px;
+    padding: 4px 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: box-shadow 0.15s ease;
+    z-index: 5;
+    border-left: 3px solid;
+    min-height: 18px;
+    background: #d0ebff;
+}
+
+.cal-appt-block:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    z-index: 6;
+}
+
+.cal-appt-block--draft {
+    background-image: repeating-linear-gradient(45deg,
+            transparent,
+            transparent 4px,
+            rgba(105, 80, 243, 0.08) 4px,
+            rgba(105, 80, 243, 0.08) 8px) !important;
+    opacity: 0.85;
+}
+
+.cal-appt-time {
+    font: 600 var(--typo-2xs)/var(--typo-2xs-lh) var(--font-family);
+    color: inherit;
+    margin-bottom: 1px;
+}
+
+.cal-appt-customer {
+    font: 600 var(--typo-2xs)/var(--typo-2xs-lh) var(--font-family);
+    color: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cal-appt-service {
+    font: 400 var(--typo-2xs)/var(--typo-2xs-lh) var(--font-family);
+    color: inherit;
+    opacity: 0.7;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ─── Now Indicator (Fresha danger/red) ─── */
+.cal-now-indicator {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.cal-now-indicator .cal-now-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 2px;
+    background: #e53935;
+}
+
+.cal-now-indicator .cal-now-label {
+    display: none;
+    /* Replaced by cal-time-now-pill in the time column */
+}
+
+.cal-now-indicator .cal-now-line::before {
+    display: none;
+}
+
+
+/* ═══════════════════════════════════════════════════
+   FRESHA DRAWER — Two Column Layout (Light Theme)
+   ═══════════════════════════════════════════════════ */
+
+/* ─── Float buttons outside drawer ─── */
+.cal-drawer-float-btns {
+    position: fixed;
+    top: 76px;
+    right: 362px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 1001;
+    animation: calFadeIn 0.2s ease;
+}
+
+.cal-drawer-float-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #d1d1d6;
+    color: #666;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--typo-xs);
+    transition: all 0.15s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.cal-drawer-float-btn:hover {
+    background: #f5f5f7;
+    color: #1a1a2e;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+@keyframes calFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ─── Drawer container ─── */
+.cal-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    animation: calSlideIn 0.25s ease;
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.08);
+}
+
+@keyframes calSlideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* ─── Left strip: Customer ─── */
+.cal-drawer-left {
+    width: 100px;
+    background: #f5f5f7;
+    border-right: 1px solid #e5e5ea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 24px;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.cal-drawer-left-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--typo-ml);
+    cursor: pointer;
+    transition: all 0.15s;
+    border: 2px dashed #c7c7cc;
+    color: #888;
+    background: #fff;
+}
+
+.cal-drawer-left-icon:hover {
+    border-color: #6366f1;
+    color: #6366f1;
+    background: rgba(99, 102, 241, 0.04);
+}
+
+.cal-drawer-left-icon--filled {
+    border: 2px solid #6366f1;
+    background: rgba(99, 102, 241, 0.08);
+    font-size: var(--typo-s);
+    font-weight: 700;
+    color: #6366f1;
+}
+
+.cal-drawer-left-label {
+    font-size: var(--typo-2xs);
+    font-weight: 600;
+    color: #1a1a2e;
+    text-align: center;
+    line-height: 1.3;
+    max-width: 88px;
+}
+
+.cal-drawer-left-sublabel {
+    font-size: var(--typo-2xs);
+    color: #999;
+    text-align: center;
+    line-height: 1.3;
+    max-width: 88px;
+}
+
+/* Settings gear icon in left strip */
+/* ─── Right panel: Content ─── */
+.cal-drawer-right {
+    width: 264px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    border-left: 1px solid #f0f0f2;
+}
+
+/* Panel Header */
+.cal-drawer-header {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 20px 20px 14px;
+    border-bottom: 1px solid #e5e5ea;
+    flex-shrink: 0;
+}
+
+.cal-drawer-back {
+    background: none;
+    border: none;
+    color: #6366f1;
+    padding: 0;
+    font-size: var(--typo-xs);
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.15s;
+}
+
+.cal-drawer-back:hover {
+    color: #4f46e5;
+}
+
+.cal-drawer-title {
+    font-size: var(--typo-s);
+    font-weight: 700;
+    color: #1a1a2e;
+    line-height: 1.3;
+}
+
+/* Panel Body */
+.cal-drawer-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px 20px;
+}
+
+/* Panel Footer */
+.cal-drawer-footer {
+    border-top: 1px solid #e5e5ea;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    background: #fff;
+}
+
+.cal-drawer-total {
+    display: flex;
+    flex-direction: column;
+}
+
+.cal-drawer-total-label {
+    font-size: var(--typo-2xs);
+    color: #999;
+    font-weight: 500;
+}
+
+.cal-drawer-total-amount {
+    font-size: var(--typo-m);
+    font-weight: 700;
+    color: #1a1a2e;
+}
+
+.cal-drawer-actions {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+
+/* Outline button variant */
+.cal-btn--outline {
+    background: #fff;
+    border: 1px solid #e5e5ea;
+    color: #333;
+}
+
+.cal-btn--outline:hover {
+    background: #f5f5f7;
+    border-color: #d1d1d6;
+}
+
+
+/* ═══════════════════════════════════════
+   Panel A — Service Picker
+   ═══════════════════════════════════════ */
+
+.cal-svc-search-wrap {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.cal-svc-search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: var(--typo-xs);
+    color: #999;
+    pointer-events: none;
+}
+
+.cal-svc-search {
+    width: 100%;
+    background: #f5f5f7;
+    border: 1px solid #e5e5ea;
+    border-radius: 8px;
+    color: #1a1a2e;
+    padding: 9px 12px 9px 32px;
+    font-size: var(--typo-xs);
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+.cal-svc-search:focus {
+    border-color: #6366f1;
+    background: #fff;
+}
+
+.cal-svc-search::placeholder {
+    color: #bbb;
+}
+
+.cal-svc-category {
+    margin-bottom: 16px;
+}
+
+.cal-svc-category-title {
+    font-size: var(--typo-xs);
+    font-weight: 700;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    padding: 6px 0 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #f0f0f2;
+    margin-bottom: 2px;
+}
+
+.cal-svc-category-count {
+    font-size: var(--typo-2xs);
+    font-weight: 500;
+    color: #bbb;
+    background: #f0f0f2;
+    padding: 1px 6px;
+    border-radius: 8px;
+}
+
+.cal-svc-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.1s;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+}
+
+.cal-svc-item:hover {
+    background: #f5f5f7;
+}
+
+.cal-svc-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.cal-svc-item-name {
+    font-size: var(--typo-xs);
+    font-weight: 500;
+    color: #1a1a2e;
+}
+
+.cal-svc-item-duration {
+    font-size: var(--typo-2xs);
+    color: #999;
+}
+
+.cal-svc-item-price {
+    font-size: var(--typo-xs);
+    font-weight: 600;
+    color: #1a1a2e;
+    white-space: nowrap;
+}
+
+
+/* ═══════════════════════════════════════
+   Panel B — Appointment Detail
+   ═══════════════════════════════════════ */
+
+.cal-detail-date-row {
+    margin-bottom: 2px;
+}
+
+.cal-detail-date {
+    font-size: var(--typo-m);
+    font-weight: 700;
+    color: #1a1a2e;
+    display: inline;
+}
+
+.cal-detail-date-chevron {
+    color: #999;
+    font-size: var(--typo-xs);
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.cal-detail-time {
+    font-size: var(--typo-xs);
+    color: #999;
+    margin-bottom: 0;
+}
+
+.cal-detail-section-title {
+    font-size: var(--typo-xs);
+    font-weight: 700;
+    color: #555;
+    margin-bottom: 10px;
+    margin-top: 4px;
+}
+
+.cal-detail-service {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f2;
+    position: relative;
+}
+
+.cal-detail-service:last-of-type {
+    border-bottom: none;
+}
+
+.cal-detail-svc-left {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+}
+
+.cal-detail-svc-bar {
+    width: 3px;
+    border-radius: 2px;
+    flex-shrink: 0;
+    background: #6366f1;
+    min-height: 32px;
+}
+
+.cal-detail-svc-info {
+    flex: 1;
+}
+
+.cal-detail-svc-name {
+    font-size: var(--typo-xs);
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 2px;
+}
+
+.cal-detail-svc-meta {
+    font-size: var(--typo-2xs);
+    color: #999;
+    line-height: 1.5;
+}
+
+.cal-detail-svc-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.cal-detail-svc-price {
+    font-size: var(--typo-xs);
+    font-weight: 600;
+    color: #1a1a2e;
+    white-space: nowrap;
+}
+
+.cal-detail-svc-btns {
+    display: flex;
+    gap: 1px;
+    opacity: 0;
+    transition: opacity 0.15s;
+}
+
+.cal-detail-service:hover .cal-detail-svc-btns {
+    opacity: 1;
+}
+
+.cal-detail-svc-btn {
+    background: none;
+    border: none;
+    color: #bbb;
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--typo-xs);
+    transition: all 0.1s;
+}
+
+.cal-detail-svc-btn:hover {
+    background: #f5f5f7;
+    color: #555;
+}
+
+.cal-detail-svc-btn--delete:hover {
+    background: rgba(239, 68, 68, 0.08);
+    color: #ef4444;
+}
+
+/* Add more service */
+.cal-add-svc-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #999;
+    background: none;
+    border: none;
+    padding: 10px 0;
+    font-size: var(--typo-xs);
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.15s;
+}
+
+.cal-add-svc-btn:hover {
+    color: #6366f1;
+}
+
+.cal-add-svc-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1.5px dashed #d1d1d6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--typo-xs);
+}
+
+.cal-detail-duration-total {
+    text-align: right;
+    font-size: var(--typo-2xs);
+    color: #bbb;
+    margin-top: 4px;
+}
+
+
+/* ═══════════════════════════════════════
+   Panel C — Customer Picker
+   ═══════════════════════════════════════ */
+
+.cal-cust-walkin {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.1s;
+    border: none;
+    background: #f5f5f7;
+    width: 100%;
+    text-align: left;
+    color: #555;
+    font-size: var(--typo-xs);
+    margin-bottom: 10px;
+}
+
+.cal-cust-walkin:hover {
+    background: #eeeef0;
+}
+
+.cal-cust-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.cal-cust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.1s;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+}
+
+.cal-cust-item:hover {
+    background: #f5f5f7;
+}
+
+.cal-cust-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(99, 102, 241, 0.1);
+    color: #6366f1;
+    font-size: var(--typo-2xs);
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.cal-cust-name {
+    font-size: var(--typo-xs);
+    font-weight: 500;
+    color: #1a1a2e;
+}
+
+.cal-cust-contact {
+    font-size: var(--typo-2xs);
+    color: #999;
+}
+
+
+/* ═══════════════════════════════════════
+   Panel D — Service Edit
+   ═══════════════════════════════════════ */
+
+.cal-edit-service-selector {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    background: #f5f5f7;
+    border: 1px solid #e5e5ea;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: border-color 0.15s;
+}
+
+.cal-edit-service-selector:hover {
+    border-color: #6366f1;
+}
+
+.cal-edit-service-name {
+    font-size: var(--typo-xs);
+    font-weight: 500;
+    color: #1a1a2e;
+}
+
+.cal-edit-arrow {
+    color: #bbb;
+}
+
+.cal-edit-field {
+    margin-bottom: 16px;
+}
+
+.cal-edit-label {
+    font-size: var(--typo-2xs);
+    font-weight: 600;
+    color: #999;
+    margin-bottom: 5px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.cal-edit-row {
+    display: flex;
+    gap: 10px;
+}
+
+.cal-edit-row>* {
+    flex: 1;
+}
+
+.cal-edit-input,
+.cal-edit-select {
+    width: 100%;
+    background: #f5f5f7;
+    border: 1px solid #e5e5ea;
+    border-radius: 8px;
+    color: #1a1a2e;
+    padding: 9px 12px;
+    font-size: var(--typo-xs);
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+.cal-edit-input:focus,
+.cal-edit-select:focus {
+    border-color: #6366f1;
+    background: #fff;
+}
+
+.cal-edit-select option {
+    background: #fff;
+    color: #1a1a2e;
+}
+
+.cal-edit-staff-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    background: #f5f5f7;
+    border: 1px solid #e5e5ea;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color 0.15s;
+}
+
+.cal-edit-staff-row:hover {
+    border-color: #6366f1;
+}
+
+
+.cal-edit-staff-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--typo-2xs);
+    font-weight: 600;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+
+.cal-edit-delete {
+    background: rgba(239, 68, 68, 0.06);
+    border: 1px solid rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--typo-s);
+    transition: all 0.15s;
+}
+
+.cal-edit-delete:hover {
+    background: rgba(239, 68, 68, 0.12);
+}
+
+.cal-edit-apply {
+    background: #6366f1;
+    color: #fff;
+    border: none;
+    padding: 9px 22px;
+    border-radius: 8px;
+    font-size: var(--typo-xs);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.cal-edit-apply:hover {
+    background: #4f46e5;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+}
+
+
+/* ─── Loading ─── */
+.cal-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 12px;
+    color: #999;
+}
+
+.cal-loading-spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid #e5e5ea;
+    border-top-color: #6366f1;
+    border-radius: 50%;
+    animation: calSpin 0.7s linear infinite;
+}
+
+@keyframes calSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+    .cal-drawer {
+        width: 100%;
+    }
+
+    .cal-drawer-left {
+        width: 80px;
+    }
+
+    .cal-drawer-right {
+        width: calc(100% - 80px);
+    }
+
+    .cal-drawer-float-btns {
+        display: none;
+    }
+
+    .cal-toolbar {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+}
+
+
+
+/* ═══════════════════════════════════════════════════
+   3-DAY VIEW (Fresha CSS Grid — Pixel-Perfect)
+   ═══════════════════════════════════════════════════ */
+
+/* Root */
+.cal-3day-root {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 0%;
+    height: 100%;
+}
+
+.cal-3day-container {
+    height: 100%;
+}
+
+/* Crosshatch Background */
+.cal-3day-scroll {
+    height: 100%;
+    background-color: rgb(242, 242, 242);
+    background-image: linear-gradient(45deg,
+            rgba(0, 0, 0, 0) 46%,
+            rgb(229, 229, 229) 49%,
+            rgb(229, 229, 229) 51%,
+            rgba(0, 0, 0, 0) 55%);
+    background-size: 8px 8px;
+    overflow: hidden auto;
+}
+
+/* CSS Grid */
+.cal-3day-grid {
+    display: grid;
+    min-height: 100%;
+}
+
+/* ── Header Row ── */
+.cal-3day-corner {
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: 81px;
+    height: 70px;
+    margin-right: -1px;
+    background-color: #fff;
+    z-index: 4;
+    grid-row: 1;
+    grid-column: 1;
+    box-shadow: 0 6px 4px rgba(13, 22, 25, 0.06);
+}
+
+.cal-3day-day-header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    margin-right: -1px;
+    background-color: #fff;
+    white-space: nowrap;
+    border-bottom: 1px solid rgb(229, 229, 229);
+    z-index: 3;
+    grid-row: 1;
+    transition: background-color 0.12s ease;
+    box-shadow: 0 6px 4px rgba(13, 22, 25, 0.06);
+}
+
+/* Hovered day header */
+.cal-3day-day-header.is-hovered .cal-3day-day-header-content {
+    background-color: rgba(19, 19, 19, 0.06);
+}
+
+.cal-3day-header-shadow {
+    position: sticky;
+    top: 70px;
+    max-height: 0;
+    box-shadow: rgba(13, 22, 25, 0.06) 0px 6px 4px 0px;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+
+.cal-3day-day-header-btn {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.cal-3day-day-header-content {
+    display: flex;
+    width: 100%;
+    height: 61px;
+    padding-left: 8px;
+    line-height: 16.1px;
+    text-align: center;
+    white-space: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    gap: 6px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.1s, box-shadow 0.1s, transform 0.1s;
+}
+
+.cal-3day-day-header-content:hover {
+    background-color: rgba(19, 19, 19, 0.06);
+}
+
+.cal-3day-day-header-content:active {
+    scale: 0.97;
+}
+
+/* Day number wrapper */
+.cal-3day-day-num-wrap {
+    display: flex;
+    padding: 4px 8px;
+}
+
+/* Today: purple circle */
+.cal-3day-day-num-wrap.is-today {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.cal-3day-day-num-wrap.is-today::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgb(105, 80, 243);
+    border-radius: 999px;
+    overflow: hidden;
+    transition: background-color 0.1s, box-shadow 0.1s, transform 0.1s;
+}
+
+/* Day number text */
+.cal-3day-day-num {
+    position: relative;
+    z-index: 1;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    white-space: nowrap;
+    color: rgb(19, 19, 19);
+}
+
+.cal-3day-day-num.is-today {
+    color: #fff;
+}
+
+.cal-3day-day-num.is-past {
+    color: rgb(135, 140, 147);
+}
+
+/* Day name text */
+.cal-3day-day-name {
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+    color: rgb(19, 19, 19);
+}
+
+.cal-3day-day-name.is-today {
+    color: rgb(105, 80, 243) !important;
+}
+
+.cal-3day-day-name.is-past {
+    color: rgb(135, 140, 147);
+}
+
+/* ── Staff Column (sticky left) ── */
+.cal-3day-staff-col {
+    position: sticky;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    background-color: rgb(249, 249, 249);
+    z-index: 2;
+    grid-column: 1;
+    grid-row: 3 / -1;
+}
+
+.cal-3day-staff-entry {
+    position: relative;
+    flex: 1;
+    width: 80px;
+    background-color: rgb(249, 249, 249);
+    transition: background-color 0.12s ease;
+}
+
+/* Hovered staff row */
+.cal-3day-staff-entry.is-hovered .cal-3day-staff-btn {
+    background-color: rgba(19, 19, 19, 0.06);
+}
+
+.cal-3day-staff-cell {
+    display: flex;
+    width: 80px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+}
+
+.cal-3day-staff-btn {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    min-width: 72px;
+    max-width: 72px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    border: none;
+    background: rgba(19, 19, 19, 0);
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.1s, box-shadow 0.1s, transform 0.1s;
+}
+
+.cal-3day-staff-btn:hover {
+    background-color: rgba(19, 19, 19, 0.06);
+}
+
+.cal-3day-staff-btn:active {
+    scale: 0.97;
+}
+
+.cal-3day-staff-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.cal-3day-staff-border {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: rgb(229, 229, 229);
+}
+
+/* ── Avatar ── */
+.cal-3day-avatar-wrap {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    border-radius: 999px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #fff;
+    isolation: isolate;
+    z-index: 0;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    flex-shrink: 0;
+    transition: background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+}
+
+.cal-3day-avatar-wrap::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-radius: inherit;
+    transition: box-shadow 0.15s ease-in-out, transform 0.15s ease-in-out;
+    inset-block-start: -2px;
+    inset-inline-start: -2px;
+    box-shadow: 0 0 0 2px #A5DFF8;
+}
+
+.cal-3day-staff-btn:hover .cal-3day-avatar-wrap::after {
+    transform: scale(1.05);
+}
+
+.cal-3day-avatar-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 999px;
+    width: 100%;
+    height: 100%;
+}
+
+.cal-3day-avatar-initials {
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* Staff Name */
+.cal-3day-staff-name-wrap {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    padding: 0 4px;
+    position: relative;
+}
+
+.cal-3day-staff-name {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    width: 56px;
+    max-width: 100%;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 0;
+    color: rgb(19, 19, 19);
+}
+
+/* ── Day Columns & Cells ── */
+.cal-3day-day-col {
+    grid-row: 3 / -1;
+    display: flex;
+    flex-direction: column;
+}
+
+.cal-3day-cell {
+    flex: 1;
+    background-color: #fff;
+    border-right: 1px solid rgb(229, 229, 229);
+    border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+/* Past day cells: crosshatch */
+.cal-3day-cell.is-past {
+    background-color: #f5f5f5;
+    background-image:
+        linear-gradient(45deg, transparent 46%, #d9d9d9 49%, #d9d9d9 51%, transparent 55%);
+    background-size: 8px 8px;
+}
+
+/* Hover: purple tint */
+/* Hover: purple tint */
+.cal-3day-cell:hover {
+    position: relative;
+    z-index: 1;
+    margin-top: -0.75px;
+    margin-left: -0.75px;
+    background-color: rgb(240, 240, 255);
+    border: 1px solid rgb(176, 177, 253);
+    transition: background-color 0.12s ease, border-color 0.12s ease;
+}
+
+.cal-3day-cell.is-active {
+    position: relative;
+    z-index: 2;
+    margin-top: -0.75px;
+    margin-left: -0.75px;
+    border: 2px solid #6950f3;
+}
+
+/* Cell content */
+.cal-3day-cell-content {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 6px;
+    overflow: hidden;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.cal-3day-cell-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+}
+
+.cal-3day-cell-click {
+    position: absolute;
+    inset: 0;
+    cursor: inherit;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Monthly Calendar View — Fresha-Exact
+   ═══════════════════════════════════════════════════════════ */
+
+.cal-month-root {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    font-family: var(--font-family);
+}
+
+.cal-month-scroll {
+    flex: 1;
+    background-color: rgb(242, 242, 242);
+    background-image: linear-gradient(45deg, transparent 46%, rgb(229, 229, 229) 49%, rgb(229, 229, 229) 51%, transparent 55%);
+    background-size: 8px 8px;
+    overflow: hidden auto;
+}
+
+/* ─── Sticky Header Row ─── */
+.cal-month-header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 45px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(13, 22, 25, 0.06) 0px 6px 4px 0px;
+    z-index: 3;
+}
+
+.cal-month-header-cell {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    height: 45px;
+    background-color: rgb(255, 255, 255);
+    white-space: nowrap;
+    border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+.cal-month-header-cell p {
+    margin: 0;
+    font: 500 var(--typo-s)/var(--typo-s-lh) var(--font-family);
+    color: rgb(13, 13, 13);
+    white-space: nowrap;
+}
+
+/* ─── Grid of Weeks ─── */
+.cal-month-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+}
+
+/* ─── Day Cell ─── */
+.cal-month-cell {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: calc((100vh - 155px) / 5);
+    background-color: rgb(255, 255, 255);
+    border-right: 1px solid rgb(229, 229, 229);
+    border-bottom: 1px solid rgb(229, 229, 229);
+    padding: 6px;
+    gap: 2px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.cal-month-cell:nth-child(7n) {
+    border-right: none;
+}
+
+/* Past day cells */
+.cal-month-cell.is-past {
+    background-color: rgb(242, 242, 242);
+    background-image: linear-gradient(45deg, transparent 46%, rgb(229, 229, 229) 49%, rgb(229, 229, 229) 51%, transparent 55%);
+    background-size: 8px 8px;
+}
+
+/* Other month cells */
+.cal-month-cell.is-other-month .cal-month-day-num {
+    color: rgb(135, 140, 147);
+}
+
+/* Hover — same as 3-day view */
+.cal-month-cell:hover {
+    position: relative;
+    z-index: 1;
+    margin-top: -1px;
+    margin-left: -1px;
+    background-color: rgb(240, 240, 255);
+    border: 1px solid rgb(176, 177, 253);
+    transition: background-color 0.12s ease, border-color 0.12s ease;
+}
+
+/* Active */
+.cal-month-cell.is-active {
+    position: relative;
+    z-index: 2;
+    border: 2px solid #6950f3;
+}
+
+/* ─── Day Number ─── */
+.cal-month-day-num {
+    margin: 0;
+    font: 600 var(--typo-xs)/var(--typo-xs-lh) var(--font-family);
+    color: rgb(13, 13, 13);
+    padding: 2px 4px;
+    width: fit-content;
+}
+
+/* Today circle */
+.cal-month-day-num.is-today {
+    background-color: rgb(105, 80, 243);
+    color: rgb(255, 255, 255);
+    border-radius: 999px;
+    min-width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 6px;
+    box-shadow: rgba(105, 80, 243, 0.3) 0px 4px 10px 0px;
+}
+
+/* Month label (e.g. "1 Şubat") */
+.cal-month-day-num .cal-month-label {
+    font-weight: 400;
+    margin-left: 4px;
+}

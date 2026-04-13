@@ -1,0 +1,582 @@
+Total elements: 468
+Total lines in JSON: 14675
+
+=== FULL ELEMENT HIERARCHY TREE ===
+
+el-0 <div> p=null d=0 w=1806px h=796px bg=rgb(13, 13, 13)
+  el-1 <div> p=el-0 d=1 w=1806px h=796px bg=rgb(19, 19, 19)
+    el-2 <div> p=el-1 d=2 w=1806px h=1088px
+      el-3 <div> p=el-2 d=3 w=1440px h=1056px
+        el-4 <div> p=el-3 d=4 w=296px h=538px
+          el-5 <div> p=el-4 d=5 w=296px h=538px
+            el-6 <div> p=el-5 d=6 w=296px h=538px bg=rgb(24, 24, 24)
+              el-7 <div> p=el-6 d=7 w=296px h=538px
+              el-8 <div> p=el-6 d=7 w=296px h=538px
+                el-9 <ul> p=el-8 d=8 w=272px h=522px
+                  el-10 <li> p=el-9 d=9 w=232px h=365px
+                    el-11 <span> p=el-10 d=10 w=232px h=40px
+                      el-12 <span> p=el-11 d=11 w=232px h=28px
+                        el-13 <p> p=el-12 d=12 "Reports" w=232px h=28px
+                    el-14 <ul> p=el-10 d=10 w=232px h=308px
+                      el-15 <li> p=el-14 d=11 w=264px h=44px bg=rgb(32, 30, 69)
+                        el-16 <button> p=el-15 d=12 type=button w=264px h=44px
+                        el-17 <span> p=el-15 d=12 w=20px h=20px
+                          el-18 <span> p=el-17 d=13 [HIDDEN] w=auto h=auto
+                            el-19 <svg> p=el-18 d=14 w=auto h=auto
+                              el-20 <path> p=el-19 d=15 [SVG-path] w=auto h=auto
+                              el-21 <path> p=el-19 d=15 [SVG-path] w=auto h=auto
+                          el-22 <span> p=el-17 d=13 w=0px h=20px
+                            el-23 <svg> p=el-22 d=14 w=20px h=20px
+                              el-24 <path> p=el-23 d=15 [SVG-path] w=auto h=auto
+                              el-25 <path> p=el-23 d=15 [SVG-path] w=auto h=auto
+                        el-26 <span> p=el-15 d=12 [HIDDEN] w=24px h=24px
+                        el-27 <span> p=el-15 d=12 w=165.531px h=20px
+                          el-28 <span> p=el-27 d=13 "All reports" w=165.531px h=20px
+                        el-29 <div> p=el-15 d=12 w=14.4688px h=20px bg=rgb(24, 24, 24)
+                          el-30 <span> p=el-29 d=13 "53" w=14.4688px h=16px
+                      el-31 <li> p=el-14 d=11 w=264px h=44px
+                        el-32 <button> p=el-31 d=12 type=button w=264px h=44px
+                        el-33 <span> p=el-31 d=12 w=20px h=20px
+                          el-34 <svg> p=el-33 d=13 w=20px h=20px
+                            el-35 <path> p=el-34 d=14 [SVG-path] w=auto h=auto
+                        el-36 <span> p=el-31 d=12 [HIDDEN] w=24px h=24px
+                          el-37 <svg> p=el-36 d=13 w=24px h=24px
+                            el-38 <path> p=el-37 d=14 [SVG-path] w=auto h=auto
+                        el-39 <span> p=el-31 d=12 w=168px h=20px
+                          el-40 <span> p=el-39 d=13 "Favourites" w=168px h=20px
+                        el-41 <div> p=el-31 d=12 w=12px h=20px bg=rgb(24, 24, 24)
+                          el-42 <span> p=el-41 d=13 "0" w=7.23438px h=16px
+                      el-43 <li> p=el-14 d=11 w=264px h=44px
+                        el-44 <button> p=el-43 d=12 type=button w=264px h=44px
+                        el-45 <span> p=el-43 d=12 w=20px h=20px
+                          el-46 <svg> p=el-45 d=13 w=20px h=20px
+                            el-47 <path> p=el-46 d=14 [SVG-path] w=auto h=auto
+                        el-48 <span> p=el-43 d=12 [HIDDEN] w=24px h=24px
+                          el-49 <svg> p=el-48 d=13 w=24px h=24px
+                            el-50 <path> p=el-49 d=14 [SVG-path] w=auto h=auto
+                        el-51 <span> p=el-43 d=12 w=168px h=20px
+                          el-52 <span> p=el-51 d=13 "Dashboards" w=168px h=20px
+                        el-53 <div> p=el-43 d=12 w=12px h=20px bg=rgb(24, 24, 24)
+                          el-54 <span> p=el-53 d=13 "3" w=7.23438px h=16px
+                      el-55 <li> p=el-14 d=11 w=264px h=44px
+                        el-56 <button> p=el-55 d=12 type=button w=264px h=44px
+                        el-57 <span> p=el-55 d=12 w=20px h=20px
+                          el-58 <svg> p=el-57 d=13 w=20px h=20px
+                            el-59 <path> p=el-58 d=14 [SVG-path] w=auto h=auto
+                        el-60 <span> p=el-55 d=12 [HIDDEN] w=24px h=24px
+                          el-61 <svg> p=el-60 d=13 w=24px h=24px
+                            el-62 <path> p=el-61 d=14 [SVG-path] w=auto h=auto
+                        el-63 <span> p=el-55 d=12 w=165.531px h=20px
+                          el-64 <span> p=el-63 d=13 "Standard" w=165.531px h=20px
+                        el-65 <div> p=el-55 d=12 w=14.4688px h=20px bg=rgb(24, 24, 24)
+                          el-66 <span> p=el-65 d=13 "45" w=14.4688px h=16px
+                      el-67 <li> p=el-14 d=11 w=264px h=44px
+                        el-68 <button> p=el-67 d=12 type=button w=264px h=44px
+                        el-69 <span> p=el-67 d=12 w=20px h=20px
+                          el-70 <svg> p=el-69 d=13 w=20px h=20px
+                            el-71 <path> p=el-70 d=14 [SVG-path] w=auto h=auto
+                        el-72 <span> p=el-67 d=12 [HIDDEN] w=24px h=24px
+                          el-73 <svg> p=el-72 d=13 w=24px h=24px
+                            el-74 <path> p=el-73 d=14 [SVG-path] w=auto h=auto
+                        el-75 <span> p=el-67 d=12 w=168px h=20px
+                          el-76 <span> p=el-75 d=13 "Premium" w=168px h=20px
+                        el-77 <div> p=el-67 d=12 w=12px h=20px bg=rgb(24, 24, 24)
+                          el-78 <span> p=el-77 d=13 "8" w=7.23438px h=16px
+                      el-79 <li> p=el-14 d=11 w=264px h=44px
+                        el-80 <button> p=el-79 d=12 type=button w=264px h=44px
+                        el-81 <span> p=el-79 d=12 w=20px h=20px
+                          el-82 <svg> p=el-81 d=13 w=20px h=20px
+                            el-83 <path> p=el-82 d=14 [SVG-path] w=auto h=auto
+                        el-84 <span> p=el-79 d=12 [HIDDEN] w=24px h=24px
+                          el-85 <svg> p=el-84 d=13 w=24px h=24px
+                            el-86 <path> p=el-85 d=14 [SVG-path] w=auto h=auto
+                        el-87 <span> p=el-79 d=12 w=168px h=20px
+                          el-88 <span> p=el-87 d=13 "Custom" w=168px h=20px
+                        el-89 <div> p=el-79 d=12 w=12px h=20px bg=rgb(24, 24, 24)
+                          el-90 <span> p=el-89 d=13 "0" w=7.23438px h=16px
+                      el-91 <li> p=el-14 d=11 w=264px h=44px
+                        el-92 <button> p=el-91 d=12 type=button w=264px h=44px
+                        el-93 <span> p=el-91 d=12 w=20px h=20px
+                          el-94 <svg> p=el-93 d=13 w=20px h=20px
+                            el-95 <path> p=el-94 d=14 [SVG-path] w=auto h=auto
+                        el-96 <span> p=el-91 d=12 [HIDDEN] w=24px h=24px
+                          el-97 <svg> p=el-96 d=13 w=24px h=24px
+                            el-98 <path> p=el-97 d=14 [SVG-path] w=auto h=auto
+                        el-99 <span> p=el-91 d=12 w=200px h=20px
+                          el-100 <span> p=el-99 d=13 "Targets" w=200px h=20px
+                    el-101 <div> p=el-10 d=10 w=232px h=1px
+                      el-102 <hr> p=el-101 d=11 w=232px h=1px bg=rgb(51, 51, 51)
+                  el-103 <li> p=el-9 d=9 w=232px h=97px
+                    el-104 <span> p=el-103 d=10 w=232px h=36px
+                      el-105 <span> p=el-104 d=11 "Folders" w=232px h=24px
+                    el-106 <ul> p=el-103 d=10 w=232px h=44px
+                      el-107 <li> p=el-106 d=11 w=264px h=44px
+                        el-108 <button> p=el-107 d=12 type=button w=264px h=44px
+                        el-109 <span> p=el-107 d=12 w=20px h=20px
+                          el-110 <svg> p=el-109 d=13 w=20px h=20px
+                            el-111 <path> p=el-110 d=14 [SVG-path] w=auto h=auto
+                        el-112 <span> p=el-107 d=12 [HIDDEN] w=24px h=24px
+                          el-113 <svg> p=el-112 d=13 w=24px h=24px
+                            el-114 <path> p=el-113 d=14 [SVG-path] w=auto h=auto
+                        el-115 <span> p=el-107 d=12 w=200px h=20px
+                          el-116 <span> p=el-115 d=13 "Add folder" w=200px h=20px
+                    el-117 <div> p=el-103 d=10 w=232px h=1px
+                      el-118 <hr> p=el-117 d=11 w=232px h=1px bg=rgb(51, 51, 51)
+                  el-119 <li> p=el-9 d=9 w=232px h=44px
+                    el-120 <ul> p=el-119 d=10 w=232px h=44px
+                      el-121 <li> p=el-120 d=11 w=264px h=44px
+                        el-122 <button> p=el-121 d=12 type=button w=264px h=44px
+                        el-123 <span> p=el-121 d=12 w=20px h=20px
+                          el-124 <picture> p=el-123 d=13 w=20px h=20px
+                            el-125 <img> p=el-124 d=14 [img-src] w=20px h=20px
+                        el-126 <span> p=el-121 d=12 w=196px h=20px
+                          el-127 <span> p=el-126 d=13 "Data connector" w=196px h=20px
+                    el-128 <div> p=el-119 d=10 [HIDDEN] w=auto h=auto
+        el-129 <div> p=el-3 d=4 w=1112px h=1024px
+          el-130 <div> p=el-129 d=5 w=1112px h=1024px
+            el-131 <div> p=el-130 d=6 w=1112px h=56px
+              el-132 <div> p=el-131 d=7 w=1026.95px h=56px
+                el-133 <div> p=el-132 d=8 w=1026.95px h=36px
+                  el-134 <p> p=el-133 d=9 "Reporting and analytics" w=317.406px h=36px
+                  el-135 <div> p=el-133 d=9 w=38.4688px h=36px
+                    el-136 <div> p=el-135 d=10 w=38.4688px h=24px bg=rgb(24, 24, 24)
+                      el-137 <span> p=el-136 d=11 "53" w=14.4688px h=16px
+                el-138 <p> p=el-132 d=8 "Access all of your Fresha reports." w=1026.95px h=20px
+                  el-139 <a> p=el-138 d=9 "Learn more" [href=https://www.fresha.com/help-center/knowl] w=auto h=auto
+              el-140 <div> p=el-131 d=7 w=73.0469px h=48px
+                el-141 <div> p=el-140 d=8 w=73.0469px h=48px
+                  el-142 <button> p=el-141 d=9 type=button w=73.0469px h=48px
+                    el-143 <div> p=el-142 d=10 w=73.0469px h=48px bg=rgb(255, 255, 255)
+                      el-144 <span> p=el-143 d=11 w=33.0469px h=24px
+                        el-145 <span> p=el-144 d=12 "Add" w=33.0469px h=24px
+            el-146 <div> p=el-130 d=6 w=1112px h=944px
+              el-147 <div> p=el-146 d=7 w=1112px h=60px
+                el-148 <div> p=el-147 d=8 w=1112px h=60px
+                  el-149 <div> p=el-148 d=9 w=1112px h=60px
+                    el-150 <div> p=el-149 d=10 w=837.75px h=36px
+                      el-151 <div> p=el-150 d=11 w=450px h=36px
+                        el-152 <label> p=el-151 d=12 w=1px h=1px
+                          el-153 <span> p=el-152 d=13 "Search" w=50.0469px h=1px
+                        el-154 <div> p=el-151 d=12 w=450px h=36px
+                          el-155 <div> p=el-154 d=13 w=450px h=36px bg=rgb(24, 24, 24)
+                            el-156 <div> p=el-155 d=14 w=32px h=34px
+                              el-157 <span> p=el-156 d=15 w=20px h=20px
+                                el-158 <svg> p=el-157 d=16 w=20px h=20px
+                                  el-159 <path> p=el-158 d=17 [SVG-path] w=auto h=auto
+                            el-160 <input> p=el-155 d=14 type=text ph="Search by report name or description" w=416px h=34px
+                    el-161 <div> p=el-149 d=10 w=262.25px h=36px
+                      el-162 <div> p=el-161 d=11 w=133.375px h=36px
+                        el-163 <button> p=el-162 d=12 type=button w=133.375px h=36px
+                          el-164 <div> p=el-163 d=13 w=133.375px h=36px bg=rgb(24, 24, 24)
+                            el-165 <span> p=el-164 d=14 w=73.375px h=20px
+                              el-166 <span> p=el-165 d=15 "Created by" w=73.375px h=20px
+                            el-167 <span> p=el-164 d=14 w=20px h=20px
+                              el-168 <span> p=el-167 d=15 w=20px h=20px
+                                el-169 <svg> p=el-168 d=16 w=20px h=20px
+                                  el-170 <path> p=el-169 d=17 [SVG-path] w=auto h=auto
+                      el-171 <div> p=el-161 d=11 w=120.875px h=36px
+                        el-172 <button> p=el-171 d=12 type=button w=120.875px h=36px
+                          el-173 <div> p=el-172 d=13 w=120.875px h=36px bg=rgb(24, 24, 24)
+                            el-174 <span> p=el-173 d=14 w=60.875px h=20px
+                              el-175 <span> p=el-174 d=15 "Category" w=60.875px h=20px
+                            el-176 <span> p=el-173 d=14 w=20px h=20px
+                              el-177 <span> p=el-176 d=15 w=20px h=20px
+                                el-178 <svg> p=el-177 d=16 w=20px h=20px
+                                  el-179 <path> p=el-178 d=17 [SVG-path] w=auto h=auto
+              el-180 <div> p=el-146 d=7 w=1112px h=68px
+                el-181 <div> p=el-180 d=8 w=1112px h=36px bg=rgb(19, 19, 19)
+                  el-182 <div> p=el-181 d=9 w=64px h=36px
+                  el-183 <div> p=el-181 d=9 w=1112px h=36px
+                    el-184 <div> p=el-183 d=10 w=0px h=36px
+                    el-185 <div> p=el-183 d=10 w=102px h=36px
+                    el-186 <ul> p=el-183 d=10 w=675.344px h=36px
+                      el-187 <li> p=el-186 d=11 w=107.016px h=36px
+                        el-188 <span> p=el-187 d=12 "All reports" w=75.0156px h=20px
+                      el-189 <li> p=el-186 d=11 w=71.2031px h=36px
+                        el-190 <span> p=el-189 d=12 "Sales" w=39.2031px h=20px
+                      el-191 <li> p=el-186 d=11 w=88.6875px h=36px
+                        el-192 <span> p=el-191 d=12 "Finance" w=56.6875px h=20px
+                      el-193 <li> p=el-186 d=11 w=132.828px h=36px
+                        el-194 <span> p=el-193 d=12 "Appointments" w=100.828px h=20px
+                      el-195 <li> p=el-186 d=11 w=70.0781px h=36px
+                        el-196 <span> p=el-195 d=12 "Team" w=38.0781px h=20px
+                      el-197 <li> p=el-186 d=11 w=82.0156px h=36px
+                        el-198 <span> p=el-197 d=12 "Clients" w=50.0156px h=20px
+                      el-199 <li> p=el-186 d=11 w=99.5156px h=36px
+                        el-200 <span> p=el-199 d=12 "Inventory" w=67.5156px h=20px
+                    el-201 <div> p=el-183 d=10 w=0px h=36px
+                  el-202 <div> p=el-181 d=9 w=64px h=36px
+              el-203 <div> p=el-146 d=7 w=1112px h=816px
+                el-204 <div> p=el-203 d=8 w=1112px h=88px bg=rgb(24, 24, 24)
+                  el-205 <button> p=el-204 d=9 type=button w=1112px h=88px
+                  el-206 <div> p=el-204 d=9 w=1064px h=48px
+                    el-207 <div> p=el-206 d=10 w=48px h=48px
+                      el-208 <div> p=el-207 d=11 w=48px h=48px
+                        el-209 <div> p=el-208 d=12 w=48px h=48px
+                          el-210 <div> p=el-209 d=13 w=48px h=48px
+                            el-211 <div> p=el-210 d=14 w=48px h=48px
+                              el-212 <div> p=el-211 d=15 w=48px h=48px
+                                el-213 <div> p=el-212 d=16 w=48px h=48px bg=rgba(255, 255, 255, 0.05)
+                                  el-214 <div> p=el-213 d=17 w=46px h=46px
+                                    el-215 <span> p=el-214 d=18 w=24px h=24px
+                                      el-216 <svg> p=el-215 d=19 w=24px h=24px
+                                        el-217 <path> p=el-216 d=20 [SVG-path] w=auto h=auto
+                    el-218 <div> p=el-206 d=10 w=932px h=48px
+                      el-219 <div> p=el-218 d=11 w=932px h=48px
+                        el-220 <div> p=el-219 d=12 w=932px h=40px
+                          el-221 <div> p=el-220 d=13 w=930px h=40px
+                            el-222 <h3> p=el-221 d=14 "Performance dashboard" w=930px h=20px
+                            el-223 <h4> p=el-221 d=14 "Dashboard of your business performance." w=930px h=20px
+                    el-224 <div> p=el-206 d=10 w=60px h=48px
+                      el-225 <div> p=el-224 d=11 w=0px h=48px
+                      el-226 <div> p=el-224 d=11 w=48px h=48px
+                        el-227 <button> p=el-226 d=12 type=button w=48px h=48px
+                          el-228 <div> p=el-227 d=13 w=48px h=48px
+                            el-229 <span> p=el-228 d=14 w=1px h=1px
+                              el-230 <span> p=el-229 d=15 "Add to favorites" w=1px h=24px
+                            el-231 <span> p=el-228 d=14 w=24px h=24px
+                              el-232 <span> p=el-231 d=15 w=24px h=24px
+                                el-233 <svg> p=el-232 d=16 w=24px h=24px
+                                  el-234 <path> p=el-233 d=17 [SVG-path] w=auto h=auto
+                    el-235 <hr> p=el-206 d=10 [HIDDEN] w=auto h=1px bg=rgb(51, 51, 51)
+                el-236 <div> p=el-203 d=8 w=1112px h=88px bg=rgb(24, 24, 24)
+                  el-237 <button> p=el-236 d=9 type=button w=1112px h=88px
+                  el-238 <div> p=el-236 d=9 w=1064px h=48px
+                    el-239 <div> p=el-238 d=10 w=48px h=48px
+                      el-240 <div> p=el-239 d=11 w=48px h=48px
+                        el-241 <div> p=el-240 d=12 w=48px h=48px
+                          el-242 <div> p=el-241 d=13 w=48px h=48px
+                            el-243 <div> p=el-242 d=14 w=48px h=48px
+                              el-244 <div> p=el-243 d=15 w=48px h=48px
+                                el-245 <div> p=el-244 d=16 w=48px h=48px bg=rgba(255, 255, 255, 0.05)
+                                  el-246 <div> p=el-245 d=17 w=46px h=46px
+                                    el-247 <span> p=el-246 d=18 w=24px h=24px
+                                      el-248 <svg> p=el-247 d=19 w=24px h=24px
+                                        el-249 <path> p=el-248 d=20 [SVG-path] w=auto h=auto
+                    el-250 <div> p=el-238 d=10 w=855.984px h=48px
+                      el-251 <div> p=el-250 d=11 w=855.984px h=48px
+                        el-252 <div> p=el-251 d=12 w=855.984px h=40px
+                          el-253 <div> p=el-252 d=13 w=853.984px h=40px
+                            el-254 <h3> p=el-253 d=14 "Performance over time" w=853.984px h=20px
+                            el-255 <h4> p=el-253 d=14 "View of key business metrics by Location or Team M" w=853.984px h=20px
+                    el-256 <div> p=el-238 d=10 w=136.016px h=48px
+                      el-257 <div> p=el-256 d=11 w=76.0156px h=48px
+                        el-258 <div> p=el-257 d=12 w=76.0156px h=24px bg=rgb(32, 30, 69)
+                          el-259 <span> p=el-258 d=13 "Premium" w=52.0156px h=16px
+                      el-260 <div> p=el-256 d=11 w=48px h=48px
+                        el-261 <button> p=el-260 d=12 type=button w=48px h=48px
+                          el-262 <div> p=el-261 d=13 w=48px h=48px
+                            el-263 <span> p=el-262 d=14 w=1px h=1px
+                              el-264 <span> p=el-263 d=15 "Add to favorites" w=1px h=24px
+                            el-265 <span> p=el-262 d=14 w=24px h=24px
+                              el-266 <span> p=el-265 d=15 w=24px h=24px
+                                el-267 <svg> p=el-266 d=16 w=24px h=24px
+                                  el-268 <path> p=el-267 d=17 [SVG-path] w=auto h=auto
+                    el-269 <hr> p=el-238 d=10 [HIDDEN] w=auto h=1px bg=rgb(51, 51, 51)
+                el-270 <div> p=el-203 d=8 w=1112px h=88px bg=rgb(24, 24, 24)
+                  el-271 <button> p=el-270 d=9 type=button w=1112px h=88px
+                  el-272 <div> p=el-270 d=9 w=1064px h=48px
+                    el-273 <div> p=el-272 d=10 w=48px h=48px
+                      el-274 <div> p=el-273 d=11 w=48px h=48px
+                        el-275 <div> p=el-274 d=12 w=48px h=48px
+                          el-276 <div> p=el-275 d=13 w=48px h=48px
+                            el-277 <div> p=el-276 d=14 w=48px h=48px
+                              el-278 <div> p=el-277 d=15 w=48px h=48px
+                                el-279 <div> p=el-278 d=16 w=48px h=48px bg=rgba(255, 255, 255, 0.05)
+                                  el-280 <div> p=el-279 d=17 w=46px h=46px
+                                    el-281 <span> p=el-280 d=18 w=24px h=24px
+                                      el-282 <svg> p=el-281 d=19 w=24px h=24px
+                                        el-283 <path> p=el-282 d=20 [SVG-path] w=auto h=auto
+                                        el-284 <path> p=el-282 d=20 [SVG-path] w=auto h=auto
+                    el-285 <div> p=el-272 d=10 w=932px h=48px
+                      el-286 <div> p=el-285 d=11 w=932px h=48px
+                        el-287 <div> p=el-286 d=12 w=932px h=40px
+                          el-288 <div> p=el-287 d=13 w=930px h=40px
+                            el-289 <h3> p=el-288 d=14 "Sales summary" w=930px h=20px
+                            el-290 <h4> p=el-288 d=14 "Sales quantities and value, excluding tips and gif" w=930px h=20px
+                    el-291 <div> p=el-272 d=10 w=60px h=48px
+                      el-292 <div> p=el-291 d=11 w=0px h=48px
+                      el-293 <div> p=el-291 d=11 w=48px h=48px
+                        el-294 <button> p=el-293 d=12 type=button w=48px h=48px
+                          el-295 <div> p=el-294 d=13 w=48px h=48px
+                            el-296 <span> p=el-295 d=14 w=1px h=1px
+                              el-297 <span> p=el-296 d=15 "Add to favorites" w=1px h=24px
+                            el-298 <span> p=el-295 d=14 w=24px h=24px
+                              el-299 <span> p=el-298 d=15 w=24px h=24px
+                                el-300 <svg> p=el-299 d=16 w=24px h=24px
+                                  el-301 <path> p=el-300 d=17 [SVG-path] w=auto h=auto
+                    el-302 <hr> p=el-272 d=10 [HIDDEN] w=auto h=1px bg=rgb(51, 51, 51)
+                el-303 <div> p=el-203 d=8 w=1112px h=88px bg=rgb(24, 24, 24)
+                  el-304 <button> p=el-303 d=9 type=button w=1112px h=88px
+                  el-305 <div> p=el-303 d=9 w=1064px h=48px
+                    el-306 <div> p=el-305 d=10 w=48px h=48px
+                      el-307 <div> p=el-306 d=11 w=48px h=48px
+                        el-308 <div> p=el-307 d=12 w=48px h=48px
+                          el-309 <div> p=el-308 d=13 w=48px h=48px
+                            el-310 <div> p=el-309 d=14 w=48px h=48px
+                              el-311 <div> p=el-310 d=15 w=48px h=48px
+                                el-312 <div> p=el-311 d=16 w=48px h=48px bg=rgba(255, 255, 255, 0.05)
+                                  el-313 <div> p=el-312 d=17 w=46px h=46px
+                                    el-314 <span> p=el-313 d=18 w=24px h=24px
+                                      el-315 <svg> p=el-314 d=19 w=24px h=24px
+                                        el-316 <path> p=el-315 d=20 [SVG-path] w=auto h=auto
+                    el-317 <div> p=el-305 d=10 w=932px h=48px
+                      el-318 <div> p=el-317 d=11 w=932px h=48px
+                        el-319 <div> p=el-318 d=12 w=932px h=40px
+                          el-320 <div> p=el-319 d=13 w=930px h=40px
+                            el-321 <h3> p=el-320 d=14 "Finance summary" w=930px h=20px
+                            el-322 <h4> p=el-320 d=14 "High-level summary of sales, payments and liabilit" w=930px h=20px
+                    el-323 <div> p=el-305 d=10 w=60px h=48px
+                      el-324 <div> p=el-323 d=11 w=0px h=48px
+                      el-325 <div> p=el-323 d=11 w=48px h=48px
+                        el-326 <button> p=el-325 d=12 type=button w=48px h=48px
+                          el-327 <div> p=el-326 d=13 w=48px h=48px
+                            el-328 <span> p=el-327 d=14 w=1px h=1px
+                              el-329 <span> p=el-328 d=15 "Add to favorites" w=1px h=24px
+                            el-330 <span> p=el-327 d=14 w=24px h=24px
+                              el-331 <span> p=el-330 d=15 w=24px h=24px
+                                el-332 <svg> p=el-331 d=16 w=24px h=24px
+                                  el-333 <path> p=el-332 d=17 [SVG-path] w=auto h=auto
+                    el-334 <hr> p=el-305 d=10 [HIDDEN] w=auto h=1px bg=rgb(51, 51, 51)
+                el-335 <div> p=el-203 d=8 w=1112px h=88px bg=rgb(24, 24, 24)
+                  el-336 <button> p=el-335 d=9 type=button w=1112px h=88px
+                  el-337 <div> p=el-335 d=9 w=1064px h=48px
+                    el-338 <div> p=el-337 d=10 w=48px h=48px
+                      el-339 <div> p=el-338 d=11 w=48px h=48px
+                        el-340 <div> p=el-339 d=12 w=48px h=48px
+                          el-341 <div> p=el-340 d=13 w=48px h=48px
+                            el-342 <div> p=el-341 d=14 w=48px h=48px
+                              el-343 <div> p=el-342 d=15 w=48px h=48px
+                                el-344 <div> p=el-343 d=16 w=48px h=48px bg=rgba(255, 255, 255, 0.05)
+                                  el-345 <div> p=el-344 d=17 w=46px h=46px
+                                    el-346 <span> p=el-345 d=18 w=24px h=24px
+                                      el-347 <svg> p=el-346 d=19 w=24px h=24px
+                                        el-348 <path> p=el-347 d=20 [SVG-path] w=auto h=auto
+                    el-349 <div> p=el-337 d=10 w=932px h=48px
+                      el-350 <div> p=el-349 d=11 w=932px h=48px
+                        el-351 <div> p=el-350 d=12 w=932px h=40px
+                          el-352 <div> p=el-351 d=13 w=930px h=40px
+                            el-353 <h3> p=el-352 d=14 "Appointments summary" w=930px h=20px
+                            el-354 <h4> p=el-352 d=14 "General overview of appointment trends and pattern" w=930px h=20px
+                    el-355 <div> p=el-337 d=10 w=60px h=48px
+                      el-356 <div> p=el-355 d=11 w=0px h=48px
+                      el-357 <div> p=el-355 d=11 w=48px h=48px
+                        el-358 <button> p=el-357 d=12 type=button w=48px h=48px
+                          el-359 <div> p=el-358 d=13 w=48px h=48px
+                            el-360 <span> p=el-359 d=14 w=1px h=1px
+                              el-361 <span> p=el-360 d=15 "Add to favorites" w=1px h=24px
+                            el-362 <span> p=el-359 d=14 w=24px h=24px
+                              el-363 <span> p=el-362 d=15 w=24px h=24px
+                                el-364 <svg> p=el-363 d=16 w=24px h=24px
+                                  el-365 <path> p=el-364 d=17 [SVG-path] w=auto h=auto
+                    el-366 <hr> p=el-337 d=10 [HIDDEN] w=auto h=1px bg=rgb(51, 51, 51)
+                el-367 <div> p=el-203 d=8 w=1112px h=88px bg=rgb(24, 24, 24)
+                  el-368 <button> p=el-367 d=9 type=button w=1112px h=88px
+                  el-369 <div> p=el-367 d=9 w=1064px h=48px
+                    el-370 <div> p=el-369 d=10 w=48px h=48px
+                      el-371 <div> p=el-370 d=11 w=48px h=48px
+                        el-372 <div> p=el-371 d=12 w=48px h=48px
+                          el-373 <div> p=el-372 d=13 w=48px h=48px
+                            el-374 <div> p=el-373 d=14 w=48px h=48px
+                              el-375 <div> p=el-374 d=15 w=48px h=48px
+                                el-376 <div> p=el-375 d=16 w=48px h=48px bg=rgba(255, 255, 255, 0.05)
+                                  el-377 <div> p=el-376 d=17 w=46px h=46px
+                                    el-378 <span> p=el-377 d=18 w=24px h=24px
+                                      el-379 <svg> p=el-378 d=19 w=24px h=24px
+                                        el-380 <path> p=el-379 d=20 [SVG-path] w=auto h=auto
+                    el-381 <div> p=el-369 d=10 w=932px h=48px
+                      el-382 <div> p=el-381 d=11 w=932px h=48px
+                        el-383 <div> p=el-382 d=12 w=932px h=40px
+                          el-384 <div> p=el-383 d=13 w=930px h=40px
+                            el-385 <h3> p=el-384 d=14 "Attendance summary" w=930px h=20px
+                            el-386 <h4> p=el-384 d=14 "Overview of team members' punctuality and attendan" w=930px h=20px
+                    el-387 <div> p=el-369 d=10 w=60px h=48px
+                      el-388 <div> p=el-387 d=11 w=0px h=48px
+                      el-389 <div> p=el-387 d=11 w=48px h=48px
+                        el-390 <button> p=el-389 d=12 type=button w=48px h=48px
+                          el-391 <div> p=el-390 d=13 w=48px h=48px
+                            el-392 <span> p=el-391 d=14 w=1px h=1px
+                              el-393 <span> p=el-392 d=15 "Add to favorites" w=1px h=24px
+                            el-394 <span> p=el-391 d=14 w=24px h=24px
+                              el-395 <span> p=el-394 d=15 w=24px h=24px
+                                el-396 <svg> p=el-395 d=16 w=24px h=24px
+                                  el-397 <path> p=el-396 d=17 [SVG-path] w=auto h=auto
+                    el-398 <hr> p=el-369 d=10 [HIDDEN] w=auto h=1px bg=rgb(51, 51, 51)
+                el-399 <div> p=el-203 d=8 w=1112px h=88px bg=rgb(24, 24, 24)
+                  el-400 <button> p=el-399 d=9 type=button w=1112px h=88px
+                  el-401 <div> p=el-399 d=9 w=1064px h=48px
+                    el-402 <div> p=el-401 d=10 w=48px h=48px
+                      el-403 <div> p=el-402 d=11 w=48px h=48px
+                        el-404 <div> p=el-403 d=12 w=48px h=48px
+                          el-405 <div> p=el-404 d=13 w=48px h=48px
+                            el-406 <div> p=el-405 d=14 w=48px h=48px
+                              el-407 <div> p=el-406 d=15 w=48px h=48px
+                                el-408 <div> p=el-407 d=16 w=48px h=48px bg=rgba(255, 255, 255, 0.05)
+                                  el-409 <div> p=el-408 d=17 w=46px h=46px
+                                    el-410 <span> p=el-409 d=18 w=24px h=24px
+                                      el-411 <svg> p=el-410 d=19 w=24px h=24px
+                                        el-412 <path> p=el-411 d=20 [SVG-path] w=auto h=auto
+                                        el-413 <path> p=el-411 d=20 [SVG-path] w=auto h=auto
+                    el-414 <div> p=el-401 d=10 w=855.984px h=48px
+                      el-415 <div> p=el-414 d=11 w=855.984px h=48px
+                        el-416 <div> p=el-415 d=12 w=855.984px h=40px
+                          el-417 <div> p=el-416 d=13 w=853.984px h=40px
+                            el-418 <h3> p=el-417 d=14 "Client summary" w=853.984px h=20px
+                            el-419 <h4> p=el-417 d=14 "Overview of new, returning and walk-in clients wit" w=853.984px h=20px
+                    el-420 <div> p=el-401 d=10 w=136.016px h=48px
+                      el-421 <div> p=el-420 d=11 w=76.0156px h=48px
+                        el-422 <div> p=el-421 d=12 w=76.0156px h=24px bg=rgb(32, 30, 69)
+                          el-423 <span> p=el-422 d=13 "Premium" w=52.0156px h=16px
+                      el-424 <div> p=el-420 d=11 w=48px h=48px
+                        el-425 <button> p=el-424 d=12 type=button w=48px h=48px
+                          el-426 <div> p=el-425 d=13 w=48px h=48px
+                            el-427 <span> p=el-426 d=14 w=1px h=1px
+                              el-428 <span> p=el-427 d=15 "Add to favorites" w=1px h=24px
+                            el-429 <span> p=el-426 d=14 w=24px h=24px
+                              el-430 <span> p=el-429 d=15 w=24px h=24px
+                                el-431 <svg> p=el-430 d=16 w=24px h=24px
+                                  el-432 <path> p=el-431 d=17 [SVG-path] w=auto h=auto
+                    el-433 <hr> p=el-401 d=10 [HIDDEN] w=auto h=1px bg=rgb(51, 51, 51)
+                el-434 <div> p=el-203 d=8 w=1112px h=88px bg=rgb(24, 24, 24)
+                  el-435 <button> p=el-434 d=9 type=button w=1112px h=88px
+                  el-436 <div> p=el-434 d=9 w=1064px h=48px
+                    el-437 <div> p=el-436 d=10 w=48px h=48px
+                      el-438 <div> p=el-437 d=11 w=48px h=48px
+                        el-439 <div> p=el-438 d=12 w=48px h=48px
+                          el-440 <div> p=el-439 d=13 w=48px h=48px
+                            el-441 <div> p=el-440 d=14 w=48px h=48px
+                              el-442 <div> p=el-441 d=15 w=48px h=48px
+                                el-443 <div> p=el-442 d=16 w=48px h=48px bg=rgba(255, 255, 255, 0.05)
+                                  el-444 <div> p=el-443 d=17 w=46px h=46px
+                                    el-445 <span> p=el-444 d=18 w=24px h=24px
+                                      el-446 <svg> p=el-445 d=19 w=24px h=24px
+                                        el-447 <path> p=el-446 d=20 [SVG-path] w=auto h=auto
+                                        el-448 <path> p=el-446 d=20 [SVG-path] w=auto h=auto
+                                        el-449 <path> p=el-446 d=20 [SVG-path] w=auto h=auto
+                    el-450 <div> p=el-436 d=10 w=932px h=48px
+                      el-451 <div> p=el-450 d=11 w=932px h=48px
+                        el-452 <div> p=el-451 d=12 w=932px h=40px
+                          el-453 <div> p=el-452 d=13 w=930px h=40px
+                            el-454 <h3> p=el-453 d=14 "Stock movement summary" w=930px h=20px
+                            el-455 <h4> p=el-453 d=14 "Summary of stock inflow and outflow." w=930px h=20px
+                    el-456 <div> p=el-436 d=10 w=60px h=48px
+                      el-457 <div> p=el-456 d=11 w=0px h=48px
+                      el-458 <div> p=el-456 d=11 w=48px h=48px
+                        el-459 <button> p=el-458 d=12 type=button w=48px h=48px
+                          el-460 <div> p=el-459 d=13 w=48px h=48px
+                            el-461 <span> p=el-460 d=14 w=1px h=1px
+                              el-462 <span> p=el-461 d=15 "Add to favorites" w=1px h=24px
+                            el-463 <span> p=el-460 d=14 w=24px h=24px
+                              el-464 <span> p=el-463 d=15 w=24px h=24px
+                                el-465 <svg> p=el-464 d=16 w=24px h=24px
+                                  el-466 <path> p=el-465 d=17 [SVG-path] w=auto h=auto
+                    el-467 <hr> p=el-436 d=10 [HIDDEN] w=auto h=1px bg=rgb(51, 51, 51)
+
+=== TAG SUMMARY ===
+  div: 197
+  span: 109
+  path: 41
+  svg: 35
+  button: 28
+  li: 19
+  hr: 10
+  h3: 8
+  h4: 8
+  ul: 5
+  p: 3
+  picture: 1
+  img: 1
+  a: 1
+  label: 1
+  input: 1
+
+=== DEPTH DISTRIBUTION ===
+  depth 0: 1 elements
+  depth 1: 1 elements
+  depth 2: 1 elements
+  depth 3: 1 elements
+  depth 4: 2 elements
+  depth 5: 2 elements
+  depth 6: 3 elements
+  depth 7: 7 elements
+  depth 8: 14 elements
+  depth 9: 27 elements
+  depth 10: 48 elements
+  depth 11: 57 elements
+  depth 12: 80 elements
+  depth 13: 62 elements
+  depth 14: 63 elements
+  depth 15: 33 elements
+  depth 16: 19 elements
+  depth 17: 19 elements
+  depth 18: 8 elements
+  depth 19: 8 elements
+  depth 20: 12 elements
+
+=== TOP-LEVEL STRUCTURE (depth 0-4) ===
+el-0 <div> children=1
+  el-1 <div> children=1
+    el-2 <div> children=1
+      el-3 <div> children=2
+        el-4 <div> children=1
+        el-129 <div> children=1
+
+=== ALL TEXT CONTENT ===
+  el-13 (d=12, p=el-12): "Reports"
+  el-28 (d=13, p=el-27): "All reports"
+  el-30 (d=13, p=el-29): "53"
+  el-40 (d=13, p=el-39): "Favourites"
+  el-42 (d=13, p=el-41): "0"
+  el-52 (d=13, p=el-51): "Dashboards"
+  el-54 (d=13, p=el-53): "3"
+  el-64 (d=13, p=el-63): "Standard"
+  el-66 (d=13, p=el-65): "45"
+  el-76 (d=13, p=el-75): "Premium"
+  el-78 (d=13, p=el-77): "8"
+  el-88 (d=13, p=el-87): "Custom"
+  el-90 (d=13, p=el-89): "0"
+  el-100 (d=13, p=el-99): "Targets"
+  el-105 (d=11, p=el-104): "Folders"
+  el-116 (d=13, p=el-115): "Add folder"
+  el-127 (d=13, p=el-126): "Data connector"
+  el-134 (d=9, p=el-133): "Reporting and analytics"
+  el-137 (d=11, p=el-136): "53"
+  el-138 (d=8, p=el-132): "Access all of your Fresha reports."
+  el-139 (d=9, p=el-138): "Learn more"
+  el-145 (d=12, p=el-144): "Add"
+  el-153 (d=13, p=el-152): "Search"
+  el-166 (d=15, p=el-165): "Created by"
+  el-175 (d=15, p=el-174): "Category"
+  el-188 (d=12, p=el-187): "All reports"
+  el-190 (d=12, p=el-189): "Sales"
+  el-192 (d=12, p=el-191): "Finance"
+  el-194 (d=12, p=el-193): "Appointments"
+  el-196 (d=12, p=el-195): "Team"
+  el-198 (d=12, p=el-197): "Clients"
+  el-200 (d=12, p=el-199): "Inventory"
+  el-222 (d=14, p=el-221): "Performance dashboard"
+  el-223 (d=14, p=el-221): "Dashboard of your business performance."
+  el-230 (d=15, p=el-229): "Add to favorites"
+  el-254 (d=14, p=el-253): "Performance over time"
+  el-255 (d=14, p=el-253): "View of key business metrics by Location or Team Member over time"
+  el-259 (d=13, p=el-258): "Premium"
+  el-264 (d=15, p=el-263): "Add to favorites"
+  el-289 (d=14, p=el-288): "Sales summary"
+  el-290 (d=14, p=el-288): "Sales quantities and value, excluding tips and gift card sales."
+  el-297 (d=15, p=el-296): "Add to favorites"
+  el-321 (d=14, p=el-320): "Finance summary"
+  el-322 (d=14, p=el-320): "High-level summary of sales, payments and liabilities"
+  el-329 (d=15, p=el-328): "Add to favorites"
+  el-353 (d=14, p=el-352): "Appointments summary"
+  el-354 (d=14, p=el-352): "General overview of appointment trends and patterns, including cancellations and no-shows."
+  el-361 (d=15, p=el-360): "Add to favorites"
+  el-385 (d=14, p=el-384): "Attendance summary"
+  el-386 (d=14, p=el-384): "Overview of team members' punctuality and attendance for their shifts"
+  el-393 (d=15, p=el-392): "Add to favorites"
+  el-418 (d=14, p=el-417): "Client summary"
+  el-419 (d=14, p=el-417): "Overview of new, returning and walk-in clients with appointments in the chosen timeframe"
+  el-423 (d=13, p=el-422): "Premium"
+  el-428 (d=15, p=el-427): "Add to favorites"
+  el-454 (d=14, p=el-453): "Stock movement summary"
+  el-455 (d=14, p=el-453): "Summary of stock inflow and outflow."
+  el-462 (d=15, p=el-461): "Add to favorites"

@@ -1,0 +1,13 @@
+.ara-shell {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: auto;
+  overflow-y: auto;
+  background: rgb(255, 255, 255);
+}
+
+.ara-shell *,
+.ara-shell *::before,
+.ara-shell *::after {
+  box-sizing: border-box;
+}

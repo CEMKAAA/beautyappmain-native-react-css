@@ -1,0 +1,359 @@
+/* ─── Appointment Settings Page ─── */
+.appt-page {
+    padding: 32px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.appt-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    gap: 16px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.appt-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top-color: #6366f1;
+    border-radius: 50%;
+    animation: apptSpin 0.8s linear infinite;
+}
+
+@keyframes apptSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ─── Toolbar ─── */
+.appt-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 24px;
+}
+
+.appt-save-btn {
+    background: linear-gradient(135deg, #6366f1, #818cf8);
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-size: var(--typo-s);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.appt-save-btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+}
+
+.appt-save-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ─── Content ─── */
+.appt-content {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* ─── Section ─── */
+.appt-section {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 28px;
+}
+
+.appt-section-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.appt-section-icon {
+    font-size: var(--typo-xl);
+    flex-shrink: 0;
+}
+
+.appt-section-header h2 {
+    font-size: var(--typo-m);
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 4px 0;
+}
+
+.appt-section-header p {
+    font-size: var(--typo-xs);
+    color: rgba(255, 255, 255, 0.35);
+    margin: 0;
+}
+
+/* ─── Cards ─── */
+.appt-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.appt-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 18px 20px;
+    transition: all 0.2s;
+}
+
+.appt-card:hover {
+    border-color: rgba(99, 102, 241, 0.2);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.appt-card--sub {
+    margin-left: 24px;
+    border-left: 3px solid rgba(99, 102, 241, 0.3);
+    animation: apptSlideIn 0.3s ease;
+}
+
+@keyframes apptSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.appt-card-icon {
+    font-size: var(--typo-l);
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 12px;
+}
+
+.appt-card-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.appt-card-content label {
+    font-size: var(--typo-s);
+    font-weight: 500;
+    color: #fff;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.appt-card-desc {
+    font-size: var(--typo-xs);
+    color: rgba(255, 255, 255, 0.3);
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* ─── Card Action ─── */
+.appt-card-action {
+    flex-shrink: 0;
+}
+
+/* ─── Select ─── */
+.appt-select {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px 14px;
+    font-size: var(--typo-s);
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    min-width: 160px;
+}
+
+.appt-select:focus {
+    border-color: rgba(99, 102, 241, 0.5);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.appt-select option {
+    background: #1e1e2e;
+    color: #fff;
+}
+
+/* ─── Time Format Toggle ─── */
+.appt-format-toggle {
+    display: flex;
+    gap: 0;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.appt-format-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 10px 18px;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: 90px;
+}
+
+.appt-format-btn:first-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.appt-format-btn:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.appt-format-btn--active {
+    background: rgba(99, 102, 241, 0.15);
+    color: #a78bfa;
+}
+
+.appt-format-label {
+    font-size: var(--typo-xs);
+    font-weight: 600;
+}
+
+.appt-format-example {
+    font-size: var(--typo-2xs);
+    opacity: 0.6;
+}
+
+/* ─── Toggle Switch ─── */
+.appt-toggle {
+    position: relative;
+    width: 48px;
+    height: 26px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.appt-toggle--on {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    border-color: rgba(34, 197, 94, 0.3);
+}
+
+.appt-toggle-knob {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.appt-toggle--on .appt-toggle-knob {
+    left: 25px;
+}
+
+/* ─── Info Box ─── */
+.appt-info-box {
+    display: flex;
+    gap: 14px;
+    background: rgba(99, 102, 241, 0.06);
+    border: 1px solid rgba(99, 102, 241, 0.12);
+    border-radius: 16px;
+    padding: 20px 24px;
+}
+
+.appt-info-icon {
+    font-size: var(--typo-ml);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.appt-info-box strong {
+    color: #fff;
+    font-size: var(--typo-s);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.appt-info-box ul {
+    margin: 0;
+    padding-left: 16px;
+    list-style: disc;
+}
+
+.appt-info-box li {
+    font-size: var(--typo-xs);
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 1.7;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+    .appt-page {
+        padding: 20px 16px;
+    }
+
+    .appt-save-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .appt-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .appt-card-action {
+        align-self: stretch;
+    }
+
+    .appt-select {
+        width: 100%;
+    }
+
+    .appt-card--sub {
+        margin-left: 12px;
+    }
+
+    .appt-format-toggle {
+        width: 100%;
+    }
+
+    .appt-format-btn {
+        flex: 1;
+    }
+}

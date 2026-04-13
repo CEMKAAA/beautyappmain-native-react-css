@@ -1,0 +1,516 @@
+/* ===================================================
+   ReportDetailDrawer.css — ReportDetailPage
+   Source of truth: Fresh/computed-styles.json
+   SINGLE TABLE — first column sticky left, thead sticky top
+   =================================================== */
+
+/* ── PAGE WRAPPER (el-0) ── */
+.rd-page {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ── SCROLL CONTAINER (el-1) ── */
+.rd-scroll {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  min-height: 0;
+}
+
+/* ── PADDED CONTENT (el-2) ── */
+.rd-padded {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  min-width: 0;
+}
+
+/* ── GRID (el-3) ── */
+.rd-grid {
+  display: grid;
+  grid-template-areas: "title" "content";
+  grid-template-rows: 112px auto;
+  row-gap: 32px;
+  column-gap: 32px;
+  min-width: 0;
+}
+
+/* ── TITLE AREA ── */
+.rd-title-area {
+  grid-area: title;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+/* ── BREADCRUMB ROW ── */
+.rd-breadcrumb-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 36px;
+}
+
+/* ── BACK BUTTON ── */
+.rd-back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 15px;
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 999px;
+  background: rgb(255, 255, 255);
+  cursor: pointer;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  color: inherit;
+  flex-shrink: 0;
+  transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+              border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+              scale 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+.rd-back-btn:hover { background-color: rgb(245, 245, 245); border-color: rgb(180, 180, 180); }
+.rd-back-btn:active { scale: 0.96; background-color: rgb(235, 235, 235); }
+.rd-back-btn .rd-icon { width: 20px; height: 20px; flex-shrink: 0; display: inline-flex; }
+.rd-back-btn .rd-icon svg { width: 20px; height: 20px; fill: rgb(13, 13, 13); }
+
+/* ── BREADCRUMBS ── */
+.rd-breadcrumbs {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+  min-width: 0;
+  overflow: hidden;
+}
+.rd-breadcrumbs li {
+  display: list-item;
+  list-style: none;
+  position: relative;
+}
+.rd-breadcrumbs li:not(:last-child)::after {
+  content: "•";
+  position: absolute;
+  right: -12px;
+  top: -2px;
+  bottom: -2px;
+  margin: auto;
+  pointer-events: none;
+  color: rgb(118, 118, 118);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+.rd-breadcrumbs a {
+  font-size: 15px;
+  color: rgb(118, 118, 118);
+  text-decoration: inherit;
+  white-space: nowrap;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.rd-breadcrumbs a:hover { color: rgb(13, 13, 13); }
+.rd-breadcrumbs .rd-crumb--current {
+  font-size: 15px;
+  color: rgb(13, 13, 13);
+  white-space: nowrap;
+}
+
+/* ── HEADER ROW ── */
+.rd-header-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex-grow: 1;
+  min-width: 0;
+}
+.rd-header-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 0;
+}
+.rd-header-title-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.rd-header-title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+  height: 36px;
+  margin: 0;
+}
+
+/* ── STAR BUTTON ── */
+.rd-star-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+  margin: -8px;
+  padding: 7px;
+  transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+              scale 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+.rd-star-btn:hover { background-color: rgba(19, 19, 19, 0.06); }
+.rd-star-btn:active { scale: 0.96; background-color: rgba(19, 19, 19, 0.1); }
+.rd-star-btn .rd-icon { width: 20px; height: 20px; flex-shrink: 0; display: inline-flex; }
+.rd-star-btn .rd-icon svg { width: 20px; height: 20px; fill: rgb(13, 13, 13); }
+
+/* ── DESCRIPTION ── */
+.rd-header-desc {
+  font-size: 15px;
+  color: rgb(118, 118, 118);
+  line-height: 20px;
+  margin: 0;
+}
+
+/* el-42/el-43: tooltip inline text */
+.rd-tooltip-text {
+  display: inline;
+  font-size: 15px;
+  color: rgb(118, 118, 118);
+}
+
+/* ── OPTIONS BUTTON ── */
+.rd-options-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 19px;
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 999px;
+  background: rgb(255, 255, 255);
+  cursor: pointer;
+  gap: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 24px;
+  color: inherit;
+  flex-shrink: 0;
+  transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+              border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+              scale 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+.rd-options-btn:hover { background-color: rgb(245, 245, 245); border-color: rgb(180, 180, 180); }
+.rd-options-btn:active { scale: 0.96; background-color: rgb(235, 235, 235); }
+.rd-options-btn .rd-icon { width: 24px; height: 24px; flex-shrink: 0; display: inline-flex; }
+.rd-options-btn .rd-icon svg { width: 24px; height: 24px; fill: rgb(13, 13, 13); }
+
+/* ── CONTENT AREA ── */
+.rd-content-area {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* ── FILTER TOOLBAR ── */
+.rd-filter-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 16px;
+}
+.rd-filter-row {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.rd-filter-left { display: flex; gap: 8px; }
+.rd-filter-right { display: flex; gap: 8px; }
+
+/* ── PILL BUTTON ── */
+.rd-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 15px;
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 999px;
+  background: rgb(255, 255, 255);
+  cursor: pointer;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  color: inherit;
+  white-space: nowrap;
+  transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+              border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+              scale 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+.rd-pill-btn:hover { background-color: rgb(245, 245, 245); border-color: rgb(180, 180, 180); }
+.rd-pill-btn:active { scale: 0.96; background-color: rgb(235, 235, 235); }
+.rd-pill-btn .rd-icon { width: 20px; height: 20px; flex-shrink: 0; display: inline-flex; }
+.rd-pill-btn .rd-icon svg { width: 20px; height: 20px; fill: rgb(13, 13, 13); }
+
+.rd-pill-btn--ghost { border-color: transparent; background: transparent; }
+.rd-pill-btn--ghost:hover { background-color: rgba(19, 19, 19, 0.06); border-color: transparent; }
+.rd-pill-btn--ghost:active { background-color: rgba(19, 19, 19, 0.1); border-color: transparent; }
+.rd-pill-btn--ghost .rd-adv-icon { width: 20px; height: 20px; border-radius: 4px; overflow: hidden; display: block; }
+.rd-pill-btn--ghost .rd-adv-icon img { width: 20px; height: 20px; display: flex; border-radius: inherit; }
+
+
+/* ===========================================================
+   TABLE — SINGLE TABLE
+   Scroll container handles overflow-x.
+   First column (Type): position:sticky left:0 z-index:1
+   thead: position:sticky top:0 z-index:4
+   Column widths from JSON: first=250px, rest=200px
+   =========================================================== */
+
+/* ── TABLE CONTAINER (el-102) ── */
+.rd-table-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── SCROLL WRAPPER — handles horizontal overflow ── */
+.rd-table-scroll {
+  overflow-x: auto;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* ── TABLE (table-layout:fixed, col widths from JSON) ── */
+.rd-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  /* 250 + 200*8 = 1850px total from JSON el-107 */
+  width: 1850px;
+}
+
+/* ── COLGROUP — exact from JSON el-109..el-117 ── */
+.rd-table col.rd-col-first {
+  width: 250px;
+  min-width: 250px;
+  max-width: 250px;
+}
+.rd-table col.rd-col-rest {
+  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
+}
+
+/* ── THEAD — sticky top from JSON el-105 (position:sticky top:0 z:4) ── */
+.rd-table thead {
+  vertical-align: middle;
+}
+.rd-table thead tr {
+  vertical-align: middle;
+}
+
+/* ── TH — from JSON el-120 ── */
+.rd-table thead th {
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(229, 229, 229);
+  font-weight: 700;
+  height: 53px;
+  vertical-align: middle;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* first th: sticky BOTH left AND top (JSON el-120: sticky, left:0, z:1) */
+.rd-table thead th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 3;
+  cursor: default;
+}
+
+/* Shadow on right edge of pinned column — only when scrolled */
+.rd-table thead th:first-child::after,
+.rd-table tbody td:first-child::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -6px;
+  bottom: -1px;
+  width: 6px;
+  pointer-events: none;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.06), transparent);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+/* Show shadow only when table is scrolled horizontally */
+.rd-table-scroll--scrolled .rd-table thead th:first-child::after,
+.rd-table-scroll--scrolled .rd-table tbody td:first-child::after {
+  opacity: 1;
+}
+
+/* rest th: text-align end, cursor pointer */
+.rd-table thead th:not(:first-child) {
+  text-align: end;
+  cursor: pointer;
+}
+
+/* ── TH BUTTON WRAPPER (el-123: padding:4px) ── */
+.rd-th-pad {
+  padding: 4px;
+}
+
+/* ── TH BUTTON (el-124) ── */
+.rd-th-btn {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  height: 44px;
+  padding: 12px;
+  gap: 8px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  color: inherit;
+  box-sizing: border-box;
+  position: relative;
+  transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+.rd-th-btn:hover { background-color: rgba(19, 19, 19, 0.06); }
+.rd-th-btn:active { background-color: rgba(19, 19, 19, 0.1); }
+.rd-th-btn--left { justify-content: start; }
+.rd-th-btn--right { justify-content: end; }
+
+/* ── TD (JSON el-188: h:56px, padding:1px 16px) ── */
+.rd-table tbody td {
+  height: 56px;
+  padding: 1px 16px;
+  vertical-align: middle;
+  border-bottom: 1px solid rgb(229, 229, 229);
+  font-size: 15px;
+  line-height: 20px;
+}
+
+/* first td: sticky left (JSON el-188 first-child: position:sticky, left:0, z:1) */
+.rd-table tbody td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background-color: inherit;
+}
+
+/* rest td: text-align end */
+.rd-table tbody td:not(:first-child) {
+  text-align: end;
+}
+
+/* ── ROW VARIANTS (JSON el-188 bg values) ── */
+.rd-table tbody tr.rd-row--summary td {
+  background-color: rgb(249, 249, 249);
+}
+.rd-table tbody tr.rd-row--normal td {
+  background-color: rgb(255, 255, 255);
+}
+
+/* ── ROW HOVER ── */
+@media (hover: hover) and (pointer: fine) {
+  .rd-table tbody tr:hover td.rd-cell--default {
+    background-color: rgb(245, 245, 245);
+  }
+  .rd-table tbody tr:hover td.rd-cell--faded {
+    background-color: rgb(243, 243, 243);
+  }
+}
+
+/* ── CELL TEXT (JSON el-191/el-193) ── */
+.rd-cell-text {
+  font-size: 15px;
+  height: 20px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin: 0;
+}
+.rd-cell-text--bold { font-weight: 600; }
+.rd-cell-text--left { text-align: left; }
+.rd-cell-text--right { text-align: right; }
+
+/* el-261: Service row Type cell — link color */
+.rd-cell-text--link {
+  color: rgb(101, 75, 255);
+  cursor: pointer;
+}
+
+/* ── TABLE FOOTER (el-266: border-top, padding:16px, h:53px) ── */
+.rd-table-footer {
+  border-top: 1px solid rgb(229, 229, 229);
+  padding: 16px;
+  height: 53px;
+  box-sizing: border-box;
+}
+
+/* el-267: flex-col, align:center, justify:center, gap:4px */
+.rd-table-footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 100%;
+}
+
+/* el-270: p text */
+.rd-footer-text {
+  font-size: 15px;
+  color: rgb(118, 118, 118);
+  height: 20px;
+  margin: 0;
+}
+
+/* el-271, el-272: bold spans */
+.rd-footer-text span {
+  font-weight: 600;
+  color: rgb(118, 118, 118);
+}
+
+/* ── SCROLLBAR ── */
+.rd-scroll::-webkit-scrollbar { width: 15px; }
+.rd-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 999px;
+  border: 4px solid transparent;
+  background-clip: content-box;
+}
+.rd-scroll::-webkit-scrollbar-thumb:hover { background-color: rgba(0, 0, 0, 0.35); }
+.rd-scroll::-webkit-scrollbar-track { background: transparent; }
+
+.rd-table-scroll::-webkit-scrollbar { height: 8px; }
+.rd-table-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}

@@ -1,0 +1,855 @@
+/* ═══════════════════════════════════════════════════
+   PackageSaleDetail — Dark Theme (matches app)
+   ═══════════════════════════════════════════════════ */
+
+.psd-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/* Loading & Empty */
+.psd-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+    gap: 16px;
+    color: var(--color-text-muted);
+}
+
+.psd-empty {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--color-text-muted);
+}
+
+.psd-empty-icon {
+    font-size: var(--typo-xl);
+    margin-bottom: 12px;
+}
+
+.psd-empty h3 {
+    margin: 0 0 8px;
+    color: var(--color-text);
+}
+
+.psd-empty p {
+    margin: 0;
+}
+
+.psd-empty-tab {
+    text-align: center;
+    padding: 48px 20px;
+    color: var(--color-text-muted);
+}
+
+.psd-empty-tab .psd-empty-icon {
+    font-size: var(--typo-xl);
+    margin-bottom: 8px;
+}
+
+.psd-empty-tab p {
+    margin: 0;
+    font-size: var(--typo-xs);
+}
+
+/* Back button */
+.psd-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    color: var(--color-primary-light);
+    font-size: var(--typo-xs);
+    font-weight: 500;
+    cursor: pointer;
+    padding: 8px 0;
+    margin-bottom: 16px;
+    transition: color 0.2s;
+}
+
+.psd-back-btn:hover {
+    color: var(--color-primary);
+}
+
+/* Header Card */
+.psd-header-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 24px rgba(124, 58, 237, 0.3);
+}
+
+.psd-header-icon {
+    font-size: var(--typo-xl);
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.psd-header-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.psd-header-name {
+    margin: 0 0 10px;
+    font-size: var(--typo-ml);
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: #fff;
+}
+
+.psd-header-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.psd-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--typo-xs);
+    opacity: 0.9;
+}
+
+.psd-meta-icon {
+    font-size: var(--typo-xs);
+}
+
+/* Notes (in header) */
+.psd-header-notes {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    font-size: var(--typo-xs);
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.psd-notes-icon {
+    flex-shrink: 0;
+    font-size: var(--typo-xs);
+}
+
+.psd-notes-text {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* Header Stats */
+.psd-header-stats {
+    display: flex;
+    gap: 16px;
+    flex-shrink: 0;
+}
+
+.psd-stat {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-radius: var(--radius-md);
+    padding: 12px 18px;
+    min-width: 90px;
+}
+
+.psd-stat-label {
+    display: block;
+    font-size: var(--typo-2xs);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+    margin-bottom: 4px;
+}
+
+.psd-stat-value {
+    display: block;
+    font-size: var(--typo-m);
+    font-weight: 700;
+}
+
+.psd-stat-value.positive {
+    color: #86efac;
+}
+
+.psd-stat-value.negative {
+    color: #fca5a5;
+}
+
+/* Discount banner */
+.psd-discount-banner {
+    background: rgba(251, 191, 36, 0.12);
+    color: var(--color-warning);
+    border: 1px solid rgba(251, 191, 36, 0.25);
+    padding: 10px 16px;
+    border-radius: var(--radius-md);
+    font-size: var(--typo-xs);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Tabs */
+.psd-tabs-nav {
+    display: flex;
+    gap: 4px;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 4px;
+    margin-bottom: 20px;
+}
+
+.psd-tab-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 16px;
+    border: none;
+    background: transparent;
+    border-radius: var(--radius-sm);
+    font-size: var(--typo-xs);
+    font-weight: 500;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.psd-tab-btn:hover {
+    color: var(--color-text);
+    background: var(--color-bg-hover);
+}
+
+.psd-tab-btn.active {
+    background: var(--color-surface);
+    color: var(--color-primary-light);
+    font-weight: 600;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.psd-tab-icon {
+    font-size: var(--typo-xs);
+}
+
+/* Tab content */
+.psd-tab-content {
+    animation: psdFadeIn 0.25s ease;
+}
+
+@keyframes psdFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ─── Lines Tab ─── */
+.psd-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.psd-line-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    transition: box-shadow 0.2s;
+}
+
+.psd-line-card:hover {
+    box-shadow: var(--shadow-sm);
+}
+
+.psd-line-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.psd-line-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.psd-line-title {
+    font-size: var(--typo-xs);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.psd-line-meta {
+    font-size: var(--typo-2xs);
+    color: var(--color-text-muted);
+}
+
+.psd-line-discount {
+    color: var(--color-error);
+    text-decoration: line-through;
+}
+
+.psd-line-badge {
+    font-size: var(--typo-2xs);
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 16px;
+}
+
+.psd-line-badge.remaining {
+    background: rgba(124, 58, 237, 0.15);
+    color: var(--color-primary-light);
+}
+
+.psd-line-badge.used {
+    background: rgba(52, 211, 153, 0.15);
+    color: var(--color-success);
+}
+
+.psd-line-badge.refunded {
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+}
+
+.psd-line-card.psd-line-refunded {
+    opacity: 0.6;
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.psd-line-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+/* Progress bar */
+.psd-line-progress {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.psd-progress-bar {
+    flex: 1;
+    height: 8px;
+    background: var(--color-border);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.psd-progress-fill {
+    height: 100%;
+    background: var(--color-primary-gradient);
+    border-radius: 4px;
+    transition: width 0.4s ease;
+}
+
+.psd-progress-text {
+    font-size: var(--typo-2xs);
+    color: var(--color-text-muted);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* ─── Usage Tab ─── */
+.psd-usage {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.psd-usage-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 12px 16px;
+}
+
+.psd-usage-icon {
+    font-size: var(--typo-ml);
+    flex-shrink: 0;
+}
+
+.psd-usage-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.psd-usage-title {
+    font-size: var(--typo-xs);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.psd-usage-date {
+    font-size: var(--typo-2xs);
+    color: var(--color-text-muted);
+}
+
+.psd-usage-qty {
+    font-size: var(--typo-xs);
+    font-weight: 600;
+    color: var(--color-primary-light);
+    background: rgba(124, 58, 237, 0.12);
+    padding: 4px 10px;
+    border-radius: 8px;
+}
+
+/* ─── Payments Tab ─── */
+.psd-payments {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.psd-payment-summary {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+}
+
+.psd-summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: var(--typo-xs);
+    color: var(--color-text-muted);
+}
+
+.psd-summary-row.total {
+    border-top: 2px solid var(--color-border);
+    margin-top: 4px;
+    padding-top: 12px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.psd-summary-value {
+    font-weight: 600;
+}
+
+.psd-summary-value.positive {
+    color: var(--color-success);
+}
+
+.psd-summary-value.negative {
+    color: var(--color-error);
+}
+
+.psd-section-title {
+    font-size: var(--typo-xs);
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0 0 12px;
+}
+
+.psd-payment-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.psd-payment-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 12px 16px;
+    margin-bottom: 8px;
+}
+
+.psd-payment-icon {
+    font-size: var(--typo-l);
+    flex-shrink: 0;
+}
+
+.psd-payment-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.psd-payment-method {
+    font-size: var(--typo-xs);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.psd-payment-date {
+    font-size: var(--typo-2xs);
+    color: var(--color-text-muted);
+}
+
+.psd-payment-amount {
+    font-size: var(--typo-s);
+    font-weight: 700;
+    color: var(--color-success);
+}
+
+.psd-payment-amount.refund {
+    color: #f59e0b;
+}
+
+.psd-payment-card.psd-payment-refund {
+    border-color: rgba(245, 158, 11, 0.3);
+    background: rgba(245, 158, 11, 0.05);
+}
+
+.psd-payment-card.psd-payment-deleted {
+    opacity: 0.5;
+    filter: grayscale(0.5);
+    border-color: var(--color-border);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.psd-payment-amount.deleted {
+    text-decoration: line-through;
+    color: var(--color-text-muted) !important;
+}
+
+.psd-deleted-badge {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 6px;
+    font-size: var(--typo-2xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border-radius: 4px;
+}
+
+.psd-refund-card.deleted .psd-refund-line {
+    opacity: 0.7;
+    text-decoration: line-through;
+}
+
+/* ─── Refunds Tab ─── */
+.psd-refunds {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.psd-refund-card {
+    background: var(--color-bg-card);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+}
+
+.psd-refund-card:hover {
+    box-shadow: 0 2px 12px rgba(245, 158, 11, 0.1);
+}
+
+.psd-refund-card.deleted {
+    opacity: 0.45;
+    filter: grayscale(0.6);
+    border-color: var(--color-border);
+}
+
+.psd-refund-card.deleted:hover {
+    box-shadow: none;
+}
+
+.psd-refund-card.deleted .psd-refund-header {
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom-color: var(--color-border);
+}
+
+.psd-refund-card.deleted .psd-refund-amount {
+    text-decoration: line-through;
+    color: var(--color-text-muted);
+}
+
+.psd-refund-cancelled-badge {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 8px;
+    font-size: var(--typo-2xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+.psd-refund-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    background: rgba(245, 158, 11, 0.06);
+    border-bottom: 1px solid rgba(245, 158, 11, 0.15);
+}
+
+.psd-refund-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.psd-refund-icon {
+    font-size: var(--typo-ml);
+}
+
+.psd-refund-title-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.psd-refund-title {
+    font-size: var(--typo-xs);
+    font-weight: 700;
+    color: #fbbf24;
+}
+
+.psd-refund-date {
+    font-size: var(--typo-2xs);
+    color: var(--color-text-muted);
+}
+
+.psd-refund-header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.psd-refund-amount {
+    font-size: var(--typo-s);
+    font-weight: 700;
+    color: #f59e0b;
+}
+
+.psd-refund-delete-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: 8px;
+    font-size: var(--typo-xs);
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--color-text-muted);
+}
+
+.psd-refund-delete-btn:hover {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: rgba(239, 68, 68, 0.4);
+    color: #f87171;
+    transform: scale(1.05);
+}
+
+.psd-refund-lines {
+    padding: 12px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.psd-refund-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 6px;
+}
+
+.psd-refund-line-name {
+    font-size: var(--typo-xs);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.psd-refund-line-detail {
+    font-size: var(--typo-2xs);
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+.psd-refund-footer {
+    padding: 10px 18px 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-top: 1px solid var(--color-border);
+}
+
+.psd-refund-pay-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    border-radius: 8px;
+    font-size: var(--typo-2xs);
+    font-weight: 600;
+    color: #fbbf24;
+}
+
+.psd-refund-reward-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: var(--typo-2xs);
+    font-weight: 600;
+}
+
+.psd-refund-reward-badge.clawback {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    color: #f87171;
+}
+
+.psd-refund-reward-badge.earn {
+    background: rgba(52, 211, 153, 0.1);
+    border: 1px solid rgba(52, 211, 153, 0.2);
+    color: #34d399;
+}
+
+/* ─── Confirm Dialog ─── */
+.psd-confirm-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    animation: psdFadeIn 0.15s ease;
+}
+
+.psd-confirm-dialog {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    max-width: 420px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.psd-confirm-icon {
+    font-size: var(--typo-xl);
+    margin-bottom: 12px;
+}
+
+.psd-confirm-dialog h3 {
+    margin: 0 0 10px;
+    font-size: var(--typo-m);
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.psd-confirm-dialog p {
+    margin: 0 0 20px;
+    font-size: var(--typo-xs);
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
+.psd-confirm-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.psd-confirm-cancel,
+.psd-confirm-delete {
+    padding: 10px 20px;
+    border-radius: var(--radius-sm);
+    font-size: var(--typo-xs);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+}
+
+.psd-confirm-cancel {
+    background: var(--color-bg-hover);
+    color: var(--color-text);
+}
+
+.psd-confirm-cancel:hover {
+    background: var(--color-border);
+}
+
+.psd-confirm-delete {
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.psd-confirm-delete:hover {
+    background: rgba(239, 68, 68, 0.25);
+}
+
+.psd-confirm-delete:disabled,
+.psd-confirm-cancel:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+    .psd-page {
+        padding: 16px;
+    }
+
+    .psd-header-card {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .psd-header-stats {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .psd-stat {
+        flex: 1;
+        min-width: 0;
+    }
+}

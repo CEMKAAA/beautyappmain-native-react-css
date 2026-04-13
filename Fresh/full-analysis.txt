@@ -1,0 +1,532 @@
+=== FAZ 1: ROOT & CSS VARIABLES ===
+CSS Variable Defaults:
+  --padding-right-default: 32px
+  --display-default: flex
+  --align-items-default: center
+  --padding-top-default: 0
+  --justify-content-default: center
+  --padding-left-default: 32px
+  --direction-default: column
+  --padding-bottom-default: 32px
+  --sidebar-width: 296px
+  --spacing-var-1: 8px
+  --spacing-var: 16px
+  --spacing-var-2: 20px
+  --transition-easing: cubic-bezier(.85,0,.15,1)
+  --transition-duration: .1s
+  --icon-fill: #f5f5f5
+  --border-width-var-1: 2px
+  --border-width-var: 1px
+  --color-var: #f5f5f5
+  --color-var-1: #13131300
+  --sizing-var: 48px
+  --sizing-var-1: 24px
+  --easing-var: cubic-bezier(0,.55,.45,1)
+  --easing-var-1: cubic-bezier(.85,0,.15,1)
+  --duration-var: .1s
+  --duration-var-1: .2s
+  --align-self-default: flex-start
+  --grow-default: 1
+  --column-max: 1fr
+  --itemSize: 1fr
+  --column-min: 0px
+  --row-min: 0px
+  --rowSize: auto
+  --row-max: auto
+
+=== FAZ 2: SIDEBAR (el-0 to el-128) ===
+
+el-0 <div> d=0 1806pxx796px bg=rgb(13, 13, 13)
+  styles: {"background-color":"rgb(13, 13, 13)","bottom":"0px","display":"flex","flex-direction":"column","flex-grow":"1","height":"796px","justify-content":"space-between","left":"0px","overflow-x":"hidden","overflow-y":"hidden","position":"relative","right":"0px","top":"0px","width":"1806px"}
+el-1 <div> d=1 1806pxx796px bg=rgb(19, 19, 19)
+  styles: {"background-color":"rgb(19, 19, 19)","display":"flex","flex-direction":"column","height":"796px","min-height":"100%","overflow-x":"hidden","overflow-y":"auto","scrollbar-width":"none","width":"1806px"}
+el-2 <div> d=2 1806pxx1088px bg=
+  styles: {"align-items":"center","display":"flex","height":"1088px","justify-content":"center","padding-bottom":"32px","padding-left":"32px","padding-right":"32px","width":"1806px"}
+el-3 <div> d=3 1440pxx1056px bg=
+  styles: {"column-gap":"32px","display":"grid","grid-template-areas":"\"title title\" \"sidebar content\"","grid-template-columns":"296px 1112px","grid-template-rows":"0px 1024px","height":"1056px","row-gap":"32px","width":"1440px"}
+el-4 <div> d=4 296pxx538px bg=
+  styles: {"display":"flex","flex-direction":"column","grid-column-end":"sidebar","grid-column-start":"sidebar","grid-row-end":"sidebar","grid-row-start":"sidebar","height":"538px","max-width":"296px","width":"296px"}
+el-5 <div> d=5 296pxx538px bg=
+  styles: {"bottom":"0px","display":"flex","flex-direction":"column","height":"538px","isolation":"isolate","left":"0px","position":"relative","right":"0px","top":"0px","width":"296px"}
+el-6 <div> d=6 296pxx538px bg=rgb(24, 24, 24)
+  styles: {"background-color":"rgb(24, 24, 24)","border-bottom-left-radius":"12px","border-bottom-right-radius":"12px","border-top-left-radius":"12px","border-top-right-radius":"12px","height":"538px","overflow-x":"hidden","overflow-y":"hidden","transition-duration":"0.1s","transition-property":"background-color, box-shadow, transform","transition-timing-function":"cubic-bezier(0, 0.55, 0.45, 1)","width":"296px"}
+
+--- SIDEBAR MENU ITEMS ---
+
+[All reports (active)] el-15:
+  bg: rgb(32, 30, 69)
+  styles: {"align-items":"center","background-color":"rgb(32, 30, 69)","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px","border-top-left-radius":"8px","border-top-right-radius":"8px","bottom":"0px","column-gap":"12px","cursor":"pointer","display":"flex","height":"44px","left":"0px","list-style-type":"none","margin-left":"-16px","margin-right":"-16px","outline-color":"rgba(0, 0, 0, 0)","outline-offset":"2px","outline-style":"solid","outline-width":"2px","padding-bottom":"12px","padding-left":"16px","padding-right":"16px","padding-top":"12px","position":"relative","right":"0px","row-gap":"12px","top":"0px","transition-duration":"0.1s","transition-property":"color, background-color, border-color, outline-color, text-decoration-color, fill, stroke","transition-timing-function":"cubic-bezier(0.85, 0, 0.15, 1)","width":"264px"}
+  SVG path (el-20): d="M22 8a1 1 0 0 0-1-1H5a1 1 0 0 0 0 2h16a1 1 0 0 0 1-1m0 8a1 1 0 0 0-1-1H5a1 1 0 1 0 0 2h16a1 1 0 0 0 1-1m0 8a1 1 0 0 0-1-1H5a1 1 0 1 0 0 2h16a1 1 0 0 0 1-1"
+    fill: rgb(245, 245, 245)
+  SVG path (el-21): d="M26.5 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3M26.5 17.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3M26.5 25.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"
+    fill: rgb(245, 245, 245)
+  SVG path (el-24): d="M10 8a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H11a1 1 0 0 1-1-1m0 8a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H11a1 1 0 0 1-1-1m0 8a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H11a1 1 0 0 1-1-1"
+    fill: rgb(245, 245, 245)
+  SVG path (el-25): d="M5.5 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M5.5 17.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M5.5 25.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"
+    fill: rgb(245, 245, 245)
+  Badge (el-28): "All reports" styles={"cursor":"pointer","font-size":"15px","font-weight":"500","height":"20px","list-style-type":"none","max-width":"100%","overflow-x":"hidden","overflow-y":"hidden","text-overflow":"ellipsis","text-wrap-mode":"nowrap","width":"165.531px"}
+  Badge (el-30): "53" styles={"color":"rgb(191, 191, 191)","cursor":"pointer","font-size":"13px","font-weight":"500","height":"16px","line-height":"16px","list-style-type":"none","outline-color":"rgb(191, 191, 191)","pointer-events":"none","width":"14.4688px","border-color":"rgb(191, 191, 191)"}
+
+[Favourites] el-31:
+  bg: rgba(19, 19, 19, 0)
+  styles: {"align-items":"center","background-color":"rgba(19, 19, 19, 0)","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px","border-top-left-radius":"8px","border-top-right-radius":"8px","bottom":"0px","column-gap":"12px","cursor":"pointer","display":"flex","height":"44px","left":"0px","list-style-type":"none","margin-left":"-16px","margin-right":"-16px","outline-color":"rgba(0, 0, 0, 0)","outline-offset":"2px","outline-style":"solid","outline-width":"2px","padding-bottom":"12px","padding-left":"16px","padding-right":"16px","padding-top":"12px","position":"relative","right":"0px","row-gap":"12px","top":"0px","transition-duration":"0.1s","transition-property":"color, background-color, border-color, outline-color, text-decoration-color, fill, stroke","transition-timing-function":"cubic-bezier(0.85, 0, 0.15, 1)","width":"264px"}
+  SVG path (el-35): d="M29.9 11.162a2 2 0 0 0-1.726-1.375l-7.422-.64-2.91-6.92a1.994 1.994 0 0 0-3.678 0l-2.901 6.92-7.43.644a2 2 0 0 0-1.14 3.508l5.638 4.928-1.69 7.318a2 2 0 0 0 2.98 2.168l6.374-3.876 6.387 3.876a2 2 0 0 0 2.98-2.168l-1.69-7.326 5.637-4.92a2 2 0 0 0 .591-2.137m-1.902.625-5.636 4.92a2 2 0 0 0-.635 1.965l1.693 7.33-6.382-3.875a1.99 1.99 0 0 0-2.067 0l-6.374 3.876 1.683-7.326a2 2 0 0 0-.635-1.964l-5.64-4.918v-.011l7.43-.643a2 2 0 0 0 1.668-1.219l2.9-6.912 2.9 6.912a2 2 0 0 0 1.668 1.219l7.43.643v.008z"
+    fill: rgb(245, 245, 245)
+  SVG path (el-38): d="M29.9 11.162a2 2 0 0 0-1.726-1.375l-7.422-.64-2.91-6.92a1.994 1.994 0 0 0-3.678 0l-2.901 6.92-7.43.644a2 2 0 0 0-1.14 3.508l5.638 4.928-1.69 7.318a2 2 0 0 0 2.98 2.168l6.374-3.876 6.387 3.876a2 2 0 0 0 2.98-2.168l-1.69-7.326 5.637-4.92a2 2 0 0 0 .591-2.137m-1.902.625-5.636 4.92a2 2 0 0 0-.635 1.965l1.693 7.33-6.382-3.875a1.99 1.99 0 0 0-2.067 0l-6.374 3.876 1.683-7.326a2 2 0 0 0-.635-1.964l-5.64-4.918v-.011l7.43-.643a2 2 0 0 0 1.668-1.219l2.9-6.912 2.9 6.912a2 2 0 0 0 1.668 1.219l7.43.643v.008z"
+    fill: rgb(245, 245, 245)
+  Badge (el-40): "Favourites" styles={"cursor":"pointer","font-size":"15px","font-weight":"500","height":"20px","list-style-type":"none","max-width":"100%","overflow-x":"hidden","overflow-y":"hidden","text-overflow":"ellipsis","text-wrap-mode":"nowrap","width":"168px"}
+  Badge (el-42): "0" styles={"color":"rgb(191, 191, 191)","cursor":"pointer","font-size":"13px","font-weight":"500","height":"16px","line-height":"16px","list-style-type":"none","outline-color":"rgb(191, 191, 191)","pointer-events":"none","width":"7.23438px","border-color":"rgb(191, 191, 191)"}
+
+[Dashboards] el-43:
+  bg: rgba(19, 19, 19, 0)
+  styles: {"align-items":"center","background-color":"rgba(19, 19, 19, 0)","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px","border-top-left-radius":"8px","border-top-right-radius":"8px","bottom":"0px","column-gap":"12px","cursor":"pointer","display":"flex","height":"44px","left":"0px","list-style-type":"none","margin-left":"-16px","margin-right":"-16px","outline-color":"rgba(0, 0, 0, 0)","outline-offset":"2px","outline-style":"solid","outline-width":"2px","padding-bottom":"12px","padding-left":"16px","padding-right":"16px","padding-top":"12px","position":"relative","right":"0px","row-gap":"12px","top":"0px","transition-duration":"0.1s","transition-property":"color, background-color, border-color, outline-color, text-decoration-color, fill, stroke","transition-timing-function":"cubic-bezier(0.85, 0, 0.15, 1)","width":"264px"}
+  SVG path (el-47): d="M18.5 5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v20h1a1 1 0 1 1 0 2h-25a1 1 0 1 1 0-2h1v-8a1 1 0 0 1 1-1h6v-5a1 1 0 0 1 1-1h6zm0 7h-5v13h5zm2 13h5V6h-5zm-9 0v-7h-5v7z"
+    fill: rgb(245, 245, 245)
+  SVG path (el-50): d="M18.5 5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v20h1a1 1 0 1 1 0 2h-25a1 1 0 1 1 0-2h1v-8a1 1 0 0 1 1-1h6v-5a1 1 0 0 1 1-1h6zm0 7h-5v13h5zm2 13h5V6h-5zm-9 0v-7h-5v7z"
+    fill: rgb(245, 245, 245)
+  Badge (el-52): "Dashboards" styles={"cursor":"pointer","font-size":"15px","font-weight":"500","height":"20px","list-style-type":"none","max-width":"100%","overflow-x":"hidden","overflow-y":"hidden","text-overflow":"ellipsis","text-wrap-mode":"nowrap","width":"168px"}
+  Badge (el-54): "3" styles={"color":"rgb(191, 191, 191)","cursor":"pointer","font-size":"13px","font-weight":"500","height":"16px","line-height":"16px","list-style-type":"none","outline-color":"rgb(191, 191, 191)","pointer-events":"none","width":"7.23438px","border-color":"rgb(191, 191, 191)"}
+
+[Standard] el-55:
+  bg: rgba(19, 19, 19, 0)
+  styles: {"align-items":"center","background-color":"rgba(19, 19, 19, 0)","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px","border-top-left-radius":"8px","border-top-right-radius":"8px","bottom":"0px","column-gap":"12px","cursor":"pointer","display":"flex","height":"44px","left":"0px","list-style-type":"none","margin-left":"-16px","margin-right":"-16px","outline-color":"rgba(0, 0, 0, 0)","outline-offset":"2px","outline-style":"solid","outline-width":"2px","padding-bottom":"12px","padding-left":"16px","padding-right":"16px","padding-top":"12px","position":"relative","right":"0px","row-gap":"12px","top":"0px","transition-duration":"0.1s","transition-property":"color, background-color, border-color, outline-color, text-decoration-color, fill, stroke","transition-timing-function":"cubic-bezier(0.85, 0, 0.15, 1)","width":"264px"}
+  SVG path (el-59): d="M3 7a2 2 0 0 1 2-2h22a2 2 0 0 1 2 2v18a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm6 0H5v18h4zm2 0v18h4V7zm6 0v18h4V7zm6 0v18h4V7z"
+    fill: rgb(245, 245, 245)
+  SVG path (el-62): d="M3 7a2 2 0 0 1 2-2h22a2 2 0 0 1 2 2v18a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm6 0H5v18h4zm2 0v18h4V7zm6 0v18h4V7zm6 0v18h4V7z"
+    fill: rgb(245, 245, 245)
+  Badge (el-64): "Standard" styles={"cursor":"pointer","font-size":"15px","font-weight":"500","height":"20px","list-style-type":"none","max-width":"100%","overflow-x":"hidden","overflow-y":"hidden","text-overflow":"ellipsis","text-wrap-mode":"nowrap","width":"165.531px"}
+  Badge (el-66): "45" styles={"color":"rgb(191, 191, 191)","cursor":"pointer","font-size":"13px","font-weight":"500","height":"16px","line-height":"16px","list-style-type":"none","outline-color":"rgb(191, 191, 191)","pointer-events":"none","width":"14.4688px","border-color":"rgb(191, 191, 191)"}
+
+[Premium] el-67:
+  bg: rgba(19, 19, 19, 0)
+  styles: {"align-items":"center","background-color":"rgba(19, 19, 19, 0)","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px","border-top-left-radius":"8px","border-top-right-radius":"8px","bottom":"0px","column-gap":"12px","cursor":"pointer","display":"flex","height":"44px","left":"0px","list-style-type":"none","margin-left":"-16px","margin-right":"-16px","outline-color":"rgba(0, 0, 0, 0)","outline-offset":"2px","outline-style":"solid","outline-width":"2px","padding-bottom":"12px","padding-left":"16px","padding-right":"16px","padding-top":"12px","position":"relative","right":"0px","row-gap":"12px","top":"0px","transition-duration":"0.1s","transition-property":"color, background-color, border-color, outline-color, text-decoration-color, fill, stroke","transition-timing-function":"cubic-bezier(0.85, 0, 0.15, 1)","width":"264px"}
+  SVG path (el-71): d="M19 28a1 1 0 0 1-1 1h-4a1 1 0 0 1 0-2h4a1 1 0 0 1 1 1m-3-14a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m11.953 5.479-1.546 6.954a2 2 0 0 1-3.188 1.138L19.814 25h-7.625L8.78 27.571a2 2 0 0 1-3.189-1.139L4.047 19.48a2.01 2.01 0 0 1 .415-1.714l3.57-4.283c.12-1.573.482-3.12 1.072-4.583 1.612-4.043 4.5-6.579 5.671-7.482a2 2 0 0 1 2.45 0c1.167.903 4.059 3.44 5.671 7.482a15.4 15.4 0 0 1 1.072 4.584l3.57 4.282a2.01 2.01 0 0 1 .415 1.714M12.429 23h7.142c2.64-4.692 3.134-9.185 1.468-13.36C19.569 5.955 16.81 3.625 16 3c-.814.625-3.571 2.955-5.041 6.64-1.664 4.175-1.17 8.668 1.47 13.36m-1.875.731q-2.02-3.67-2.45-7.211L6 19.045 7.545 26l.022-.016zM26 19.045l-2.104-2.525q-.428 3.535-2.445 7.211l2.982 2.25.022.016z"
+    fill: rgb(245, 245, 245)
+  SVG path (el-74): d="M19 28a1 1 0 0 1-1 1h-4a1 1 0 0 1 0-2h4a1 1 0 0 1 1 1m-3-14a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m11.953 5.479-1.546 6.954a2 2 0 0 1-3.188 1.138L19.814 25h-7.625L8.78 27.571a2 2 0 0 1-3.189-1.139L4.047 19.48a2.01 2.01 0 0 1 .415-1.714l3.57-4.283c.12-1.573.482-3.12 1.072-4.583 1.612-4.043 4.5-6.579 5.671-7.482a2 2 0 0 1 2.45 0c1.167.903 4.059 3.44 5.671 7.482a15.4 15.4 0 0 1 1.072 4.584l3.57 4.282a2.01 2.01 0 0 1 .415 1.714M12.429 23h7.142c2.64-4.692 3.134-9.185 1.468-13.36C19.569 5.955 16.81 3.625 16 3c-.814.625-3.571 2.955-5.041 6.64-1.664 4.175-1.17 8.668 1.47 13.36m-1.875.731q-2.02-3.67-2.45-7.211L6 19.045 7.545 26l.022-.016zM26 19.045l-2.104-2.525q-.428 3.535-2.445 7.211l2.982 2.25.022.016z"
+    fill: rgb(245, 245, 245)
+  Badge (el-76): "Premium" styles={"cursor":"pointer","font-size":"15px","font-weight":"500","height":"20px","list-style-type":"none","max-width":"100%","overflow-x":"hidden","overflow-y":"hidden","text-overflow":"ellipsis","text-wrap-mode":"nowrap","width":"168px"}
+  Badge (el-78): "8" styles={"color":"rgb(191, 191, 191)","cursor":"pointer","font-size":"13px","font-weight":"500","height":"16px","line-height":"16px","list-style-type":"none","outline-color":"rgb(191, 191, 191)","pointer-events":"none","width":"7.23438px","border-color":"rgb(191, 191, 191)"}
+
+[Custom] el-79:
+  bg: rgba(19, 19, 19, 0)
+  styles: {"align-items":"center","background-color":"rgba(19, 19, 19, 0)","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px","border-top-left-radius":"8px","border-top-right-radius":"8px","bottom":"0px","column-gap":"12px","cursor":"pointer","display":"flex","height":"44px","left":"0px","list-style-type":"none","margin-left":"-16px","margin-right":"-16px","outline-color":"rgba(0, 0, 0, 0)","outline-offset":"2px","outline-style":"solid","outline-width":"2px","padding-bottom":"12px","padding-left":"16px","padding-right":"16px","padding-top":"12px","position":"relative","right":"0px","row-gap":"12px","top":"0px","transition-duration":"0.1s","transition-property":"color, background-color, border-color, outline-color, text-decoration-color, fill, stroke","transition-timing-function":"cubic-bezier(0.85, 0, 0.15, 1)","width":"264px"}
+  SVG path (el-83): d="M16 5C9.925 5 5 9.925 5 16c0 2.805 1.05 5.365 2.778 7.308a10 10 0 0 1 4.51-3.594 6 6 0 1 1 7.425 0 10 10 0 0 1 4.51 3.594A10.96 10.96 0 0 0 27 16c0-6.075-4.925-11-11-11m8.747 20.617A12.97 12.97 0 0 0 29 16c0-7.18-5.82-13-13-13S3 8.82 3 16c0 3.811 1.64 7.24 4.253 9.617q.05.053.108.098A12.95 12.95 0 0 0 16 29a12.95 12.95 0 0 0 8.639-3.285 1 1 0 0 0 .108-.098m-2.005-.925a8 8 0 0 0-13.484 0A10.95 10.95 0 0 0 16 27c2.54 0 4.88-.861 6.742-2.308M16.067 19a4 4 0 1 0-.134-8 4 4 0 0 0 .134 8"
+    fill: rgb(245, 245, 245)
+  SVG path (el-86): d="M16 5C9.925 5 5 9.925 5 16c0 2.805 1.05 5.365 2.778 7.308a10 10 0 0 1 4.51-3.594 6 6 0 1 1 7.425 0 10 10 0 0 1 4.51 3.594A10.96 10.96 0 0 0 27 16c0-6.075-4.925-11-11-11m8.747 20.617A12.97 12.97 0 0 0 29 16c0-7.18-5.82-13-13-13S3 8.82 3 16c0 3.811 1.64 7.24 4.253 9.617q.05.053.108.098A12.95 12.95 0 0 0 16 29a12.95 12.95 0 0 0 8.639-3.285 1 1 0 0 0 .108-.098m-2.005-.925a8 8 0 0 0-13.484 0A10.95 10.95 0 0 0 16 27c2.54 0 4.88-.861 6.742-2.308M16.067 19a4 4 0 1 0-.134-8 4 4 0 0 0 .134 8"
+    fill: rgb(245, 245, 245)
+  Badge (el-88): "Custom" styles={"cursor":"pointer","font-size":"15px","font-weight":"500","height":"20px","list-style-type":"none","max-width":"100%","overflow-x":"hidden","overflow-y":"hidden","text-overflow":"ellipsis","text-wrap-mode":"nowrap","width":"168px"}
+  Badge (el-90): "0" styles={"color":"rgb(191, 191, 191)","cursor":"pointer","font-size":"13px","font-weight":"500","height":"16px","line-height":"16px","list-style-type":"none","outline-color":"rgb(191, 191, 191)","pointer-events":"none","width":"7.23438px","border-color":"rgb(191, 191, 191)"}
+
+[Targets] el-91:
+  bg: rgba(19, 19, 19, 0)
+  styles: {"align-items":"center","background-color":"rgba(19, 19, 19, 0)","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px","border-top-left-radius":"8px","border-top-right-radius":"8px","bottom":"0px","column-gap":"12px","cursor":"pointer","display":"flex","height":"44px","left":"0px","list-style-type":"none","margin-left":"-16px","margin-right":"-16px","outline-color":"rgba(0, 0, 0, 0)","outline-offset":"2px","outline-style":"solid","outline-width":"2px","padding-bottom":"12px","padding-left":"16px","padding-right":"16px","padding-top":"12px","position":"relative","right":"0px","row-gap":"12px","top":"0px","transition-duration":"0.1s","transition-property":"color, background-color, border-color, outline-color, text-decoration-color, fill, stroke","transition-timing-function":"cubic-bezier(0.85, 0, 0.15, 1)","width":"264px"}
+  SVG path (el-95): d="M27.734 10.395a13.013 13.013 0 1 1-3.275-4.27l2.834-2.835a1 1 0 1 1 1.415 1.415l-12 12a1 1 0 1 1-1.415-1.415l3.465-3.465a5 5 0 1 0 2.233 3.886 1.002 1.002 0 1 1 2-.112 7 7 0 1 1-2.797-5.206l2.844-2.844a10.985 10.985 0 1 0 2.89 3.709 1 1 0 1 1 1.806-.863"
+    fill: rgb(245, 245, 245)
+  SVG path (el-98): d="M27.734 10.395a13.013 13.013 0 1 1-3.275-4.27l2.834-2.835a1 1 0 1 1 1.415 1.415l-12 12a1 1 0 1 1-1.415-1.415l3.465-3.465a5 5 0 1 0 2.233 3.886 1.002 1.002 0 1 1 2-.112 7 7 0 1 1-2.797-5.206l2.844-2.844a10.985 10.985 0 1 0 2.89 3.709 1 1 0 1 1 1.806-.863"
+    fill: rgb(245, 245, 245)
+  Badge (el-100): "Targets" styles={"cursor":"pointer","font-size":"15px","font-weight":"500","height":"20px","list-style-type":"none","max-width":"100%","overflow-x":"hidden","overflow-y":"hidden","text-overflow":"ellipsis","text-wrap-mode":"nowrap","width":"200px"}
+  Badge (el-105): "Folders" styles={"flex-grow":"1","font-size":"17px","font-weight":"600","height":"24px","line-height":"24px","list-style-type":"none","width":"232px"}
+
+--- FOLDERS SECTION ---
+el-103 <li> styles: {"display":"list-item","height":"97px","list-style-type":"none","width":"232px"}
+  SVG el-111: d="M16 5a1 1 0 0 1 1 1v9h9a1 1 0 1 1 0 2h-9v9a1 1 0 1 1-2 0v-9H6a1 1 0 1 1 0-2h9V6a1 1 0 0 1 1-1" fill=rgb(136, 128, 255)
+  SVG el-114: d="M16 5a1 1 0 0 1 1 1v9h9a1 1 0 1 1 0 2h-9v9a1 1 0 1 1-2 0v-9H6a1 1 0 1 1 0-2h9V6a1 1 0 0 1 1-1" fill=rgb(136, 128, 255)
+
+--- DATA CONNECTOR ---
+el-125 <img>: src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHBhdGggZmlsbD0idXJsKCNhKSIgZD0iTTAgMGg2NHY2NEgweiIvPjxwYXRoIGZpbGw9IiNmZmYiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0ibTM1LjA2NiAyMC45NjgtMy4wNzMgMy4wNzJhMS4yNSAxLjI1IDAgMSAxLTEuNzY3LTEuNzY3bDMuMDkzLTMuMDk0LjA0Mi0uMDRhOC4xNCA4LjE0IDAgMCAxIDExLjUgMTEuNWwtNC40NiA0LjQ0N2E4LjEyIDguMTIgMCAwIDEtNS43NDUgMi4zODUgOC4xIDguMSAwIDAgMS01Ljc0NS0yLjM4NSAxLjI1IDEuMjUgMCAwIDEgMS43NzEtMS43NjUgNS42MSA1LjYxIDAgMCAwIDcuOTQ4IDBsNC40MDMtNC4zODdhNS42NCA1LjY0IDAgMCAwLTcuOTY3LTcuOTY2bS01LjcyMiA4LjA2YTUuNiA1LjYgMCAwIDAtMy45NzQgMS42NTFsLTQuNDAzIDQuMzg3YTUuNjQgNS42NCAwIDAgMCA3Ljk2OCA3Ljk2NmwzLjA3Mi0zLjA3MmExLjI1IDEuMjUgMCAxIDEgMS43NjggMS43NjhMMzAuNjggNDQuODJsLS4wNDIuMDRhOC4xNDEgOC4xNDEgMCAwIDEtMTEuNS0xMS41bDQuNDYtNC40NDZhOC4xMiA4LjEyIDAgMCAxIDUuNzQ1LTIuMzg2IDguMSA4LjEgMCAwIDEgNS43NDUgMi4zODYgMS4yNSAxLjI1IDAgMCAxLTEuNzcxIDEuNzY0IDUuNiA1LjYgMCAwIDAtMy45NzQtMS42NSIgY2xpcC1ydWxlPSJldmVub2RkIi8+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJhIiBjeD0iMCIgY3k9IjAiIHI9IjEiIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoLTYyLjgwNTYgNjQgLTc1LjI5NjcgLTc5LjkyNiA2NCAwKSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiM5RkNFMDAiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxRjg5MDAiLz48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48L3N2Zz4=" styles={"border-bottom-left-radius":"4px","border-bottom-right-radius":"4px","border-top-left-radius":"4px","border-top-right-radius":"4px","cursor":"pointer","display":"flex","height":"20px","list-style-type":"none","max-width":"100%","overflow-x":"clip","overflow-y":"clip","pointer-events":"none","width":"20px"}
+
+
+=== FAZ 3: CONTENT HEADER (el-129 to el-145) ===
+el-129 <div>
+  styles: {"display":"flex","flex-direction":"column","grid-column-end":"content","grid-column-start":"content","grid-row-end":"content","grid-row-start":"content","height":"1024px","width":"1112px"}
+  el-130 <div>
+    styles: {"column-gap":"24px","display":"flex","flex-direction":"column","height":"1024px","row-gap":"24px","width":"1112px"}
+    el-131 <div>
+      styles: {"align-items":"flex-start","column-gap":"12px","display":"flex","flex-grow":"1","height":"56px","row-gap":"12px","width":"1112px"}
+      el-132 <div>
+        styles: {"display":"flex","flex-direction":"column","flex-grow":"1","height":"56px","width":"1026.95px"}
+        el-133 <div>
+          styles: {"align-items":"flex-start","column-gap":"8px","display":"flex","height":"36px","row-gap":"8px","width":"1026.95px"}
+          el-134 <p> "Reporting and analytics"
+            styles: {"font-size":"28px","font-weight":"600","height":"36px","line-height":"36px","width":"317.406px"}
+          el-135 <div>
+            styles: {"align-items":"center","display":"flex","height":"36px","max-height":"36px","min-height":"36px","width":"38.4688px"}
+            el-136 <div>
+              styles: {"align-items":"center","background-color":"rgb(24, 24, 24)","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-top-left-radius":"999px","border-top-right-radius":"999px","box-shadow":"rgb(51, 51, 51) 0px 0px 0px 1px inset","column-gap":"4px","display":"flex","font-size":"13px","font-weight":"500","height":"24px","justify-content":"center","line-height":"16px","min-height":"24px","min-width":"24px","padding-left":"12px","padding-right":"12px","row-gap":"4px","width":"38.4688px"}
+              el-137 <span> "53"
+                styles: {"font-size":"13px","font-weight":"500","height":"16px","line-height":"16px","max-width":"100%","overflow-x":"hidden","overflow-y":"hidden","text-overflow":"ellipsis","text-wrap-mode":"nowrap","width":"14.4688px"}
+        el-138 <p> "Access all of your Fresha reports."
+          styles: {"color":"rgb(191, 191, 191)","font-size":"15px","height":"20px","outline-color":"rgb(191, 191, 191)","width":"1026.95px","border-color":"rgb(191, 191, 191)"}
+          el-139 <a> "Learn more"
+            styles: {"border-bottom-left-radius":"4px","border-bottom-right-radius":"4px","border-top-left-radius":"4px","border-top-right-radius":"4px","bottom":"0px","color":"rgb(136, 128, 255)","cursor":"pointer","display":"inline","font-size":"15px","height":"auto","left":"0px","outline-color":"rgb(136, 128, 255)","position":"relative","right":"0px","text-wrap-mode":"nowrap","top":"0px","width":"auto","border-color":"rgb(136, 128, 255)"}
+            pseudoBefore: {"content":"\"\"","border-bottom-left-radius":"4px","border-bottom-right-radius":"4px","border-top-left-radius":"4px","border-top-right-radius":"4px","bottom":"0px","box-shadow":"rgb(19, 19, 19) 0px 0px 0px 2px, rgb(245, 245, 245) 0px 0px 0px 4px","color":"rgb(136, 128, 255)","cursor":"pointer","font-size":"15px","height":"16px","left":"0px","opacity":"0","outline-color":"rgb(136, 128, 255)","padding-bottom":"2px","padding-left":"2px","padding-right":"2px","padding-top":"2px","position":"absolute","right":"0px","text-wrap-mode":"nowrap","top":"0px","transition-duration":"0.1s","transition-property":"opacity","transition-timing-function":"ease-in-out","width":"76.8125px","border-color":"rgb(136, 128, 255)"}
+            attrs: {"href":"https://www.fresha.com/help-center/knowledge-base/reports","target":"_blank","id":"react-aria3323608716-:r786:"}
+      el-140 <div>
+        styles: {"align-items":"center","display":"flex","height":"48px","width":"73.0469px"}
+        el-141 <div>
+          styles: {"column-gap":"8px","display":"flex","height":"48px","row-gap":"8px","width":"73.0469px"}
+          el-142 <button>
+            styles: {"align-items":"center","appearance":"button","background-position":"0px 0px","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-top-left-radius":"999px","border-top-right-radius":"999px","bottom":"0px","cursor":"pointer","display":"flex","height":"48px","left":"0px","line-height":"16.1px","max-width":"100%","outline-color":"rgba(0, 0, 0, 0)","outline-offset":"2px","outline-style":"solid","outline-width":"2px","position":"relative","right":"0px","text-align":"center","top":"0px","transition-duration":"0.2s","transition-property":"max-inline-size","transition-timing-function":"cubic-bezier(0.85, 0, 0.15, 1)","width":"73.0469px"}
+            pseudoBefore: {"content":"\"\"","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-top-left-radius":"999px","border-top-right-radius":"999px","bottom":"0px","box-shadow":"rgb(19, 19, 19) 0px 0px 0px 2px, rgb(245, 245, 245) 0px 0px 0px 4px","cursor":"pointer","height":"48px","left":"0px","line-height":"16.1px","opacity":"0","padding-bottom":"2px","padding-left":"2px","padding-right":"2px","padding-top":"2px","position":"absolute","right":"0px","text-align":"center","top":"0px","transition-duration":"0.1s","transition-property":"opacity","transition-timing-function":"ease-in-out","width":"73.0469px"}
+            attrs: {"type":"button","id":"button-react-aria3323608716-:r787:"}
+            el-143 <div>
+              styles: {"align-items":"center","background-color":"rgb(255, 255, 255)","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-bottom-style":"solid","border-bottom-width":"1px","border-left-style":"solid","border-left-width":"1px","border-right-style":"solid","border-right-width":"1px","border-top-left-radius":"999px","border-top-right-radius":"999px","border-top-style":"solid","border-top-width":"1px","color":"rgb(19, 19, 19)","column-gap":"8px","cursor":"pointer","display":"flex","height":"48px","justify-content":"center","line-height":"16.1px","max-width":"100%","outline-color":"rgb(19, 19, 19)","padding-left":"19px","padding-right":"19px","row-gap":"8px","scale":"1","text-align":"center","transition-behavior":"normal, normal, normal, normal, normal, normal","transition-delay":"0s, 0s, 0s, 0s, 0s, 0s","transition-duration":"0.1s, 0.1s, 0.1s, 0.2s, 0.2s, 0.2s","transition-property":"background-color, border-color, scale, max-inline-size, padding, gap","transition-timing-function":"cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0.85, 0, 0.15, 1), cubic-bezier(0.85, 0, 0.15, 1), cubic-bezier(0.85, 0, 0.15, 1)","width":"73.0469px","border-color":"rgb(255, 255, 255)"}
+              el-144 <span>
+                styles: {"align-items":"center","color":"rgb(19, 19, 19)","column-gap":"8px","cursor":"pointer","display":"flex","height":"24px","line-height":"16.1px","outline-color":"rgb(19, 19, 19)","row-gap":"8px","text-align":"center","text-overflow":"ellipsis","text-wrap-mode":"nowrap","width":"33.0469px","border-color":"rgb(19, 19, 19)"}
+                el-145 <span> "Add"
+                  styles: {"color":"rgb(19, 19, 19)","cursor":"pointer","font-size":"17px","font-weight":"600","height":"24px","line-height":"24px","max-width":"100%","outline-color":"rgb(19, 19, 19)","overflow-x":"hidden","overflow-y":"hidden","text-align":"center","text-overflow":"ellipsis","text-wrap-mode":"nowrap","width":"33.0469px","border-color":"rgb(19, 19, 19)"}
+                  attrs: {"id":"label-react-aria3323608716-:r787:"}
+
+
+=== FAZ 4: TOOLBAR (el-146 to el-179) ===
+el-146 <div>
+  styles: {"column-gap":"0px","display":"flex","flex-direction":"column","height":"944px","row-gap":"0px","width":"1112px"}
+  el-147 <div>
+    styles: {"align-self":"stretch","column-gap":"16px","display":"flex","flex-direction":"column","height":"60px","row-gap":"16px","width":"1112px"}
+    el-148 <div>
+      styles: {"display":"flex","height":"60px","width":"1112px"}
+      el-149 <div>
+        styles: {"column-gap":"12px","display":"flex","flex-grow":"1","height":"60px","padding-bottom":"24px","row-gap":"12px","width":"1112px"}
+        el-150 <div>
+          styles: {"display":"flex","flex-grow":"1","height":"36px","width":"837.75px"}
+          el-151 <div>
+            styles: {"column-gap":"4px","display":"flex","flex-direction":"column","flex-grow":"1","height":"36px","max-width":"450px","row-gap":"4px","width":"450px"}
+            el-152 <label>
+              styles: {"bottom":"685px","clip":"rect(0px, 0px, 0px, 0px)","cursor":"default","display":"flex","height":"1px","justify-content":"space-between","left":"511px","margin-bottom":"-1px","margin-left":"-1px","margin-right":"-1px","margin-top":"-1px","overflow-x":"hidden","overflow-y":"hidden","position":"absolute","right":"1296px","text-wrap-mode":"nowrap","top":"112px","width":"1px"}
+              attrs: {"for":"input-react-aria3323608716-:r789:"}
+              el-153 <span> "Search"
+                styles: {"cursor":"default","font-size":"15px","font-weight":"600","height":"1px","text-wrap-mode":"nowrap","width":"50.0469px"}
+            el-154 <div>
+              styles: {"column-gap":"8px","display":"flex","flex-grow":"1","height":"36px","row-gap":"8px","width":"450px"}
+              el-155 <div>
+                styles: {"background-color":"rgb(24, 24, 24)","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-bottom-style":"solid","border-bottom-width":"1px","border-left-style":"solid","border-left-width":"1px","border-right-style":"solid","border-right-width":"1px","border-top-left-radius":"999px","border-top-right-radius":"999px","border-top-style":"solid","border-top-width":"1px","bottom":"0px","display":"flex","flex-grow":"1","height":"36px","left":"0px","max-height":"36px","position":"relative","right":"0px","top":"0px","transition-behavior":"normal, normal","transition-delay":"0s, 0s","transition-duration":"0.1s, 0.1s","transition-property":"background-color, border-color","transition-timing-function":"cubic-bezier(0.85, 0, 0.15, 1), cubic-bezier(0.85, 0, 0.15, 1)","width":"450px","border-color":"rgb(64, 64, 64)"}
+                pseudoBefore: {"content":"\"\"","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-top-left-radius":"999px","border-top-right-radius":"999px","bottom":"-1px","box-shadow":"rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px","height":"36px","left":"-1px","opacity":"0","padding-bottom":"2px","padding-left":"2px","padding-right":"2px","padding-top":"2px","pointer-events":"none","position":"absolute","right":"-1px","top":"-1px","transition-duration":"0.1s","transition-property":"opacity","transition-timing-function":"cubic-bezier(0.85, 0, 0.15, 1)","width":"450px"}
+                attrs: {"id":"react-aria3323608716-:r789:"}
+                el-156 <div>
+                  styles: {"align-items":"center","color":"rgb(191, 191, 191)","cursor":"text","display":"flex","height":"34px","outline-color":"rgb(191, 191, 191)","padding-left":"12px","text-wrap-mode":"nowrap","width":"32px","border-color":"rgb(191, 191, 191)"}
+                  el-157 <span>
+                    styles: {"bottom":"0px","color":"rgb(191, 191, 191)","cursor":"text","display":"flex","flex-shrink":"0","height":"20px","left":"0px","outline-color":"rgb(191, 191, 191)","position":"relative","right":"0px","text-wrap-mode":"nowrap","top":"0px","width":"20px","border-color":"rgb(191, 191, 191)"}
+                    attrs: {"aria-hidden":"true"}
+                    el-158 <svg>
+                      styles: {"bottom":"0px","color":"rgb(191, 191, 191)","cursor":"text","fill":"rgb(191, 191, 191)","height":"20px","left":"0px","outline-color":"rgb(191, 191, 191)","overflow-x":"hidden","overflow-y":"hidden","position":"absolute","right":"0px","text-wrap-mode":"nowrap","top":"0px","width":"20px","border-color":"rgb(191, 191, 191)"}
+                      svgAttrs: {"viewBox":"0 0 32 32","fill":"currentColor","xmlns":"http://www.w3.org/2000/svg"}
+                      el-159 <path>
+                        styles: {"clip-rule":"evenodd","color":"rgb(191, 191, 191)","cursor":"text","d":"path(\"M 14.5 5 A 9.5 9.5 0 1 0 14.5 24 A 9.5 9.5 0 0 0 14.5 5 M 3 14.5 C 3 8.149 8.149 3 14.5 3 S 26 8.149 26 14.5 C 26 17.316 24.988 19.895 23.308 21.894 L 28.708 27.293 A 1 1 0 0 1 27.293 28.707 L 21.894 23.308 C 19.894 24.988 17.316 26 14.5 26 C 8.149 26 3 20.851 3 14.5\")","display":"inline","fill":"rgb(191, 191, 191)","fill-rule":"evenodd","height":"auto","outline-color":"rgb(191, 191, 191)","text-wrap-mode":"nowrap","width":"auto","border-color":"rgb(191, 191, 191)"}
+                        svgAttrs: {"d":"M14.5 5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19M3 14.5C3 8.149 8.149 3 14.5 3S26 8.149 26 14.5c0 2.816-1.012 5.395-2.692 7.394l5.4 5.399a1 1 0 0 1-1.415 1.414l-5.399-5.399c-2 1.68-4.578 2.692-7.394 2.692C8.149 26 3 20.851 3 14.5","fill-rule":"evenodd","clip-rule":"evenodd"}
+                el-160 <input>
+                  styles: {"appearance":"auto","background-color":"rgba(19, 19, 19, 0)","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-top-left-radius":"999px","border-top-right-radius":"999px","bottom":"0px","cursor":"text","font-size":"15px","height":"34px","left":"0px","outline-color":"rgba(0, 0, 0, 0)","outline-offset":"2px","outline-style":"solid","outline-width":"2px","overflow-x":"clip","overflow-y":"clip","padding-bottom":"16px","padding-left":"8px","padding-right":"16px","padding-top":"16px","position":"relative","right":"0px","top":"0px","width":"416px"}
+                  attrs: {"type":"text","placeholder":"Search by report name or description","id":"input-react-aria3323608716-:r789:"}
+        el-161 <div>
+          styles: {"column-gap":"8px","display":"flex","height":"36px","row-gap":"8px","width":"262.25px"}
+          el-162 <div>
+            styles: {"height":"36px","width":"133.375px"}
+            el-163 <button>
+              styles: {"align-items":"center","appearance":"button","background-position":"0px 0px","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-top-left-radius":"999px","border-top-right-radius":"999px","bottom":"0px","cursor":"pointer","display":"inline-flex","height":"36px","left":"0px","line-height":"16.1px","max-width":"100%","min-width":"120px","outline-color":"rgba(0, 0, 0, 0)","outline-offset":"2px","outline-style":"solid","outline-width":"2px","position":"relative","right":"0px","text-align":"center","top":"0px","transition-duration":"0.2s","transition-property":"max-inline-size","transition-timing-function":"cubic-bezier(0.85, 0, 0.15, 1)","width":"133.375px"}
+              pseudoBefore: {"content":"\"\"","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-top-left-radius":"999px","border-top-right-radius":"999px","bottom":"0px","box-shadow":"rgb(19, 19, 19) 0px 0px 0px 2px, rgb(245, 245, 245) 0px 0px 0px 4px","cursor":"pointer","height":"36px","left":"0px","line-height":"16.1px","opacity":"0","padding-bottom":"2px","padding-left":"2px","padding-right":"2px","padding-top":"2px","position":"absolute","right":"0px","text-align":"center","top":"0px","transition-duration":"0.1s","transition-property":"opacity","transition-timing-function":"ease-in-out","width":"133.375px"}
+              attrs: {"type":"button","id":"button-react-aria3323608716-:r78b:"}
+              el-164 <div>
+                styles: {"align-items":"center","background-color":"rgb(24, 24, 24)","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-bottom-style":"solid","border-bottom-width":"1px","border-left-style":"solid","border-left-width":"1px","border-right-style":"solid","border-right-width":"1px","border-top-left-radius":"999px","border-top-right-radius":"999px","border-top-style":"solid","border-top-width":"1px","column-gap":"8px","cursor":"pointer","display":"flex","height":"36px","justify-content":"center","line-height":"16.1px","max-width":"100%","padding-left":"15px","padding-right":"15px","row-gap":"8px","scale":"1","text-align":"center","transition-behavior":"normal, normal, normal, normal, normal, normal","transition-delay":"0s, 0s, 0s, 0s, 0s, 0s","transition-duration":"0.1s, 0.1s, 0.1s, 0.2s, 0.2s, 0.2s","transition-property":"background-color, border-color, scale, max-inline-size, padding, gap","transition-timing-function":"cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0.85, 0, 0.15, 1), cubic-bezier(0.85, 0, 0.15, 1), cubic-bezier(0.85, 0, 0.15, 1)","width":"133.375px","border-color":"rgb(64, 64, 64)"}
+                el-165 <span>
+                  styles: {"align-items":"center","column-gap":"8px","cursor":"pointer","display":"flex","height":"20px","line-height":"16.1px","row-gap":"8px","text-align":"center","text-overflow":"ellipsis","text-wrap-mode":"nowrap","width":"73.375px"}
+                  el-166 <span> "Created by"
+                    styles: {"cursor":"pointer","font-size":"15px","font-weight":"500","height":"20px","max-width":"100%","overflow-x":"hidden","overflow-y":"hidden","text-align":"center","text-overflow":"ellipsis","text-wrap-mode":"nowrap","width":"73.375px"}
+                    attrs: {"id":"label-react-aria3323608716-:r78b:"}
+                el-167 <span>
+                  styles: {"cursor":"pointer","display":"flex","height":"20px","line-height":"16.1px","text-align":"center","width":"20px"}
+                  el-168 <span>
+                    styles: {"bottom":"0px","cursor":"pointer","display":"flex","flex-shrink":"0","height":"20px","left":"0px","line-height":"16.1px","position":"relative","right":"0px","text-align":"center","top":"0px","width":"20px"}
+                    attrs: {"aria-hidden":"true"}
+                    el-169 <svg>
+                      styles: {"bottom":"0px","cursor":"pointer","fill":"rgb(245, 245, 245)","height":"20px","left":"0px","line-height":"16.1px","overflow-x":"hidden","overflow-y":"hidden","position":"absolute","right":"0px","text-align":"center","top":"0px","width":"20px"}
+                      svgAttrs: {"viewBox":"0 0 32 32","fill":"currentColor","xmlns":"http://www.w3.org/2000/svg"}
+                      el-170 <path>
+                        styles: {"clip-rule":"evenodd","cursor":"pointer","d":"path(\"M 9.043 12.293 A 1 1 0 0 1 10.457 12.293 L 16 17.836 L 21.543 12.293 A 1 1 0 0 1 22.957 13.707 L 16.707 19.957 A 1 1 0 0 1 15.293 19.957 L 9.043 13.707 A 1 1 0 0 1 9.043 12.293\")","display":"inline","fill":"rgb(245, 245, 245)","fill-rule":"evenodd","height":"auto","line-height":"16.1px","text-align":"center","width":"auto"}
+                        svgAttrs: {"d":"M9.043 12.293a1 1 0 0 1 1.414 0L16 17.836l5.543-5.543a1 1 0 0 1 1.414 1.414l-6.25 6.25a1 1 0 0 1-1.414 0l-6.25-6.25a1 1 0 0 1 0-1.414","fill-rule":"evenodd","clip-rule":"evenodd"}
+          el-171 <div>
+            styles: {"height":"36px","width":"120.875px"}
+            el-172 <button>
+              styles: {"align-items":"center","appearance":"button","background-position":"0px 0px","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-top-left-radius":"999px","border-top-right-radius":"999px","bottom":"0px","cursor":"pointer","display":"inline-flex","height":"36px","left":"0px","line-height":"16.1px","max-width":"100%","min-width":"120px","outline-color":"rgba(0, 0, 0, 0)","outline-offset":"2px","outline-style":"solid","outline-width":"2px","position":"relative","right":"0px","text-align":"center","top":"0px","transition-duration":"0.2s","transition-property":"max-inline-size","transition-timing-function":"cubic-bezier(0.85, 0, 0.15, 1)","width":"120.875px"}
+              pseudoBefore: {"content":"\"\"","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-top-left-radius":"999px","border-top-right-radius":"999px","bottom":"0px","box-shadow":"rgb(19, 19, 19) 0px 0px 0px 2px, rgb(245, 245, 245) 0px 0px 0px 4px","cursor":"pointer","height":"36px","left":"0px","line-height":"16.1px","opacity":"0","padding-bottom":"2px","padding-left":"2px","padding-right":"2px","padding-top":"2px","position":"absolute","right":"0px","text-align":"center","top":"0px","transition-duration":"0.1s","transition-property":"opacity","transition-timing-function":"ease-in-out","width":"120.875px"}
+              attrs: {"type":"button","id":"button-react-aria3323608716-:r78f:"}
+              el-173 <div>
+                styles: {"align-items":"center","background-color":"rgb(24, 24, 24)","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-bottom-style":"solid","border-bottom-width":"1px","border-left-style":"solid","border-left-width":"1px","border-right-style":"solid","border-right-width":"1px","border-top-left-radius":"999px","border-top-right-radius":"999px","border-top-style":"solid","border-top-width":"1px","column-gap":"8px","cursor":"pointer","display":"flex","height":"36px","justify-content":"center","line-height":"16.1px","max-width":"100%","padding-left":"15px","padding-right":"15px","row-gap":"8px","scale":"1","text-align":"center","transition-behavior":"normal, normal, normal, normal, normal, normal","transition-delay":"0s, 0s, 0s, 0s, 0s, 0s","transition-duration":"0.1s, 0.1s, 0.1s, 0.2s, 0.2s, 0.2s","transition-property":"background-color, border-color, scale, max-inline-size, padding, gap","transition-timing-function":"cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0.85, 0, 0.15, 1), cubic-bezier(0.85, 0, 0.15, 1), cubic-bezier(0.85, 0, 0.15, 1)","width":"120.875px","border-color":"rgb(64, 64, 64)"}
+                el-174 <span>
+                  styles: {"align-items":"center","column-gap":"8px","cursor":"pointer","display":"flex","height":"20px","line-height":"16.1px","row-gap":"8px","text-align":"center","text-overflow":"ellipsis","text-wrap-mode":"nowrap","width":"60.875px"}
+                  el-175 <span> "Category"
+                    styles: {"cursor":"pointer","font-size":"15px","font-weight":"500","height":"20px","max-width":"100%","overflow-x":"hidden","overflow-y":"hidden","text-align":"center","text-overflow":"ellipsis","text-wrap-mode":"nowrap","width":"60.875px"}
+                    attrs: {"id":"label-react-aria3323608716-:r78f:"}
+                el-176 <span>
+                  styles: {"cursor":"pointer","display":"flex","height":"20px","line-height":"16.1px","text-align":"center","width":"20px"}
+                  el-177 <span>
+                    styles: {"bottom":"0px","cursor":"pointer","display":"flex","flex-shrink":"0","height":"20px","left":"0px","line-height":"16.1px","position":"relative","right":"0px","text-align":"center","top":"0px","width":"20px"}
+                    attrs: {"aria-hidden":"true"}
+                    el-178 <svg>
+                      styles: {"bottom":"0px","cursor":"pointer","fill":"rgb(245, 245, 245)","height":"20px","left":"0px","line-height":"16.1px","overflow-x":"hidden","overflow-y":"hidden","position":"absolute","right":"0px","text-align":"center","top":"0px","width":"20px"}
+                      svgAttrs: {"viewBox":"0 0 32 32","fill":"currentColor","xmlns":"http://www.w3.org/2000/svg"}
+                      el-179 <path>
+                        styles: {"clip-rule":"evenodd","cursor":"pointer","d":"path(\"M 5 8 A 1 1 0 0 1 6 7 H 23 A 1 1 0 1 1 23 9 H 6 A 1 1 0 0 1 5 8 M 23 13 A 1 1 0 0 1 24 14 V 23.586 L 27.293 20.293 A 1 1 0 0 1 28.707 21.707 L 23.707 26.707 A 1 1 0 0 1 22.293 26.707 L 17.293 21.707 A 1 1 0 0 1 18.707 20.293 L 22 23.586 V 14 A 1 1 0 0 1 23 13 M 5 16 A 1 1 0 0 1 6 15 H 15 A 1 1 0 1 1 15 17 H 6 A 1 1 0 0 1 5 16 M 5 24 A 1 1 0 0 1 6 23 H 13 A 1 1 0 1 1 13 25 H 6 A 1 1 0 0 1 5 24\")","display":"inline","fill":"rgb(245, 245, 245)","fill-rule":"evenodd","height":"auto","line-height":"16.1px","text-align":"center","width":"auto"}
+                        svgAttrs: {"d":"M5 8a1 1 0 0 1 1-1h17a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1m18 5a1 1 0 0 1 1 1v9.586l3.293-3.293a1 1 0 0 1 1.414 1.414l-5 5a1 1 0 0 1-1.414 0l-5-5a1 1 0 0 1 1.414-1.414L22 23.586V14a1 1 0 0 1 1-1M5 16a1 1 0 0 1 1-1h9a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1m0 8a1 1 0 0 1 1-1h7a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1","fill-rule":"evenodd","clip-rule":"evenodd"}
+
+
+=== FAZ 5: TAB BAR (el-180 to el-202) ===
+el-180 <div>
+  styles: {"display":"flex","flex-direction":"column","height":"68px","padding-bottom":"24px","padding-top":"8px","width":"1112px"}
+  el-181 <div>
+    styles: {"align-items":"center","background-color":"rgb(19, 19, 19)","bottom":"0px","display":"flex","height":"36px","left":"0px","position":"relative","right":"0px","top":"0px","width":"1112px","z-index":"0"}
+    pseudoAfter: {"content":"\"\"","bottom":"0px","left":"0px","position":"absolute","right":"0px","top":"36px","width":"1112px"}
+    el-182 <div>
+      styles: {"background-image":"linear-gradient(to left, rgba(0, 0, 0, 0), rgb(19, 19, 19))","bottom":"0px","height":"36px","left":"0px","opacity":"0","pointer-events":"none","position":"absolute","right":"1048px","top":"0px","transition-duration":"0.5s","transition-property":"opacity","transition-timing-function":"ease-in-out","width":"64px","z-index":"1"}
+      attrs: {"aria-hidden":"true"}
+    el-183 <div>
+      styles: {"bottom":"0px","display":"flex","height":"36px","left":"0px","overflow-x":"auto","overflow-y":"auto","position":"relative","right":"0px","scroll-behavior":"smooth","scrollbar-width":"none","top":"0px","width":"1112px"}
+      el-184 <div>
+        styles: {"bottom":"0px","height":"36px","left":"16px","position":"relative","right":"-16px","top":"0px","width":"0px"}
+      el-185 <div>
+        styles: {"bottom":"0px","height":"36px","left":"0px","position":"absolute","right":"1010px","top":"0px","transform":"matrix(1, 0, 0, 1, 0, 0)","transition-behavior":"normal, normal","transition-delay":"0s, 0s","transition-duration":"0.3s, 0.1s","transition-property":"transform, width","transition-timing-function":"ease, ease","width":"102px"}
+        pseudoBefore: {"content":"\"\"","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-top-left-radius":"999px","border-top-right-radius":"999px","bottom":"4px","box-shadow":"rgb(19, 19, 19) 0px 0px 0px 2px, rgb(245, 245, 245) 0px 0px 0px 4px","height":"28px","left":"0px","opacity":"0","position":"absolute","right":"0px","top":"4px","transition-duration":"0.1s","transition-property":"opacity","transition-timing-function":"ease-in-out","width":"102px","z-index":"2"}
+        pseudoAfter: {"content":"\"\"","background-color":"rgb(255, 255, 255)","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-top-left-radius":"999px","border-top-right-radius":"999px","bottom":"0px","height":"36px","left":"0px","position":"absolute","right":"0px","top":"0px","width":"102px","will-change":"transform, inline-size"}
+        attrs: {"aria-hidden":"true"}
+      el-186 <ul>
+        styles: {"align-items":"center","column-gap":"4px","display":"flex","height":"36px","list-style-type":"none","margin-right":"4px","row-gap":"4px","width":"675.344px"}
+        attrs: {"role":"tablist","id":"react-aria3323608716-:r78l:"}
+        el-187 <li>
+          styles: {"align-items":"center","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-top-left-radius":"999px","border-top-right-radius":"999px","bottom":"0px","color":"rgb(19, 19, 19)","column-gap":"8px","cursor":"pointer","display":"flex","height":"36px","left":"0px","list-style-type":"none","outline-color":"rgb(19, 19, 19)","overflow-x":"hidden","overflow-y":"hidden","padding-left":"16px","padding-right":"16px","position":"relative","right":"0px","row-gap":"8px","text-wrap-mode":"nowrap","top":"0px","touch-action":"manipulation","transition-duration":"0.15s","transition-property":"color","width":"107.016px","border-color":"rgb(19, 19, 19)"}
+          attrs: {"title":"All reports","role":"tab","aria-selected":"true","tabindex":"0","id":"react-aria3323608716-:r78l:-tab-all"}
+          el-188 <span> "All reports"
+            styles: {"color":"rgb(19, 19, 19)","cursor":"pointer","font-size":"15px","font-weight":"600","height":"20px","list-style-type":"none","max-width":"200px","outline-color":"rgb(19, 19, 19)","overflow-x":"hidden","overflow-y":"hidden","text-overflow":"ellipsis","text-wrap-mode":"nowrap","width":"75.0156px","border-color":"rgb(19, 19, 19)"}
+        el-189 <li>
+          styles: {"align-items":"center","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-top-left-radius":"999px","border-top-right-radius":"999px","bottom":"0px","column-gap":"8px","cursor":"pointer","display":"flex","height":"36px","left":"0px","list-style-type":"none","overflow-x":"hidden","overflow-y":"hidden","padding-left":"16px","padding-right":"16px","position":"relative","right":"0px","row-gap":"8px","text-wrap-mode":"nowrap","top":"0px","touch-action":"manipulation","transition-duration":"0.15s","transition-property":"color","width":"71.2031px"}
+          attrs: {"title":"Sales","role":"tab","aria-selected":"false","tabindex":"-1","id":"react-aria3323608716-:r78l:-tab-salesPerformance"}
+          el-190 <span> "Sales"
+            styles: {"cursor":"pointer","font-size":"15px","font-weight":"600","height":"20px","list-style-type":"none","max-width":"200px","overflow-x":"hidden","overflow-y":"hidden","text-overflow":"ellipsis","text-wrap-mode":"nowrap","width":"39.2031px"}
+        el-191 <li>
+          styles: {"align-items":"center","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-top-left-radius":"999px","border-top-right-radius":"999px","bottom":"0px","column-gap":"8px","cursor":"pointer","display":"flex","height":"36px","left":"0px","list-style-type":"none","overflow-x":"hidden","overflow-y":"hidden","padding-left":"16px","padding-right":"16px","position":"relative","right":"0px","row-gap":"8px","text-wrap-mode":"nowrap","top":"0px","touch-action":"manipulation","transition-duration":"0.15s","transition-property":"color","width":"88.6875px"}
+          attrs: {"title":"Finance","role":"tab","aria-selected":"false","tabindex":"-1","id":"react-aria3323608716-:r78l:-tab-finances"}
+          el-192 <span> "Finance"
+            styles: {"cursor":"pointer","font-size":"15px","font-weight":"600","height":"20px","list-style-type":"none","max-width":"200px","overflow-x":"hidden","overflow-y":"hidden","text-overflow":"ellipsis","text-wrap-mode":"nowrap","width":"56.6875px"}
+        el-193 <li>
+          styles: {"align-items":"center","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-top-left-radius":"999px","border-top-right-radius":"999px","bottom":"0px","column-gap":"8px","cursor":"pointer","display":"flex","height":"36px","left":"0px","list-style-type":"none","overflow-x":"hidden","overflow-y":"hidden","padding-left":"16px","padding-right":"16px","position":"relative","right":"0px","row-gap":"8px","text-wrap-mode":"nowrap","top":"0px","touch-action":"manipulation","transition-duration":"0.15s","transition-property":"color","width":"132.828px"}
+          attrs: {"title":"Appointments","role":"tab","aria-selected":"false","tabindex":"-1","id":"react-aria3323608716-:r78l:-tab-appointments"}
+          el-194 <span> "Appointments"
+            styles: {"cursor":"pointer","font-size":"15px","font-weight":"600","height":"20px","list-style-type":"none","max-width":"200px","overflow-x":"hidden","overflow-y":"hidden","text-overflow":"ellipsis","text-wrap-mode":"nowrap","width":"100.828px"}
+        el-195 <li>
+          styles: {"align-items":"center","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-top-left-radius":"999px","border-top-right-radius":"999px","bottom":"0px","column-gap":"8px","cursor":"pointer","display":"flex","height":"36px","left":"0px","list-style-type":"none","overflow-x":"hidden","overflow-y":"hidden","padding-left":"16px","padding-right":"16px","position":"relative","right":"0px","row-gap":"8px","text-wrap-mode":"nowrap","top":"0px","touch-action":"manipulation","transition-duration":"0.15s","transition-property":"color","width":"70.0781px"}
+          attrs: {"title":"Team","role":"tab","aria-selected":"false","tabindex":"-1","id":"react-aria3323608716-:r78l:-tab-team"}
+          el-196 <span> "Team"
+            styles: {"cursor":"pointer","font-size":"15px","font-weight":"600","height":"20px","list-style-type":"none","max-width":"200px","overflow-x":"hidden","overflow-y":"hidden","text-overflow":"ellipsis","text-wrap-mode":"nowrap","width":"38.0781px"}
+        el-197 <li>
+          styles: {"align-items":"center","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-top-left-radius":"999px","border-top-right-radius":"999px","bottom":"0px","column-gap":"8px","cursor":"pointer","display":"flex","height":"36px","left":"0px","list-style-type":"none","overflow-x":"hidden","overflow-y":"hidden","padding-left":"16px","padding-right":"16px","position":"relative","right":"0px","row-gap":"8px","text-wrap-mode":"nowrap","top":"0px","touch-action":"manipulation","transition-duration":"0.15s","transition-property":"color","width":"82.0156px"}
+          attrs: {"title":"Clients","role":"tab","aria-selected":"false","tabindex":"-1","id":"react-aria3323608716-:r78l:-tab-clients"}
+          el-198 <span> "Clients"
+            styles: {"cursor":"pointer","font-size":"15px","font-weight":"600","height":"20px","list-style-type":"none","max-width":"200px","overflow-x":"hidden","overflow-y":"hidden","text-overflow":"ellipsis","text-wrap-mode":"nowrap","width":"50.0156px"}
+        el-199 <li>
+          styles: {"align-items":"center","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-top-left-radius":"999px","border-top-right-radius":"999px","bottom":"0px","column-gap":"8px","cursor":"pointer","display":"flex","height":"36px","left":"0px","list-style-type":"none","overflow-x":"hidden","overflow-y":"hidden","padding-left":"16px","padding-right":"16px","position":"relative","right":"0px","row-gap":"8px","text-wrap-mode":"nowrap","top":"0px","touch-action":"manipulation","transition-duration":"0.15s","transition-property":"color","width":"99.5156px"}
+          attrs: {"title":"Inventory","role":"tab","aria-selected":"false","tabindex":"-1","id":"react-aria3323608716-:r78l:-tab-inventory"}
+          el-200 <span> "Inventory"
+            styles: {"cursor":"pointer","font-size":"15px","font-weight":"600","height":"20px","list-style-type":"none","max-width":"200px","overflow-x":"hidden","overflow-y":"hidden","text-overflow":"ellipsis","text-wrap-mode":"nowrap","width":"67.5156px"}
+      el-201 <div>
+        styles: {"bottom":"0px","height":"36px","left":"-16px","position":"relative","right":"16px","top":"0px","width":"0px"}
+    el-202 <div>
+      styles: {"background-image":"linear-gradient(to right, rgba(0, 0, 0, 0), rgb(19, 19, 19))","bottom":"0px","height":"36px","left":"991px","opacity":"0","pointer-events":"none","position":"absolute","right":"57px","top":"0px","transition-duration":"0.5s","transition-property":"opacity","transition-timing-function":"ease-in-out","width":"64px","z-index":"1"}
+      attrs: {"aria-hidden":"true"}
+
+
+=== FAZ 6-7: ALL REPORT CARDS ===
+
+--- REPORT CARD PATTERN (Full detail from el-204) ---
+el-204 <div>
+  styles: {"background-color":"rgb(24, 24, 24)","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px","border-top-left-radius":"8px","border-top-right-radius":"8px","bottom":"0px","box-shadow":"rgb(51, 51, 51) 0px 0px 0px 1px inset","cursor":"pointer","height":"88px","left":"0px","list-style-type":"none","padding-bottom":"20px","padding-left":"24px","padding-right":"24px","padding-top":"20px","position":"relative","right":"0px","top":"0px","transition-duration":"0.2s","transition-property":"background-color, box-shadow","transition-timing-function":"cubic-bezier(0.85, 0, 0.15, 1)","width":"1112px"}
+  el-205 <button>
+    styles: {"appearance":"button","background-position":"0px 0px","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px","border-top-left-radius":"8px","border-top-right-radius":"8px","bottom":"0px","cursor":"pointer","height":"88px","left":"0px","line-height":"16.1px","list-style-type":"none","outline-color":"rgba(0, 0, 0, 0)","outline-offset":"2px","outline-style":"solid","outline-width":"2px","position":"absolute","right":"0px","text-align":"center","top":"0px","width":"1112px"}
+    pseudoBefore: {"content":"\"\"","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px","border-top-left-radius":"8px","border-top-right-radius":"8px","bottom":"0px","box-shadow":"rgb(19, 19, 19) 0px 0px 0px 2px, rgb(245, 245, 245) 0px 0px 0px 4px","cursor":"pointer","height":"88px","left":"0px","line-height":"16.1px","list-style-type":"none","opacity":"0","padding-bottom":"2px","padding-left":"2px","padding-right":"2px","padding-top":"2px","position":"absolute","right":"0px","text-align":"center","top":"0px","transition-duration":"0.1s","transition-property":"opacity","transition-timing-function":"ease-in-out","width":"1112px"}
+    attrs: {"type":"button","id":"button-react-aria3323608716-:r7j6:"}
+  el-206 <div>
+    styles: {"cursor":"pointer","display":"grid","grid-template-areas":"\"prefix main suffix\" \"footer footer footer\" \"border border border\"","grid-template-columns":"60px 932px 72px","grid-template-rows":"48px 0px 0px","height":"48px","list-style-type":"none","width":"1064px"}
+    el-207 <div>
+      styles: {"column-gap":"12px","cursor":"pointer","display":"grid","grid-column-end":"prefix","grid-column-start":"prefix","grid-row-end":"prefix","grid-row-start":"prefix","grid-template-columns":"48px","grid-template-rows":"48px","height":"48px","list-style-type":"none","margin-right":"12px","width":"48px"}
+      el-208 <div>
+        styles: {"align-items":"center","column-gap":"12px","cursor":"pointer","display":"grid","grid-auto-flow":"column","grid-row-start":"1","grid-template-columns":"48px","grid-template-rows":"48px","height":"48px","justify-items":"center","list-style-type":"none","width":"48px"}
+        el-209 <div>
+          styles: {"align-self":"flex-start","cursor":"pointer","display":"flex","height":"48px","list-style-type":"none","width":"48px"}
+          cssVarOverrides: {"--direction-default":"row"}
+          el-210 <div>
+            styles: {"bottom":"0px","cursor":"pointer","height":"48px","left":"0px","list-style-type":"none","position":"relative","right":"0px","top":"0px","width":"48px"}
+            attrs: {"role":"tooltip"}
+            cssVarOverrides: {"--direction-default":"row"}
+            el-211 <div>
+              styles: {"cursor":"pointer","height":"48px","list-style-type":"none","width":"48px"}
+              cssVarOverrides: {"--direction-default":"row"}
+              el-212 <div>
+                styles: {"bottom":"0px","cursor":"pointer","display":"inline-flex","height":"48px","left":"0px","list-style-type":"none","pointer-events":"none","position":"relative","right":"0px","top":"0px","vertical-align":"top","width":"48px"}
+                cssVarOverrides: {"--direction-default":"row"}
+                el-213 <div>
+                  styles: {"align-items":"center","background-color":"rgba(255, 255, 255, 0.05)","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px","border-bottom-style":"solid","border-bottom-width":"1px","border-left-style":"solid","border-left-width":"1px","border-right-style":"solid","border-right-width":"1px","border-top-left-radius":"8px","border-top-right-radius":"8px","border-top-style":"solid","border-top-width":"1px","bottom":"0px","cursor":"pointer","display":"flex","flex-direction":"column","height":"48px","justify-content":"center","left":"0px","list-style-type":"none","overflow-x":"hidden","overflow-y":"hidden","pointer-events":"none","position":"relative","right":"0px","top":"0px","width":"48px","border-color":"rgba(19, 19, 19, 0)"}
+                  attrs: {"id":"category-icon"}
+                  cssVarOverrides: {"--direction-default":"row"}
+                  el-214 <div>
+                    styles: {"align-items":"center","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px","border-top-left-radius":"8px","border-top-right-radius":"8px","cursor":"pointer","display":"flex","flex-direction":"column","height":"46px","justify-content":"center","list-style-type":"none","pointer-events":"none","width":"46px"}
+                    cssVarOverrides: {"--direction-default":"row"}
+                    el-215 <span>
+                      styles: {"bottom":"0px","cursor":"pointer","display":"flex","flex-shrink":"0","height":"24px","left":"0px","list-style-type":"none","pointer-events":"none","position":"relative","right":"0px","top":"0px","width":"24px"}
+                      attrs: {"aria-hidden":"true","id":"category-icon-icon"}
+                      cssVarOverrides: {"--direction-default":"row","--icon-fill":"#45b020"}
+                      el-216 <svg>
+                        styles: {"bottom":"0px","cursor":"pointer","fill":"rgb(245, 245, 245)","height":"24px","left":"0px","list-style-type":"none","overflow-x":"hidden","overflow-y":"hidden","pointer-events":"none","position":"absolute","right":"0px","top":"0px","width":"24px"}
+                        svgAttrs: {"viewBox":"0 0 32 32","fill":"currentColor","xmlns":"http://www.w3.org/2000/svg"}
+                        cssVarOverrides: {"--direction-default":"row","--icon-fill":"#45b020"}
+                        el-217 <path>
+                          styles: {"clip-rule":"evenodd","cursor":"pointer","d":"path(\"M 18.5 5 A 1 1 0 0 1 19.5 4 H 26.5 A 1 1 0 0 1 27.5 5 V 25 H 28.5 A 1 1 0 1 1 28.5 27 H 3.5 A 1 1 0 1 1 3.5 25 H 4.5 V 17 A 1 1 0 0 1 5.5 16 H 11.5 V 11 A 1 1 0 0 1 12.5 10 H 18.5 Z M 18.5 12 H 13.5 V 25 H 18.5 Z M 20.5 25 H 25.5 V 6 H 20.5 Z M 11.5 25 V 18 H 6.5 V 25 Z\")","display":"inline","fill":"rgb(69, 176, 32)","fill-rule":"evenodd","height":"auto","list-style-type":"none","pointer-events":"none","width":"auto"}
+                          svgAttrs: {"d":"M18.5 5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v20h1a1 1 0 1 1 0 2h-25a1 1 0 1 1 0-2h1v-8a1 1 0 0 1 1-1h6v-5a1 1 0 0 1 1-1h6zm0 7h-5v13h5zm2 13h5V6h-5zm-9 0v-7h-5v7z","fill-rule":"evenodd","clip-rule":"evenodd"}
+                          cssVarOverrides: {"--direction-default":"row","--icon-fill":"#45b020"}
+    el-218 <div>
+      styles: {"column-gap":"12px","cursor":"pointer","display":"grid","grid-template-columns":"932px","grid-template-rows":"48px","height":"48px","list-style-type":"none","width":"932px"}
+      el-219 <div>
+        styles: {"align-items":"center","cursor":"pointer","display":"grid","grid-column-start":"1","grid-row-start":"1","grid-template-columns":"932px","grid-template-rows":"48px","height":"48px","justify-items":"left","list-style-type":"none","width":"932px"}
+        el-220 <div>
+          styles: {"column-gap":"8px","cursor":"pointer","display":"flex","flex-direction":"column","height":"40px","list-style-type":"none","overflow-wrap":"break-word","overflow-x":"hidden","overflow-y":"hidden","padding-left":"2px","row-gap":"8px","width":"932px"}
+          cssVarOverrides: {"--padding-right-default":"0","--padding-left-default":"2px","--padding-bottom-default":"0"}
+          el-221 <div>
+            styles: {"cursor":"pointer","display":"flex","flex-direction":"column","height":"40px","list-style-type":"none","overflow-wrap":"break-word","width":"930px"}
+            cssVarOverrides: {"--padding-right-default":"0","--padding-left-default":"2px","--padding-bottom-default":"0"}
+            el-222 <h3> "Performance dashboard"
+              styles: {"cursor":"pointer","font-size":"15px","font-weight":"600","height":"20px","list-style-type":"none","max-width":"100%","overflow-wrap":"anywhere","width":"930px"}
+              cssVarOverrides: {"--padding-right-default":"0","--padding-left-default":"2px","--padding-bottom-default":"0"}
+            el-223 <h4> "Dashboard of your business performance."
+              styles: {"color":"rgb(191, 191, 191)","cursor":"pointer","font-size":"15px","height":"20px","list-style-type":"none","max-width":"100%","outline-color":"rgb(191, 191, 191)","overflow-wrap":"anywhere","width":"930px","border-color":"rgb(191, 191, 191)"}
+              cssVarOverrides: {"--padding-right-default":"0","--padding-left-default":"2px","--padding-bottom-default":"0"}
+    el-224 <div>
+      styles: {"column-gap":"12px","cursor":"pointer","display":"grid","grid-column-end":"suffix","grid-column-start":"suffix","grid-row-end":"suffix","grid-row-start":"suffix","grid-template-columns":"0px 48px","grid-template-rows":"48px","height":"48px","list-style-type":"none","margin-left":"12px","width":"60px"}
+      el-225 <div>
+        styles: {"align-items":"center","column-gap":"12px","cursor":"pointer","display":"grid","grid-auto-flow":"column","grid-column-start":"1","grid-row-start":"1","height":"48px","justify-items":"center","list-style-type":"none","width":"0px"}
+      el-226 <div>
+        styles: {"align-items":"center","column-gap":"12px","cursor":"pointer","display":"grid","grid-auto-flow":"column","grid-row-start":"1","grid-template-columns":"48px","grid-template-rows":"48px","height":"48px","justify-items":"center","list-style-type":"none","width":"48px"}
+        el-227 <button>
+          styles: {"align-items":"center","appearance":"button","background-position":"0px 0px","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-top-left-radius":"999px","border-top-right-radius":"999px","bottom":"0px","cursor":"pointer","display":"flex","height":"48px","left":"0px","line-height":"16.1px","list-style-type":"none","max-width":"100%","min-width":"48px","outline-color":"rgba(0, 0, 0, 0)","outline-offset":"2px","outline-style":"solid","outline-width":"2px","position":"relative","right":"0px","text-align":"center","top":"0px","transition-duration":"0.2s","transition-property":"max-inline-size","transition-timing-function":"cubic-bezier(0.85, 0, 0.15, 1)","width":"48px"}
+          pseudoBefore: {"content":"\"\"","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-top-left-radius":"999px","border-top-right-radius":"999px","bottom":"0px","box-shadow":"rgb(19, 19, 19) 0px 0px 0px 2px, rgb(245, 245, 245) 0px 0px 0px 4px","cursor":"pointer","height":"48px","left":"0px","line-height":"16.1px","list-style-type":"none","opacity":"0","padding-bottom":"2px","padding-left":"2px","padding-right":"2px","padding-top":"2px","position":"absolute","right":"0px","text-align":"center","top":"0px","transition-duration":"0.1s","transition-property":"opacity","transition-timing-function":"ease-in-out","width":"48px"}
+          attrs: {"type":"button","id":"button-validation-errors-button"}
+          cssVarOverrides: {"--spacing-var-1":"12px","--spacing-var":"20px","--sizing-var":"24px","--sizing-var-1":"48px","--transition-duration":".2s"}
+          el-228 <div>
+            styles: {"align-items":"center","background-color":"rgba(19, 19, 19, 0)","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-bottom-style":"solid","border-bottom-width":"1px","border-left-style":"solid","border-left-width":"1px","border-right-style":"solid","border-right-width":"1px","border-top-left-radius":"999px","border-top-right-radius":"999px","border-top-style":"solid","border-top-width":"1px","column-gap":"8px","cursor":"pointer","display":"flex","height":"48px","justify-content":"center","line-height":"16.1px","list-style-type":"none","max-width":"100%","min-width":"48px","padding-left":"19px","padding-right":"19px","row-gap":"8px","scale":"1","text-align":"center","transition-behavior":"normal, normal, normal, normal, normal, normal","transition-delay":"0s, 0s, 0s, 0s, 0s, 0s","transition-duration":"0.1s, 0.1s, 0.1s, 0.2s, 0.2s, 0.2s","transition-property":"background-color, border-color, scale, max-inline-size, padding, gap","transition-timing-function":"cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0.85, 0, 0.15, 1), cubic-bezier(0.85, 0, 0.15, 1), cubic-bezier(0.85, 0, 0.15, 1)","width":"48px","border-color":"rgba(19, 19, 19, 0)"}
+            cssVarOverrides: {"--spacing-var-1":"12px","--spacing-var":"20px","--transition-duration":".2s"}
+            el-229 <span>
+              styles: {"align-items":"center","bottom":"23.5px","clip":"rect(0px, 0px, 0px, 0px)","column-gap":"8px","cursor":"pointer","display":"flex","height":"1px","left":"23.5px","line-height":"16.1px","list-style-type":"none","margin-bottom":"-1px","margin-left":"-1px","margin-right":"-1px","margin-top":"-1px","overflow-x":"hidden","overflow-y":"hidden","position":"absolute","right":"23.5px","row-gap":"8px","text-align":"center","text-overflow":"ellipsis","text-wrap-mode":"nowrap","top":"23.5px","width":"1px"}
+              cssVarOverrides: {"--spacing-var-1":"12px","--spacing-var":"20px","--transition-duration":".2s"}
+              el-230 <span> "Add to favorites"
+                styles: {"cursor":"pointer","font-size":"17px","font-weight":"600","height":"24px","line-height":"24px","list-style-type":"none","max-width":"100%","overflow-x":"hidden","overflow-y":"hidden","text-align":"center","text-overflow":"ellipsis","text-wrap-mode":"nowrap","width":"1px"}
+                attrs: {"id":"label-validation-errors-button"}
+                cssVarOverrides: {"--spacing-var-1":"12px","--spacing-var":"20px","--transition-duration":".2s"}
+            el-231 <span>
+              styles: {"cursor":"pointer","display":"flex","height":"24px","line-height":"16.1px","list-style-type":"none","text-align":"center","width":"24px"}
+              cssVarOverrides: {"--spacing-var-1":"12px","--spacing-var":"20px","--transition-duration":".2s"}
+              el-232 <span>
+                styles: {"bottom":"0px","cursor":"pointer","display":"flex","flex-shrink":"0","height":"24px","left":"0px","line-height":"16.1px","list-style-type":"none","position":"relative","right":"0px","text-align":"center","top":"0px","width":"24px"}
+                attrs: {"aria-hidden":"true"}
+                cssVarOverrides: {"--spacing-var-1":"12px","--spacing-var":"20px","--transition-duration":".2s"}
+                el-233 <svg>
+                  styles: {"bottom":"0px","cursor":"pointer","fill":"rgb(245, 245, 245)","height":"24px","left":"0px","line-height":"16.1px","list-style-type":"none","overflow-x":"hidden","overflow-y":"hidden","position":"absolute","right":"0px","text-align":"center","top":"0px","width":"24px"}
+                  svgAttrs: {"viewBox":"0 0 32 32","fill":"currentColor","xmlns":"http://www.w3.org/2000/svg"}
+                  cssVarOverrides: {"--spacing-var-1":"12px","--spacing-var":"20px","--transition-duration":".2s"}
+                  el-234 <path>
+                    styles: {"cursor":"pointer","d":"path(\"M 29.9 11.162 A 2 2 0 0 0 28.174 9.787 L 20.752 9.147 L 17.842 2.227 A 1.994 1.994 0 0 0 14.164 2.227 L 11.263 9.147 L 3.833 9.791 A 2 2 0 0 0 2.693 13.299 L 8.331 18.227 L 6.641 25.545 A 2 2 0 0 0 9.621 27.713 L 15.995 23.837 L 22.382 27.713 A 2 2 0 0 0 25.362 25.545 L 23.672 18.219 L 29.309 13.299 A 2 2 0 0 0 29.9 11.162 M 27.998 11.787 L 22.362 16.707 A 2 2 0 0 0 21.727 18.672 L 23.42 26.002 L 17.038 22.127 A 1.99 1.99 0 0 0 14.971 22.127 L 8.597 26.003 L 10.28 18.677 A 2 2 0 0 0 9.645 16.713 L 4.005 11.795 V 11.784 L 11.435 11.141 A 2 2 0 0 0 13.103 9.922 L 16.003 3.01 L 18.903 9.922 A 2 2 0 0 0 20.571 11.141 L 28.001 11.784 V 11.792 Z\")","display":"inline","fill":"rgb(245, 245, 245)","height":"auto","line-height":"16.1px","list-style-type":"none","text-align":"center","width":"auto"}
+                    svgAttrs: {"d":"M29.9 11.162a2 2 0 0 0-1.726-1.375l-7.422-.64-2.91-6.92a1.994 1.994 0 0 0-3.678 0l-2.901 6.92-7.43.644a2 2 0 0 0-1.14 3.508l5.638 4.928-1.69 7.318a2 2 0 0 0 2.98 2.168l6.374-3.876 6.387 3.876a2 2 0 0 0 2.98-2.168l-1.69-7.326 5.637-4.92a2 2 0 0 0 .591-2.137m-1.902.625-5.636 4.92a2 2 0 0 0-.635 1.965l1.693 7.33-6.382-3.875a1.99 1.99 0 0 0-2.067 0l-6.374 3.876 1.683-7.326a2 2 0 0 0-.635-1.964l-5.64-4.918v-.011l7.43-.643a2 2 0 0 0 1.668-1.219l2.9-6.912 2.9 6.912a2 2 0 0 0 1.668 1.219l7.43.643v.008z"}
+                    cssVarOverrides: {"--spacing-var-1":"12px","--spacing-var":"20px","--transition-duration":".2s"}
+    el-235 <hr>
+      styles: {"background-color":"rgb(51, 51, 51)","box-sizing":"content-box","color":"rgb(128, 128, 128)","cursor":"pointer","display":"none","grid-column-end":"border","grid-column-start":"border","grid-row-end":"border","grid-row-start":"border","height":"1px","list-style-type":"none","outline-color":"rgb(128, 128, 128)","pointer-events":"none","position":"relative","top":"19px","width":"auto","border-color":"rgb(128, 128, 128)"}
+
+--- PER-CARD UNIQUE DATA ---
+
+[Performance dashboard] (el-204) Premium=false
+  Card container styles: {"background-color":"rgb(24, 24, 24)","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px","border-top-left-radius":"8px","border-top-right-radius":"8px","bottom":"0px","box-shadow":"rgb(51, 51, 51) 0px 0px 0px 1px inset","cursor":"pointer","height":"88px","left":"0px","list-style-type":"none","padding-bottom":"20px","padding-left":"24px","padding-right":"24px","padding-top":"20px","position":"relative","right":"0px","top":"0px","transition-duration":"0.2s","transition-property":"background-color, box-shadow","transition-timing-function":"cubic-bezier(0.85, 0, 0.15, 1)","width":"1112px"}
+  Grid layout: 60px 932px 72px rows: 48px 0px 0px
+  Icon fill: rgb(69, 176, 32)
+  Icon SVG d: "M18.5 5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v20h1a1 1 0 1 1 0 2h-25a1 1 0 1 1 0-2h1v-8a1 1 0 0 1 1-1h6v-5a1 1 0 0 1 1-1h6zm0 7h-5v13h5zm2 13h5V6h-5zm-9 0v-7h-5v7z"
+  Icon --icon-fill: #45b020
+  Title: "Performance dashboard" (el-222) styles: {"cursor":"pointer","font-size":"15px","font-weight":"600","height":"20px","list-style-type":"none","max-width":"100%","overflow-wrap":"anywhere","width":"930px"}
+  Desc: "Dashboard of your business performance." (el-223) styles: {"color":"rgb(191, 191, 191)","cursor":"pointer","font-size":"15px","height":"20px","list-style-type":"none","max-width":"100%","outline-color":"rgb(191, 191, 191)","overflow-wrap":"anywhere","width":"930px","border-color":"rgb(191, 191, 191)"}
+  Star SVG same as card 1: YES
+
+[Performance over time] (el-236) Premium=true
+  Card container styles: {"background-color":"rgb(24, 24, 24)","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px","border-top-left-radius":"8px","border-top-right-radius":"8px","bottom":"0px","box-shadow":"rgb(51, 51, 51) 0px 0px 0px 1px inset","cursor":"pointer","height":"88px","left":"0px","list-style-type":"none","padding-bottom":"20px","padding-left":"24px","padding-right":"24px","padding-top":"20px","position":"relative","right":"0px","top":"0px","transition-duration":"0.2s","transition-property":"background-color, box-shadow","transition-timing-function":"cubic-bezier(0.85, 0, 0.15, 1)","width":"1112px"}
+  Grid layout: 60px 855.984px 148.016px rows: 48px 0px 0px
+  Icon fill: rgb(136, 128, 255)
+  Icon SVG d: "M4 5a1 1 0 0 1 1 1v13.586l6.293-6.293a1 1 0 0 1 1.414 0L16 16.586 23.586 9H21a1 1 0 1 1 0-2h5a1 1 0 0 1 1 1v5a1 1 0 1 1-2 0v-2.586l-8.293 8.293a1 1 0 0 1-1.414 0L12 15.414l-7 7V25h23a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1"
+  Icon --icon-fill: #8880ff
+  Title: "Performance over time" (el-254) styles: {"cursor":"pointer","font-size":"15px","font-weight":"600","height":"20px","list-style-type":"none","max-width":"100%","overflow-wrap":"anywhere","width":"853.984px"}
+  Desc: "View of key business metrics by Location or Team Member over time" (el-255) styles: {"color":"rgb(191, 191, 191)","cursor":"pointer","font-size":"15px","height":"20px","list-style-type":"none","max-width":"100%","outline-color":"rgb(191, 191, 191)","overflow-wrap":"anywhere","width":"853.984px","border-color":"rgb(191, 191, 191)"}
+  Premium badge (el-259): styles={"color":"rgb(136, 128, 255)","cursor":"pointer","font-size":"13px","font-weight":"500","height":"16px","line-height":"16px","list-style-type":"none","max-width":"100%","outline-color":"rgb(136, 128, 255)","overflow-x":"hidden","overflow-y":"hidden","text-overflow":"ellipsis","text-wrap-mode":"nowrap","width":"52.0156px","border-color":"rgb(136, 128, 255)"}
+  Premium badge parent (el-258): styles={"align-items":"center","background-color":"rgb(32, 30, 69)","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-top-left-radius":"999px","border-top-right-radius":"999px","box-shadow":"rgb(43, 38, 96) 0px 0px 0px 1px inset","color":"rgb(136, 128, 255)","column-gap":"4px","cursor":"pointer","display":"flex","font-size":"13px","font-weight":"500","height":"24px","justify-content":"center","line-height":"16px","list-style-type":"none","min-height":"24px","min-width":"24px","outline-color":"rgb(136, 128, 255)","padding-left":"12px","padding-right":"12px","row-gap":"4px","width":"76.0156px","border-color":"rgb(136, 128, 255)"}
+
+[Sales summary] (el-270) Premium=false
+  Card container styles: {"background-color":"rgb(24, 24, 24)","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px","border-top-left-radius":"8px","border-top-right-radius":"8px","bottom":"0px","box-shadow":"rgb(51, 51, 51) 0px 0px 0px 1px inset","cursor":"pointer","height":"88px","left":"0px","list-style-type":"none","padding-bottom":"20px","padding-left":"24px","padding-right":"24px","padding-top":"20px","position":"relative","right":"0px","top":"0px","transition-duration":"0.2s","transition-property":"background-color, box-shadow","transition-timing-function":"cubic-bezier(0.85, 0, 0.15, 1)","width":"1112px"}
+  Grid layout: 60px 932px 72px rows: 48px 0px 0px
+  Icon fill: rgb(136, 128, 255)
+  Icon SVG d: "M15.145 2.256a2 2 0 0 1 1.8.55l13.046 13.046a1.99 1.99 0 0 1 0 2.834L18.686 29.99a1.99 1.99 0 0 1-2.834 0L2.806 16.945a2 2 0 0 1-.55-1.8v-.003L4.27 5.054a1 1 0 0 1 .785-.785l10.088-2.012zm.385 1.963L6.1 6.1 4.22 15.53l13.05 13.05 11.31-11.311z"
+  Icon --icon-fill: #8880ff
+  Multiple SVG paths (2):
+    el-283: d="M15.145 2.256a2 2 0 0 1 1.8.55l13.046 13.046a1.99 1.99 0 0 1 0 2.834L18.686 29.99a1.99 1.99 0 0 1-2.834 0L2.806 16.945a2 2 0 0 1-.55-1.8v-.003L4.27 5.054a1 1 0 0 1 .785-.785l10.088-2.012zm.385 1.963L6.1 6.1 4.22 15.53l13.05 13.05 11.31-11.311z" fill=rgb(136, 128, 255)
+    el-284: d="M10.5 12a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" fill=rgb(136, 128, 255)
+  Title: "Sales summary" (el-289) styles: {"cursor":"pointer","font-size":"15px","font-weight":"600","height":"20px","list-style-type":"none","max-width":"100%","overflow-wrap":"anywhere","width":"930px"}
+  Desc: "Sales quantities and value, excluding tips and gift card sales." (el-290) styles: {"color":"rgb(191, 191, 191)","cursor":"pointer","font-size":"15px","height":"20px","list-style-type":"none","max-width":"100%","outline-color":"rgb(191, 191, 191)","overflow-wrap":"anywhere","width":"930px","border-color":"rgb(191, 191, 191)"}
+  Star SVG same as card 1: YES
+
+[Finance summary] (el-303) Premium=false
+  Card container styles: {"background-color":"rgb(24, 24, 24)","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px","border-top-left-radius":"8px","border-top-right-radius":"8px","bottom":"0px","box-shadow":"rgb(51, 51, 51) 0px 0px 0px 1px inset","cursor":"pointer","height":"88px","left":"0px","list-style-type":"none","padding-bottom":"20px","padding-left":"24px","padding-right":"24px","padding-top":"20px","position":"relative","right":"0px","top":"0px","transition-duration":"0.2s","transition-property":"background-color, box-shadow","transition-timing-function":"cubic-bezier(0.85, 0, 0.15, 1)","width":"1112px"}
+  Grid layout: 60px 932px 72px rows: 48px 0px 0px
+  Icon fill: rgb(136, 128, 255)
+  Icon SVG d: "M16 11a5 5 0 1 0 0 10 5 5 0 0 0 0-10m0 8a3 3 0 1 1 0-5.999A3 3 0 0 1 16 19M30 7H2a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h28a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1m-5.794 16H7.794A7.1 7.1 0 0 0 3 18.206v-4.412A7.1 7.1 0 0 0 7.794 9h16.412A7.1 7.1 0 0 0 29 13.794v4.412A7.1 7.1 0 0 0 24.206 23M29 11.671A5.1 5.1 0 0 1 26.329 9H29zM5.671 9A5.1 5.1 0 0 1 3 11.671V9zM3 20.329A5.1 5.1 0 0 1 5.671 23H3zM26.329 23A5.1 5.1 0 0 1 29 20.329V23z"
+  Icon --icon-fill: #8880ff
+  Title: "Finance summary" (el-321) styles: {"cursor":"pointer","font-size":"15px","font-weight":"600","height":"20px","list-style-type":"none","max-width":"100%","overflow-wrap":"anywhere","width":"930px"}
+  Desc: "High-level summary of sales, payments and liabilities" (el-322) styles: {"color":"rgb(191, 191, 191)","cursor":"pointer","font-size":"15px","height":"20px","list-style-type":"none","max-width":"100%","outline-color":"rgb(191, 191, 191)","overflow-wrap":"anywhere","width":"930px","border-color":"rgb(191, 191, 191)"}
+  Star SVG same as card 1: YES
+
+[Appointments summary] (el-335) Premium=false
+  Card container styles: {"background-color":"rgb(24, 24, 24)","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px","border-top-left-radius":"8px","border-top-right-radius":"8px","bottom":"0px","box-shadow":"rgb(51, 51, 51) 0px 0px 0px 1px inset","cursor":"pointer","height":"88px","left":"0px","list-style-type":"none","padding-bottom":"20px","padding-left":"24px","padding-right":"24px","padding-top":"20px","position":"relative","right":"0px","top":"0px","transition-duration":"0.2s","transition-property":"background-color, box-shadow","transition-timing-function":"cubic-bezier(0.85, 0, 0.15, 1)","width":"1112px"}
+  Grid layout: 60px 932px 72px rows: 48px 0px 0px
+  Icon fill: rgb(136, 128, 255)
+  Icon SVG d: "M10 2a1 1 0 0 1 1 1v1h10V3a1 1 0 1 1 2 0v1h3a2 2 0 0 1 2 2v20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3V3a1 1 0 0 1 1-1M9 6H6v4h20V6h-3v1a1 1 0 1 1-2 0V6H11v1a1 1 0 1 1-2 0zm17 6H6v14h20z"
+  Icon --icon-fill: #8880ff
+  Title: "Appointments summary" (el-353) styles: {"cursor":"pointer","font-size":"15px","font-weight":"600","height":"20px","list-style-type":"none","max-width":"100%","overflow-wrap":"anywhere","width":"930px"}
+  Desc: "General overview of appointment trends and patterns, including cancellations and no-shows." (el-354) styles: {"color":"rgb(191, 191, 191)","cursor":"pointer","font-size":"15px","height":"20px","list-style-type":"none","max-width":"100%","outline-color":"rgb(191, 191, 191)","overflow-wrap":"anywhere","width":"930px","border-color":"rgb(191, 191, 191)"}
+  Star SVG same as card 1: YES
+
+[Attendance summary] (el-367) Premium=false
+  Card container styles: {"background-color":"rgb(24, 24, 24)","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px","border-top-left-radius":"8px","border-top-right-radius":"8px","bottom":"0px","box-shadow":"rgb(51, 51, 51) 0px 0px 0px 1px inset","cursor":"pointer","height":"88px","left":"0px","list-style-type":"none","padding-bottom":"20px","padding-left":"24px","padding-right":"24px","padding-top":"20px","position":"relative","right":"0px","top":"0px","transition-duration":"0.2s","transition-property":"background-color, box-shadow","transition-timing-function":"cubic-bezier(0.85, 0, 0.15, 1)","width":"1112px"}
+  Grid layout: 60px 932px 72px rows: 48px 0px 0px
+  Icon fill: rgb(136, 128, 255)
+  Icon SVG d: "M30.6 18.8a1 1 0 0 1-1.4-.2A6.45 6.45 0 0 0 24 16a1 1 0 0 1 0-2 3 3 0 1 0-2.905-3.75 1 1 0 0 1-1.937-.5 5 5 0 1 1 8.217 4.939 8.5 8.5 0 0 1 3.429 2.71A1 1 0 0 1 30.6 18.8m-6.735 7.7a1 1 0 1 1-1.73 1 7.125 7.125 0 0 0-12.27 0 1 1 0 1 1-1.73-1 9 9 0 0 1 4.217-3.74 6 6 0 1 1 7.296 0 9 9 0 0 1 4.217 3.74M16 22a4 4 0 1 0 0-8 4 4 0 0 0 0 8m-7-7a1 1 0 0 0-1-1 3 3 0 1 1 2.905-3.75 1 1 0 0 0 1.938-.5 5 5 0 1 0-8.218 4.939 8.5 8.5 0 0 0-3.425 2.71A1 1 0 1 0 2.8 18.6 6.45 6.45 0 0 1 8 16a1 1 0 0 0 1-1"
+  Icon --icon-fill: #8880ff
+  Title: "Attendance summary" (el-385) styles: {"cursor":"pointer","font-size":"15px","font-weight":"600","height":"20px","list-style-type":"none","max-width":"100%","overflow-wrap":"anywhere","width":"930px"}
+  Desc: "Overview of team members' punctuality and attendance for their shifts" (el-386) styles: {"color":"rgb(191, 191, 191)","cursor":"pointer","font-size":"15px","height":"20px","list-style-type":"none","max-width":"100%","outline-color":"rgb(191, 191, 191)","overflow-wrap":"anywhere","width":"930px","border-color":"rgb(191, 191, 191)"}
+  Star SVG same as card 1: YES
+
+[Client summary] (el-399) Premium=true
+  Card container styles: {"background-color":"rgb(24, 24, 24)","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px","border-top-left-radius":"8px","border-top-right-radius":"8px","bottom":"0px","box-shadow":"rgb(51, 51, 51) 0px 0px 0px 1px inset","cursor":"pointer","height":"88px","left":"0px","list-style-type":"none","padding-bottom":"20px","padding-left":"24px","padding-right":"24px","padding-top":"20px","position":"relative","right":"0px","top":"0px","transition-duration":"0.2s","transition-property":"background-color, box-shadow","transition-timing-function":"cubic-bezier(0.85, 0, 0.15, 1)","width":"1112px"}
+  Grid layout: 60px 855.984px 148.016px rows: 48px 0px 0px
+  Icon fill: rgb(136, 128, 255)
+  Icon SVG d: "M11.5 15a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M20.5 15a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"
+  Icon --icon-fill: #8880ff
+  Multiple SVG paths (2):
+    el-412: d="M11.5 15a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M20.5 15a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" fill=rgb(136, 128, 255)
+    el-413: d="M16 5C9.925 5 5 9.925 5 16s4.925 11 11 11 11-4.925 11-11S22.075 5 16 5M3 16C3 8.82 8.82 3 16 3s13 5.82 13 13-5.82 13-13 13S3 23.18 3 16m7.298 2.135a1 1 0 0 1 1.367.363 5.01 5.01 0 0 0 8.67 0 1 1 0 0 1 1.73 1.004 7.013 7.013 0 0 1-12.13 0 1 1 0 0 1 .363-1.367" fill=rgb(136, 128, 255)
+  Title: "Client summary" (el-418) styles: {"cursor":"pointer","font-size":"15px","font-weight":"600","height":"20px","list-style-type":"none","max-width":"100%","overflow-wrap":"anywhere","width":"853.984px"}
+  Desc: "Overview of new, returning and walk-in clients with appointments in the chosen timeframe" (el-419) styles: {"color":"rgb(191, 191, 191)","cursor":"pointer","font-size":"15px","height":"20px","list-style-type":"none","max-width":"100%","outline-color":"rgb(191, 191, 191)","overflow-wrap":"anywhere","width":"853.984px","border-color":"rgb(191, 191, 191)"}
+  Premium badge (el-423): styles={"color":"rgb(136, 128, 255)","cursor":"pointer","font-size":"13px","font-weight":"500","height":"16px","line-height":"16px","list-style-type":"none","max-width":"100%","outline-color":"rgb(136, 128, 255)","overflow-x":"hidden","overflow-y":"hidden","text-overflow":"ellipsis","text-wrap-mode":"nowrap","width":"52.0156px","border-color":"rgb(136, 128, 255)"}
+  Premium badge parent (el-422): styles={"align-items":"center","background-color":"rgb(32, 30, 69)","border-bottom-left-radius":"999px","border-bottom-right-radius":"999px","border-top-left-radius":"999px","border-top-right-radius":"999px","box-shadow":"rgb(43, 38, 96) 0px 0px 0px 1px inset","color":"rgb(136, 128, 255)","column-gap":"4px","cursor":"pointer","display":"flex","font-size":"13px","font-weight":"500","height":"24px","justify-content":"center","line-height":"16px","list-style-type":"none","min-height":"24px","min-width":"24px","outline-color":"rgb(136, 128, 255)","padding-left":"12px","padding-right":"12px","row-gap":"4px","width":"76.0156px","border-color":"rgb(136, 128, 255)"}
+  Star/fav paths:
+    el-413: d="M16 5C9.925 5 5 9.925 5 16s4.925 11 11 11 11-4.925 11-11S22...."
+
+[Stock movement summary] (el-434) Premium=false
+  Card container styles: {"background-color":"rgb(24, 24, 24)","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px","border-top-left-radius":"8px","border-top-right-radius":"8px","bottom":"0px","box-shadow":"rgb(51, 51, 51) 0px 0px 0px 1px inset","cursor":"pointer","height":"88px","left":"0px","list-style-type":"none","padding-bottom":"20px","padding-left":"24px","padding-right":"24px","padding-top":"20px","position":"relative","right":"0px","top":"0px","transition-duration":"0.2s","transition-property":"background-color, box-shadow","transition-timing-function":"cubic-bezier(0.85, 0, 0.15, 1)","width":"1112px"}
+  Grid layout: 60px 932px 72px rows: 48px 0px 0px
+  Icon fill: rgb(136, 128, 255)
+  Icon SVG d: "M15.408 14.822a1 1 0 0 0-1 1v3.637l-.068.104a7.5 7.5 0 0 0-.586 1.103c-.418.964-.819 2.374-.819 4.222 0 1.844.4 3.38.8 4.456.2.54.401.967.556 1.264a8 8 0 0 0 .269.476l.006.01.002.003.002.002c.184.284.5.455.838.455h11.786c.338 0 .654-.171.838-.455v-.001l.002-.001.002-.004.006-.01a2 2 0 0 0 .077-.127q.074-.124.192-.348c.155-.297.356-.724.556-1.264.4-1.076.8-2.612.8-4.456 0-1.848-.402-3.258-.82-4.222a7.5 7.5 0 0 0-.654-1.206v-3.638a1 1 0 0 0-1-1zm1 3.967h9.785v-1.967h-9.785zm-.476 2c-.1.166-.22.39-.343.672-.319.736-.654 1.876-.654 3.427 0 1.556.338 2.854.674 3.76.14.374.277.68.39.906h10.604c.112-.226.25-.532.39-.906.336-.906.674-2.204.674-3.76 0-1.55-.336-2.69-.655-3.427a6 6 0 0 0-.342-.672z"
+  Icon --icon-fill: #8880ff
+  Multiple SVG paths (3):
+    el-447: d="M15.408 14.822a1 1 0 0 0-1 1v3.637l-.068.104a7.5 7.5 0 0 0-.586 1.103c-.418.964-.819 2.374-.819 4.222 0 1.844.4 3.38.8 4.456.2.54.401.967.556 1.264a8 8 0 0 0 .269.476l.006.01.002.003.002.002c.184.284.5.455.838.455h11.786c.338 0 .654-.171.838-.455v-.001l.002-.001.002-.004.006-.01a2 2 0 0 0 .077-.127q.074-.124.192-.348c.155-.297.356-.724.556-1.264.4-1.076.8-2.612.8-4.456 0-1.848-.402-3.258-.82-4.222a7.5 7.5 0 0 0-.654-1.206v-3.638a1 1 0 0 0-1-1zm1 3.967h9.785v-1.967h-9.785zm-.476 2c-.1.166-.22.39-.343.672-.319.736-.654 1.876-.654 3.427 0 1.556.338 2.854.674 3.76.14.374.277.68.39.906h10.604c.112-.226.25-.532.39-.906.336-.906.674-2.204.674-3.76 0-1.55-.336-2.69-.655-3.427a6 6 0 0 0-.342-.672z" fill=rgb(136, 128, 255)
+    el-448: d="M21.716 18.581H19.71zM16.792 18.582h-2zM11.563 23.026a4 4 0 0 1-.375-.547c-.57-.977-.986-2.457-.986-4.201s.417-3.224.986-4.2c.598-1.026 1.131-1.166 1.31-1.166.118 0 .383.06.719.381h2.445c-.785-1.463-1.912-2.38-3.163-2.38-2.373 0-4.297 3.297-4.297 7.365 0 3.417 1.357 6.29 3.198 7.123v-.02c0-.868.062-1.653.163-2.355" fill=rgb(136, 128, 255)
+    el-449: d="M7.563 1.103a1 1 0 0 1 .743-.33h8.314a1 1 0 0 1 .994 1.103l-.417 4.018c.304.238.721.584 1.188 1.03.933.893 2.091 2.211 2.926 3.882.278.555.415 1.297.49 2.061q.02.207.034.426H19.83l-.02-.233c-.07-.71-.181-1.148-.287-1.36-.7-1.398-1.69-2.535-2.521-3.33a14 14 0 0 0-1.203-1.027H9.05q-.09.06-.211.147c-.282.202-.672.504-1.098.894-.861.79-1.819 1.898-2.356 3.24-.092.231-.181.69-.23 1.408a27 27 0 0 0-.025 2.502c.057 1.918.246 4.206.475 6.417a200 200 0 0 0 .944 7.603h5.337c.188.794.406 1.468.604 2H5.686a1 1 0 0 1-.99-.85l-.006-.049-.097-.662a201.766 201.766 0 0 1-.976-7.835c-.231-2.231-.426-4.576-.485-6.565-.029-.994-.025-1.915.029-2.698.051-.756.154-1.477.369-2.013.69-1.727 1.881-3.074 2.86-3.972A14 14 0 0 1 7.72 5.83l-.409-3.955a1 1 0 0 1 .252-.773m7.947 1.67-.267 2.57H9.681l-.266-2.57z" fill=rgb(136, 128, 255)
+  Title: "Stock movement summary" (el-454) styles: {"cursor":"pointer","font-size":"15px","font-weight":"600","height":"20px","list-style-type":"none","max-width":"100%","overflow-wrap":"anywhere","width":"930px"}
+  Desc: "Summary of stock inflow and outflow." (el-455) styles: {"color":"rgb(191, 191, 191)","cursor":"pointer","font-size":"15px","height":"20px","list-style-type":"none","max-width":"100%","outline-color":"rgb(191, 191, 191)","overflow-wrap":"anywhere","width":"930px","border-color":"rgb(191, 191, 191)"}
+  Star/fav paths:
+    el-448: d="M21.716 18.581H19.71zM16.792 18.582h-2zM11.563 23.026a4 4 0 ..."
+    el-449: d="M7.563 1.103a1 1 0 0 1 .743-.33h8.314a1 1 0 0 1 .994 1.103l-..."

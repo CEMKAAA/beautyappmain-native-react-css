@@ -1,0 +1,1682 @@
+/* ===== TestPage6.css — Fresha Services Component (Pixel-Perfect) ===== */
+/* el-0 → el-325: 326 elements mapped 1:1 from computed-styles.json */
+
+/* ───────────────────── ROOT CONTAINERS (el-0 → el-6) ───────────────────── */
+.tp6-root {
+    /* el-0 */
+    display: flex;
+    flex-direction: column;
+    height: 880px;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 1824px;
+}
+
+.tp6-bg-wrapper {
+    /* el-1 */
+    background-color: rgb(249, 249, 249);
+    height: 880px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 1824px;
+    position: relative;
+}
+
+.tp6-bg-overlay {
+    /* el-2 */
+    background-color: rgb(249, 249, 249);
+    position: absolute;
+    inset: 0;
+    height: 880px;
+    width: 1848px;
+    pointer-events: none;
+}
+
+.tp6-main {
+    /* el-3 */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 100%;
+    position: relative;
+    z-index: 9;
+    width: 1809px;
+}
+
+.tp6-center-wrapper {
+    /* el-4 */
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    width: 1809px;
+    transition-duration: 0.4s;
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+    box-sizing: content-box;
+}
+
+.tp6-padded {
+    /* el-5 */
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    min-height: 100%;
+    padding: 40px;
+    width: 1200px;
+}
+
+/* ───────────────────── MAIN GRID (el-6) ───────────────────── */
+.tp6-grid-outer {
+    /* el-6 */
+    display: grid;
+    grid-template-areas: "title" "content";
+    grid-template-columns: 1120px;
+    grid-template-rows: 56px 756px;
+    column-gap: 0px;
+    row-gap: 24px;
+    width: 1120px;
+    height: 836px;
+}
+
+/* ───────────────────── HEADER SECTION (el-7 → el-34) ───────────────────── */
+.tp6-header {
+    /* el-7 */
+    grid-column: title;
+    grid-row: title;
+    height: 56px;
+    width: 1120px;
+}
+
+.tp6-header-inner {
+    /* el-8 */
+    display: flex;
+    align-items: flex-start;
+    column-gap: 12px;
+    row-gap: 12px;
+    flex-grow: 1;
+    height: 56px;
+    width: 1120px;
+}
+
+.tp6-header-left {
+    /* el-9 */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 56px;
+}
+
+.tp6-title-row {
+    /* el-10 */
+    display: flex;
+    align-items: flex-start;
+    column-gap: 0px;
+    row-gap: 0px;
+    height: 36px;
+}
+
+.tp6-title {
+    /* el-11 */
+    font-size: 28px;
+    font-weight: 600;
+    height: 36px;
+    line-height: 36px;
+    color: rgb(13, 13, 13);
+    margin: 0;
+}
+
+.tp6-desc {
+    /* el-12 */
+    color: rgb(118, 118, 118);
+    font-size: 15px;
+    height: 20px;
+    outline-color: rgb(118, 118, 118);
+    margin: 0;
+}
+
+.tp6-learn-more {
+    /* el-13 */
+    border-radius: 4px;
+    color: rgb(105, 80, 243);
+    cursor: pointer;
+    display: inline;
+    font-size: 15px;
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.tp6-learn-more::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+    padding: 2px;
+}
+
+.tp6-learn-more:focus-visible::before {
+    opacity: 1;
+}
+
+/* ─── ACTION BUTTONS WRAPPER (el-14 → el-34) ─── */
+.tp6-actions-row {
+    /* el-14 */
+    display: flex;
+    align-items: center;
+    height: 48px;
+}
+
+.tp6-actions-group {
+    /* el-15 */
+    display: flex;
+    column-gap: 8px;
+    row-gap: 12px;
+    height: 48px;
+}
+
+/* "Options" button wrapper (el-16) */
+.tp6-options-wrapper {
+    height: 48px;
+}
+
+/* "Options" button (el-17 → el-24) */
+.tp6-btn-options {
+    /* el-17 */
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    background: none;
+    border-radius: 999px;
+    cursor: pointer;
+    height: 48px;
+    padding: 0;
+    position: relative;
+    outline: 2px solid rgba(0, 0, 0, 0);
+    outline-offset: 2px;
+    max-width: 100%;
+    transition-duration: 0.2s;
+    transition-property: max-inline-size;
+    transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.tp6-btn-options::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.tp6-btn-options:focus-visible::before {
+    opacity: 1;
+}
+
+.tp6-btn-options-pill {
+    /* el-18 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 999px;
+    height: 48px;
+    padding: 0 19px;
+    column-gap: 8px;
+    row-gap: 8px;
+    cursor: pointer;
+    max-width: 100%;
+    scale: 1;
+    transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        padding 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        gap 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.tp6-btn-options:hover .tp6-btn-options-pill {
+    background-color: rgb(240, 240, 240);
+    border-color: rgb(179, 179, 179);
+}
+
+.tp6-btn-options:active .tp6-btn-options-pill {
+    scale: 0.96;
+    background-color: rgb(229, 229, 229);
+}
+
+.tp6-btn-options-inner {
+    /* el-19 */
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    row-gap: 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+}
+
+.tp6-btn-options-label {
+    /* el-20 */
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    height: 24px;
+    color: rgb(13, 13, 13);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    text-align: center;
+}
+
+.tp6-btn-options-icon-wrap {
+    /* el-21 */
+    display: flex;
+    width: 24px;
+    height: 24px;
+}
+
+.tp6-btn-options-icon-inner {
+    /* el-22 */
+    display: flex;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+
+.tp6-btn-options-icon-inner svg {
+    /* el-23 */
+    position: absolute;
+    inset: 0;
+    width: 24px;
+    height: 24px;
+    fill: rgb(13, 13, 13);
+    overflow: hidden;
+}
+
+/* "Add" button (el-25 → el-34) */
+.tp6-add-wrapper {
+    /* el-25 */
+    height: 48px;
+}
+
+.tp6-add-wrapper-inner {
+    /* el-26 */
+    height: 48px;
+}
+
+.tp6-btn-add {
+    /* el-27 */
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    background: none;
+    border-radius: 999px;
+    cursor: pointer;
+    height: 48px;
+    padding: 0;
+    position: relative;
+    outline: 2px solid rgba(0, 0, 0, 0);
+    outline-offset: 2px;
+    max-width: 100%;
+    transition-duration: 0.2s;
+    transition-property: max-inline-size;
+    transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.tp6-btn-add::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.tp6-btn-add:focus-visible::before {
+    opacity: 1;
+}
+
+.tp6-btn-add-pill {
+    /* el-28 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(13, 13, 13);
+    border: 1px solid rgb(13, 13, 13);
+    border-radius: 999px;
+    color: rgb(255, 255, 255);
+    height: 48px;
+    padding: 0 19px;
+    column-gap: 8px;
+    row-gap: 8px;
+    cursor: pointer;
+    max-width: 100%;
+    scale: 1;
+    transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        padding 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        gap 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.tp6-btn-add:hover .tp6-btn-add-pill {
+    background-color: rgb(38, 38, 38);
+    border-color: rgb(38, 38, 38);
+}
+
+.tp6-btn-add:active .tp6-btn-add-pill {
+    scale: 0.96;
+    background-color: rgb(64, 64, 64);
+    border-color: rgb(64, 64, 64);
+}
+
+.tp6-btn-add-inner {
+    /* el-29 */
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    row-gap: 8px;
+    color: rgb(255, 255, 255);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+}
+
+.tp6-btn-add-label {
+    /* el-30 */
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    height: 24px;
+    color: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    text-align: center;
+}
+
+.tp6-btn-add-icon-wrap {
+    /* el-31 */
+    display: flex;
+    width: 24px;
+    height: 24px;
+    color: inherit;
+}
+
+.tp6-btn-add-icon-inner {
+    /* el-32 */
+    display: flex;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    color: inherit;
+}
+
+.tp6-btn-add-icon-inner svg {
+    /* el-33 */
+    position: absolute;
+    inset: 0;
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+/* ───────── SEARCH/FILTER BAR + TWO-COLUMN GRID (el-35 → el-69) ───────── */
+.tp6-content-area {
+    /* el-35 */
+    display: flex;
+    flex-direction: column;
+    grid-column: content;
+    grid-row: content;
+    width: 1120px;
+}
+
+.tp6-two-col-grid {
+    /* el-36 */
+    column-gap: 64px;
+    display: grid;
+    grid-template-areas: "title title" "sidebar content";
+    grid-template-columns: 296px 760px;
+    grid-template-rows: 76px 648px;
+    row-gap: 32px;
+    width: 1120px;
+}
+
+/* ─── Search bar row (grid-area: title) ─── */
+.tp6-search-row {
+    /* el-37 */
+    grid-area: title;
+    width: 1120px;
+}
+
+.tp6-search-container {
+    /* el-38 */
+    width: 1120px;
+}
+
+.tp6-search-bar {
+    /* el-39 */
+    display: flex;
+    flex-direction: column;
+    height: 68px;
+    width: 1120px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    transition: background-color 0.1s, box-shadow 0.1s, transform 0.1s;
+    transition-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.tp6-search-bar-border {
+    /* el-40 */
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    box-shadow: rgb(229, 229, 229) 0px 0px 0px 1px inset;
+    pointer-events: none;
+    z-index: 2000;
+}
+
+.tp6-search-bar-inner {
+    /* el-41 */
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    height: 68px;
+    row-gap: 16px;
+    width: 1120px;
+}
+
+.tp6-search-row-inner {
+    /* el-42 */
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    column-gap: 32px;
+    height: 36px;
+    width: 1088px;
+}
+
+.tp6-search-left {
+    /* el-43 */
+    display: flex;
+    align-items: end;
+    column-gap: 8px;
+    flex-grow: 1;
+    height: 36px;
+}
+
+/* Search input group (el-44 → el-53) */
+.tp6-search-input-group {
+    /* el-44 */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 4px;
+    height: 36px;
+    max-width: 256px;
+    width: 256px;
+}
+
+.tp6-search-input-wrap {
+    /* el-48 */
+    display: flex;
+    flex-grow: 1;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 999px;
+    height: 36px;
+    max-height: 36px;
+    position: relative;
+    width: 256px;
+    transition: background-color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+        border-color 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.tp6-search-input-wrap::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    border-radius: inherit;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    transition: opacity 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+    pointer-events: none;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.tp6-search-input-wrap:focus-within {
+    border-color: rgb(80, 60, 245);
+    background-color: rgb(255, 255, 255);
+}
+
+.tp6-search-icon-area {
+    /* el-49 */
+    display: flex;
+    align-items: center;
+    color: rgb(118, 118, 118);
+    padding-left: 12px;
+    cursor: text;
+}
+
+.tp6-search-icon-outer {
+    /* el-50 */
+    display: flex;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.tp6-search-icon-outer svg {
+    position: absolute;
+    inset: 0;
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.tp6-search-input {
+    /* el-53 */
+    border: none;
+    outline: none;
+    background: transparent;
+    flex-grow: 1;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(13, 13, 13);
+    padding: 0 12px;
+    height: 100%;
+    width: 100%;
+}
+
+.tp6-search-input::placeholder {
+    color: rgb(118, 118, 118);
+}
+
+/* ─── Filter & Manage Order buttons (el-54 → el-69) ─── */
+.tp6-pill-btn {
+    /* el-54, el-62 */
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    background: none;
+    border-radius: 999px;
+    cursor: pointer;
+    height: 36px;
+    padding: 0;
+    position: relative;
+    outline: none;
+}
+
+.tp6-pill-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.tp6-pill-btn:focus-visible::before {
+    opacity: 1;
+}
+
+.tp6-pill-btn-face {
+    /* el-55, el-63 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 999px;
+    height: 36px;
+    padding: 0 15px;
+    column-gap: 8px;
+    cursor: pointer;
+    transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.tp6-pill-btn:hover .tp6-pill-btn-face {
+    background-color: rgb(240, 240, 240);
+    border-color: rgb(179, 179, 179);
+}
+
+.tp6-pill-btn:active .tp6-pill-btn-face {
+    transform: scale(0.96);
+    background-color: rgb(229, 229, 229);
+}
+
+.tp6-pill-btn-content {
+    /* inner span */
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tp6-pill-btn-label {
+    /* text span */
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.tp6-pill-btn-icon-wrap {
+    /* icon container */
+    display: flex;
+    width: 20px;
+    height: 20px;
+}
+
+.tp6-pill-btn-icon-inner {
+    /* icon inner */
+    display: flex;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.tp6-pill-btn-icon-inner svg {
+    position: absolute;
+    inset: 0;
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+/* ─── Right side: Manage order button ─── */
+.tp6-manage-order-wrap {
+    /* el-62 wrapper area */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* ───────────────────── SIDEBAR (el-70 → el-105) ───────────────────── */
+.tp6-sidebar {
+    /* el-70 */
+    display: flex;
+    flex-direction: column;
+    grid-area: sidebar;
+    max-width: 296px;
+    overflow-x: auto;
+    overflow-y: auto;
+    position: sticky;
+    top: 0;
+    width: 296px;
+}
+
+.tp6-sidebar-inner {
+    /* el-71 */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    isolation: isolate;
+    width: 296px;
+}
+
+.tp6-sidebar-card {
+    /* el-72 */
+    background-color: rgb(255, 255, 255);
+    border-radius: 16px;
+    overflow: hidden;
+    transition-duration: 0.1s;
+    transition-property: background-color, box-shadow, transform;
+    transition-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+    width: 296px;
+    position: relative;
+}
+
+.tp6-sidebar-card-border {
+    /* el-73 — border overlay */
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    box-shadow: rgb(229, 229, 229) 0px 0px 0px 1px inset;
+    pointer-events: none;
+    z-index: 2000;
+}
+
+.tp6-sidebar-padding {
+    /* el-74 — padding wrapper */
+    display: flex;
+    flex-direction: column;
+    column-gap: 8px;
+    row-gap: 8px;
+    padding: 24px 32px;
+    width: 296px;
+}
+
+.tp6-sidebar-list-group {
+    /* el-75 — outer <ul> wrapping header + categories */
+    display: flex;
+    flex-direction: column;
+    column-gap: 24px;
+    row-gap: 24px;
+    list-style: none;
+    margin: -8px -20px;
+    padding: 8px 20px;
+    outline: 2px solid rgba(0, 0, 0, 0);
+    outline-offset: 2px;
+    width: 272px;
+}
+
+.tp6-sidebar-list-item {
+    /* el-76 — single <li> wrapping everything */
+    list-style: none;
+    width: 232px;
+}
+
+.tp6-sidebar-header {
+    /* el-77 */
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    row-gap: 8px;
+    padding-bottom: 8px;
+    width: 232px;
+}
+
+.tp6-sidebar-header-inner {
+    /* el-78 */
+    flex-grow: 1;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    width: 232px;
+}
+
+.tp6-sidebar-header-title {
+    /* el-79 */
+    display: inline;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    color: rgb(13, 13, 13);
+}
+
+/* Category list (el-80) */
+.tp6-cat-list {
+    /* el-80 */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    column-gap: 0px;
+    row-gap: 0px;
+    width: 232px;
+}
+
+/* Category item (el-81, el-88, el-94 pattern) */
+.tp6-cat-item {
+    /* el-81/el-88/el-94 */
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    row-gap: 12px;
+    cursor: pointer;
+    padding: 12px 16px;
+    margin-left: -16px;
+    margin-right: -16px;
+    border-radius: 8px;
+    position: relative;
+    background-color: rgba(19, 19, 19, 0);
+    transition-duration: 0.1s;
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+    list-style: none;
+    outline: 2px solid rgba(0, 0, 0, 0);
+    outline-offset: 2px;
+    height: 44px;
+    box-sizing: border-box;
+}
+
+.tp6-cat-item.active {
+    background-color: rgb(240, 240, 255);
+}
+
+.tp6-cat-item:hover:not(.active) {
+    background-color: rgba(19, 19, 19, 0.04);
+}
+
+.tp6-cat-item:active {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.tp6-cat-item-btn {
+    /* el-82/el-89/el-95 — hidden overlay button */
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: 2px solid rgba(0, 0, 0, 0);
+    outline-offset: 2px;
+    border-radius: 8px;
+    appearance: button;
+}
+
+.tp6-cat-item-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+    padding: 2px;
+}
+
+.tp6-cat-item-btn:focus-visible::before {
+    opacity: 1;
+}
+
+.tp6-cat-item-text-wrap {
+    /* el-83/el-90/el-96 */
+    flex-grow: 1;
+    overflow: hidden;
+    height: 20px;
+}
+
+.tp6-cat-item-text-inner {
+    /* el-84/el-91/el-97 */
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.tp6-cat-item-text {
+    /* el-85 */
+    display: inline;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(13, 13, 13);
+    white-space: nowrap;
+}
+
+/* Count badge (el-86/el-92/el-98) — pill-shaped div with box-shadow */
+.tp6-cat-item-count {
+    /* el-86/el-92/el-98 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 999px;
+    box-shadow: rgb(229, 229, 229) 0px 0px 0px 1px, rgb(255, 255, 255) 0px 0px 0px 2px;
+    box-sizing: content-box;
+    color: rgb(118, 118, 118);
+    height: 20px;
+    max-height: 20px;
+    min-height: 20px;
+    min-width: 12px;
+    padding: 0 4px;
+    pointer-events: none;
+    flex-shrink: 0;
+}
+
+.tp6-cat-item-count-text {
+    /* el-87/el-93/el-99 */
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    color: rgb(118, 118, 118);
+    pointer-events: none;
+}
+
+/* ─── Add category item (el-100 → el-104) ─── */
+/* "Add category" is a regular li in the same list (el-80) */
+.tp6-add-cat-item {
+    /* el-100 — same structure as category items */
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    row-gap: 12px;
+    cursor: pointer;
+    padding: 12px 16px;
+    margin-left: -16px;
+    margin-right: -16px;
+    border-radius: 8px;
+    position: relative;
+    background-color: rgba(19, 19, 19, 0);
+    transition-duration: 0.1s;
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+    list-style: none;
+    outline: 2px solid rgba(0, 0, 0, 0);
+    outline-offset: 2px;
+    height: 44px;
+    box-sizing: border-box;
+}
+
+.tp6-add-cat-item:hover {
+    background-color: rgba(19, 19, 19, 0.04);
+}
+
+.tp6-add-cat-item:active {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.tp6-add-cat-item-btn {
+    /* el-101 — overlay button */
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: 2px solid rgba(0, 0, 0, 0);
+    outline-offset: 2px;
+    border-radius: 8px;
+    appearance: button;
+}
+
+.tp6-add-cat-item-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+    padding: 2px;
+}
+
+.tp6-add-cat-item-btn:focus-visible::before {
+    opacity: 1;
+}
+
+.tp6-add-cat-text-wrap {
+    /* el-102 */
+    flex-grow: 1;
+    overflow: hidden;
+    height: 20px;
+}
+
+.tp6-add-cat-text-inner {
+    /* el-103 */
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.tp6-add-cat-text {
+    /* el-104 */
+    display: inline;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(105, 80, 243);
+    white-space: nowrap;
+}
+
+/* el-105 — hidden divider */
+
+/* ───────────────────── CONTENT AREA (el-106 → el-325) ───────────────────── */
+.tp6-content {
+    /* el-106 */
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    width: 760px;
+}
+
+.tp6-content-scroll-outer {
+    /* el-107 */
+    margin-left: -32px;
+    padding-left: 32px;
+    width: 792px;
+}
+
+.tp6-content-scroll {
+    /* el-108 */
+    position: relative;
+    width: 760px;
+}
+
+/* ─── Category section header (el-109→el-126, el-206→... pattern) ─── */
+.tp6-cat-section-header {
+    display: flex;
+    flex-direction: column;
+    width: 760px;
+    padding-bottom: 16px;
+}
+
+.tp6-cat-section-header-area {
+    /* el-110 */
+    width: 760px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.tp6-cat-header-row {
+    /* el-111 */
+    display: flex;
+    flex-direction: column;
+    column-gap: 8px;
+    row-gap: 8px;
+    height: 28px;
+    position: relative;
+    width: 760px;
+}
+
+.tp6-cat-header-inner {
+    /* el-112 */
+    display: flex;
+    flex-direction: column;
+    column-gap: 16px;
+    row-gap: 16px;
+    height: 28px;
+    width: 760px;
+}
+
+.tp6-cat-header-content {
+    /* el-113 */
+    display: flex;
+    align-items: flex-start;
+    column-gap: 12px;
+    row-gap: 12px;
+    flex-grow: 1;
+    height: 28px;
+    width: 760px;
+}
+
+.tp6-cat-header-left {
+    /* el-114 */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.tp6-cat-header-title-row {
+    /* el-115 */
+    display: flex;
+    align-items: flex-start;
+    column-gap: 8px;
+    row-gap: 8px;
+}
+
+.tp6-cat-header-title {
+    /* el-116 */
+    display: flow-root;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    height: 28px;
+    max-width: 100%;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+    color: rgb(13, 13, 13);
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+/* Category Actions button */
+.tp6-cat-actions-wrap {
+    /* el-117 */
+    display: flex;
+    align-items: center;
+    height: 24px;
+    max-height: 24px;
+    min-height: 24px;
+}
+
+.tp6-cat-actions-btn {
+    /* el-119 */
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    background: none;
+    border-radius: 999px;
+    cursor: pointer;
+    height: 36px;
+    padding: 0;
+    position: relative;
+    outline: 2px solid rgba(0, 0, 0, 0);
+    outline-offset: 2px;
+    max-width: 100%;
+    transition-duration: 0.2s;
+    transition-property: max-inline-size;
+    transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+    appearance: button;
+}
+
+.tp6-cat-actions-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.tp6-cat-actions-btn:focus-visible::before {
+    opacity: 1;
+}
+
+.tp6-cat-actions-pill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 999px;
+    height: 36px;
+    padding: 0 15px;
+    column-gap: 8px;
+    cursor: pointer;
+    transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.tp6-cat-actions-btn:hover .tp6-cat-actions-pill {
+    background-color: rgb(240, 240, 240);
+    border-color: rgb(179, 179, 179);
+}
+
+.tp6-cat-actions-btn:active .tp6-cat-actions-pill {
+    transform: scale(0.96);
+    background-color: rgb(229, 229, 229);
+}
+
+.tp6-cat-actions-content {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tp6-cat-actions-label {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tp6-cat-actions-icon-wrap {
+    display: flex;
+    width: 20px;
+    height: 20px;
+}
+
+.tp6-cat-actions-icon-inner {
+    display: flex;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.tp6-cat-actions-icon-inner svg {
+    position: absolute;
+    inset: 0;
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+/* ─── Service Cards ─── */
+.tp6-sortable-container {
+    /* Container for absolute-positioned flat items — el-108 child */
+    position: relative;
+    width: 760px;
+    touch-action: none;
+}
+
+/* ─── Flat list items (both headers and cards are absolute-positioned) ─── */
+.tp6-flat-item {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 760px;
+    will-change: transform;
+}
+
+.tp6-flat-header .tp6-cat-section-header {
+    padding-bottom: 0;
+    /* padding handled by item height */
+}
+
+/* ─── Empty Category Placeholder ─── */
+.tp6-empty-category {
+    width: 100%;
+    height: 96px;
+    border-radius: 8px;
+    border: 1px dashed rgb(211, 211, 211);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.tp6-empty-category-text {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(118, 118, 118);
+    font-weight: 400;
+}
+
+/* ─── Drop target shadow — card-shaped ghost at destination ─── */
+.tp6-drop-target-shadow {
+    border-radius: 8px;
+    background-color: rgb(235, 235, 235);
+    box-shadow: rgb(200, 200, 200) 0px 0px 0px 1px inset;
+    pointer-events: none;
+}
+
+/* ─── Drag State ─── */
+.tp6-flat-card.tp6-dragging .tp6-card {
+    box-shadow:
+        rgb(229, 229, 229) 0px 0px 0px 1px inset,
+        rgba(0, 0, 0, 0.12) 0px 8px 24px,
+        rgba(0, 0, 0, 0.06) 0px 2px 8px;
+    background-color: rgb(255, 255, 255);
+}
+
+.tp6-flat-card.tp6-dragging .tp6-drag-handle {
+    opacity: 1;
+}
+
+.tp6-flat-card.tp6-dragging {
+    cursor: grabbing;
+    user-select: none;
+}
+
+.tp6-flat-card.tp6-dragging * {
+    cursor: grabbing !important;
+}
+
+/* ─── PERF: Disable hover/transition on all cards during active drag ─── */
+.tp6-is-dragging .tp6-card {
+    transition: none !important;
+    pointer-events: none;
+}
+
+.tp6-is-dragging .tp6-card:hover {
+    box-shadow: rgb(229, 229, 229) 0px 0px 0px 1px inset;
+    background-color: rgb(255, 255, 255);
+}
+
+.tp6-is-dragging .tp6-drag-handle {
+    transition: none !important;
+}
+
+.tp6-is-dragging .tp6-flat-card:not(.tp6-dragging) {
+    pointer-events: none;
+}
+
+/* GPU acceleration for dragged card */
+.tp6-flat-card.tp6-dragging {
+    will-change: transform;
+}
+
+/* ─── Card wrapper (non-sortable fallback) ─── */
+.tp6-card-wrapper {
+    padding-bottom: 12px;
+}
+
+.tp6-card-drag-row {
+    /* el-128 → el-129 */
+    width: 760px;
+}
+
+.tp6-card-drag-container {
+    /* el-129 */
+    display: flex;
+    align-items: center;
+    cursor: grab;
+    flex-grow: 1;
+    position: relative;
+    width: 760px;
+}
+
+.tp6-drag-handle {
+    /* el-130 — drag icon, slides out from behind card on hover */
+    position: absolute;
+    left: -36px;
+    top: 50%;
+    transform: translateY(-50%) translateX(20px);
+    opacity: 0;
+    cursor: grab;
+    width: 28px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.tp6-card-drag-container:hover .tp6-drag-handle {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+.tp6-drag-handle-icon {
+    /* el-131 */
+    display: inline-flex;
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    position: relative;
+}
+
+.tp6-drag-handle-icon svg {
+    /* el-132 */
+    position: absolute;
+    inset: 0;
+    width: 28px;
+    height: 28px;
+    fill: rgb(13, 13, 13);
+    overflow: hidden;
+}
+
+/* Card body */
+.tp6-card-body-wrap {
+    /* el-134 */
+    display: flex;
+    flex-grow: 1;
+    cursor: grab;
+}
+
+.tp6-card-body-inner {
+    /* el-135 → el-136 */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    cursor: grab;
+    width: 760px;
+}
+
+.tp6-card {
+    /* el-137 */
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: rgb(229, 229, 229) 0px 0px 0px 1px inset;
+    display: flex;
+    min-height: 96px;
+    position: relative;
+    cursor: grab;
+    transition-duration: 0.2s;
+    transition-property: background-color, box-shadow;
+    transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.tp6-card:hover {
+    box-shadow: rgb(211, 211, 211) 0px 0px 0px 1px inset;
+    background-color: rgb(250, 250, 250);
+}
+
+.tp6-card-btn {
+    /* el-138 */
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: 2px solid rgba(0, 0, 0, 0);
+    outline-offset: 2px;
+    z-index: 1;
+    appearance: button;
+}
+
+.tp6-card-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+    padding: 2px;
+}
+
+.tp6-card-btn:focus-visible::before {
+    opacity: 1;
+}
+
+.tp6-card-color-bar-wrap {
+    /* el-139 */
+    flex-shrink: 0;
+    width: 8px;
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    cursor: grab;
+}
+
+.tp6-card-color-bar {
+    /* el-140 */
+    width: 8px;
+    height: 100%;
+    cursor: grab;
+}
+
+.tp6-card-content {
+    /* el-141 */
+    display: flex;
+    flex-grow: 1;
+    padding: 16px;
+    column-gap: 16px;
+    row-gap: 16px;
+    align-items: center;
+    cursor: grab;
+}
+
+.tp6-card-info {
+    /* el-142 → el-146 */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    column-gap: 2px;
+    row-gap: 2px;
+    cursor: grab;
+}
+
+.tp6-card-title {
+    /* el-147 */
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+    height: 24px;
+    max-width: 100%;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+    color: rgb(13, 13, 13);
+    margin: 0;
+    cursor: grab;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.tp6-card-subtitle {
+    /* el-148 */
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    height: 20px;
+    max-width: 100%;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+    color: rgb(118, 118, 118);
+    margin: 0;
+    cursor: grab;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.tp6-card-right {
+    /* el-149 */
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    row-gap: 8px;
+    cursor: grab;
+}
+
+.tp6-card-price-wrap {
+    /* el-150 */
+    display: flex;
+    align-items: baseline;
+    column-gap: 4px;
+    cursor: grab;
+}
+
+.tp6-card-price {
+    /* el-151 */
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    white-space: nowrap;
+    cursor: grab;
+}
+
+/* 3-dot menu button */
+.tp6-card-menu-wrap {
+    /* el-153 */
+    height: 36px;
+    width: 36px;
+    cursor: grab;
+}
+
+.tp6-card-menu-btn {
+    /* el-154 */
+    display: inline-block;
+    border: none;
+    background: none;
+    border-radius: 999px;
+    cursor: pointer;
+    height: 36px;
+    width: 36px;
+    padding: 0;
+    position: relative;
+    outline: 2px solid rgba(0, 0, 0, 0);
+    outline-offset: 2px;
+    z-index: 2;
+    appearance: button;
+}
+
+.tp6-card-menu-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.tp6-card-menu-btn:focus-visible::before {
+    opacity: 1;
+}
+
+.tp6-card-menu-btn-face {
+    /* el-155 → el-156 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 999px;
+    background-color: rgba(19, 19, 19, 0);
+    border: 1px solid rgba(255, 255, 255, 0);
+    padding: 0 15px;
+    scale: 1;
+    transition-duration: 0.1s, 0.1s, 0.1s, 0.2s, 0.2s, 0.2s;
+    transition-property: background-color, border-color, transform, max-inline-size, padding, gap;
+    transition-timing-function: cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0.85, 0, 0.15, 1), cubic-bezier(0.85, 0, 0.15, 1), cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.tp6-card-menu-btn:hover .tp6-card-menu-btn-face {
+    background-color: rgba(19, 19, 19, 0.04);
+}
+
+.tp6-card-menu-btn:active .tp6-card-menu-btn-face {
+    scale: 0.96;
+    background-color: rgba(19, 19, 19, 0.08);
+}
+
+.tp6-card-menu-icon {
+    display: flex;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.tp6-card-menu-icon svg {
+    position: absolute;
+    inset: 0;
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+/* ─── Hidden element ─── */
+.tp6-hidden {
+    display: none;
+}

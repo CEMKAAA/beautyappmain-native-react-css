@@ -1,0 +1,1724 @@
+{
+     "meta": {
+          "totalElements": 31,
+          "totalInteractiveRules": 11,
+          "totalKeyframes": 11,
+          "extractedAt": "2026-04-13T05:45:22.819Z",
+          "extractorVersion": "strip-advanced-v1",
+          "xpath": "/html/body/div[2]/header/nav",
+          "viewportWidth": 1920,
+          "viewportHeight": 911
+     },
+     "cssVarDefaults": {
+          "--tw-content": "\"\"",
+          "--tw-bg-opacity": "1",
+          "--tw-shadow-colored": "",
+          "--tw-shadow": "0px 8px 32px 0px rgba(13,22,25,0.16)"
+     },
+     "elements": [
+          {
+               "id": "el-0",
+               "parentId": null,
+               "depth": 0,
+               "tag": "nav",
+               "classes": "mx-auto max-w-screen-desktop px-5 py-3 tablet:h-[72px] laptop:px-8 grid grid-cols-2 items-center gap-3 laptop:grid-cols-[minmax(80px,120px),minmax(380px,auto),minmax(auto,280px)]",
+               "text": "",
+               "styles": {
+                    "align-items": "center",
+                    "column-gap": "12px",
+                    "display": "grid",
+                    "grid-template-columns": "120px 952px 280px",
+                    "grid-template-rows": "48px",
+                    "height": "72px",
+                    "margin-left": "232.5px",
+                    "margin-right": "232.5px",
+                    "max-width": "1440px",
+                    "padding-bottom": "12px",
+                    "padding-left": "32px",
+                    "padding-right": "32px",
+                    "padding-top": "12px",
+                    "row-gap": "12px",
+                    "width": "1440px"
+               },
+               "attrs": {},
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "content": "none",
+                    "height": "auto",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "height": "auto",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-1",
+               "parentId": "el-0",
+               "depth": 1,
+               "tag": "a",
+               "classes": "",
+               "text": "",
+               "styles": {
+                    "cursor": "pointer",
+                    "height": "22px",
+                    "width": "120px"
+               },
+               "attrs": {
+                    "href": "https://www.fresha.com/",
+                    "aria-label": "Fresha homepage"
+               },
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "height": "auto",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "height": "auto",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-2",
+               "parentId": "el-1",
+               "depth": 2,
+               "tag": "div",
+               "classes": "transition-colors duration-300 ease-in-out",
+               "text": "",
+               "styles": {
+                    "animation-duration": "0.3s",
+                    "animation-timing-function": "cubic-bezier(0.4, 0, 0.2, 1)",
+                    "cursor": "pointer",
+                    "height": "22px",
+                    "transition-duration": "0.3s",
+                    "transition-property": "color, background-color, border-color, text-decoration-color, fill, stroke",
+                    "transition-timing-function": "cubic-bezier(0.4, 0, 0.2, 1)",
+                    "width": "120px"
+               },
+               "attrs": {},
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "height": "auto",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "height": "auto",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-3",
+               "parentId": "el-2",
+               "depth": 3,
+               "tag": "div",
+               "classes": "",
+               "text": "",
+               "styles": {
+                    "cursor": "pointer",
+                    "height": "22px",
+                    "width": "120px"
+               },
+               "attrs": {},
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "height": "auto",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "height": "auto",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-4",
+               "parentId": "el-3",
+               "depth": 4,
+               "tag": "svg",
+               "classes": "h-auto fill-current text-foreground w-[75px]",
+               "text": "",
+               "styles": {
+                    "cursor": "pointer",
+                    "fill": "rgb(20, 20, 20)",
+                    "height": "22px",
+                    "overflow-x": "hidden",
+                    "overflow-y": "hidden",
+                    "pointer-events": "none",
+                    "vertical-align": "middle",
+                    "width": "75px"
+               },
+               "attrs": {
+                    "xmlns": "http://www.w3.org/2000/svg",
+                    "viewBox": "0 0 81.8 24",
+                    "pointer-events": "none"
+               },
+               "svgAttrs": {
+                    "xmlns": "http://www.w3.org/2000/svg",
+                    "viewBox": "0 0 81.8 24",
+                    "pointer-events": "none"
+               },
+               "pseudoBefore": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "fill": "rgb(20, 20, 20)",
+                    "height": "auto",
+                    "pointer-events": "none",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "fill": "rgb(20, 20, 20)",
+                    "height": "auto",
+                    "pointer-events": "none",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-5",
+               "parentId": "el-4",
+               "depth": 5,
+               "tag": "title",
+               "classes": "",
+               "text": "Fresha",
+               "styles": {
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "fill": "rgb(20, 20, 20)",
+                    "height": "auto",
+                    "pointer-events": "none",
+                    "width": "auto"
+               },
+               "attrs": {},
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "fill": "rgb(20, 20, 20)",
+                    "height": "auto",
+                    "pointer-events": "none",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "fill": "rgb(20, 20, 20)",
+                    "height": "auto",
+                    "pointer-events": "none",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-6",
+               "parentId": "el-4",
+               "depth": 5,
+               "tag": "path",
+               "classes": "",
+               "text": "",
+               "styles": {
+                    "cursor": "pointer",
+                    "d": "path(\"M 51.5 2.1 H 55.4 V 10.2 C 56.7 8.3 59.4 7.7 61.6 8.6 C 63.8 9.5 64.5 11.1 64.6 11.3 C 64.8 11.8 65 12.3 65.1 12.8 C 65.7 16.4 64.5 20 65.6 23.5 H 61.8 C 60.8 21 61.4 18.2 61.4 15.6 C 61.4 14.9 61.4 14.1 61 13.4 C 60.5 12.5 59.5 11.8 58.5 11.8 C 57.4 11.8 56.4 12.4 55.9 13.3 C 55.5 14.1 55.5 15.1 55.5 16 V 23.5 H 51.6 L 51.5 2.1 Z M 36 15.7 C 36.1 11.4 33.4 8.2 29.2 8.2 C 26.4 8.2 24 9.6 22.7 12 C 21.3 14.6 21.4 18.3 23.1 20.8 C 25.6 24.2 30.7 25 35.6 22.7 L 34.4 19.6 C 30.3 21.4 25.9 20.9 25.6 17.2 H 36 V 15.7 Z M 25.7 14.2 C 26 13.4 26.4 12.8 27 12.3 C 28.2 11.4 30.3 11.3 31.4 12.2 C 31.9 12.6 32.3 13.3 32.6 14.1 H 25.7 Z M 13.1 13.9 S 13.1 11.6 11.2 11.6 H 6.9 V 23.7 H 3 V 11.6 H 0 V 8.3 H 3 V 5.7 C 3 3.4 5.1 0 9.7 0 S 16.1 3.9 16.1 3.9 L 13.1 6 S 12.3 3.5 9.8 3.5 C 8.7 3.5 7 4.4 7 6.2 V 8.2 H 13.1 C 15.8 8.2 16.5 10.2 16.5 10.2 C 17.5 7.8 21.1 8.1 21.8 8.2 V 11.3 C 19.3 11.1 17 12.5 17 15.4 V 23.4 H 13.1 V 13.9 Z M 48.9 16.2 C 47.7 15 44.6 14.6 42.6 14.2 C 41.6 14 40.8 13.8 40.8 12.8 C 40.8 11.6 42 11.3 43.2 11.3 S 45.6 11.8 46.3 12.8 L 49.3 11.2 C 47.6 8.2 43.1 7.6 40.2 8.8 C 39.3 9.2 38.6 9.8 38.1 10.5 C 37 12 37.1 14.6 38.4 15.8 C 39.1 16.5 40.3 17 41.8 17.3 L 44.6 17.8 C 45.6 18 46.5 18.2 46.5 19.3 C 46.5 20.6 45.1 20.9 43.9 20.9 C 40.7 20.9 40.1 17.9 40.1 17.9 L 36.4 19 C 36.6 20 37.9 24 43.8 24 C 47.1 24 50 22.7 50.1 19.2 C 50 17.9 49.6 16.9 48.9 16.2 Z M 81.2 20.8 C 80.5 20.8 79.9 20.4 79.9 19.4 C 79.9 18.9 79.8 17.2 79.8 16.8 C 79.8 14.2 79.9 11.7 78.1 9.9 C 76.1 7.9 71.5 7.7 69.1 9.3 C 68.2 9.8 67.4 10.5 66.8 11.4 L 69.1 13.8 C 70 12.3 71.3 11.6 72.8 11.6 C 74.2 11.5 75.4 12.2 75.9 13.6 C 72.8 14.4 68.8 14.7 67.1 17.9 C 66.3 19.4 66.5 21.3 67.7 22.6 C 68.6 23.6 70.1 23.9 71.5 23.9 C 73.7 23.9 75.8 23.4 77.1 21.4 C 77.8 23.1 79.3 23.9 81.1 23.9 C 81.4 23.9 81.7 23.8 81.9 23.7 V 20.7 C 81.7 20.8 81.5 20.8 81.2 20.8 Z M 75.9 17.7 C 76 19.9 74.2 21.1 72.2 21.1 C 71.1 21.1 70.4 20.6 70.4 19.5 C 70.4 18.3 71.4 17.9 72.5 17.6 L 75.9 16.6 V 17.7 Z\")",
+                    "display": "inline",
+                    "fill": "rgb(20, 20, 20)",
+                    "height": "auto",
+                    "pointer-events": "none",
+                    "width": "auto"
+               },
+               "attrs": {
+                    "d": "M51.5 2.1h3.9v8.1c1.3-1.9 4-2.5 6.2-1.6 2.2.9 2.9 2.5 3 2.7.2.5.4 1 .5 1.5.6 3.6-.6 7.2.5 10.7h-3.8c-1-2.5-.4-5.3-.4-7.9 0-.7 0-1.5-.4-2.2-.5-.9-1.5-1.6-2.5-1.6-1.1 0-2.1.6-2.6 1.5-.4.8-.4 1.8-.4 2.7v7.5h-3.9l-.1-21.4zM36 15.7c.1-4.3-2.6-7.5-6.8-7.5-2.8 0-5.2 1.4-6.5 3.8-1.4 2.6-1.3 6.3.4 8.8 2.5 3.4 7.6 4.2 12.5 1.9l-1.2-3.1c-4.1 1.8-8.5 1.3-8.8-2.4H36v-1.5zm-10.3-1.5c.3-.8.7-1.4 1.3-1.9 1.2-.9 3.3-1 4.4-.1.5.4.9 1.1 1.2 1.9h-6.9zM13.1 13.9s0-2.3-1.9-2.3H6.9v12.1H3V11.6H0V8.3h3V5.7C3 3.4 5.1 0 9.7 0s6.4 3.9 6.4 3.9l-3 2.1s-.8-2.5-3.3-2.5C8.7 3.5 7 4.4 7 6.2v2h6.1c2.7 0 3.4 2 3.4 2 1-2.4 4.6-2.1 5.3-2v3.1c-2.5-.2-4.8 1.2-4.8 4.1v8h-3.9v-9.5zM48.9 16.2c-1.2-1.2-4.3-1.6-6.3-2-1-.2-1.8-.4-1.8-1.4 0-1.2 1.2-1.5 2.4-1.5s2.4.5 3.1 1.5l3-1.6c-1.7-3-6.2-3.6-9.1-2.4-.9.4-1.6 1-2.1 1.7-1.1 1.5-1 4.1.3 5.3.7.7 1.9 1.2 3.4 1.5l2.8.5c1 .2 1.9.4 1.9 1.5 0 1.3-1.4 1.6-2.6 1.6-3.2 0-3.8-3-3.8-3L36.4 19c.2 1 1.5 5 7.4 5 3.3 0 6.2-1.3 6.3-4.8-.1-1.3-.5-2.3-1.2-3zM81.2 20.8c-.7 0-1.3-.4-1.3-1.4 0-.5-.1-2.2-.1-2.6 0-2.6.1-5.1-1.7-6.9-2-2-6.6-2.2-9-.6-.9.5-1.7 1.2-2.3 2.1l2.3 2.4c.9-1.5 2.2-2.2 3.7-2.2 1.4-.1 2.6.6 3.1 2-3.1.8-7.1 1.1-8.8 4.3-.8 1.5-.6 3.4.6 4.7.9 1 2.4 1.3 3.8 1.3 2.2 0 4.3-.5 5.6-2.5.7 1.7 2.2 2.5 4 2.5.3 0 .6-.1.8-.2v-3c-.2.1-.4.1-.7.1zm-5.3-3.1c.1 2.2-1.7 3.4-3.7 3.4-1.1 0-1.8-.5-1.8-1.6 0-1.2 1-1.6 2.1-1.9l3.4-1v1.1z"
+               },
+               "svgAttrs": {
+                    "d": "M51.5 2.1h3.9v8.1c1.3-1.9 4-2.5 6.2-1.6 2.2.9 2.9 2.5 3 2.7.2.5.4 1 .5 1.5.6 3.6-.6 7.2.5 10.7h-3.8c-1-2.5-.4-5.3-.4-7.9 0-.7 0-1.5-.4-2.2-.5-.9-1.5-1.6-2.5-1.6-1.1 0-2.1.6-2.6 1.5-.4.8-.4 1.8-.4 2.7v7.5h-3.9l-.1-21.4zM36 15.7c.1-4.3-2.6-7.5-6.8-7.5-2.8 0-5.2 1.4-6.5 3.8-1.4 2.6-1.3 6.3.4 8.8 2.5 3.4 7.6 4.2 12.5 1.9l-1.2-3.1c-4.1 1.8-8.5 1.3-8.8-2.4H36v-1.5zm-10.3-1.5c.3-.8.7-1.4 1.3-1.9 1.2-.9 3.3-1 4.4-.1.5.4.9 1.1 1.2 1.9h-6.9zM13.1 13.9s0-2.3-1.9-2.3H6.9v12.1H3V11.6H0V8.3h3V5.7C3 3.4 5.1 0 9.7 0s6.4 3.9 6.4 3.9l-3 2.1s-.8-2.5-3.3-2.5C8.7 3.5 7 4.4 7 6.2v2h6.1c2.7 0 3.4 2 3.4 2 1-2.4 4.6-2.1 5.3-2v3.1c-2.5-.2-4.8 1.2-4.8 4.1v8h-3.9v-9.5zM48.9 16.2c-1.2-1.2-4.3-1.6-6.3-2-1-.2-1.8-.4-1.8-1.4 0-1.2 1.2-1.5 2.4-1.5s2.4.5 3.1 1.5l3-1.6c-1.7-3-6.2-3.6-9.1-2.4-.9.4-1.6 1-2.1 1.7-1.1 1.5-1 4.1.3 5.3.7.7 1.9 1.2 3.4 1.5l2.8.5c1 .2 1.9.4 1.9 1.5 0 1.3-1.4 1.6-2.6 1.6-3.2 0-3.8-3-3.8-3L36.4 19c.2 1 1.5 5 7.4 5 3.3 0 6.2-1.3 6.3-4.8-.1-1.3-.5-2.3-1.2-3zM81.2 20.8c-.7 0-1.3-.4-1.3-1.4 0-.5-.1-2.2-.1-2.6 0-2.6.1-5.1-1.7-6.9-2-2-6.6-2.2-9-.6-.9.5-1.7 1.2-2.3 2.1l2.3 2.4c.9-1.5 2.2-2.2 3.7-2.2 1.4-.1 2.6.6 3.1 2-3.1.8-7.1 1.1-8.8 4.3-.8 1.5-.6 3.4.6 4.7.9 1 2.4 1.3 3.8 1.3 2.2 0 4.3-.5 5.6-2.5.7 1.7 2.2 2.5 4 2.5.3 0 .6-.1.8-.2v-3c-.2.1-.4.1-.7.1zm-5.3-3.1c.1 2.2-1.7 3.4-3.7 3.4-1.1 0-1.8-.5-1.8-1.6 0-1.2 1-1.6 2.1-1.9l3.4-1v1.1z"
+               },
+               "pseudoBefore": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "fill": "rgb(20, 20, 20)",
+                    "height": "auto",
+                    "pointer-events": "none",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "fill": "rgb(20, 20, 20)",
+                    "height": "auto",
+                    "pointer-events": "none",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-7",
+               "parentId": "el-0",
+               "depth": 1,
+               "tag": "ul",
+               "classes": "hidden list-none laptop:flex",
+               "text": "",
+               "styles": {
+                    "display": "flex",
+                    "height": "48px",
+                    "list-style-type": "none",
+                    "width": "952px"
+               },
+               "attrs": {},
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "content": "none",
+                    "height": "auto",
+                    "list-style-type": "none",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "height": "auto",
+                    "list-style-type": "none",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-8",
+               "parentId": "el-7",
+               "depth": 2,
+               "tag": "li",
+               "classes": "relative",
+               "text": "",
+               "styles": {
+                    "bottom": "0px",
+                    "display": "list-item",
+                    "height": "48px",
+                    "left": "0px",
+                    "list-style-type": "none",
+                    "position": "relative",
+                    "right": "0px",
+                    "top": "0px",
+                    "width": "164.734px"
+               },
+               "attrs": {},
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "content": "none",
+                    "display": "inline",
+                    "height": "auto",
+                    "list-style-type": "none",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "display": "inline",
+                    "height": "auto",
+                    "list-style-type": "none",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-9",
+               "parentId": "el-8",
+               "depth": 3,
+               "tag": "div",
+               "classes": "group relative",
+               "text": "",
+               "styles": {
+                    "bottom": "0px",
+                    "height": "48px",
+                    "left": "0px",
+                    "list-style-type": "none",
+                    "position": "relative",
+                    "right": "0px",
+                    "top": "0px",
+                    "width": "164.734px"
+               },
+               "attrs": {},
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "content": "none",
+                    "display": "inline",
+                    "height": "auto",
+                    "list-style-type": "none",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "display": "inline",
+                    "height": "auto",
+                    "list-style-type": "none",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-10",
+               "parentId": "el-9",
+               "depth": 4,
+               "tag": "button",
+               "classes": "typography-body-m-semibold text-nowrap flex items-center justify-center disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none duration-short-m ease-ease-out bg-none text-primary hover:text-accent rounded-full px-5 h-12 cursor-pointer font-semibold transition-colors duration-150 group-hover:text-accent",
+               "text": "Business types",
+               "styles": {
+                    "align-items": "center",
+                    "animation-duration": "0.2s",
+                    "animation-timing-function": "cubic-bezier(0, 0.55, 0.45, 1)",
+                    "appearance": "button",
+                    "border-bottom-left-radius": "9999px",
+                    "border-bottom-right-radius": "9999px",
+                    "border-bottom-style": "none",
+                    "border-left-style": "none",
+                    "border-right-style": "none",
+                    "border-top-left-radius": "9999px",
+                    "border-top-right-radius": "9999px",
+                    "border-top-style": "none",
+                    "cursor": "pointer",
+                    "display": "flex",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "48px",
+                    "justify-content": "center",
+                    "list-style-type": "none",
+                    "padding-left": "20px",
+                    "padding-right": "20px",
+                    "text-align": "center",
+                    "text-wrap-mode": "nowrap",
+                    "transition-duration": "0.2s",
+                    "transition-property": "color, background-color, border-color, text-decoration-color, fill, stroke",
+                    "transition-timing-function": "cubic-bezier(0, 0.55, 0.45, 1)",
+                    "width": "164.734px",
+                    "border-color": "rgb(20, 20, 20)"
+               },
+               "attrs": {
+                    "aria-haspopup": "true",
+                    "aria-expanded": "false",
+                    "type": "button"
+               },
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "list-style-type": "none",
+                    "text-align": "center",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "list-style-type": "none",
+                    "text-align": "center",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-11",
+               "parentId": "el-9",
+               "depth": 4,
+               "tag": "div",
+               "classes": "absolute left-4 top-full z-50 rounded-[24px] shadow-[0px_8px_32px_0px_rgba(13,22,25,0.16)] bg-white transition-all duration-200 ease-in-out animate-[fade-out_200ms_ease-in-out] invisible opacity-0 max-w-[760px] p-6 px-8 laptop:p-10 desktop:max-w-[900px]",
+               "text": "",
+               "styles": {
+                    "animation-duration": "0.2s",
+                    "animation-name": "fade-out",
+                    "animation-timing-function": "cubic-bezier(0.4, 0, 0.2, 1)",
+                    "background-color": "rgb(255, 255, 255)",
+                    "border-bottom-left-radius": "24px",
+                    "border-bottom-right-radius": "24px",
+                    "border-top-left-radius": "24px",
+                    "border-top-right-radius": "24px",
+                    "box-shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(13, 22, 25, 0.16) 0px 8px 32px 0px",
+                    "display": "none",
+                    "height": "auto",
+                    "left": "16px",
+                    "list-style-type": "none",
+                    "max-width": "900px",
+                    "opacity": "0",
+                    "padding-bottom": "40px",
+                    "padding-left": "40px",
+                    "padding-right": "40px",
+                    "padding-top": "40px",
+                    "position": "absolute",
+                    "top": "100%",
+                    "transition-duration": "0.2s",
+                    "transition-timing-function": "cubic-bezier(0.4, 0, 0.2, 1)",
+                    "visibility": "hidden",
+                    "width": "auto",
+                    "z-index": "50"
+               },
+               "attrs": {
+                    "role": "menu",
+                    "tabindex": "0"
+               },
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "content": "none",
+                    "display": "inline",
+                    "height": "auto",
+                    "list-style-type": "none",
+                    "visibility": "hidden",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-bg-opacity": "1",
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "display": "inline",
+                    "height": "auto",
+                    "list-style-type": "none",
+                    "visibility": "hidden",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-bg-opacity": "1",
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-12",
+               "parentId": "el-7",
+               "depth": 2,
+               "tag": "li",
+               "classes": "relative",
+               "text": "",
+               "styles": {
+                    "bottom": "0px",
+                    "display": "list-item",
+                    "height": "48px",
+                    "left": "0px",
+                    "list-style-type": "none",
+                    "position": "relative",
+                    "right": "0px",
+                    "top": "0px",
+                    "width": "118.875px"
+               },
+               "attrs": {},
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "content": "none",
+                    "display": "inline",
+                    "height": "auto",
+                    "list-style-type": "none",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "display": "inline",
+                    "height": "auto",
+                    "list-style-type": "none",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-13",
+               "parentId": "el-12",
+               "depth": 3,
+               "tag": "div",
+               "classes": "group relative",
+               "text": "",
+               "styles": {
+                    "bottom": "0px",
+                    "height": "48px",
+                    "left": "0px",
+                    "list-style-type": "none",
+                    "position": "relative",
+                    "right": "0px",
+                    "top": "0px",
+                    "width": "118.875px"
+               },
+               "attrs": {},
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "content": "none",
+                    "display": "inline",
+                    "height": "auto",
+                    "list-style-type": "none",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "display": "inline",
+                    "height": "auto",
+                    "list-style-type": "none",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-14",
+               "parentId": "el-13",
+               "depth": 4,
+               "tag": "button",
+               "classes": "typography-body-m-semibold text-nowrap flex items-center justify-center disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none duration-short-m ease-ease-out bg-none text-primary hover:text-accent rounded-full h-12 cursor-pointer font-semibold transition-colors duration-150 group-hover:text-accent px-6",
+               "text": "Features",
+               "styles": {
+                    "align-items": "center",
+                    "animation-duration": "0.2s",
+                    "animation-timing-function": "cubic-bezier(0, 0.55, 0.45, 1)",
+                    "appearance": "button",
+                    "border-bottom-left-radius": "9999px",
+                    "border-bottom-right-radius": "9999px",
+                    "border-bottom-style": "none",
+                    "border-left-style": "none",
+                    "border-right-style": "none",
+                    "border-top-left-radius": "9999px",
+                    "border-top-right-radius": "9999px",
+                    "border-top-style": "none",
+                    "cursor": "pointer",
+                    "display": "flex",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "48px",
+                    "justify-content": "center",
+                    "list-style-type": "none",
+                    "padding-left": "24px",
+                    "padding-right": "24px",
+                    "text-align": "center",
+                    "text-wrap-mode": "nowrap",
+                    "transition-duration": "0.2s",
+                    "transition-property": "color, background-color, border-color, text-decoration-color, fill, stroke",
+                    "transition-timing-function": "cubic-bezier(0, 0.55, 0.45, 1)",
+                    "width": "118.875px",
+                    "border-color": "rgb(20, 20, 20)"
+               },
+               "attrs": {
+                    "aria-haspopup": "true",
+                    "aria-expanded": "false",
+                    "type": "button"
+               },
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "list-style-type": "none",
+                    "text-align": "center",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "list-style-type": "none",
+                    "text-align": "center",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-15",
+               "parentId": "el-13",
+               "depth": 4,
+               "tag": "div",
+               "classes": "absolute left-4 top-full z-50 rounded-[24px] shadow-[0px_8px_32px_0px_rgba(13,22,25,0.16)] bg-white transition-all duration-200 ease-in-out animate-[fade-out_200ms_ease-in-out] invisible opacity-0 max-w-[760px] p-6 px-8 laptop:p-10 desktop:max-w-[900px] min-w-[336px]",
+               "text": "",
+               "styles": {
+                    "animation-duration": "0.2s",
+                    "animation-name": "fade-out",
+                    "animation-timing-function": "cubic-bezier(0.4, 0, 0.2, 1)",
+                    "background-color": "rgb(255, 255, 255)",
+                    "border-bottom-left-radius": "24px",
+                    "border-bottom-right-radius": "24px",
+                    "border-top-left-radius": "24px",
+                    "border-top-right-radius": "24px",
+                    "box-shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(13, 22, 25, 0.16) 0px 8px 32px 0px",
+                    "display": "none",
+                    "height": "auto",
+                    "left": "16px",
+                    "list-style-type": "none",
+                    "max-width": "900px",
+                    "min-width": "336px",
+                    "opacity": "0",
+                    "padding-bottom": "40px",
+                    "padding-left": "40px",
+                    "padding-right": "40px",
+                    "padding-top": "40px",
+                    "position": "absolute",
+                    "top": "100%",
+                    "transition-duration": "0.2s",
+                    "transition-timing-function": "cubic-bezier(0.4, 0, 0.2, 1)",
+                    "visibility": "hidden",
+                    "width": "auto",
+                    "z-index": "50"
+               },
+               "attrs": {
+                    "role": "menu",
+                    "tabindex": "0"
+               },
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "content": "none",
+                    "display": "inline",
+                    "height": "auto",
+                    "list-style-type": "none",
+                    "visibility": "hidden",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-bg-opacity": "1",
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "display": "inline",
+                    "height": "auto",
+                    "list-style-type": "none",
+                    "visibility": "hidden",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-bg-opacity": "1",
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-16",
+               "parentId": "el-7",
+               "depth": 2,
+               "tag": "li",
+               "classes": "",
+               "text": "",
+               "styles": {
+                    "display": "list-item",
+                    "height": "48px",
+                    "list-style-type": "none",
+                    "width": "97.625px"
+               },
+               "attrs": {},
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "content": "none",
+                    "display": "inline",
+                    "height": "auto",
+                    "list-style-type": "none",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "display": "inline",
+                    "height": "auto",
+                    "list-style-type": "none",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-17",
+               "parentId": "el-16",
+               "depth": 3,
+               "tag": "a",
+               "classes": "typography-body-m-semibold text-nowrap flex items-center justify-center disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none duration-short-m ease-ease-out bg-none text-primary hover:text-accent rounded-full px-5 h-12 font-semibold transition-colors duration-300 ease-in-out",
+               "text": "Pricing",
+               "styles": {
+                    "align-items": "center",
+                    "animation-duration": "0.2s",
+                    "animation-timing-function": "cubic-bezier(0.4, 0, 0.2, 1)",
+                    "appearance": "button",
+                    "border-bottom-left-radius": "9999px",
+                    "border-bottom-right-radius": "9999px",
+                    "border-top-left-radius": "9999px",
+                    "border-top-right-radius": "9999px",
+                    "cursor": "pointer",
+                    "display": "flex",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "48px",
+                    "justify-content": "center",
+                    "list-style-type": "none",
+                    "padding-left": "20px",
+                    "padding-right": "20px",
+                    "text-wrap-mode": "nowrap",
+                    "transition-duration": "0.2s",
+                    "transition-property": "color, background-color, border-color, text-decoration-color, fill, stroke",
+                    "transition-timing-function": "cubic-bezier(0.4, 0, 0.2, 1)",
+                    "width": "97.625px"
+               },
+               "attrs": {
+                    "data-qa": "nav-pricing-link",
+                    "type": "button",
+                    "href": "https://www.fresha.com/pricing"
+               },
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "list-style-type": "none",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "list-style-type": "none",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-18",
+               "parentId": "el-0",
+               "depth": 1,
+               "tag": "div",
+               "classes": "hidden justify-end items-center gap-4 laptop:flex",
+               "text": "",
+               "styles": {
+                    "align-items": "center",
+                    "column-gap": "16px",
+                    "display": "flex",
+                    "height": "48px",
+                    "justify-content": "flex-end",
+                    "row-gap": "16px",
+                    "width": "280px"
+               },
+               "attrs": {},
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "content": "none",
+                    "height": "auto",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "height": "auto",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-19",
+               "parentId": "el-18",
+               "depth": 2,
+               "tag": "a",
+               "classes": "typography-body-m-semibold text-nowrap items-center justify-center disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none duration-short-m ease-ease-out bg-secondary text-secondary-foreground border-neutral hover:border-neutral-hover hover:bg-secondary-hover active:border-neutral-active active:scale-active rounded-full px-5 h-12 hidden cursor-pointer large:flex transition-colors duration-300 ease-in-out border border-solid flex shrink-0 gap-2 font-semibold leading-5",
+               "text": "",
+               "styles": {
+                    "align-items": "center",
+                    "animation-duration": "0.2s",
+                    "animation-timing-function": "cubic-bezier(0.4, 0, 0.2, 1)",
+                    "appearance": "button",
+                    "background-color": "rgb(255, 255, 255)",
+                    "border-bottom-left-radius": "9999px",
+                    "border-bottom-right-radius": "9999px",
+                    "border-bottom-width": "1px",
+                    "border-left-width": "1px",
+                    "border-right-width": "1px",
+                    "border-top-left-radius": "9999px",
+                    "border-top-right-radius": "9999px",
+                    "border-top-width": "1px",
+                    "column-gap": "8px",
+                    "cursor": "pointer",
+                    "display": "flex",
+                    "flex-shrink": "0",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "48px",
+                    "justify-content": "center",
+                    "padding-left": "20px",
+                    "padding-right": "20px",
+                    "row-gap": "8px",
+                    "text-wrap-mode": "nowrap",
+                    "transition-duration": "0.2s",
+                    "transition-property": "color, background-color, border-color, text-decoration-color, fill, stroke",
+                    "transition-timing-function": "cubic-bezier(0.4, 0, 0.2, 1)",
+                    "width": "172.281px"
+               },
+               "attrs": {
+                    "href": "https://www.fresha.com/",
+                    "type": "button"
+               },
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-20",
+               "parentId": "el-19",
+               "depth": 3,
+               "tag": "div",
+               "classes": "size-6 transition-colors duration-300 ease-in-out",
+               "text": "",
+               "styles": {
+                    "animation-duration": "0.3s",
+                    "animation-timing-function": "cubic-bezier(0.4, 0, 0.2, 1)",
+                    "cursor": "pointer",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "24px",
+                    "text-wrap-mode": "nowrap",
+                    "transition-duration": "0.3s",
+                    "transition-property": "color, background-color, border-color, text-decoration-color, fill, stroke",
+                    "transition-timing-function": "cubic-bezier(0.4, 0, 0.2, 1)",
+                    "width": "24px"
+               },
+               "attrs": {},
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-21",
+               "parentId": "el-20",
+               "depth": 4,
+               "tag": "svg",
+               "classes": "",
+               "text": "",
+               "styles": {
+                    "cursor": "pointer",
+                    "fill": "none",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "24px",
+                    "overflow-x": "hidden",
+                    "overflow-y": "hidden",
+                    "text-wrap-mode": "nowrap",
+                    "vertical-align": "middle",
+                    "width": "24px"
+               },
+               "attrs": {
+                    "xmlns": "http://www.w3.org/2000/svg",
+                    "width": "24",
+                    "height": "24",
+                    "viewBox": "0 0 24 24",
+                    "fill": "none"
+               },
+               "svgAttrs": {
+                    "xmlns": "http://www.w3.org/2000/svg",
+                    "width": "24",
+                    "height": "24",
+                    "viewBox": "0 0 24 24",
+                    "fill": "none"
+               },
+               "pseudoBefore": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "fill": "none",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "fill": "none",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-22",
+               "parentId": "el-21",
+               "depth": 5,
+               "tag": "path",
+               "classes": "",
+               "text": "",
+               "styles": {
+                    "clip-rule": "evenodd",
+                    "cursor": "pointer",
+                    "d": "path(\"M 5.05681 3.00003 L 18.9442 3 C 19.2676 3.00267 19.5815 3.10915 19.8399 3.30373 C 20.0982 3.49831 20.2872 3.77072 20.379 4.08082 L 21.7218 8.79453 C 21.7408 8.86136 21.7505 8.93051 21.7505 9 V 10.5 C 21.7505 11.4946 21.3554 12.4484 20.6521 13.1517 C 20.5259 13.2779 20.3916 13.3942 20.2505 13.5 V 19.5 C 20.2505 19.8978 20.0925 20.2794 19.8111 20.5607 C 19.5298 20.842 19.1483 21 18.7505 21 H 5.25049 C 4.85266 21 4.47113 20.842 4.18983 20.5607 C 3.90852 20.2794 3.75049 19.8978 3.75049 19.5 V 13.5 C 3.60934 13.3942 3.47505 13.2779 3.34884 13.1517 C 2.64558 12.4484 2.25049 11.4946 2.25049 10.5 V 9 C 2.25049 8.93051 2.26015 8.86136 2.27918 8.79453 L 3.62194 4.0808 C 3.71376 3.77071 3.90279 3.49831 4.16111 3.30373 C 4.41943 3.10915 4.73342 3.00269 5.05681 3.00003 Z M 4.96096 12.4955 C 4.9075 12.4538 4.84826 12.4193 4.78463 12.3932 C 4.65016 12.3069 4.52427 12.2058 4.4095 12.091 C 3.98754 11.669 3.75049 11.0967 3.75049 10.5 V 9.75 H 8.25049 V 10.5 C 8.25049 11.0967 8.01344 11.669 7.59148 12.091 C 7.16952 12.513 6.59723 12.75 6.00049 12.75 C 5.63519 12.75 5.27906 12.6612 4.96096 12.4955 Z M 5.25049 14.1743 V 19.5 H 18.7505 V 14.1743 C 18.5055 14.2243 18.2543 14.25 18.0005 14.25 C 17.0059 14.25 16.0521 13.8549 15.3488 13.1517 C 15.2226 13.0254 15.1063 12.8912 15.0005 12.75 C 14.8946 12.8912 14.7783 13.0254 14.6521 13.1517 C 13.9489 13.8549 12.9951 14.25 12.0005 14.25 C 11.0059 14.25 10.0521 13.8549 9.34884 13.1517 C 9.22263 13.0254 9.10634 12.8912 9.00049 12.75 C 8.89463 12.8912 8.77835 13.0254 8.65214 13.1517 C 7.94888 13.8549 6.99505 14.25 6.00049 14.25 C 5.74667 14.25 5.49551 14.2243 5.25049 14.1743 Z M 9.75049 10.5 C 9.75049 11.0967 9.98754 11.669 10.4095 12.091 C 10.8315 12.513 11.4038 12.75 12.0005 12.75 C 12.5972 12.75 13.1695 12.513 13.5915 12.091 C 14.0134 11.669 14.2505 11.0967 14.2505 10.5 V 9.75 H 9.75049 V 10.5 Z M 20.007 8.25 L 18.9405 4.50595 L 5.06855 4.5 L 3.99397 8.25 H 20.007 Z M 20.2505 9.75 H 15.7505 V 10.5 C 15.7505 11.0967 15.9875 11.669 16.4095 12.091 C 16.8315 12.513 17.4038 12.75 18.0005 12.75 C 18.3658 12.75 18.7219 12.6612 19.04 12.4955 C 19.0935 12.4538 19.1527 12.4193 19.2163 12.3932 C 19.3508 12.3069 19.4767 12.2058 19.5915 12.091 C 20.0134 11.669 20.2505 11.0967 20.2505 10.5 V 9.75 Z\")",
+                    "display": "inline",
+                    "fill": "rgb(13, 22, 25)",
+                    "fill-rule": "evenodd",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto"
+               },
+               "attrs": {
+                    "fill-rule": "evenodd",
+                    "clip-rule": "evenodd",
+                    "d": "M5.05681 3.00003L18.9442 3C19.2676 3.00267 19.5815 3.10915 19.8399 3.30373C20.0982 3.49831 20.2872 3.77072 20.379 4.08082L21.7218 8.79453C21.7408 8.86136 21.7505 8.93051 21.7505 9V10.5C21.7505 11.4946 21.3554 12.4484 20.6521 13.1517C20.5259 13.2779 20.3916 13.3942 20.2505 13.5V19.5C20.2505 19.8978 20.0925 20.2794 19.8111 20.5607C19.5298 20.842 19.1483 21 18.7505 21H5.25049C4.85266 21 4.47113 20.842 4.18983 20.5607C3.90852 20.2794 3.75049 19.8978 3.75049 19.5V13.5C3.60934 13.3942 3.47505 13.2779 3.34884 13.1517C2.64558 12.4484 2.25049 11.4946 2.25049 10.5V9C2.25049 8.93051 2.26015 8.86136 2.27918 8.79453L3.62194 4.0808C3.71376 3.77071 3.90279 3.49831 4.16111 3.30373C4.41943 3.10915 4.73342 3.00269 5.05681 3.00003ZM4.96096 12.4955C4.9075 12.4538 4.84826 12.4193 4.78463 12.3932C4.65016 12.3069 4.52427 12.2058 4.4095 12.091C3.98754 11.669 3.75049 11.0967 3.75049 10.5V9.75H8.25049V10.5C8.25049 11.0967 8.01344 11.669 7.59148 12.091C7.16952 12.513 6.59723 12.75 6.00049 12.75C5.63519 12.75 5.27906 12.6612 4.96096 12.4955ZM5.25049 14.1743V19.5H18.7505V14.1743C18.5055 14.2243 18.2543 14.25 18.0005 14.25C17.0059 14.25 16.0521 13.8549 15.3488 13.1517C15.2226 13.0254 15.1063 12.8912 15.0005 12.75C14.8946 12.8912 14.7783 13.0254 14.6521 13.1517C13.9489 13.8549 12.9951 14.25 12.0005 14.25C11.0059 14.25 10.0521 13.8549 9.34884 13.1517C9.22263 13.0254 9.10634 12.8912 9.00049 12.75C8.89463 12.8912 8.77835 13.0254 8.65214 13.1517C7.94888 13.8549 6.99505 14.25 6.00049 14.25C5.74667 14.25 5.49551 14.2243 5.25049 14.1743ZM9.75049 10.5C9.75049 11.0967 9.98754 11.669 10.4095 12.091C10.8315 12.513 11.4038 12.75 12.0005 12.75C12.5972 12.75 13.1695 12.513 13.5915 12.091C14.0134 11.669 14.2505 11.0967 14.2505 10.5V9.75H9.75049V10.5ZM20.007 8.25L18.9405 4.50595L5.06855 4.5L3.99397 8.25H20.007ZM20.2505 9.75H15.7505V10.5C15.7505 11.0967 15.9875 11.669 16.4095 12.091C16.8315 12.513 17.4038 12.75 18.0005 12.75C18.3658 12.75 18.7219 12.6612 19.04 12.4955C19.0935 12.4538 19.1527 12.4193 19.2163 12.3932C19.3508 12.3069 19.4767 12.2058 19.5915 12.091C20.0134 11.669 20.2505 11.0967 20.2505 10.5V9.75Z",
+                    "fill": "#0D1619"
+               },
+               "svgAttrs": {
+                    "fill-rule": "evenodd",
+                    "clip-rule": "evenodd",
+                    "d": "M5.05681 3.00003L18.9442 3C19.2676 3.00267 19.5815 3.10915 19.8399 3.30373C20.0982 3.49831 20.2872 3.77072 20.379 4.08082L21.7218 8.79453C21.7408 8.86136 21.7505 8.93051 21.7505 9V10.5C21.7505 11.4946 21.3554 12.4484 20.6521 13.1517C20.5259 13.2779 20.3916 13.3942 20.2505 13.5V19.5C20.2505 19.8978 20.0925 20.2794 19.8111 20.5607C19.5298 20.842 19.1483 21 18.7505 21H5.25049C4.85266 21 4.47113 20.842 4.18983 20.5607C3.90852 20.2794 3.75049 19.8978 3.75049 19.5V13.5C3.60934 13.3942 3.47505 13.2779 3.34884 13.1517C2.64558 12.4484 2.25049 11.4946 2.25049 10.5V9C2.25049 8.93051 2.26015 8.86136 2.27918 8.79453L3.62194 4.0808C3.71376 3.77071 3.90279 3.49831 4.16111 3.30373C4.41943 3.10915 4.73342 3.00269 5.05681 3.00003ZM4.96096 12.4955C4.9075 12.4538 4.84826 12.4193 4.78463 12.3932C4.65016 12.3069 4.52427 12.2058 4.4095 12.091C3.98754 11.669 3.75049 11.0967 3.75049 10.5V9.75H8.25049V10.5C8.25049 11.0967 8.01344 11.669 7.59148 12.091C7.16952 12.513 6.59723 12.75 6.00049 12.75C5.63519 12.75 5.27906 12.6612 4.96096 12.4955ZM5.25049 14.1743V19.5H18.7505V14.1743C18.5055 14.2243 18.2543 14.25 18.0005 14.25C17.0059 14.25 16.0521 13.8549 15.3488 13.1517C15.2226 13.0254 15.1063 12.8912 15.0005 12.75C14.8946 12.8912 14.7783 13.0254 14.6521 13.1517C13.9489 13.8549 12.9951 14.25 12.0005 14.25C11.0059 14.25 10.0521 13.8549 9.34884 13.1517C9.22263 13.0254 9.10634 12.8912 9.00049 12.75C8.89463 12.8912 8.77835 13.0254 8.65214 13.1517C7.94888 13.8549 6.99505 14.25 6.00049 14.25C5.74667 14.25 5.49551 14.2243 5.25049 14.1743ZM9.75049 10.5C9.75049 11.0967 9.98754 11.669 10.4095 12.091C10.8315 12.513 11.4038 12.75 12.0005 12.75C12.5972 12.75 13.1695 12.513 13.5915 12.091C14.0134 11.669 14.2505 11.0967 14.2505 10.5V9.75H9.75049V10.5ZM20.007 8.25L18.9405 4.50595L5.06855 4.5L3.99397 8.25H20.007ZM20.2505 9.75H15.7505V10.5C15.7505 11.0967 15.9875 11.669 16.4095 12.091C16.8315 12.513 17.4038 12.75 18.0005 12.75C18.3658 12.75 18.7219 12.6612 19.04 12.4955C19.0935 12.4538 19.1527 12.4193 19.2163 12.3932C19.3508 12.3069 19.4767 12.2058 19.5915 12.091C20.0134 11.669 20.2505 11.0967 20.2505 10.5V9.75Z",
+                    "fill": "#0D1619"
+               },
+               "pseudoBefore": {
+                    "clip-rule": "evenodd",
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "fill": "rgb(13, 22, 25)",
+                    "fill-rule": "evenodd",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "clip-rule": "evenodd",
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "fill": "rgb(13, 22, 25)",
+                    "fill-rule": "evenodd",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-23",
+               "parentId": "el-19",
+               "depth": 3,
+               "tag": "span",
+               "classes": "",
+               "text": "Marketplace",
+               "styles": {
+                    "cursor": "pointer",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "24px",
+                    "text-wrap-mode": "nowrap",
+                    "width": "98.2812px"
+               },
+               "attrs": {},
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-24",
+               "parentId": "el-18",
+               "depth": 2,
+               "tag": "a",
+               "classes": "typography-body-m-semibold text-nowrap items-center justify-center disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none duration-short-m ease-ease-out bg-primary text-primary-foreground hover:bg-primary-hover active:scale-active rounded-full px-5 flex h-10 laptop:h-12 tablet:font-semibold tablet:typography-body-m-semibold leading-5 transition-colors duration-300 ease-in-out border border-transparent",
+               "text": "Sign up",
+               "styles": {
+                    "align-items": "center",
+                    "animation-duration": "0.2s",
+                    "animation-timing-function": "cubic-bezier(0.4, 0, 0.2, 1)",
+                    "appearance": "button",
+                    "background-color": "rgb(20, 20, 20)",
+                    "border-bottom-left-radius": "9999px",
+                    "border-bottom-right-radius": "9999px",
+                    "border-bottom-width": "1px",
+                    "border-left-width": "1px",
+                    "border-right-width": "1px",
+                    "border-top-left-radius": "9999px",
+                    "border-top-right-radius": "9999px",
+                    "border-top-width": "1px",
+                    "color": "rgb(255, 255, 255)",
+                    "cursor": "pointer",
+                    "display": "flex",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "48px",
+                    "justify-content": "center",
+                    "outline-color": "rgb(255, 255, 255)",
+                    "padding-left": "20px",
+                    "padding-right": "20px",
+                    "text-wrap-mode": "nowrap",
+                    "transition-duration": "0.2s",
+                    "transition-property": "color, background-color, border-color, text-decoration-color, fill, stroke",
+                    "transition-timing-function": "cubic-bezier(0.4, 0, 0.2, 1)",
+                    "width": "104.328px",
+                    "border-color": "rgba(0, 0, 0, 0)"
+               },
+               "attrs": {
+                    "type": "button",
+                    "href": "https://partners.fresha.com/users/sign-in?lang=en-US&from=fresha"
+               },
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "color": "rgb(255, 255, 255)",
+                    "content": "none",
+                    "cursor": "pointer",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "outline-color": "rgb(255, 255, 255)",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "color": "rgb(255, 255, 255)",
+                    "content": "none",
+                    "cursor": "pointer",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "outline-color": "rgb(255, 255, 255)",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-25",
+               "parentId": "el-18",
+               "depth": 2,
+               "tag": "div",
+               "classes": "",
+               "text": "",
+               "styles": {
+                    "appearance": "button",
+                    "height": "48px",
+                    "width": "118.391px"
+               },
+               "attrs": {
+                    "type": "button",
+                    "id": "radix-«r0»",
+                    "aria-haspopup": "menu",
+                    "aria-expanded": "false",
+                    "data-state": "closed"
+               },
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "content": "none",
+                    "display": "inline",
+                    "height": "auto",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "display": "inline",
+                    "height": "auto",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-26",
+               "parentId": "el-25",
+               "depth": 3,
+               "tag": "button",
+               "classes": "typography-body-m-semibold text-nowrap items-center justify-center disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none transition-transform duration-short-m ease-ease-out bg-secondary text-secondary-foreground border border-solid border-neutral hover:border-neutral-hover hover:bg-secondary-hover active:border-neutral-active active:scale-active rounded-full hidden h-10 p-0 px-3 font-semibold tablet:flex laptop:h-12 laptop:px-5",
+               "text": "Menu",
+               "styles": {
+                    "align-items": "center",
+                    "animation-duration": "0.2s",
+                    "animation-timing-function": "cubic-bezier(0, 0.55, 0.45, 1)",
+                    "appearance": "button",
+                    "background-color": "rgb(255, 255, 255)",
+                    "border-bottom-left-radius": "9999px",
+                    "border-bottom-right-radius": "9999px",
+                    "border-bottom-width": "1px",
+                    "border-left-width": "1px",
+                    "border-right-width": "1px",
+                    "border-top-left-radius": "9999px",
+                    "border-top-right-radius": "9999px",
+                    "border-top-width": "1px",
+                    "cursor": "pointer",
+                    "display": "flex",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "48px",
+                    "justify-content": "center",
+                    "padding-left": "20px",
+                    "padding-right": "20px",
+                    "text-align": "center",
+                    "text-wrap-mode": "nowrap",
+                    "transition-duration": "0.2s",
+                    "transition-property": "transform",
+                    "transition-timing-function": "cubic-bezier(0, 0.55, 0.45, 1)",
+                    "width": "118.391px"
+               },
+               "attrs": {
+                    "type": "button"
+               },
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "text-align": "center",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "text-align": "center",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-27",
+               "parentId": "el-26",
+               "depth": 4,
+               "tag": "div",
+               "classes": "size-6 ml-2",
+               "text": "",
+               "styles": {
+                    "cursor": "pointer",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "24px",
+                    "margin-left": "8px",
+                    "text-align": "center",
+                    "text-wrap-mode": "nowrap",
+                    "width": "24px"
+               },
+               "attrs": {},
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "text-align": "center",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "text-align": "center",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-28",
+               "parentId": "el-27",
+               "depth": 5,
+               "tag": "svg",
+               "classes": "",
+               "text": "",
+               "styles": {
+                    "cursor": "pointer",
+                    "fill": "rgb(20, 20, 20)",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "24px",
+                    "overflow-x": "hidden",
+                    "overflow-y": "hidden",
+                    "text-align": "center",
+                    "text-wrap-mode": "nowrap",
+                    "vertical-align": "middle",
+                    "width": "24px"
+               },
+               "attrs": {
+                    "fill": "currentColor",
+                    "xmlns": "http://www.w3.org/2000/svg",
+                    "viewBox": "0 0 32 32"
+               },
+               "svgAttrs": {
+                    "fill": "currentColor",
+                    "xmlns": "http://www.w3.org/2000/svg",
+                    "viewBox": "0 0 32 32"
+               },
+               "pseudoBefore": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "fill": "rgb(20, 20, 20)",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "text-align": "center",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "fill": "rgb(20, 20, 20)",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "text-align": "center",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-29",
+               "parentId": "el-28",
+               "depth": 6,
+               "tag": "path",
+               "classes": "",
+               "text": "",
+               "styles": {
+                    "clip-rule": "evenodd",
+                    "cursor": "pointer",
+                    "d": "path(\"M 4 8 A 1 1 0 0 1 5 7 H 27 A 1 1 0 1 1 27 9 H 5 A 1 1 0 0 1 4 8 M 4 16 A 1 1 0 0 1 5 15 H 27 A 1 1 0 1 1 27 17 H 5 A 1 1 0 0 1 4 16 M 4 24 A 1 1 0 0 1 5 23 H 27 A 1 1 0 1 1 27 25 H 5 A 1 1 0 0 1 4 24\")",
+                    "display": "inline",
+                    "fill": "rgb(20, 20, 20)",
+                    "fill-rule": "evenodd",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "text-align": "center",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto"
+               },
+               "attrs": {
+                    "fill-rule": "evenodd",
+                    "d": "M4 8a1 1 0 0 1 1-1h22a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m0 8a1 1 0 0 1 1-1h22a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m0 8a1 1 0 0 1 1-1h22a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1",
+                    "clip-rule": "evenodd"
+               },
+               "svgAttrs": {
+                    "fill-rule": "evenodd",
+                    "d": "M4 8a1 1 0 0 1 1-1h22a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m0 8a1 1 0 0 1 1-1h22a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m0 8a1 1 0 0 1 1-1h22a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1",
+                    "clip-rule": "evenodd"
+               },
+               "pseudoBefore": {
+                    "clip-rule": "evenodd",
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "fill": "rgb(20, 20, 20)",
+                    "fill-rule": "evenodd",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "text-align": "center",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "clip-rule": "evenodd",
+                    "content": "none",
+                    "cursor": "pointer",
+                    "display": "inline",
+                    "fill": "rgb(20, 20, 20)",
+                    "fill-rule": "evenodd",
+                    "font-size": "17px",
+                    "font-weight": "600",
+                    "height": "auto",
+                    "text-align": "center",
+                    "text-wrap-mode": "nowrap",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          },
+          {
+               "id": "el-30",
+               "parentId": "el-0",
+               "depth": 1,
+               "tag": "div",
+               "classes": "flex items-center justify-end laptop:hidden sf-hidden",
+               "text": "",
+               "styles": {
+                    "align-items": "center",
+                    "display": "none",
+                    "height": "auto",
+                    "justify-content": "flex-end",
+                    "width": "auto"
+               },
+               "attrs": {},
+               "svgAttrs": {},
+               "pseudoBefore": {
+                    "content": "none",
+                    "display": "inline",
+                    "height": "auto",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               },
+               "pseudoAfter": {
+                    "content": "none",
+                    "display": "inline",
+                    "height": "auto",
+                    "width": "auto",
+                    "cssVars": {
+                         "--tw-content": "\"\""
+                    }
+               }
+          }
+     ],
+     "interactiveRules": [
+          {
+               "selector": "[dir] .hover\\:border-neutral-hover:hover",
+               "properties": {
+                    "border-top-color": "",
+                    "border-right-color": "",
+                    "border-bottom-color": "",
+                    "border-left-color": ""
+               }
+          },
+          {
+               "selector": "[dir] .hover\\:bg-primary-hover:hover",
+               "properties": {
+                    "background-color": "var(--color-granite-1400)"
+               }
+          },
+          {
+               "selector": "[dir] .hover\\:bg-secondary-hover:hover",
+               "properties": {
+                    "background-color": "var(--color-granite-100)"
+               }
+          },
+          {
+               "selector": ".hover\\:text-accent:hover",
+               "properties": {
+                    "color": "var(--color-prince-500)"
+               }
+          },
+          {
+               "selector": ".active\\:scale-active:active",
+               "properties": {
+                    "--tw-scale-x": "var(--scaling-active)",
+                    "--tw-scale-y": "var(--scaling-active)"
+               }
+          },
+          {
+               "selector": "[dir] .active\\:scale-active:active",
+               "properties": {
+                    "transform": "translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+               }
+          },
+          {
+               "selector": "[dir] .active\\:border-neutral-active:active",
+               "properties": {
+                    "border-top-color": "",
+                    "border-right-color": "",
+                    "border-bottom-color": "",
+                    "border-left-color": ""
+               }
+          },
+          {
+               "selector": ".group:hover .group-hover\\:text-accent",
+               "properties": {
+                    "color": "var(--color-prince-500)"
+               }
+          },
+          {
+               "selector": ".group:hover .\\[\\@media\\(hover\\:hover\\)\\]\\:group-hover\\:scale-\\[1\\.03\\]",
+               "properties": {
+                    "--tw-scale-x": "1.03",
+                    "--tw-scale-y": "1.03"
+               },
+               "media": "@media (hover: hover)"
+          },
+          {
+               "selector": "[dir] .group:hover .\\[\\@media\\(hover\\:hover\\)\\]\\:group-hover\\:scale-\\[1\\.03\\]",
+               "properties": {
+                    "transform": "translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+               },
+               "media": "@media (hover: hover)"
+          },
+          {
+               "selector": ".group:hover .\\[\\@media\\(hover\\:hover\\)\\]\\:group-hover\\:opacity-100",
+               "properties": {
+                    "opacity": "1"
+               },
+               "media": "@media (hover: hover)"
+          }
+     ],
+     "keyframes": [
+          {
+               "name": "fade-in",
+               "cssText": "@keyframes fade-in { \n  0% { opacity: 0; }\n  100% { opacity: 1; }\n}"
+          },
+          {
+               "name": "slide-rtl",
+               "cssText": "@keyframes slide-rtl { \n  0% { transform: translateX(50%); }\n  100% { transform: translateX(0px); }\n}"
+          },
+          {
+               "name": "slide",
+               "cssText": "@keyframes slide { \n  0% { transform: translateX(-50%); }\n  100% { transform: translateX(0px); }\n}"
+          },
+          {
+               "name": "bounce",
+               "cssText": "@keyframes bounce { \n  0%, 100% { transform: translateY(-25%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }\n  50% { transform: none; animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }\n}"
+          },
+          {
+               "name": "pulse",
+               "cssText": "@keyframes pulse { \n  50% { opacity: 0.5; }\n}"
+          },
+          {
+               "name": "enter",
+               "cssText": "@keyframes enter { \n  0% { opacity: var(--tw-enter-opacity,1); transform: translate3d(var(--tw-enter-translate-x,0),var(--tw-enter-translate-y,0),0) scale3d(var(--tw-enter-scale,1),var(--tw-enter-scale,1),var(--tw-enter-scale,1)) rotate(var(--tw-enter-rotate,0)); }\n}"
+          },
+          {
+               "name": "exit",
+               "cssText": "@keyframes exit { \n  100% { opacity: var(--tw-exit-opacity,1); transform: translate3d(var(--tw-exit-translate-x,0),var(--tw-exit-translate-y,0),0) scale3d(var(--tw-exit-scale,1),var(--tw-exit-scale,1),var(--tw-exit-scale,1)) rotate(var(--tw-exit-rotate,0)); }\n}"
+          },
+          {
+               "name": "fade-out",
+               "cssText": "@keyframes fade-out { \n  0% { opacity: 1; }\n  100% { opacity: 0; }\n}"
+          },
+          {
+               "name": "slide-in",
+               "cssText": "@keyframes slide-in { \n  0% { transform: translateY(-100%); opacity: 0; }\n  100% { transform: translateY(0px); opacity: 1; }\n}"
+          },
+          {
+               "name": "yarl__delayed_fadein",
+               "cssText": "@keyframes yarl__delayed_fadein { \n  0% { opacity: 0; }\n  80% { opacity: 0; }\n  100% { opacity: 1; }\n}"
+          },
+          {
+               "name": "yarl__stroke_opacity",
+               "cssText": "@keyframes yarl__stroke_opacity { \n  0% { stroke-opacity: 1; }\n  100% { stroke-opacity: 0.125; }\n}"
+          }
+     ]
+}

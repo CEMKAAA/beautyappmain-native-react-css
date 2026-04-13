@@ -1,0 +1,1915 @@
+/* ═══════════════════════════════════════════════════
+   MemberDrawer.css — Pixel-perfect from computed-styles.json
+   Drawer infrastructure from TestPage (drawer-root pattern)
+   ═══════════════════════════════════════════════════ */
+
+/* ── Root (same pattern as TestPage .drawer-root) ── */
+.md-root {
+    font-family: 'Roboto Pro', sans-serif;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 801px;
+    max-width: 1920px;
+    z-index: 2000;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0, 0.55, 0.45, 1),
+        width 0.2s cubic-bezier(0, 0.55, 0.45, 1);
+    pointer-events: none;
+}
+
+.md-root--open {
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+/* ── Floating Action Buttons (same as TestPage .drawer-fab-strip) ── */
+.md-fab-strip {
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: 72px;
+    height: 72px;
+    padding: 12px;
+    gap: 12px;
+    grid-template-columns: 48px;
+    grid-template-rows: 48px;
+    transform: translateX(-72px);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.md-root--open .md-fab-strip {
+    opacity: 1;
+}
+
+.md-fab {
+    display: inline-flex;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    max-width: 100%;
+    padding: 0;
+    border: none;
+    background: transparent;
+    border-radius: 999px;
+    align-items: center;
+    cursor: pointer;
+    transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    outline: rgba(0, 0, 0, 0) solid 2px;
+}
+
+.md-fab-inner {
+    display: inline-flex;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    max-width: 100%;
+    padding: 0 19px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 999px;
+    box-shadow: rgba(19, 19, 19, 0.16) 0px 8px 32px 0px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition:
+        background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.md-fab-inner:hover {
+    background-color: rgb(242, 242, 242);
+}
+
+.md-fab-inner:active {
+    transform: scale(0.96);
+    background-color: rgb(235, 235, 235);
+}
+
+.md-fab-icon-wrap {
+    display: inline-flex;
+    width: 24px;
+    height: 24px;
+}
+
+.md-fab-icon {
+    display: inline-flex;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.md-fab-icon svg {
+    position: absolute;
+    inset: 0;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+}
+
+/* ── Main Panel (grid layout) ── */
+.md-panel {
+    background-color: rgb(255, 255, 255);
+    border-left: 1px solid rgb(229, 229, 229);
+    box-shadow: rgba(19, 19, 19, 0.16) 0px 8px 32px 0px, rgb(229, 229, 229) 0px -1px 0px 0px;
+    display: grid;
+    grid-template-areas: "primary";
+    grid-template-columns: 800px;
+    grid-template-rows: 100vh;
+    height: 100vh;
+    max-width: 1848px;
+    width: 801px;
+    position: relative;
+    overflow: visible;
+}
+
+
+/* ── el-11: Inner Container ── */
+.md-inner {
+    grid-column: primary;
+    grid-row: primary;
+    height: 100vh;
+    isolation: isolate;
+    max-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 800px;
+}
+
+/* ── el-12: Main Grid ── */
+.md-grid {
+    background-color: rgb(249, 249, 249);
+    display: grid;
+    grid-template-areas:
+        "menu header"
+        "menu title"
+        "menu body"
+        "menu footer"
+        "menu footerEnd";
+    grid-template-columns: 320px 480px;
+    grid-template-rows: 0px 68px 1fr 0px 0px;
+    height: 100vh;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+    width: 800px;
+}
+
+.md-grid::-webkit-scrollbar {
+    display: none;
+}
+
+/* ── el-13: Sticky Header Background ── */
+.md-header-bg {
+    grid-column: header;
+    grid-row: header;
+    position: sticky;
+    top: 0;
+    width: 480px;
+    z-index: 7;
+}
+
+/* ── el-14: Header BG Inner ── */
+.md-header-bg__inner {
+    background-color: rgb(249, 249, 249);
+    height: 72px;
+    width: 480px;
+}
+
+/* ── el-15: Sticky Header Overlay ── */
+.md-header-overlay {
+    grid-column: header;
+    grid-row: header;
+    position: sticky;
+    top: 0;
+    width: 480px;
+    z-index: 10;
+}
+
+/* ── el-16: Header Flow ── */
+.md-header-flow {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 72px;
+    justify-content: center;
+    max-width: 1920px;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    bottom: -72px;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition-behavior: normal, normal;
+    transition-delay: 0s, 0s;
+    transition-duration: 0.2s, 0.2s;
+    transition-property: opacity, background-color;
+    transition-timing-function: cubic-bezier(0, 0, 1, 1), cubic-bezier(0, 0, 1, 1);
+    width: 480px;
+    z-index: 10;
+}
+
+/* ── el-17: Header Flow Inner ── */
+.md-header-flow__inner {
+    align-items: center;
+    column-gap: 24px;
+    display: flex;
+    height: 72px;
+    max-width: 1440px;
+    min-height: 72px;
+    padding-left: 32px;
+    padding-right: 32px;
+    pointer-events: none;
+    row-gap: 24px;
+    width: 480px;
+}
+
+/* ── el-18: Hidden Back Element ── */
+.md-header-flow__back {
+    display: none;
+}
+
+/* ── el-19: Title Container in Header ── */
+.md-header-flow__title {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 28px;
+    max-width: 100%;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: relative;
+    white-space: nowrap;
+    transition-duration: 0.2s;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+    width: 368px;
+}
+
+/* ── el-20: Header Title Text ── */
+.md-header-flow__title-text {
+    font-size: 20px;
+    font-weight: 600;
+    height: 28px;
+    line-height: 28px;
+    max-width: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 368px;
+}
+
+/* ── el-21: Header Actions ── */
+.md-header-flow__actions {
+    display: flex;
+    height: 24px;
+    justify-content: flex-end;
+    pointer-events: none;
+    width: 24px;
+}
+
+/* ── el-22: Header Action Slot ── */
+.md-header-flow__action-slot {
+    height: 24px;
+    pointer-events: none;
+    width: 24px;
+}
+
+/* ── el-23: Title Section ── */
+.md-title-section {
+    background-color: rgb(249, 249, 249);
+    grid-column: title;
+    grid-row: title;
+    height: 68px;
+    isolation: isolate;
+    position: relative;
+    width: 480px;
+    will-change: opacity;
+    z-index: 8;
+}
+
+.md-title-section::before {
+    content: "";
+    background-position: 50% -72px;
+    background-size: cover;
+    bottom: 0;
+    height: 68px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 480px;
+    z-index: -1;
+}
+
+/* ── el-24: Hidden element ── */
+.md-title-section__hidden {
+    display: none;
+}
+
+/* ── el-25: Title Padded ── */
+.md-title-padded {
+    height: 68px;
+    padding-left: 32px;
+    padding-right: 32px;
+    width: 480px;
+}
+
+/* ── el-26: Title Grid ── */
+.md-title-grid {
+    align-items: center;
+    display: grid;
+    grid-template-areas: "prefix title action" "empty description description";
+    grid-template-columns: 0px 1fr 0px;
+    grid-template-rows: 36px 0px;
+    height: 68px;
+    padding-top: 32px;
+    width: 416px;
+}
+
+/* ── el-27: Title Action Area ── */
+.md-title-action {
+    grid-column: action;
+    grid-row: action;
+    width: 0;
+}
+
+/* ── el-28: Title Text Area ── */
+.md-title-text-area {
+    grid-column: title;
+    grid-row: title;
+    height: 36px;
+}
+
+/* ── el-29: Hidden ── */
+.md-title-text-area__hidden {
+    display: none;
+}
+
+/* ── el-30: Title Text Row ── */
+.md-title-text-row {
+    align-items: center;
+    display: flex;
+    height: 36px;
+    min-height: 36px;
+}
+
+/* ── el-31: H1 Title ── */
+.md-title-h1 {
+    font-size: 28px;
+    font-weight: 600;
+    height: 36px;
+    line-height: 36px;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── el-32: Title Bottom Spacer ── */
+.md-title-bottom {
+    position: relative;
+    top: -52px;
+    width: 480px;
+}
+
+/* ── el-33: Body Section ── */
+.md-body {
+    grid-column: body;
+    grid-row: body;
+    max-width: 100%;
+    padding: 32px;
+    width: 480px;
+}
+
+/* ── el-34: Body Flex Container ── */
+.md-body__container {
+    display: flex;
+    flex-direction: column;
+    width: 416px;
+}
+
+/* ── el-35: Body Column (gap 16px) ── */
+.md-body__column {
+    column-gap: 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    width: 416px;
+}
+
+/* ── el-36: Body Inner Column ── */
+.md-body__inner-column {
+    column-gap: 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    width: 416px;
+}
+
+/* ── el-37: Dashboard Header Row ── */
+.md-dashboard-header {
+    align-items: center;
+    column-gap: 8px;
+    display: flex;
+    justify-content: space-between;
+    row-gap: 8px;
+    width: 416px;
+}
+
+/* ── el-38: Dashboard Title Group ── */
+.md-dashboard-title-group {
+    column-gap: 2px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+}
+
+/* ── el-39: "Performance dashboard" Text ── */
+.md-dashboard-title {
+    font-size: 17px;
+    font-weight: 600;
+    height: 24px;
+    line-height: 24px;
+    margin: 0;
+}
+
+/* ── el-40: "View full dashboard" Link ── */
+.md-dashboard-link {
+    border-radius: 4px;
+    color: rgb(105, 80, 243);
+    cursor: pointer;
+    display: inline;
+    font: inherit;
+    outline-color: rgb(105, 80, 243);
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.md-dashboard-link::before {
+    content: "";
+    border-radius: 4px;
+    bottom: 0;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    transition-duration: 0.1s;
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
+}
+
+.md-dashboard-link:hover {
+    color: rgb(80, 55, 220);
+}
+
+/* ── el-41: Dropdown Wrapper ── */
+.md-dropdown-wrap {
+    height: 36px;
+}
+
+/* ── el-42: Dropdown Button ── */
+.md-dropdown-btn {
+    align-items: center;
+    appearance: button;
+    background: none;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    display: inline-flex;
+    height: 36px;
+    line-height: 16.1px;
+    max-width: 100%;
+    outline: 2px solid rgba(0, 0, 0, 0);
+    outline-offset: 2px;
+    position: relative;
+    text-align: center;
+    transition-duration: 0.2s;
+    transition-property: max-inline-size;
+    transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+    padding: 0;
+}
+
+.md-dropdown-btn::before {
+    content: "";
+    border-radius: 999px;
+    bottom: 0;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    cursor: pointer;
+    height: 36px;
+    left: 0;
+    line-height: 16.1px;
+    opacity: 0;
+    padding: 2px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    transition-duration: 0.1s;
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
+}
+
+/* ── el-43: Dropdown Inner ── */
+.md-dropdown-btn__inner {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 999px;
+    column-gap: 8px;
+    cursor: pointer;
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    line-height: 16.1px;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    row-gap: 8px;
+    scale: 1;
+    text-align: center;
+    transition-behavior: normal, normal, normal, normal, normal, normal;
+    transition-delay: 0s, 0s, 0s, 0s, 0s, 0s;
+    transition-duration: 0.1s, 0.1s, 0.1s, 0.2s, 0.2s, 0.2s;
+    transition-property: background-color, border-color, transform, max-inline-size, padding, gap;
+    transition-timing-function: cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0.85, 0, 0.15, 1), cubic-bezier(0.85, 0, 0.15, 1), cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.md-dropdown-btn:hover .md-dropdown-btn__inner {
+    background-color: rgb(242, 242, 242);
+    scale: 1;
+}
+
+.md-dropdown-btn:active .md-dropdown-btn__inner {
+    background-color: rgb(229, 229, 229);
+    scale: 0.96;
+}
+
+/* ── el-44: Dropdown Label Wrapper ── */
+.md-dropdown-btn__label {
+    align-items: center;
+    column-gap: 8px;
+    cursor: pointer;
+    display: flex;
+    height: 20px;
+    line-height: 16.1px;
+    row-gap: 8px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ── el-45: Dropdown Label Text ── */
+.md-dropdown-btn__text {
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    height: 20px;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 20px;
+}
+
+/* ── el-46: Dropdown Chevron Wrap ── */
+.md-dropdown-btn__chevron-wrap {
+    cursor: pointer;
+    display: flex;
+    height: 20px;
+    line-height: 16.1px;
+    text-align: center;
+    width: 20px;
+}
+
+/* ── el-47: Dropdown Chevron Icon ── */
+.md-dropdown-btn__chevron {
+    display: flex;
+    flex-shrink: 0;
+    height: 20px;
+    position: relative;
+    width: 20px;
+}
+
+/* ── el-48/49: Chevron SVG ── */
+.md-dropdown-btn__chevron svg {
+    bottom: 0;
+    fill: rgb(13, 13, 13);
+    height: 20px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+}
+
+/* ── el-50: Cards Section Wrapper ── */
+.md-cards-section {
+    display: flex;
+    width: 416px;
+}
+
+/* ── el-51: Cards Section Inner ── */
+.md-cards-section__inner {
+    column-gap: 32px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    row-gap: 32px;
+    width: 416px;
+}
+
+/* ── el-52: Cards Grid ── */
+.md-cards-grid {
+    column-gap: 24px;
+    display: grid;
+    grid-template-areas: "A A" "B C" "D E";
+    grid-template-columns: 196px 196px;
+    grid-template-rows: 400px 180px 180px;
+    row-gap: 24px;
+    width: 416px;
+}
+
+/* ═══════════════════════════════════════════════════
+   Sales Card (el-53 → el-77)
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-53: Sales Card Container ── */
+.md-sales-card {
+    grid-column: A;
+    grid-row: A;
+    height: 400px;
+    width: 416px;
+}
+
+/* ── el-54: Sales Card Relative ── */
+.md-sales-card__relative {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    isolation: isolate;
+    position: relative;
+    width: 416px;
+}
+
+/* ── el-55: Sales Card Background ── */
+.md-sales-card__bg {
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    height: 400px;
+    overflow: hidden;
+    transition-duration: 0.1s;
+    transition-property: background-color, box-shadow, transform;
+    transition-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+    width: 416px;
+}
+
+/* ── el-56: Sales Card Border Overlay ── */
+.md-sales-card__border {
+    border-radius: 12px;
+    box-shadow: rgb(229, 229, 229) 0px 0px 0px 1px inset;
+    height: 400px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 416px;
+    z-index: 2000;
+}
+
+/* ── el-57: Sales Card Content ── */
+.md-sales-card__content {
+    column-gap: 24px;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    padding: 24px;
+    row-gap: 24px;
+    width: 416px;
+}
+
+/* ── el-58: Sales Card Header ── */
+.md-sales-card__header {
+    column-gap: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 108px;
+    justify-content: space-between;
+    row-gap: 16px;
+    width: 368px;
+}
+
+/* ── el-59: Sales Title Group ── */
+.md-sales-card__title-group {
+    column-gap: 8px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    width: 368px;
+}
+
+/* ── el-60: Sales Title Row ── */
+.md-sales-card__title-row {
+    align-items: center;
+    column-gap: 8px;
+    display: flex;
+    height: 24px;
+    justify-content: space-between;
+    row-gap: 8px;
+    width: 368px;
+}
+
+/* ── el-61: Sales Title Left ── */
+.md-sales-card__title-left {
+    align-items: center;
+    column-gap: 8px;
+    display: flex;
+    height: 24px;
+    row-gap: 8px;
+}
+
+/* ── el-62: "Sales" Text ── */
+.md-card-title {
+    font-size: 17px;
+    font-weight: 600;
+    height: 24px;
+    line-height: 24px;
+    margin: 0;
+}
+
+/* ── el-63: Info Tooltip Container ── */
+.md-info-tooltip {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+
+/* ── el-64: Tooltip trigger ── */
+.md-info-tooltip__trigger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    height: 20px;
+    padding: 0;
+    width: 20px;
+}
+
+/* ── el-65: Tooltip Icon Wrapper ── */
+.md-info-tooltip__icon-wrap {
+    display: flex;
+    flex-shrink: 0;
+    height: 20px;
+    position: relative;
+    width: 20px;
+}
+
+/* ── Info circle SVG ── */
+.md-info-tooltip__icon-wrap svg {
+    bottom: 0;
+    fill: rgb(191, 191, 191);
+    height: 20px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+}
+
+/* ── el-69: Sort/Change Indicator ── */
+.md-sales-card__sort {
+    display: flex;
+    height: 20px;
+    width: 16px;
+}
+
+.md-sales-card__sort-icon {
+    display: flex;
+    flex-shrink: 0;
+    height: 20px;
+    position: relative;
+    width: 16px;
+}
+
+.md-sales-card__sort-icon svg {
+    fill: rgb(191, 191, 191);
+    height: 20px;
+    overflow: hidden;
+    position: absolute;
+    inset: 0;
+    width: 16px;
+}
+
+/* ── el-72: Sales Value Row ── */
+.md-sales-card__value-row {
+    align-items: center;
+    column-gap: 12px;
+    display: flex;
+    height: 36px;
+    row-gap: 12px;
+    width: 368px;
+}
+
+/* ── el-73: Sales Value ── */
+.md-sales-card__value {
+    font-size: 28px;
+    font-weight: 600;
+    height: 36px;
+    line-height: 36px;
+    margin: 0;
+}
+
+/* ── el-74: Sales Badge ── */
+.md-badge {
+    align-items: center;
+    border-radius: 999px;
+    column-gap: 2px;
+    display: flex;
+    height: 24px;
+    padding-left: 8px;
+    padding-right: 8px;
+    row-gap: 2px;
+}
+
+.md-badge--green {
+    background-color: rgb(232, 249, 233);
+    border: 1px solid rgb(208, 243, 210);
+    color: rgb(13, 110, 0);
+}
+
+.md-badge--red {
+    background-color: rgb(254, 236, 235);
+    border: 1px solid rgb(254, 227, 226);
+    color: rgb(212, 22, 58);
+}
+
+.md-badge--neutral {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(229, 229, 229);
+    color: inherit;
+}
+
+/* ── Badge icon wrapper ── */
+.md-badge__icon-wrap {
+    display: flex;
+    height: 16px;
+    width: 16px;
+}
+
+.md-badge__icon {
+    display: flex;
+    flex-shrink: 0;
+    height: 16px;
+    position: relative;
+    width: 16px;
+}
+
+.md-badge__icon svg {
+    fill: currentColor;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    inset: 0;
+    width: 16px;
+}
+
+/* ── Badge text ── */
+.md-badge__text {
+    font-size: 13px;
+    font-weight: 500;
+    height: 16px;
+    line-height: 16px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ═══════════════════════════════════════════════════
+   Chart Area (el-78 → el-163)
+   ═══════════════════════════════════════════════════ */
+.md-chart-area {
+    display: flex;
+    height: 220px;
+    width: 368px;
+}
+
+.md-chart-wrapper {
+    cursor: default;
+    height: 220px;
+    position: relative;
+    width: 368px;
+}
+
+.md-chart-wrapper svg {
+    width: 368px;
+    height: 220px;
+}
+
+/* Grid lines */
+.md-chart-grid-line {
+    stroke: rgb(229, 229, 229);
+    stroke-dasharray: 10 10;
+    fill: none;
+}
+
+/* X-axis */
+.md-chart-xaxis-line {
+    stroke: rgb(191, 191, 191);
+    fill: none;
+}
+
+.md-chart-xaxis-label {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(143, 143, 143);
+    line-height: 16px;
+    margin: 0;
+}
+
+/* Y-axis */
+.md-chart-yaxis-text {
+    font-size: 13px;
+    fill: rgb(143, 143, 143);
+}
+
+/* Bar chart bars */
+.md-chart-bar {
+    fill: #8880FF;
+    transition: opacity 0.25s ease-in-out;
+}
+
+/* ═══════════════════════════════════════════════════
+   Metric Cards (shared styles)
+   ═══════════════════════════════════════════════════ */
+
+/* ── Metric card wrapper ── */
+.md-metric-card {
+    height: 180px;
+    width: 196px;
+}
+
+/* ── Cards with grid areas ── */
+.md-metric-card--B {
+    grid-column: B;
+    grid-row: B;
+}
+
+.md-metric-card--C {
+    grid-column: C;
+    grid-row: C;
+}
+
+.md-metric-card--D {
+    grid-column: D;
+    grid-row: D;
+}
+
+.md-metric-card--E {
+    grid-column: E;
+    grid-row: E;
+}
+
+/* ── Metric card relative ── */
+.md-metric-card__relative {
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+    isolation: isolate;
+    position: relative;
+    width: 196px;
+}
+
+/* ── Metric card BG ── */
+.md-metric-card__bg {
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    height: 180px;
+    overflow: hidden;
+    transition-duration: 0.1s;
+    transition-property: background-color, box-shadow, transform;
+    transition-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+    width: 196px;
+}
+
+/* ── Metric card border overlay ── */
+.md-metric-card__border {
+    border-radius: 12px;
+    box-shadow: rgb(229, 229, 229) 0px 0px 0px 1px inset;
+    height: 180px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 196px;
+    z-index: 2000;
+}
+
+/* ── Metric card content ── */
+.md-metric-card__content {
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+    padding: 24px;
+    width: 196px;
+}
+
+/* ── Metric card header row ── */
+.md-metric-card__header {
+    column-gap: 8px;
+    display: flex;
+    height: 24px;
+    justify-content: space-between;
+    row-gap: 8px;
+    width: 148px;
+}
+
+/* ── Metric card title left ── */
+.md-metric-card__title-left {
+    align-items: center;
+    column-gap: 8px;
+    display: flex;
+    height: 24px;
+    row-gap: 8px;
+}
+
+/* ── Metric card value ── */
+.md-metric-card__value {
+    font-size: 28px;
+    font-weight: 600;
+    height: 36px;
+    line-height: 36px;
+    margin: 0;
+    padding-top: 8px;
+}
+
+/* ── Metric card change row ── */
+.md-metric-card__change-row {
+    align-items: center;
+    column-gap: 8px;
+    display: flex;
+    height: 24px;
+    row-gap: 8px;
+    width: 148px;
+    margin-top: auto;
+}
+
+/* ── Change description text ── */
+.md-metric-card__change-text {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(143, 143, 143);
+    height: 16px;
+    line-height: 16px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════
+   Left Sidebar (el-272 → el-319)
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-272: Sidebar Container ── */
+.md-sidebar {
+    background-color: rgb(255, 255, 255);
+    border-right: 1px solid rgb(229, 229, 229);
+    grid-column: menu;
+    grid-row: menu;
+    height: 100%;
+    position: sticky;
+    top: 0;
+    width: 320px;
+}
+
+/* ── el-273: Profile padding wrapper ── */
+.md-sidebar__profile-wrap {
+    padding: 32px;
+    width: 319px;
+}
+
+/* ── el-274: Profile flex column ── */
+.md-profile {
+    column-gap: 12px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    width: 255px;
+}
+
+/* ── el-275: Profile column ── */
+.md-profile__column {
+    display: flex;
+    flex-direction: column;
+    width: 255px;
+}
+
+/* ── el-276: Profile Header (flex ROW, space-between) ── */
+.md-profile__header {
+    align-items: center;
+    column-gap: 16px;
+    display: flex;
+    justify-content: space-between;
+    row-gap: 16px;
+    width: 255px;
+}
+
+/* ── el-277: Profile Left (flex-col, name + Actions) ── */
+.md-profile__left {
+    align-items: flex-start;
+    column-gap: 8px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+/* ── el-278: Name wrapper (flex-col) ── */
+.md-profile__name-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 28px;
+}
+
+/* ── el-279: Profile Name ── */
+.md-profile__name {
+    font-size: 20px;
+    font-weight: 600;
+    height: 28px;
+    line-height: 28px;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    margin: 0;
+}
+
+/* ── el-280: Actions button wrapper ── */
+.md-profile__actions-wrap {
+    height: 36px;
+}
+
+/* ── el-281: Actions Button ── */
+.md-actions-btn {
+    align-items: center;
+    appearance: button;
+    background: none;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    display: inline-flex;
+    height: 36px;
+    line-height: 16.1px;
+    max-width: 100%;
+    outline: 2px solid rgba(0, 0, 0, 0);
+    outline-offset: 2px;
+    position: relative;
+    text-align: center;
+    transition-duration: 0.2s;
+    transition-property: max-inline-size;
+    transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+    padding: 0;
+}
+
+.md-actions-btn::before {
+    content: "";
+    border-radius: 999px;
+    bottom: 0;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    cursor: pointer;
+    height: 36px;
+    left: 0;
+    line-height: 16.1px;
+    opacity: 0;
+    padding: 2px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    transition-duration: 0.1s;
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
+}
+
+/* ── el-282: Actions Button Inner ── */
+.md-actions-btn__inner {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 999px;
+    column-gap: 8px;
+    cursor: pointer;
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    line-height: 16.1px;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    row-gap: 8px;
+    scale: 1;
+    text-align: center;
+    transition-behavior: normal, normal, normal, normal, normal, normal;
+    transition-delay: 0s, 0s, 0s, 0s, 0s, 0s;
+    transition-duration: 0.1s, 0.1s, 0.1s, 0.2s, 0.2s, 0.2s;
+    transition-property: background-color, border-color, transform, max-inline-size, padding, gap;
+    transition-timing-function: cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0.85, 0, 0.15, 1), cubic-bezier(0.85, 0, 0.15, 1), cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.md-actions-btn:hover .md-actions-btn__inner {
+    background-color: rgb(242, 242, 242);
+    scale: 1;
+}
+
+.md-actions-btn:active .md-actions-btn__inner {
+    background-color: rgb(229, 229, 229);
+    scale: 0.96;
+}
+
+/* ── el-283: Actions Label Wrapper ── */
+.md-actions-btn__label {
+    align-items: center;
+    column-gap: 8px;
+    display: flex;
+    height: 20px;
+    line-height: 16.1px;
+    row-gap: 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ── el-284: "Actions" Text ── */
+.md-actions-btn__text {
+    font-size: 15px;
+    font-weight: 500;
+    height: 20px;
+    line-height: 20px;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ── el-285: Chevron outer wrapper ── */
+.md-actions-btn__chevron-outer {
+    cursor: pointer;
+    display: flex;
+    height: 20px;
+    line-height: 16.1px;
+    text-align: center;
+    width: 20px;
+}
+
+/* ── el-286: Chevron inner ── */
+.md-actions-btn__chevron-wrap {
+    display: flex;
+    flex-shrink: 0;
+    height: 20px;
+    position: relative;
+    width: 20px;
+}
+
+.md-actions-btn__chevron-wrap svg {
+    bottom: 0;
+    fill: rgb(13, 13, 13);
+    height: 20px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+}
+
+/* ── el-289: Avatar Section (inside profile header row) ── */
+.md-avatar-section {
+    display: flex;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    width: 96px;
+}
+
+/* ── el-290: Avatar Button ── */
+.md-avatar-btn {
+    appearance: button;
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 98.0938px;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    width: 96px;
+}
+
+.md-avatar-btn::before {
+    content: "";
+    border-radius: 999px;
+    bottom: 0;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    height: 98.0938px;
+    left: 0;
+    opacity: 0;
+    padding: 2px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition-duration: 0.1s;
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
+    width: 96px;
+}
+
+/* ── el-291: Avatar Container ── */
+.md-avatar-container {
+    border-radius: 8px;
+    display: inline-block;
+    height: 96px;
+    max-width: 100%;
+    text-align: center;
+    width: 96px;
+}
+
+/* ── el-292: Avatar Flex ── */
+.md-avatar-flex {
+    display: flex;
+    height: 96px;
+    justify-content: center;
+    position: relative;
+    width: 96px;
+}
+
+/* ── el-293: Avatar Image Wrapper (blue ring) ── */
+.md-avatar-img-wrap {
+    background-color: rgb(235, 248, 254);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 999px;
+    height: 96px;
+    isolation: isolate;
+    min-height: 96px;
+    min-width: 96px;
+    position: relative;
+    transition-duration: 0.2s;
+    transition-property: background-color, border-color, box-shadow;
+    transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+    width: 96px;
+}
+
+.md-avatar-img-wrap::after {
+    content: "";
+    border-radius: 999px;
+    bottom: -3px;
+    box-shadow: rgb(165, 223, 248) 0px 0px 0px 2px;
+    height: 100px;
+    left: -3px;
+    position: absolute;
+    right: -3px;
+    top: -3px;
+    transition-duration: 0.2s;
+    transition-property: box-shadow;
+    transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+    width: 100px;
+}
+
+/* ── el-294: Avatar Inner Flex ── */
+.md-avatar-inner {
+    align-items: center;
+    border-radius: 999px;
+    display: flex;
+    height: 94px;
+    justify-content: center;
+    overflow: hidden;
+    width: 94px;
+}
+
+/* ── el-295/296: Avatar Image ── */
+.md-avatar-picture {
+    display: block;
+    height: 94px;
+    overflow: hidden;
+    width: 94px;
+}
+
+.md-avatar-img {
+    display: flex;
+    height: 94px;
+    max-width: 100%;
+    object-fit: cover;
+    width: 94px;
+}
+
+/* Initials fallback */
+.md-avatar-initials {
+    align-items: center;
+    background-color: rgb(235, 248, 254);
+    border-radius: 999px;
+    color: rgb(13, 13, 13);
+    display: flex;
+    font-size: 32px;
+    font-weight: 600;
+    height: 94px;
+    justify-content: center;
+    width: 94px;
+}
+
+/* ── el-297: HR Divider ── */
+.md-sidebar-divider {
+    background-color: rgb(229, 229, 229);
+    border: none;
+    box-sizing: content-box;
+    height: 1px;
+    margin: 0;
+    width: 319px;
+}
+
+/* ── el-298: Nav Section Wrapper ── */
+.md-nav-section {
+    height: 224px;
+    padding-left: 32px;
+    padding-right: 32px;
+    width: 319px;
+}
+
+/* ── el-299: Nav Inner (flex-col, padding:24px top/bottom) ── */
+.md-nav-inner {
+    display: flex;
+    flex-direction: column;
+    height: 224px;
+    padding-bottom: 24px;
+    padding-top: 24px;
+    width: 255px;
+}
+
+/* ── el-300: Nav UL ── */
+.md-nav-list {
+    column-gap: 24px;
+    display: flex;
+    flex-direction: column;
+    height: 192px;
+    list-style: none;
+    margin-bottom: -8px;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -8px;
+    outline: 2px solid rgba(0, 0, 0, 0);
+    outline-offset: 2px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 8px;
+    row-gap: 24px;
+    width: 295px;
+}
+
+/* ── el-301: Nav LI wrapper ── */
+.md-nav-item-wrap {
+    display: list-item;
+    height: 176px;
+    list-style: none;
+    width: 255px;
+}
+
+/* ── el-302: LI inner list ── */
+.md-nav-item-inner {
+    column-gap: 0;
+    display: flex;
+    flex-direction: column;
+    height: 176px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    row-gap: 0;
+    width: 255px;
+}
+
+/* ── el-303/307/311/315: Nav Item (li) ── */
+.md-nav-item {
+    align-items: center;
+    border-radius: 8px;
+    column-gap: 12px;
+    cursor: pointer;
+    display: flex;
+    height: 44px;
+    list-style: none;
+    margin-left: -16px;
+    margin-right: -16px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 12px;
+    position: relative;
+    row-gap: 12px;
+    transition-duration: 0.1s;
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+    width: 287px;
+}
+
+.md-nav-item--active {
+    background-color: rgb(240, 240, 255);
+}
+
+.md-nav-item:hover:not(.md-nav-item--active) {
+    background-color: rgb(242, 242, 242);
+}
+
+/* ── el-304/308/312/316: Nav Button (absolute overlay) ── */
+.md-nav-btn {
+    appearance: button;
+    background: transparent;
+    border: none;
+    bottom: 0;
+    cursor: pointer;
+    height: 44px;
+    left: 0;
+    outline: 2px solid rgba(0, 0, 0, 0);
+    outline-offset: 2px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 287px;
+}
+
+.md-nav-btn::before {
+    content: "";
+    border-radius: 8px;
+    bottom: 0;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    height: 44px;
+    left: 0;
+    opacity: 0;
+    padding: 2px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    transition-duration: 0.1s;
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
+    width: 287px;
+}
+
+/* ── el-305/309/313/317: Nav Label Wrapper ── */
+.md-nav-label-wrap {
+    cursor: pointer;
+    display: block;
+    flex-grow: 1;
+    height: 20px;
+    overflow: hidden;
+    width: 255px;
+}
+
+/* ── el-306/310/314/318: Nav Label Text ── */
+.md-nav-label {
+    cursor: pointer;
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    height: 20px;
+    line-height: 20px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 255px;
+}
+
+/* ── el-319: Hidden element ── */
+.md-nav-hidden {
+    display: none;
+}
+
+/* ═══════════════════════════════════════════════════
+   Open/Close Animation
+   ═══════════════════════════════════════════════════ */
+.md-root--closed {
+    transform: translateX(100%);
+    pointer-events: none;
+}
+
+.md-root--open {
+    transform: translateX(0);
+}
+
+.md-backdrop--closed {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.md-backdrop--open {
+    opacity: 1;
+}
+
+/* ═══════════════════════════════════════════════════
+   Keyframe Animations from JSON
+   ═══════════════════════════════════════════════════ */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ═══════════════════════════════════════════════════
+   EDIT BUTTON (el-35 → el-42)
+   ═══════════════════════════════════════════════════ */
+.md-edit-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    height: 36px;
+    max-width: 100%;
+    padding: 0;
+    border: none;
+    background: transparent;
+    border-radius: 999px;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.md-edit-btn__inner {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    height: 36px;
+    padding: 0 15px;
+    gap: 8px;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 999px;
+    background-color: rgb(255, 255, 255);
+    color: inherit;
+    scale: 1;
+    transition:
+        background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        padding 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        gap 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.md-edit-btn__inner:hover {
+    background-color: rgb(245, 245, 245);
+    border-color: rgb(188, 188, 188);
+}
+
+.md-edit-btn__inner:active {
+    scale: 0.96;
+    background-color: rgb(237, 237, 237);
+    border-color: rgb(168, 168, 168);
+}
+
+.md-edit-btn__icon-wrap {
+    display: inline-flex;
+    height: 20px;
+    width: 20px;
+}
+
+.md-edit-btn__icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    height: 20px;
+    width: 20px;
+    position: relative;
+}
+
+.md-edit-btn__icon svg {
+    position: absolute;
+    inset: 0;
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+    fill: rgb(13, 13, 13);
+}
+
+.md-edit-btn__label-wrap {
+    display: inherit;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    align-items: center;
+    min-width: 0;
+    gap: 8px;
+}
+
+.md-edit-btn__label {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* ═══════════════════════════════════════════════════
+   PERSONAL TAB BODY
+   ═══════════════════════════════════════════════════ */
+.md-pt-body {
+    /* parent .md-body already provides padding:32px */
+}
+
+/* ── Section ── */
+.md-pt-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Section Header */
+.md-pt-section-header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.md-pt-section-header__col {
+    display: flex;
+    flex-direction: column;
+}
+
+.md-pt-section-header__row {
+    display: flex;
+    align-items: center;
+}
+
+.md-pt-section-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    color: rgb(13, 13, 13);
+    margin: 0;
+}
+
+/* ── Fields Grid (12-col, fields span 6) ── */
+.md-pt-fields-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.md-pt-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+}
+
+.md-pt-field {
+    grid-column: span 6;
+}
+
+.md-pt-field__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.md-pt-field__label {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    color: rgb(13, 13, 13);
+    margin: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+.md-pt-field__value {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(118, 118, 118);
+    margin: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+/* ── Calendar Color (dot + text row) ── */
+.md-pt-color-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: rgb(118, 118, 118);
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.md-pt-color-dot {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    border: 1px solid rgb(229, 229, 229);
+    flex-shrink: 0;
+    transition: color 0.2s cubic-bezier(0.55, 0, 1, 0.45),
+        background-color 0.2s cubic-bezier(0.55, 0, 1, 0.45),
+        border-color 0.2s cubic-bezier(0.55, 0, 1, 0.45);
+}
+
+.md-pt-color-text {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(118, 118, 118);
+}
+
+/* ── Divider ── */
+.md-pt-divider {
+    background-color: rgb(229, 229, 229);
+    height: 1px;
+    border: none;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+/* ═══════════════════════════════════════════════════
+   PERSONAL TAB OVERRIDES (title grid + header flow)
+   ═══════════════════════════════════════════════════ */
+.md-grid--personal .md-title-grid {
+    grid-template-columns: 0px 1fr auto;
+}
+
+.md-grid--personal .md-title-action {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.md-grid--personal .md-header-flow__actions {
+    width: auto;
+    height: auto;
+    pointer-events: auto;
+}
+
+.md-grid--personal .md-header-flow__action-slot {
+    width: auto;
+    height: auto;
+    pointer-events: auto;
+}
+
+/* ═══════════════════════════════════════════════════
+   PRODUCT DRAWER: Square Avatar Overrides
+   Scoped under .pd-drawer so they don't affect MemberDrawer
+   ═══════════════════════════════════════════════════ */
+.pd-drawer .md-avatar-btn::before {
+    border-radius: 8px;
+}
+
+.pd-drawer .md-avatar-img-wrap {
+    border-radius: 8px;
+}
+
+.pd-drawer .md-avatar-img-wrap::after {
+    border-radius: 8px;
+}
+
+.pd-drawer .md-avatar-inner {
+    border-radius: 8px;
+}
+
+.pd-drawer .md-avatar-initials {
+    border-radius: 8px;
+}

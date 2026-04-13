@@ -1,0 +1,85 @@
+/* ═══════════════════════════════════════════
+   Fresha Appointment Card — Exact Computed Styles
+   ═══════════════════════════════════════════ */
+
+.fresha-appointment {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 24px;
+    min-height: 24px;
+    padding: 4px;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Booking (mavi) */
+.fresha-appointment.booking {
+    background-color: rgb(165, 223, 248);
+}
+
+/* Blocked time (gri) */
+.fresha-appointment.block {
+    background-color: rgb(164, 173, 186);
+}
+
+/* Completed (açık gri) */
+.fresha-appointment.completed {
+    background-color: rgb(222, 227, 231);
+}
+
+/* Card overlay divs */
+.fresha-apt-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+}
+
+.fresha-apt-click {
+    position: absolute;
+    inset: 0;
+    cursor: inherit;
+}
+
+/* Card content */
+.fresha-apt-content {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.fresha-apt-time {
+    font-size: 13px;
+    line-height: 16px;
+    white-space: nowrap;
+}
+
+.fresha-apt-title {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    white-space: nowrap;
+}
+
+/* Suffix (completed checkmark) */
+.fresha-apt-suffix {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.fresha-apt-suffix svg {
+    width: 16px;
+    height: 16px;
+}

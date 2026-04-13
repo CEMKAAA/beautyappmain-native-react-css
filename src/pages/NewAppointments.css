@@ -1,0 +1,1343 @@
+/* =============================================
+   NewAppointments.css — Pixel-perfect from computed-styles.json
+   ============================================= */
+
+/* el-0: Root container */
+.na-root {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  font-family: 'Roobert PRO', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  max-height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+}
+
+/* Ensure form elements and tables inherit Roobert PRO + base font */
+.na-root table,
+.na-root th,
+.na-root td,
+.na-root input,
+.na-root button,
+.na-root select,
+.na-root textarea,
+.na-root h1,
+.na-root h2,
+.na-root h3,
+.na-root p,
+.na-root span,
+.na-root div,
+.na-root a {
+  font-family: inherit;
+}
+
+/* el-1: Inner wrapper */
+.na-inner {
+  background-color: rgb(255, 255, 255);
+  flex: 1;
+  overflow-x: auto;
+  overflow-y: auto;
+  width: 100%;
+}
+
+/* el-2: Content wrapper (positioned) */
+.na-content-wrapper {
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  position: relative;
+  right: 0px;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 9;
+}
+
+/* el-3: Main flex (centered, transition) */
+.na-main-flex {
+  background-color: rgb(255, 255, 255);
+  box-sizing: content-box;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  transition-duration: 0.4s;
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+  width: 100%;
+}
+
+/* el-4: Padded content area */
+.na-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  min-height: 100%;
+  padding: 40px;
+  width: 100%;
+}
+
+/* el-5: Header area wrapper */
+.na-header-area {
+  display: flex;
+  padding-bottom: 24px;
+  width: 100%;
+}
+
+/* ====================== HEADER ====================== */
+
+/* el-6: Title content wrapper */
+.na-title-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+/* el-7: Title row */
+.na-title-row {
+  align-items: center;
+  display: flex;
+  height: 36px;
+}
+
+/* el-8: Title h1 — explicitly override global h1 styles */
+.na-title {
+  align-items: center;
+  display: flex;
+  font-size: 28px !important;
+  font-weight: 600 !important;
+  height: 36px;
+  line-height: 36px !important;
+  margin: 0;
+}
+
+/* el-9: Subtitle */
+.na-subtitle {
+  color: rgb(118, 118, 118);
+  font-size: 15px;
+  font-weight: 400;
+  height: 20px;
+  line-height: 20px;
+  margin: 0;
+  margin-top: 4px;
+  outline-color: rgb(118, 118, 118);
+}
+
+/* ====================== EXPORT BUTTON ====================== */
+
+/* el-10: Export area */
+.na-export-area {
+  align-items: center;
+  display: flex;
+  margin-left: 16px;
+}
+
+/* el-11: Export group container */
+.na-export-group {
+  display: flex;
+  height: 48px;
+}
+
+/* el-12: Button wrapper */
+.na-export-btn-wrap {
+  display: flex;
+}
+
+/* el-13: Export button */
+.na-export-btn {
+  align-items: center;
+  appearance: button;
+  background: none;
+  border: none;
+  border-radius: 999px;
+  bottom: 0px;
+  cursor: pointer;
+  display: flex;
+  height: 48px;
+  left: 0px;
+  line-height: 16.1px;
+  max-width: 100%;
+  outline: 2px solid rgba(0, 0, 0, 0);
+  outline-offset: 2px;
+  padding: 0;
+  position: relative;
+  right: 0px;
+  text-align: center;
+  white-space: nowrap;
+  top: 0px;
+  transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.na-export-btn::before {
+  content: "";
+  border-radius: 999px;
+  bottom: 0px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+  cursor: pointer;
+  height: 48px;
+  left: 0px;
+  line-height: 16.1px;
+  opacity: 0;
+  padding: 2px;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  white-space: nowrap;
+  top: 0px;
+  transition: opacity 0.1s ease-in-out;
+  pointer-events: none;
+}
+
+.na-export-btn:focus-visible::before {
+  opacity: 1;
+}
+
+/* el-14: Export button inner */
+.na-export-btn-inner {
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 999px;
+  column-gap: 8px;
+  cursor: pointer;
+  display: flex;
+  height: 48px;
+  justify-content: center;
+  line-height: 16.1px;
+  max-width: 100%;
+  padding-left: 19px;
+  padding-right: 19px;
+  row-gap: 8px;
+  scale: 1;
+  text-align: center;
+  white-space: nowrap;
+  transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    transform 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+    padding 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+    gap 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.na-export-btn:hover .na-export-btn-inner {
+  background-color: rgb(242, 242, 242);
+  border-color: rgb(189, 189, 189);
+}
+
+.na-export-btn:active .na-export-btn-inner {
+  scale: 0.96;
+  background-color: rgb(229, 229, 229);
+  border-color: rgb(166, 166, 166);
+}
+
+/* el-15: Export button content span */
+.na-export-btn-content {
+  align-items: center;
+  column-gap: 8px;
+  cursor: pointer;
+  display: flex;
+  height: 24px;
+  line-height: 16.1px;
+  row-gap: 8px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* el-16: "Export" text */
+.na-export-text {
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  height: 24px;
+  line-height: 24px;
+  max-width: 100%;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* el-17: Export icon wrapper */
+.na-export-icon-wrap {
+  cursor: pointer;
+  display: flex;
+  height: 24px;
+  line-height: 16.1px;
+  text-align: center;
+  width: 24px;
+}
+
+/* el-18: Icon inner span */
+.na-icon-span {
+  bottom: 0px;
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+  height: 24px;
+  left: 0px;
+  line-height: 16.1px;
+  position: relative;
+  right: 0px;
+  text-align: center;
+  top: 0px;
+  width: 24px;
+}
+
+/* el-19: SVG 24x24 */
+.na-icon-svg-24 {
+  bottom: 0px;
+  fill: currentColor;
+  height: 24px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 24px;
+}
+
+/* ====================== TOOLBAR ====================== */
+
+/* el-21: Toolbar outer */
+.na-toolbar-outer {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+  width: 100%;
+}
+
+/* el-22: Toolbar inner (gray bg) */
+.na-toolbar {
+  background-color: rgb(249, 249, 249);
+  border-radius: 8px;
+  column-gap: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  row-gap: 16px;
+  width: 100%;
+}
+
+/* el-23: Toolbar grid */
+.na-toolbar-grid {
+  column-gap: 12px;
+  display: grid;
+  flex-grow: 1;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 36px;
+  height: 36px;
+  max-width: 100%;
+  row-gap: 12px;
+  width: 100%;
+}
+
+/* el-24: Left toolbar section */
+.na-toolbar-left {
+  align-items: start;
+  column-gap: 12px;
+  display: flex;
+  height: 36px;
+  justify-content: flex-start;
+  row-gap: 12px;
+  white-space: nowrap;
+}
+
+/* el-53: Center toolbar section */
+.na-toolbar-center {
+  align-items: start;
+  column-gap: 12px;
+  display: flex;
+  height: 36px;
+  justify-content: center;
+  row-gap: 12px;
+  white-space: nowrap;
+}
+
+/* el-54: Right toolbar section */
+.na-toolbar-right {
+  align-items: start;
+  column-gap: 12px;
+  display: flex;
+  height: 36px;
+  justify-content: flex-end;
+  row-gap: 12px;
+  white-space: nowrap;
+}
+
+/* el-25: Search+date+filters row */
+.na-search-row {
+  column-gap: 12px;
+  display: flex;
+  height: 36px;
+  justify-content: flex-start;
+  row-gap: 12px;
+  white-space: nowrap;
+  width: 100%;
+}
+
+/* ====================== SEARCH INPUT ====================== */
+
+/* el-26: Search field outer */
+.na-search-field-outer {
+  column-gap: 4px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 36px;
+  max-width: 100%;
+  row-gap: 4px;
+  white-space: nowrap;
+  width: 256px;
+}
+
+/* el-27: Search field label (sr-only) */
+.na-search-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* el-29: Search field row */
+.na-search-field-row {
+  column-gap: 8px;
+  display: flex;
+  flex-grow: 1;
+  height: 36px;
+  row-gap: 8px;
+  white-space: nowrap;
+  width: 256px;
+}
+
+/* el-30: Search input container */
+.na-search-container {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 999px;
+  bottom: 0px;
+  display: flex;
+  flex-grow: 1;
+  height: 36px;
+  left: 0px;
+  max-height: 36px;
+  position: relative;
+  right: 0px;
+  top: 0px;
+  white-space: nowrap;
+  transition: background-color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+    border-color 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+  width: 256px;
+}
+
+.na-search-container::before {
+  content: "";
+  border-radius: 999px;
+  bottom: -1px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+  height: calc(100% + 2px);
+  left: -1px;
+  opacity: 0;
+  padding: 2px;
+  pointer-events: none;
+  position: absolute;
+  right: 0px;
+  top: -1px;
+  transition: opacity 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+  width: calc(100% + 2px);
+}
+
+.na-search-container:focus-within {
+  border-color: rgb(105, 80, 243);
+}
+
+.na-search-container:focus-within::before {
+  opacity: 0;
+}
+
+/* el-31: Search icon prefix */
+.na-search-icon-prefix {
+  align-items: center;
+  color: rgb(118, 118, 118);
+  cursor: text;
+  display: flex;
+  height: 34px;
+  outline-color: rgb(118, 118, 118);
+  padding-left: 12px;
+  white-space: nowrap;
+  width: 32px;
+}
+
+/* el-32: Search icon span */
+.na-search-icon-span {
+  bottom: 0px;
+  color: rgb(118, 118, 118);
+  cursor: text;
+  display: flex;
+  flex-shrink: 0;
+  height: 20px;
+  left: 0px;
+  outline-color: rgb(118, 118, 118);
+  position: relative;
+  right: 0px;
+  white-space: nowrap;
+  top: 0px;
+  width: 20px;
+}
+
+/* el-33: Search SVG 20x20 */
+.na-icon-svg-20 {
+  bottom: 0px;
+  fill: currentColor;
+  height: 20px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 20px;
+}
+
+/* el-35: Search input */
+.na-search-input {
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  border-radius: 999px;
+  cursor: text;
+  font-size: 15px;
+  height: 34px;
+  outline: none;
+  overflow: clip;
+  padding: 0 16px 0 8px;
+  position: relative;
+  white-space: nowrap;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.na-search-input::placeholder {
+  color: rgb(166, 166, 166);
+  text-transform: none;
+}
+
+/* ====================== DATE BUTTON ====================== */
+
+/* el-36: Date button (outer wrapper = hidden button) */
+.na-date-btn {
+  align-items: start;
+  appearance: button;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  bottom: 0px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 17px;
+  font-weight: 600;
+  height: 36px;
+  justify-content: center;
+  left: 0px;
+  line-height: 18px;
+  min-height: 36px;
+  padding: 0;
+  position: relative;
+  right: 0px;
+  top: 0px;
+  transition-duration: 0.12s;
+  transition-timing-function: linear;
+  user-select: none;
+}
+
+.na-date-btn::before {
+  content: "";
+  border-radius: 8px;
+  cursor: pointer;
+  flex-grow: 1;
+  flex-shrink: 0;
+  width: 0px;
+}
+
+.na-date-btn::after {
+  content: "";
+  cursor: pointer;
+  flex-grow: 1;
+  flex-shrink: 0;
+  width: 0px;
+}
+
+/* el-37: Date button inner group */
+.na-date-btn-group {
+  align-items: center;
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  font-size: 17px;
+  font-weight: 600;
+  height: 36px;
+  line-height: 18px;
+  max-width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+  user-select: none;
+}
+
+/* el-38: Date button inner content */
+.na-date-btn-inner {
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 999px;
+  column-gap: 8px;
+  cursor: pointer;
+  display: flex;
+  font-size: 17px;
+  font-weight: 600;
+  height: 36px;
+  justify-content: center;
+  line-height: 18px;
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  row-gap: 8px;
+  scale: 1;
+  text-align: center;
+  white-space: nowrap;
+  transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    transform 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+    padding 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+    gap 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+  user-select: none;
+}
+
+.na-date-btn:hover .na-date-btn-inner {
+  background-color: rgb(242, 242, 242);
+  border-color: rgb(189, 189, 189);
+}
+
+.na-date-btn:active .na-date-btn-inner {
+  scale: 0.96;
+  background-color: rgb(229, 229, 229);
+  border-color: rgb(166, 166, 166);
+}
+
+/* el-39: Date button text area */
+.na-date-btn-text-area {
+  align-items: center;
+  column-gap: 8px;
+  cursor: pointer;
+  display: flex;
+  height: 20px;
+  line-height: 18px;
+  row-gap: 8px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* el-40: Date text span */
+.na-date-text {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  height: 20px;
+  max-width: 100%;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* el-41: Date icon wrapper */
+.na-date-icon-wrap {
+  cursor: pointer;
+  display: flex;
+  height: 20px;
+  line-height: 18px;
+  text-align: center;
+  white-space: nowrap;
+  width: 20px;
+}
+
+/* el-42: Date icon inner span */
+.na-icon-span-20 {
+  bottom: 0px;
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+  height: 20px;
+  left: 0px;
+  position: relative;
+  right: 0px;
+  text-align: center;
+  white-space: nowrap;
+  top: 0px;
+  width: 20px;
+}
+
+/* ====================== FILTERS BUTTON ====================== */
+
+/* el-45: Filters button */
+.na-filters-btn {
+  align-items: center;
+  appearance: button;
+  background: none;
+  background-position: 0px 0px;
+  border: none;
+  border-radius: 999px;
+  bottom: 0px;
+  cursor: pointer;
+  display: flex;
+  height: 36px;
+  left: 0px;
+  line-height: 16.1px;
+  max-width: 100%;
+  outline: 2px solid rgba(0, 0, 0, 0);
+  outline-offset: 2px;
+  padding: 0;
+  position: relative;
+  right: 0px;
+  text-align: center;
+  white-space: nowrap;
+  top: 0px;
+  transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.na-filters-btn::before {
+  content: "";
+  border-radius: 999px;
+  bottom: 0px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+  cursor: pointer;
+  height: 36px;
+  left: 0px;
+  line-height: 16.1px;
+  opacity: 0;
+  padding: 2px;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  white-space: nowrap;
+  top: 0px;
+  transition: opacity 0.1s ease-in-out;
+  pointer-events: none;
+}
+
+.na-filters-btn:focus-visible::before {
+  opacity: 1;
+}
+
+/* el-46: Filters button inner */
+.na-filters-btn-inner {
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 999px;
+  column-gap: 8px;
+  cursor: pointer;
+  display: flex;
+  height: 36px;
+  justify-content: center;
+  line-height: 16.1px;
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  row-gap: 8px;
+  scale: 1;
+  text-align: center;
+  white-space: nowrap;
+  transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    transform 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+    padding 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+    gap 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+  width: 100%;
+}
+
+.na-filters-btn:hover .na-filters-btn-inner {
+  background-color: rgb(242, 242, 242);
+  border-color: rgb(189, 189, 189);
+}
+
+.na-filters-btn:active .na-filters-btn-inner {
+  scale: 0.96;
+  background-color: rgb(229, 229, 229);
+  border-color: rgb(166, 166, 166);
+}
+
+/* el-47: Filters button content */
+.na-filters-btn-content {
+  align-items: center;
+  column-gap: 8px;
+  cursor: pointer;
+  display: flex;
+  height: 20px;
+  line-height: 16.1px;
+  row-gap: 8px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* el-48: Filters text */
+.na-filters-text {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  height: 20px;
+  max-width: 100%;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* el-49: Filters icon wrapper */
+.na-filters-icon-wrap {
+  cursor: pointer;
+  display: flex;
+  height: 20px;
+  line-height: 16.1px;
+  text-align: center;
+  white-space: nowrap;
+  width: 20px;
+}
+
+/* ====================== SORT BUTTON ====================== */
+
+/* el-55: Sort button container */
+.na-sort-container {
+  height: 36px;
+  white-space: nowrap;
+}
+
+/* el-56: Sort button flex wrapper */
+.na-sort-flex {
+  display: flex;
+  height: 36px;
+  white-space: nowrap;
+}
+
+/* el-57: Sort button */
+.na-sort-btn {
+  align-items: center;
+  appearance: button;
+  background: none;
+  background-position: 0px 0px;
+  border: none;
+  border-radius: 999px;
+  bottom: 0px;
+  cursor: pointer;
+  display: flex;
+  height: 36px;
+  left: 0px;
+  line-height: 16.1px;
+  max-width: 100%;
+  outline: 2px solid rgba(0, 0, 0, 0);
+  outline-offset: 2px;
+  padding: 0;
+  position: relative;
+  right: 0px;
+  text-align: center;
+  white-space: nowrap;
+  top: 0px;
+  transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.na-sort-btn::before {
+  content: "";
+  border-radius: 999px;
+  bottom: 0px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+  cursor: pointer;
+  height: 36px;
+  left: 0px;
+  line-height: 16.1px;
+  opacity: 0;
+  padding: 2px;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  white-space: nowrap;
+  top: 0px;
+  transition: opacity 0.1s ease-in-out;
+  pointer-events: none;
+}
+
+.na-sort-btn:focus-visible::before {
+  opacity: 1;
+}
+
+/* el-58: Sort button inner */
+.na-sort-btn-inner {
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 999px;
+  column-gap: 8px;
+  cursor: pointer;
+  display: flex;
+  height: 36px;
+  justify-content: center;
+  line-height: 16.1px;
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  row-gap: 8px;
+  scale: 1;
+  text-align: center;
+  white-space: nowrap;
+  transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    transform 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+    padding 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+    gap 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+  width: 100%;
+}
+
+.na-sort-btn:hover .na-sort-btn-inner {
+  background-color: rgb(242, 242, 242);
+  border-color: rgb(189, 189, 189);
+}
+
+.na-sort-btn:active .na-sort-btn-inner {
+  scale: 0.96;
+  background-color: rgb(229, 229, 229);
+  border-color: rgb(166, 166, 166);
+}
+
+/* el-59: Sort button content */
+.na-sort-btn-content {
+  align-items: center;
+  column-gap: 8px;
+  cursor: pointer;
+  display: flex;
+  height: 20px;
+  line-height: 16.1px;
+  row-gap: 8px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* el-60: Sort text */
+.na-sort-text {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  height: 20px;
+  line-height: 20px;
+  max-width: 100%;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* el-61: Sort icon wrapper */
+.na-sort-icon-wrap {
+  cursor: pointer;
+  display: flex;
+  height: 20px;
+  line-height: 16.1px;
+  text-align: center;
+  white-space: nowrap;
+  width: 20px;
+}
+
+/* ====================== TABLE SECTION ====================== */
+
+/* el-65: Table outer wrapper */
+.na-table-container-outer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+}
+
+/* el-66: Table scroll container */
+.na-table-scroll {
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  left: 0px;
+  position: relative;
+  right: 0px;
+  top: 0px;
+  width: 100%;
+}
+
+/* Colgroup col */
+.na-col {
+  width: auto;
+}
+
+/* el-67: Main table */
+.na-table {
+  background-color: rgb(255, 255, 255);
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* el-79: Table head (sticky) */
+.na-thead {
+  background-color: rgb(255, 255, 255);
+  position: sticky;
+  top: 0;
+  vertical-align: middle;
+  z-index: 1;
+}
+
+/* el-80: Header row */
+.na-thead-row {
+  vertical-align: middle;
+}
+
+/* ====================== TABLE HEADER CELLS ====================== */
+
+/* el-81: th base */
+.na-th {
+  border-collapse: collapse;
+  box-shadow: rgb(211, 211, 211) 0px -1px 0px 0px inset;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 16px 8px;
+  text-align: left;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.na-th.na-th-first {
+  padding-left: 16px;
+}
+
+/* el-128: Price th — right aligned */
+.na-th.na-th-right {
+  text-align: right;
+}
+
+/* el-131: Status th (last column) — padding-right: 16px */
+.na-th.na-th-last {
+  padding-right: 16px;
+}
+
+/* el-82: th inner wrapper */
+.na-th-inner {
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  cursor: default;
+  display: inline;
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+  transition: box-shadow 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out;
+  width: 100%;
+}
+
+/* el-83: th text wrapper */
+.na-th-text-wrap {
+  cursor: default;
+  display: flex;
+  flex-grow: 1;
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* el-84: Column title text */
+.na-th-text {
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* ====================== TABLE BODY ====================== */
+
+/* el-133: tbody */
+.na-tbody {
+  vertical-align: middle;
+}
+
+/* el-134: Table data row */
+.na-row {
+  border-bottom: 1px solid rgb(229, 229, 229);
+  display: table-row;
+  height: 57px;
+  line-height: 16px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+/* Last row — no border */
+.na-row-last,
+.na-row:last-child {
+  border-bottom: none;
+}
+
+/* Row hover */
+.na-row:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+@media (hover: none) {
+  .na-row:hover {
+    background-color: transparent;
+  }
+}
+
+/* ====================== TABLE DATA CELLS ====================== */
+
+/* el-135: Standard td */
+.na-td {
+  font-size: 14px;
+  line-height: 16px;
+  overflow-wrap: break-word;
+  padding: 16px 8px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+/* First column — extra left padding */
+.na-td.na-td-first {
+  padding-left: 16px;
+}
+
+/* Last column — extra right padding */
+.na-td.na-td-last {
+  padding-right: 16px;
+}
+
+/* Price column — right aligned */
+.na-td.na-td-right {
+  text-align: right;
+}
+
+/* Scheduled date column — inherits normal .na-td styles, wider via table-layout */
+
+/* el-136: Cell text content */
+.na-cell-text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  line-height: 16px;
+  overflow-wrap: break-word;
+  text-align: left;
+}
+
+.na-td.na-td-right .na-cell-text {
+  text-align: right;
+}
+
+/* ====================== REF # LINK ====================== */
+
+/* el-137: Ref link <a> */
+.na-ref-link {
+  border-radius: 4px;
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  display: inline;
+  line-height: 16px;
+  outline-color: rgb(105, 80, 243);
+  overflow-wrap: break-word;
+  position: relative;
+  text-decoration: none;
+  border-color: rgb(105, 80, 243);
+}
+
+.na-ref-link::before {
+  content: "";
+  border-radius: 4px;
+  bottom: 0px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+  color: rgb(105, 80, 243);
+  left: 0px;
+  opacity: 0;
+  padding: 2px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  transition: opacity 0.1s ease-in-out;
+  pointer-events: none;
+}
+
+.na-ref-link:focus-visible::before {
+  opacity: 1;
+}
+
+/* el-138: Ref link span */
+.na-ref-text {
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  display: inline;
+  line-height: 16px;
+  outline-color: rgb(105, 80, 243);
+  overflow-wrap: break-word;
+  border-color: rgb(105, 80, 243);
+}
+
+/* ====================== STATUS BADGES ====================== */
+
+/* Base badge styles — colors applied via inline styles in JSX */
+.na-status-badge {
+  align-items: center;
+  border-radius: 999px;
+  column-gap: 4px;
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 500;
+  height: 24px;
+  justify-content: center;
+  line-height: 16px;
+  min-height: 24px;
+  min-width: 24px;
+  overflow-wrap: break-word;
+  padding-left: 12px;
+  padding-right: 12px;
+  row-gap: 4px;
+  text-align: left;
+}
+
+/* Badge text span */
+.na-status-badge-text {
+  font-size: 13px;
+  font-weight: 500;
+  height: 16px;
+  line-height: 16px;
+  max-width: 100%;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ====================== TABLE FOOTER ====================== */
+
+/* el-320: tfoot */
+.na-tfoot {
+  vertical-align: middle;
+}
+
+/* el-321: Footer row */
+.na-tfoot-row {
+  border-top: 1px solid rgb(229, 229, 229);
+}
+
+/* el-322: Footer td */
+.na-tfoot-td {
+  color: rgb(118, 118, 118);
+  line-height: 18px;
+  outline-color: rgb(118, 118, 118);
+  padding: 18px 8px;
+  text-align: center;
+  vertical-align: middle;
+  border-color: rgb(118, 118, 118);
+}
+
+/* el-323: Footer content wrapper */
+.na-footer-content {
+  bottom: 0px;
+  color: rgb(118, 118, 118);
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 0;
+  left: 0px;
+  line-height: 18px;
+  max-width: 100%;
+  min-height: 18px;
+  outline-color: rgb(118, 118, 118);
+  position: relative;
+  right: 0px;
+  text-align: center;
+  top: 0px;
+  transition: min-height 0.3s;
+  border-color: rgb(118, 118, 118);
+}
+
+/* el-324: Footer children wrapper */
+.na-footer-children {
+  color: rgb(118, 118, 118);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  line-height: 18px;
+  max-width: 100%;
+  outline-color: rgb(118, 118, 118);
+  text-align: center;
+  border-color: rgb(118, 118, 118);
+}
+
+/* el-325: Footer inner flex */
+.na-footer-inner {
+  color: rgb(118, 118, 118);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  line-height: 18px;
+  outline-color: rgb(118, 118, 118);
+  text-align: center;
+  border-color: rgb(118, 118, 118);
+}
+
+/* el-326: Footer text span */
+.na-footer-text {
+  color: rgb(118, 118, 118);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  line-height: 18px;
+  outline-color: rgb(118, 118, 118);
+  text-align: center;
+  border-color: rgb(118, 118, 118);
+}
+
+/* el-327: Hidden loader */
+.na-footer-loader {
+  align-items: center;
+  bottom: 0px;
+  color: rgb(118, 118, 118);
+  display: flex;
+  justify-content: center;
+  left: 0px;
+  line-height: 18px;
+  opacity: 0;
+  outline-color: rgb(118, 118, 118);
+  overflow: hidden;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  top: 0px;
+  transition: opacity 0.3s;
+  visibility: hidden;
+  z-index: 100;
+  border-color: rgb(118, 118, 118);
+}
+
+/* el-328: Scroll detection container (hidden) */
+.na-scroll-detection {
+  display: none;
+}

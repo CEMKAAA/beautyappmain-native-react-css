@@ -1,0 +1,412 @@
+el-72 th classes=KYcv4K pinned pinned-left last-pinned-left keBtDK --variant-cell-default CvzOD_ text=
+  width: 305.594px
+  min-width: 250px
+el-80 th classes=KYcv4K keBtDK --variant-cell-default CvzOD_ text=
+  width: 177px
+  min-width: 150px
+el-88 th classes=KYcv4K keBtDK --variant-cell-default CvzOD_ text=
+  width: 177px
+  min-width: 150px
+el-96 th classes=KYcv4K keBtDK --variant-cell-default CvzOD_ text=
+  width: 177px
+  min-width: 150px
+el-104 th classes=KYcv4K keBtDK --variant-cell-default CvzOD_ text=
+  width: 177px
+  min-width: 150px
+el-112 th classes=KYcv4K keBtDK --variant-cell-default CvzOD_ text=
+  width: 177px
+  min-width: 150px
+el-120 th classes=KYcv4K keBtDK --variant-cell-default CvzOD_ text=
+  width: 177px
+  min-width: 150px
+el-128 th classes=KYcv4K tcD19K --variant-cell-default CvzOD_ text=
+  width: 121.781px
+  min-width: 100px
+  text-align: end
+el-136 th classes=KYcv4K keBtDK --variant-cell-default CvzOD_ text=
+  width: 70.625px
+  min-width: 68px
+el-154 td classes=hAC47K keBtDK pinned pinned-left last-pinned-left --variant-cell-pageFaded o5wEE_ text=
+  width: 305.859px
+  min-width: 250px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-158 td classes=hAC47K keBtDK --variant-cell-pageFaded o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-160 td classes=hAC47K keBtDK --variant-cell-pageFaded o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-162 td classes=hAC47K keBtDK --variant-cell-pageFaded o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-164 td classes=hAC47K keBtDK --variant-cell-pageFaded o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-166 td classes=hAC47K keBtDK --variant-cell-pageFaded o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-168 td classes=hAC47K keBtDK --variant-cell-pageFaded o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-170 td classes=hAC47K tcD19K --variant-cell-pageFaded o5wEE_ text=
+  width: 120.719px
+  min-width: 100px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+  text-align: end
+el-174 td classes=hAC47K keBtDK --variant-cell-pageFaded o5wEE_ text=
+  width: 70.6719px
+  min-width: 68px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-177 td classes=hAC47K keBtDK pinned pinned-left last-pinned-left --variant-cell-default o5wEE_ text=
+  width: 305.859px
+  min-width: 250px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-181 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-185 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-192 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-196 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-203 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-207 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-211 td classes=hAC47K tcD19K --variant-cell-default o5wEE_ text=
+  width: 120.719px
+  min-width: 100px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+  text-align: end
+el-215 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 70.6719px
+  min-width: 68px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-228 td classes=hAC47K keBtDK pinned pinned-left last-pinned-left --variant-cell-default o5wEE_ text=
+  width: 305.859px
+  min-width: 250px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-232 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-236 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-243 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-247 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-254 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-258 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-262 td classes=hAC47K tcD19K --variant-cell-default o5wEE_ text=
+  width: 120.719px
+  min-width: 100px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+  text-align: end
+el-266 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 70.6719px
+  min-width: 68px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-279 td classes=hAC47K keBtDK pinned pinned-left last-pinned-left --variant-cell-default o5wEE_ text=
+  width: 305.859px
+  min-width: 250px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-283 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-287 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-294 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-298 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-305 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-309 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-313 td classes=hAC47K tcD19K --variant-cell-default o5wEE_ text=
+  width: 120.719px
+  min-width: 100px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+  text-align: end
+el-317 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 70.6719px
+  min-width: 68px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-330 td classes=hAC47K keBtDK pinned pinned-left last-pinned-left --variant-cell-default o5wEE_ text=
+  width: 305.859px
+  min-width: 250px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-334 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-338 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-345 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-349 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-356 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-360 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-364 td classes=hAC47K tcD19K --variant-cell-default o5wEE_ text=
+  width: 120.719px
+  min-width: 100px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+  text-align: end
+el-368 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 70.6719px
+  min-width: 68px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-381 td classes=hAC47K keBtDK pinned pinned-left last-pinned-left --variant-cell-default o5wEE_ text=
+  width: 305.859px
+  min-width: 250px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-385 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-389 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-396 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-403 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-410 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-414 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 177.125px
+  min-width: 150px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+el-418 td classes=hAC47K tcD19K --variant-cell-default o5wEE_ text=
+  width: 120.719px
+  min-width: 100px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px
+  text-align: end
+el-422 td classes=hAC47K keBtDK --variant-cell-default o5wEE_ text=
+  width: 70.6719px
+  min-width: 68px
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 1px
+  padding-bottom: 1px

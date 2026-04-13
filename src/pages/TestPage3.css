@@ -1,0 +1,1455 @@
+/* =============================================
+   REFUND SALE MODAL — Fresha Pixel-Perfect Replica
+   Kaynak: Fresh/refund 1.html, computed-styles.json
+   Toplam: 126 element (el-0 → el-125)
+   ============================================= */
+
+/* === TRIGGER BUTTON (sayfadaki buton) === */
+.test3-page {
+    padding: 24px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rf-trigger-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background-color: rgb(13, 13, 13);
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1), transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.rf-trigger-btn:hover {
+    background-color: rgb(45, 45, 45);
+}
+
+.rf-trigger-btn:active {
+    transform: scale(0.96);
+}
+
+/* === el-0: MODAL OVERLAY === */
+.rf-overlay {
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(19, 19, 19, 0.25);
+    justify-content: center;
+    z-index: 2000;
+    transition: opacity 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.rf-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* === el-1: TRANSFORM WRAPPER === */
+.rf-transform {
+    width: 100%;
+    height: 100%;
+    min-width: auto;
+    min-height: 100%;
+    transform: translateY(20px);
+    transition: transform 0.2s cubic-bezier(0.85, 0, 0.15, 1), opacity 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    opacity: 0;
+}
+
+.rf-overlay.open .rf-transform {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    opacity: 1;
+}
+
+/* === el-2: SCROLL CONTAINER === */
+.rf-scroll {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+/* === el-3: MODAL PANEL === */
+.rf-panel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(19, 19, 19, 0.08) 0px 2px 8px 0px, rgba(19, 19, 19, 0.12) 0px 4px 20px 0px;
+    flex-direction: column;
+}
+
+/* === el-4: STICKY HEADER BAR === */
+.rf-header {
+    display: flex;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    height: 72px;
+    min-width: auto;
+    min-height: auto;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: box-shadow 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+/* === el-5: HEADER INNER === */
+.rf-header-inner {
+    display: flex;
+    width: 100%;
+    height: 72px;
+    min-width: auto;
+    max-width: 1440px;
+    min-height: 72px;
+    padding-right: 32px;
+    padding-left: 32px;
+    align-items: center;
+    gap: 24px;
+    box-sizing: border-box;
+}
+
+/* === el-6: HIDDEN ELEMENT === */
+.rf-header-hidden {
+    display: none;
+    width: auto;
+    height: auto;
+}
+
+/* === el-7: HEADER TITLE CONTAINER (scrolled state) === */
+.rf-header-title-wrap {
+    display: flex;
+    position: relative;
+    width: auto;
+    height: 28px;
+    min-width: auto;
+    max-width: 100%;
+    min-height: auto;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    flex-direction: column;
+    flex-grow: 1;
+    opacity: 0;
+    transition: opacity 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+/* === el-8: HEADER TITLE TEXT === */
+.rf-header-title {
+    width: auto;
+    height: 28px;
+    min-width: auto;
+    max-width: 100%;
+    min-height: auto;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* === el-9: HEADER ACTIONS WRAPPER === */
+.rf-header-actions {
+    display: flex;
+    width: auto;
+    height: 48px;
+    min-width: auto;
+    min-height: auto;
+    justify-content: flex-end;
+}
+
+/* === el-10: BUTTON GROUP === */
+.rf-btn-group {
+    display: flex;
+    width: auto;
+    height: 48px;
+    min-height: auto;
+    gap: 12px 8px;
+}
+
+/* === el-11: CLOSE BUTTON === */
+.rf-close-btn {
+    display: flex;
+    position: relative;
+    width: auto;
+    height: 48px;
+    min-width: auto;
+    max-width: 100%;
+    min-height: auto;
+    background: none;
+    background-position: 0px 0px;
+    line-height: 16.1px;
+    text-align: center;
+    border: none;
+    border-radius: 999px;
+    align-items: center;
+    cursor: pointer;
+    transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    outline: rgba(0, 0, 0, 0) solid 2px;
+    padding: 0;
+}
+
+/* === el-12: CLOSE BUTTON INNER === */
+.rf-close-btn-inner {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    min-width: auto;
+    max-width: 100%;
+    min-height: auto;
+    padding-right: 19px;
+    padding-left: 19px;
+    background-color: rgb(255, 255, 255);
+    line-height: 16.1px;
+    text-align: center;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 999px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1), border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1), transform 0.1s cubic-bezier(0, 0.55, 0.45, 1), max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1), padding 0.2s cubic-bezier(0.85, 0, 0.15, 1), gap 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    box-sizing: border-box;
+}
+
+.rf-close-btn:hover .rf-close-btn-inner {
+    background-color: rgb(242, 242, 242);
+}
+
+.rf-close-btn:active .rf-close-btn-inner {
+    transform: scale(0.96);
+}
+
+/* === el-13: CLOSE BUTTON CONTENT === */
+.rf-close-btn-content {
+    display: flex;
+    width: auto;
+    height: 24px;
+    min-height: auto;
+    line-height: 16.1px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* === el-14: CLOSE BUTTON TEXT "Close" === */
+.rf-close-btn-text {
+    width: auto;
+    height: 24px;
+    min-width: auto;
+    max-width: 100%;
+    min-height: auto;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    cursor: pointer;
+    color: inherit;
+}
+
+/* === el-15: CONTINUE BUTTON === */
+.rf-continue-btn {
+    display: flex;
+    position: relative;
+    width: auto;
+    height: 48px;
+    min-width: auto;
+    max-width: 100%;
+    min-height: auto;
+    background: none;
+    background-position: 0px 0px;
+    line-height: 16.1px;
+    text-align: center;
+    border: none;
+    border-radius: 999px;
+    align-items: center;
+    cursor: pointer;
+    transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    outline: rgba(0, 0, 0, 0) solid 2px;
+    padding: 0;
+}
+
+/* === el-16: CONTINUE BUTTON INNER === */
+.rf-continue-btn-inner {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    min-width: auto;
+    max-width: 100%;
+    min-height: auto;
+    padding-right: 19px;
+    padding-left: 19px;
+    background-color: rgb(13, 13, 13);
+    color: rgb(255, 255, 255);
+    line-height: 16.1px;
+    text-align: center;
+    border: 1px solid rgb(13, 13, 13);
+    border-radius: 999px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1), border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1), transform 0.1s cubic-bezier(0, 0.55, 0.45, 1), max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1), padding 0.2s cubic-bezier(0.85, 0, 0.15, 1), gap 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    outline: rgb(255, 255, 255) none 0px;
+    box-sizing: border-box;
+}
+
+.rf-continue-btn:hover .rf-continue-btn-inner {
+    background-color: rgb(45, 45, 45);
+    border-color: rgb(45, 45, 45);
+}
+
+.rf-continue-btn:active .rf-continue-btn-inner {
+    transform: scale(0.96);
+}
+
+/* === el-17: CONTINUE BUTTON CONTENT === */
+.rf-continue-btn-content {
+    display: flex;
+    width: auto;
+    height: 24px;
+    min-height: auto;
+    color: rgb(255, 255, 255);
+    line-height: 16.1px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-color: rgb(255, 255, 255);
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    outline: rgb(255, 255, 255) none 0px;
+}
+
+/* === el-18: CONTINUE BUTTON TEXT "Continue" === */
+.rf-continue-btn-text {
+    width: auto;
+    height: 24px;
+    min-width: auto;
+    max-width: 100%;
+    min-height: auto;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    cursor: pointer;
+    outline: rgb(255, 255, 255) none 0px;
+}
+
+/* === el-19: ARROW ICON WRAPPER === */
+.rf-arrow-wrap {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    min-width: auto;
+    min-height: auto;
+    color: rgb(255, 255, 255);
+    line-height: 16.1px;
+    text-align: center;
+    border-color: rgb(255, 255, 255);
+    cursor: pointer;
+    outline: rgb(255, 255, 255) none 0px;
+}
+
+/* === el-20: ARROW ICON CONTAINER === */
+.rf-arrow-icon {
+    display: flex;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    min-width: auto;
+    min-height: auto;
+    color: rgb(255, 255, 255);
+    line-height: 16.1px;
+    text-align: center;
+    border-color: rgb(255, 255, 255);
+    flex-shrink: 0;
+    cursor: pointer;
+    outline: rgb(255, 255, 255) none 0px;
+}
+
+/* === el-21: RTL ICON (hidden) === */
+.rf-rtl-icon {
+    display: none;
+}
+
+/* === el-24: LTR ICON === */
+.rf-ltr-icon {
+    width: 0px;
+    height: 24px;
+    min-width: auto;
+    min-height: auto;
+    color: rgb(255, 255, 255);
+}
+
+/* === el-22/el-25: SVG elements === */
+.rf-arrow-icon svg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 24px;
+    height: 24px;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.rf-arrow-icon svg path {
+    fill: currentColor;
+}
+
+/* === el-27: HIDDEN SPAN === */
+.rf-hidden-span {
+    display: none;
+    width: auto;
+    height: auto;
+}
+
+/* === el-28: CONTENT AREA === */
+.rf-content {
+    display: flex;
+    width: 600px;
+    min-width: auto;
+    max-width: 600px;
+    min-height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    z-index: 5;
+}
+
+/* === el-29: PROGRESS/OFFSET DIV === */
+.rf-offset {
+    position: relative;
+    top: -48px;
+    width: 0px;
+    min-width: auto;
+    min-height: auto;
+}
+
+/* === el-30: MAIN GRID === */
+.rf-main-grid {
+    display: grid;
+    width: 600px;
+    min-width: auto;
+    max-width: 600px;
+    min-height: auto;
+    padding-bottom: 96px;
+    grid-template-columns: 600px;
+    grid-template-rows: auto;
+}
+
+/* === el-31: INNER GRID === */
+.rf-inner-grid {
+    display: grid;
+    width: 600px;
+    min-width: auto;
+    min-height: auto;
+    gap: 32px 0px;
+    grid-template-columns: 600px;
+    grid-template-rows: auto auto;
+}
+
+/* === el-32: TITLE SECTION === */
+.rf-title-section {
+    width: 600px;
+    min-width: auto;
+    min-height: auto;
+}
+
+/* === el-33: TITLE FLEX === */
+.rf-title-flex {
+    display: flex;
+    width: 600px;
+    min-height: auto;
+    padding-top: 36px;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* === el-34: HEADING WRAPPER === */
+.rf-heading-wrap {
+    width: 600px;
+    height: 44px;
+    min-width: auto;
+    min-height: auto;
+}
+
+/* === el-35: HEADING FLEX === */
+.rf-heading-flex {
+    display: flex;
+    width: 600px;
+    height: 44px;
+    align-items: center;
+    gap: 16px;
+}
+
+/* === el-36: H1 "Refund sale" === */
+.rf-h1 {
+    width: auto;
+    height: 44px;
+    min-width: auto;
+    min-height: auto;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 44px;
+    flex-grow: 1;
+    margin: 0;
+}
+
+/* === el-37: SUBTITLE WRAPPER === */
+.rf-subtitle-wrap {
+    width: 600px;
+    min-width: auto;
+    min-height: auto;
+    color: rgb(118, 118, 118);
+    font-size: 17px;
+    line-height: 24px;
+    border-color: rgb(118, 118, 118);
+    outline: rgb(118, 118, 118) none 0px;
+}
+
+/* === el-38: SUBTITLE FLEX === */
+.rf-subtitle-flex {
+    display: flex;
+    width: 600px;
+    color: rgb(118, 118, 118);
+    font-size: 17px;
+    line-height: 24px;
+    border-color: rgb(118, 118, 118);
+    flex-direction: column;
+    outline: rgb(118, 118, 118) none 0px;
+}
+
+/* === el-39: SALE INFO TEXT === */
+.rf-sale-info {
+    width: 600px;
+    height: 20px;
+    min-width: auto;
+    min-height: auto;
+    color: rgb(118, 118, 118);
+    font-size: 15px;
+    text-align: left;
+    border-color: rgb(118, 118, 118);
+    outline: rgb(118, 118, 118) none 0px;
+    margin: 0;
+}
+
+/* === el-40: LEARN MORE ROW === */
+.rf-learn-row {
+    display: flex;
+    width: 600px;
+    color: rgb(118, 118, 118);
+    font-size: 17px;
+    line-height: 24px;
+    border-color: rgb(118, 118, 118);
+    outline: rgb(118, 118, 118) none 0px;
+}
+
+/* === el-41: LEARN MORE LINK === */
+.rf-learn-link {
+    position: relative;
+    width: auto;
+    min-width: auto;
+    min-height: auto;
+    color: rgb(105, 80, 243);
+    font-size: 17px;
+    line-height: 24px;
+    white-space: nowrap;
+    border-color: rgb(105, 80, 243);
+    border-radius: 4px;
+    cursor: pointer;
+    outline: rgb(105, 80, 243) none 0px;
+    text-decoration: none;
+}
+
+/* === el-42: LEARN MORE TEXT === */
+.rf-learn-text {
+    display: inline;
+    width: auto;
+    height: auto;
+    color: rgb(105, 80, 243);
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+    border-color: rgb(105, 80, 243);
+    cursor: pointer;
+    outline: rgb(105, 80, 243) none 0px;
+}
+
+/* === el-43: CONTENT SECTION === */
+.rf-content-section {
+    display: flex;
+    width: 600px;
+    min-height: auto;
+    flex-direction: column;
+}
+
+/* === el-44: CONTENT FLEX === */
+.rf-content-inner {
+    display: flex;
+    width: 600px;
+    min-width: auto;
+    min-height: auto;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* === el-45: TAB SWITCHER === */
+.rf-tab-switcher {
+    display: flex;
+    width: 600px;
+    height: 48px;
+    min-width: auto;
+    max-width: 100%;
+    min-height: auto;
+    padding: 3px;
+    background-color: rgb(242, 242, 242);
+    border: 1px solid rgb(229, 229, 229);
+    border-radius: 8px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    gap: 4px;
+    box-sizing: border-box;
+}
+
+/* === el-46/el-48: TAB BUTTON (base) === */
+.rf-tab-btn {
+    display: flex;
+    position: relative;
+    width: auto;
+    height: 40px;
+    min-width: auto;
+    min-height: auto;
+    padding: 7px 11px;
+    background-color: rgba(19, 19, 19, 0);
+    background-position: 0px 0px;
+    line-height: 16.1px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 8px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    flex-basis: 0px;
+    cursor: pointer;
+    transition: colors 0.1s cubic-bezier(0, 0.55, 0.45, 1), opacity 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+    outline: rgba(0, 0, 0, 0) solid 2px;
+}
+
+.rf-tab-btn:hover {
+    background-color: rgba(19, 19, 19, 0.04);
+}
+
+/* === el-46: TAB BUTTON ACTIVE === */
+.rf-tab-btn.active {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+}
+
+/* === el-47/el-49: TAB BUTTON TEXT === */
+.rf-tab-text {
+    width: auto;
+    height: 24px;
+    min-width: auto;
+    max-width: 100%;
+    min-height: auto;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    cursor: pointer;
+    margin: 0;
+}
+
+/* === el-50: ITEMS OUTER CONTAINER === */
+.rf-items-outer {
+    display: flex;
+    width: 600px;
+    min-width: auto;
+    min-height: auto;
+    flex-direction: column;
+    gap: 64px;
+}
+
+/* === el-51: ITEMS WRAPPER === */
+.rf-items-wrap {
+    width: 600px;
+    min-width: auto;
+    min-height: auto;
+}
+
+/* === el-52: ITEMS GRID (12-column) === */
+.rf-items-grid {
+    display: grid;
+    width: 600px;
+    gap: 24px 16px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: auto;
+}
+
+/* === el-53: HEADER ROW ("All items" + "Amount") === */
+.rf-header-row {
+    display: grid;
+    width: 100%;
+    min-width: auto;
+    min-height: auto;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px 16px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 24px;
+    grid-column: span 12;
+}
+
+/* === el-54/el-65/el-78/el-88/el-98: CHECKBOX LABEL (shared) === */
+.rf-check-label {
+    display: flex;
+    position: relative;
+    width: auto;
+    min-width: auto;
+    min-height: auto;
+    gap: 12px;
+    grid-column: span 10;
+    cursor: pointer;
+}
+
+.rf-check-label.header-label {
+    align-items: flex-start;
+}
+
+.rf-check-label.item-label {
+    align-items: center;
+}
+
+/* === el-55/el-79/el-89/el-99: CHECKBOX (unchecked) === */
+.rf-checkbox {
+    display: flex;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    min-width: auto;
+    min-height: auto;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    cursor: pointer;
+    outline: rgb(255, 255, 255) none 0px;
+    box-sizing: border-box;
+}
+
+/* === el-66: CHECKBOX (checked) === */
+/* groupActive:bd-w_200 + before:p_25 (2px white gap) + before:bx-sh_focusRing (dark ring) */
+.rf-checkbox.checked {
+    background-color: rgb(105, 80, 243);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(105, 80, 243);
+    box-shadow: 0 0 0 2px rgb(255, 255, 255), 0 0 0 4px rgb(13, 13, 13);
+    outline: rgb(255, 255, 255) none 0px;
+}
+
+/* === el-119: CHECKBOX (disabled) === */
+.rf-checkbox.disabled {
+    background-color: rgb(242, 242, 242);
+    color: rgb(242, 242, 242);
+    border: 1px solid rgb(211, 211, 211);
+    outline: rgb(242, 242, 242) none 0px;
+}
+
+/* === el-67: CHECK MARK WRAPPER === */
+.rf-check-mark {
+    width: 13px;
+    height: 6.75px;
+    min-width: auto;
+    min-height: auto;
+    color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    transform: translate(0px, -2px) rotate(-45deg);
+    cursor: pointer;
+    outline: rgb(255, 255, 255) none 0px;
+}
+
+/* === el-68: CHECK MARK VERTICAL LINE === */
+/* trf_[scaleY(0)] → initial state, anim_scaleYUp, trf-o_top, anim-dur_short.s, anim-tmf_easeOut, anim-fm_forwards */
+.rf-check-v {
+    display: block;
+    width: 2px;
+    height: 6.5px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    border-radius: 999px;
+    cursor: pointer;
+    outline: rgb(255, 255, 255) none 0px;
+    transform: scaleY(0);
+    transform-origin: top;
+    animation: scaleYUp 0.15s ease-out forwards;
+}
+
+/* === el-69: CHECK MARK HORIZONTAL LINE === */
+/* trf_[scaleX(0)] → initial state, anim_scaleXUp, trf-o_left, anim-dur_short.s, anim-tmf_easeOut, anim-fm_forwards, anim-dly_short.s */
+.rf-check-h {
+    display: block;
+    position: relative;
+    width: 13px;
+    height: 2px;
+    margin-top: -1.75px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    border-radius: 999px;
+    cursor: pointer;
+    outline: rgb(255, 255, 255) none 0px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: scaleXUp 0.15s ease-out 0.15s forwards;
+}
+
+/* Checkmark Keyframes */
+@keyframes scaleYUp {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes scaleXUp {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* === el-56/el-70/el-80/el-90/el-100/el-120: LABEL TEXT WRAPPER === */
+.rf-label-pad {
+    min-width: auto;
+    min-height: auto;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    cursor: pointer;
+    flex: 1;
+}
+
+/* === el-58: "All items" text === */
+.rf-all-items-text {
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0;
+}
+
+/* === el-60/el-73/el-83/el-93/el-103/el-122: HIDDEN CHECKBOX INPUT === */
+.rf-hidden-input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    border: transparent;
+    overflow: hidden;
+    cursor: pointer;
+    outline: rgba(0, 0, 0, 0) solid 2px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+/* === el-61: AMOUNT HEADER === */
+.rf-amount-header {
+    display: flex;
+    width: auto;
+    min-width: auto;
+    min-height: auto;
+    justify-content: flex-end;
+    grid-column: span 2;
+}
+
+/* === el-62: "Amount" TEXT === */
+.rf-amount-text {
+    min-width: auto;
+    min-height: auto;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* === el-63/el-107/el-116: SEPARATOR HR === */
+.rf-separator {
+    width: 100%;
+    height: 1px;
+    min-width: auto;
+    min-height: auto;
+    background-color: rgb(229, 229, 229);
+    color: rgb(128, 128, 128);
+    border: none;
+    grid-column: span 12;
+    outline: rgb(128, 128, 128) none 0px;
+    box-sizing: content-box;
+    margin: 0;
+}
+
+/* === el-64/el-77/el-87/el-97: ITEM ROW === */
+.rf-item-row {
+    display: grid;
+    width: 100%;
+    height: 40px;
+    min-width: auto;
+    min-height: auto;
+    align-items: center;
+    gap: 24px 16px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px;
+    grid-column: span 12;
+}
+
+/* === el-71/el-81/el-91/el-101: ITEM NAME === */
+.rf-item-name {
+    font-size: 15px;
+    cursor: pointer;
+    margin: 0;
+}
+
+/* === el-72/el-82/el-92/el-102: ITEM SUBTITLE === */
+.rf-item-subtitle {
+    color: rgb(118, 118, 118);
+    font-size: 13px;
+    line-height: 16px;
+    border-color: rgb(118, 118, 118);
+    cursor: pointer;
+    outline: rgb(118, 118, 118) none 0px;
+    margin: 0;
+}
+
+/* === el-74/el-84/el-94/el-104: PRICE WRAPPER === */
+.rf-price-wrap {
+    display: flex;
+    width: auto;
+    min-width: auto;
+    min-height: auto;
+    justify-content: flex-end;
+    gap: 4px;
+    grid-column: span 2;
+}
+
+/* === el-75/el-85/el-95/el-105: PRICE AMOUNT === */
+.rf-price-amount {
+    min-width: auto;
+    min-height: auto;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* === el-76/el-86/el-96/el-106: PRICE BDI === */
+.rf-price-bdi {
+    display: inline;
+    width: auto;
+    height: auto;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* === el-108: TOTALS SECTION === */
+.rf-totals {
+    display: flex;
+    width: 100%;
+    min-width: auto;
+    min-height: auto;
+    flex-direction: column;
+    gap: 2px;
+    grid-column: span 12;
+}
+
+/* === el-109: TAX ROW === */
+.rf-tax-row {
+    display: flex;
+    width: 100%;
+    min-width: auto;
+    min-height: auto;
+    justify-content: space-between;
+}
+
+/* === el-110: TAX LABEL === */
+.rf-tax-label {
+    min-width: auto;
+    min-height: auto;
+    color: rgb(118, 118, 118);
+    font-size: 15px;
+    border-color: rgb(118, 118, 118);
+    outline: rgb(118, 118, 118) none 0px;
+    margin: 0;
+}
+
+/* === el-111: TAX VALUE === */
+.rf-tax-value {
+    min-width: auto;
+    min-height: auto;
+    color: rgb(118, 118, 118);
+    font-size: 15px;
+    border-color: rgb(118, 118, 118);
+    outline: rgb(118, 118, 118) none 0px;
+    margin: 0;
+}
+
+/* === el-112: TOTAL ROW OUTER === */
+.rf-total-outer {
+    display: flex;
+    width: 100%;
+    min-width: auto;
+    min-height: auto;
+    justify-content: space-between;
+}
+
+/* === el-113: TOTAL ROW INNER === */
+.rf-total-inner {
+    display: flex;
+    width: 100%;
+    min-width: auto;
+    min-height: auto;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+/* === el-114: TOTAL LABEL === */
+.rf-total-label {
+    min-width: auto;
+    min-height: auto;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 0;
+}
+
+/* === el-115: TOTAL VALUE === */
+.rf-total-value {
+    min-width: auto;
+    min-height: auto;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 0;
+}
+
+/* === el-117: INVENTORY ROW === */
+.rf-inventory-row {
+    display: flex;
+    width: 100%;
+    min-width: auto;
+    min-height: auto;
+    grid-column: span 12;
+}
+
+/* === el-118: INVENTORY LABEL === */
+.rf-inventory-label {
+    display: flex;
+    position: relative;
+    width: auto;
+    min-width: auto;
+    min-height: auto;
+    gap: 12px;
+    cursor: pointer;
+}
+
+/* === el-121: INVENTORY TEXT === */
+.rf-inventory-text {
+    color: rgb(172, 172, 172);
+    font-size: 15px;
+    border-color: rgb(172, 172, 172);
+    cursor: pointer;
+    outline: rgb(172, 172, 172) none 0px;
+    margin: 0;
+}
+
+/* === el-123: HIDDEN SEPARATOR === */
+.rf-hidden-sep {
+    display: none;
+    width: auto;
+    height: 1px;
+    background-color: rgb(229, 229, 229);
+    color: rgb(128, 128, 128);
+    border-color: rgb(128, 128, 128);
+    outline: rgb(128, 128, 128) none 0px;
+    box-sizing: content-box;
+}
+
+/* === el-124: EMPTY DIV === */
+.rf-empty-div {
+    width: 0px;
+    min-width: auto;
+    min-height: auto;
+}
+
+/* === el-125: HIDDEN SPAN === */
+.rf-hidden-end {
+    display: none;
+    width: auto;
+    height: auto;
+}
+
+/* =============================================
+   REFUND AMOUNT TAB — el-42 → el-92
+   Kaynak: Fresh/iade ekran tab2.html, computed-styles.json
+   ============================================= */
+
+/* === DISABLED BUTTON STATE (Issue refund) === */
+.rf-continue-btn.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.rf-continue-btn-inner.disabled {
+    cursor: not-allowed;
+}
+
+/* === el-42: outer wrapper === */
+.rfa-outer {
+    display: flex;
+    width: 600px;
+    min-width: auto;
+    min-height: auto;
+    flex-direction: column;
+}
+
+/* === el-43: form grid (12-col) === */
+.rfa-grid {
+    display: grid;
+    width: 600px;
+    min-width: auto;
+    min-height: auto;
+    gap: 24px 16px;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+/* === el-44: ROW 1 (span 12, two halves) === */
+.rfa-row1 {
+    display: flex;
+    width: 600px;
+    min-width: auto;
+    min-height: auto;
+    gap: 16px;
+    grid-column: span 12;
+}
+
+/* === el-45/el-67: field half (span 6) === */
+.rfa-field-half {
+    display: flex;
+    width: 292px;
+    min-width: auto;
+    min-height: auto;
+    flex-direction: column;
+    grid-column: span 6;
+}
+
+/* === el-46: field column wrapper === */
+.rfa-field-col {
+    display: flex;
+    width: 292px;
+    min-width: auto;
+    min-height: auto;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* === el-47/el-75: label row === */
+.rfa-label-row {
+    display: flex;
+    width: auto;
+    min-width: auto;
+    min-height: auto;
+    justify-content: space-between;
+    cursor: default;
+}
+
+/* === el-48/el-69/el-76: label text === */
+.rfa-label-text {
+    width: auto;
+    min-width: auto;
+    min-height: auto;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    flex-grow: 1;
+    cursor: default;
+}
+
+/* === el-68: field top (amount label wrapper) === */
+.rfa-field-top {
+    display: flex;
+    width: 292px;
+    min-width: auto;
+    min-height: auto;
+    margin-bottom: 4px;
+    justify-content: space-between;
+}
+
+/* === el-55/el-77: dropdown === */
+.rfa-dropdown {
+    display: flex;
+    position: relative;
+    width: 292px;
+    height: 48px;
+    min-width: auto;
+    min-height: 48px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.rfa-dropdown:hover {
+    border-color: rgb(166, 166, 166);
+}
+
+.rfa-dropdown:focus-within {
+    border-color: rgb(105, 80, 243);
+    box-shadow: 0 0 0 1px rgb(105, 80, 243);
+}
+
+/* full-width variant (reason dropdown) */
+.rfa-dropdown-full {
+    width: 100%;
+    flex-grow: 1;
+}
+
+/* === el-56: left icon area === */
+.rfa-dropdown-icon-left {
+    display: flex;
+    width: auto;
+    height: 46px;
+    min-width: auto;
+    min-height: auto;
+    padding-left: 12px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* === el-57: icon wrap === */
+.rfa-icon-wrap {
+    display: inline-flex;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    color: rgb(38, 38, 38);
+    pointer-events: none;
+}
+
+.rfa-icon-wrap svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* === el-60/el-78: dropdown value area === */
+.rfa-dropdown-value {
+    display: flex;
+    min-width: 0;
+    height: 46px;
+    padding: 12px 8px 12px 12px;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* === el-78 placeholder state === */
+.rfa-dropdown-placeholder {
+    color: rgb(191, 191, 191);
+    padding: 16px 8px 16px 16px;
+}
+
+/* === el-61/el-79: dropdown text === */
+.rfa-dropdown-text {
+    font-size: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 0;
+}
+
+/* === el-62/el-89: chevron area === */
+.rfa-dropdown-chevron {
+    display: flex;
+    width: 36px;
+    height: 46px;
+    min-width: auto;
+    min-height: auto;
+    padding-right: 16px;
+    align-items: center;
+    cursor: pointer;
+    color: rgb(118, 118, 118);
+}
+
+/* === el-63/el-90: chevron icon wrap === */
+.rfa-chevron-wrap {
+    display: inline-flex;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: rgb(118, 118, 118);
+    pointer-events: none;
+}
+
+.rfa-chevron-wrap svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* === Hidden native select (el-49-54 / el-80) === */
+.rfa-hidden-select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    margin: 0;
+    border-width: 0;
+    padding: 16px;
+    background-color: inherit;
+    font-size: 15px;
+    cursor: pointer;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* === el-66/el-73: helper text === */
+.rfa-helper-text {
+    width: auto;
+    min-width: auto;
+    min-height: auto;
+    margin-top: 4px;
+    color: rgb(118, 118, 118);
+    font-size: 13px;
+    line-height: 16px;
+}
+
+/* === el-70: input wrapper === */
+.rfa-input-wrap {
+    display: flex;
+    position: relative;
+    width: 292px;
+    height: 48px;
+    min-width: auto;
+    min-height: 48px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.rfa-input-wrap:focus-within {
+    border-color: rgb(105, 80, 243);
+    box-shadow: 0 0 0 1px rgb(105, 80, 243);
+}
+
+/* === el-71: TRY prefix === */
+.rfa-input-prefix {
+    width: auto;
+    height: 20px;
+    min-width: auto;
+    min-height: auto;
+    padding-left: 16px;
+    color: rgb(118, 118, 118);
+    font-size: 15px;
+    flex-shrink: 0;
+    user-select: none;
+    display: flex;
+    align-items: center;
+}
+
+/* === el-72: input field === */
+.rfa-input {
+    width: 100%;
+    height: 46px;
+    min-width: auto;
+    min-height: auto;
+    padding: 12px 16px;
+    background-color: rgb(255, 255, 255);
+    font-size: 15px;
+    border: none;
+    outline: none;
+    overflow: clip;
+    cursor: text;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.rfa-input::placeholder {
+    color: rgb(191, 191, 191);
+}
+
+/* === el-74: ROW 2 (span 12, reason for refund) === */
+.rfa-row2 {
+    display: flex;
+    width: 600px;
+    min-width: auto;
+    max-width: 100%;
+    min-height: auto;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 4px;
+    grid-column: span 12;
+}

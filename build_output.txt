@@ -1,0 +1,47 @@
+﻿[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32mÔ£ô[39m 60 modules transformed.
+node.exe : [31mÔ£ù[39m Build failed in 418ms
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program File
+s\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([31mÔ£ù 
+   [39m Build failed in 418ms:String) [], RemoteExcep  
+  tion
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[31merror during build:
+[31m[vite:esbuild] Transform failed with 1 error:
+C:/Users/pc/Desktop/Beauty App/src/pages/MemberDrawer.j
+sx:746:34: ERROR: Unterminated regular expression[31m
+file: [36mC:/Users/pc/Desktop/Beauty App/src/pages/Mem
+berDrawer.jsx:746:34[31m
+[33m
+[33mUnterminated regular expression[33m
+744 |                                      </div>
+745 |                                  </div>
+746 |                              </div>
+    |                                    ^
+747 |                            )}
+748 |                      </div>
+[31m
+    at failureErrorWithLog (C:\Users\pc\Desktop\Beauty 
+App\node_modules\esbuild\lib\main.js:1467:15)
+    at C:\Users\pc\Desktop\Beauty App\node_modules\esbu
+ild\lib\main.js:736:50
+    at responseCallbacks.<computed> (C:\Users\pc\Deskto
+p\Beauty App\node_modules\esbuild\lib\main.js:603:9)
+    at handleIncomingPacket (C:\Users\pc\Desktop\Beauty
+ App\node_modules\esbuild\lib\main.js:658:12)
+    at Socket.readFromStdout (C:\Users\pc\Desktop\Beaut
+y App\node_modules\esbuild\lib\main.js:581:7)
+    at Socket.emit (node:events:508:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/stre
+ams/readable:510:3)
+    at Readable.push (node:internal/streams/readable:39
+0:5)
+    at Pipe.onStreamRead (node:internal/stream_base_com
+mons:189:23)[39m

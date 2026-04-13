@@ -1,0 +1,4350 @@
+/* ═══════════════════════════════════════════════════════════
+   Drawer Replication — Step by Step
+   ═══════════════════════════════════════════════════════════ */
+
+.test-root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* ─── Toggle Button ─── */
+.test-toggle-btn {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 999;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: rgb(105, 80, 243);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.test-toggle-btn:hover {
+  background: rgb(85, 60, 220);
+}
+
+/* ═══════════════════════════════════════════════════
+   Step 1: Pick Mode Banner
+   ═══════════════════════════════════════════════════ */
+.pick-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  padding: 8px 0;
+  background-color: rgb(105, 80, 243);
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28.57px;
+  text-align: center;
+  flex-shrink: 0;
+  transform: translateY(-100%);
+  transition: transform 0.375s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.pick-banner--open {
+  transform: translateY(0);
+}
+
+.pick-banner-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+}
+
+.pick-banner-actions {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 8px;
+}
+
+.pick-banner-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 15px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition:
+    background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.pick-banner-btn:active {
+  transform: scale(0.96);
+}
+
+.pick-banner-btn--outline {
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  border-color: rgb(255, 255, 255);
+}
+
+.pick-banner-btn--outline:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.pick-banner-btn--close {
+  background-color: rgb(255, 255, 255);
+  color: rgb(13, 13, 13);
+  border-color: rgb(211, 211, 211);
+}
+
+.pick-banner-btn--close:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+/* ═══════════════════════════════════════════════════
+   Step 2 & 3: Drawer
+   ═══════════════════════════════════════════════════ */
+
+/* ── Root ── */
+.drawer-root {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 641px;
+  max-width: 1920px;
+  z-index: 2000;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0, 0.55, 0.45, 1),
+    width 0.2s cubic-bezier(0, 0.55, 0.45, 1);
+  pointer-events: none;
+}
+
+.drawer-root--open {
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.drawer-root--wide {
+  width: 801px;
+}
+
+/* ── Grid ── */
+.drawer-grid {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  min-width: auto;
+  max-width: 1848px;
+  background-color: rgb(255, 255, 255);
+  border-left: 1px solid rgb(229, 229, 229);
+  box-shadow:
+    rgba(19, 19, 19, 0.16) 0px 8px 32px 0px,
+    rgb(229, 229, 229) 0px -1px 0px 0px;
+  grid-template-columns: 160px 480px;
+  grid-template-rows: 1fr;
+  transition: grid-template-columns 0.2s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.drawer-grid--wide {
+  grid-template-columns: 320px 480px;
+}
+
+/* ── Floating Action Buttons ── */
+.drawer-fab-strip {
+  display: grid;
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 72px;
+  height: 192px;
+  padding: 12px;
+  gap: 12px;
+  grid-template-columns: 48px;
+  grid-template-rows: 48px 48px 48px;
+  transform: translateX(-72px);
+  z-index: 1;
+}
+
+.drawer-fab {
+  display: inline-flex;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  max-width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 999px;
+  align-items: center;
+  cursor: pointer;
+  transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+  outline: rgba(0, 0, 0, 0) solid 2px;
+}
+
+.drawer-fab-inner {
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  max-width: 100%;
+  padding: 0 19px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 999px;
+  box-shadow: rgba(19, 19, 19, 0.16) 0px 8px 32px 0px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.drawer-fab-inner:hover {
+  background-color: rgb(242, 242, 242);
+}
+
+.drawer-fab-inner:active {
+  transform: scale(0.96);
+  background-color: rgb(235, 235, 235);
+}
+
+.drawer-fab-icon-wrap {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+}
+
+.drawer-fab-icon {
+  display: inline-flex;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.drawer-fab-icon svg {
+  position: absolute;
+  inset: 0;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+
+/* ═══════════════════════════════════════════════════
+   Left Sidebar — Step 2 (collapsed: 160px)
+   ═══════════════════════════════════════════════════ */
+.drawer-sidebar {
+  position: relative;
+  width: 160px;
+  height: 100%;
+  min-width: auto;
+  max-width: 160px;
+  max-height: 100%;
+  border-right: 1px solid rgb(229, 229, 229);
+  overflow: hidden;
+  transition: width 0.2s cubic-bezier(0, 0.55, 0.45, 1),
+    max-width 0.2s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.drawer-sidebar--wide {
+  width: 320px;
+  max-width: 320px;
+}
+
+.drawer-sidebar-inner {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  overflow-y: auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0px 0px 1fr;
+  transition: grid-template-columns 0.2s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.drawer-sidebar-body {
+  width: 100%;
+  height: 100%;
+  grid-column: 1;
+  grid-row: 3;
+  transition: opacity 0.5s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.drawer-sidebar-content {
+  width: 160px;
+  height: 100%;
+  text-align: center;
+}
+
+.drawer-sidebar-card {
+  display: flex;
+  position: relative;
+  width: 160px;
+  height: 100%;
+  text-align: center;
+  flex-direction: column;
+}
+
+.drawer-sidebar-card-btn {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: rgba(0, 0, 0, 0) solid 2px;
+}
+
+.drawer-sidebar-card-visual {
+  width: 160px;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.drawer-sidebar-card-info {
+  display: flex;
+  width: 160px;
+  height: 196px;
+  padding: 32px 0;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+/* ── Client Avatar (collapsed) ── */
+.drawer-client-avatar-wrap {
+  display: inline-flex;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  pointer-events: none;
+  vertical-align: top;
+}
+
+.drawer-client-avatar {
+  display: flex;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  background-color: rgb(240, 240, 255);
+  color: rgb(105, 80, 243);
+  border: 1px solid rgb(240, 240, 255);
+  border-radius: 999px;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.drawer-client-avatar-inner {
+  display: flex;
+  width: 46px;
+  height: 46px;
+  color: rgb(105, 80, 243);
+  border-radius: 999px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.drawer-client-avatar-icon {
+  display: inline-flex;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  color: rgb(105, 80, 243);
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+.drawer-client-avatar-icon svg {
+  position: absolute;
+  inset: 0;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  color: inherit;
+}
+
+.drawer-client-text {
+  display: flex;
+  width: 112px;
+  max-width: 112px;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.drawer-client-title {
+  width: 112px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  margin: 0;
+  pointer-events: none;
+}
+
+.drawer-client-subtitle {
+  width: 112px;
+  margin: 0;
+  color: rgb(118, 118, 118);
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════
+   Step 3: Client Panel (expanded: 320px)
+   ═══════════════════════════════════════════════════ */
+.client-panel {
+  display: flex;
+  width: 320px;
+  height: 100%;
+  flex-direction: column;
+}
+
+/* ── Sticky Header ── */
+.client-panel-header {
+  position: sticky;
+  top: 0;
+  width: 320px;
+  min-height: 149px;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(211, 211, 211);
+  z-index: 2001;
+}
+
+.client-panel-header-inner {
+  display: flex;
+  width: 320px;
+  padding: 32px 32px 16px 32px;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.client-panel-title {
+  margin: 0;
+  width: 256px;
+  height: 28px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+/* ── Client search ── */
+.client-panel-search-col {
+  display: flex;
+  width: 256px;
+  height: 48px;
+  flex-direction: column;
+}
+
+.client-panel-search-widget {
+  display: flex;
+  position: relative;
+  width: 256px;
+  height: 48px;
+  min-height: 48px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.client-panel-search-widget:focus-within {
+  border-color: rgb(105, 80, 243);
+  box-shadow: 0 0 0 1px rgb(105, 80, 243);
+}
+
+.client-panel-search-prefix {
+  display: flex;
+  width: 36px;
+  height: 20px;
+  padding-left: 16px;
+  color: rgb(118, 118, 118);
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.client-panel-search-input {
+  width: 100%;
+  height: 46px;
+  padding: 12px 16px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  font-size: 15px;
+  outline: none;
+  cursor: text;
+}
+
+.client-panel-search-input::placeholder {
+  color: rgb(118, 118, 118);
+}
+
+/* ── Client List ── */
+.client-panel-list-area {
+  width: 320px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.client-panel-list {
+  width: 320px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Client Row ── */
+.client-row-wrap {
+  width: 320px;
+  height: 96px;
+}
+
+.client-row {
+  display: flex;
+  width: 320px;
+  height: 96px;
+  padding: 16px 32px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out;
+}
+
+.client-row:hover {
+  background-color: rgb(248, 248, 248);
+}
+
+/* ── Client Avatar Column ── */
+.client-row-avatar-col {
+  display: flex;
+  width: 80px;
+  height: 64px;
+  padding-right: 16px;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+/* Avatar outer — icon style (Add new, Walk-In) */
+.client-avatar-outer--icon {
+  display: inline-flex;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  pointer-events: none;
+  vertical-align: top;
+}
+
+.client-avatar-circle {
+  display: flex;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  background-color: rgb(240, 240, 255);
+  color: rgb(105, 80, 243);
+  border: 1px solid rgb(240, 240, 255);
+  border-radius: 999px;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.client-avatar-inner {
+  display: flex;
+  width: 62px;
+  height: 62px;
+  color: rgb(105, 80, 243);
+  border-radius: 999px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.client-avatar-icon-lg {
+  display: inline-flex;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  color: rgb(105, 80, 243);
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+.client-avatar-icon-lg svg {
+  position: absolute;
+  inset: 0;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  color: inherit;
+}
+
+/* Avatar outer — letter style (named clients) */
+.client-avatar-outer--letter {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  min-height: 64px;
+  background-color: rgb(240, 240, 255);
+  border: 1px solid rgb(240, 240, 255);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+    border-color 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+    box-shadow 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.client-avatar-letter-wrap {
+  display: flex;
+  width: 62px;
+  height: 62px;
+  border-radius: 999px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.client-avatar-letter {
+  color: rgb(105, 80, 243);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  cursor: pointer;
+  transition: scale 0.2s 0.1s;
+}
+
+/* ── Client Row Info ── */
+.client-row-info {
+  display: flex;
+  width: 176px;
+  height: 64px;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 0;
+  cursor: pointer;
+}
+
+.client-row-name {
+  display: flow-root;
+  margin: 0;
+  width: 176px;
+  height: 20px;
+  max-width: 100%;
+  font-size: 15px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+  word-break: break-word;
+}
+
+.client-row-email {
+  display: flow-root;
+  margin: 0;
+  width: 176px;
+  height: 20px;
+  max-width: 100%;
+  color: rgb(118, 118, 118);
+  font-size: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+  word-break: break-word;
+}
+
+/* ── Separator ── */
+.client-separator-wrap {
+  display: flex;
+  width: 320px;
+  height: 1px;
+  padding: 0 32px;
+}
+
+.client-separator-line {
+  width: 256px;
+  height: 1px;
+  background-color: rgb(229, 229, 229);
+}
+
+/* ═══════════════════════════════════════════════════
+   Right Panel (480px) — unchanged
+   ═══════════════════════════════════════════════════ */
+.drawer-panel {
+  position: relative;
+  width: 480px;
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  z-index: 10;
+  transition: transform 0.3s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.drawer-panel-inner {
+  display: grid;
+  width: 480px;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  overflow-y: auto;
+  grid-template-columns: 480px;
+  grid-template-rows: 68px 1fr;
+}
+
+/* ── Panel Title Area ── */
+.drawer-panel-title-area {
+  position: relative;
+  width: 480px;
+  height: 68px;
+  background-color: rgb(255, 255, 255);
+  z-index: 8;
+}
+
+.drawer-panel-title-pad {
+  width: 480px;
+  height: 68px;
+  padding: 0 32px;
+}
+
+.drawer-panel-title-grid {
+  display: grid;
+  width: 416px;
+  height: 68px;
+  padding-top: 32px;
+  align-items: center;
+  grid-template-columns: 0px 416px 0px;
+  grid-template-rows: 36px 0px;
+}
+
+.drawer-panel-title-slot {
+  width: 416px;
+  height: 36px;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.drawer-panel-title-flex {
+  display: flex;
+  width: 416px;
+  height: 36px;
+  min-height: 36px;
+  align-items: center;
+}
+
+.drawer-panel-h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+/* ── Panel Body ── */
+.drawer-panel-body {
+  width: 480px;
+  padding: 0 32px 32px;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.drawer-panel-body-inner {
+  width: 416px;
+}
+
+/* ── Search ── */
+.drawer-search-sticky {
+  position: sticky;
+  top: 56px;
+  width: 416px;
+  height: 80px;
+  padding: 16px 0;
+  background-color: rgb(255, 255, 255);
+  z-index: 2001;
+}
+
+.drawer-search-col {
+  display: flex;
+  width: 416px;
+  height: 48px;
+  flex-direction: column;
+}
+
+.drawer-search-widget {
+  display: flex;
+  position: relative;
+  width: 416px;
+  height: 48px;
+  min-height: 48px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.drawer-search-widget:focus-within {
+  border-color: rgb(105, 80, 243);
+  box-shadow: 0 0 0 1px rgb(105, 80, 243);
+}
+
+.drawer-search-prefix {
+  display: flex;
+  width: 36px;
+  height: 20px;
+  padding-left: 16px;
+  color: rgb(118, 118, 118);
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.drawer-search-icon-wrap {
+  display: inline-flex;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  color: rgb(118, 118, 118);
+  flex-shrink: 0;
+}
+
+.drawer-search-icon-wrap svg {
+  position: absolute;
+  inset: 0;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  color: inherit;
+}
+
+.drawer-search-input {
+  width: 100%;
+  height: 46px;
+  padding: 12px 16px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  font-size: 15px;
+  outline: none;
+  cursor: text;
+}
+
+.drawer-search-input::placeholder {
+  color: rgb(118, 118, 118);
+}
+
+/* ── Services List ── */
+.drawer-services-wrap {
+  width: 416px;
+}
+
+.drawer-services-list {
+  display: flex;
+  width: 416px;
+  padding: 16px 0;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ── Category Group ── */
+.drawer-category {
+  display: flex;
+  width: 416px;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 24px;
+}
+
+.drawer-category-header {
+  display: flex;
+  width: 416px;
+  height: 28px;
+  align-items: center;
+  gap: 8px;
+}
+
+.drawer-category-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.drawer-category-badge {
+  display: inline-flex;
+  position: relative;
+  width: auto;
+  height: 20px;
+  min-width: 12px;
+  min-height: 20px;
+  max-height: 20px;
+  padding: 0 4px;
+  background-color: rgb(242, 242, 242);
+  color: rgb(118, 118, 118);
+  border-radius: 999px;
+  box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px 0px, rgb(255, 255, 255) 0px 0px 0px 2px;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  pointer-events: none;
+}
+
+.drawer-category-badge-text {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  color: rgb(118, 118, 118);
+}
+
+/* ── Category Items List ── */
+.drawer-category-items {
+  display: flex;
+  width: 416px;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 16px;
+}
+
+/* ── Service Item ── */
+.drawer-service-item {
+  display: flex;
+  position: relative;
+  width: 416px;
+  min-height: 70px;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.drawer-service-hover-bg {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border-radius: 8px;
+  transition:
+    background 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+    box-shadow 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+  pointer-events: none;
+}
+
+.drawer-service-item:hover .drawer-service-hover-bg {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.drawer-service-btn {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: rgba(0, 0, 0, 0) solid 2px;
+}
+
+.drawer-service-row {
+  display: flex;
+  width: 416px;
+  min-height: 70px;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Color bar */
+.drawer-service-bar-col {
+  display: flex;
+  width: 4px;
+  height: 70px;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 4px;
+  transition: width 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.drawer-service-item:hover .drawer-service-bar-col {
+  width: 6px;
+}
+
+.drawer-service-bar {
+  width: 4px;
+  height: 70px;
+  border-radius: 999px;
+  transition: width 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.drawer-service-item:hover .drawer-service-bar {
+  width: 6px;
+}
+
+/* Content */
+.drawer-service-content {
+  display: flex;
+  width: 396px;
+  min-height: 70px;
+  padding: 12px 0;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.drawer-service-info {
+  display: flex;
+  width: 396px;
+  min-height: 46px;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.drawer-service-name-block {
+  flex: 1;
+  min-width: 0;
+}
+
+.drawer-service-name {
+  margin: 0 0 2px;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 24px;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+
+.drawer-service-duration {
+  margin: 0;
+  color: rgb(118, 118, 118);
+  font-size: 15px;
+  line-height: 20px;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+
+/* Price */
+.drawer-service-price-block {
+  display: flex;
+  width: 64px;
+  min-width: 64px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  margin-left: auto;
+}
+
+.drawer-service-price-inner {
+  display: flex;
+  width: 64px;
+  min-width: 64px;
+  height: 24px;
+  flex-direction: column;
+  align-items: flex-end;
+  transition: opacity 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.drawer-service-price-row {
+  display: flex;
+  height: 24px;
+  gap: 4px;
+}
+
+.drawer-service-price {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.drawer-service-price bdi {
+  display: inline;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  white-space: inherit;
+}
+
+/* ═══════════════════════════════════════════════════
+   Step 4: Client Profile Sidebar
+   ═══════════════════════════════════════════════════ */
+
+/* ── Profile Area ── */
+.profile-area {
+  display: flex;
+  width: 320px;
+  height: 100%;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.profile-card {
+  display: flex;
+  width: 320px;
+  padding: 32px 32px 0;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.profile-info-block {
+  display: flex;
+  width: 256px;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ── Profile Avatar ── */
+.profile-avatar-section {
+  display: flex;
+  width: 256px;
+  padding-bottom: 8px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-avatar-outer {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  min-width: 96px;
+  min-height: 96px;
+  background-color: rgb(240, 240, 255);
+  border: 1px solid rgb(240, 240, 255);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+    border-color 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+    box-shadow 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.profile-avatar-inner {
+  display: flex;
+  width: 94px;
+  height: 94px;
+  border-radius: 999px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.profile-avatar-letter {
+  color: rgb(105, 80, 243);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  cursor: pointer;
+  transition: scale 0.2s 0.1s;
+}
+
+/* ── Profile Name / Email ── */
+.profile-name {
+  margin: 0;
+  width: 256px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.profile-email-wrap {
+  display: flex;
+  width: 256px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.profile-email-btn {
+  display: inline-flex;
+  max-width: 256px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: rgb(118, 118, 118);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: underline;
+  text-decoration-color: rgba(118, 118, 118, 0.3);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.profile-email-btn:hover {
+  text-decoration-color: rgb(118, 118, 118);
+}
+
+/* ── No-show Badge ── */
+.profile-badges {
+  display: flex;
+  width: 256px;
+  padding-top: 8px;
+  justify-content: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.profile-badge-noshow {
+  display: inline-flex;
+  height: 24px;
+  padding: 0 8px;
+  background-color: rgb(255, 229, 229);
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-badge-noshow-text {
+  color: rgb(204, 0, 0);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+/* ── Action Buttons ── */
+.profile-actions {
+  display: flex;
+  width: 256px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.profile-action-btn-wrap {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.profile-action-btn {
+  display: inline-flex;
+  position: relative;
+  height: 36px;
+  min-width: 36px;
+  max-width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 999px;
+  align-items: center;
+  cursor: pointer;
+  transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+  outline: rgba(0, 0, 0, 0) solid 2px;
+}
+
+.profile-action-btn-inner {
+  display: inline-flex;
+  height: 36px;
+  min-width: 36px;
+  max-width: 100%;
+  padding: 0 15px;
+  background-color: rgb(242, 242, 242);
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+  transition:
+    background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.profile-action-btn-inner:hover {
+  background-color: rgb(229, 229, 229);
+}
+
+.profile-action-btn-inner:active {
+  transform: scale(0.96);
+}
+
+.profile-action-btn-content {
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+  gap: 4px;
+  overflow: hidden;
+}
+
+.profile-action-btn-label {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: rgb(13, 13, 13);
+}
+
+.profile-action-btn-icon-wrap {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+}
+
+.profile-action-btn-icon {
+  display: inline-flex;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  color: rgb(13, 13, 13);
+  flex-shrink: 0;
+}
+
+.profile-action-btn-icon svg {
+  position: absolute;
+  inset: 0;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  color: inherit;
+}
+
+/* ── Divider ── */
+.profile-divider {
+  width: 256px;
+  height: 0;
+  margin: 16px 32px;
+  border: none;
+  border-top: 1px solid rgb(229, 229, 229);
+}
+
+/* ── Detail Rows ── */
+.profile-details {
+  display: flex;
+  width: 320px;
+  padding: 0 32px 32px;
+  flex-direction: column;
+}
+
+.profile-detail-row {
+  display: flex;
+  width: 256px;
+  min-height: 44px;
+  padding: 12px 0;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.profile-detail-icon-wrap {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.profile-detail-icon {
+  display: inline-flex;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  color: rgb(118, 118, 118);
+  flex-shrink: 0;
+}
+
+.profile-detail-icon svg {
+  position: absolute;
+  inset: 0;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  color: inherit;
+}
+
+.profile-detail-text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 2px;
+  justify-content: center;
+  min-height: 20px;
+}
+
+.profile-detail-link {
+  margin: 0;
+  color: rgb(105, 80, 243);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: rgba(105, 80, 243, 0.3);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.profile-detail-link:hover {
+  text-decoration-color: rgb(105, 80, 243);
+}
+
+.profile-detail-static {
+  margin: 0;
+  color: rgb(118, 118, 118);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+/* ═══════════════════════════════════════════════════
+   Step 4: Recently Booked Carousel
+   ═══════════════════════════════════════════════════ */
+
+.rb-section {
+  width: 416px;
+  padding: 8px 0 0;
+}
+
+.rb-header {
+  display: flex;
+  width: 416px;
+  height: 28px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.rb-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rb-header-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.rb-header-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rb-nav-btn {
+  display: inline-flex;
+  position: relative;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 999px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.rb-nav-btn--disabled {
+  cursor: default;
+}
+
+.rb-nav-btn-inner {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  padding: 0 7px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.rb-nav-btn-inner:hover {
+  background-color: rgb(242, 242, 242);
+}
+
+.rb-nav-btn-inner:active {
+  transform: scale(0.96);
+}
+
+.rb-nav-btn-inner--disabled {
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
+}
+
+.rb-nav-icon {
+  display: inline-flex;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  color: rgb(13, 13, 13);
+  flex-shrink: 0;
+}
+
+.rb-nav-icon svg {
+  position: absolute;
+  inset: 0;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  color: inherit;
+}
+
+/* ── Carousel ── */
+.rb-carousel-wrap {
+  width: 416px;
+  overflow: hidden;
+}
+
+.rb-carousel {
+  display: flex;
+  width: 416px;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.rb-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.rb-card {
+  display: flex;
+  position: relative;
+  width: 240px;
+  min-width: 240px;
+  min-height: 86px;
+  flex-direction: column;
+  gap: 4px;
+  scroll-snap-align: start;
+  cursor: pointer;
+}
+
+.rb-card-content {
+  display: flex;
+  width: 240px;
+  min-height: 86px;
+  padding: 16px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(229, 229, 229);
+  border-radius: 12px;
+  flex-direction: column;
+  gap: 8px;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.rb-card-content:hover {
+  background-color: rgb(248, 248, 248);
+}
+
+.rb-card-title-row {
+  display: flex;
+  width: 208px;
+  height: 24px;
+  align-items: center;
+}
+
+.rb-card-title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rb-card-details {
+  display: flex;
+  width: 208px;
+  flex-direction: column;
+}
+
+.rb-card-date {
+  margin: 0;
+  color: rgb(118, 118, 118);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rb-card-price {
+  margin: 0;
+  color: rgb(118, 118, 118);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+/* ══════════════════════════════════════════════════
+   Actions Dropdown (Step 5) — extracted from JSON
+   ══════════════════════════════════════════════════ */
+
+/* Overlay backdrop (click-away) */
+.actions-dropdown-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+}
+
+/* Popover container — el-2 */
+.actions-dropdown {
+  position: fixed;
+  width: 200px;
+  min-width: 200px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(229, 229, 229);
+  border-radius: 12px;
+  box-shadow:
+    rgba(19, 19, 19, 0.08) 0px 2px 8px 0px,
+    rgba(19, 19, 19, 0.12) 0px 4px 20px 0px;
+  overflow-x: auto;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  z-index: 100000;
+  outline: rgba(0, 0, 0, 0) solid 2px;
+}
+
+/* Content wrapper — el-6 */
+.actions-dropdown-content {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 20px;
+  gap: 24px;
+}
+
+/* Main list — el-7 */
+.actions-dropdown-list {
+  display: flex;
+  flex-direction: column;
+  margin: -8px -20px;
+  padding: 8px 20px;
+  list-style: none;
+  gap: 0;
+  outline: rgba(0, 0, 0, 0) solid 2px;
+}
+
+/* List group — el-8, el-21, el-54 */
+.actions-dropdown-group {
+  list-style: none;
+}
+
+/* Inner list — el-9, el-24, el-55 */
+.actions-dropdown-group-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
+
+/* Menu item — el-10, el-25, el-34, el-43, el-56, el-59, el-62 */
+.actions-dropdown-item {
+  display: flex;
+  position: relative;
+  min-height: 40px;
+  margin: 0 -12px;
+  padding: 8px 12px;
+  background-color: rgba(19, 19, 19, 0);
+  border: none;
+  border-radius: 8px;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition:
+    opacity 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+    transform 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+  outline: rgba(0, 0, 0, 0) solid 2px;
+  list-style: none;
+}
+
+.actions-dropdown-item:hover {
+  background-color: rgba(19, 19, 19, 0.04);
+}
+
+.actions-dropdown-item:active {
+  background-color: rgba(19, 19, 19, 0.08);
+}
+
+/* Icon wrapper — el-11 */
+.actions-dropdown-item-icon {
+  display: flex;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+.actions-dropdown-item-icon svg {
+  position: absolute;
+  inset: 0;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Label wrapper — el-17 */
+.actions-dropdown-item-label-wrap {
+  display: block;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+/* Label text — el-18 */
+.actions-dropdown-item-label {
+  display: block;
+  max-width: 100%;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: rgb(13, 13, 13);
+}
+
+/* Danger variant — el-64 (Delete client) */
+.actions-dropdown-item-label.is-danger {
+  color: rgb(212, 22, 58);
+}
+
+/* Group divider container — el-19 */
+.actions-dropdown-divider-wrap {
+  height: 17px;
+}
+
+/* Divider line — el-20 */
+.actions-dropdown-divider {
+  width: 100%;
+  height: 1px;
+  margin: 8px 0;
+  background-color: rgb(229, 229, 229);
+  border: none;
+}
+
+/* Section header — el-22 */
+.actions-dropdown-section-header {
+  display: flex;
+  align-items: center;
+  padding: 8px 0 4px;
+  gap: 8px;
+}
+
+/* Section title — el-23 */
+.actions-dropdown-section-title {
+  display: block;
+  flex-grow: 1;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: rgb(13, 13, 13);
+}
+
+/* Chevron rotation when open */
+.profile-action-btn-wrap.is-open .profile-action-btn-icon {
+  transform: rotate(180deg);
+  transition: transform 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+/* ══════════════════════════════════════════════════
+   Service Added Panel (Step 6) — extracted from JSON
+   ══════════════════════════════════════════════════ */
+
+/* ── Panel wrapper ── */
+.svc-added-panel {
+  display: flex;
+  width: 480px;
+  height: 100%;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+}
+
+.svc-added-inner {
+  display: flex;
+  width: 480px;
+  height: 100%;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Ghost header (scroll indicator, hidden by default) */
+.svc-added-header-ghost {
+  position: sticky;
+  top: 0;
+  width: 480px;
+  height: 0;
+  background-color: rgb(255, 255, 255);
+  z-index: 10;
+}
+
+/* ── Title area ── */
+.svc-added-title-area {
+  width: 480px;
+  padding: 0;
+}
+
+.svc-added-title-pad {
+  width: 480px;
+  padding: 32px 32px 0;
+}
+
+.svc-added-title-grid {
+  display: grid;
+  width: 416px;
+  padding-top: 0;
+  align-items: center;
+  grid-template-columns: 0px 416px 0px;
+  grid-template-rows: 36px auto;
+  row-gap: 8px;
+}
+
+.svc-added-title-slot {
+  width: 416px;
+  min-height: 36px;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.svc-added-title-flex {
+  display: flex;
+  width: 416px;
+  min-height: 36px;
+  align-items: center;
+}
+
+.svc-added-title-btn {
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  align-items: center;
+  gap: 4px;
+  outline: none;
+}
+
+.svc-added-h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+  color: rgb(13, 13, 13);
+}
+
+.svc-added-h1-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.svc-added-h1-text {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.svc-added-h1-chevron {
+  display: inline-flex;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.svc-added-title-btn:hover .svc-added-h1-chevron {
+  opacity: 1;
+}
+
+.svc-added-h1-chevron-icon {
+  display: flex;
+  position: absolute;
+  inset: 0;
+  width: 16px;
+  height: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.svc-added-h1-chevron-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ── Description / time row ── */
+.svc-added-desc-slot {
+  width: 416px;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.svc-added-desc {
+  display: flex;
+  width: 416px;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.svc-added-desc-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.svc-added-time-wrap {
+  display: flex;
+}
+
+.svc-added-time-btn {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  color: rgb(13, 13, 13);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.15s ease;
+}
+
+.svc-added-time-btn:hover {
+  text-decoration-color: rgb(13, 13, 13);
+}
+
+.svc-added-dot {
+  color: rgb(118, 118, 118);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.svc-added-repeat-btn {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  color: rgb(118, 118, 118);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.15s ease;
+}
+
+.svc-added-repeat-btn:hover {
+  text-decoration-color: rgb(118, 118, 118);
+}
+
+/* ── Separator ── */
+.svc-added-separator {
+  width: calc(100% - 64px);
+  height: 1px;
+  margin: 24px 32px;
+  padding: 0;
+  border: none;
+  background-color: rgb(229, 229, 229);
+}
+
+/* ── Body ── */
+.svc-added-body {
+  flex: 1;
+  width: 480px;
+  padding: 0 32px;
+}
+
+.svc-added-body-inner {
+  width: 416px;
+}
+
+.svc-added-services-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.svc-added-section-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  color: rgb(13, 13, 13);
+}
+
+/* ── Service Card ── */
+.svc-added-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 416px;
+}
+
+/* ── Service Added Card — extends drawer-service-item ── */
+
+/* Make the price block a positioning context for the hover actions overlay */
+.svc-card-price-area {
+  position: relative;
+}
+
+/* Price fades out on card hover */
+.svc-card-price-main {
+  transition: opacity 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.svc-card-wrapper:hover .svc-card-price-main {
+  opacity: 0;
+}
+
+/* Edit / Remove icons fade in on card hover, positioned over the price */
+.svc-card-hover-actions {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 8px;
+  height: 24px;
+  align-items: center;
+  gap: 16px;
+  opacity: 0;
+  transition: opacity 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.svc-card-wrapper:hover .svc-card-hover-actions {
+  opacity: 1;
+}
+
+.svc-card-hover-action-btn {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  margin: -8px;
+  border: none;
+  background: transparent;
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: rgb(118, 118, 118);
+  transition:
+    background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    color 0.15s ease;
+}
+
+.svc-card-hover-action-btn:hover {
+  background-color: rgba(19, 19, 19, 0.06);
+  color: rgb(13, 13, 13);
+}
+
+.svc-card-hover-action-btn:active {
+  background-color: rgba(19, 19, 19, 0.1);
+  transform: scale(0.96);
+}
+
+.svc-card-hover-action-icon {
+  display: inline-flex;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.svc-card-hover-action-icon svg {
+  position: absolute;
+  inset: 0;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+
+/* ── Add Service Button ── */
+.svc-added-add-wrap {
+  width: 416px;
+}
+
+.svc-added-add-grid {
+  display: grid;
+  width: 416px;
+  grid-template-columns: 416px;
+}
+
+.svc-added-add-grid-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.svc-added-add-grid-cell {
+  display: flex;
+}
+
+.svc-added-add-btn {
+  display: inline-flex;
+  position: relative;
+  height: 36px;
+  max-width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 999px;
+  align-items: center;
+  cursor: pointer;
+  outline: rgba(0, 0, 0, 0) solid 2px;
+  transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.svc-added-add-btn-inner {
+  display: inline-flex;
+  height: 36px;
+  max-width: 100%;
+  padding: 0 11px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.svc-added-add-btn:hover .svc-added-add-btn-inner {
+  background-color: rgb(242, 242, 242);
+  border-color: rgb(189, 189, 189);
+}
+
+.svc-added-add-btn:active .svc-added-add-btn-inner {
+  transform: scale(0.96);
+  background-color: rgb(229, 229, 229);
+}
+
+.svc-added-add-btn-icon-slot {
+  display: flex;
+  align-items: center;
+}
+
+.svc-added-add-btn-icon {
+  display: inline-flex;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.svc-added-add-btn-icon svg {
+  position: absolute;
+  inset: 0;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.svc-added-add-btn-label-wrap {
+  display: flex;
+  align-items: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  gap: 8px;
+}
+
+.svc-added-add-btn-label {
+  max-width: 100%;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: rgb(13, 13, 13);
+}
+
+/* Total duration label next to Add service button */
+.svc-added-total-duration {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgb(118, 118, 118);
+  white-space: nowrap;
+}
+
+/* ── Footer ── */
+.svc-added-footer {
+  position: sticky;
+  bottom: 0;
+  width: 480px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgb(229, 229, 229) 0px -1px 0px 0px;
+  z-index: 5;
+}
+
+.svc-added-footer-inner {
+  width: 480px;
+}
+
+.svc-added-footer-pad {
+  width: 480px;
+  padding: 16px 32px 24px;
+}
+
+.svc-added-footer-content {
+  display: flex;
+  width: 416px;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.svc-added-footer-summary {
+  display: flex;
+  width: 416px;
+  flex-direction: column;
+}
+
+/* ── Total row ── */
+.svc-added-total-row {
+  display: flex;
+  width: 416px;
+  height: 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.svc-added-total-label {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 24px;
+  color: rgb(13, 13, 13);
+}
+
+.svc-added-total-value-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.svc-added-total-value {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 24px;
+  color: rgb(13, 13, 13);
+}
+
+/* ── Action buttons row ── */
+.svc-added-footer-actions {
+  display: flex;
+  width: 416px;
+  height: 48px;
+  align-items: center;
+  gap: 8px;
+}
+
+.svc-added-footer-action-item {
+  display: flex;
+}
+
+/* Options button (circle with dots) */
+.svc-added-options-btn {
+  display: inline-flex;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  max-width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 999px;
+  align-items: center;
+  cursor: pointer;
+  outline: rgba(0, 0, 0, 0) solid 2px;
+  transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.svc-added-options-btn-inner {
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  max-width: 100%;
+  padding: 0 11px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.svc-added-options-btn:hover .svc-added-options-btn-inner {
+  background-color: rgb(242, 242, 242);
+  border-color: rgb(189, 189, 189);
+}
+
+.svc-added-options-btn:active .svc-added-options-btn-inner {
+  transform: scale(0.96);
+  background-color: rgb(229, 229, 229);
+}
+
+.svc-added-options-btn-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.svc-added-options-btn-icon-slot {
+  display: flex;
+  align-items: center;
+}
+
+.svc-added-options-btn-icon {
+  display: inline-flex;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.svc-added-options-btn-icon svg {
+  position: absolute;
+  inset: 0;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+
+/* Checkout button (outline) */
+.svc-added-checkout-btn {
+  display: flex;
+  position: relative;
+  flex: 1;
+  height: 48px;
+  max-width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 999px;
+  align-items: center;
+  cursor: pointer;
+  outline: rgba(0, 0, 0, 0) solid 2px;
+  transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.svc-added-checkout-btn-inner {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  max-width: 100%;
+  padding: 0 19px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.svc-added-checkout-btn:hover .svc-added-checkout-btn-inner {
+  background-color: rgb(242, 242, 242);
+  border-color: rgb(189, 189, 189);
+}
+
+.svc-added-checkout-btn:active .svc-added-checkout-btn-inner {
+  transform: scale(0.96);
+  background-color: rgb(229, 229, 229);
+}
+
+.svc-added-checkout-btn-label-wrap {
+  display: flex;
+  align-items: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  gap: 8px;
+}
+
+.svc-added-checkout-btn-label {
+  max-width: 100%;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 24px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: rgb(13, 13, 13);
+}
+
+/* Save button (solid dark) */
+.svc-added-save-btn {
+  display: flex;
+  position: relative;
+  flex: 1;
+  height: 48px;
+  max-width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 999px;
+  align-items: center;
+  cursor: pointer;
+  outline: rgba(0, 0, 0, 0) solid 2px;
+  transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.svc-added-save-btn-inner {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  max-width: 100%;
+  padding: 0 19px;
+  background-color: rgb(13, 13, 13);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(13, 13, 13);
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.svc-added-save-btn:hover .svc-added-save-btn-inner {
+  background-color: rgb(38, 38, 38);
+  border-color: rgb(38, 38, 38);
+}
+
+.svc-added-save-btn:active .svc-added-save-btn-inner {
+  transform: scale(0.96);
+  background-color: rgb(64, 64, 64);
+}
+
+.svc-added-save-btn-label-wrap {
+  display: flex;
+  align-items: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  gap: 8px;
+}
+
+.svc-added-save-btn-label {
+  max-width: 100%;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 24px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: rgb(255, 255, 255);
+}
+
+/* ══════════════════════════════════════════════════
+   Empty State (from computed-styles.json el-130…147)
+   ══════════════════════════════════════════════════ */
+
+/* el-130: card container – relative for layered bg/border */
+.svc-empty-card-container {
+  position: relative;
+  width: 416px;
+  min-height: 48px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* el-131: solid white background layer */
+.svc-empty-card-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+}
+
+/* el-132: inset border overlay – 1px inset box-shadow, NOT dashed */
+.svc-empty-card-border {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: rgb(229, 229, 229) 0px 0px 0px 1px inset;
+  pointer-events: none;
+}
+
+/* el-133: content area */
+.svc-empty-content {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 64px 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* el-134: centered column */
+.svc-empty-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 512px;
+  gap: 16px;
+}
+
+/* el-135: picture wrapper */
+.svc-empty-picture {
+  display: flex;
+  width: 56px;
+  height: 56px;
+}
+
+/* el-136: image */
+.svc-empty-img {
+  display: block;
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+}
+
+/* el-137: text wrapper */
+.svc-empty-text-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* el-138: text */
+.svc-empty-text {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgb(118, 118, 118);
+  text-align: center;
+}
+
+/* el-139: button wrapper – extra margin-top from JSON */
+.svc-empty-btn-wrap {
+  display: flex;
+  margin-top: 8px;
+}
+
+/* ══════════════════════════════════════════════════
+   Disabled Footer (from computed-styles.json el-150…172)
+   ══════════════════════════════════════════════════ */
+
+/* When footer is disabled, checkout & save get opacity 0.4, no interaction */
+.svc-added-footer--disabled .svc-added-checkout-btn,
+.svc-added-footer--disabled .svc-added-save-btn {
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
+}
+
+.svc-added-footer--disabled .svc-added-checkout-btn-inner,
+.svc-added-footer--disabled .svc-added-save-btn-inner {
+  cursor: default;
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════
+   Step 8: Edit Service Panel (el-211 → el-717)
+   ═══════════════════════════════════════════════════ */
+
+/* el-211: root overlay — slides over the 480px right panel */
+.edit-svc-root {
+  display: grid;
+  position: absolute;
+  inset: 0;
+  width: 480px;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  overflow-y: auto;
+  grid-template-columns: 480px;
+  grid-template-rows: 72px 36px 1fr 116px 0px;
+  z-index: 11;
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.edit-svc-root--open {
+  transform: translateX(0);
+}
+
+/* ── Header (el-212 → el-230) ── */
+
+/* el-212: sticky header area */
+.edit-svc-header-area {
+  position: sticky;
+  top: 0;
+  width: 480px;
+  height: 72px;
+  z-index: 10;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* el-213: header inner */
+.edit-svc-header-inner {
+  display: flex;
+  position: sticky;
+  top: 0;
+  width: 480px;
+  height: 72px;
+  max-width: 1920px;
+  background-color: rgb(255, 255, 255);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: box-shadow 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+/* el-214: header content row */
+.edit-svc-header-row {
+  display: flex;
+  width: 480px;
+  height: 72px;
+  min-height: 72px;
+  padding: 0 32px;
+  align-items: center;
+  gap: 24px;
+}
+
+/* el-215: back button wrap */
+.edit-svc-back-wrap {
+  display: flex;
+  width: auto;
+  height: 36px;
+}
+
+/* el-216: back button */
+.edit-svc-back-btn {
+  display: flex;
+  position: relative;
+  width: auto;
+  height: 36px;
+  max-width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 999px;
+  align-items: center;
+  cursor: pointer;
+  transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+  outline: rgba(0, 0, 0, 0) solid 2px;
+}
+
+/* el-217: back button inner */
+.edit-svc-back-btn-inner {
+  display: flex;
+  width: auto;
+  height: 36px;
+  max-width: 100%;
+  padding: 0 15px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.edit-svc-back-btn-inner:hover {
+  background-color: rgb(242, 242, 242);
+}
+
+.edit-svc-back-btn-inner:active {
+  transform: scale(0.96);
+  background-color: rgb(235, 235, 235);
+}
+
+/* el-218, el-220-221: back arrow icon */
+.edit-svc-back-icon-slot {
+  display: flex;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.edit-svc-back-icon-slot svg {
+  position: absolute;
+  inset: 0;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+
+/* el-225-226: "Back" label */
+.edit-svc-back-label-wrap {
+  display: flex;
+  height: 20px;
+  align-items: center;
+  gap: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.edit-svc-back-label {
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* el-227-228: header title (opacity 0 by default, shown on scroll) */
+.edit-svc-header-title-wrap {
+  display: flex;
+  flex-grow: 1;
+  max-width: 100%;
+  height: 28px;
+  white-space: nowrap;
+  overflow: hidden;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.edit-svc-header-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* el-229-230: right side spacer */
+.edit-svc-header-right {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: flex-end;
+}
+
+/* ── Title area (el-231 → el-239) ── */
+
+/* el-231: title row container */
+.edit-svc-title-area {
+  position: relative;
+  width: 480px;
+  height: 36px;
+  background-color: rgb(255, 255, 255);
+  z-index: 8;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.edit-svc-title-pad {
+  width: 480px;
+  height: 36px;
+  padding: 0 32px;
+}
+
+.edit-svc-title-grid {
+  display: grid;
+  width: 416px;
+  height: 36px;
+  align-items: center;
+  grid-template-columns: 0px 416px 0px;
+  grid-template-rows: 36px 0px;
+}
+
+.edit-svc-title-slot {
+  width: 416px;
+  height: 36px;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.edit-svc-title-flex {
+  display: flex;
+  width: 416px;
+  height: 36px;
+  min-height: 36px;
+  align-items: center;
+}
+
+.edit-svc-h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+/* ── Body (el-241 → el-693) ── */
+
+.edit-svc-body {
+  width: 480px;
+  padding: 24px 32px;
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.edit-svc-body-inner {
+  display: flex;
+  width: 416px;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* el-243-244: form with CSS Grid */
+.edit-svc-form {
+  width: 416px;
+}
+
+.edit-svc-grid {
+  display: grid;
+  width: 416px;
+  gap: 24px 16px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+}
+
+/* ── Service Name Card (el-245 → el-266) ── */
+
+.edit-svc-service-field {
+  display: flex;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  grid-column: span 12;
+}
+
+.edit-svc-service-card {
+  width: 100%;
+  height: 64px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  overflow: hidden;
+  transition:
+    background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    box-shadow 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.edit-svc-service-border {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 64px;
+  border-radius: 8px;
+  box-shadow: rgb(229, 229, 229) 0px 0px 0px 1px inset;
+  z-index: 2000;
+  pointer-events: none;
+}
+
+.edit-svc-service-content {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 64px;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.edit-svc-service-hover-bg {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border-radius: 8px;
+  transition:
+    background 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+    box-shadow 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+  pointer-events: none;
+}
+
+.edit-svc-service-btn {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 64px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: rgba(0, 0, 0, 0) solid 2px;
+}
+
+.edit-svc-service-row {
+  display: flex;
+  width: 100%;
+  height: 64px;
+  align-items: center;
+  gap: 16px;
+}
+
+.edit-svc-service-bar-col {
+  display: flex;
+  width: 4px;
+  height: 64px;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 4px;
+  transition: inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.edit-svc-service-bar {
+  width: 4px;
+  height: 64px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 999px;
+}
+
+.edit-svc-service-info {
+  display: flex;
+  width: 100%;
+  padding: 12px 0;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.edit-svc-service-details {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.edit-svc-service-name-wrap {
+  flex-grow: 1;
+  transition: padding-inline-end 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.edit-svc-service-name {
+  display: flow-root;
+  margin: 0 0 2px 0;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 24px;
+  overflow: hidden;
+}
+
+/* el-258-266: chevron icon on right side */
+.edit-svc-service-chevron-area {
+  display: flex;
+  width: 36px;
+  height: 26px;
+  margin-left: auto;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.edit-svc-service-chevron-inner {
+  display: flex;
+  width: 36px;
+  height: 26px;
+  padding-right: 16px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.edit-svc-service-chevron-icon {
+  display: flex;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.edit-svc-service-chevron-icon svg {
+  position: absolute;
+  inset: 0;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+
+/* ── Team Member field (el-267 → el-300) ── */
+
+.edit-svc-field-row {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 4px;
+  grid-column: span 12;
+}
+
+.edit-svc-field-inner {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.edit-svc-field-label {
+  width: 100%;
+  height: 20px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+  flex-grow: 1;
+  cursor: default;
+}
+
+.edit-svc-team-row {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  gap: 8px;
+}
+
+/* el-271-279: team member avatar thumbnail */
+.edit-svc-team-avatar-wrap {
+  position: relative;
+  width: 48px;
+  height: 48px;
+}
+
+.edit-svc-team-avatar-inner {
+  display: flex;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  flex-direction: column;
+}
+
+.edit-svc-team-avatar-btn {
+  position: absolute;
+  inset: 0;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: rgba(0, 0, 0, 0) solid 2px;
+}
+
+.edit-svc-team-avatar-bg {
+  width: 48px;
+  height: 48px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  overflow: hidden;
+  transition:
+    background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    box-shadow 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+  pointer-events: none;
+}
+
+.edit-svc-team-avatar-border {
+  position: absolute;
+  inset: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  box-shadow: rgb(229, 229, 229) 0px 0px 0px 1px inset;
+  z-index: 2000;
+  pointer-events: none;
+}
+
+.edit-svc-team-avatar-icon-pad {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.edit-svc-team-avatar-icon {
+  display: flex;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+.edit-svc-team-avatar-icon svg {
+  position: absolute;
+  inset: 0;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* el-280-300: team member select dropdown */
+.edit-svc-team-select-wrap {
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 4px;
+}
+
+/* el-289: custom select trigger */
+.edit-svc-select-trigger {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 48px;
+  max-height: 48px;
+  background-color: rgb(255, 255, 255);
+  font-size: 15px;
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 8px;
+  flex-grow: 1;
+  cursor: pointer;
+  transition:
+    background-color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+    border-color 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+  outline: rgba(0, 0, 0, 0) solid 2px;
+}
+
+.edit-svc-select-trigger:hover {
+  background-color: rgb(248, 248, 248);
+}
+
+/* el-290: prefix avatar inside the select */
+.edit-svc-select-prefix {
+  display: flex;
+  width: 44px;
+  height: 46px;
+  padding-left: 16px;
+  color: rgb(118, 118, 118);
+  align-items: center;
+  cursor: text;
+}
+
+/* el-291: mini avatar circle */
+.edit-svc-select-avatar {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  background-color: rgb(240, 240, 255);
+  border: 1px solid rgb(240, 240, 255);
+  border-radius: 999px;
+  transition:
+    background-color 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+    border-color 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+    box-shadow 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.edit-svc-select-avatar-inner {
+  display: flex;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-svc-select-avatar-img {
+  display: flex;
+  width: 26px;
+  height: 26px;
+  max-width: 100%;
+  overflow: clip;
+}
+
+/* el-295-296: team member name text */
+.edit-svc-select-text {
+  display: flex;
+  height: 46px;
+  padding: 16px 8px 16px 16px;
+  font-size: 15px;
+  align-items: center;
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.edit-svc-select-text span {
+  font-size: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* el-297-300: trailing chevron */
+.edit-svc-select-chevron {
+  display: flex;
+  width: 36px;
+  height: 46px;
+  padding-right: 16px;
+  color: rgb(118, 118, 118);
+  align-items: center;
+  cursor: pointer;
+}
+
+.edit-svc-select-chevron-icon {
+  display: flex;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  color: rgb(118, 118, 118);
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+.edit-svc-select-chevron-icon svg {
+  position: absolute;
+  inset: 0;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* ── Half-width fields (span 6) ── */
+
+.edit-svc-half-field {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  grid-column: span 6;
+}
+
+/* ── Service Price (el-301 → el-306) ── */
+
+.edit-svc-price-label-row {
+  display: flex;
+  width: 100%;
+  height: 20px;
+  margin-bottom: 4px;
+  justify-content: space-between;
+}
+
+.edit-svc-input-wrap {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 48px;
+  min-height: 48px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 8px;
+  overflow: hidden;
+  transition:
+    box-shadow 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+
+.edit-svc-input-wrap:focus-within {
+  border-color: rgb(105, 80, 243);
+  box-shadow: 0 0 0 1px rgb(105, 80, 243);
+}
+
+.edit-svc-input-prefix {
+  padding-left: 16px;
+  color: rgb(118, 118, 118);
+  font-size: 15px;
+  flex-shrink: 0;
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+
+.edit-svc-input {
+  width: 100%;
+  height: 46px;
+  padding: 12px 16px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  font-size: 15px;
+  outline: none;
+  cursor: text;
+}
+
+/* ── Discount field (el-307 → el-322) ── */
+
+.edit-svc-discount-field {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 4px;
+  grid-column: span 6;
+}
+
+.edit-svc-discount-inner {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 4px;
+}
+
+.edit-svc-discount-label-row {
+  display: flex;
+  width: 100%;
+  height: 20px;
+  justify-content: space-between;
+}
+
+.edit-svc-discount-label {
+  font-size: 15px;
+  font-weight: 600;
+  cursor: default;
+}
+
+/* ── Start Time / Duration dropdowns (el-323 → el-681) ── */
+
+/* Reuse .edit-svc-discount-field layout for these, same pattern */
+
+/* ── Add Extra Time button (el-682 → el-691) ── */
+
+.edit-svc-extra-time-slot {
+  width: 100%;
+  height: 36px;
+  grid-column: span 12;
+}
+
+.edit-svc-extra-time-wrap {
+  width: 100%;
+  height: 36px;
+}
+
+.edit-svc-extra-time-btn {
+  display: inline-flex;
+  position: relative;
+  height: 36px;
+  max-width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 999px;
+  align-items: center;
+  cursor: pointer;
+  transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+  outline: rgba(0, 0, 0, 0) solid 2px;
+}
+
+.edit-svc-extra-time-btn-inner {
+  display: flex;
+  height: 36px;
+  max-width: 100%;
+  padding: 0 15px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.edit-svc-extra-time-btn-inner:hover {
+  background-color: rgb(242, 242, 242);
+}
+
+.edit-svc-extra-time-btn-inner:active {
+  transform: scale(0.96);
+  background-color: rgb(235, 235, 235);
+}
+
+.edit-svc-extra-time-icon-slot {
+  display: flex;
+  width: 20px;
+  height: 20px;
+}
+
+.edit-svc-extra-time-icon {
+  display: flex;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.edit-svc-extra-time-icon svg {
+  position: absolute;
+  inset: 0;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.edit-svc-extra-time-label-wrap {
+  display: flex;
+  height: 20px;
+  align-items: center;
+  gap: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.edit-svc-extra-time-label {
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* ── Footer (el-694 → el-717) ── */
+
+.edit-svc-footer {
+  position: sticky;
+  bottom: 0;
+  width: 480px;
+  height: 116px;
+  background-color: rgb(255, 255, 255);
+  z-index: 10;
+  grid-column: 1;
+  grid-row: 4;
+}
+
+.edit-svc-footer-inner {
+  position: sticky;
+  bottom: 0;
+  width: 480px;
+  height: 116px;
+  max-height: 200px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgb(229, 229, 229) 0px -1px 0px 0px;
+  z-index: 10;
+  transition:
+    box-shadow 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+    max-block-size 0.4s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.edit-svc-footer-content {
+  display: flex;
+  width: 480px;
+  height: 116px;
+  padding: 16px 32px;
+  justify-content: flex-end;
+}
+
+.edit-svc-footer-col {
+  display: flex;
+  width: 416px;
+  height: 84px;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 12px;
+}
+
+/* ── Total row (el-698 → el-704) ── */
+
+.edit-svc-total-row {
+  display: flex;
+  width: 416px;
+  height: 24px;
+  justify-content: space-between;
+}
+
+.edit-svc-total-label {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.edit-svc-total-right {
+  display: flex;
+  height: 24px;
+  gap: 8px;
+}
+
+.edit-svc-total-duration {
+  margin: 0;
+  color: rgb(118, 118, 118);
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.edit-svc-total-price-wrap {
+  display: flex;
+  height: 24px;
+  flex-grow: 2;
+  gap: 4px;
+}
+
+.edit-svc-total-price {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+/* ── Action buttons row (el-705 → el-717) ── */
+
+.edit-svc-actions-row {
+  display: flex;
+  width: 416px;
+  height: 48px;
+  flex-grow: 1;
+  gap: 8px;
+}
+
+/* el-706-713: Delete button */
+.edit-svc-delete-btn {
+  display: flex;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  max-width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 999px;
+  align-items: center;
+  cursor: pointer;
+  transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+  outline: rgba(0, 0, 0, 0) solid 2px;
+}
+
+.edit-svc-delete-btn-inner {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  max-width: 100%;
+  padding: 0 19px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(212, 22, 58);
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.edit-svc-delete-btn-inner:hover {
+  background-color: rgb(255, 240, 243);
+}
+
+.edit-svc-delete-btn-inner:active {
+  transform: scale(0.96);
+}
+
+/* sr-only label text for delete */
+.edit-svc-delete-sr {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  color: rgb(212, 22, 58);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 24px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  align-items: center;
+  gap: 8px;
+}
+
+.edit-svc-delete-icon-slot {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  color: rgb(212, 22, 58);
+}
+
+.edit-svc-delete-icon {
+  display: flex;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  color: rgb(212, 22, 58);
+  flex-shrink: 0;
+}
+
+.edit-svc-delete-icon svg {
+  position: absolute;
+  inset: 0;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  color: rgb(212, 22, 58);
+}
+
+/* el-714-717: Apply button */
+.edit-svc-apply-btn {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 48px;
+  max-width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 999px;
+  align-items: center;
+  cursor: pointer;
+  flex-grow: 1;
+  transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+  outline: rgba(0, 0, 0, 0) solid 2px;
+}
+
+.edit-svc-apply-btn-inner {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  max-width: 100%;
+  padding: 0 19px;
+  background-color: rgb(13, 13, 13);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(13, 13, 13);
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.edit-svc-apply-btn-inner:hover {
+  background-color: rgb(51, 51, 51);
+}
+
+.edit-svc-apply-btn-inner:active {
+  transform: scale(0.96);
+  background-color: rgb(38, 38, 38);
+}
+
+.edit-svc-apply-label-wrap {
+  display: flex;
+  height: 20px;
+  align-items: center;
+  gap: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.edit-svc-apply-label {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: rgb(255, 255, 255);
+}
+
+/* ══════════════════════════════════════════
+   Minimized Drawer Bar
+   ══════════════════════════════════════════ */
+
+.minimized-drawer-bar {
+  display: flex;
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 320px;
+  height: 56px;
+  max-width: 320px;
+  max-height: 56px;
+  padding: 8px 4px 8px 16px;
+  background-color: rgb(13, 13, 13);
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow:
+    rgba(19, 19, 19, 0.08) 0px 2px 8px 0px,
+    rgba(19, 19, 19, 0.12) 0px 4px 20px 0px;
+  align-items: center;
+  gap: 8px;
+  z-index: 2000;
+  transform: translateY(0);
+  transition: transform 0.2s cubic-bezier(0, 0.55, 0.45, 1);
+  animation: minimized-bar-slide-up 0.25s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+@keyframes minimized-bar-slide-up {
+  from {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Invisible expand button covering entire bar */
+.minimized-drawer-expand-btn {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: rgba(0, 0, 0, 0) solid 2px;
+  z-index: 1;
+}
+
+/* Avatar circle */
+.minimized-drawer-avatar {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  background-color: rgb(240, 240, 255);
+  border: 1px solid rgb(240, 240, 255);
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.minimized-drawer-avatar-inner {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.minimized-drawer-avatar-letter {
+  color: rgb(105, 80, 243);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 14px;
+  pointer-events: none;
+}
+
+/* Client name */
+.minimized-drawer-name {
+  display: flow-root;
+  flex-grow: 1;
+  margin: 0;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* Dismiss (X) button */
+.minimized-drawer-dismiss-btn {
+  position: relative;
+  display: flex;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: rgba(0, 0, 0, 0) solid 2px;
+  z-index: 2;
+}
+
+.minimized-drawer-dismiss-inner {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  max-width: 100%;
+  padding: 0 19px;
+  background-color: rgb(13, 13, 13);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(13, 13, 13);
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.minimized-drawer-dismiss-btn:hover .minimized-drawer-dismiss-inner {
+  background-color: rgb(38, 38, 38);
+  border-color: rgb(38, 38, 38);
+}
+
+.minimized-drawer-dismiss-btn:active .minimized-drawer-dismiss-inner {
+  transform: scale(0.96);
+  background-color: rgb(64, 64, 64);
+}
+
+.minimized-drawer-dismiss-icon-wrap {
+  display: flex;
+  width: 24px;
+  height: 24px;
+}
+
+.minimized-drawer-dismiss-icon {
+  display: flex;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.minimized-drawer-dismiss-icon svg {
+  position: absolute;
+  inset: 0;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+
+/* ═══════════════════════════════════════════════════
+   Edit Repeating Options Panel  (el-171 → el-277)
+   ═══════════════════════════════════════════════════ */
+
+/* el-171: root overlay — slides over the 480px right panel */
+.repeat-root {
+  display: grid;
+  position: absolute;
+  inset: 0;
+  width: 480px;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  overflow-y: auto;
+  grid-template-columns: 480px;
+  grid-template-rows: 72px 36px 1fr 80px;
+  z-index: 11;
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.repeat-root--open {
+  transform: translateX(0);
+}
+
+/* ── Header (el-172/173) ── */
+.repeat-header-area {
+  position: sticky;
+  top: 0;
+  width: 480px;
+  height: 72px;
+  z-index: 10;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.repeat-header-inner {
+  display: flex;
+  position: sticky;
+  top: 0;
+  width: 480px;
+  height: 72px;
+  max-width: 1920px;
+  background-color: rgb(255, 255, 255);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: box-shadow 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.repeat-header-row {
+  display: flex;
+  width: 480px;
+  height: 72px;
+  max-width: 1440px;
+  min-height: 72px;
+  padding: 0 32px;
+  align-items: center;
+  gap: 24px;
+}
+
+/* el-175→186: Back button */
+.repeat-back-wrap {
+  display: flex;
+  height: 36px;
+}
+
+.repeat-back-btn {
+  display: flex;
+  position: relative;
+  height: 36px;
+  max-width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 999px;
+  outline: none;
+}
+
+.repeat-back-btn-inner {
+  display: flex;
+  height: 36px;
+  max-width: 100%;
+  padding: 0 15px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.repeat-back-btn-inner:hover {
+  background-color: rgb(245, 245, 245);
+}
+
+.repeat-back-icon-slot {
+  display: flex;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.repeat-back-icon-slot svg {
+  position: absolute;
+  inset: 0;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.repeat-back-label {
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* el-187/188: Header title (opacity 0 → shows on scroll) */
+.repeat-header-title-wrap {
+  display: flex;
+  flex: 1;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.repeat-header-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Right spacer */
+.repeat-header-right {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: flex-end;
+}
+
+/* ── Title area (el-191→199) ── */
+.repeat-title-area {
+  position: relative;
+  width: 480px;
+  background-color: rgb(255, 255, 255);
+  z-index: 8;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.repeat-title-pad {
+  width: 480px;
+  padding: 0 32px;
+}
+
+.repeat-title-grid {
+  display: grid;
+  width: 416px;
+  align-items: center;
+  grid-template-columns: 0px 416px 0px;
+  grid-template-rows: 36px 0px;
+}
+
+.repeat-title-slot {
+  width: 416px;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.repeat-title-flex {
+  display: flex;
+  width: 416px;
+  min-height: 36px;
+  align-items: center;
+}
+
+.repeat-h1 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+  margin: 0;
+}
+
+/* ── Body (el-201→270) ── */
+.repeat-body {
+  width: 480px;
+  max-width: 100%;
+  padding: 32px;
+  grid-column: 1;
+  grid-row: 3;
+  overflow-y: auto;
+}
+
+.repeat-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Field wrapper (used for Frequency, Ends) ── */
+.repeat-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 100%;
+}
+
+.repeat-field-label {
+  display: flex;
+  justify-content: space-between;
+  cursor: default;
+}
+
+.repeat-field-label span {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ── Select wrapper (el-206 pattern) ── */
+.repeat-select-wrap {
+  display: flex;
+  position: relative;
+  height: 48px;
+  max-height: 48px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 8px;
+  flex: 1;
+  transition: background-color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+    border-color 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.repeat-select-wrap:focus-within {
+  border-color: rgb(0, 0, 0);
+}
+
+.repeat-select-display {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: 16px 8px 16px 16px;
+  min-width: 0;
+  font-size: 15px;
+}
+
+.repeat-select-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  min-width: 0;
+  font-size: 15px;
+}
+
+.repeat-select-native {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 16px;
+  border: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.repeat-select-arrow {
+  display: flex;
+  align-items: center;
+  padding-right: 16px;
+  color: rgb(118, 118, 118);
+  cursor: pointer;
+}
+
+.repeat-chevron-icon {
+  display: flex;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.repeat-chevron-icon svg {
+  position: absolute;
+  inset: 0;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+
+/* ── Every row — 12-col grid (el-219) ── */
+.repeat-every-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px 16px;
+  align-items: start;
+}
+
+.repeat-every-num {
+  grid-column: span 3;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.repeat-every-period {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ── Number input (el-225) ── */
+.repeat-input {
+  width: 100%;
+  height: 46px;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  background: transparent;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* ── Footer (el-271→277) ── */
+.repeat-footer {
+  position: sticky;
+  bottom: 0;
+  width: 480px;
+  height: 80px;
+  background-color: rgb(255, 255, 255);
+  z-index: 10;
+  grid-column: 1;
+  grid-row: 4;
+}
+
+.repeat-footer-inner {
+  position: sticky;
+  bottom: 0;
+  width: 480px;
+  height: 80px;
+  max-height: 200px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgb(229, 229, 229) 0px -1px 0px 0px;
+  z-index: 10;
+}
+
+.repeat-footer-pad {
+  display: flex;
+  width: 480px;
+  height: 80px;
+  padding: 16px 32px;
+  justify-content: flex-end;
+}
+
+/* el-274/275: Apply button */
+.repeat-apply-btn {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 48px;
+  padding: 0;
+  border: none;
+  background: none;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 999px;
+  outline: none;
+}
+
+.repeat-apply-btn-inner {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  max-width: 100%;
+  padding: 0 19px;
+  background-color: rgb(13, 13, 13);
+  color: rgb(255, 255, 255);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.repeat-apply-btn-inner:hover {
+  background-color: rgb(51, 51, 51);
+}
+
+.repeat-apply-label-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.repeat-apply-label {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 24px;
+  color: rgb(255, 255, 255);
+  max-width: 100%;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

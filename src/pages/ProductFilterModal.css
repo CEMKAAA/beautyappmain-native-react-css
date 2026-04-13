@@ -1,0 +1,1426 @@
+/* ═══════════════════════════════════════════════════
+   FilterModal.css — Pixel-perfect from computed-styles.json
+   178 elements (el-0 → el-177)
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-0: Root overlay container ── */
+.filter-modal__overlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 481px;
+    height: 100vh;
+    max-width: 1920px;
+    z-index: 2000;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.filter-modal__overlay--open {
+    transform: translateX(0);
+}
+
+/* ── el-1: Panel grid ── */
+.filter-modal__panel {
+    display: grid;
+    width: 481px;
+    height: 100vh;
+    min-width: auto;
+    max-width: 1848px;
+    min-height: auto;
+    background-color: rgb(255, 255, 255);
+    border-left: 1px solid rgb(229, 229, 229);
+    box-shadow: rgba(19, 19, 19, 0.16) 0px 8px 32px 0px, rgb(229, 229, 229) 0px -1px 0px 0px;
+    grid-template-columns: 480px;
+    grid-template-rows: 100vh;
+}
+
+/* ── el-2: Close button area (off-screen left) ── */
+.filter-modal__close-area {
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: 72px;
+    height: 72px;
+    padding: 12px;
+    gap: 12px;
+    grid-template-columns: 48px;
+    grid-template-rows: 48px;
+    transform: translateX(-72px);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.filter-modal__overlay--open .filter-modal__close-area {
+    opacity: 1;
+}
+
+/* ── el-3: Close button ── */
+.filter-modal__close-btn {
+    display: flex;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    max-width: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+    line-height: 16.1px;
+    text-align: center;
+    border-radius: 999px;
+    align-items: center;
+    cursor: pointer;
+    transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    outline: rgba(0, 0, 0, 0) solid 2px;
+}
+
+/* ── el-4: Close button inner (pill with shadow) ── */
+.filter-modal__close-btn-inner {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    max-width: 100%;
+    padding-right: 19px;
+    padding-left: 19px;
+    background-color: rgb(255, 255, 255);
+    line-height: 16.1px;
+    text-align: center;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 999px;
+    box-shadow: rgba(19, 19, 19, 0.16) 0px 8px 32px 0px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        padding 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        gap 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.filter-modal__close-btn:hover .filter-modal__close-btn-inner {
+    background-color: rgb(242, 242, 242);
+    border-color: rgb(184, 184, 184);
+}
+
+.filter-modal__close-btn:active .filter-modal__close-btn-inner {
+    transform: scale(0.96);
+    background-color: rgb(229, 229, 229);
+    border-color: rgb(184, 184, 184);
+}
+
+/* ── el-5: sr-only label ── */
+.filter-modal__close-sr {
+    display: flex;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    line-height: 16.1px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* ── el-6: sr-only text ── */
+.filter-modal__close-sr-text {
+    width: 1px;
+    height: 24px;
+    min-width: auto;
+    max-width: 100%;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* ── el-7: Icon wrapper ── */
+.filter-modal__close-icon-wrap {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    line-height: 16.1px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* ── el-8: Icon span ── */
+.filter-modal__close-icon-span {
+    display: flex;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+/* ── el-9: SVG ── */
+.filter-modal__close-icon-span svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* ── el-10: path ── */
+.filter-modal__close-icon-span svg path {
+    display: inline;
+    fill: currentColor;
+    cursor: pointer;
+}
+
+/* ── el-11: Content area ── */
+.filter-modal__content-area {
+    position: relative;
+    width: 480px;
+    height: 100vh;
+    min-width: auto;
+    min-height: auto;
+    max-height: 100vh;
+    overflow: hidden;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* ── el-12: Content grid (5 rows) ── */
+.filter-modal__content-grid {
+    display: grid;
+    width: 480px;
+    height: 100vh;
+    max-height: 100%;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    overflow-y: auto;
+    grid-template-columns: 480px;
+    grid-template-rows: 0px 68px 1fr 80px 0px;
+    grid-template-areas:
+        "header"
+        "title"
+        "body"
+        "footer"
+        "end";
+}
+
+/* ── el-13: Header sticky container (z-index 7) ── */
+.filter-modal__header-sticky {
+    position: sticky;
+    top: 0;
+    width: 480px;
+    min-width: auto;
+    min-height: auto;
+    grid-area: header;
+    z-index: 7;
+}
+
+/* ── el-14: Header bg ── */
+.filter-modal__header-bg {
+    width: 480px;
+    height: 72px;
+    background-color: rgb(255, 255, 255);
+}
+
+/* ── el-15: Header overlay sticky (z-index 10) ── */
+.filter-modal__header-overlay {
+    position: sticky;
+    top: 0;
+    width: 480px;
+    min-width: auto;
+    min-height: auto;
+    grid-area: header;
+    z-index: 10;
+}
+
+/* ── el-16: Breadcrumb tab (hidden/opacity:0) ── */
+.filter-modal__breadcrumb-tab {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -72px;
+    width: 480px;
+    height: 72px;
+    max-width: 1920px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.2s cubic-bezier(0, 0, 1, 1),
+        background-color 0.2s cubic-bezier(0, 0, 1, 1);
+    pointer-events: none;
+}
+
+/* ── el-17: Breadcrumb inner ── */
+.filter-modal__breadcrumb-inner {
+    display: flex;
+    width: 480px;
+    height: 72px;
+    min-width: auto;
+    max-width: 1440px;
+    min-height: 72px;
+    padding-right: 32px;
+    padding-left: 32px;
+    align-items: center;
+    gap: 24px;
+    pointer-events: none;
+}
+
+/* ── el-18: Hidden element ── */
+.filter-modal__breadcrumb-hidden {
+    display: none;
+}
+
+/* ── el-19: Breadcrumb title wrapper ── */
+.filter-modal__breadcrumb-title-wrap {
+    display: flex;
+    position: relative;
+    width: 392px;
+    height: 28px;
+    min-width: auto;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    flex-direction: column;
+    flex-grow: 1;
+    opacity: 0;
+    transition: opacity 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    pointer-events: none;
+}
+
+/* ── el-20: Breadcrumb title text ── */
+.filter-modal__breadcrumb-title {
+    width: 392px;
+    height: 28px;
+    min-width: auto;
+    max-width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* ── el-21: Breadcrumb action area ── */
+.filter-modal__breadcrumb-action {
+    display: flex;
+    width: 0;
+    min-width: auto;
+    justify-content: flex-end;
+    pointer-events: none;
+}
+
+/* ── el-22: Breadcrumb back button (hidden) ── */
+.filter-modal__breadcrumb-back-btn {
+    display: none;
+}
+
+/* ── el-23: Title section wrapper ── */
+.filter-modal__title-section {
+    position: relative;
+    width: 480px;
+    height: 68px;
+    min-width: auto;
+    min-height: auto;
+    background-color: rgb(255, 255, 255);
+    grid-area: title;
+    z-index: 8;
+}
+
+/* ── el-24: Hidden status bar ── */
+.filter-modal__status-bar {
+    display: none;
+}
+
+/* ── el-25: Title padding container ── */
+.filter-modal__title-padding {
+    width: 480px;
+    height: 68px;
+    padding-right: 32px;
+    padding-left: 32px;
+}
+
+/* ── el-26: Title grid ── */
+.filter-modal__title-grid {
+    display: grid;
+    width: 416px;
+    height: 68px;
+    padding-top: 32px;
+    align-items: center;
+    grid-template-columns: 0px 416px 0px;
+    grid-template-rows: 36px 0px;
+    grid-template-areas:
+        "prefix title action"
+        ". subtitle .";
+}
+
+/* ── el-27: Title prefix (empty) ── */
+.filter-modal__title-prefix {
+    width: 0;
+    min-width: auto;
+    min-height: auto;
+    grid-area: action;
+}
+
+/* ── el-28: Title cell ── */
+.filter-modal__title-cell {
+    width: 416px;
+    height: 36px;
+    min-width: auto;
+    min-height: auto;
+    grid-area: title;
+}
+
+/* ── el-29: Hidden subtitle ── */
+.filter-modal__subtitle {
+    display: none;
+}
+
+/* ── el-30: Title content flex ── */
+.filter-modal__title-content {
+    display: flex;
+    width: 416px;
+    height: 36px;
+    min-height: 36px;
+    align-items: center;
+}
+
+/* ── el-31: h1 "All filters" ── */
+.filter-modal__h1 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── el-32: Decorative offset div ── */
+.filter-modal__title-deco {
+    position: relative;
+    top: -52px;
+    width: 480px;
+}
+
+/* ── el-33: Body area ── */
+.filter-modal__body {
+    width: 480px;
+    min-width: auto;
+    max-width: 100%;
+    min-height: auto;
+    padding: 32px;
+    grid-area: body;
+}
+
+/* ── el-34: Body flex container ── */
+.filter-modal__body-flex {
+    display: flex;
+    width: 416px;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* ── el-35: Filter groups list ── */
+.filter-modal__groups-list {
+    display: flex;
+    list-style: none;
+    width: 456px;
+    margin-top: -8px;
+    margin-right: -20px;
+    margin-bottom: -8px;
+    margin-left: -20px;
+    padding-top: 8px;
+    padding-right: 20px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    flex-direction: column;
+    gap: 24px;
+    outline: rgba(0, 0, 0, 0) solid 2px;
+}
+
+/* ── el-36: Single group container ── */
+.filter-modal__group-item {
+    display: list-item;
+    list-style: none;
+    width: 416px;
+}
+
+/* ── el-37: Accordion items container ── */
+.filter-modal__accordion-list {
+    display: flex;
+    list-style: none;
+    width: 416px;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* ══════════════════════════════════════════════════
+   ACCORDION ITEM — shared trigger styles
+   (el-38/39/40/41 = Locations, el-62/63/64/65 = Type, el-112/113/114/115 = Status)
+   ══════════════════════════════════════════════════ */
+
+/* ── Accordion section wrapper ── */
+.filter-modal__accordion-section {
+    width: 416px;
+    min-width: auto;
+    min-height: auto;
+}
+
+/* ── Accordion trigger row ── */
+.filter-modal__accordion-trigger-row {
+    position: relative;
+    width: 448px;
+    height: 64px;
+    margin-right: -16px;
+    margin-left: -16px;
+    padding: 20px 16px;
+    background-color: rgba(19, 19, 19, 0);
+    border-radius: 8px;
+    box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px 0px inset;
+    cursor: pointer;
+    transition: background-color 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        box-shadow 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.filter-modal__accordion-trigger-row:hover {
+    background-color: rgba(19, 19, 19, 0.04);
+}
+
+.filter-modal__accordion-trigger-row:active {
+    background-color: rgba(19, 19, 19, 0.08);
+}
+
+/* ── Accordion trigger button overlay ── */
+.filter-modal__accordion-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 448px;
+    height: 64px;
+    background: none;
+    border: none;
+    padding: 0;
+    line-height: 16.1px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: rgba(0, 0, 0, 0) solid 2px;
+}
+
+/* ── Accordion trigger layout (flex, matching Fresha) ── */
+.filter-modal__accordion-grid {
+    display: flex;
+    width: 416px;
+    height: 24px;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* ── Accordion prefix icon area ── */
+.filter-modal__accordion-prefix {
+    display: grid;
+    width: 24px;
+    height: 24px;
+    min-width: auto;
+    min-height: auto;
+    margin-right: 12px;
+    column-gap: 12px;
+    grid-template-columns: 24px;
+    grid-template-rows: 24px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+/* ── Icon grid cell ── */
+.filter-modal__icon-cell {
+    display: grid;
+    width: 24px;
+    height: 24px;
+    min-width: auto;
+    min-height: auto;
+    align-items: center;
+    column-gap: 12px;
+    grid-template-columns: 24px;
+    grid-template-rows: 24px;
+    grid-row: 1;
+    cursor: pointer;
+}
+
+/* ── Icon span (shared) ── */
+.filter-modal__icon-span {
+    display: flex;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    min-width: auto;
+    min-height: auto;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.filter-modal__icon-span svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.filter-modal__icon-span svg path {
+    display: inline;
+    fill: currentColor;
+    cursor: pointer;
+}
+
+/* RTL icon hidden by default */
+.filter-modal__rtl-icon {
+    display: none;
+}
+
+/* LTR icon container */
+.filter-modal__ltr-icon {
+    width: 0;
+    height: 24px;
+    min-width: auto;
+    min-height: auto;
+    cursor: pointer;
+}
+
+.filter-modal__ltr-icon svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* ── Accordion main text area ── */
+.filter-modal__accordion-main {
+    display: grid;
+    height: 24px;
+    min-width: 0;
+    min-height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 24px;
+    flex: 1;
+    cursor: pointer;
+}
+
+.filter-modal__accordion-main-inner {
+    display: grid;
+    height: 24px;
+    min-width: 0;
+    min-height: auto;
+    column-gap: 12px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 24px;
+    cursor: pointer;
+}
+
+.filter-modal__accordion-main-content {
+    display: grid;
+    height: 24px;
+    min-width: 0;
+    min-height: auto;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 24px;
+    grid-column: 1;
+    grid-row: 1;
+    cursor: pointer;
+}
+
+/* ── Accordion section title (h3) ── */
+.filter-modal__accordion-title {
+    max-width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+.filter-modal__accordion-title-flex {
+    display: flex;
+    font-size: 15px;
+    font-weight: 600;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    overflow-wrap: anywhere;
+}
+
+.filter-modal__accordion-title-text {
+    font-size: 15px;
+    font-weight: 600;
+    min-width: auto;
+    min-height: auto;
+    cursor: pointer;
+    overflow-wrap: anywhere;
+    margin: 0;
+}
+
+/* ── Badge count (next to accordion title) ── */
+.filter-modal__badge {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: content-box;
+    pointer-events: none;
+    min-width: 12px;
+    min-height: 20px;
+    max-height: 20px;
+    padding: 0 4px;
+    border-radius: 999px;
+    background-color: rgb(91, 49, 245);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 0 0px transparent, 0 0 0 2px rgb(255, 255, 255);
+}
+
+.filter-modal__badge span {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+}
+
+/* ── Accordion suffix (Clear + chevron area) ── */
+.filter-modal__accordion-suffix {
+    display: flex;
+    height: 24px;
+    margin-left: 12px;
+    gap: 12px;
+    align-items: center;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.filter-modal__accordion-suffix-meta {
+    display: flex;
+    height: 24px;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* ── Per-section Clear button ── */
+.filter-modal__section-clear-btn {
+    position: relative;
+    z-index: 1;
+    display: inline;
+    background: none;
+    border: none;
+    border-radius: 4px;
+    padding: 0;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    color: inherit;
+    white-space: nowrap;
+    text-decoration: none;
+    text-align: start;
+    cursor: pointer;
+}
+
+.filter-modal__section-clear-btn:hover {
+    text-decoration: underline;
+}
+
+.filter-modal__section-clear-btn:active {
+    text-decoration: underline;
+}
+
+/* ══════════════════════════════════════════════════
+   COLLAPSE / EXPAND CONTENT AREA
+   ══════════════════════════════════════════════════ */
+
+/* ── Collapsed state (el-59: height-zero) ── */
+.filter-modal__collapse--closed {
+    width: 416px;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        transform 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        height 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+/* ── Expanded state (el-87/el-139: height-auto) ── */
+.filter-modal__collapse--open {
+    width: 416px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        transform 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        height 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+/* ── Collapse inner wrapper ── */
+.filter-modal__collapse-inner {
+    width: 416px;
+}
+
+/* ── el-61/111: Divider ── */
+.filter-modal__divider {
+    width: 380px;
+    height: 1px;
+    min-width: auto;
+    min-height: auto;
+    margin-left: 36px;
+    background-color: rgb(229, 229, 229);
+    border: none;
+    box-sizing: content-box;
+}
+
+/* ══════════════════════════════════════════════════
+   CHECKBOX ITEMS (TYPE section: el-87 → el-110)
+   ══════════════════════════════════════════════════ */
+
+/* ── el-89: Checkbox list ── */
+.filter-modal__checkbox-list {
+    width: 416px;
+    padding-left: 36px;
+    margin: 0;
+    list-style: none;
+}
+
+/* ── el-90: Checkbox list wrapper ── */
+.filter-modal__checkbox-wrap {
+    display: flex;
+    width: 380px;
+    padding-top: 8px;
+    padding-bottom: 28px;
+}
+
+/* ── el-91/92: Checkbox items container ── */
+.filter-modal__checkbox-items {
+    min-width: auto;
+    min-height: auto;
+}
+
+/* ── el-93: sr-only label for section ── */
+.filter-modal__section-sr-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin-top: -1px;
+    margin-right: -1px;
+    margin-bottom: 16px;
+    margin-left: -1px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* ── el-94: Checkboxes flex wrapper ── */
+.filter-modal__checkbox-group {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* ── el-95/103: Checkbox item row ── */
+.filter-modal__checkbox-item {
+    position: relative;
+    min-width: auto;
+    min-height: auto;
+    background-color: rgba(19, 19, 19, 0);
+    border-radius: 8px;
+    box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px 0px inset;
+    cursor: pointer;
+    transition: background-color 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        box-shadow 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.filter-modal__checkbox-item:hover {
+    background-color: rgba(19, 19, 19, 0.04);
+}
+
+.filter-modal__checkbox-item:active {
+    background-color: rgba(19, 19, 19, 0.08);
+}
+
+/* ── el-96/104: Checkbox item grid ── */
+.filter-modal__checkbox-item-grid {
+    display: grid;
+    height: 24px;
+    grid-template-columns: 36px 1fr 0px;
+    grid-template-rows: 24px 0px 0px;
+    grid-template-areas: "prefix main suffix";
+    cursor: pointer;
+}
+
+/* ── el-97/105: Checkbox prefix ── */
+.filter-modal__checkbox-prefix {
+    display: grid;
+    width: 24px;
+    height: 24px;
+    min-width: auto;
+    min-height: auto;
+    margin-right: 12px;
+    column-gap: 12px;
+    grid-template-columns: 24px;
+    grid-template-rows: 24px;
+    grid-area: prefix;
+    cursor: pointer;
+}
+
+/* ── el-99/107: Checkbox box ── */
+.filter-modal__checkbox-box {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    min-width: auto;
+    min-height: auto;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.filter-modal__checkbox-item:hover .filter-modal__checkbox-box:not(.filter-modal__checkbox-box--checked) {
+    background-color: rgb(242, 242, 242);
+    border-color: rgb(184, 184, 184);
+}
+
+.filter-modal__checkbox-item:active .filter-modal__checkbox-box:not(.filter-modal__checkbox-box--checked) {
+    background-color: rgb(229, 229, 229);
+    border-color: rgb(184, 184, 184);
+    border-width: 2px;
+}
+
+/* Checked state — purple accent */
+.filter-modal__checkbox-box--checked {
+    background-color: rgb(91, 49, 245);
+    border-color: rgb(91, 49, 245);
+    color: rgb(255, 255, 255);
+}
+
+.filter-modal__checkbox-item:hover .filter-modal__checkbox-box--checked {
+    background-color: rgb(75, 36, 218);
+    border-color: rgb(75, 36, 218);
+}
+
+.filter-modal__checkbox-item:active .filter-modal__checkbox-box--checked {
+    background-color: rgb(60, 25, 190);
+    border-color: rgb(60, 25, 190);
+    border-width: 2px;
+}
+
+/* ── Animated L-shaped checkmark ── */
+.filter-modal__check-l {
+    transform: translate(0, -2px) rotate(-45deg);
+}
+
+.filter-modal__check-l-vertical {
+    display: block;
+    width: 2px;
+    height: 6.5px;
+    background-color: currentColor;
+    border-radius: 999px;
+    transform-origin: top;
+    transform: scaleY(0);
+    animation: filterCheckScaleY 0.1s cubic-bezier(0, 0.55, 0.45, 1) forwards;
+}
+
+.filter-modal__check-l-horizontal {
+    display: block;
+    width: 13px;
+    height: 2px;
+    position: relative;
+    margin-top: -1.75px;
+    background-color: currentColor;
+    border-radius: 999px;
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: filterCheckScaleX 0.1s cubic-bezier(0, 0.55, 0.45, 1) forwards;
+    animation-delay: 0.1s;
+}
+
+@keyframes filterCheckScaleY {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes filterCheckScaleX {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* ── el-100/108: Checkbox main text area ── */
+.filter-modal__checkbox-main {
+    display: grid;
+    height: 24px;
+    min-width: auto;
+    min-height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 24px;
+    grid-area: main;
+    cursor: pointer;
+}
+
+/* ── el-101/109: Checkbox label text ── */
+.filter-modal__checkbox-label {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+    cursor: pointer;
+    margin: 0;
+}
+
+/* ── el-102/110: Hidden native input ── */
+.filter-modal__checkbox-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+}
+
+/* ══════════════════════════════════════════════════
+   MENU ITEMS (STATUS section: el-139 → el-165)
+   ══════════════════════════════════════════════════ */
+
+/* ── el-141: Menu items list ── */
+.filter-modal__menu-list {
+    width: 416px;
+    padding-left: 36px;
+    margin: 0;
+    list-style: none;
+}
+
+/* ── el-142: Menu list wrapper ── */
+.filter-modal__menu-wrap {
+    display: flex;
+    width: 380px;
+    padding-top: 8px;
+    padding-bottom: 28px;
+}
+
+/* ── el-143: Menu items flex column ── */
+.filter-modal__menu-items {
+    display: flex;
+    width: 380px;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* ── el-144/149/160: Menu item (li) ── */
+.filter-modal__menu-item {
+    display: flex;
+    position: relative;
+    width: 444px;
+    height: 40px;
+    min-height: 40px;
+    margin-right: -12px;
+    margin-left: -52px;
+    padding: 8px 12px 8px 52px;
+    background-color: rgba(19, 19, 19, 0);
+    border-radius: 8px;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+        background-color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+        border-color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+        outline-color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+        text-decoration-color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+        fill 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+        stroke 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+    outline: rgba(0, 0, 0, 0) solid 2px;
+    list-style: none;
+}
+
+.filter-modal__menu-item:hover {
+    background-color: rgba(19, 19, 19, 0.04);
+}
+
+.filter-modal__menu-item:active {
+    background-color: rgba(19, 19, 19, 0.08);
+}
+
+/* ── el-145/150/161: Menu item button overlay ── */
+.filter-modal__menu-item-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 444px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    line-height: 16.1px;
+    text-align: center;
+    cursor: pointer;
+    outline: rgba(0, 0, 0, 0) solid 2px;
+}
+
+/* ── el-146/151/162: Menu item text block ── */
+.filter-modal__menu-item-text-block {
+    display: block;
+    min-width: auto;
+    min-height: auto;
+    overflow: hidden;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+/* ── el-147/152/163: Menu item text inner ── */
+.filter-modal__menu-item-text-inner {
+    display: block;
+    max-width: 100%;
+    height: 24px;
+    font-size: 15px;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* ── el-148/153/164: Menu item label ── */
+.filter-modal__menu-item-label {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+    white-space: nowrap;
+    cursor: pointer;
+    margin: 0;
+}
+
+/* ── el-154: Checkmark icon (visible when selected) ── */
+.filter-modal__menu-check-icon {
+    display: flex;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    min-width: auto;
+    min-height: auto;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.filter-modal__menu-check-icon--hidden {
+    display: none;
+}
+
+.filter-modal__menu-check-icon svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.filter-modal__menu-check-icon svg path {
+    display: inline;
+    fill: currentColor;
+    cursor: pointer;
+}
+
+/* ── el-157: Mobile checkmark (hidden on laptop) ── */
+.filter-modal__menu-check-mobile {
+    display: none;
+}
+
+/* ── el-165: Last group separator (hidden) ── */
+.filter-modal__group-separator {
+    display: none;
+}
+
+/* ══════════════════════════════════════════════════
+   FOOTER (el-166 → el-177)
+   ══════════════════════════════════════════════════ */
+
+/* ── el-166: Footer sticky wrapper ── */
+.filter-modal__footer {
+    position: sticky;
+    bottom: 0;
+    width: 480px;
+    height: 80px;
+    min-width: auto;
+    min-height: auto;
+    background-color: rgb(255, 255, 255);
+    grid-area: footer;
+    z-index: 10;
+}
+
+/* ── el-167: Footer inner with shadow ── */
+.filter-modal__footer-inner {
+    position: sticky;
+    bottom: 0;
+    width: 480px;
+    height: 80px;
+    max-height: 200px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(229, 229, 229) 0px -1px 0px 0px;
+    z-index: 10;
+    transition: box-shadow 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        max-block-size 0.4s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+/* ── el-168: Footer content ── */
+.filter-modal__footer-content {
+    display: flex;
+    width: 480px;
+    height: 80px;
+    padding: 16px 32px;
+    justify-content: flex-end;
+}
+
+/* ── el-169: Button row ── */
+.filter-modal__footer-buttons {
+    display: flex;
+    width: 416px;
+    height: 48px;
+    min-width: auto;
+    min-height: auto;
+    flex-grow: 1;
+    gap: 12px;
+}
+
+/* ── el-170: Clear filters button ── */
+.filter-modal__btn-clear {
+    display: flex;
+    position: relative;
+    width: 50%;
+    height: 48px;
+    max-width: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+    line-height: 16.1px;
+    text-align: center;
+    border-radius: 999px;
+    align-items: center;
+    cursor: pointer;
+    transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    outline: rgba(0, 0, 0, 0) solid 2px;
+}
+
+/* ── el-171: Clear button inner ── */
+.filter-modal__btn-clear-inner {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    max-width: 100%;
+    padding-right: 19px;
+    padding-left: 19px;
+    background-color: rgb(255, 255, 255);
+    line-height: 16.1px;
+    text-align: center;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 999px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        padding 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        gap 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.filter-modal__btn-clear:hover .filter-modal__btn-clear-inner {
+    background-color: rgb(242, 242, 242);
+    border-color: rgb(184, 184, 184);
+}
+
+.filter-modal__btn-clear:active .filter-modal__btn-clear-inner {
+    transform: scale(0.96);
+    background-color: rgb(229, 229, 229);
+    border-color: rgb(184, 184, 184);
+}
+
+/* ── el-172: Clear button label wrap ── */
+.filter-modal__btn-label-wrap {
+    display: flex;
+    height: 24px;
+    line-height: 16.1px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* ── el-173: Clear button text ── */
+.filter-modal__btn-clear-text {
+    min-width: auto;
+    max-width: 100%;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* ── el-174: Apply button ── */
+.filter-modal__btn-apply {
+    display: flex;
+    position: relative;
+    width: 50%;
+    height: 48px;
+    max-width: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+    line-height: 16.1px;
+    text-align: center;
+    border-radius: 999px;
+    align-items: center;
+    cursor: pointer;
+    transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    outline: rgba(0, 0, 0, 0) solid 2px;
+}
+
+/* ── el-175: Apply button inner ── */
+.filter-modal__btn-apply-inner {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    max-width: 100%;
+    padding-right: 19px;
+    padding-left: 19px;
+    background-color: rgb(13, 13, 13);
+    color: rgb(255, 255, 255);
+    line-height: 16.1px;
+    text-align: center;
+    border: 1px solid rgb(13, 13, 13);
+    border-radius: 999px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        padding 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        gap 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.filter-modal__btn-apply:hover .filter-modal__btn-apply-inner {
+    background-color: rgb(38, 38, 38);
+    border-color: rgb(38, 38, 38);
+}
+
+.filter-modal__btn-apply:active .filter-modal__btn-apply-inner {
+    transform: scale(0.96);
+    background-color: rgb(64, 64, 64);
+    border-color: rgb(64, 64, 64);
+}
+
+/* ── el-176: Apply button label wrap ── */
+.filter-modal__btn-apply-label {
+    display: flex;
+    height: 24px;
+    color: rgb(255, 255, 255);
+    line-height: 16.1px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* ── el-177: Apply button text ── */
+.filter-modal__btn-apply-text {
+    min-width: auto;
+    max-width: 100%;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* ══════════════════════════════════════════════════
+   BACKDROP OVERLAY
+   ══════════════════════════════════════════════════ */
+.filter-modal__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(19, 19, 19, 0.5);
+    z-index: 1999;
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0, 0.55, 0.45, 1);
+    pointer-events: none;
+}
+
+.filter-modal__backdrop--visible {
+    opacity: 1;
+    pointer-events: auto;
+}

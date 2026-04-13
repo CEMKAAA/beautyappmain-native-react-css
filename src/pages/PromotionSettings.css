@@ -1,0 +1,265 @@
+/* ─── Promotion Settings Page ─── */
+.promo-page {
+    padding: 32px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.promo-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    gap: 16px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.promo-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top-color: #6366f1;
+    border-radius: 50%;
+    animation: promoSpin 0.8s linear infinite;
+}
+
+@keyframes promoSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ─── Toolbar ─── */
+.promo-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 24px;
+}
+
+.promo-save-btn {
+    background: linear-gradient(135deg, #6366f1, #818cf8);
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-size: var(--typo-s);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.promo-save-btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+}
+
+.promo-save-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ─── Content ─── */
+.promo-content {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* ─── Section ─── */
+.promo-section {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 28px;
+}
+
+.promo-section-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.promo-section-icon {
+    font-size: var(--typo-xl);
+    flex-shrink: 0;
+}
+
+.promo-section-header h2 {
+    font-size: var(--typo-m);
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 4px 0;
+}
+
+.promo-section-header p {
+    font-size: var(--typo-xs);
+    color: rgba(255, 255, 255, 0.35);
+    margin: 0;
+}
+
+/* ─── Cards ─── */
+.promo-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.promo-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 18px 20px;
+    transition: all 0.2s;
+}
+
+.promo-card:hover {
+    border-color: rgba(99, 102, 241, 0.2);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.promo-card-icon {
+    font-size: var(--typo-l);
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 12px;
+}
+
+.promo-card-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.promo-card-content label {
+    font-size: var(--typo-s);
+    font-weight: 500;
+    color: #fff;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.promo-card-desc {
+    font-size: var(--typo-xs);
+    color: rgba(255, 255, 255, 0.3);
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* ─── Card Input ─── */
+.promo-card-input {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.promo-card-input input {
+    width: 80px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px 12px;
+    font-size: var(--typo-s);
+    font-weight: 600;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.2s;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.promo-card-input input::-webkit-outer-spin-button,
+.promo-card-input input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.promo-card-input input:focus {
+    border-color: rgba(99, 102, 241, 0.5);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.promo-unit {
+    font-size: var(--typo-s);
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.4);
+    min-width: 20px;
+}
+
+/* ─── Info Box ─── */
+.promo-info-box {
+    display: flex;
+    gap: 14px;
+    background: rgba(99, 102, 241, 0.06);
+    border: 1px solid rgba(99, 102, 241, 0.12);
+    border-radius: 16px;
+    padding: 20px 24px;
+}
+
+.promo-info-icon {
+    font-size: var(--typo-ml);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.promo-info-box strong {
+    color: #fff;
+    font-size: var(--typo-s);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.promo-info-box ul {
+    margin: 0;
+    padding-left: 16px;
+    list-style: disc;
+}
+
+.promo-info-box li {
+    font-size: var(--typo-xs);
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 1.7;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+    .promo-page {
+        padding: 20px 16px;
+    }
+
+    .promo-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .promo-save-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .promo-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .promo-card-input {
+        align-self: stretch;
+    }
+
+    .promo-card-input input {
+        flex: 1;
+        width: auto;
+    }
+}

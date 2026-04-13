@@ -1,0 +1,919 @@
+/* ═══════════════════════════════════════════════════
+   SalesPanel — Pixel-perfect from computed-styles.json
+   103 elements, scoped under .sal-root
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-0: Root container ── */
+.sal-root {
+    position: relative;
+    width: 480px;
+    height: 100%;
+    overflow: hidden;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+/* ── el-1: Grid layout (5 areas) ── */
+.sal-grid {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "title"
+        "body"
+        "footer"
+        "footerEnd";
+    grid-template-rows: 0px 68px 1fr 0px 0px;
+    grid-template-columns: 480px;
+    height: 100%;
+    max-height: 100%;
+    background-color: #f9f9f9;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.sal-grid::-webkit-scrollbar {
+    display: none;
+}
+
+/* ═══════════════════════════════════════════════════
+   HEADER (STICKY + FLOATING)
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-2: Header slot (sticky) ── */
+.sal-header-slot {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+    z-index: 7;
+    height: 0;
+    overflow: hidden;
+}
+
+/* ── el-3: Header bg spacer ── */
+.sal-header-bg {
+    height: 72px;
+    background-color: #f9f9f9;
+    width: 100%;
+}
+
+/* ── el-4: Scroll header overlay ── */
+.sal-scroll-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* ── el-5: Floating header bar ── */
+.sal-floating-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -72px;
+    height: 72px;
+    max-width: 1920px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s linear, background-color 0.2s linear;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── el-6: Header inner row ── */
+.sal-header-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 0 32px;
+    min-height: 72px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* ── el-7: Back button (hidden) ── */
+.sal-back-btn {
+    display: none;
+}
+
+/* ── el-8: Title wrapper (scroll) ── */
+.sal-scroll-title-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
+    opacity: 0;
+}
+
+/* ── el-9: "Sales" scroll title ── */
+.sal-scroll-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    height: 28px;
+    color: #0d0d0d;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* ── el-10: "Sell" button wrapper (floating header) ── */
+.sal-header-action {
+    display: flex;
+    justify-content: flex-end;
+    height: 36px;
+    flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════════════
+   "SELL" BUTTON (shared el-11/20)
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-11/20: Sell button ── */
+.sal-sell-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 36px;
+    border-radius: 999px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.sal-sell-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    opacity: 0;
+    box-shadow: 0 0 0 3px rgba(13, 13, 13, 0.5);
+    transition: opacity 0.15s ease;
+    pointer-events: none;
+}
+
+.sal-sell-btn:focus-visible::before {
+    opacity: 1;
+}
+
+/* ── el-12/21: Button inner ── */
+.sal-sell-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    min-width: 36px;
+    padding: 0 20px;
+    border-radius: 999px;
+    background-color: #ffffff;
+    border: 1px solid #d3d3d3;
+    box-sizing: border-box;
+    transform: scale(1);
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
+        color 0.15s ease,
+        opacity 0.15s ease,
+        transform 0.15s ease;
+}
+
+.sal-sell-btn:hover .sal-sell-inner {
+    background-color: #f5f5f5;
+    border-color: #c4c4c4;
+}
+
+.sal-sell-btn:active .sal-sell-inner {
+    background-color: #ebebeb;
+    border-color: #b5b5b5;
+    transform: scale(0.96);
+}
+
+/* ── el-13/22: Button label wrap ── */
+.sal-sell-label-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ── el-14/23: "Sell" text ── */
+.sal-sell-label {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #0d0d0d;
+}
+
+/* ═══════════════════════════════════════════════════
+   TITLE AREA
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-15: Title area ── */
+.sal-title-area {
+    grid-area: title;
+    height: 68px;
+    z-index: 8;
+    will-change: opacity;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.sal-title-area::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    pointer-events: none;
+}
+
+/* ── el-16: Hidden prefix ── */
+.sal-title-prefix {
+    display: none;
+}
+
+/* ── el-17: Title padding ── */
+.sal-title-padding {
+    padding: 0 32px;
+}
+
+/* ── el-18: Title grid ── */
+.sal-title-grid {
+    display: grid;
+    grid-template-areas:
+        "prefix title action"
+        "empty description description";
+    grid-template-columns: 0px 1fr 56px;
+    grid-template-rows: 36px 0px;
+    padding-top: 32px;
+}
+
+/* ── el-19: Action slot ── */
+.sal-title-action {
+    grid-area: action;
+    width: 56px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* ── el-24: Title slot ── */
+.sal-title-slot {
+    grid-area: title;
+}
+
+/* ── el-25: Hidden div ── */
+.sal-title-hidden {
+    display: none;
+}
+
+/* ── el-26: Title inner flex ── */
+.sal-title-inner {
+    display: flex;
+    align-items: center;
+    min-height: 36px;
+}
+
+/* ── el-27: Page title h1 ── */
+.sal-page-title {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+    color: #0d0d0d;
+    margin: 0;
+}
+
+/* ── el-28: Title overlap spacer ── */
+.sal-title-spacer {
+    position: relative;
+    top: -52px;
+    height: 0;
+}
+
+/* ═══════════════════════════════════════════════════
+   BODY
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-29: Body area ── */
+.sal-body {
+    grid-area: body;
+    padding: 32px;
+    max-width: 100%;
+}
+
+/* ── el-30: Content column ── */
+.sal-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══════════════════════════════════════════════════
+   TAB BAR
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-31: Tab bar container ── */
+.sal-tabs {
+    display: flex;
+    align-items: center;
+    height: 36px;
+    position: relative;
+    z-index: 0;
+    background-color: #f9f9f9;
+}
+
+.sal-tabs::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 36px;
+    width: 100%;
+}
+
+/* ── el-32: Tab scroll container ── */
+.sal-tabs-scroll {
+    display: flex;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    position: relative;
+    height: 38px;
+}
+
+.sal-tabs-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* ── el-33: Tab indicator (animated) ── */
+.sal-tab-indicator {
+    position: absolute;
+    height: 38px;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s cubic-bezier(0.85, 0, 0.15, 1), width 0.3s cubic-bezier(0.85, 0, 0.15, 1);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.sal-tab-indicator::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    opacity: 0;
+    box-shadow: 0 0 0 3px rgba(13, 13, 13, 0.5);
+    pointer-events: none;
+}
+
+.sal-tab-indicator::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    background-color: #0d0d0d;
+}
+
+/* ── el-34: Tab list ── */
+.sal-tab-list {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    row-gap: 4px;
+    list-style: none;
+    margin: 0;
+    margin-right: 4px;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    height: 38px;
+}
+
+/* ── el-35/39/43: Tab items ── */
+.sal-tab {
+    display: flex;
+    align-items: center;
+    height: 36px;
+    padding: 0 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    overflow: hidden;
+    transition: color 0.15s ease;
+    color: #0d0d0d;
+    gap: 8px;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1;
+}
+
+.sal-tab:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.sal-tab:active {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+/* ── Active tab ── */
+.sal-tab--active {
+    color: #ffffff;
+    background-color: transparent;
+}
+
+.sal-tab--active:hover {
+    background-color: transparent;
+}
+
+.sal-tab--active:active {
+    background-color: transparent;
+}
+
+/* ── el-36/40/44: Tab text ── */
+.sal-tab-text {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ── el-37/41: Tab count badge ── */
+.sal-tab-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    min-width: 12px;
+    padding: 0 4px;
+    border-radius: 999px;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 1px #e5e5e5, 0 0 0 2px #f9f9f9;
+    box-sizing: content-box;
+    flex-shrink: 0;
+}
+
+/* ── el-38/42: Badge text ── */
+.sal-tab-badge-text {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #767676;
+}
+
+/* ── el-45: "More" button wrapper ── */
+.sal-more-wrap {
+    border: 1px solid transparent;
+    border-radius: 999px;
+    flex-shrink: 0;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* ── el-46: "More" button ── */
+.sal-more-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 0 16px;
+    gap: 8px;
+    border-radius: 999px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: color 0.15s ease;
+    color: #0d0d0d;
+    position: relative;
+}
+
+.sal-more-btn:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.sal-more-btn:active {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.sal-more-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ── el-47: "More" text ── */
+.sal-more-text {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ── el-48: Chevron icon wrapper ── */
+.sal-more-chevron {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.sal-more-chevron svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* ═══════════════════════════════════════════════════
+   TAB PANEL / SALE LIST
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-51: Tab panel ── */
+.sal-panel {
+    margin-top: 2px;
+}
+
+/* ── el-52: Sales list container ── */
+.sal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 24px;
+    flex-grow: 1;
+}
+
+/* ── el-53: Ordered list ── */
+.sal-group-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── el-54: Sales group ── */
+.sal-group {
+    list-style: none;
+}
+
+/* ── el-55: Day list ── */
+.sal-day-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ═══════════════════════════════════════════════════
+   SALE ROW = TIMELINE + CARD
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-56: Sale row ── */
+.sal-row {
+    display: flex;
+    gap: 8px;
+}
+
+/* ═══════════════════════════════════════════════════
+   TIMELINE COLUMN
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-57: Timeline column ── */
+.sal-timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 24px;
+    min-width: 24px;
+    max-width: 24px;
+    padding-top: 6px;
+    gap: 6px;
+}
+
+/* ── el-58: Tag icon badge ── */
+.sal-timeline-badge {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    border-radius: 999px;
+    background-color: #0d0d0d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 2px #ffffff;
+    flex-shrink: 0;
+    box-sizing: content-box;
+}
+
+/* ── el-59: Icon wrapper ── */
+.sal-timeline-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.sal-timeline-icon svg {
+    width: 16px;
+    height: 16px;
+    fill: #ffffff;
+    position: absolute;
+}
+
+/* ── el-63: Timeline line ── */
+.sal-timeline-line {
+    display: block;
+    width: 2px;
+    flex-grow: 1;
+    min-height: 20px;
+    border: 1px solid #d3d3d3;
+    border-radius: 999px;
+    box-sizing: border-box;
+}
+
+/* ═══════════════════════════════════════════════════
+   SALE CARD
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-64: Card outer area ── */
+.sal-card-outer {
+    flex: 1;
+    padding-top: 6px;
+    min-width: 0;
+}
+
+/* ── el-65: Card container ── */
+.sal-card-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    isolation: isolate;
+}
+
+/* ── el-66: Card click overlay ── */
+.sal-card-btn {
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 1;
+    padding: 0;
+}
+
+.sal-card-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    opacity: 0;
+    box-shadow: 0 0 0 3px rgba(13, 13, 13, 0.5);
+    transition: opacity 0.15s ease;
+    pointer-events: none;
+}
+
+.sal-card-btn:focus-visible::before {
+    opacity: 1;
+}
+
+/* ── el-67: Card visual body ── */
+.sal-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: background-color 0.1s ease, box-shadow 0.1s ease, transform 0.1s ease;
+    position: relative;
+}
+
+/* Card hover/active (via parent) */
+.sal-card-container:hover .sal-card {
+    background-color: #fafafa;
+}
+
+.sal-card-container:active .sal-card {
+    background-color: #f5f5f5;
+}
+
+/* ── el-68: Card border overlay ── */
+.sal-card-border {
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    box-shadow: inset 0 0 0 1px #e5e5e5;
+    pointer-events: none;
+    z-index: 2000;
+}
+
+.sal-card-container:hover .sal-card-border {
+    box-shadow: inset 0 0 0 1px #d3d3d3;
+}
+
+.sal-card-container:active .sal-card-border {
+    box-shadow: inset 0 0 0 1px #c4c4c4;
+}
+
+/* ── el-69: Card content padding ── */
+.sal-card-padding {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ═══════════════════════════════════════════════════
+   CARD HEADER SECTION
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-70: Header section ── */
+.sal-card-header {
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+}
+
+/* ── el-71: "Sale" title ── */
+.sal-card-title {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #0d0d0d;
+    margin: 0;
+}
+
+/* ── el-72: Subtitle row ── */
+.sal-card-subtitle {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+}
+
+/* ── el-73: Date text ── */
+.sal-card-date {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #767676;
+    margin: 0;
+}
+
+/* ── el-74: Dot separator ── */
+.sal-card-dot {
+    font-size: 13px;
+    line-height: 16px;
+    color: #767676;
+    margin: 0;
+}
+
+/* ── el-75: Status text ── */
+.sal-card-status {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 0;
+}
+
+.sal-card-status--paid {
+    color: #1f8900;
+}
+
+.sal-card-status--draft {
+    color: #767676;
+}
+
+/* ═══════════════════════════════════════════════════
+   SERVICES SECTION
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-76: Services container ── */
+.sal-services {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+/* ── el-77/82/87/92: Service row ── */
+.sal-service-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 20px;
+}
+
+/* ── el-78/83/88/93: Service name ── */
+.sal-service-name {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #0d0d0d;
+    margin: 0;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ── el-79/84/89/94: Price wrapper ── */
+.sal-price-wrap {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* ── el-80/85/90/95: Strikethrough (old) price ── */
+.sal-price-old {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #767676;
+    margin: 0;
+    text-decoration: line-through;
+}
+
+/* ── el-81/86/91/96: Price ── */
+.sal-price {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #0d0d0d;
+    margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════
+   SEPARATOR + TOTAL
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-97: Separator line ── */
+.sal-separator {
+    height: 1px;
+    background-color: #e5e5e5;
+    border: none;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+/* ── el-98: Total section ── */
+.sal-total-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* ── el-99: Total row ── */
+.sal-total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ── el-100: Total label wrapper ── */
+.sal-total-label-wrap {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* ── el-101: "Total" label ── */
+.sal-total-label {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #0d0d0d;
+    margin: 0;
+}
+
+/* ── el-102: Total amount ── */
+.sal-total-amount {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #0d0d0d;
+    margin: 0;
+}

@@ -1,0 +1,38 @@
+/* ═══════════════════════════════════════════════════
+   TestPage7 — Product List overrides only
+   Base styles come from TestPage5.css (tm- classes)
+   All overrides scoped under .pd-page to avoid affecting TestPage5
+   ═══════════════════════════════════════════════════ */
+
+/* ── Max-width override (1104px) ── */
+.pd-page .tm-padded-inner {
+    max-width: 1104px;
+}
+
+/* ── Square Avatar override (table) ── */
+.pd-page .pd-avatar-square,
+.pd-page .pd-avatar-square::after,
+.pd-page .pd-avatar-square .tm-avatar__img-wrap,
+.pd-page .pd-avatar-square .tm-avatar__img,
+.pd-page .pd-avatar-square .tm-avatar__initials {
+    border-radius: 8px;
+}
+
+/* ── Subtitle under title ── */
+.pd-header__subtitle {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(118, 118, 118);
+    margin: 4px 0 0 0;
+}
+
+.pd-header__learn-more {
+    color: rgb(105, 80, 243);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.pd-header__learn-more:hover {
+    text-decoration: underline;
+}

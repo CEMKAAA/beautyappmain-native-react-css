@@ -1,0 +1,1538 @@
+/* =============================================
+   NewPayments.css — Pixel-perfect from computed-styles.json
+   441 elements — Payments Page
+   ============================================= */
+
+/* el-0: Root container */
+.pay-root {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    font-family: 'Roobert PRO', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    max-height: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+}
+
+/* Inherit font on all descendants */
+.pay-root table,
+.pay-root th,
+.pay-root td,
+.pay-root input,
+.pay-root button,
+.pay-root select,
+.pay-root textarea,
+.pay-root h1,
+.pay-root h2,
+.pay-root h3,
+.pay-root p,
+.pay-root span,
+.pay-root div,
+.pay-root a {
+    font-family: inherit;
+}
+
+/* el-1: Inner wrapper */
+.pay-inner {
+    background-color: rgb(255, 255, 255);
+    flex: 1;
+    overflow-x: auto;
+    overflow-y: auto;
+    width: 100%;
+}
+
+/* el-2: Content wrapper */
+.pay-content-wrapper {
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    position: relative;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 9;
+}
+
+/* el-3: Main flex */
+.pay-main-flex {
+    background-color: rgb(255, 255, 255);
+    box-sizing: content-box;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    transition-duration: 0.4s;
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+    width: 100%;
+}
+
+/* el-4: Padded content area */
+.pay-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    min-height: 100%;
+    padding: 40px;
+    width: 100%;
+}
+
+/* ====================== HEADER ====================== */
+
+/* el-5: Header area */
+.pay-header-area {
+    display: flex;
+    padding-bottom: 24px;
+    width: 100%;
+}
+
+/* el-6: Title content wrapper */
+.pay-title-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+/* el-7: Title row */
+.pay-title-row {
+    align-items: center;
+    display: flex;
+    height: 36px;
+}
+
+/* el-8: Title h1 */
+.pay-title {
+    align-items: center;
+    display: flex;
+    font-size: 28px !important;
+    font-weight: 600 !important;
+    height: 36px;
+    line-height: 36px !important;
+    margin: 0;
+}
+
+/* el-9: Subtitle */
+.pay-subtitle {
+    color: rgb(118, 118, 118);
+    font-size: 15px;
+    font-weight: 400;
+    height: 20px;
+    line-height: 20px;
+    margin: 0;
+    margin-top: 4px;
+    outline-color: rgb(118, 118, 118);
+}
+
+/* ====================== OPTIONS BUTTON ====================== */
+
+/* el-10: Options area */
+.pay-options-area {
+    display: flex;
+    margin-left: 16px;
+}
+
+/* el-11: Options group container */
+.pay-options-group {
+    height: 60px;
+}
+
+/* el-12: Button wrapper */
+.pay-options-btn-wrap {
+    display: flex;
+    height: 48px;
+}
+
+/* el-13: Options button */
+.pay-options-btn {
+    align-items: center;
+    appearance: button;
+    background: none;
+    border: none;
+    border-radius: 999px;
+    bottom: 0px;
+    cursor: pointer;
+    display: flex;
+    height: 48px;
+    left: 0px;
+    line-height: 16.1px;
+    max-width: 100%;
+    outline: 2px solid rgba(0, 0, 0, 0);
+    outline-offset: 2px;
+    padding: 0;
+    position: relative;
+    right: 0px;
+    text-align: center;
+    top: 0px;
+    transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.pay-options-btn::before {
+    content: "";
+    border-radius: 999px;
+    bottom: 0px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    cursor: pointer;
+    height: 48px;
+    left: 0px;
+    line-height: 16.1px;
+    opacity: 0;
+    padding: 2px;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    top: 0px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.pay-options-btn:focus-visible::before {
+    opacity: 1;
+}
+
+/* el-14: Options button inner */
+.pay-options-btn-inner {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 999px;
+    column-gap: 8px;
+    cursor: pointer;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    line-height: 16.1px;
+    max-width: 100%;
+    padding-left: 19px;
+    padding-right: 19px;
+    row-gap: 8px;
+    scale: 1;
+    text-align: center;
+    transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        padding 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        gap 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    width: 100%;
+}
+
+.pay-options-btn:hover .pay-options-btn-inner {
+    background-color: rgb(242, 242, 242);
+    border-color: rgb(189, 189, 189);
+}
+
+.pay-options-btn:active .pay-options-btn-inner {
+    scale: 0.96;
+    background-color: rgb(229, 229, 229);
+    border-color: rgb(166, 166, 166);
+}
+
+/* el-15: Options button content span */
+.pay-options-btn-content {
+    align-items: center;
+    column-gap: 8px;
+    cursor: pointer;
+    display: flex;
+    height: 24px;
+    line-height: 16.1px;
+    row-gap: 8px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* el-16: "Options" text */
+.pay-options-text {
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    height: 24px;
+    line-height: 24px;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* el-17: Options icon wrapper */
+.pay-options-icon-wrap {
+    cursor: pointer;
+    display: flex;
+    height: 24px;
+    line-height: 16.1px;
+    text-align: center;
+    width: 24px;
+}
+
+/* el-18: Icon inner span (24x24) */
+.pay-icon-span-24 {
+    bottom: 0px;
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    height: 24px;
+    left: 0px;
+    line-height: 16.1px;
+    position: relative;
+    right: 0px;
+    text-align: center;
+    top: 0px;
+    width: 24px;
+}
+
+/* el-19: SVG 24x24 */
+.pay-icon-svg-24 {
+    bottom: 0px;
+    fill: currentColor;
+    height: 24px;
+    left: 0px;
+    overflow: hidden;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 24px;
+}
+
+/* ====================== TOOLBAR SECTION ====================== */
+
+/* el-21: Toolbar + table flex wrapper */
+.pay-body-wrapper {
+    column-gap: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    row-gap: 16px;
+    width: 100%;
+}
+
+/* el-22: Toolbar outer */
+.pay-toolbar-outer {
+    display: flex;
+    width: 100%;
+}
+
+/* el-23: Toolbar (gray bg) */
+.pay-toolbar {
+    background-color: rgb(249, 249, 249);
+    border-radius: 8px;
+    column-gap: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    row-gap: 16px;
+    width: 100%;
+}
+
+/* el-24: Toolbar grid */
+.pay-toolbar-grid {
+    column-gap: 12px;
+    display: grid;
+    flex-grow: 1;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 36px;
+    height: 36px;
+    max-width: 100%;
+    row-gap: 12px;
+    width: 100%;
+}
+
+/* el-25: Toolbar left section */
+.pay-toolbar-left {
+    align-items: center;
+    column-gap: 12px;
+    display: flex;
+    height: 36px;
+    justify-content: flex-start;
+    row-gap: 12px;
+    white-space: nowrap;
+}
+
+/* el-52: Toolbar center section */
+.pay-toolbar-center {
+    align-items: center;
+    column-gap: 12px;
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    row-gap: 12px;
+    white-space: nowrap;
+}
+
+/* el-53: Toolbar right section */
+.pay-toolbar-right {
+    align-items: center;
+    column-gap: 12px;
+    display: flex;
+    height: 36px;
+    justify-content: flex-end;
+    row-gap: 12px;
+    white-space: nowrap;
+}
+
+/* ====================== SEARCH INPUT ====================== */
+
+/* el-26: Search field outer */
+.pay-search-field-outer {
+    column-gap: 4px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 36px;
+    max-width: 100%;
+    min-width: 256px;
+    row-gap: 4px;
+    white-space: nowrap;
+    width: 256px;
+}
+
+/* el-27: Search label (sr-only) */
+.pay-search-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+/* el-29: Search field row */
+.pay-search-field-row {
+    column-gap: 8px;
+    display: flex;
+    flex-grow: 1;
+    height: 36px;
+    row-gap: 8px;
+    white-space: nowrap;
+    width: 256px;
+}
+
+/* el-30: Search input container */
+.pay-search-container {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 999px;
+    bottom: 0px;
+    display: flex;
+    flex-grow: 1;
+    height: 36px;
+    left: 0px;
+    max-height: 36px;
+    position: relative;
+    right: 0px;
+    top: 0px;
+    white-space: nowrap;
+    transition: background-color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+        border-color 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+    width: 256px;
+}
+
+.pay-search-container::before {
+    content: "";
+    border-radius: 999px;
+    bottom: -1px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    height: calc(100% + 2px);
+    left: -1px;
+    opacity: 0;
+    padding: 2px;
+    pointer-events: none;
+    position: absolute;
+    right: 0px;
+    top: -1px;
+    transition: opacity 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+    width: calc(100% + 2px);
+}
+
+.pay-search-container:focus-within {
+    border-color: rgb(105, 80, 243);
+}
+
+.pay-search-container:focus-within::before {
+    opacity: 0;
+}
+
+/* el-31: Search icon prefix */
+.pay-search-icon-prefix {
+    align-items: center;
+    color: rgb(118, 118, 118);
+    cursor: text;
+    display: flex;
+    height: 34px;
+    outline-color: rgb(118, 118, 118);
+    padding-left: 12px;
+    white-space: nowrap;
+    width: 32px;
+}
+
+/* el-32: Search icon span (20x20) */
+.pay-icon-span-20 {
+    bottom: 0px;
+    display: flex;
+    flex-shrink: 0;
+    height: 20px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    top: 0px;
+    width: 20px;
+}
+
+.pay-search-icon-prefix .pay-icon-span-20 {
+    color: rgb(118, 118, 118);
+    cursor: text;
+    outline-color: rgb(118, 118, 118);
+}
+
+/* el-33: SVG 20x20 */
+.pay-icon-svg-20 {
+    bottom: 0px;
+    fill: currentColor;
+    height: 20px;
+    left: 0px;
+    overflow: hidden;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 20px;
+}
+
+/* el-35: Search input */
+.pay-search-input {
+    appearance: none;
+    background-color: transparent;
+    border: 0;
+    border-radius: 999px;
+    cursor: text;
+    font-size: 15px;
+    height: 34px;
+    outline: none;
+    overflow: clip;
+    padding: 0 16px 0 8px;
+    position: relative;
+    white-space: nowrap;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.pay-search-input::placeholder {
+    color: rgb(166, 166, 166);
+    text-transform: none;
+}
+
+/* ====================== DATE BUTTON ====================== */
+
+/* el-36: Date button */
+.pay-date-btn {
+    align-items: center;
+    appearance: button;
+    background: none;
+    border: none;
+    border-radius: 999px;
+    bottom: 0px;
+    cursor: pointer;
+    display: flex;
+    height: 36px;
+    left: 0px;
+    line-height: 16.1px;
+    max-width: 100%;
+    outline: 2px solid rgba(0, 0, 0, 0);
+    outline-offset: 2px;
+    padding: 0;
+    position: relative;
+    right: 0px;
+    text-align: center;
+    white-space: nowrap;
+    top: 0px;
+    transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.pay-date-btn::before {
+    content: "";
+    border-radius: 999px;
+    bottom: 0px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    cursor: pointer;
+    height: 36px;
+    left: 0px;
+    line-height: 16.1px;
+    opacity: 0;
+    padding: 2px;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    white-space: nowrap;
+    top: 0px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.pay-date-btn:focus-visible::before {
+    opacity: 1;
+}
+
+/* el-37: Date button inner */
+.pay-date-btn-inner {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 999px;
+    column-gap: 8px;
+    cursor: pointer;
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    line-height: 16.1px;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    row-gap: 8px;
+    scale: 1;
+    text-align: center;
+    white-space: nowrap;
+    transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        padding 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        gap 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    width: 100%;
+}
+
+.pay-date-btn:hover .pay-date-btn-inner {
+    background-color: rgb(242, 242, 242);
+    border-color: rgb(189, 189, 189);
+}
+
+.pay-date-btn:active .pay-date-btn-inner {
+    scale: 0.96;
+    background-color: rgb(229, 229, 229);
+    border-color: rgb(166, 166, 166);
+}
+
+/* el-38: Date button text area */
+.pay-date-btn-text-area {
+    align-items: center;
+    column-gap: 8px;
+    cursor: pointer;
+    display: flex;
+    height: 20px;
+    line-height: 16.1px;
+    row-gap: 8px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* el-39: Date text */
+.pay-date-text {
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    height: 20px;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* el-40: Date icon wrapper */
+.pay-date-icon-wrap {
+    cursor: pointer;
+    display: flex;
+    height: 20px;
+    line-height: 16.1px;
+    text-align: center;
+    white-space: nowrap;
+    width: 20px;
+}
+
+/* ====================== FILTERS BUTTON ====================== */
+
+/* el-44: Filters button */
+.pay-filters-btn {
+    align-items: center;
+    appearance: button;
+    background: none;
+    background-position: 0px 0px;
+    border: none;
+    border-radius: 999px;
+    bottom: 0px;
+    cursor: pointer;
+    display: flex;
+    height: 36px;
+    left: 0px;
+    line-height: 16.1px;
+    max-width: 100%;
+    outline: 2px solid rgba(0, 0, 0, 0);
+    outline-offset: 2px;
+    padding: 0;
+    position: relative;
+    right: 0px;
+    text-align: center;
+    white-space: nowrap;
+    top: 0px;
+    transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.pay-filters-btn::before {
+    content: "";
+    border-radius: 999px;
+    bottom: 0px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    cursor: pointer;
+    height: 36px;
+    left: 0px;
+    line-height: 16.1px;
+    opacity: 0;
+    padding: 2px;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    white-space: nowrap;
+    top: 0px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.pay-filters-btn:focus-visible::before {
+    opacity: 1;
+}
+
+/* el-45: Filters button inner */
+.pay-filters-btn-inner {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 999px;
+    column-gap: 8px;
+    cursor: pointer;
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    line-height: 16.1px;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    row-gap: 8px;
+    scale: 1;
+    text-align: center;
+    white-space: nowrap;
+    transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        padding 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        gap 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    width: 100%;
+}
+
+.pay-filters-btn:hover .pay-filters-btn-inner {
+    background-color: rgb(242, 242, 242);
+    border-color: rgb(189, 189, 189);
+}
+
+.pay-filters-btn:active .pay-filters-btn-inner {
+    scale: 0.96;
+    background-color: rgb(229, 229, 229);
+    border-color: rgb(166, 166, 166);
+}
+
+/* el-46: Filters button content */
+.pay-filters-btn-content {
+    align-items: center;
+    column-gap: 8px;
+    cursor: pointer;
+    display: flex;
+    height: 20px;
+    line-height: 16.1px;
+    row-gap: 8px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* el-47: Filters text */
+.pay-filters-text {
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    height: 20px;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* el-48: Filters icon wrapper */
+.pay-filters-icon-wrap {
+    cursor: pointer;
+    display: flex;
+    height: 20px;
+    line-height: 16.1px;
+    text-align: center;
+    white-space: nowrap;
+    width: 20px;
+}
+
+/* ====================== TABLE SECTION ====================== */
+
+/* el-54: Table outer wrapper */
+.pay-table-outer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+}
+
+/* el-55: Table region wrapper */
+.pay-table-border-wrap {
+    background-color: rgba(19, 19, 19, 0);
+    width: 100%;
+}
+
+/* el-56: Table position wrapper */
+.pay-table-scroll {
+    bottom: 0px;
+    left: 0px;
+    overflow-x: auto;
+    position: relative;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+}
+
+/* el-57: Sticky header wrapper */
+.pay-sticky-header {
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    z-index: 4;
+}
+
+/* el-58: Header overflow wrapper */
+.pay-header-overflow {
+    overflow: hidden;
+    width: 100%;
+}
+
+/* el-59: Header table element */
+.pay-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: table;
+    table-layout: fixed;
+    width: max(100%, 1318px);
+    min-width: 1318px;
+    border-color: rgb(128, 128, 128);
+}
+
+/* ====================== TABLE COLGROUP ====================== */
+
+/* el-61..el-69: col elements — exact widths from computed-styles.json */
+
+.pay-col-date {
+    width: 250px;
+    min-width: 250px;
+}
+
+.pay-col-location {
+    width: 150px;
+    min-width: 150px;
+}
+
+.pay-col-ref {
+    width: 150px;
+    min-width: 150px;
+}
+
+.pay-col-client {
+    width: 150px;
+    min-width: 150px;
+}
+
+.pay-col-team {
+    width: 150px;
+    min-width: 150px;
+}
+
+.pay-col-type {
+    width: 150px;
+    min-width: 150px;
+}
+
+.pay-col-method {
+    width: 150px;
+    min-width: 150px;
+}
+
+.pay-col-amount {
+    width: 122px;
+    min-width: 100px;
+}
+
+.pay-col-actions {
+    width: 68px;
+    min-width: 68px;
+}
+
+/* ====================== TABLE HEADER ====================== */
+
+/* el-70: thead */
+.pay-thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: rgb(128, 128, 128);
+}
+
+/* el-71: thead row */
+.pay-thead-row {
+    display: table-row;
+    vertical-align: middle;
+    border-color: rgb(128, 128, 128);
+}
+
+/* el-72..el-139: Header cells */
+.pay-th {
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(229, 229, 229);
+    display: table-cell;
+    font-weight: 700;
+    vertical-align: middle;
+    border-color: rgb(229, 229, 229);
+}
+
+/* First column: pinned left */
+.pay-th.pinned-left {
+    left: 0px;
+    min-width: 250px;
+    position: sticky;
+    z-index: 1;
+}
+
+/* Last column: actions — min-width + text-align */
+.pay-th.th-actions {
+    min-width: 68px;
+}
+
+/* Amount column: right-aligned */
+.pay-th.th-amount {
+    min-width: 100px;
+    text-align: end;
+}
+
+/* Amount sort button: right-aligned per el-131 */
+.pay-th.th-amount .pay-th-sort-btn {
+    justify-content: end;
+}
+
+/* Standard column (Location, Ref, Client, Team, Type, Method) */
+.pay-th.th-standard {
+    min-width: 150px;
+}
+
+/* el-74: Sort button padding wrapper */
+.pay-th-sort-wrap {
+    padding: 4px;
+}
+
+/* el-75: Sort button inside header */
+.pay-th-sort-btn {
+    align-items: center;
+    appearance: button;
+    background-color: rgba(19, 19, 19, 0);
+    border: none;
+    border-radius: 4px;
+    bottom: 0px;
+    column-gap: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    font-weight: 700;
+    height: 44px;
+    justify-content: start;
+    left: 0px;
+    line-height: 16.1px;
+    outline: 2px solid rgba(0, 0, 0, 0);
+    outline-offset: 2px;
+    padding: 12px;
+    position: relative;
+    right: 0px;
+    row-gap: 8px;
+    top: 0px;
+    transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        padding-block 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        padding-inline 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    width: 100%;
+    border-color: rgba(255, 255, 255, 0);
+}
+
+.pay-th-sort-btn::before {
+    content: "";
+    border-radius: 4px;
+    bottom: 0px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    cursor: pointer;
+    font-weight: 700;
+    height: 44px;
+    left: 0px;
+    line-height: 16.1px;
+    opacity: 0;
+    padding: 2px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.pay-th-sort-btn:focus-visible::before {
+    opacity: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .pay-th-sort-btn:hover {
+        background-color: rgba(19, 19, 19, 0.051);
+    }
+}
+
+.pay-th-sort-btn:active {
+    scale: 0.96;
+    background-color: rgba(19, 19, 19, 0.08);
+}
+
+/* el-76: Sort header text */
+.pay-th-sort-text {
+    cursor: pointer;
+    display: flow-root;
+    font-size: 15px;
+    font-weight: 600;
+    height: 20px;
+    overflow: hidden;
+    text-align: left;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+}
+
+/* Sort icon wrapper */
+.pay-th-sort-icon-wrap {
+    cursor: pointer;
+    display: flex;
+    height: 16px;
+    width: 16px;
+}
+
+/* Sort icon span (16x16) */
+.pay-icon-span-16 {
+    bottom: 0px;
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    height: 16px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    top: 0px;
+    width: 16px;
+}
+
+/* SVG 16x16 */
+.pay-icon-svg-16 {
+    bottom: 0px;
+    fill: currentColor;
+    height: 16px;
+    left: 0px;
+    overflow: hidden;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 16px;
+}
+
+/* ====================== TABLE BODY ====================== */
+
+/* el-140: body scroll wrapper */
+.pay-body-scroll {
+    overflow-x: auto;
+    overflow-y: auto;
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+}
+
+/* el-141: Tbody inside scroll area — inner table */
+.pay-tbody-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: table;
+    table-layout: fixed;
+    width: max(100%, 1318px);
+    min-width: 1318px;
+}
+
+/* el-152: tbody */
+.pay-tbody {
+    display: table-row-group;
+    vertical-align: middle;
+}
+
+/* Data rows */
+.pay-tr {
+    display: table-row;
+    height: 56px;
+    vertical-align: middle;
+}
+
+/* Row hover effects from JSON interactiveRules */
+@media (hover: hover) and (pointer: fine) {
+    .pay-tr:hover .variant-default {
+        background-color: rgba(19, 19, 19, 0.024);
+    }
+
+    .pay-tr:hover .variant-pageFaded {
+        background-color: rgba(19, 19, 19, 0.04);
+    }
+}
+
+/* Last row: no bottom border */
+.pay-tr:last-child .pay-td {
+    border-bottom: none;
+}
+
+/* ====================== TABLE DATA CELLS ====================== */
+
+/* Standard data cell */
+.pay-td {
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(229, 229, 229);
+    display: table-cell;
+    height: 56px;
+    padding: 1px 16px;
+    vertical-align: middle;
+    border-color: rgb(229, 229, 229);
+}
+
+/* Standard column cell */
+.pay-td.td-standard {
+    min-width: 150px;
+}
+
+/* Pinned left (date) cell */
+.pay-td.pinned-left {
+    left: 0px;
+    min-width: 250px;
+    position: sticky;
+    z-index: 1;
+}
+
+/* Amount cell — right-aligned */
+.pay-td.td-amount {
+    min-width: 100px;
+    text-align: end;
+}
+
+/* Actions cell */
+.pay-td.td-actions {
+    min-width: 68px;
+}
+
+/* Total row: pageFaded variant */
+.pay-td.variant-pageFaded {
+    background-color: rgb(249, 249, 249);
+}
+
+/* Data row default variant */
+.pay-td.variant-default {
+    background-color: rgb(255, 255, 255);
+}
+
+/* Last row: no bottom border */
+.pay-tr:last-child .pay-td {
+    border-bottom: none;
+}
+
+/* ====================== INTERACTIVE: ROW HOVER ====================== */
+
+@media (hover: hover) and (pointer: fine) {
+    .pay-table-scroll .pay-tr:hover .pay-td.variant-default {
+        background-color: rgb(249, 249, 249);
+    }
+
+    .pay-table-scroll .pay-tr:hover .pay-td.variant-pageFaded {
+        background-color: rgb(242, 242, 242);
+    }
+}
+
+/* ====================== CELL TEXT ====================== */
+
+/* Primary text wrapper (p with ellipsis) */
+.pay-cell-text-wrap {
+    display: flow-root;
+    font-size: 15px;
+    height: 20px;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+}
+
+/* Inner text (span instead of p to avoid nested p issues) */
+.pay-cell-text {
+    display: block;
+    font-size: 15px;
+    height: 20px;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+}
+
+/* Semibold text variant (Total row, Amount) */
+.pay-cell-text.semibold {
+    font-weight: 600;
+}
+
+/* Right-aligned text (Amount) */
+.pay-cell-text.text-right {
+    text-align: right;
+}
+
+/* End-aligned text wrapper (Amount column) */
+.pay-cell-text-wrap.text-end {
+    text-align: end;
+}
+
+/* Secondary (empty) text line */
+.pay-cell-text-secondary {
+    display: block;
+}
+
+/* ====================== LINK WRAPPER (Ref#, Team member) ====================== */
+
+/* Tooltip wrapper div */
+.pay-link-tooltip-wrap {
+    bottom: 0px;
+    display: flex;
+    font-size: 15px;
+    height: 20px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    top: 0px;
+}
+
+/* Inner span limiting text (was div, now span inside p) */
+.pay-link-text-limit {
+    display: block;
+    font-size: 15px;
+    height: 20px;
+    max-width: 150px;
+}
+
+/* Span wrapper for link text */
+.pay-link-text-span {
+    display: flow-root;
+    font-size: 15px;
+    height: 20px;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+}
+
+/* Anchor link */
+.pay-cell-link {
+    border-radius: 4px;
+    bottom: 0px;
+    color: rgb(105, 80, 243);
+    cursor: pointer;
+    display: inline;
+    font: inherit;
+    font-size: 15px;
+    height: auto;
+    left: 0px;
+    outline-color: rgb(105, 80, 243);
+    position: relative;
+    right: 0px;
+    text-decoration: none;
+    text-wrap-mode: nowrap;
+    top: 0px;
+    width: auto;
+    border-color: rgb(105, 80, 243);
+}
+
+.pay-cell-link:visited {
+    color: rgb(105, 80, 243);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .pay-cell-link:hover {
+        color: rgb(78, 52, 216);
+    }
+}
+
+.pay-cell-link:active {
+    color: rgb(55, 30, 186);
+}
+
+.pay-cell-link::before {
+    content: "";
+    border-radius: 4px;
+    bottom: 0px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    color: rgb(105, 80, 243);
+    cursor: pointer;
+    font-size: 15px;
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    outline-color: rgb(105, 80, 243);
+    padding: 2px;
+    position: absolute;
+    right: 0px;
+    text-wrap-mode: nowrap;
+    top: 0px;
+    transition: opacity 0.1s ease-in-out;
+    width: 100%;
+    border-color: rgb(105, 80, 243);
+    pointer-events: none;
+}
+
+.pay-cell-link:focus-visible::before {
+    opacity: 1;
+}
+
+/* ====================== ACTION BUTTON (3-dot menu) ====================== */
+
+/* el-216: override text-wrap height for actions cell */
+.pay-actions-text-wrap {
+    height: 36px;
+}
+
+/* el-217: inner div wrapper around the button */
+.pay-action-cell-inner {
+    font-size: 15px;
+    height: 36px;
+}
+
+/* el-218: Action button */
+.pay-action-btn {
+    align-items: center;
+    appearance: button;
+    background: none;
+    border: none;
+    border-radius: 999px;
+    bottom: 0px;
+    cursor: pointer;
+    display: inline-flex;
+    height: 36px;
+    left: 0px;
+    line-height: 17.25px;
+    max-width: 100%;
+    min-width: 36px;
+    outline: 2px solid rgba(0, 0, 0, 0);
+    outline-offset: 2px;
+    padding: 0;
+    position: relative;
+    right: 0px;
+    text-align: center;
+    top: 0px;
+    transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    width: 36px;
+}
+
+.pay-action-btn::before {
+    content: "";
+    border-radius: 999px;
+    bottom: 0px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    cursor: pointer;
+    height: 36px;
+    left: 0px;
+    line-height: 17.25px;
+    opacity: 0;
+    padding: 2px;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    top: 0px;
+    transition: opacity 0.1s ease-in-out;
+    width: 36px;
+    pointer-events: none;
+}
+
+.pay-action-btn:focus-visible::before {
+    opacity: 1;
+}
+
+/* el-426: Action button inner */
+.pay-action-btn-inner {
+    align-items: center;
+    background-color: rgba(19, 19, 19, 0);
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 999px;
+    column-gap: 8px;
+    cursor: pointer;
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    line-height: 17.25px;
+    max-width: 100%;
+    min-width: 36px;
+    padding-left: 15px;
+    padding-right: 15px;
+    row-gap: 8px;
+    scale: 1;
+    text-align: center;
+    transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        padding 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        gap 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    width: 36px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .pay-action-btn:hover .pay-action-btn-inner {
+        background-color: rgba(19, 19, 19, 0.051);
+    }
+}
+
+.pay-action-btn:active .pay-action-btn-inner {
+    scale: 0.96;
+    background-color: rgba(19, 19, 19, 0.08);
+}
+
+/* el-427: Action button label (sr-only) */
+.pay-action-btn-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+/* el-429: Action icon wrapper */
+.pay-action-icon-wrap {
+    cursor: pointer;
+    display: flex;
+    height: 20px;
+    line-height: 17.25px;
+    text-align: center;
+    width: 20px;
+}
+
+/* ====================== PAGINATION FOOTER ====================== */
+
+/* el-434: Pagination footer */
+.pay-pagination {
+    border-top: 1px solid rgb(229, 229, 229);
+    height: 53px;
+    padding: 16px;
+    width: 100%;
+}
+
+/* el-435: Pagination inner */
+.pay-pagination-inner {
+    align-items: center;
+    column-gap: 4px;
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    justify-content: center;
+    row-gap: 4px;
+}
+
+/* el-436: SR-only results text */
+.pay-pagination-sr {
+    height: 1px;
+    opacity: 0.01;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+}
+
+/* el-437: Visible results wrapper */
+.pay-pagination-visible {
+    height: 20px;
+}
+
+/* el-438: Visible results text */
+.pay-pagination-text {
+    color: rgb(118, 118, 118);
+    font-size: 15px;
+    height: 20px;
+    outline-color: rgb(118, 118, 118);
+}
+
+/* el-439, el-440: Bold spans inside pagination */
+.pay-pagination-bold {
+    color: rgb(118, 118, 118);
+    display: inline;
+    font-size: 15px;
+    font-weight: 600;
+    outline-color: rgb(118, 118, 118);
+}
+
+/* ====================== KEYFRAMES ====================== */
+
+@keyframes rfWXCt {
+    0% {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes show-N8n3z1 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ====================== TABLE ANIMATION ====================== */
+
+/* el-58: Inner table wrapper animation */
+.pay-table-animate {
+    animation: rfWXCt 0.3s cubic-bezier(0, 0.55, 0.45, 1) forwards;
+}
+
+/* el-140: Second table section with animation */
+.pay-tbody-section {
+    animation: rfWXCt 0.3s cubic-bezier(0, 0.55, 0.45, 1) forwards;
+    animation-delay: 0.05s;
+    opacity: 0;
+}

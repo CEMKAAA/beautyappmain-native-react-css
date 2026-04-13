@@ -1,0 +1,348 @@
+/* ═══════════════════════════════════════════════════
+   Appointment Calendar — Fresha-Matching Light Theme
+   ═══════════════════════════════════════════════════ */
+
+/* ---------- @font-face: Roobert PRO (Fresha's font) ---------- */
+@font-face {
+  font-family: 'Roobert PRO';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/RoobertPro-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Roobert PRO';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/RoobertPro-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Roobert PRO';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/RoobertPro-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Roobert PRO';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/RoobertPro-Bold.woff2') format('woff2');
+}
+
+/* ---------- CSS Variables ---------- */
+:root {
+  /* Primary palette */
+  --color-primary: #5C4ACE;
+  --color-primary-light: #7B6DD8;
+  --color-primary-dark: #4536A8;
+  --color-primary-gradient: linear-gradient(135deg, #5C4ACE 0%, #8B7EE0 100%);
+
+  /* Accent */
+  --color-accent: #f472b6;
+  --color-accent-light: #fbcfe8;
+
+  /* Neutrals — Light Theme */
+  --color-bg: #f7f7fa;
+  --color-bg-card: #ffffff;
+  --color-bg-input: #ffffff;
+  --color-bg-hover: #f0f0f5;
+  --color-surface: #ffffff;
+  --color-border: #e5e5ea;
+
+  /* Text — Dark on Light */
+  --color-text: #1a1a2e;
+  --color-text-muted: #6b7280;
+  --color-text-placeholder: #9ca3af;
+
+  /* Status */
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+
+  /* Shadows — Subtle */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 20px rgba(124, 58, 237, 0.1);
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.4s ease;
+
+  /* ─── Font Family — Roobert PRO (Fresha-exact) ─── */
+  --font-family: 'Roobert PRO', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* ─── Typography Scale (Fresha Design Tokens) ─── */
+  /* 2xs — tiny labels, time indicators, badges */
+  --typo-2xs: 11px;
+  --typo-2xs-lh: 12px;
+
+  /* xs — small labels, secondary info, tag text */
+  --typo-xs: 13px;
+  --typo-xs-lh: 16px;
+
+  /* s — dropdown options, buttons, form inputs, body text */
+  --typo-s: 15px;
+  --typo-s-lh: 20px;
+
+  /* m — menu items, card titles, prominent body */
+  --typo-m: 17px;
+  --typo-m-lh: 24px;
+
+  /* ml — sub-headings, dialog titles */
+  --typo-ml: 20px;
+  --typo-ml-lh: 28px;
+
+  /* l — section headers, large titles */
+  --typo-l: 24px;
+  --typo-l-lh: 32px;
+
+  /* xl — page titles, hero text */
+  --typo-xl: 34px;
+  --typo-xl-lh: 40px;
+}
+
+/* ---------- Reset & Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------- Typography ---------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: var(--typo-xl);
+}
+
+h2 {
+  font-size: var(--typo-l);
+}
+
+h3 {
+  font-size: var(--typo-ml);
+}
+
+/* ---------- Form Elements ---------- */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: var(--typo-xs);
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--color-bg-input);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-size: var(--typo-s);
+  font-family: var(--font-family);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: var(--color-text-placeholder);
+}
+
+.form-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.form-input:hover:not(:focus) {
+  border-color: #d1d5db;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-size: var(--typo-xs);
+  font-weight: 600;
+  font-family: var(--font-family);
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  outline: none;
+  text-decoration: none;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--color-primary-dark);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  border-color: #d1d5db;
+  background: var(--color-bg-hover);
+}
+
+.btn-danger {
+  background: var(--color-error);
+  color: white;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: #dc2626;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* ---------- Alerts ---------- */
+.alert {
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: var(--typo-xs);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.alert-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: var(--color-error);
+}
+
+.alert-success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: var(--color-success);
+}
+
+/* ---------- Loading ---------- */
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 16px;
+  color: var(--color-text-muted);
+}
+
+.loading-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- Utilities ---------- */
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.mt-1 {
+  margin-top: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 1rem;
+}
+
+.mt-3 {
+  margin-top: 1.5rem;
+}

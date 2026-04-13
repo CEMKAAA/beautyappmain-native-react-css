@@ -1,0 +1,2269 @@
+/* ============================================================
+   BusinessSetup.css — Fresha Business Details Page (Pixel-Perfect)
+   158 elements, 48 keyframes from computed-styles.json
+   ============================================================ */
+
+/* --- Keyframes (all 48 from extraction) --- */
+@keyframes bs-skeleton-pulse {
+    0% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes bs-fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes bs-progressBar {
+    0% {
+        inset-inline-start: -40%;
+    }
+
+    75% {
+        inset-inline-start: 120%;
+    }
+
+    100% {
+        inset-inline-start: 120%;
+    }
+}
+
+@keyframes bs-progressBar2 {
+    0% {
+        inset-inline-start: -90%;
+    }
+
+    37.5% {
+        inset-inline-start: -90%;
+    }
+
+    100% {
+        inset-inline-start: 100%;
+    }
+}
+
+@keyframes bs-loadSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bs-loadSpinRtl {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes bs-loaderShow {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bs-load1 {
+    0% {
+        opacity: 1;
+    }
+
+    33% {
+        opacity: 0.66;
+    }
+
+    66% {
+        opacity: 0.33;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes bs-load2 {
+    0% {
+        opacity: 0.66;
+    }
+
+    33% {
+        opacity: 0.33;
+    }
+
+    66% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bs-load3 {
+    0% {
+        opacity: 0.33;
+    }
+
+    33% {
+        opacity: 0;
+    }
+
+    66% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.66;
+    }
+}
+
+@keyframes bs-growDisappear {
+    35% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+}
+
+@keyframes bs-growDisappearRtl {
+    35% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(50%, -50%) scale(1.2);
+    }
+}
+
+@keyframes bs-beat {
+    50% {
+        opacity: 0.2;
+        transform: scale(0.75);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bs-shimmer {
+    0% {
+        background-position: -400px 100%;
+    }
+
+    100% {
+        background-position: 400px 300%;
+    }
+}
+
+@keyframes bs-shimmerRtl {
+    0% {
+        background-position: right -400px top 100%;
+    }
+
+    100% {
+        background-position: right 400px top 300%;
+    }
+}
+
+@keyframes bs-show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bs-slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-10%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes bs-moveToRight {
+    100% {
+        font-size: 56px;
+        transform: scale(0.5) translate(calc(100% - 55px), -50%);
+    }
+}
+
+@keyframes bs-moveToRightRtl {
+    100% {
+        font-size: 56px;
+        transform: scale(0.5) translate(calc(-100% + 55px), -50%);
+    }
+}
+
+@keyframes bs-resizeWrapper {
+    0% {
+        width: 98px;
+        height: 98px;
+    }
+
+    100% {
+        width: 112px;
+        height: 112px;
+    }
+}
+
+@keyframes bs-spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bs-spinRtl {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes bs-moveClock {
+    100% {
+        transform: scale(0.5) translate(calc(100% - 32px), -5%);
+    }
+}
+
+@keyframes bs-moveClockRtl {
+    100% {
+        transform: scale(0.5) translate(calc(-100% + 32px), -5%);
+    }
+}
+
+@keyframes bs-slideUp2 {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-10%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes bs-moveToRight2 {
+    100% {
+        transform: translate(calc(50% - 20px), -24px);
+    }
+}
+
+@keyframes bs-moveToRight2Rtl {
+    100% {
+        transform: translate(calc(-50% + 20px), -24px);
+    }
+}
+
+@keyframes bs-scaleEmoji {
+    100% {
+        transform: scale(0.45);
+    }
+}
+
+@keyframes bs-spin2 {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bs-spin2Rtl {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes bs-scaleClock {
+    100% {
+        transform: scale(0.4);
+    }
+}
+
+@keyframes bs-moveWrapper {
+    100% {
+        transform: translate(calc(50% - 12px), 8px);
+    }
+}
+
+@keyframes bs-moveWrapperRtl {
+    100% {
+        transform: translate(calc(-50% + 12px), 8px);
+    }
+}
+
+@keyframes bs-flashOnEntry {
+    0% {
+        background-color: var(--color-background-warning-faded, #fff9e6);
+    }
+
+    99% {
+        background-color: inherit;
+    }
+}
+
+@keyframes bs-slideInRight {
+    0% {
+        transform: translate(100vw);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
+}
+
+@keyframes bs-slideInRightRtl {
+    0% {
+        transform: translate(-100vw);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
+}
+
+@keyframes bs-loadSpin2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bs-loadSpin2Rtl {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes bs-dash {
+    0% {
+        stroke-dashoffset: 1000px;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes bs-horizontalShake {
+    0% {
+        transform: translate(0px);
+    }
+
+    25% {
+        transform: translate(8px);
+    }
+
+    50% {
+        transform: translate(-8px);
+    }
+
+    75% {
+        transform: translate(8px);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
+}
+
+@keyframes bs-horizontalShakeRtl {
+    0% {
+        transform: translate(0px);
+    }
+
+    25% {
+        transform: translate(-8px);
+    }
+
+    50% {
+        transform: translate(8px);
+    }
+
+    75% {
+        transform: translate(-8px);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
+}
+
+@keyframes bs-expand {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.7);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bs-fadeIn {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes bs-flashOnEntry2 {
+    0% {
+        background-color: var(--color-background-warning-faded, #fff9e6);
+    }
+
+    100% {
+        background-color: var(--color-background-page, #fff);
+    }
+}
+
+@keyframes bs-wizardScaleIn {
+    0% {
+        opacity: 0;
+        filter: blur(2px);
+        transform: scale(0.9) translateY(10%);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1) translateY(0px);
+    }
+}
+
+
+/* ============================================================
+   el-0: Root content wrapper
+   ============================================================ */
+.bs-page {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    justify-content: space-between;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+
+/* el-1: Scroll container */
+.bs-scroll {
+    background-color: rgb(249, 249, 249);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 1px;
+}
+
+/* el-2: Inner wrapper */
+.bs-inner {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+}
+
+/* el-3: Padding wrapper */
+.bs-padded {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* el-4: Center container (max-width wizard) */
+.bs-center {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* el-5: Empty relative spacer */
+.bs-spacer-top {
+    position: relative;
+    width: 0;
+}
+
+/* el-6: Grid wrapper with bottom padding */
+.bs-grid-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-bottom: 96px;
+}
+
+/* el-7: Main 2-column grid layout */
+.bs-grid {
+    display: grid;
+    grid-template-areas: "title title" "sidebar content";
+    grid-template-columns: 296px 696px;
+    grid-template-rows: auto auto;
+    column-gap: 32px;
+    row-gap: 0px;
+    justify-content: center;
+}
+
+
+/* ============================================================
+   TITLE AREA (el-8 → el-27)
+   ============================================================ */
+
+/* el-8: Title grid area */
+.bs-title-area {
+    grid-area: title;
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+}
+
+/* el-9: Title content wrapper */
+.bs-title-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    row-gap: 24px;
+    column-gap: 24px;
+    padding-bottom: 16px;
+}
+
+
+/* --- Back Button (el-10 → el-21) --- */
+
+/* el-10: Back button <button> */
+.bs-back-button {
+    appearance: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-family: inherit;
+    align-items: center;
+    display: flex;
+    height: 36px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+    border-radius: 999px;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* el-10::before — focus ring */
+.bs-back-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.bs-back-button:focus-visible::before {
+    opacity: 1;
+}
+
+/* el-11: Inner wrapper for back button */
+.bs-back-inner {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 999px;
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    max-width: 100%;
+    padding-left: 11px;
+    padding-right: 15px;
+    column-gap: 4px;
+    row-gap: 4px;
+    scale: 1;
+    text-align: center;
+    transition:
+        background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        padding 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        gap 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+/* Hover & active states for back button */
+.bs-back-button:hover .bs-back-inner {
+    background-color: rgb(242, 242, 242);
+    border-color: rgb(196, 196, 196);
+}
+
+.bs-back-button:active .bs-back-inner {
+    scale: 0.96;
+    background-color: rgb(229, 229, 229);
+    border-color: rgb(178, 178, 178);
+}
+
+/* el-12: Back arrow icon container */
+.bs-back-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    color: rgb(13, 13, 13);
+}
+
+.bs-back-icon svg {
+    position: absolute;
+    inset: 0;
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* el-17: Back label wrapper */
+.bs-back-label-wrap {
+    align-items: center;
+    display: flex;
+    column-gap: 8px;
+    row-gap: 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+}
+
+/* el-18: Back label text */
+.bs-back-label {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgb(13, 13, 13);
+    cursor: pointer;
+    text-align: center;
+}
+
+
+/* --- Breadcrumbs (el-22 → el-27) --- */
+
+/* el-22: Breadcrumb nav */
+.bs-breadcrumb {
+    display: flex;
+    height: 20px;
+}
+
+/* el-23: Breadcrumb list (ol) */
+.bs-breadcrumb-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* el-24, el-26: Breadcrumb item (li) */
+.bs-breadcrumb-item {
+    display: flex;
+    align-items: center;
+}
+
+/* Breadcrumb link */
+.bs-breadcrumb-link {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(118, 118, 118);
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+    position: relative;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+.bs-breadcrumb-link::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.bs-breadcrumb-link:focus-visible::before {
+    opacity: 1;
+}
+
+.bs-breadcrumb-link:hover {
+    color: rgb(80, 80, 80);
+}
+
+/* Breadcrumb current (last item) */
+.bs-breadcrumb-current {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(13, 13, 13);
+    white-space: nowrap;
+}
+
+/* Breadcrumb dot separator */
+.bs-breadcrumb-dot {
+    display: inline-flex;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    color: rgb(178, 178, 178);
+    position: relative;
+}
+
+.bs-breadcrumb-dot svg {
+    position: absolute;
+    inset: 0;
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+
+/* ============================================================
+   SIDEBAR (el-28 → el-85)
+   ============================================================ */
+
+/* el-28: Sidebar grid area */
+.bs-sidebar-area {
+    grid-area: sidebar;
+    position: sticky;
+    top: 0;
+    align-self: start;
+}
+
+/* el-29: Sidebar sticky container */
+.bs-sidebar-sticky {
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 8px;
+    padding-bottom: 32px;
+}
+
+/* el-30: Sidebar card */
+.bs-sidebar-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    position: relative;
+    width: 296px;
+}
+
+/* el-31: Sidebar card border overlay */
+.bs-sidebar-border {
+    border-radius: 12px;
+    position: absolute;
+    inset: 0;
+    box-shadow: rgb(229, 229, 229) 0px 0px 0px 1px inset;
+    pointer-events: none;
+    z-index: 2000;
+}
+
+/* el-32: Sidebar card inner */
+.bs-sidebar-inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    column-gap: 24px;
+    padding: 24px 20px 32px 20px;
+}
+
+/* el-33: Sidebar header wrapper */
+.bs-sidebar-header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    column-gap: 24px;
+}
+
+/* el-34: Sidebar title */
+.bs-sidebar-title {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 0;
+    color: rgb(13, 13, 13);
+}
+
+/* el-35: Menu list (ul) */
+.bs-menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Menu group wrapper */
+.bs-menu-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* el-37, el-43, el-47: Menu item (li) */
+.bs-menu-item {
+    display: flex;
+    width: 100%;
+}
+
+/* el-39: Menu button/link — original: padding 12px 16px, height 44px, margin -16px */
+.bs-menu-link {
+    appearance: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+    padding: 12px 16px;
+    border-radius: 8px;
+    column-gap: 12px;
+    row-gap: 12px;
+    min-height: 44px;
+    transition:
+        color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+        background-color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+        border-color 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+    position: relative;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.bs-menu-link::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.bs-menu-link:focus-visible::before {
+    opacity: 1;
+}
+
+/* Active menu item */
+.bs-menu-link.active {
+    background-color: rgb(240, 240, 255);
+}
+
+.bs-menu-link:hover:not(.active) {
+    background-color: rgb(242, 242, 242);
+}
+
+.bs-menu-link:active:not(.active) {
+    background-color: rgb(229, 229, 229);
+}
+
+/* Menu item text */
+.bs-menu-text {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    flex-grow: 1;
+    color: rgb(13, 13, 13);
+    text-align: left;
+}
+
+/* el-51: HR divider inside sidebar */
+.bs-menu-divider {
+    background-color: rgb(229, 229, 229);
+    border: none;
+    height: 1px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+/* Shortcuts section header (el-54) */
+.bs-shortcuts-header {
+    padding: 8px 12px;
+}
+
+.bs-shortcuts-title {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 0;
+    color: rgb(13, 13, 13);
+}
+
+/* Shortcut items with external arrow icon */
+.bs-shortcut-link {
+    appearance: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+    padding: 8px 12px;
+    border-radius: 8px;
+    column-gap: 8px;
+    row-gap: 8px;
+    min-height: 36px;
+    transition: background-color 0.15s ease;
+    position: relative;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.bs-shortcut-link::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.bs-shortcut-link:focus-visible::before {
+    opacity: 1;
+}
+
+.bs-shortcut-link:hover {
+    background-color: rgb(242, 242, 242);
+}
+
+.bs-shortcut-link:active {
+    background-color: rgb(229, 229, 229);
+}
+
+.bs-shortcut-text {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    flex-grow: 1;
+    color: rgb(13, 13, 13);
+    text-align: left;
+}
+
+/* External arrow icon (16×16, el-62, el-69 etc.) */
+.bs-external-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    color: rgb(178, 178, 178);
+}
+
+.bs-external-icon svg {
+    position: absolute;
+    inset: 0;
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+/* Last divider hidden */
+.bs-menu-divider-hidden {
+    display: none;
+}
+
+
+/* ============================================================
+   CONTENT (el-86 → el-156)
+   ============================================================ */
+
+/* el-86: Content grid area */
+.bs-content-area {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    column-gap: 24px;
+    padding-top: 8px;
+}
+
+/* el-87: Content heading section */
+.bs-content-header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+    column-gap: 4px;
+}
+
+/* el-88: Content h1 */
+.bs-content-heading {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    margin: 0;
+    color: rgb(13, 13, 13);
+}
+
+/* el-89: Description paragraph */
+.bs-content-description {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+    color: rgb(118, 118, 118);
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+/* "Learn more" link (el-93) */
+.bs-learn-more {
+    display: inline;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(105, 80, 243);
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+    white-space: nowrap;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.bs-learn-more::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.bs-learn-more:focus-visible::before {
+    opacity: 1;
+}
+
+.bs-learn-more:hover {
+    color: rgb(79, 55, 220);
+}
+
+.bs-learn-more:active {
+    color: rgb(60, 40, 180);
+}
+
+.bs-learn-more:visited {
+    color: rgb(105, 80, 243);
+}
+
+
+/* --- Info Card (el-96 → el-131) --- */
+
+/* el-96: Info card outer wrapper */
+.bs-info-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    position: relative;
+}
+
+/* el-97: Info card border overlay */
+.bs-info-card-border {
+    border-radius: 12px;
+    position: absolute;
+    inset: 0;
+    box-shadow: rgb(229, 229, 229) 0px 0px 0px 1px inset;
+    pointer-events: none;
+    z-index: 2000;
+}
+
+/* el-99: Info card inner padding */
+.bs-info-card-inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    column-gap: 24px;
+    padding: 40px;
+}
+
+/* el-100: Section header row (title + edit button) */
+.bs-info-section-header {
+    display: flex;
+    row-gap: 24px;
+    column-gap: 24px;
+}
+
+/* el-101: Section title wrapper */
+.bs-info-section-title-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    row-gap: 4px;
+    column-gap: 4px;
+}
+
+/* el-102: Section title h2 */
+.bs-info-section-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    margin: 0;
+    flex-grow: 1;
+    color: rgb(13, 13, 13);
+}
+
+
+/* --- Edit Button (el-103 → el-106) --- */
+
+/* el-103: Edit button outer */
+.bs-edit-button {
+    appearance: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 0;
+    align-items: center;
+    display: flex;
+    height: 36px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+    border-radius: 999px;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.bs-edit-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.bs-edit-button:focus-visible::before {
+    opacity: 1;
+}
+
+/* el-104: Edit button inner */
+.bs-edit-inner {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 999px;
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    column-gap: 8px;
+    row-gap: 8px;
+    scale: 1;
+    text-align: center;
+    transition:
+        background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        padding 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        gap 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.bs-edit-button:hover .bs-edit-inner {
+    background-color: rgb(242, 242, 242);
+    border-color: rgb(196, 196, 196);
+}
+
+.bs-edit-button:active .bs-edit-inner {
+    scale: 0.96;
+    background-color: rgb(229, 229, 229);
+    border-color: rgb(178, 178, 178);
+}
+
+/* el-105: Edit label wrapper span */
+.bs-edit-label-wrap {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    row-gap: 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+}
+
+/* el-106: Edit label text */
+.bs-edit-label {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgb(13, 13, 13);
+    cursor: pointer;
+    text-align: center;
+}
+
+
+/* --- 12-Column Grid for key-value pairs (el-107) --- */
+
+.bs-info-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: auto;
+    column-gap: 16px;
+    row-gap: 16px;
+}
+
+/* Each key-value pair spans 6 columns */
+.bs-info-field {
+    grid-column: span 6;
+    display: flex;
+    align-items: flex-start;
+    align-self: self-start;
+    column-gap: 12px;
+    row-gap: 12px;
+}
+
+/* Field content column */
+.bs-field-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    justify-content: space-between;
+}
+
+/* Field label (bold) */
+.bs-field-label {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    color: rgb(13, 13, 13);
+}
+
+/* Field value (light gray) */
+.bs-field-value {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    color: rgb(118, 118, 118);
+}
+
+
+/* --- HR Separator (el-132) --- */
+
+.bs-card-divider {
+    background-color: rgb(229, 229, 229);
+    border: none;
+    height: 1px;
+    width: 100%;
+    box-sizing: content-box;
+    color: rgb(128, 128, 128);
+}
+
+
+/* --- External Links Section (el-133 → el-156) --- */
+
+/* el-133: External links header row */
+.bs-external-header {
+    display: flex;
+    row-gap: 24px;
+    column-gap: 24px;
+}
+
+/* el-134: External links title wrapper */
+.bs-external-title-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    row-gap: 4px;
+    column-gap: 4px;
+}
+
+/* el-135: External links h2 */
+.bs-external-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    margin: 0;
+    flex-grow: 1;
+    color: rgb(13, 13, 13);
+}
+
+/* External links grid (el-136) */
+.bs-external-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: auto;
+    column-gap: 16px;
+    row-gap: 16px;
+}
+
+/* External link field */
+.bs-external-field {
+    grid-column: span 6;
+    display: flex;
+    align-items: flex-start;
+    align-self: self-start;
+    column-gap: 12px;
+    row-gap: 12px;
+}
+
+/* External field content */
+.bs-external-field-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    justify-content: space-between;
+}
+
+/* External link "Add" link (el-141, el-146, el-151, el-156) */
+.bs-add-link {
+    display: inline;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(105, 80, 243);
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+    white-space: nowrap;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.bs-add-link::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.bs-add-link:focus-visible::before {
+    opacity: 1;
+}
+
+.bs-add-link:hover {
+    color: rgb(79, 55, 220);
+}
+
+.bs-add-link:active {
+    color: rgb(60, 40, 180);
+}
+
+.bs-add-link:visited {
+    color: rgb(105, 80, 243);
+}
+
+/* el-157: Bottom spacer */
+.bs-spacer-bottom {
+    width: 0;
+}
+
+
+/* ============================================================
+   EDIT BUSINESS DRAWER  (computed-styles.json el-0 → el-157)
+   Full-screen overlay with slide-in from right
+   ============================================================ */
+
+/* el-0: Fixed overlay */
+.ebd-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(19, 19, 19, 0.25);
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.ebd-overlay--open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* el-1: Transform wrapper (slides in) */
+.ebd-panel {
+    width: 100%;
+    min-height: 100%;
+    transform: translateY(24px);
+    opacity: 0;
+    transition:
+        transform 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        opacity 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.ebd-overlay--open .ebd-panel {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* el-2: Scroll container */
+.ebd-scroll {
+    flex-grow: 1;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior-block: none;
+    height: 100%;
+}
+
+
+/* el-3: Inner content surface */
+.ebd-surface {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(19, 19, 19, 0.08) 0px 2px 8px 0px,
+        rgba(19, 19, 19, 0.12) 0px 4px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+
+/* el-4: Sticky header bar */
+.ebd-header {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    height: 72px;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    transition: box-shadow 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    z-index: 10;
+}
+
+
+/* el-5: Header inner row */
+.ebd-header-inner {
+    align-items: center;
+    column-gap: 24px;
+    display: flex;
+    height: 72px;
+    max-width: 1440px;
+    min-height: 72px;
+    padding-left: 32px;
+    padding-right: 32px;
+    row-gap: 24px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* el-7: Title region in header */
+.ebd-title-region {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+}
+
+
+/* el-8: Title text */
+.ebd-page-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgb(13, 13, 13);
+    margin: 0;
+}
+
+
+/* el-9: Header right actions */
+.ebd-header-actions {
+    display: flex;
+    height: 48px;
+    justify-content: flex-end;
+    column-gap: 8px;
+}
+
+
+/* --- Close Button (el-11) --- */
+.ebd-close-btn {
+    appearance: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 0;
+    align-items: center;
+    display: inline-flex;
+    height: 48px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+    border-radius: 999px;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.ebd-close-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.ebd-close-btn:focus-visible::before {
+    opacity: 1;
+}
+
+
+/* el-12: Close button inner */
+.ebd-close-inner {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 999px;
+    column-gap: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    height: 48px;
+    justify-content: center;
+    max-width: 100%;
+    padding-left: 19px;
+    padding-right: 19px;
+    row-gap: 8px;
+    scale: 1;
+    text-align: center;
+    transition:
+        background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .ebd-close-btn:hover .ebd-close-inner {
+        scale: 1;
+        background-color: rgb(242, 242, 242);
+        border-color: rgb(196, 196, 196);
+    }
+}
+
+.ebd-close-btn:active .ebd-close-inner {
+    scale: 0.96;
+    background-color: rgb(229, 229, 229);
+    border-color: rgb(178, 178, 178);
+}
+
+
+/* el-14: Close label */
+.ebd-close-label {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgb(13, 13, 13);
+    cursor: pointer;
+    text-align: center;
+}
+
+
+/* --- Save Button (el-15) --- */
+.ebd-save-btn {
+    appearance: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 0;
+    align-items: center;
+    display: inline-flex;
+    height: 48px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+    border-radius: 999px;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.ebd-save-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.ebd-save-btn:focus-visible::before {
+    opacity: 1;
+}
+
+
+/* el-16: Save button inner (dark background) */
+.ebd-save-inner {
+    align-items: center;
+    background-color: rgb(13, 13, 13);
+    border: 1px solid rgb(13, 13, 13);
+    border-radius: 999px;
+    color: rgb(255, 255, 255);
+    column-gap: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    height: 48px;
+    justify-content: center;
+    max-width: 100%;
+    padding-left: 19px;
+    padding-right: 19px;
+    row-gap: 8px;
+    scale: 1;
+    text-align: center;
+    transition:
+        background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .ebd-save-btn:hover .ebd-save-inner {
+        background-color: rgb(64, 64, 64);
+        border-color: rgb(64, 64, 64);
+    }
+}
+
+.ebd-save-btn:active .ebd-save-inner {
+    scale: 0.96;
+    background-color: rgb(80, 80, 80);
+    border-color: rgb(80, 80, 80);
+}
+
+
+/* el-17: Save label */
+.ebd-save-label {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    text-align: center;
+}
+
+
+/* ============================================================
+   FORM BODY
+   ============================================================ */
+
+/* el-18 → el-32: Form body container */
+.ebd-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    padding-top: 36px;
+    width: 100%;
+}
+
+/* el-22: Grid wrapper for title/content */
+.ebd-body-grid {
+    display: grid;
+    grid-template-areas: "title" "content";
+    grid-template-rows: auto auto;
+    row-gap: 32px;
+    max-width: 600px;
+    width: 100%;
+}
+
+/* el-23: Title area */
+.ebd-body-title-area {
+    grid-area: title;
+}
+
+/* el-28: Hero title (40px, bold) */
+.ebd-hero-title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 52px;
+    margin: 0;
+    color: rgb(13, 13, 13);
+}
+
+/* Content with fade-in animation */
+.ebd-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 600px;
+    width: 100%;
+    animation: ebd-content-fade-in 0.3s cubic-bezier(0.85, 0, 0.15, 1) forwards;
+}
+
+
+/* --- Section Container --- */
+.ebd-section {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* --- Section Header (title + description) --- */
+.ebd-section-head {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 0;
+}
+
+
+/* Section title (24px semibold) — el-36, el-55 etc */
+.ebd-section-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    margin: 0;
+    color: rgb(13, 13, 13);
+}
+
+
+/* Section description — el-37, el-56 etc */
+.ebd-section-desc {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+    color: rgb(118, 118, 118);
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+
+/* --- 12-Column Grid (inputs) --- */
+.ebd-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 16px;
+    row-gap: 24px;
+    padding-top: 24px;
+}
+
+.ebd-col-12 {
+    grid-column: span 12;
+}
+
+.ebd-col-6 {
+    grid-column: span 6;
+}
+
+
+/* --- Form Field (label + input) --- */
+.ebd-field {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 4px;
+    max-width: 100%;
+}
+
+
+/* Field label */
+.ebd-label {
+    display: flex;
+    justify-content: space-between;
+    cursor: default;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    color: rgb(13, 13, 13);
+}
+
+
+/* --- Input Container (border wrapper) --- */
+.ebd-input-wrap {
+    display: flex;
+    flex-grow: 1;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 8px;
+    max-height: 48px;
+    height: 48px;
+    position: relative;
+    transition:
+        background-color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+        border-color 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.ebd-input-wrap::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    border-radius: inherit;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    pointer-events: none;
+    box-sizing: border-box;
+    transition: opacity 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.ebd-input-wrap:focus-within::before {
+    opacity: 1;
+}
+
+.ebd-input-wrap:focus-within {
+    border-color: rgb(105, 80, 243);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .ebd-input-wrap:hover:not(:focus-within) {
+        border-color: rgb(196, 196, 196);
+    }
+}
+
+
+/* --- Text Input --- */
+.ebd-input {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    height: 46px;
+    outline: none;
+    overflow: clip;
+    padding: 16px;
+    position: relative;
+    width: 100%;
+    color: rgb(13, 13, 13);
+    box-sizing: border-box;
+}
+
+.ebd-input::placeholder {
+    color: rgb(178, 178, 178);
+    text-transform: none;
+}
+
+
+/* --- Input with Icon Prefix (External links) --- */
+.ebd-input-with-prefix {
+    display: flex;
+    align-items: center;
+}
+
+.ebd-input-prefix {
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    color: rgb(118, 118, 118);
+    flex-shrink: 0;
+}
+
+.ebd-input-prefix svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.ebd-input-with-prefix .ebd-input {
+    padding-left: 8px;
+}
+
+
+/* --- Input with Suffix Button (Language - Edit button) --- */
+.ebd-input-suffix {
+    display: flex;
+    align-items: center;
+    cursor: text;
+    color: rgb(118, 118, 118);
+    padding-right: 16px;
+    white-space: nowrap;
+}
+
+.ebd-input-edit-btn {
+    appearance: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    display: inline;
+    color: rgb(105, 80, 243);
+    border-radius: 4px;
+    white-space: nowrap;
+    text-decoration: none;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+    padding: 0;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.ebd-input-edit-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.ebd-input-edit-btn:focus-visible::before {
+    opacity: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .ebd-input-edit-btn:hover {
+        color: rgb(79, 55, 220);
+    }
+}
+
+.ebd-input-edit-btn:active {
+    color: rgb(60, 40, 180);
+}
+
+.ebd-input-edit-btn span {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+
+/* --- Info Box (country/currency note) --- */
+.ebd-info-box {
+    background-color: rgb(249, 249, 249);
+    border-radius: 8px;
+    box-shadow: rgb(229, 229, 229) 0px 0px 0px 1px inset;
+    padding: 16px 20px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(13, 13, 13);
+}
+
+.ebd-info-box strong {
+    font-weight: 600;
+}
+
+
+/* --- HR Divider between sections --- */
+.ebd-divider {
+    background-color: rgb(229, 229, 229);
+    border: none;
+    height: 1px;
+    width: 100%;
+    box-sizing: content-box;
+    color: rgb(128, 128, 128);
+}
+
+
+/* ============================================================
+   RADIO GROUP — Tax Calculation
+   ============================================================ */
+
+/* Radio group container */
+.ebd-radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding-top: 24px;
+}
+
+
+/* Radio option row */
+.ebd-radio-option {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px 0;
+    cursor: pointer;
+    border-radius: 8px;
+    position: relative;
+    gap: 12px;
+    transition: background-color 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .ebd-radio-option:hover {
+        background-color: rgb(249, 249, 249);
+    }
+}
+
+.ebd-radio-option:active {
+    background-color: rgb(242, 242, 242);
+}
+
+
+/* Hidden native radio input */
+.ebd-radio-native {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+
+/* Custom radio indicator circle */
+.ebd-radio-indicator {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(211, 211, 211);
+    background-color: rgb(255, 255, 255);
+    flex-shrink: 0;
+    box-sizing: border-box;
+    margin-top: 2px;
+    transition:
+        border-width 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+
+/* Selected radio indicator */
+.ebd-radio-option.selected .ebd-radio-indicator {
+    border-width: 7px;
+    border-color: rgb(105, 80, 243);
+}
+
+
+/* Radio label text (right side) */
+.ebd-radio-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    flex-grow: 1;
+}
+
+.ebd-radio-title {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    color: rgb(13, 13, 13);
+}
+
+.ebd-radio-desc {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(118, 118, 118);
+}
+
+.ebd-radio-example {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(118, 118, 118);
+}
+
+
+/* --- Learn More Link in sections --- */
+.ebd-link {
+    display: inline;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(105, 80, 243);
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+    white-space: nowrap;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.ebd-link::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.ebd-link:focus-visible::before {
+    opacity: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .ebd-link:hover {
+        color: rgb(79, 55, 220);
+    }
+}
+
+.ebd-link:active {
+    color: rgb(60, 40, 180);
+}
+
+.ebd-link:visited {
+    color: rgb(105, 80, 243);
+}
+
+
+/* --- Language Info Box (bottom note) --- */
+.ebd-lang-info-box {
+    grid-column: span 12;
+    background-color: rgb(249, 249, 249);
+    border-radius: 8px;
+    box-shadow: rgb(229, 229, 229) 0px 0px 0px 1px inset;
+    padding: 16px 20px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(13, 13, 13);
+    display: inline-flex;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.ebd-input.readonly {
+    cursor: default;
+}

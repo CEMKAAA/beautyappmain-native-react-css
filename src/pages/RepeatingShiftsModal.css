@@ -1,0 +1,1091 @@
+/* RepeatingShiftsModal — Optimized CSS */
+
+/* ── Shared Utilities ── */
+.rsm-focus-ring {
+    position: relative;
+}
+
+.rsm-focus-ring::before {
+    content: "";
+    border-radius: inherit;
+    inset: 0;
+    opacity: 0;
+    padding: 2px;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity .1s ease-in-out;
+    box-shadow: #fff 0 0 0 2px, rgb(13, 13, 13) 0 0 0 4px;
+}
+
+.rsm-focus-ring:focus-visible::before {
+    opacity: 1;
+}
+
+.rsm-btn {
+    align-items: center;
+    appearance: none;
+    background: none;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    display: inline-flex;
+    max-width: 100%;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    padding: 0;
+    position: relative;
+    transition: max-inline-size .2s cubic-bezier(.85, 0, .15, 1);
+}
+
+.rsm-btn--lg {
+    height: 48px;
+    line-height: 16.1px;
+    text-align: center;
+}
+
+.rsm-btn__inner {
+    align-items: center;
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    scale: 1;
+    width: 100%;
+    transition: background-color .1s cubic-bezier(0, .55, .45, 1), border-color .1s cubic-bezier(0, .55, .45, 1), transform .1s cubic-bezier(0, .55, .45, 1);
+}
+
+.rsm-btn__inner--outline,
+.rsm-btn__inner--filled {
+    gap: 8px;
+    height: 48px;
+    padding: 0 19px;
+    transition: background-color .1s cubic-bezier(0, .55, .45, 1), border-color .1s cubic-bezier(0, .55, .45, 1), transform .1s cubic-bezier(0, .55, .45, 1), max-inline-size .2s cubic-bezier(.85, 0, .15, 1), padding .2s cubic-bezier(.85, 0, .15, 1), gap .2s cubic-bezier(.85, 0, .15, 1);
+}
+
+.rsm-btn__inner--outline {
+    background-color: #fff;
+    border: 1px solid rgb(211, 211, 211);
+}
+
+.rsm-btn:hover>.rsm-btn__inner--outline {
+    background-color: rgba(19, 19, 19, .06);
+}
+
+.rsm-btn:active>.rsm-btn__inner--outline {
+    background-color: rgba(19, 19, 19, .09);
+    scale: .96;
+}
+
+.rsm-btn__inner--filled {
+    background-color: rgb(13, 13, 13);
+    border: 1px solid rgb(13, 13, 13);
+    color: #fff;
+}
+
+.rsm-btn:hover>.rsm-btn__inner--filled {
+    background-color: rgb(42, 42, 42);
+    border-color: rgb(42, 42, 42);
+}
+
+.rsm-btn:active>.rsm-btn__inner--filled {
+    background-color: rgb(26, 26, 26);
+    border-color: rgb(26, 26, 26);
+    scale: .96;
+}
+
+.rsm-btn__inner--sm {
+    background-color: transparent;
+    border: 1px solid transparent;
+    gap: 8px;
+    height: 36px;
+    min-width: 36px;
+    padding: 0 15px;
+}
+
+.rsm-btn:hover>.rsm-btn__inner--sm {
+    background-color: rgba(19, 19, 19, .06);
+}
+
+.rsm-btn:active>.rsm-btn__inner--sm {
+    transform: scale(.96);
+    background-color: rgba(19, 19, 19, .1);
+}
+
+.rsm-btn__label {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    height: 24px;
+    line-height: 16.1px;
+    min-width: 0;
+    text-overflow: ellipsis;
+    text-wrap-mode: nowrap;
+}
+
+.rsm-btn__text {
+    font-size: 17px;
+    font-weight: 600;
+    height: 24px;
+    line-height: 24px;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-wrap-mode: nowrap;
+}
+
+.rsm-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    pointer-events: none;
+    position: relative;
+}
+
+.rsm-icon svg {
+    fill: currentColor;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+}
+
+.rsm-icon--20,
+.rsm-icon--20 svg {
+    width: 20px;
+    height: 20px;
+}
+
+.rsm-icon--24,
+.rsm-icon--24 svg {
+    width: 24px;
+    height: 24px;
+}
+
+.rsm-sr-only {
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+.rsm-hidden {
+    display: none;
+}
+
+/* ── Modal Shell ── */
+.rsm-overlay {
+    font-family: 'Roboto Pro', sans-serif;
+    background-color: rgba(19, 19, 19, .25);
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 2000;
+    transition: opacity .2s cubic-bezier(.85, 0, .15, 1);
+}
+
+.rsm-overlay--closed {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.rsm-overlay--open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.rsm-transform {
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    transition: transform .2s cubic-bezier(.85, 0, .15, 1), opacity .2s cubic-bezier(.85, 0, .15, 1);
+}
+
+.rsm-overlay--closed .rsm-transform {
+    transform: translateY(16px);
+    opacity: 0;
+}
+
+.rsm-scroll {
+    flex-grow: 1;
+    height: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior-block: none;
+}
+
+.rsm-panel {
+    background-color: #fff;
+    box-shadow: rgba(19, 19, 19, .08) 0 2px 8px, rgba(19, 19, 19, .12) 0 4px 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+/* ── Sticky Header ── */
+.rsm-header {
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 72px;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: box-shadow .2s cubic-bezier(.85, 0, .15, 1);
+}
+
+.rsm-header__row {
+    align-items: center;
+    display: flex;
+    gap: 48px;
+    height: 72px;
+    min-height: 72px;
+    max-width: 1440px;
+    padding: 0 32px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.rsm-header__title {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 28px;
+    max-width: 100%;
+    opacity: 0;
+    overflow: hidden;
+    position: relative;
+    text-wrap-mode: nowrap;
+    transition: opacity .2s cubic-bezier(.85, 0, .15, 1);
+}
+
+.rsm-header__title-text {
+    font-size: 20px;
+    font-weight: 600;
+    height: 28px;
+    line-height: 28px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap-mode: nowrap;
+}
+
+.rsm-header__actions {
+    display: flex;
+    height: 48px;
+    justify-content: flex-end;
+}
+
+.rsm-header__btns {
+    display: flex;
+    gap: 8px;
+    height: 48px;
+}
+
+/* ── Content Layout ── */
+.rsm-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 1184px;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 5;
+}
+
+.rsm-sentinel {
+    bottom: 48px;
+    left: 0;
+    position: relative;
+    top: -48px;
+    width: 0;
+}
+
+.rsm-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1184px;
+    padding-bottom: 96px;
+    width: 100%;
+}
+
+.rsm-grid__inner {
+    display: grid;
+    grid-template-areas: "title" "content";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 32px 96px;
+    width: 100%;
+}
+
+.rsm-title-area {
+    grid-area: title;
+}
+
+.rsm-title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 36px;
+}
+
+.rsm-page-title {
+    flex-grow: 1;
+    font-size: 40px;
+    font-weight: 700;
+    height: 44px;
+    line-height: 44px;
+    margin: 0;
+}
+
+.rsm-subtitle {
+    color: rgb(118, 118, 118);
+    font-size: 17px;
+    height: 24px;
+    line-height: 24px;
+}
+
+.rsm-link {
+    border-radius: 4px;
+    color: rgb(105, 80, 243);
+    cursor: pointer;
+    display: inline;
+    font-size: 17px;
+    line-height: 24px;
+    text-decoration: none;
+    text-wrap-mode: nowrap;
+}
+
+.rsm-link:hover {
+    text-decoration: underline;
+}
+
+.rsm-content-area {
+    display: flex;
+    flex-direction: column;
+    grid-area: content;
+}
+
+.rsm-layout {
+    display: grid;
+    grid-template-areas: "sidebar content";
+    grid-template-columns: 360px 1fr;
+    gap: 0 96px;
+    width: 100%;
+}
+
+/* ── Sidebar ── */
+.rsm-sidebar {
+    display: flex;
+    flex-direction: column;
+    grid-area: sidebar;
+    max-width: 360px;
+    width: 360px;
+}
+
+.rsm-sidebar__inner {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 24px;
+    width: 360px;
+}
+
+/* Staff card */
+.rsm-staff-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: rgb(229, 229, 229) 0 0 0 1px inset;
+    height: 88px;
+    padding: 20px 24px;
+    width: 360px;
+    box-sizing: border-box;
+    transition: background-color .2s cubic-bezier(.85, 0, .15, 1), box-shadow .2s cubic-bezier(.85, 0, .15, 1);
+}
+
+.rsm-staff-card__grid {
+    display: grid;
+    grid-template-areas: "prefix main suffix";
+    grid-template-columns: 60px 1fr 0;
+    grid-template-rows: 48px;
+    height: 48px;
+}
+
+.rsm-staff-card__prefix {
+    display: grid;
+    grid-area: prefix;
+    grid-template: 48px / 48px;
+    height: 48px;
+    margin-right: 12px;
+    width: 48px;
+}
+
+.rsm-staff-card__avatar-cell {
+    align-items: center;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column: 1;
+    grid-row: 1;
+    grid-template: 48px / 48px;
+    height: 48px;
+    justify-items: center;
+    width: 48px;
+}
+
+.rsm-staff-card__avatar-wrap {
+    display: flex;
+    height: 48px;
+    pointer-events: none;
+    position: relative;
+    vertical-align: top;
+    width: 48px;
+}
+
+.rsm-staff-card__avatar {
+    align-items: center;
+    background-color: rgb(240, 240, 255);
+    border: 1px solid rgb(240, 240, 255);
+    border-radius: 8px;
+    color: rgb(105, 80, 243);
+    display: flex;
+    flex-direction: column;
+    height: 48px;
+    justify-content: center;
+    overflow: hidden;
+    pointer-events: none;
+    position: relative;
+    width: 48px;
+}
+
+.rsm-staff-card__avatar-inner {
+    align-items: center;
+    border-radius: 8px;
+    color: rgb(105, 80, 243);
+    display: flex;
+    flex-direction: column;
+    height: 46px;
+    justify-content: center;
+    pointer-events: none;
+    width: 46px;
+}
+
+.rsm-staff-card__icon {
+    color: rgb(105, 80, 243);
+}
+
+.rsm-staff-card__main {
+    display: grid;
+    grid-area: main;
+    grid-template: 24px 24px / 1fr;
+    height: 48px;
+}
+
+.rsm-staff-card__row {
+    display: grid;
+    grid-template: 24px / 1fr;
+    height: 24px;
+}
+
+.rsm-staff-card__cell {
+    align-items: center;
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+    grid-template: 24px / 1fr;
+    height: 24px;
+    justify-items: left;
+}
+
+.rsm-staff-card__name {
+    font-size: 15px;
+    font-weight: 600;
+    height: 20px;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    margin: 0;
+}
+
+.rsm-staff-card__location {
+    color: rgb(118, 118, 118);
+    font-size: 15px;
+    height: 20px;
+    margin: 0;
+}
+
+/* Settings card */
+.rsm-settings {
+    display: flex;
+    flex-direction: column;
+    height: 312px;
+    isolation: isolate;
+    position: relative;
+    width: 360px;
+}
+
+.rsm-settings__card {
+    background-color: #fff;
+    border-radius: 8px;
+    height: 312px;
+    overflow: hidden;
+    width: 360px;
+    transition: background-color .1s cubic-bezier(0, .55, .45, 1), box-shadow .1s cubic-bezier(0, .55, .45, 1), transform .1s cubic-bezier(0, .55, .45, 1);
+}
+
+.rsm-settings__border {
+    border-radius: 8px;
+    box-shadow: rgb(229, 229, 229) 0 0 0 1px inset;
+    height: 312px;
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    width: 360px;
+    z-index: 2000;
+}
+
+.rsm-settings__body {
+    display: flex;
+    height: 312px;
+    padding: 24px 32px;
+    width: 360px;
+    box-sizing: border-box;
+}
+
+.rsm-settings__fields {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 24px;
+}
+
+/* Form field */
+.rsm-field {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 4px;
+    max-width: 100%;
+}
+
+.rsm-field__label {
+    cursor: default;
+    display: flex;
+    height: 20px;
+    justify-content: space-between;
+}
+
+.rsm-field__label-text {
+    cursor: default;
+    font-size: 15px;
+    font-weight: 600;
+    height: 20px;
+}
+
+/* Select */
+.rsm-select {
+    background-color: #fff;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 8px;
+    display: flex;
+    flex-grow: 1;
+    font-size: 15px;
+    height: 48px;
+    max-height: 48px;
+    transition: background-color .1s cubic-bezier(.85, 0, .15, 1), border-color .1s cubic-bezier(.85, 0, .15, 1);
+}
+
+.rsm-select:focus-within {
+    border-color: rgb(105, 80, 243);
+}
+
+@media (hover:hover) {
+    .rsm-select:hover {
+        border-color: rgb(167, 167, 167);
+    }
+
+    .rsm-select:hover:active {
+        border-color: rgb(105, 80, 243);
+    }
+}
+
+.rsm-select__value {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    font-size: 15px;
+    height: 46px;
+    min-width: 0;
+    padding: 16px 8px 16px 16px;
+}
+
+.rsm-select__text {
+    font-size: 15px;
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap-mode: nowrap;
+    min-width: 0;
+}
+
+.rsm-select__text--placeholder {
+    color: rgb(191, 191, 191);
+}
+
+.rsm-select__native {
+    appearance: none;
+    background-color: inherit;
+    border-width: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 15px;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    padding: 16px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.rsm-select__chevron {
+    align-items: center;
+    color: rgb(118, 118, 118);
+    cursor: pointer;
+    display: flex;
+    font-size: 15px;
+    height: 46px;
+    padding-right: 16px;
+    width: 36px;
+}
+
+.rsm-select__chevron-icon {
+    color: rgb(118, 118, 118);
+}
+
+.rsm-select__chevron-icon svg {
+    fill: rgb(13, 13, 13);
+}
+
+/* Date picker */
+.rsm-datefield {
+    display: flex;
+    flex-direction: column;
+}
+
+.rsm-datefield__top {
+    display: flex;
+    height: 20px;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.rsm-datefield__label {
+    cursor: default;
+    flex-grow: 1;
+    font-size: 15px;
+    font-weight: 600;
+    height: 20px;
+    text-align: left;
+}
+
+.rsm-datefield__input {
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    height: 48px;
+    position: relative;
+}
+
+.rsm-datefield__input:hover {
+    border-color: rgb(167, 167, 167);
+}
+
+.rsm-datefield__text {
+    cursor: pointer;
+    flex-grow: 1;
+    font-size: 15px;
+    height: 46px;
+    padding: 13px 48px 11px 15px;
+    text-wrap-mode: nowrap;
+    box-sizing: border-box;
+    transition: border-color .15s ease-in-out;
+}
+
+.rsm-datefield__suffix {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    height: 20px;
+    pointer-events: none;
+    position: absolute;
+    right: 16px;
+    top: 13px;
+    width: 20px;
+}
+
+.rsm-datefield__suffix svg {
+    fill: rgb(13, 13, 13);
+    height: 20px;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    width: 20px;
+}
+
+/* Info banner */
+.rsm-info-banner {
+    background-color: rgb(249, 249, 249);
+    border-radius: 8px;
+    box-shadow: rgb(229, 229, 229) 0 0 0 1px inset;
+    display: flex;
+    gap: 8px;
+    padding: 16px 20px 16px 12px;
+    width: 360px;
+    box-sizing: border-box;
+}
+
+.rsm-info-banner__icon {
+    align-content: center;
+    align-self: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    height: 24px;
+    justify-content: center;
+    width: 24px;
+}
+
+.rsm-info-banner__icon-inner {
+    color: rgb(13, 13, 13);
+}
+
+.rsm-info-banner__body {
+    display: flex;
+    flex-basis: 0%;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.rsm-info-banner__text {
+    font-size: 15px;
+    padding: 2px 0;
+}
+
+/* ── Weekly Schedule ── */
+.rsm-schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.rsm-schedule__inner {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 24px;
+}
+
+.rsm-schedule__header {
+    align-items: flex-start;
+    display: flex;
+    flex-grow: 1;
+    gap: 12px;
+    height: 48px;
+}
+
+.rsm-schedule__header-text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 48px;
+}
+
+.rsm-schedule__header-row {
+    align-items: flex-start;
+    display: flex;
+    height: 28px;
+}
+
+.rsm-schedule__title {
+    font-size: 20px;
+    font-weight: 600;
+    height: 28px;
+    line-height: 28px;
+    margin: 0;
+}
+
+.rsm-schedule__total {
+    color: rgb(118, 118, 118);
+    font-size: 15px;
+    height: 20px;
+    margin: 0;
+}
+
+/* Days grid */
+.rsm-days {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 48px) 24px 24px;
+    gap: 24px 16px;
+}
+
+.rsm-dayrow {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 48px;
+    height: 48px;
+    gap: 24px 16px;
+}
+
+.rsm-dayrow--inactive {
+    grid-template-rows: 24px;
+    height: 24px;
+}
+
+/* Checkbox + label area */
+.rsm-day__check {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    grid-column: span 3;
+    gap: 4px;
+    padding-top: 6px;
+}
+
+.rsm-dayrow--inactive .rsm-day__check {
+    padding-top: 0;
+}
+
+.rsm-day__check-inner {
+    align-items: center;
+    display: flex;
+    height: 40px;
+}
+
+.rsm-dayrow--inactive .rsm-day__check-inner {
+    height: 24px;
+}
+
+.rsm-day__label {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    gap: 12px;
+    position: relative;
+}
+
+/* Custom checkbox */
+.rsm-checkbox {
+    align-items: center;
+    border: 1px solid;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    height: 24px;
+    justify-content: center;
+    width: 24px;
+    transition: background-color .1s cubic-bezier(.85, 0, .15, 1), border-color .1s cubic-bezier(.85, 0, .15, 1);
+}
+
+.rsm-day__label:focus-within .rsm-checkbox::before {
+    opacity: 1;
+}
+
+.rsm-checkbox--checked {
+    background-color: rgb(105, 80, 243);
+    border-color: rgb(105, 80, 243);
+    color: #fff;
+}
+
+.rsm-checkbox--unchecked {
+    background-color: #fff;
+    border-color: rgb(211, 211, 211);
+    color: #fff;
+}
+
+@media (hover:hover) {
+    .rsm-day__label:hover .rsm-checkbox--checked {
+        background-color: rgb(85, 60, 220);
+        border-color: rgb(85, 60, 220);
+    }
+
+    .rsm-day__label:hover .rsm-checkbox--unchecked {
+        background-color: rgb(245, 245, 245);
+        border-color: rgb(180, 180, 180);
+    }
+}
+
+.rsm-day__label:active .rsm-checkbox--checked {
+    background-color: rgb(70, 48, 200);
+    border-color: rgb(70, 48, 200);
+    border-width: 2px;
+}
+
+.rsm-day__label:active .rsm-checkbox--unchecked {
+    background-color: rgb(235, 235, 235);
+    border-color: rgb(160, 160, 160);
+    border-width: 2px;
+}
+
+.rsm-checkbox__mark {
+    display: block;
+    height: 6.75px;
+    transform: translate(0, -2px) rotate(-45deg);
+    width: 13px;
+}
+
+.rsm-checkbox__mark-v {
+    background-color: currentColor;
+    border-radius: 999px;
+    display: block;
+    height: 6.5px;
+    transform: scaleY(1);
+    transform-origin: top;
+    width: 2px;
+}
+
+.rsm-checkbox__mark-h {
+    background-color: currentColor;
+    border-radius: 999px;
+    display: block;
+    height: 2px;
+    margin-top: -1.75px;
+    position: relative;
+    transform: scaleX(1);
+    transform-origin: left;
+    width: 13px;
+}
+
+.rsm-day__text {
+    cursor: pointer;
+    padding: 2px 0;
+}
+
+.rsm-day__name {
+    cursor: pointer;
+    font-size: 15px;
+    height: 20px;
+    margin: 0;
+}
+
+.rsm-day__duration {
+    color: rgb(118, 118, 118);
+    cursor: pointer;
+    font-size: 13px;
+    height: 16px;
+    line-height: 16px;
+    margin: 0;
+}
+
+.rsm-day__input {
+    appearance: none;
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+    height: 1px;
+    left: 50%;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    touch-action: manipulation;
+    width: 1px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Time selects */
+.rsm-day__times {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    grid-column: span 9;
+    gap: 4px;
+}
+
+.rsm-day__times-inner {
+    display: flex;
+    gap: 4px;
+    height: 48px;
+}
+
+.rsm-day__times-grid {
+    display: grid;
+    flex-grow: 1;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: 48px;
+    height: 48px;
+    gap: 24px 12px;
+}
+
+.rsm-timefield {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    grid-column: span 5;
+    gap: 4px;
+    max-width: 100%;
+}
+
+.rsm-time-sep {
+    align-items: center;
+    align-self: flex-end;
+    display: flex;
+    grid-column: span 1;
+    height: 48px;
+    justify-content: center;
+}
+
+.rsm-time-sep__text {
+    font-size: 15px;
+    height: 20px;
+    text-align: center;
+}
+
+/* Action buttons */
+.rsm-day__actions {
+    align-items: center;
+    display: flex;
+    gap: 4px;
+    height: 48px;
+}
+
+.rsm-day__action-btn {
+    height: 36px;
+    min-width: 36px;
+    width: 36px;
+}
+
+.rsm-day__action-icon {
+    color: rgb(13, 13, 13);
+}
+
+.rsm-day__action-icon--danger {
+    color: #d4163a;
+}
+
+/* "Not working" label */
+.rsm-day__notworking {
+    align-self: center;
+    color: rgb(118, 118, 118);
+    font-size: 15px;
+    grid-column: span 9;
+    height: 20px;
+    margin: 0;
+}

@@ -1,0 +1,44 @@
+/* ═══════════════════════════════════════════════════
+   TestPage8 — Clients List overrides only
+   Base styles come from TestPage5.css (tm- classes)
+   All overrides scoped under .cl-page to avoid affecting other pages
+   ═══════════════════════════════════════════════════ */
+
+/* ── Max-width override (1104px) ── */
+.cl-page .tm-padded-inner {
+    max-width: 1104px;
+}
+
+/* ── Row height override (80px) ── */
+.cl-page .tm-table tbody tr {
+    height: 80px;
+}
+
+/* ── Avatar size override (54px) ── */
+.cl-page .tm-avatar {
+    width: 54px;
+    height: 54px;
+    min-width: 54px;
+    min-height: 54px;
+}
+
+.cl-page .tm-avatar::after {
+    width: 58px;
+    height: 58px;
+}
+
+.cl-page .tm-avatar__img-wrap {
+    width: 52px;
+    height: 52px;
+}
+
+.cl-page .tm-avatar__img {
+    width: 52px;
+    height: 52px;
+}
+
+.cl-page .tm-avatar__initials {
+    width: 52px;
+    height: 52px;
+    font-size: 18px;
+}

@@ -1,0 +1,309 @@
+.fn-shell {
+  --fn-bg: #f4f1ea;
+  --fn-surface: rgba(255, 255, 255, 0.76);
+  --fn-surface-strong: #ffffff;
+  --fn-text: #111111;
+  --fn-muted: #666666;
+  --fn-border: rgba(17, 17, 17, 0.12);
+  --fn-accent: #151515;
+  --fn-accent-soft: #f1ebff;
+  --fn-highlight: #6950f3;
+  --fn-highlight-strong: #4d37d3;
+  --fn-shadow: 0 18px 60px rgba(17, 17, 17, 0.08);
+  --fn-radius-xl: 32px;
+  --fn-radius-lg: 24px;
+  --fn-radius-md: 18px;
+  --fn-radius-sm: 999px;
+  background:
+    radial-gradient(circle at top left, rgba(105, 80, 243, 0.12), transparent 32%),
+    radial-gradient(circle at top right, rgba(255, 186, 124, 0.16), transparent 28%),
+    linear-gradient(180deg, #fbfaf7 0%, var(--fn-bg) 100%);
+  color: var(--fn-text);
+  min-height: 100vh;
+}
+
+.fn-shell--marketplace {
+  --fn-bg: #eef4ee;
+  --fn-accent-soft: #eef8f2;
+}
+
+.fn-shell--store {
+  --fn-bg: #f5f3ef;
+  --fn-accent-soft: #f5f0ff;
+}
+
+.fn-shell--auth {
+  --fn-bg: #f3f0fb;
+  --fn-accent-soft: #ede7ff;
+}
+
+.fn-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(18px);
+  background: rgba(251, 250, 247, 0.78);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.06);
+}
+
+.fn-header--compact {
+  position: relative;
+}
+
+.fn-header__inner {
+  width: min(1240px, calc(100vw - 32px));
+  margin: 0 auto;
+  min-height: 78px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 24px;
+}
+
+.fn-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--fn-text);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.fn-brand:hover {
+  color: var(--fn-text);
+}
+
+.fn-brand__mark {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #131313 0%, #3c3c3c 100%);
+  color: #ffffff;
+  box-shadow: 0 14px 28px rgba(17, 17, 17, 0.16);
+}
+
+.fn-brand__text {
+  font-size: 18px;
+}
+
+.fn-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.fn-nav__link {
+  padding: 10px 14px;
+  border-radius: 999px;
+  color: var(--fn-text);
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.fn-nav__link:hover {
+  color: var(--fn-text);
+  background: rgba(17, 17, 17, 0.06);
+}
+
+.fn-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.fn-locale {
+  display: inline-flex;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.06);
+}
+
+.fn-locale__button {
+  border: 0;
+  background: transparent;
+  color: var(--fn-muted);
+  border-radius: 999px;
+  min-width: 44px;
+  min-height: 38px;
+  padding: 0 14px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.fn-locale__button.is-active {
+  background: #111111;
+  color: #ffffff;
+}
+
+.fn-main {
+  width: min(1240px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 28px 0 80px;
+}
+
+.fn-footer {
+  padding: 0 0 40px;
+}
+
+.fn-footer__inner {
+  width: min(1240px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 28px 32px;
+  border-radius: 28px;
+  background: rgba(17, 17, 17, 0.92);
+  color: rgba(255, 255, 255, 0.92);
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 24px;
+}
+
+.fn-footer__title {
+  font-size: 18px;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+.fn-footer__note {
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.fn-footer__links {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+}
+
+.fn-section {
+  margin-bottom: 28px;
+}
+
+.fn-panel {
+  background: var(--fn-surface);
+  border: 1px solid var(--fn-border);
+  border-radius: var(--fn-radius-xl);
+  box-shadow: var(--fn-shadow);
+  backdrop-filter: blur(12px);
+}
+
+.fn-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid var(--fn-border);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+
+.fn-button:hover {
+  transform: translateY(-1px);
+}
+
+.fn-button--primary {
+  background: linear-gradient(135deg, var(--fn-highlight) 0%, var(--fn-highlight-strong) 100%);
+  border-color: transparent;
+  color: #ffffff;
+}
+
+.fn-button--secondary {
+  background: rgba(255, 255, 255, 0.66);
+  color: var(--fn-text);
+}
+
+.fn-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid var(--fn-border);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--fn-text);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.fn-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(105, 80, 243, 0.1);
+  color: var(--fn-highlight);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.fn-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.fn-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.fn-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 1100px) {
+  .fn-header__inner {
+    grid-template-columns: 1fr;
+    padding: 18px 0;
+    gap: 16px;
+  }
+
+  .fn-nav,
+  .fn-header__actions {
+    justify-content: flex-start;
+  }
+
+  .fn-footer__inner,
+  .fn-grid-4,
+  .fn-grid-3,
+  .fn-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .fn-main {
+    width: min(100vw - 20px, 1240px);
+    padding-top: 18px;
+  }
+
+  .fn-footer__inner {
+    width: min(100vw - 20px, 1240px);
+    padding: 22px;
+  }
+}

@@ -1,0 +1,700 @@
+/* ═══════════════════════════════════════════
+   SEASONAL HOURS PAGE 
+   ═══════════════════════════════════════════ */
+
+.seasonal-hours {
+    max-width: 860px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* ═══ TOAST ═══ */
+.sh-toast-container {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    pointer-events: none;
+    max-width: 420px;
+}
+
+.sh-toast {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: var(--typo-xs);
+    font-weight: 500;
+    pointer-events: all;
+    animation: shToastIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    line-height: 1.4;
+}
+
+@keyframes shToastIn {
+    from {
+        opacity: 0;
+        transform: translateX(40px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+.sh-toast--success {
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #6ee7b7;
+}
+
+.sh-toast--error {
+    background: rgba(239, 68, 68, 0.15);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #fca5a5;
+}
+
+.sh-toast--warning {
+    background: rgba(245, 158, 11, 0.15);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    color: #fcd34d;
+}
+
+.sh-toast--info {
+    background: rgba(99, 102, 241, 0.15);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    color: #a5b4fc;
+}
+
+.sh-toast-icon {
+    font-size: var(--typo-s);
+    flex-shrink: 0;
+}
+
+.sh-toast-msg {
+    flex: 1;
+}
+
+.sh-toast-close {
+    background: none;
+    border: none;
+    color: inherit;
+    opacity: 0.5;
+    font-size: var(--typo-xs);
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.sh-toast-close:hover {
+    opacity: 1;
+}
+
+/* ═══ EMPTY STATE ═══ */
+.sh-empty {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.sh-empty-icon {
+    font-size: var(--typo-xl);
+    display: block;
+    margin-bottom: 12px;
+}
+
+.sh-empty h3 {
+    font-size: var(--typo-m);
+    color: var(--color-text, #e2e8f0);
+    margin: 0 0 6px;
+}
+
+.sh-empty p {
+    font-size: var(--typo-xs);
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+/* ═══ PERIOD CARD ═══ */
+.sh-period-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    margin-bottom: 14px;
+    overflow: hidden;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sh-period-card:hover {
+    border-color: rgba(99, 102, 241, 0.25);
+}
+
+.sh-period-card--active {
+    border-color: rgba(16, 185, 129, 0.3);
+    box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.1);
+}
+
+.sh-period-card--expired {
+    opacity: 0.6;
+}
+
+/* Period Header */
+.sh-period-header {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.15s;
+    gap: 12px;
+}
+
+.sh-period-header:hover {
+    background: rgba(99, 102, 241, 0.03);
+}
+
+.sh-period-header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
+}
+
+.sh-period-icon {
+    font-size: var(--typo-m);
+    flex-shrink: 0;
+}
+
+.sh-period-info h3 {
+    font-size: var(--typo-s);
+    font-weight: 700;
+    color: var(--color-text, #e2e8f0);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sh-period-dates {
+    font-size: var(--typo-2xs);
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+.sh-badge {
+    font-size: var(--typo-2xs);
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 5px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.sh-badge--expired {
+    background: rgba(239, 68, 68, 0.1);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.15);
+}
+
+.sh-badge--active {
+    background: rgba(16, 185, 129, 0.1);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.15);
+}
+
+.sh-collapse-arrow {
+    font-size: var(--typo-2xs);
+    color: var(--color-text-muted);
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+}
+
+.sh-collapse-arrow--collapsed {
+    transform: rotate(-90deg);
+}
+
+/* Period Body */
+.sh-period-body {
+    padding: 0 20px 20px;
+    border-top: 1px solid var(--color-border);
+    animation: shBodyIn 0.2s ease-out;
+}
+
+@keyframes shBodyIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Meta Row (name + dates) */
+.sh-meta-row {
+    display: flex;
+    gap: 14px;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(100, 116, 139, 0.08);
+}
+
+.sh-meta-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sh-meta-field label {
+    font-size: var(--typo-2xs);
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.sh-input {
+    padding: 8px 10px;
+    background: var(--color-bg, #0f0f1a);
+    border: 1px solid var(--color-border);
+    border-radius: 7px;
+    color: var(--color-text, #e2e8f0);
+    font-size: var(--typo-xs);
+    transition: border-color 0.2s;
+}
+
+.sh-input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+/* ═══ INNER CARD (days + breaks) ═══ */
+.sh-inner-card {
+    background: rgba(100, 116, 139, 0.03);
+    border: 1px solid rgba(100, 116, 139, 0.08);
+    border-radius: 10px;
+    margin-top: 14px;
+    overflow: hidden;
+}
+
+.sh-inner-card--break {
+    border-color: rgba(249, 115, 22, 0.12);
+}
+
+.sh-inner-card--default {
+    border-color: rgba(249, 115, 22, 0.2);
+}
+
+.sh-inner-header {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer;
+    user-select: none;
+    gap: 10px;
+    font-size: var(--typo-s);
+    font-weight: 600;
+    color: var(--color-text, #e2e8f0);
+    transition: background 0.15s;
+}
+
+.sh-inner-header:hover {
+    background: rgba(100, 116, 139, 0.04);
+}
+
+.sh-inner-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+}
+
+.sh-inner-header-right {
+    flex-shrink: 0;
+}
+
+.sh-break-name-wrap {
+    flex: 1;
+    min-width: 0;
+}
+
+.sh-break-name-input {
+    width: 100%;
+    max-width: 200px;
+    padding: 4px 8px;
+    background: var(--color-bg, #0f0f1a);
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    color: var(--color-text, #e2e8f0);
+    font-size: var(--typo-xs);
+    font-weight: 600;
+}
+
+.sh-break-name-input:read-only {
+    background: transparent;
+    border-color: transparent;
+    cursor: default;
+}
+
+.sh-break-name-input:focus:not(:read-only) {
+    outline: none;
+    border-color: #f97316;
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+}
+
+.sh-default-badge {
+    font-size: var(--typo-2xs);
+    font-weight: 700;
+    color: #fb923c;
+    background: rgba(249, 115, 22, 0.1);
+    border: 1px solid rgba(249, 115, 22, 0.2);
+    padding: 2px 7px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+}
+
+.sh-delete-btn {
+    padding: 5px 10px;
+    font-size: var(--typo-2xs);
+    font-weight: 600;
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid rgba(239, 68, 68, 0.12);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.sh-delete-btn:hover {
+    background: rgba(239, 68, 68, 0.18);
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+/* ═══ ROWS ═══ */
+.sh-rows {
+    padding: 2px 0;
+}
+
+.sh-row {
+    display: flex;
+    align-items: center;
+    padding: 9px 16px;
+    gap: 12px;
+    transition: all 0.15s;
+}
+
+.sh-row:not(:last-child) {
+    border-bottom: 1px solid rgba(100, 116, 139, 0.05);
+}
+
+.sh-row--closed {
+    opacity: 0.45;
+}
+
+.sh-row--day-closed {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.sh-row-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 155px;
+}
+
+.sh-day-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 7px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.14), rgba(129, 140, 248, 0.08));
+    color: #818cf8;
+    font-size: var(--typo-2xs);
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.sh-row--closed .sh-day-badge {
+    background: rgba(100, 116, 139, 0.08);
+    color: var(--color-text-muted);
+}
+
+.sh-day-badge--break {
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.14), rgba(251, 146, 60, 0.08));
+    color: #fb923c;
+}
+
+.sh-day-name {
+    font-size: var(--typo-xs);
+    font-weight: 600;
+    color: var(--color-text, #e2e8f0);
+}
+
+.sh-day-closed-tag {
+    font-size: var(--typo-2xs);
+    font-weight: 600;
+    color: var(--color-text-muted);
+    background: rgba(100, 116, 139, 0.1);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.sh-row-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.sh-time-pair {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sh-time-input {
+    width: 95px;
+    padding: 6px 8px;
+    background: var(--color-bg, #0f0f1a);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    color: var(--color-text, #e2e8f0);
+    font-size: var(--typo-xs);
+    font-family: 'JetBrains Mono', monospace;
+    text-align: center;
+    transition: border-color 0.2s;
+}
+
+.sh-time-input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.sh-time-input--break {
+    background: rgba(249, 115, 22, 0.04);
+    border-color: rgba(249, 115, 22, 0.15);
+}
+
+.sh-time-input--break:focus {
+    border-color: #f97316;
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+.sh-sep {
+    color: var(--color-text-muted);
+    font-weight: 300;
+}
+
+.sh-closed-text {
+    font-size: var(--typo-2xs);
+    font-weight: 600;
+    color: var(--color-text-muted);
+    opacity: 0.7;
+}
+
+.sh-row-right {
+    display: flex;
+    align-items: center;
+    min-width: 40px;
+    justify-content: flex-end;
+}
+
+/* ═══ TOGGLE ═══ */
+.sh-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.sh-toggle input {
+    display: none;
+}
+
+.sh-toggle-slider {
+    position: relative;
+    width: 38px;
+    height: 20px;
+    background: rgba(100, 116, 139, 0.3);
+    border-radius: 999px;
+    transition: background 0.25s;
+}
+
+.sh-toggle-slider::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.25s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.sh-toggle input:checked+.sh-toggle-slider {
+    background: linear-gradient(135deg, #6366f1, #818cf8);
+}
+
+.sh-toggle input:checked+.sh-toggle-slider::after {
+    transform: translateX(18px);
+}
+
+.sh-toggle--small .sh-toggle-slider {
+    width: 32px;
+    height: 17px;
+}
+
+.sh-toggle--small .sh-toggle-slider::after {
+    top: 2px;
+    left: 2px;
+    width: 13px;
+    height: 13px;
+}
+
+.sh-toggle--small input:checked+.sh-toggle-slider::after {
+    transform: translateX(15px);
+}
+
+/* ═══ BUTTONS ═══ */
+.sh-add-break-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    margin-top: 14px;
+    font-size: var(--typo-xs);
+    font-weight: 600;
+    color: #818cf8;
+    background: rgba(99, 102, 241, 0.05);
+    border: 1.5px dashed rgba(99, 102, 241, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.sh-add-break-btn:hover {
+    background: rgba(99, 102, 241, 0.1);
+    border-color: rgba(99, 102, 241, 0.4);
+}
+
+.sh-period-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 16px;
+    margin-top: 16px;
+    border-top: 1px solid rgba(100, 116, 139, 0.08);
+}
+
+.sh-remove-period-btn {
+    padding: 8px 16px;
+    font-size: var(--typo-xs);
+    font-weight: 600;
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.06);
+    border: 1px solid rgba(239, 68, 68, 0.12);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.sh-remove-period-btn:hover {
+    background: rgba(239, 68, 68, 0.15);
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.sh-add-period-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 20px;
+    font-size: var(--typo-s);
+    font-weight: 600;
+    color: #818cf8;
+    background: rgba(99, 102, 241, 0.04);
+    border: 2px dashed rgba(99, 102, 241, 0.2);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.sh-add-period-btn:hover {
+    background: rgba(99, 102, 241, 0.1);
+    border-color: rgba(99, 102, 241, 0.4);
+    color: #a5b4fc;
+}
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 640px) {
+    .sh-toast-container {
+        top: 12px;
+        right: 12px;
+        left: 12px;
+        max-width: 100%;
+    }
+
+    .sh-meta-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sh-row {
+        flex-wrap: wrap;
+        padding: 8px 12px;
+        gap: 6px;
+    }
+
+    .sh-row-left {
+        min-width: unset;
+        flex: 1;
+    }
+
+    .sh-row-center {
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+        padding-left: 40px;
+    }
+
+    .sh-row-right {
+        min-width: unset;
+    }
+
+    .sh-time-input {
+        width: 82px;
+        padding: 5px 6px;
+        font-size: var(--typo-2xs);
+    }
+
+    .sh-period-header {
+        padding: 12px 14px;
+    }
+
+    .sh-period-body {
+        padding: 0 14px 14px;
+    }
+}

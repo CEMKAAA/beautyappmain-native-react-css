@@ -1,0 +1,772 @@
+/* ═══════════════════════════════════════════════════════════════
+   AddCategoryModal — Fresha Add Category Dialog Replica
+   JSON: 86 elements from /html/body/div[140]
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── el-0: Modal overlay ── */
+.acm-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(19, 19, 19, 0.25);
+    z-index: 2000;
+    transition: opacity 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.acm-overlay.acm-closed {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ── el-1: Scroll container ── */
+.acm-scroll {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior-block: none;
+    scrollbar-width: none;
+}
+
+.acm-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* ── el-2: Center wrapper ── */
+.acm-center {
+    display: flex;
+    justify-content: center;
+    min-height: 100%;
+}
+
+/* ── el-3: Dialog panel ── */
+.acm-panel {
+    align-self: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: rgba(19, 19, 19, 0.08) 0px 2px 8px 0px,
+        rgba(19, 19, 19, 0.12) 0px 4px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    isolation: isolate;
+    max-height: 881px;
+    max-width: min(720px, 100%);
+    width: 720px;
+    transform: scale(1) translateY(0);
+    filter: blur(0px);
+    transition: transform 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        opacity 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        filter 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.acm-closed .acm-panel {
+    transform: scale(0.9) translateY(10%);
+    opacity: 0;
+    filter: blur(2px);
+}
+
+/* ── el-4: Header ── */
+.acm-header {
+    background-color: rgb(255, 255, 255);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    column-gap: 16px;
+    display: flex;
+    flex-direction: row;
+    padding: 32px 48px 16px;
+    row-gap: 16px;
+    transition: box-shadow 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+    z-index: 10;
+}
+
+.acm-header.acm-header-scrolled {
+    box-shadow: rgba(19, 19, 19, 0.08) 0px 2px 8px 0px;
+}
+
+/* ── el-5: Header inner ── */
+.acm-header-inner {
+    align-items: flex-start;
+    column-gap: 16px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    min-height: 24px;
+    row-gap: 16px;
+}
+
+/* ── el-6: Title wrapper (sticky, appears on scroll) ── */
+.acm-header-title-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: -2px;
+    opacity: 0;
+    transition: opacity 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.acm-header-scrolled .acm-header-title-wrap {
+    opacity: 1;
+}
+
+/* ── el-7: Title text (small header version) ── */
+.acm-header-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+}
+
+/* ── el-8: Close button ── */
+.acm-close-btn {
+    align-items: center;
+    appearance: none;
+    background: none;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    height: 48px;
+    width: 48px;
+    min-width: 48px;
+    margin: -12px;
+    max-width: max-content;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    padding: 0;
+    position: relative;
+}
+
+/* ── el-8 ::before: Focus ring ── */
+.acm-close-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px,
+        rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.acm-close-btn:focus-visible::before {
+    opacity: 1;
+}
+
+/* ── el-9: Close button inner ── */
+.acm-close-inner {
+    align-items: center;
+    background-color: rgba(19, 19, 19, 0);
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 999px;
+    column-gap: 8px;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    min-width: 48px;
+    padding: 11px;
+    row-gap: 8px;
+    scale: 1;
+    transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+@media (hover: hover) {
+    .acm-close-btn:hover .acm-close-inner {
+        background-color: rgba(19, 19, 19, 0.04);
+    }
+}
+
+.acm-close-btn:active .acm-close-inner {
+    scale: 0.96;
+    background-color: rgba(19, 19, 19, 0.08);
+}
+
+/* ── el-13: Icon container ── */
+.acm-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+
+.acm-icon svg {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    inset: 0;
+    fill: rgb(13, 13, 13);
+    overflow: hidden;
+}
+
+/* ── el-17: Body/content area ── */
+.acm-body {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    min-height: 128px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 1;
+    flex: 1;
+}
+
+/* ── el-18: Title section ── */
+.acm-title-section {
+    column-gap: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 48px 16px;
+    row-gap: 8px;
+}
+
+/* ── el-19: Big title ── */
+.acm-big-title {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    margin: 0;
+}
+
+/* ── el-20: Scroll observer ── */
+.acm-scroll-observer {
+    position: relative;
+    top: -36px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+}
+
+/* ── el-22: Form section ── */
+.acm-form-section {
+    padding: 16px 48px;
+}
+
+/* ── el-23: Fields container ── */
+.acm-fields {
+    display: flex;
+    flex-direction: column;
+    column-gap: 16px;
+    row-gap: 16px;
+}
+
+/* ── el-24: Input row (2-col) ── */
+.acm-row {
+    align-items: start;
+    column-gap: 16px;
+    display: flex;
+    row-gap: 16px;
+}
+
+/* ── el-25, el-31: Field wrapper ── */
+.acm-field {
+    column-gap: 4px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 100%;
+    max-width: 100%;
+    row-gap: 4px;
+}
+
+/* ── el-26, el-32, el-66: Label row ── */
+.acm-label-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* ── el-27, el-33, el-67: Label text ── */
+.acm-label {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    color: rgb(13, 13, 13);
+}
+
+/* ── el-68: Counter ── */
+.acm-counter {
+    font-size: 15px;
+    line-height: 20px;
+    color: rgb(118, 118, 118);
+}
+
+/* ── el-28: Input outer wrapper ── */
+.acm-input-wrap {
+    display: flex;
+    flex-grow: 1;
+    column-gap: 8px;
+    row-gap: 8px;
+}
+
+/* ── el-29, el-69: Input/textarea border container ── */
+.acm-input-border {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 8px;
+    display: flex;
+    flex-grow: 1;
+    height: 48px;
+    max-height: 48px;
+    position: relative;
+    transition: background-color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+        border-color 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.acm-input-border.acm-textarea-border {
+    height: auto;
+    max-height: none;
+}
+
+/* ── Input/textarea border ::before: Focus ring ── */
+.acm-input-border::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    border-radius: inherit;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px,
+        rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    pointer-events: none;
+    transition: opacity 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+@media (hover: hover) {
+    .acm-input-border:hover {
+        border-color: rgb(163, 163, 163);
+    }
+}
+
+.acm-input-border:focus-within {
+    border-color: rgb(13, 13, 13);
+}
+
+.acm-input-border:focus-within::before {
+    opacity: 1;
+}
+
+/* ── el-30: Text input ── */
+.acm-input {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    padding: 16px;
+    background-color: transparent;
+    color: rgb(13, 13, 13);
+    font-size: 15px;
+    line-height: 20px;
+    border-radius: 8px;
+}
+
+.acm-input::placeholder {
+    color: rgb(166, 166, 166);
+    text-transform: none;
+}
+
+/* ── el-70: Textarea ── */
+.acm-textarea {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    padding: 16px;
+    background-color: transparent;
+    color: rgb(13, 13, 13);
+    font-size: 15px;
+    line-height: 20px;
+    border-radius: 8px;
+    min-height: 120px;
+    resize: none;
+    overflow-wrap: break-word;
+    font-family: inherit;
+}
+
+.acm-textarea::placeholder {
+    color: rgb(166, 166, 166);
+    text-transform: none;
+}
+
+/* ── el-55: Custom select button ── */
+.acm-select-btn {
+    appearance: none;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-grow: 1;
+    font-size: 15px;
+    height: 48px;
+    max-height: 48px;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    position: relative;
+    touch-action: manipulation;
+    transition: background-color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+        border-color 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+    padding: 0;
+}
+
+.acm-select-btn::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    border-radius: inherit;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px,
+        rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    pointer-events: none;
+    transition: opacity 0.1s ease-in-out;
+}
+
+@media (hover: hover) {
+    .acm-select-btn:hover {
+        border-color: rgb(13, 13, 13);
+    }
+}
+
+.acm-select-btn:focus-visible::before {
+    opacity: 1;
+}
+
+/* ── el-56: Swatch area ── */
+.acm-swatch-area {
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+}
+
+/* ── el-57: Color circle ── */
+.acm-color-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    border: 1px solid rgb(229, 229, 229);
+    position: relative;
+    transition: color 0.2s cubic-bezier(0.55, 0, 1, 0.45),
+        background-color 0.2s cubic-bezier(0.55, 0, 1, 0.45),
+        border-color 0.2s cubic-bezier(0.55, 0, 1, 0.45);
+}
+
+/* ── el-58: Value area ── */
+.acm-value-area {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    min-width: 0;
+    padding: 16px 16px 16px 16px;
+}
+
+/* ── el-59: Selected value text ── */
+.acm-value-text {
+    font-size: 15px;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+    color: rgb(13, 13, 13);
+}
+
+/* ── el-60: Chevron area ── */
+.acm-chevron-area {
+    display: flex;
+    align-items: center;
+    padding-right: 16px;
+}
+
+/* ── el-61: Chevron icon ── */
+.acm-icon-sm {
+    display: inline-flex;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    pointer-events: none;
+}
+
+.acm-icon-sm svg {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    inset: 0;
+    fill: rgb(13, 13, 13);
+    overflow: hidden;
+}
+
+/* ═══ Color Dropdown ═══ */
+
+.acm-color-dropdown-wrap {
+    z-index: 2100;
+    opacity: 0;
+    transform: translateY(-4px);
+    pointer-events: none;
+    transition: opacity 0.15s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.15s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.acm-color-dropdown-wrap.acm-dropdown-open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.acm-color-dropdown {
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: rgba(19, 19, 19, 0.08) 0px 2px 8px 0px,
+        rgba(19, 19, 19, 0.12) 0px 4px 20px 0px;
+    padding: 8px 12px;
+    max-height: 280px;
+    overflow-y: auto;
+    list-style: none;
+    margin: 0;
+}
+
+.acm-color-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin: 0 -12px;
+    gap: 8px;
+    min-height: 40px;
+    transition: background-color 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+    position: relative;
+}
+
+@media (hover: hover) {
+    .acm-color-option:hover {
+        background-color: rgba(19, 19, 19, 0.04);
+    }
+}
+
+.acm-color-option:active {
+    background-color: rgba(19, 19, 19, 0.08);
+}
+
+.acm-color-option-swatch {
+    pointer-events: none;
+    margin-right: 4px;
+}
+
+.acm-color-option-swatch .acm-color-circle {
+    width: 20px;
+    height: 20px;
+}
+
+.acm-color-option-label {
+    display: block;
+    flex-grow: 1;
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    color: rgb(13, 13, 13);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.acm-color-option-check {
+    display: inline-flex;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.acm-color-option-check svg {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    inset: 0;
+    fill: rgb(13, 13, 13);
+    overflow: hidden;
+}
+
+/* ── el-76: Footer ── */
+.acm-footer {
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-top: 1px solid rgba(0, 0, 0, 0);
+    column-gap: 12px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px 48px 32px;
+    row-gap: 12px;
+    z-index: 10;
+    transition: border-color 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.acm-footer.acm-footer-scrolled {
+    border-top-color: rgb(229, 229, 229);
+}
+
+/* ── el-77: Button group ── */
+.acm-btn-group {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    column-gap: 12px;
+    row-gap: 12px;
+    justify-content: flex-end;
+}
+
+/* ── Shared button base (el-78, el-82) ── */
+.acm-btn {
+    align-items: center;
+    appearance: none;
+    background: none;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    display: inline-flex;
+    height: 48px;
+    max-width: 100%;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    padding: 0;
+    position: relative;
+}
+
+.acm-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px,
+        rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.acm-btn:focus-visible::before {
+    opacity: 1;
+}
+
+/* ── el-79: Cancel button inner ── */
+.acm-btn-cancel-inner {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 999px;
+    column-gap: 8px;
+    display: inline-flex;
+    height: 48px;
+    justify-content: center;
+    max-width: 100%;
+    padding: 0 19px;
+    row-gap: 8px;
+    scale: 1;
+    transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+@media (hover: hover) {
+    .acm-btn:hover .acm-btn-cancel-inner {
+        background-color: rgb(245, 245, 245);
+        border-color: rgb(163, 163, 163);
+    }
+}
+
+.acm-btn:active .acm-btn-cancel-inner {
+    scale: 0.96;
+    background-color: rgb(237, 237, 237);
+    border-color: rgb(143, 143, 143);
+}
+
+/* ── el-83: Add button inner ── */
+.acm-btn-add-inner {
+    align-items: center;
+    background-color: rgb(13, 13, 13);
+    border: 1px solid rgb(13, 13, 13);
+    border-radius: 999px;
+    color: rgb(255, 255, 255);
+    column-gap: 8px;
+    display: inline-flex;
+    height: 48px;
+    justify-content: center;
+    max-width: 100%;
+    padding: 0 19px;
+    row-gap: 8px;
+    scale: 1;
+    transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+@media (hover: hover) {
+    .acm-btn:hover .acm-btn-add-inner {
+        background-color: rgb(38, 38, 38);
+        border-color: rgb(38, 38, 38);
+    }
+}
+
+.acm-btn:active .acm-btn-add-inner {
+    scale: 0.96;
+    background-color: rgb(64, 64, 64);
+    border-color: rgb(64, 64, 64);
+}
+
+/* ── Shared button label ── */
+.acm-btn-label-wrap {
+    display: inherit;
+    align-items: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    column-gap: 8px;
+    min-width: 0;
+    row-gap: 8px;
+}
+
+.acm-btn-label {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ── Dropdown click-outside overlay ── */
+.acm-dropdown-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 2050;
+}

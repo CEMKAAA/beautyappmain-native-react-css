@@ -1,0 +1,1121 @@
+/* ─── Services Page ─── */
+.svc-page {
+    padding: 0;
+}
+
+/* ─── Toolbar ─── */
+.svc-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 0;
+    flex-wrap: wrap;
+}
+
+.svc-toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.svc-search-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 0 14px;
+    min-width: 220px;
+}
+
+.svc-search-box .svc-search-icon {
+    font-size: var(--typo-s);
+    opacity: 0.5;
+}
+
+.svc-search-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 10px 0;
+    font-size: var(--typo-s);
+    width: 100%;
+}
+
+.svc-search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.svc-toolbar select {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px 14px;
+    font-size: var(--typo-s);
+    cursor: pointer;
+    outline: none;
+}
+
+.svc-toolbar select option {
+    background: #1e1e2e;
+    color: #fff;
+}
+
+.svc-add-btn {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: var(--typo-s);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.svc-add-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+}
+
+/* ─── Count ─── */
+.svc-count {
+    font-size: var(--typo-xs);
+    color: rgba(255, 255, 255, 0.45);
+    padding-bottom: 12px;
+}
+
+/* ─── Empty State ─── */
+.svc-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.svc-empty-icon {
+    font-size: var(--typo-xl);
+    margin-bottom: 16px;
+}
+
+.svc-empty h3 {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 8px;
+}
+
+.svc-empty p {
+    margin-bottom: 24px;
+}
+
+/* ─── Category Group ─── */
+.svc-category-group {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.svc-category-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s;
+}
+
+.svc-category-header:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.svc-cat-toggle {
+    font-size: var(--typo-2xs);
+    color: rgba(255, 255, 255, 0.4);
+    width: 16px;
+}
+
+.svc-cat-name {
+    font-weight: 600;
+    font-size: var(--typo-s);
+    color: #fff;
+    flex: 1;
+}
+
+.svc-cat-count {
+    font-size: var(--typo-xs);
+    color: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.06);
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.svc-category-items {
+    padding: 0 12px 12px;
+}
+
+/* ─── Service Card ─── */
+.svc-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 6px;
+    transition: all 0.2s;
+}
+
+.svc-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.svc-card--inactive {
+    opacity: 0.5;
+}
+
+.svc-card-main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.svc-card-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.svc-card-title {
+    margin: 0 0 6px;
+    font-size: var(--typo-s);
+    font-weight: 600;
+    color: #fff;
+}
+
+.svc-card-variants {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.svc-card-variant {
+    font-size: var(--typo-xs);
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(99, 102, 241, 0.12);
+    padding: 3px 10px;
+    border-radius: 6px;
+}
+
+.svc-card-warning {
+    font-size: var(--typo-xs);
+    color: #f59e0b;
+}
+
+.svc-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    font-size: var(--typo-xs);
+}
+
+.svc-card-staff {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.svc-card-status {
+    font-size: var(--typo-xs);
+}
+
+.svc-card-status--active {
+    color: #22c55e;
+}
+
+.svc-card-status--inactive {
+    color: #ef4444;
+}
+
+.svc-card-badge {
+    font-size: var(--typo-2xs);
+    color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.06);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.svc-card-actions {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.svc-card-btn {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: var(--typo-xs);
+    transition: all 0.2s;
+}
+
+.svc-card-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.svc-card-btn--delete:hover {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+/* ─── Overlay ─── */
+.svc-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+/* ─── Add Choice Modal ─── */
+.svc-choice-modal {
+    background: linear-gradient(145deg, #1e1e2e, #252540);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 32px;
+    max-width: 500px;
+    width: 100%;
+    animation: svcSlideUp 0.3s ease;
+}
+
+.svc-choice-modal h2 {
+    margin: 0 0 24px;
+    font-size: var(--typo-ml);
+    color: #fff;
+    text-align: center;
+}
+
+.svc-choice-cards {
+    display: flex;
+    gap: 16px;
+}
+
+.svc-choice-card {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 24px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.svc-choice-card:hover {
+    background: rgba(99, 102, 241, 0.1);
+    border-color: rgba(99, 102, 241, 0.3);
+    transform: translateY(-2px);
+}
+
+.svc-choice-icon {
+    font-size: var(--typo-xl);
+    margin-bottom: 12px;
+}
+
+.svc-choice-card h3 {
+    margin: 0 0 6px;
+    font-size: var(--typo-s);
+    color: #fff;
+}
+
+.svc-choice-card p {
+    margin: 0;
+    font-size: var(--typo-xs);
+    color: rgba(255, 255, 255, 0.45);
+}
+
+/* ─── Catalog Modal ─── */
+.svc-catalog-modal {
+    background: linear-gradient(145deg, #1e1e2e, #252540);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    animation: svcSlideUp 0.3s ease;
+}
+
+.svc-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.svc-modal-header h2 {
+    margin: 0;
+    font-size: var(--typo-m);
+    color: #fff;
+}
+
+.svc-modal-close {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: var(--typo-xs);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.svc-modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.svc-catalog-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.svc-catalog-search span {
+    opacity: 0.4;
+}
+
+.svc-catalog-search input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: var(--typo-s);
+    padding: 6px 0;
+}
+
+.svc-catalog-search input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.svc-catalog-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px 24px;
+}
+
+.svc-catalog-cat {
+    margin-bottom: 8px;
+}
+
+.svc-catalog-cat-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 600;
+    font-size: var(--typo-s);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.svc-catalog-cat-header span:first-child {
+    font-size: var(--typo-2xs);
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.svc-catalog-cat-name {
+    flex: 1;
+}
+
+.svc-catalog-cat-count {
+    font-size: var(--typo-xs);
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 400;
+}
+
+.svc-catalog-items {
+    padding-left: 22px;
+}
+
+.svc-catalog-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s;
+    font-size: var(--typo-s);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.svc-catalog-item:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.svc-catalog-item--imported {
+    opacity: 0.45;
+    cursor: default;
+}
+
+.svc-catalog-item input[type="checkbox"] {
+    accent-color: #6366f1;
+    width: 16px;
+    height: 16px;
+}
+
+.svc-catalog-item-title {
+    flex: 1;
+}
+
+.svc-catalog-imported-badge {
+    font-size: var(--typo-2xs);
+    color: #22c55e;
+    background: rgba(34, 197, 94, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.svc-catalog-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.svc-catalog-selected-count {
+    font-size: var(--typo-xs);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.svc-catalog-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* ─── Edit Modal ─── */
+.svc-edit-modal {
+    background: linear-gradient(145deg, #1e1e2e, #252540);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    max-width: 560px;
+    width: 100%;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    animation: svcSlideUp 0.3s ease;
+}
+
+.svc-modal-tabs {
+    display: flex;
+    gap: 4px;
+    padding: 0 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.svc-modal-tab {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.45);
+    padding: 14px 18px;
+    font-size: var(--typo-s);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.svc-modal-tab:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.svc-modal-tab--active {
+    color: #fff;
+    border-bottom-color: #6366f1;
+}
+
+.svc-modal-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px;
+}
+
+.svc-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 16px 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ─── Form ─── */
+.svc-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.svc-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.svc-field label {
+    font-size: var(--typo-xs);
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+}
+
+.svc-field input,
+.svc-field select {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #fff;
+    padding: 11px 14px;
+    font-size: var(--typo-s);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.svc-field input:focus,
+.svc-field select:focus {
+    border-color: rgba(99, 102, 241, 0.5);
+}
+
+.svc-field select option {
+    background: #1e1e2e;
+    color: #fff;
+}
+
+.svc-field input::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.svc-toggles {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.svc-toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: var(--typo-s);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ─── Toggle Switch ─── */
+.svc-switch {
+    width: 44px;
+    height: 24px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    position: relative;
+    cursor: pointer;
+    transition: background 0.25s;
+    flex-shrink: 0;
+}
+
+.svc-switch--on {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.svc-switch-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.25s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.svc-switch--on .svc-switch-thumb {
+    transform: translateX(20px);
+}
+
+/* ─── Category Add ─── */
+.svc-cat-select-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.svc-cat-select-row select {
+    flex: 1;
+}
+
+.svc-cat-add-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(99, 102, 241, 0.15);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    color: #8b5cf6;
+    font-size: var(--typo-ml);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.svc-cat-add-btn:hover {
+    background: rgba(99, 102, 241, 0.25);
+}
+
+.svc-cat-add-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    align-items: center;
+}
+
+.svc-cat-add-row input {
+    flex: 1;
+}
+
+.svc-cat-save-btn,
+.svc-cat-cancel-btn {
+    padding: 8px 14px !important;
+    font-size: var(--typo-xs) !important;
+}
+
+/* ─── Pricing / Variants ─── */
+.svc-pricing {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.svc-pricing-empty {
+    color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    padding: 20px;
+}
+
+.svc-variant-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.svc-variant-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.svc-variant-gender {
+    font-size: var(--typo-s);
+    font-weight: 600;
+    color: #fff;
+}
+
+.svc-variant-active {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--typo-xs);
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.svc-variant-active input {
+    accent-color: #6366f1;
+}
+
+.svc-variant-fields {
+    display: flex;
+    gap: 14px;
+}
+
+.svc-variant-fields .svc-field {
+    flex: 1;
+}
+
+/* ─── Staff Assignment ─── */
+.svc-staff-assign {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.svc-staff-info {
+    font-size: var(--typo-xs);
+    color: rgba(255, 255, 255, 0.45);
+    margin-bottom: 12px;
+}
+
+.svc-staff-empty {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.35);
+    padding: 20px;
+}
+
+.svc-staff-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.15s;
+    font-size: var(--typo-s);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.svc-staff-item:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.svc-staff-selectall {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    margin-bottom: 4px;
+    padding-bottom: 12px;
+    font-weight: 600;
+}
+
+.svc-staff-item input[type="checkbox"] {
+    accent-color: #6366f1;
+    width: 16px;
+    height: 16px;
+}
+
+.svc-staff-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.svc-staff-name {
+    flex: 1;
+}
+
+.svc-staff-gender-hint {
+    font-size: var(--typo-2xs);
+    color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.06);
+    padding: 2px 10px;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+/* ─── Category Manage Button ─── */
+.svc-cat-manage-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: var(--typo-m);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.svc-cat-manage-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+}
+
+/* ─── Category Manage Modal ─── */
+.svc-catmanage-modal {
+    background: linear-gradient(145deg, #1e1e2e, #252540);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    max-width: 520px;
+    width: 100%;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    animation: svcSlideUp 0.3s ease;
+}
+
+.svc-catmanage-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px 24px;
+}
+
+.svc-catmanage-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    border-radius: 10px;
+    transition: background 0.15s;
+    gap: 12px;
+}
+
+.svc-catmanage-item:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.svc-catmanage-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+}
+
+.svc-catmanage-name {
+    font-size: var(--typo-s);
+    color: #fff;
+    font-weight: 500;
+}
+
+.svc-catmanage-count {
+    font-size: var(--typo-2xs);
+    color: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.06);
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+.svc-catmanage-system {
+    font-size: var(--typo-2xs);
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.svc-catmanage-actions {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.svc-catmanage-edit-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex: 1;
+}
+
+.svc-catmanage-edit-row input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(99, 102, 241, 0.4);
+    border-radius: 8px;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: var(--typo-s);
+    outline: none;
+}
+
+.svc-catmanage-footer {
+    padding: 16px 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.svc-catmanage-footer .svc-cat-add-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.svc-catmanage-footer .svc-cat-add-row input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #fff;
+    padding: 11px 14px;
+    font-size: var(--typo-s);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.svc-catmanage-footer .svc-cat-add-row input:focus {
+    border-color: rgba(99, 102, 241, 0.5);
+}
+
+.svc-catmanage-footer .svc-cat-add-row input::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+/* ─── Delete Modal ─── */
+.svc-delete-modal {
+    background: linear-gradient(145deg, #1e1e2e, #252540);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 28px;
+    max-width: 420px;
+    width: 100%;
+    animation: svcSlideUp 0.3s ease;
+}
+
+.svc-delete-modal h3 {
+    margin: 0 0 12px;
+    color: #fff;
+}
+
+.svc-delete-modal p {
+    font-size: var(--typo-s);
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.svc-delete-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* ─── Buttons ─── */
+.svc-btn-primary {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: var(--typo-s);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.svc-btn-primary:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+}
+
+.svc-btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.svc-btn-secondary {
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: var(--typo-s);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.svc-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.svc-btn-danger {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: var(--typo-s);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.svc-btn-danger:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(239, 68, 68, 0.3);
+}
+
+/* ─── Animation ─── */
+@keyframes svcSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ─── Scrollbar ─── */
+.svc-catalog-list::-webkit-scrollbar,
+.svc-modal-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.svc-catalog-list::-webkit-scrollbar-track,
+.svc-modal-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.svc-catalog-list::-webkit-scrollbar-thumb,
+.svc-modal-body::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 3px;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 640px) {
+    .svc-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .svc-toolbar-left {
+        flex-direction: column;
+    }
+
+    .svc-search-box {
+        min-width: 100%;
+    }
+
+    .svc-choice-cards {
+        flex-direction: column;
+    }
+
+    .svc-variant-fields {
+        flex-direction: column;
+    }
+
+    .svc-card-meta {
+        flex-direction: column;
+        gap: 6px;
+    }
+}

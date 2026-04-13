@@ -1,0 +1,922 @@
+/* ═══════════════════════════════════════════════════
+   ItemsPanel — pixel-perfect CSS from computed-styles.json
+   65 elements, 30 interactive rules, itm- prefix
+   ═══════════════════════════════════════════════════ */
+
+/* ── el-0: Root container ── */
+.itm-root {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0, 0.55, 0.45, 1);
+    z-index: 10;
+}
+
+/* ── el-1: Grid layout ── */
+.itm-grid {
+    display: grid;
+    grid-template-areas: "header" "title" "body" "footer" "footerEnd";
+    grid-template-columns: 100%;
+    grid-template-rows: 0px 68px 1fr 0px 0px;
+    background-color: #f9f9f9;
+    height: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.itm-grid::-webkit-scrollbar {
+    display: none;
+}
+
+/* ── el-2: Header slot (sticky) ── */
+.itm-header-slot {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+    z-index: 7;
+}
+
+/* ── el-3: Header background spacer ── */
+.itm-header-bg {
+    background-color: #f9f9f9;
+    height: 72px;
+    width: 100%;
+}
+
+/* ── el-4: Scroll header overlay ── */
+.itm-scroll-header {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* ── el-5: Floating header bar (hidden state) ── */
+.itm-floating-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -72px;
+    height: 72px;
+    max-width: 1920px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+    transition: opacity 0.2s linear, background-color 0.2s linear;
+}
+
+/* ── el-6: Header inner row ── */
+.itm-header-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    height: 72px;
+    min-height: 72px;
+    max-width: 1440px;
+    padding: 0 32px;
+    pointer-events: none;
+    width: 100%;
+}
+
+/* ── el-7: Back button (hidden) ── */
+.itm-back-btn {
+    display: none;
+    pointer-events: none;
+}
+
+/* ── el-8: Title wrapper in scroll header ── */
+.itm-scroll-title-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 28px;
+    max-width: 100%;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: relative;
+    white-space: nowrap;
+    transition: opacity 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+/* ── el-9: "Items" scroll title ── */
+.itm-scroll-title {
+    font-size: 20px;
+    font-weight: 600;
+    height: 28px;
+    line-height: 28px;
+    max-width: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ── el-10: Right action slot ── */
+.itm-header-action {
+    display: flex;
+    height: 24px;
+    justify-content: flex-end;
+    pointer-events: none;
+    width: 24px;
+}
+
+/* ── el-11: Icon wrapper ── */
+.itm-header-icon {
+    height: 24px;
+    pointer-events: none;
+    width: 24px;
+}
+
+/* ── el-12: Title area ── */
+.itm-title-area {
+    grid-area: title;
+    background-color: #f9f9f9;
+    position: relative;
+    isolation: isolate;
+    height: 68px;
+    will-change: opacity;
+    z-index: 8;
+}
+
+.itm-title-area::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-position: 50% -72px;
+    background-size: cover;
+    z-index: -1;
+}
+
+/* ── el-13: Hidden prefix ── */
+.itm-title-prefix {
+    display: none;
+}
+
+/* ── el-14: Title padding ── */
+.itm-title-padding {
+    height: 68px;
+    padding: 0 32px;
+}
+
+/* ── el-15: Title grid ── */
+.itm-title-grid {
+    display: grid;
+    grid-template-areas: "prefix title action" "empty description description";
+    grid-template-columns: 0px 1fr 0px;
+    grid-template-rows: 36px 0px;
+    align-items: center;
+    height: 68px;
+    padding-top: 32px;
+}
+
+/* ── el-16: Action slot (empty, 0 width) ── */
+.itm-title-action {
+    grid-area: action;
+    width: 0;
+}
+
+/* ── el-17: Title slot ── */
+.itm-title-slot {
+    grid-area: title;
+    height: 36px;
+}
+
+/* ── el-18: Hidden div ── */
+.itm-title-hidden {
+    display: none;
+    position: relative;
+    bottom: 56px;
+}
+
+/* ── el-19: Title inner flex ── */
+.itm-title-inner {
+    display: flex;
+    align-items: center;
+    height: 36px;
+    min-height: 36px;
+}
+
+/* ── el-20: "Items" page title ── */
+.itm-page-title {
+    font-size: 28px;
+    font-weight: 600;
+    height: 36px;
+    line-height: 36px;
+    margin: 0;
+}
+
+/* ── el-21: Title overlap spacer ── */
+.itm-title-spacer {
+    position: relative;
+    top: -52px;
+    bottom: 52px;
+}
+
+/* ── el-22: Body area ── */
+.itm-body {
+    grid-area: body;
+    max-width: 100%;
+    padding: 32px;
+}
+
+/* ── el-23: Content flex container ── */
+.itm-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ═══════════════════════════════════════
+   TAB BAR (el-24 → el-41)
+   ═══════════════════════════════════════ */
+
+/* ── el-24: Tabs wrapper ── */
+.itm-tabs {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 36px;
+    background-color: #f9f9f9;
+    z-index: 0;
+}
+
+.itm-tabs::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 36px;
+}
+
+/* ── el-25/41: Fade gradients ── */
+.itm-fade {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 36px;
+    width: 64px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.itm-fade--left {
+    left: 0;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), #f9f9f9);
+}
+
+.itm-fade--right {
+    right: 0;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #f9f9f9);
+}
+
+/* ── el-26: Tab scroll container ── */
+.itm-tabs-scroll {
+    display: flex;
+    position: relative;
+    height: 36px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.itm-tabs-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* ── el-27/40: Tab spacers ── */
+.itm-tab-spacer {
+    position: relative;
+    height: 36px;
+    width: 0;
+}
+
+.itm-tab-spacer--left {
+    left: 16px;
+    right: -16px;
+}
+
+.itm-tab-spacer--right {
+    left: -16px;
+    right: 16px;
+}
+
+/* ── el-28: Tab indicator (animated black pill) ── */
+.itm-tab-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 36px;
+    transition: transform 0.3s cubic-bezier(0.85, 0, 0.15, 1),
+        width 0.3s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.itm-tab-indicator::before {
+    content: "";
+    position: absolute;
+    inset: 4px 0;
+    border-radius: 999px;
+    box-shadow: rgb(255, 255, 255) 0 0 0 2px, rgb(13, 13, 13) 0 0 0 4px;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+    z-index: 2;
+}
+
+.itm-tab-indicator::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    background-color: #0d0d0d;
+    will-change: transform, inline-size;
+}
+
+/* ── el-29: Tab list ── */
+.itm-tab-list {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 36px;
+    list-style: none;
+    margin: 0;
+    margin-right: 4px;
+    padding: 0;
+}
+
+/* ── el-30/34/36: Individual tab ── */
+.itm-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 36px;
+    padding: 0 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    touch-action: manipulation;
+    transition: color 0.15s;
+    list-style: none;
+}
+
+/* Active tab = white text */
+.itm-tab--active {
+    color: #fff;
+    outline-color: #fff;
+    border-color: #fff;
+    z-index: 1;
+}
+
+/* Inactive tab hover/active */
+@media (hover: hover) and (pointer: fine) {
+    .itm-tab:not(.itm-tab--active):hover {
+        color: #0d0d0d;
+        background-color: rgba(0, 0, 0, 0.04);
+    }
+}
+
+.itm-tab:not(.itm-tab--active):active {
+    color: #0d0d0d;
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+/* ── el-31/35/37: Tab text ── */
+.itm-tab-text {
+    font-size: 15px;
+    font-weight: 600;
+    height: 20px;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ── el-32/38: Count badge ── */
+.itm-tab-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: content-box;
+    min-width: 12px;
+    height: 20px;
+    min-height: 20px;
+    max-height: 20px;
+    padding: 0 4px;
+    border-radius: 999px;
+    background-color: #fff;
+    box-shadow: #e5e5e5 0 0 0 1px, #f9f9f9 0 0 0 2px;
+    color: #767676;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+/* ── el-33/39: Badge text ── */
+.itm-tab-badge-text {
+    font-size: 13px;
+    font-weight: 500;
+    height: 16px;
+    line-height: 16px;
+    color: #767676;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+/* ═══════════════════════════════════════
+   TAB PANEL + PRODUCT CARDS (el-42 → el-64)
+   ═══════════════════════════════════════ */
+
+/* ── el-42: Panel ── */
+.itm-panel {
+    width: 100%;
+}
+
+/* ── el-43: List ── */
+.itm-list {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 24px;
+    padding-top: 24px;
+}
+
+/* ── Empty state ── */
+.itm-empty {
+    padding: 40px 0;
+    text-align: center;
+    color: #767676;
+    font-size: 15px;
+}
+
+/* ── el-44: Product card ── */
+.itm-card {
+    display: flex;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    transition: background-color 0.3s cubic-bezier(0.85, 0, 0.15, 1),
+        border-color 0.3s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .itm-card:hover {
+        background-color: #f5f5f5;
+    }
+}
+
+.itm-card:active {
+    background-color: #efefef;
+}
+
+/* ── el-45: Card click overlay ── */
+.itm-card-btn {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    border: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    z-index: 1;
+    border-radius: 8px;
+}
+
+.itm-card-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow: #fff 0 0 0 2px, #0d0d0d 0 0 0 4px;
+    opacity: 0;
+    padding: 2px;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.itm-card-btn:focus-visible::before {
+    opacity: 1;
+}
+
+/* ── el-46: Card content column ── */
+.itm-card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    padding: 20px 24px;
+    gap: 0;
+    min-width: 0;
+}
+
+/* ── el-47: Product title ── */
+.itm-card-title {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 0;
+}
+
+/* ── el-48: Subtitle row ── */
+.itm-card-subtitle {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0;
+}
+
+/* ── el-49/50/51: Date, dot, price ── */
+.itm-card-date,
+.itm-card-dot,
+.itm-card-price {
+    font-size: 13px;
+    line-height: 16px;
+    color: #767676;
+    margin: 0;
+}
+
+/* ── el-52: Button actions row ── */
+.itm-card-actions {
+    display: flex;
+    flex-grow: 1;
+    gap: 8px;
+    padding-top: 16px;
+    position: relative;
+    z-index: 2;
+}
+
+/* ── el-53/57: Action buttons ── */
+.itm-action-btn {
+    display: inline-flex;
+    align-items: center;
+    height: 36px;
+    max-width: 100%;
+    border-radius: 999px;
+    cursor: pointer;
+    position: relative;
+    appearance: none;
+    background: none;
+    border: none;
+    padding: 0;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.itm-action-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    box-shadow: #fff 0 0 0 2px, #0d0d0d 0 0 0 4px;
+    opacity: 0;
+    padding: 2px;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.itm-action-btn:focus-visible::before {
+    opacity: 1;
+}
+
+/* ── el-54/58: Action button inner ── */
+.itm-action-inner {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    height: 36px;
+    gap: 8px;
+    padding: 0 15px;
+    border: 1px solid #d3d3d3;
+    border-radius: 999px;
+    background-color: #fff;
+    scale: 1;
+    transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .itm-action-btn:hover .itm-action-inner {
+        background-color: #f5f5f5;
+        border-color: #c2c2c2;
+        scale: 1;
+    }
+}
+
+.itm-action-btn:active .itm-action-inner {
+    background-color: #efefef;
+    border-color: #b5b5b5;
+    scale: 0.96;
+}
+
+/* ── el-55/59: Label wrapper ── */
+.itm-action-label-wrap {
+    display: inherit;
+    align-items: center;
+    gap: 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+}
+
+/* ── el-56/60: Label text ── */
+.itm-action-label {
+    font-size: 15px;
+    font-weight: 500;
+    height: 20px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* ═══════════════════════════════════════
+   IMAGE SECTION (el-61 → el-64)
+   ═══════════════════════════════════════ */
+
+/* ── el-61: Image container ── */
+.itm-card-img-container {
+    width: 132px;
+    min-width: 132px;
+    height: 132px;
+    border-radius: 0 8px 8px 0;
+    overflow: hidden;
+}
+
+/* ── el-62: Image wrapper ── */
+.itm-card-img-wrap {
+    width: 132px;
+    height: 132px;
+}
+
+/* ── el-63: Picture element ── */
+.itm-card-picture {
+    display: block;
+    overflow: hidden;
+    width: 132px;
+    height: 132px;
+    border-radius: 0 8px 8px 0;
+    aspect-ratio: 1/1;
+}
+
+/* ── el-64: Product image ── */
+.itm-card-img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: inherit;
+}
+
+/* ═══════════════════════════════════════
+   SERVICE CARDS (itm-svc-)
+   Pixel-perfect from extracted computed-styles
+   ═══════════════════════════════════════ */
+
+/* el-0: Root wrapper */
+.itm-svc-card {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    transition: background-color 0.3s cubic-bezier(0.85, 0, 0.15, 1),
+        border-color 0.3s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .itm-svc-card:hover {
+        background-color: #f5f5f5;
+    }
+}
+
+.itm-svc-card:active {
+    background-color: #efefef;
+}
+
+/* el-1: Top section — bar + content */
+.itm-svc-top {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    row-gap: 16px;
+}
+
+/* el-2: Color bar wrapper */
+.itm-svc-bar-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    align-self: stretch;
+    column-gap: 4px;
+    row-gap: 4px;
+    width: 4px;
+    transition: inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+/* el-3: Color bar */
+.itm-svc-bar {
+    width: 4px;
+    height: 100%;
+    border-radius: 999px;
+    background-color: #A5DFF8;
+}
+
+/* el-4: Info + price container */
+.itm-svc-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* el-5: Inner row — name/meta + price */
+.itm-svc-row {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 16px;
+    row-gap: 16px;
+}
+
+/* el-6: Text wrapper */
+.itm-svc-text-wrap {
+    transition: padding-inline-end 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+/* el-7: Text column */
+.itm-svc-text-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    column-gap: 0;
+    row-gap: 0;
+}
+
+/* el-8: Service name */
+.itm-svc-name {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 0;
+    color: #0d0d0d;
+}
+
+/* el-9: Meta row */
+.itm-svc-meta {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 6px;
+    row-gap: 6px;
+}
+
+/* el-10, el-12, el-13: Date, dot, provider text */
+.itm-svc-date,
+.itm-svc-dot,
+.itm-svc-provider {
+    font-size: 13px;
+    line-height: 16px;
+    color: rgb(118, 118, 118);
+    margin: 0;
+}
+
+/* el-11: Dot + provider group */
+.itm-svc-meta-sep {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 6px;
+    row-gap: 6px;
+}
+
+/* el-14: Price wrapper */
+.itm-svc-price-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-self: stretch;
+    column-gap: 2px;
+    row-gap: 2px;
+    margin-left: auto;
+}
+
+/* el-15: Price text */
+.itm-svc-price {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 0;
+    color: #0d0d0d;
+}
+
+/* el-16: Actions row */
+.itm-svc-actions {
+    display: flex;
+    flex-grow: 1;
+    column-gap: 8px;
+    row-gap: 8px;
+    padding-top: 16px;
+}
+
+/* el-17: View sale button (pill) */
+.itm-action-btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 36px;
+    padding: 0;
+    border: none;
+    background: none;
+    border-radius: 999px;
+    cursor: pointer;
+    max-width: 100%;
+    text-align: center;
+    line-height: 16.1px;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    -webkit-tap-highlight-color: transparent;
+    transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+/* el-18: Button inner container */
+.itm-action-inner {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    height: 36px;
+    padding: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    column-gap: 8px;
+    row-gap: 8px;
+    background-color: #fff;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 999px;
+    scale: 1;
+    text-align: center;
+    line-height: 16.1px;
+    cursor: pointer;
+    transition:
+        background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .itm-action-inner:hover {
+        background-color: #f5f5f5;
+        border-color: #b3b3b3;
+    }
+}
+
+.itm-action-btn:active .itm-action-inner {
+    scale: 0.96;
+    background-color: #efefef;
+    border-color: #b3b3b3;
+}
+
+/* el-19: Label wrapper (inside button) */
+.itm-action-label-wrap {
+    display: inherit;
+    align-items: center;
+    column-gap: 8px;
+    row-gap: 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+}
+
+/* el-20: Label text */
+.itm-action-label {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    color: #0d0d0d;
+}

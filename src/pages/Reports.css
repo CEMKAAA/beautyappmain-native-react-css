@@ -1,0 +1,1066 @@
+/* ============================
+   FRESHA REPORTS PAGE - PIXEL PERFECT (LIGHT THEME)
+   From computed-styles.json (468 elements)
+   ============================ */
+
+/* ROOT CONTAINER: el-0 — viewport clip */
+.fresha-reports {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* INNER WRAPPER: el-1 — ONLY scroll container */
+.fresha-reports__inner {
+  background-color: rgb(249, 249, 249);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+  width: 100%;
+}
+
+/* CONTENT CENTER: el-2 */
+.fresha-reports__center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 0 32px 32px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* GRID LAYOUT: el-3 */
+.fresha-reports__grid {
+  column-gap: 32px;
+  display: grid;
+  grid-template-areas: "title title" "sidebar content";
+  grid-template-columns: 296px 1fr;
+  grid-template-rows: 0px auto;
+  row-gap: 32px;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.fresha-reports__inner::-webkit-scrollbar {
+  display: none;
+}
+
+/* ============================
+   SIDEBAR: el-4 through el-128
+   ============================ */
+
+/* Sidebar wrapper: el-4 */
+.fresha-sidebar {
+  display: flex;
+  flex-direction: column;
+  grid-area: sidebar;
+  max-width: 296px;
+  width: 296px;
+}
+
+/* Sidebar sticky container: el-5 */
+.fresha-sidebar__sticky {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  isolation: isolate;
+  width: 296px;
+}
+
+/* Sidebar card: el-6 */
+.fresha-sidebar__card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    box-shadow 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    transform 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+  width: 296px;
+  position: relative;
+}
+
+/* Sidebar border overlay: el-7 */
+.fresha-sidebar__border-overlay {
+  border-radius: 12px;
+  box-shadow: rgb(229, 229, 229) 0px 0px 0px 1px inset;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 2000;
+}
+
+/* Sidebar content: el-8 */
+.fresha-sidebar__content {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 32px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Sidebar list: el-9 */
+.fresha-sidebar__list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: -8px -20px;
+  padding: 8px 20px;
+  gap: 0;
+}
+
+/* Sidebar section group: el-10 */
+.fresha-sidebar__group {
+  list-style-type: none;
+}
+
+/* Section title wrapper: el-11 */
+.fresha-sidebar__section-header {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  padding: 8px 0 4px;
+}
+
+/* Section title text wrapper: el-12 */
+.fresha-sidebar__section-title-wrap {
+  flex-grow: 1;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+/* Section title text: el-13 "Reports" */
+.fresha-sidebar__section-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  margin: 0;
+  color: rgb(13, 13, 13);
+}
+
+/* Menu items list: el-14 */
+.fresha-sidebar__menu {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Menu item base: el-15, el-31, el-43, el-55, el-67, el-79, el-91 */
+.fresha-sidebar__item {
+  align-items: center;
+  background-color: rgba(249, 249, 249, 0);
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  height: 44px;
+  margin: 0 -16px;
+  padding: 12px 16px;
+  gap: 12px;
+  position: relative;
+  transition: color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+    background-color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+    border-color 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+  outline: 2px solid rgba(0, 0, 0, 0);
+  outline-offset: 2px;
+  list-style-type: none;
+  color: rgb(13, 13, 13);
+}
+
+.fresha-sidebar__item:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.fresha-sidebar__item:active {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+/* Active menu item: el-15 has bg-c_background.accentFaded */
+.fresha-sidebar__item--active {
+  background-color: rgb(240, 240, 255);
+}
+
+.fresha-sidebar__item--active:hover {
+  background-color: rgb(240, 240, 255);
+}
+
+/* Item overlay button: el-16, el-32, etc. */
+.fresha-sidebar__item-btn {
+  appearance: button;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  outline: 2px solid rgba(0, 0, 0, 0);
+  outline-offset: 2px;
+  text-align: center;
+  line-height: 16.1px;
+  color: inherit;
+  padding: 0;
+}
+
+/* Item icon wrapper (laptop): el-17, el-33, etc. */
+.fresha-sidebar__item-icon {
+  display: flex;
+  flex-shrink: 0;
+  height: 20px;
+  width: 20px;
+  position: relative;
+  pointer-events: none;
+}
+
+.fresha-sidebar__item-icon svg {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  fill: rgb(13, 13, 13);
+}
+
+/* Item text wrapper: el-27, el-39, etc. */
+.fresha-sidebar__item-text-wrap {
+  flex-grow: 1;
+  height: 20px;
+  overflow: hidden;
+}
+
+/* Item text: el-28, el-40, etc. */
+.fresha-sidebar__item-text {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  font-size: 15px;
+  font-weight: 500;
+  height: 20px;
+  white-space: nowrap;
+  color: inherit;
+}
+
+/* Item badge container: el-29, el-41, etc. */
+.fresha-sidebar__item-badge {
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 999px;
+  box-shadow: rgb(229, 229, 229) 0px 0px 0px 1px, rgba(19, 19, 19, 0) 0px 0px 0px 2px;
+  box-sizing: content-box;
+  color: rgb(118, 118, 118);
+  display: flex;
+  height: 20px;
+  justify-content: center;
+  max-height: 20px;
+  min-height: 20px;
+  min-width: 12px;
+  padding: 0 4px;
+  pointer-events: none;
+  position: relative;
+}
+
+/* Item badge text: el-30, el-42, etc. */
+.fresha-sidebar__item-badge-text {
+  color: rgb(118, 118, 118);
+  font-size: 13px;
+  font-weight: 500;
+  height: 16px;
+  line-height: 16px;
+  pointer-events: none;
+}
+
+/* Sidebar separator divider group: el-101, el-117 */
+.fresha-sidebar__divider-group {
+  list-style-type: none;
+}
+
+/* HR separator: el-102, el-118 */
+.fresha-sidebar__hr {
+  background-color: rgb(229, 229, 229);
+  border: none;
+  box-sizing: content-box;
+  height: 1px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+/* Folders item: el-103 → el-118 */
+.fresha-sidebar__folders-item {
+  align-items: center;
+  background-color: rgba(249, 249, 249, 0);
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  height: 44px;
+  margin: 0 -16px;
+  padding: 12px 16px;
+  gap: 12px;
+  position: relative;
+  transition: color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+    background-color 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+  list-style-type: none;
+  color: rgb(13, 13, 13);
+}
+
+.fresha-sidebar__folders-item:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* Accent colored folder items (e.g. "Add folder"): el-107→el-116 */
+.fresha-sidebar__folders-item--accent {
+  color: rgb(105, 80, 243);
+}
+
+.fresha-sidebar__folders-item--accent .fresha-sidebar__item-icon svg {
+  fill: rgb(13, 13, 13);
+}
+
+.fresha-sidebar__folders-item--accent .fresha-sidebar__item-icon svg path {
+  fill: rgb(105, 80, 243);
+}
+
+/* Data connector icon image */
+.fresha-sidebar__data-connector-img {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+  pointer-events: none;
+  margin-right: 4px;
+}
+
+.fresha-sidebar__data-connector-img img {
+  display: flex;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+/* ============================
+   CONTENT AREA: el-129+
+   ============================ */
+
+/* Content wrapper: el-129 */
+.fresha-content {
+  display: flex;
+  flex-direction: column;
+  grid-area: content;
+  width: 100%;
+}
+
+/* Content inner: el-130 */
+.fresha-content__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+/* Content body (toolbar + tabs + cards): el-146 */
+.fresha-content__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+/* ============================
+   HEADER: el-131 through el-145
+   ============================ */
+
+/* Header row: el-131 */
+.fresha-header {
+  align-items: flex-start;
+  display: flex;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+/* Header left: el-132 */
+.fresha-header__left {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Header title row: el-133 */
+.fresha-header__title-row {
+  align-items: flex-start;
+  display: flex;
+  gap: 8px;
+}
+
+/* Header title: el-134 "Reporting and analytics" */
+.fresha-header__title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+  margin: 0;
+  white-space: nowrap;
+  color: rgb(13, 13, 13);
+}
+
+/* Title count badge: el-135 → el-137 */
+.fresha-header__count-wrap {
+  align-items: center;
+  display: flex;
+  height: 36px;
+  max-height: 36px;
+  min-height: 36px;
+}
+
+.fresha-header__count-badge {
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 999px;
+  box-shadow: rgb(229, 229, 229) 0px 0px 0px 1px inset;
+  display: flex;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  height: 24px;
+  justify-content: center;
+  line-height: 16px;
+  min-height: 24px;
+  min-width: 24px;
+  padding: 0 12px;
+  color: rgb(13, 13, 13);
+}
+
+.fresha-header__count-text {
+  font-size: 13px;
+  font-weight: 500;
+  height: 16px;
+  line-height: 16px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: rgb(13, 13, 13);
+}
+
+/* Subtitle: el-138 */
+.fresha-header__subtitle {
+  color: rgb(118, 118, 118);
+  font-size: 15px;
+  margin: 0;
+}
+
+/* Learn more link: el-139 */
+.fresha-header__link {
+  color: rgb(105, 80, 243);
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: inherit;
+  font-family: inherit;
+  border-radius: 4px;
+  position: relative;
+}
+
+.fresha-header__link:hover {
+  color: rgb(85, 60, 220);
+}
+
+/* Add button: el-140 → el-145 */
+.fresha-header__add-btn {
+  align-items: center;
+  appearance: button;
+  background-color: rgb(13, 13, 13);
+  border: 1px solid rgb(13, 13, 13);
+  border-radius: 999px;
+  box-shadow: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: flex;
+  font-size: 17px;
+  font-weight: 600;
+  gap: 8px;
+  height: 48px;
+  justify-content: center;
+  line-height: 16.1px;
+  min-width: 48px;
+  padding: 0 20px;
+  position: relative;
+  text-align: center;
+  transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    scale 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+  scale: 1;
+  white-space: nowrap;
+}
+
+.fresha-header__add-btn:hover {
+  background-color: rgb(38, 38, 38);
+  scale: 1;
+}
+
+.fresha-header__add-btn:active {
+  background-color: rgb(51, 51, 51);
+  scale: 0.96;
+}
+
+.fresha-header__add-btn-icon {
+  display: flex;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+.fresha-header__add-btn-icon svg {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  fill: rgb(255, 255, 255);
+}
+
+.fresha-header__add-btn-text {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 24px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: rgb(255, 255, 255);
+}
+
+/* ============================
+   TOOLBAR: el-146 through el-179
+   ============================ */
+
+.fresha-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 24px;
+}
+
+/* Search input wrapper */
+.fresha-toolbar__search {
+  display: flex;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 999px;
+  border: 1px solid rgb(211, 211, 211);
+  height: 36px;
+  min-width: 200px;
+  flex-grow: 1;
+  max-width: 450px;
+  padding: 0 12px 0 12px;
+  gap: 8px;
+  transition: background-color 0.1s cubic-bezier(0.85, 0, 0.15, 1),
+    border-color 0.1s cubic-bezier(0.85, 0, 0.15, 1);
+  box-sizing: border-box;
+}
+
+.fresha-toolbar__search:hover {
+  border-color: rgb(170, 170, 170);
+}
+
+.fresha-toolbar__search:focus-within {
+  border-color: rgb(105, 80, 243);
+}
+
+.fresha-toolbar__search-icon {
+  display: flex;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.fresha-toolbar__search-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: rgb(118, 118, 118);
+}
+
+.fresha-toolbar__search-input {
+  background: none;
+  border: none;
+  color: rgb(13, 13, 13);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  outline: none;
+  width: 100%;
+  height: 100%;
+}
+
+.fresha-toolbar__search-input::placeholder {
+  color: rgb(118, 118, 118);
+}
+
+/* Toolbar dropdown buttons */
+.fresha-toolbar__dropdown {
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 999px;
+  color: rgb(13, 13, 13);
+  cursor: pointer;
+  display: flex;
+  font-size: 15px;
+  font-weight: 500;
+  gap: 8px;
+  height: 36px;
+  justify-content: center;
+  padding: 0 15px;
+  transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    scale 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+  scale: 1;
+  white-space: nowrap;
+}
+
+.fresha-toolbar__dropdown:hover {
+  border-color: rgb(170, 170, 170);
+  scale: 1;
+}
+
+.fresha-toolbar__dropdown:active {
+  scale: 0.96;
+}
+
+.fresha-toolbar__dropdown-icon {
+  display: flex;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.fresha-toolbar__dropdown-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: rgb(13, 13, 13);
+}
+
+.fresha-toolbar__spacer {
+  flex-grow: 1;
+}
+
+/* ============================
+   TAB BAR: el-180 through el-203
+   LIGHT THEME: Pill/chip style tabs with dark active bg
+   ============================ */
+
+.fresha-tabs {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 4px;
+  padding: 8px 0 24px;
+}
+
+.fresha-tabs__tab {
+  appearance: button;
+  background: none;
+  border: none;
+  color: rgb(13, 13, 13);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  height: 36px;
+  line-height: 20px;
+  padding: 0 16px;
+  position: relative;
+  text-align: center;
+  transition: color 0.15s cubic-bezier(0.85, 0, 0.15, 1),
+    background-color 0.15s cubic-bezier(0.85, 0, 0.15, 1);
+  white-space: nowrap;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.fresha-tabs__tab:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.fresha-tabs__tab--active {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  background-color: rgb(13, 13, 13);
+  border-radius: 999px;
+}
+
+.fresha-tabs__tab--active:hover {
+  background-color: rgb(13, 13, 13);
+}
+
+/* Active tab indicator — hidden in light theme (pill style replaces it) */
+.fresha-tabs__indicator {
+  display: none;
+}
+
+/* ============================
+   REPORT CARDS: el-204 through el-467
+   ============================ */
+
+.fresha-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  overflow-y: auto;
+  flex-grow: 1;
+  padding-bottom: 16px;
+}
+
+/* Card container: el-204, el-236, el-270, el-303, el-335, el-367, el-399, el-434 */
+.fresha-card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: rgb(229, 229, 229) 0px 0px 0px 1px inset;
+  cursor: pointer;
+  padding: 20px 24px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+    box-shadow 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+  min-height: 88px;
+  box-sizing: border-box;
+}
+
+.fresha-card:hover {
+  background-color: rgb(245, 245, 245);
+  box-shadow: rgb(200, 200, 200) 0px 0px 0px 1px inset;
+}
+
+/* Card overlay button: el-205, etc. */
+.fresha-card__btn {
+  appearance: button;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  outline: 2px solid rgba(0, 0, 0, 0);
+  outline-offset: 2px;
+  text-align: center;
+  padding: 0;
+}
+
+/* Card grid layout: el-206, etc. */
+.fresha-card__grid {
+  display: grid;
+  grid-template-areas: "prefix main suffix" "footer footer footer" "border border border";
+  grid-template-columns: 60px 1fr auto;
+  grid-template-rows: 48px 0px 0px;
+  height: 48px;
+}
+
+/* Card prefix (icon area): el-207, etc. */
+.fresha-card__prefix {
+  grid-area: prefix;
+  display: grid;
+  grid-template-columns: 48px;
+  grid-template-rows: 48px;
+  height: 48px;
+  margin-right: 12px;
+  width: 48px;
+}
+
+/* Card icon outer grid: el-208 */
+.fresha-card__icon-grid {
+  align-items: center;
+  display: grid;
+  grid-auto-flow: column;
+  grid-row-start: 1;
+  grid-template-columns: 48px;
+  grid-template-rows: 48px;
+  height: 48px;
+  justify-items: center;
+  width: 48px;
+}
+
+/* Card icon wrapper: el-209 */
+.fresha-card__icon-wrap {
+  align-self: flex-start;
+  display: flex;
+  height: 48px;
+  width: 48px;
+}
+
+/* Icon tooltip container: el-210 */
+.fresha-card__icon-tooltip {
+  position: relative;
+  display: inline-block;
+  height: 48px;
+  width: 48px;
+}
+
+/* Icon inner container: el-211 */
+.fresha-card__icon-inner {
+  height: 48px;
+  width: 48px;
+}
+
+/* Icon pointer blocker: el-212 */
+.fresha-card__icon-overlay {
+  display: inline-flex;
+  vertical-align: top;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  pointer-events: none;
+}
+
+/* Icon circle: el-213 */
+.fresha-card__icon-circle {
+  align-items: center;
+  background-color: rgba(19, 19, 19, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  display: flex;
+  flex-direction: column;
+  height: 48px;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: none;
+  position: relative;
+  width: 48px;
+  box-sizing: border-box;
+}
+
+/* Icon SVG container: el-214 */
+.fresha-card__icon-svg-wrap {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 46px;
+  width: 46px;
+  border-radius: 8px;
+}
+
+/* Icon span: el-215 */
+.fresha-card__icon-span {
+  display: flex;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+.fresha-card__icon-span svg {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* Green icon fill (e.g. Performance dashboard) */
+.fresha-card__icon-span--green svg {
+  fill: rgb(13, 13, 13);
+}
+
+.fresha-card__icon-span--green svg path {
+  fill: rgb(31, 137, 0);
+}
+
+/* Purple icon fill (e.g. Premium cards) */
+.fresha-card__icon-span--purple svg {
+  fill: rgb(13, 13, 13);
+}
+
+.fresha-card__icon-span--purple svg path {
+  fill: rgb(105, 80, 243);
+}
+
+/* Card main content: el-219 → el-223 */
+.fresha-card__main {
+  display: grid;
+  grid-template-rows: 48px;
+  height: 48px;
+}
+
+.fresha-card__main-inner {
+  align-items: center;
+  display: grid;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-template-rows: 48px;
+  height: 48px;
+  justify-items: left;
+}
+
+.fresha-card__main-content {
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  padding-left: 2px;
+  gap: 8px;
+}
+
+.fresha-card__main-text-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  overflow-wrap: break-word;
+}
+
+/* Card title: el-222 */
+.fresha-card__title {
+  font-size: 15px;
+  font-weight: 600;
+  height: 20px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  margin: 0;
+  color: rgb(13, 13, 13);
+}
+
+/* Card description: el-223 */
+.fresha-card__desc {
+  color: rgb(118, 118, 118);
+  font-size: 15px;
+  font-weight: 400;
+  height: 20px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+/* Card suffix area: el-224+ */
+.fresha-card__suffix {
+  grid-area: suffix;
+  display: grid;
+  grid-template-rows: 48px;
+  height: 48px;
+  margin-left: 12px;
+  align-items: center;
+}
+
+.fresha-card__suffix-inner {
+  align-items: center;
+  display: grid;
+  grid-auto-flow: column;
+  grid-row-start: 1;
+  justify-items: center;
+  height: 48px;
+  gap: 12px;
+}
+
+/* Premium badge: el-258, el-259 */
+.fresha-card__premium-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(240, 240, 255);
+  box-shadow: rgb(219, 221, 255) 0px 0px 0px 1px inset;
+  border-radius: 999px;
+  color: rgb(105, 80, 243);
+  font-size: 13px;
+  font-weight: 500;
+  gap: 4px;
+  height: 24px;
+  min-height: 24px;
+  min-width: 24px;
+  padding: 0 12px;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.fresha-card__premium-text {
+  color: rgb(105, 80, 243);
+  font-size: 13px;
+  font-weight: 500;
+  height: 16px;
+  line-height: 16px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Star button (favourite): el-261 → el-268 */
+.fresha-card__star-btn {
+  align-items: center;
+  appearance: button;
+  background: transparent;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  height: 48px;
+  min-width: 48px;
+  width: 48px;
+  justify-content: center;
+  outline: 2px solid rgba(0, 0, 0, 0);
+  outline-offset: 2px;
+  position: relative;
+  text-align: center;
+  transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+  padding: 0;
+}
+
+.fresha-card__star-btn-inner {
+  align-items: center;
+  background-color: rgba(19, 19, 19, 0);
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 999px;
+  display: flex;
+  height: 48px;
+  justify-content: center;
+  min-width: 48px;
+  padding: 0 19px;
+  gap: 8px;
+  scale: 1;
+  transition: background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+    scale 0.1s cubic-bezier(0, 0.55, 0.45, 1);
+  box-sizing: border-box;
+}
+
+.fresha-card__star-btn:hover .fresha-card__star-btn-inner {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.fresha-card__star-btn:active .fresha-card__star-btn-inner {
+  background-color: rgba(0, 0, 0, 0.06);
+  scale: 0.96;
+}
+
+.fresha-card__star-icon {
+  display: flex;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+.fresha-card__star-icon svg {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  fill: rgb(13, 13, 13);
+}
+
+/* Card bottom border (hidden): el-235, etc. */
+.fresha-card__border {
+  display: none;
+}

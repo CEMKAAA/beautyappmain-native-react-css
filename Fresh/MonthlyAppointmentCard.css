@@ -1,0 +1,67 @@
+/* ═══════════════════════════════════════════════════════════
+   Monthly Appointment Card — Fresha-Exact Styles
+   Extracted from computed-styles.json for future use
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── Appointment Card ─── */
+.month-appt {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background-color: rgb(165, 223, 248);
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(13, 13, 13);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 22px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Completed appointment */
+.month-appt.is-completed {
+    background-color: rgb(222, 227, 231);
+}
+
+/* Blocked time */
+.month-appt.is-blocked {
+    background-color: rgb(164, 173, 186);
+    color: rgb(255, 255, 255);
+}
+
+/* No-show */
+.month-appt.is-noshow {
+    background-color: rgb(253, 219, 216);
+}
+
+.month-appt-time {
+    font-weight: 600;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.month-appt-name {
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ─── "X more" Button ─── */
+.month-more {
+    display: flex;
+    align-items: center;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(105, 80, 243);
+    cursor: pointer;
+    min-height: 22px;
+}
+
+.month-more:hover {
+    text-decoration: underline;
+}

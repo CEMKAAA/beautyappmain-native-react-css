@@ -1,0 +1,965 @@
+/* ==============================================
+   DASHBOARD LAYOUT — Fresha-Exact Clone
+   Header (nvh__wrapper) + Sidebar (nvr__wrapper) + Content
+   ============================================== */
+
+/* ---------- Global Reset/Constraint ---------- */
+html,
+body,
+#root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* Force no scroll on body */
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ==========================================================
+   HEADER / TOPBAR — Fresha (nvh__wrapper) exact clone
+   ========================================================== */
+.topbar {
+    min-height: 56px;
+    padding: 8px 32px 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-bg-card);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 110;
+    flex-shrink: 0;
+    isolation: isolate;
+    box-sizing: border-box;
+}
+
+/* ── Logo (left side) ── */
+.topbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.topbar-logo-icon {
+    font-size: var(--typo-ml);
+}
+
+.topbar-logo-text {
+    font-size: var(--typo-m);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: var(--color-text);
+}
+
+/* ── Right side actions ── */
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+/* ── Header icon buttons (Fresha: nvhi__wrapper) ── */
+.topbar-icon-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text);
+    padding: 0;
+    transition: scale 0.15s ease-out, background-color 0.15s ease-out;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .topbar-icon-btn:hover {
+        background-color: rgba(0, 0, 0, 0.06);
+    }
+}
+
+.topbar-icon-btn:active {
+    scale: 0.92;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.topbar-icon {
+    display: inline-flex;
+    width: 28px;
+    height: 28px;
+}
+
+.topbar-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* ── User / Profile avatar (Fresha: nvha__wrapper) ── */
+.topbar-user {
+    cursor: pointer;
+    padding-left: 8px;
+}
+
+.topbar-user-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 999px;
+    background: var(--color-primary-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: var(--typo-s);
+    border: 1px solid var(--color-border);
+    transition: scale 0.15s ease-out, background-color 0.15s ease-out;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.topbar-user-avatar:active {
+    scale: 0.92;
+}
+
+.topbar-menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    margin-right: 8px;
+}
+
+.topbar-menu-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--color-text);
+    border-radius: 2px;
+}
+
+/* ---------- Body (sidebar + content) ---------- */
+.layout-body {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+}
+
+/* ==========================================================
+   SIDEBAR — Fresha Navigation Rail (nvr__wrapper) exact clone
+   ========================================================== */
+.sidebar {
+    width: 72px;
+    max-width: 72px;
+    background-color: #0D0D0D;
+    border-right: 1px solid rgb(229, 229, 229);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 65px;
+    left: 0;
+    bottom: 0;
+    z-index: 725;
+    padding-block: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Sidebar scrollable area (nvr__scrollable) */
+.sidebar-scroll {
+    flex: 1;
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Custom scrollbar — Fresha style */
+.sidebar-scroll::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-scroll::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+/* Sidebar content layout (nvr__content) */
+.sidebar-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ---------- Sidebar Nav ---------- */
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* ---------- Sidebar Bottom / Footer (nvr__footer) ---------- */
+.sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 8px;
+}
+
+/* ==========================================================
+   SIDEBAR LINK — Touch target (nvri__touch-target) exact clone
+   ========================================================== */
+
+/* Touch target — the full clickable area */
+.sidebar-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    padding-block: 4px;
+    text-decoration: none;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    line-height: 16.1px;
+    outline-color: rgba(0, 0, 0, 0);
+    outline-offset: 2px;
+    outline-style: solid;
+    outline-width: 2px;
+}
+
+/* Icon wrapper — the visible rounded box (nvri__wrapper) */
+.sidebar-link-icon-wrap {
+    height: 44px;
+    width: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 8px;
+    background-color: transparent;
+    transition: scale 0.2s cubic-bezier(0, 0.55, 0.45, 1), background-color 0.2s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+/* Hover — subtle white overlay */
+@media (hover: hover) and (pointer: fine) {
+    .sidebar-link:hover .sidebar-link-icon-wrap {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Active (pressed) — scale down */
+.sidebar-link:active .sidebar-link-icon-wrap {
+    scale: 0.92;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Selected / Active page — accent background (#6950f3) */
+.sidebar-link--active .sidebar-link-icon-wrap {
+    background-color: #6950f3;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .sidebar-link--active:hover .sidebar-link-icon-wrap {
+        background-color: #5c4ace;
+    }
+}
+
+.sidebar-link--active:active .sidebar-link-icon-wrap {
+    background-color: #403591;
+}
+
+/* Icon itself */
+.sidebar-link-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    color: #fff;
+}
+
+.sidebar-link-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+}
+
+/* Active icon uses accent-on color (white on purple) */
+.sidebar-link--active .sidebar-link-icon {
+    color: #fff;
+}
+
+/* Hide text labels — icon-only mode */
+.sidebar-link-label {
+    display: none;
+}
+
+/* Home link extra top padding (JSON el-5: padding-top:9px) */
+.sidebar-nav>.sidebar-link-outer:first-child {
+    padding-top: 9px;
+}
+
+/* Wrapper divs (JSON el-5/el-6, el-12/el-13, el-19/el-20 etc.) */
+.sidebar-link-outer {
+    height: 52px;
+    width: 72px;
+}
+
+.sidebar-link-inner {
+    height: 52px;
+    width: 72px;
+}
+
+/* Divider between Home and other icons (JSON el-14 → el-17) */
+.sidebar-divider {
+    width: 72px;
+    height: 25px;
+    padding: 12px 22px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-divider-line {
+    width: 28px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Notification badge (JSON el-67 → el-68) */
+.sidebar-badge {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background-color: rgb(105, 80, 243);
+    pointer-events: none;
+}
+
+/* ---------- Tooltip on hover ---------- */
+.sidebar-link::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: calc(100% + 8px);
+    top: 50%;
+    transform: translateY(-50%);
+    background: #1a1a1a;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: var(--typo-xs);
+    font-weight: 500;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    z-index: 200;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-link:hover::after {
+    opacity: 1;
+}
+
+
+/* ==========================================================
+   SIDEBAR HELP BUTTON — same style as sidebar-link
+   ========================================================== */
+.sidebar-help {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    padding-block: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    color: inherit;
+}
+
+.sidebar-help .sidebar-link-icon-wrap {
+    height: 44px;
+    width: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 8px;
+    background-color: transparent;
+    transition: scale 0.2s cubic-bezier(0, 0.55, 0.45, 1), background-color 0.2s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .sidebar-help:hover .sidebar-link-icon-wrap {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+.sidebar-help:active .sidebar-link-icon-wrap {
+    scale: 0.92;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-help .sidebar-link-icon {
+    color: #fff;
+}
+
+.sidebar-help::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: calc(100% + 8px);
+    top: 50%;
+    transform: translateY(-50%);
+    background: #1a1a1a;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: var(--typo-xs);
+    font-weight: 500;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    z-index: 200;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-help:hover::after {
+    opacity: 1;
+}
+
+.sidebar-help .sidebar-link-label {
+    display: none;
+}
+
+/* ---------- Focus ring (util-focusRing) ---------- */
+.sidebar-link-icon-wrap::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    opacity: 0;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    padding: 2px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.sidebar-link:focus-visible .sidebar-link-icon-wrap::before,
+.sidebar-help:focus-visible .sidebar-link-icon-wrap::before {
+    opacity: 1;
+}
+
+/* ==========================================================
+   SUBMENU PANEL — exact clone from computed-styles.json
+   el-0 through el-36
+   ========================================================== */
+
+/* el-99: animation wrapper (nvm__animation-wrapper)
+   position:absolute, top:65, left:72, bottom:0, w:230
+   overflow:visible so button peeks out, z:718
+   NO translateX — container width handles open/close */
+.submenu-animation-wrapper {
+    position: absolute;
+    top: 65px;
+    left: 72px;
+    bottom: 0;
+    width: 230px;
+    overflow: visible;
+    padding-right: 22px;
+    z-index: 718;
+    pointer-events: none;
+    transition: transform 0.3s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+/* el-100: wrapper (nvm__wrapper)
+   position:relative, w:208, h:100%, z:745
+   NO background — container has it (so collapsed state is transparent) */
+.submenu-wrapper {
+    position: relative;
+    width: 208px;
+    height: 100%;
+    z-index: 745;
+    transition:
+        opacity 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        transform 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+/* el-101: button wrapper (nvm__button-wrapper)
+   position:absolute INSIDE submenu-wrapper (el-100).
+   Button center = left value (due to translateX(-18) + 18 half-width)
+   CLOSED: left=0 → center at x=0 → aligned with container border-right at width=0
+   OPEN:   left=208 → center at x=208 → aligned with container border-right at width=208
+   Both transition at 0.5s → line and circle ALWAYS together */
+.submenu-btn-wrapper {
+    position: absolute;
+    top: 18px;
+    left: 24px;
+    width: 36px;
+    height: 36px;
+    transform: translateX(-18px);
+    z-index: 750;
+    transition: left 0.5s cubic-bezier(0.85, 0, 0.15, 1);
+    pointer-events: auto;
+}
+
+.submenu-btn-wrapper--open {
+    left: 208px;
+}
+
+/* el-114: container (nvm__container)
+   DEFAULT = CLOSED: w:0, max-w:0, padding-inline:0
+   --open = w:208, max-w:208, padding:24px 8px 0 8px
+   border-right always present — at width=0 it sits at button center
+   bg:white so collapsed state is transparent wrapper
+   transition: width/max-width/padding-inline 0.5s (synced with button) */
+.submenu-container {
+    width: 24px;
+    max-width: 24px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-right: 1px solid rgb(229, 229, 229);
+    overflow: hidden;
+    padding: 24px 0 0 0;
+    box-sizing: border-box;
+    transition:
+        width 0.5s cubic-bezier(0.85, 0, 0.15, 1),
+        max-width 0.5s cubic-bezier(0.85, 0, 0.15, 1),
+        padding-inline 0.5s cubic-bezier(0.85, 0, 0.15, 1),
+        box-shadow 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.submenu-container--open {
+    width: 208px;
+    max-width: 208px;
+    padding: 24px 8px 0 8px;
+    pointer-events: auto;
+}
+
+/* el-3: collapse/expand button
+   36x36, border-radius:999px, inline-flex, align-items:center
+   transition: max-inline-size 0.2s */
+.submenu-collapse-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    max-width: 100%;
+    border-radius: 999px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+    outline-color: rgba(0, 0, 0, 0);
+    outline-offset: 2px;
+    outline-style: solid;
+    outline-width: 2px;
+    text-align: center;
+    line-height: 16.1px;
+    transition: max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+/* el-3 ::before — focus ring */
+.submenu-collapse-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.submenu-collapse-btn:focus-visible::before {
+    opacity: 1;
+}
+
+/* el-4: button inner (visible circle)
+   36x36, bg:white, border:1px solid #d3d3d3, border-radius:999px
+   display:flex, jc:center, ai:center, gap:8, min-w:36, px:15
+   scale:1, transition: bg-color/border-color/transform 0.1s
+   hover → bg:rgba(0,0,0,0.04)  active → scale:0.96 bg:rgba(0,0,0,0.08) */
+.submenu-collapse-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    max-width: 100%;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 999px;
+    gap: 8px;
+    min-width: 36px;
+    padding-left: 15px;
+    padding-right: 15px;
+    scale: 1;
+    text-align: center;
+    line-height: 14.95px;
+    box-sizing: border-box;
+    transition:
+        background-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        border-color 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        transform 0.1s cubic-bezier(0, 0.55, 0.45, 1),
+        max-inline-size 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        padding 0.2s cubic-bezier(0.85, 0, 0.15, 1),
+        gap 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .submenu-collapse-inner:hover {
+        background-color: rgba(0, 0, 0, 0.04);
+        border-color: rgba(0, 0, 0, 0.2);
+    }
+}
+
+.submenu-collapse-inner:active {
+    scale: 0.96;
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+/* el-5/6: screen reader only (sr_true) */
+.submenu-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* el-7: icon outer wrapper — inline-flex 20x20 */
+.submenu-collapse-icon {
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    position: relative;
+    color: rgb(13, 13, 13);
+    transition: transform 0.2s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+/* Flip chevron to point right (>) when panel is collapsed */
+.submenu-collapse-icon--expand {
+    transform: rotate(180deg);
+}
+
+/* el-8/el-13: svg styling */
+.submenu-collapse-icon svg {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+
+
+/* el-16: menu (nvm__menu)
+   w:192, min-w:192
+   transition: opacity 0.2s (delay 0.2s), transform 0.5s */
+.submenu-menu {
+    width: 192px;
+    min-width: 192px;
+    opacity: 0;
+    transform: translateX(-28.8px);
+    transition:
+        opacity 0.2s cubic-bezier(0.85, 0, 0.15, 1) 0.2s,
+        transform 0.5s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.submenu-menu--open {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* el-17: menu list — flex column, w:192 */
+.submenu-menu-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 192px;
+}
+
+/* el-18: section header ("Sales")
+   17px, fw:600, lh:24, h:24, mb:8, px:16, w:192 */
+.submenu-header {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    height: 24px;
+    margin: 0;
+    margin-bottom: 8px;
+    padding: 0 16px;
+    width: 192px;
+    box-sizing: border-box;
+}
+
+/* el-19 pattern: item wrapper — flex column, h:44, w:192 */
+.submenu-item {
+    display: flex;
+    flex-direction: column;
+    height: 44px;
+    width: 192px;
+}
+
+/* el-20 pattern: nav link (nvmi__wrapper)
+   bg:transparent, border-radius:8, h:44, px:16, py:12, gap:12
+   position:relative, w:192
+   transition: bg-color 0.2s cubic-bezier(0,0.55,0.45,1) */
+.submenu-link {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 44px;
+    padding: 12px 16px;
+    position: relative;
+    column-gap: 12px;
+    row-gap: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    width: 192px;
+    box-sizing: border-box;
+    transition: background-color 0.2s cubic-bezier(0, 0.55, 0.45, 1);
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* el-20 ::before — focus ring */
+.submenu-link::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+    opacity: 0;
+    padding: 2px;
+    transition: opacity 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.submenu-link:focus-visible::before {
+    opacity: 1;
+}
+
+/* Hover/active — from interactiveRules */
+@media (hover: hover) and (pointer: fine) {
+    .submenu-link:hover {
+        background-color: rgba(19, 19, 19, 0.04);
+    }
+}
+
+.submenu-link:active {
+    background-color: rgba(19, 19, 19, 0.08);
+}
+
+/* el-26: selected state — bg: rgb(240,240,255) */
+.submenu-link--selected {
+    background-color: rgb(240, 240, 255);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .submenu-link--selected:hover {
+        background-color: rgb(240, 240, 255);
+    }
+}
+
+.submenu-link--selected:active {
+    background-color: rgb(240, 240, 255);
+}
+
+/* el-21 pattern: link text — 15px fw:500 h:20 w:160 */
+.submenu-link-text {
+    font-size: 15px;
+    font-weight: 500;
+    height: 20px;
+    width: 160px;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* ==========================================================
+   CONTENT WRAPPER — holds placeholder + main content
+   ========================================================== */
+.content-wrapper {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    margin-left: 72px;
+}
+
+/* Placeholder div — pushes content when submenu opens */
+.submenu-placeholder {
+    width: 0;
+    flex-shrink: 0;
+    transition: width 0.5s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.submenu-placeholder--open {
+    width: 208px;
+}
+
+.submenu-placeholder--collapsed {
+    width: 24px;
+}
+
+/* ---------- Main Content ---------- */
+.main-content {
+    flex: 1;
+    padding: 0;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: 0;
+    min-width: 0;
+}
+
+.main-content--full {
+    padding: 0;
+    overflow: hidden;
+}
+
+/* ---------- Overlay ---------- */
+.sidebar-overlay {
+    display: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    .topbar-menu-btn {
+        display: flex;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar--open {
+        transform: translateX(0);
+        width: 240px;
+        max-width: 240px;
+        padding: 12px;
+    }
+
+    .sidebar--open .sidebar-link {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 6px 14px;
+        gap: 12px;
+    }
+
+    .sidebar--open .sidebar-link-icon-wrap {
+        width: auto;
+        height: auto;
+        background-color: transparent !important;
+        border-radius: 0;
+    }
+
+    .sidebar--open .sidebar-link--active {
+        background: rgba(105, 80, 243, 0.15);
+        border-radius: 8px;
+    }
+
+    .sidebar--open .sidebar-link-label {
+        display: inline;
+        color: #fff;
+        font-size: var(--typo-s);
+        font-weight: 500;
+    }
+
+    .sidebar--open .sidebar-link::after {
+        display: none;
+    }
+
+    .sidebar--open .sidebar-help {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 6px 14px;
+        gap: 12px;
+    }
+
+    .sidebar--open .sidebar-help .sidebar-link-icon-wrap {
+        width: auto;
+        height: auto;
+        background-color: transparent !important;
+        border-radius: 0;
+    }
+
+    .sidebar--open .sidebar-help .sidebar-link-label {
+        display: inline;
+        color: #fff;
+        font-size: var(--typo-s);
+        font-weight: 500;
+    }
+
+    .sidebar--open .sidebar-help::after {
+        display: none;
+    }
+
+    .sidebar-overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        top: 64px;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 99;
+    }
+
+    .content-wrapper {
+        margin-left: 0;
+    }
+
+    .main-content {
+        padding: 16px;
+    }
+}
+
+/* ---------- Button Small ---------- */
+.btn-sm {
+    padding: 6px 14px;
+    font-size: var(--typo-xs);
+}
