@@ -1,0 +1,4609 @@
+.ara-shell {
+  --safeAreaInsetTop: 0px;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --transition-duration: .2s;
+  --border-width-var: 1px;
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --sizing-var: 48px;
+  --sizing-var-1: 24px;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --duration-var-1: .2s;
+  --display-default: flex;
+  --direction-default: column;
+}
+
+.ara-el-0 {
+  display: flex;
+  min-height: 100vh;
+  overflow-y: visible;
+}
+
+.ara-el-0::before {
+  height: auto;
+  width: auto;
+}
+
+.ara-el-0::after {
+  height: auto;
+  width: auto;
+}
+
+.ara-el-1 {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 100%;
+  width: 960px;
+}
+
+.ara-el-1::before {
+  height: auto;
+  width: auto;
+}
+
+.ara-el-1::after {
+  height: auto;
+  width: auto;
+}
+
+.ara-el-2 {
+  align-items: center;
+  background-position: 0px 0px;
+  display: flex;
+  height: 56px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: sticky;
+  top: 0px;
+  width: 960px;
+  z-index: 1;
+}
+
+.ara-el-2::before {
+  height: auto;
+  width: auto;
+  --safeAreaInsetTop: 0px;
+}
+
+.ara-el-2::after {
+  height: auto;
+  width: auto;
+  --safeAreaInsetTop: 0px;
+}
+
+.ara-el-3 {
+  align-items: center;
+  display: grid;
+  grid-template-areas: "ls c rs";
+  grid-template-columns: 380.797px 539.203px 0px;
+  grid-template-rows: 56px;
+  height: 88px;
+  padding-top: 32px;
+  width: 920px;
+}
+
+.ara-el-3::before {
+  height: auto;
+  width: auto;
+  --safeAreaInsetTop: 0px;
+}
+
+.ara-el-3::after {
+  height: auto;
+  width: auto;
+  --safeAreaInsetTop: 0px;
+}
+
+.ara-el-4 {
+  grid-column-end: ls;
+  grid-column-start: ls;
+  grid-row-end: ls;
+  grid-row-start: ls;
+  height: 24px;
+  justify-content: flex-start;
+  padding-right: 16px;
+  width: 380.797px;
+}
+
+.ara-el-4::before {
+  display: inline;
+  height: auto;
+  width: auto;
+  --safeAreaInsetTop: 0px;
+}
+
+.ara-el-4::after {
+  display: inline;
+  height: auto;
+  width: auto;
+  --safeAreaInsetTop: 0px;
+}
+
+.ara-el-5 {
+  bottom: 0px;
+  cursor: pointer;
+  height: 24px;
+  left: 0px;
+  line-height: 0px;
+  position: relative;
+  right: 0px;
+  top: 0px;
+  width: 364.797px;
+}
+
+.ara-el-5::before {
+  cursor: pointer;
+  display: inline;
+  height: auto;
+  line-height: 0px;
+  width: auto;
+  --safeAreaInsetTop: 0px;
+}
+
+.ara-el-5::after {
+  cursor: pointer;
+  display: inline;
+  height: auto;
+  line-height: 0px;
+  width: auto;
+  --safeAreaInsetTop: 0px;
+}
+
+.ara-el-6 {
+  bottom: 0px;
+  cursor: pointer;
+  display: inline-flex;
+  flex-shrink: 0;
+  height: 24px;
+  left: 0px;
+  line-height: 0px;
+  position: relative;
+  right: 0px;
+  top: 0px;
+  width: 24px;
+}
+
+.ara-el-6::before {
+  cursor: pointer;
+  height: auto;
+  line-height: 0px;
+  width: auto;
+  --safeAreaInsetTop: 0px;
+}
+
+.ara-el-6::after {
+  cursor: pointer;
+  height: auto;
+  line-height: 0px;
+  width: auto;
+  --safeAreaInsetTop: 0px;
+}
+
+.ara-el-7 {
+  cursor: pointer;
+  display: none;
+  height: auto;
+  line-height: 0px;
+  width: auto;
+}
+
+.ara-el-7::before {
+  cursor: pointer;
+  display: inline;
+  height: auto;
+  line-height: 0px;
+  width: auto;
+  --safeAreaInsetTop: 0px;
+}
+
+.ara-el-7::after {
+  cursor: pointer;
+  display: inline;
+  height: auto;
+  line-height: 0px;
+  width: auto;
+  --safeAreaInsetTop: 0px;
+}
+
+.ara-el-8 {
+  cursor: pointer;
+  fill: rgb(13, 13, 13);
+  height: auto;
+  left: 0px;
+  line-height: 0px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: absolute;
+  top: 0px;
+  width: auto;
+}
+
+.ara-el-8::before {
+  cursor: pointer;
+  display: inline;
+  fill: rgb(13, 13, 13);
+  height: auto;
+  line-height: 0px;
+  width: auto;
+  --safeAreaInsetTop: 0px;
+}
+
+.ara-el-8::after {
+  cursor: pointer;
+  display: inline;
+  fill: rgb(13, 13, 13);
+  height: auto;
+  line-height: 0px;
+  width: auto;
+  --safeAreaInsetTop: 0px;
+}
+
+.ara-el-9 {
+  clip-rule: evenodd;
+  cursor: pointer;
+  d: path("M 17.293 6.293 A 1 1 0 0 1 18.707 6.293 L 27.707 15.293 A 1 1 0 0 1 27.707 16.707 L 18.707 25.707 A 1 1 0 0 1 17.293 24.293 L 24.586 17 H 5 A 1 1 0 1 1 5 15 H 24.586 L 17.293 7.707 A 1 1 0 0 1 17.293 6.293");
+  display: inline;
+  fill: rgb(13, 13, 13);
+  fill-rule: evenodd;
+  height: auto;
+  line-height: 0px;
+  width: auto;
+}
+
+.ara-el-9::before {
+  clip-rule: evenodd;
+  cursor: pointer;
+  display: inline;
+  fill: rgb(13, 13, 13);
+  fill-rule: evenodd;
+  height: auto;
+  line-height: 0px;
+  width: auto;
+  --safeAreaInsetTop: 0px;
+}
+
+.ara-el-9::after {
+  clip-rule: evenodd;
+  cursor: pointer;
+  display: inline;
+  fill: rgb(13, 13, 13);
+  fill-rule: evenodd;
+  height: auto;
+  line-height: 0px;
+  width: auto;
+  --safeAreaInsetTop: 0px;
+}
+
+.ara-el-10 {
+  cursor: pointer;
+  height: 24px;
+  line-height: 0px;
+  width: 0px;
+}
+
+.ara-el-10::before {
+  cursor: pointer;
+  display: inline;
+  height: auto;
+  line-height: 0px;
+  width: auto;
+  --safeAreaInsetTop: 0px;
+}
+
+.ara-el-10::after {
+  cursor: pointer;
+  display: inline;
+  height: auto;
+  line-height: 0px;
+  width: auto;
+  --safeAreaInsetTop: 0px;
+}
+
+.ara-el-11 {
+  bottom: 0px;
+  cursor: pointer;
+  fill: rgb(13, 13, 13);
+  height: 24px;
+  left: 0px;
+  line-height: 0px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 24px;
+}
+
+.ara-el-11::before {
+  cursor: pointer;
+  display: inline;
+  fill: rgb(13, 13, 13);
+  height: auto;
+  line-height: 0px;
+  width: auto;
+  --safeAreaInsetTop: 0px;
+}
+
+.ara-el-11::after {
+  cursor: pointer;
+  display: inline;
+  fill: rgb(13, 13, 13);
+  height: auto;
+  line-height: 0px;
+  width: auto;
+  --safeAreaInsetTop: 0px;
+}
+
+.ara-el-12 {
+  clip-rule: evenodd;
+  cursor: pointer;
+  d: path("M 14.707 6.293 A 1 1 0 0 1 14.707 7.707 L 7.414 15 H 27 A 1 1 0 1 1 27 17 H 7.414 L 14.707 24.293 A 1 1 0 0 1 13.293 25.707 L 4.293 16.707 A 1 1 0 0 1 4.293 15.293 L 13.293 6.293 A 1 1 0 0 1 14.707 6.293");
+  display: inline;
+  fill: rgb(13, 13, 13);
+  fill-rule: evenodd;
+  height: auto;
+  line-height: 0px;
+  width: auto;
+}
+
+.ara-el-12::before {
+  clip-rule: evenodd;
+  cursor: pointer;
+  display: inline;
+  fill: rgb(13, 13, 13);
+  fill-rule: evenodd;
+  height: auto;
+  line-height: 0px;
+  width: auto;
+  --safeAreaInsetTop: 0px;
+}
+
+.ara-el-12::after {
+  clip-rule: evenodd;
+  cursor: pointer;
+  display: inline;
+  fill: rgb(13, 13, 13);
+  fill-rule: evenodd;
+  height: auto;
+  line-height: 0px;
+  width: auto;
+  --safeAreaInsetTop: 0px;
+}
+
+.ara-el-13 {
+  font-size: 17px;
+  font-weight: 600;
+  height: 24px;
+  line-height: 24px;
+  max-width: 100%;
+  opacity: 0;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  text-wrap-mode: nowrap;
+  transition-duration: 0.2s;
+  transition-property: opacity;
+  width: 539.203px;
+}
+
+.ara-el-13::before {
+  display: inline;
+  font-size: 17px;
+  font-weight: 600;
+  height: auto;
+  line-height: 24px;
+  overflow-wrap: break-word;
+  text-wrap-mode: nowrap;
+  width: auto;
+  --safeAreaInsetTop: 0px;
+}
+
+.ara-el-13::after {
+  display: inline;
+  font-size: 17px;
+  font-weight: 600;
+  height: auto;
+  line-height: 24px;
+  overflow-wrap: break-word;
+  text-wrap-mode: nowrap;
+  width: auto;
+  --safeAreaInsetTop: 0px;
+}
+
+.ara-el-14 {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 855px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 960px;
+}
+
+.ara-el-14::before {
+  height: auto;
+  width: auto;
+}
+
+.ara-el-14::after {
+  height: auto;
+  width: auto;
+}
+
+.ara-el-15 {
+  box-sizing: content-box;
+  display: flex;
+  flex-grow: 1;
+  height: 699px;
+  justify-content: center;
+  transition-duration: 0.4s;
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+  width: 920px;
+}
+
+.ara-el-15::before {
+  height: auto;
+  width: auto;
+}
+
+.ara-el-15::after {
+  height: auto;
+  width: auto;
+}
+
+.ara-el-16 {
+  display: flex;
+  flex-direction: column;
+  height: 699px;
+  max-width: 100%;
+  min-height: 100%;
+  width: 420px;
+}
+
+.ara-el-16::before {
+  height: auto;
+  width: auto;
+}
+
+.ara-el-16::after {
+  height: auto;
+  width: auto;
+}
+
+.ara-el-17 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 96px;
+  padding-bottom: 40px;
+  text-align: center;
+  width: 420px;
+}
+
+.ara-el-17::before {
+  height: auto;
+  text-align: center;
+  width: auto;
+}
+
+.ara-el-17::after {
+  height: auto;
+  text-align: center;
+  width: auto;
+}
+
+.ara-el-18 {
+  font-size: 24px;
+  font-weight: 600;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  width: 280.078px;
+}
+
+.ara-el-18::before {
+  display: inline;
+  font-size: 24px;
+  font-weight: 600;
+  height: auto;
+  line-height: 32px;
+  text-align: center;
+  width: auto;
+}
+
+.ara-el-18::after {
+  display: inline;
+  font-size: 24px;
+  font-weight: 600;
+  height: auto;
+  line-height: 32px;
+  text-align: center;
+  width: auto;
+}
+
+.ara-el-19 {
+  color: rgb(118, 118, 118);
+  font-size: 15px;
+  height: 24px;
+  outline-color: rgb(118, 118, 118);
+  padding-top: 4px;
+  text-align: center;
+  width: 356.047px;
+  border-color: rgb(118, 118, 118);
+}
+
+.ara-el-19::before {
+  color: rgb(118, 118, 118);
+  display: inline;
+  font-size: 15px;
+  height: auto;
+  outline-color: rgb(118, 118, 118);
+  text-align: center;
+  width: auto;
+  border-color: rgb(118, 118, 118);
+}
+
+.ara-el-19::after {
+  color: rgb(118, 118, 118);
+  display: inline;
+  font-size: 15px;
+  height: auto;
+  outline-color: rgb(118, 118, 118);
+  text-align: center;
+  width: auto;
+  border-color: rgb(118, 118, 118);
+}
+
+.ara-el-20 {
+  height: 417px;
+  width: 420px;
+}
+
+.ara-el-20::before {
+  display: inline;
+  height: auto;
+  width: auto;
+}
+
+.ara-el-20::after {
+  display: inline;
+  height: auto;
+  width: auto;
+}
+
+.ara-el-21 {
+  display: grid;
+  grid-template-columns: 420px;
+  grid-template-rows: 52px 48px 16px 112px 1px 68px;
+  height: 417px;
+  row-gap: 24px;
+  width: 420px;
+}
+
+.ara-el-21::before {
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-21::after {
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-22 {
+  grid-column-start: span 1;
+  height: 52px;
+  width: 420px;
+}
+
+.ara-el-22::before {
+  display: inline;
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-22::after {
+  display: inline;
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-23 {
+  column-gap: 4px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 52px;
+  max-width: 100%;
+  row-gap: 4px;
+  width: 420px;
+}
+
+.ara-el-23::before {
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-23::after {
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-24 {
+  cursor: default;
+  display: flex;
+  justify-content: space-between;
+  width: 420px;
+}
+
+.ara-el-24::before {
+  cursor: default;
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-24::after {
+  cursor: default;
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-25 {
+  cursor: default;
+  font-size: 15px;
+  font-weight: 600;
+  width: 0px;
+}
+
+.ara-el-25::before {
+  cursor: default;
+  display: inline;
+  font-size: 15px;
+  font-weight: 600;
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-25::after {
+  cursor: default;
+  display: inline;
+  font-size: 15px;
+  font-weight: 600;
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-26 {
+  column-gap: 8px;
+  display: flex;
+  flex-grow: 1;
+  height: 48px;
+  row-gap: 8px;
+  width: 420px;
+}
+
+.ara-el-26::before {
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-26::after {
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-27 {
+  background-color: rgb(255, 255, 255);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  bottom: 0px;
+  display: flex;
+  flex-grow: 1;
+  height: 48px;
+  left: 0px;
+  max-height: 48px;
+  position: relative;
+  right: 0px;
+  top: 0px;
+  transition-behavior: normal, normal;
+  transition-delay: 0s, 0s;
+  transition-duration: 0.1s, 0.1s;
+  transition-property: background-color, border-color;
+  transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1), cubic-bezier(0.85, 0, 0.15, 1);
+  width: 420px;
+  border-color: rgb(211, 211, 211);
+}
+
+.ara-el-27::before {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  bottom: -1px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+  height: 48px;
+  left: -1px;
+  opacity: 0;
+  padding-bottom: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  pointer-events: none;
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  transition-duration: 0.1s;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+  width: 420px;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+  --transition-duration: .1s;
+}
+
+.ara-el-27::after {
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-28 {
+  appearance: auto;
+  background-color: rgba(19, 19, 19, 0);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  bottom: 0px;
+  cursor: text;
+  font-size: 15px;
+  height: 46px;
+  left: 0px;
+  outline-color: rgba(0, 0, 0, 0);
+  outline-offset: 2px;
+  outline-style: solid;
+  outline-width: 2px;
+  overflow-x: clip;
+  overflow-y: clip;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  position: relative;
+  right: 0px;
+  top: 0px;
+  width: 418px;
+}
+
+.ara-el-28::before {
+  cursor: text;
+  display: inline;
+  font-size: 15px;
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-28::after {
+  cursor: text;
+  display: inline;
+  font-size: 15px;
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-29 {
+  align-items: center;
+  appearance: button;
+  background-position: 0px 0px;
+  border-bottom-left-radius: 999px;
+  border-bottom-right-radius: 999px;
+  border-top-left-radius: 999px;
+  border-top-right-radius: 999px;
+  bottom: 0px;
+  cursor: pointer;
+  display: flex;
+  height: 48px;
+  left: 0px;
+  line-height: 16.1px;
+  max-width: 100%;
+  outline-color: rgba(0, 0, 0, 0);
+  outline-offset: 2px;
+  outline-style: solid;
+  outline-width: 2px;
+  position: relative;
+  right: 0px;
+  text-align: center;
+  top: 0px;
+  transition-duration: 0.2s;
+  transition-property: max-inline-size;
+  transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+  width: 420px;
+}
+
+.ara-el-29 {
+  --sizing-var: 24px;
+  --sizing-var-1: 48px;
+}
+
+.ara-el-29::before {
+  border-bottom-left-radius: 999px;
+  border-bottom-right-radius: 999px;
+  border-top-left-radius: 999px;
+  border-top-right-radius: 999px;
+  bottom: 0px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+  cursor: pointer;
+  height: 48px;
+  left: 0px;
+  line-height: 16.1px;
+  opacity: 0;
+  padding-bottom: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  top: 0px;
+  transition-duration: 0.1s;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  width: 420px;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --border-width-var: 1px;
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --row-min: 0px;
+  --rowSize: auto;
+  --sizing-var: 24px;
+  --row-max: auto;
+  --sizing-var-1: 48px;
+  --transition-duration: .2s;
+}
+
+.ara-el-29::after {
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --border-width-var: 1px;
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --row-min: 0px;
+  --rowSize: auto;
+  --sizing-var: 24px;
+  --row-max: auto;
+  --sizing-var-1: 48px;
+  --transition-duration: .2s;
+}
+
+.ara-el-30 {
+  align-items: center;
+  background-color: rgb(13, 13, 13);
+  border-bottom-left-radius: 999px;
+  border-bottom-right-radius: 999px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-left-radius: 999px;
+  border-top-right-radius: 999px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  color: rgb(255, 255, 255);
+  column-gap: 8px;
+  cursor: pointer;
+  display: flex;
+  height: 48px;
+  justify-content: center;
+  line-height: 16.1px;
+  max-width: 100%;
+  outline-color: rgb(255, 255, 255);
+  padding-left: 19px;
+  padding-right: 19px;
+  row-gap: 8px;
+  scale: 1;
+  text-align: center;
+  transition-behavior: normal, normal, normal, normal, normal, normal;
+  transition-delay: 0s, 0s, 0s, 0s, 0s, 0s;
+  transition-duration: 0.1s, 0.1s, 0.1s, 0.2s, 0.2s, 0.2s;
+  transition-property: background-color, border-color, scale, max-inline-size, padding, gap;
+  transition-timing-function: cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0.85, 0, 0.15, 1), cubic-bezier(0.85, 0, 0.15, 1), cubic-bezier(0.85, 0, 0.15, 1);
+  width: 420px;
+}
+
+.ara-el-30::before {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  outline-color: rgb(255, 255, 255);
+  text-align: center;
+  width: auto;
+  border-color: rgb(255, 255, 255);
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-30::after {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  outline-color: rgb(255, 255, 255);
+  text-align: center;
+  width: auto;
+  border-color: rgb(255, 255, 255);
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-31 {
+  align-items: center;
+  color: rgb(255, 255, 255);
+  column-gap: 8px;
+  cursor: pointer;
+  display: flex;
+  height: 24px;
+  line-height: 16.1px;
+  outline-color: rgb(255, 255, 255);
+  row-gap: 8px;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-wrap-mode: nowrap;
+  width: 73.6562px;
+  border-color: rgb(255, 255, 255);
+}
+
+.ara-el-31::before {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  outline-color: rgb(255, 255, 255);
+  text-align: center;
+  text-wrap-mode: nowrap;
+  width: auto;
+  border-color: rgb(255, 255, 255);
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-31::after {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  outline-color: rgb(255, 255, 255);
+  text-align: center;
+  text-wrap-mode: nowrap;
+  width: auto;
+  border-color: rgb(255, 255, 255);
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-32 {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  height: 24px;
+  line-height: 24px;
+  max-width: 100%;
+  outline-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-wrap-mode: nowrap;
+  width: 73.6562px;
+  border-color: rgb(255, 255, 255);
+}
+
+.ara-el-32::before {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: inline;
+  font-size: 17px;
+  font-weight: 600;
+  height: auto;
+  line-height: 24px;
+  outline-color: rgb(255, 255, 255);
+  text-align: center;
+  text-wrap-mode: nowrap;
+  width: auto;
+  border-color: rgb(255, 255, 255);
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-32::after {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: inline;
+  font-size: 17px;
+  font-weight: 600;
+  height: auto;
+  line-height: 24px;
+  outline-color: rgb(255, 255, 255);
+  text-align: center;
+  text-wrap-mode: nowrap;
+  width: auto;
+  border-color: rgb(255, 255, 255);
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-33 {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  height: 16px;
+  width: 420px;
+}
+
+.ara-el-33::before {
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-33::after {
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-34 {
+  background-color: rgb(229, 229, 229);
+  height: 1px;
+  width: 184.25px;
+}
+
+.ara-el-34::before {
+  display: inline;
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-34::after {
+  display: inline;
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-35 {
+  bottom: 1px;
+  display: flex;
+  flex-grow: 1;
+  height: 16px;
+  left: 0px;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  right: 0px;
+  top: -1px;
+  width: 51.5px;
+}
+
+.ara-el-35::before {
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-35::after {
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-36 {
+  color: rgb(118, 118, 118);
+  font-size: 13px;
+  height: 16px;
+  line-height: 16px;
+  max-width: 100%;
+  outline-color: rgb(118, 118, 118);
+  overflow-wrap: break-word;
+  text-transform: uppercase;
+  transition-duration: 0.2s;
+  transition-property: color;
+  transition-timing-function: ease-in-out;
+  width: 19.5px;
+  border-color: rgb(118, 118, 118);
+}
+
+.ara-el-36::before {
+  color: rgb(118, 118, 118);
+  display: inline;
+  font-size: 13px;
+  height: auto;
+  line-height: 16px;
+  outline-color: rgb(118, 118, 118);
+  overflow-wrap: break-word;
+  text-transform: uppercase;
+  width: auto;
+  border-color: rgb(118, 118, 118);
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-36::after {
+  color: rgb(118, 118, 118);
+  display: inline;
+  font-size: 13px;
+  height: auto;
+  line-height: 16px;
+  outline-color: rgb(118, 118, 118);
+  overflow-wrap: break-word;
+  text-transform: uppercase;
+  width: auto;
+  border-color: rgb(118, 118, 118);
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-37 {
+  background-color: rgb(229, 229, 229);
+  height: 1px;
+  width: 184.25px;
+}
+
+.ara-el-37::before {
+  display: inline;
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-37::after {
+  display: inline;
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-38 {
+  column-gap: 16px;
+  display: grid;
+  grid-template-columns: 420px;
+  grid-template-rows: 48px 48px;
+  height: 112px;
+  row-gap: 16px;
+  width: 420px;
+}
+
+.ara-el-38 {
+  --itemSize: 1fr;
+}
+
+.ara-el-38::before {
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-38::after {
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-39 {
+  align-items: center;
+  appearance: button;
+  background-position: 0px 0px;
+  border-bottom-left-radius: 999px;
+  border-bottom-right-radius: 999px;
+  border-top-left-radius: 999px;
+  border-top-right-radius: 999px;
+  bottom: 0px;
+  cursor: pointer;
+  display: flex;
+  height: 48px;
+  left: 0px;
+  line-height: 16.1px;
+  max-width: 100%;
+  outline-color: rgba(0, 0, 0, 0);
+  outline-offset: 2px;
+  outline-style: solid;
+  outline-width: 2px;
+  position: relative;
+  right: 0px;
+  text-align: center;
+  top: 0px;
+  transition-duration: 0.2s;
+  transition-property: max-inline-size;
+  transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+  width: 420px;
+}
+
+.ara-el-39 {
+  --itemSize: 1fr;
+  --sizing-var: 24px;
+  --sizing-var-1: 48px;
+}
+
+.ara-el-39::before {
+  border-bottom-left-radius: 999px;
+  border-bottom-right-radius: 999px;
+  border-top-left-radius: 999px;
+  border-top-right-radius: 999px;
+  bottom: 0px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+  cursor: pointer;
+  height: 48px;
+  left: 0px;
+  line-height: 16.1px;
+  opacity: 0;
+  padding-bottom: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  top: 0px;
+  transition-duration: 0.1s;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  width: 420px;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --border-width-var: 1px;
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --row-min: 0px;
+  --rowSize: auto;
+  --sizing-var: 24px;
+  --row-max: auto;
+  --sizing-var-1: 48px;
+  --transition-duration: .2s;
+}
+
+.ara-el-39::after {
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --border-width-var: 1px;
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --row-min: 0px;
+  --rowSize: auto;
+  --sizing-var: 24px;
+  --row-max: auto;
+  --sizing-var-1: 48px;
+  --transition-duration: .2s;
+}
+
+.ara-el-40 {
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-bottom-left-radius: 999px;
+  border-bottom-right-radius: 999px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-left-radius: 999px;
+  border-top-right-radius: 999px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  column-gap: 8px;
+  cursor: pointer;
+  display: flex;
+  height: 48px;
+  justify-content: space-between;
+  line-height: 16.1px;
+  max-width: 100%;
+  padding-left: 19px;
+  padding-right: 19px;
+  row-gap: 8px;
+  scale: 1;
+  text-align: center;
+  transition-behavior: normal, normal, normal, normal, normal, normal;
+  transition-delay: 0s, 0s, 0s, 0s, 0s, 0s;
+  transition-duration: 0.1s, 0.1s, 0.1s, 0.2s, 0.2s, 0.2s;
+  transition-property: background-color, border-color, scale, max-inline-size, padding, gap;
+  transition-timing-function: cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0.85, 0, 0.15, 1), cubic-bezier(0.85, 0, 0.15, 1), cubic-bezier(0.85, 0, 0.15, 1);
+  width: 420px;
+  border-color: rgb(211, 211, 211);
+}
+
+.ara-el-40 {
+  --itemSize: 1fr;
+}
+
+.ara-el-40::before {
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-40::after {
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-41 {
+  cursor: pointer;
+  display: flex;
+  height: 24px;
+  line-height: 16.1px;
+  text-align: center;
+  width: 24px;
+}
+
+.ara-el-41 {
+  --itemSize: 1fr;
+}
+
+.ara-el-41::before {
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-41::after {
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-42 {
+  cursor: pointer;
+  height: 24px;
+  line-height: 16.1px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-align: center;
+  width: 24px;
+}
+
+.ara-el-42 {
+  --itemSize: 1fr;
+}
+
+.ara-el-42::before {
+  cursor: pointer;
+  display: inline;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-42::after {
+  cursor: pointer;
+  display: inline;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-43 {
+  cursor: pointer;
+  display: flex;
+  height: 24px;
+  line-height: 16.1px;
+  max-width: 100%;
+  overflow-x: clip;
+  overflow-y: clip;
+  text-align: center;
+  width: 24px;
+}
+
+.ara-el-43 {
+  --itemSize: 1fr;
+}
+
+.ara-el-43::before {
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-43::after {
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-44 {
+  align-items: center;
+  column-gap: 8px;
+  cursor: pointer;
+  display: flex;
+  height: 24px;
+  line-height: 16.1px;
+  row-gap: 8px;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-wrap-mode: nowrap;
+  width: 196.453px;
+}
+
+.ara-el-44 {
+  --itemSize: 1fr;
+}
+
+.ara-el-44::before {
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  text-wrap-mode: nowrap;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-44::after {
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  text-wrap-mode: nowrap;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-45 {
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  text-wrap-mode: nowrap;
+  width: 196.453px;
+}
+
+.ara-el-45 {
+  --itemSize: 1fr;
+}
+
+.ara-el-45::before {
+  cursor: pointer;
+  display: inline;
+  font-size: 17px;
+  font-weight: 600;
+  height: auto;
+  line-height: 24px;
+  text-align: center;
+  text-wrap-mode: nowrap;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-45::after {
+  cursor: pointer;
+  display: inline;
+  font-size: 17px;
+  font-weight: 600;
+  height: auto;
+  line-height: 24px;
+  text-align: center;
+  text-wrap-mode: nowrap;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-46 {
+  cursor: pointer;
+  display: flex;
+  line-height: 16.1px;
+  text-align: center;
+  width: 24px;
+}
+
+.ara-el-46 {
+  --itemSize: 1fr;
+}
+
+.ara-el-46::before {
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-46::after {
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-47 {
+  cursor: pointer;
+  line-height: 16.1px;
+  text-align: center;
+  width: 24px;
+}
+
+.ara-el-47 {
+  --itemSize: 1fr;
+}
+
+.ara-el-47::before {
+  cursor: pointer;
+  display: inline;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-47::after {
+  cursor: pointer;
+  display: inline;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-48 {
+  align-items: center;
+  appearance: button;
+  background-position: 0px 0px;
+  border-bottom-left-radius: 999px;
+  border-bottom-right-radius: 999px;
+  border-top-left-radius: 999px;
+  border-top-right-radius: 999px;
+  bottom: 0px;
+  cursor: pointer;
+  display: flex;
+  height: 48px;
+  left: 0px;
+  line-height: 16.1px;
+  max-width: 100%;
+  outline-color: rgba(0, 0, 0, 0);
+  outline-offset: 2px;
+  outline-style: solid;
+  outline-width: 2px;
+  position: relative;
+  right: 0px;
+  text-align: center;
+  top: 0px;
+  transition-duration: 0.2s;
+  transition-property: max-inline-size;
+  transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+  width: 420px;
+}
+
+.ara-el-48 {
+  --itemSize: 1fr;
+  --sizing-var: 24px;
+  --sizing-var-1: 48px;
+}
+
+.ara-el-48::before {
+  border-bottom-left-radius: 999px;
+  border-bottom-right-radius: 999px;
+  border-top-left-radius: 999px;
+  border-top-right-radius: 999px;
+  bottom: 0px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+  cursor: pointer;
+  height: 48px;
+  left: 0px;
+  line-height: 16.1px;
+  opacity: 0;
+  padding-bottom: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  top: 0px;
+  transition-duration: 0.1s;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  width: 420px;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --border-width-var: 1px;
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --row-min: 0px;
+  --rowSize: auto;
+  --sizing-var: 24px;
+  --row-max: auto;
+  --sizing-var-1: 48px;
+  --transition-duration: .2s;
+}
+
+.ara-el-48::after {
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --border-width-var: 1px;
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --row-min: 0px;
+  --rowSize: auto;
+  --sizing-var: 24px;
+  --row-max: auto;
+  --sizing-var-1: 48px;
+  --transition-duration: .2s;
+}
+
+.ara-el-49 {
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-bottom-left-radius: 999px;
+  border-bottom-right-radius: 999px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-left-radius: 999px;
+  border-top-right-radius: 999px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  column-gap: 8px;
+  cursor: pointer;
+  display: flex;
+  height: 48px;
+  justify-content: space-between;
+  line-height: 16.1px;
+  max-width: 100%;
+  padding-left: 19px;
+  padding-right: 19px;
+  row-gap: 8px;
+  scale: 1;
+  text-align: center;
+  transition-behavior: normal, normal, normal, normal, normal, normal;
+  transition-delay: 0s, 0s, 0s, 0s, 0s, 0s;
+  transition-duration: 0.1s, 0.1s, 0.1s, 0.2s, 0.2s, 0.2s;
+  transition-property: background-color, border-color, scale, max-inline-size, padding, gap;
+  transition-timing-function: cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0, 0.55, 0.45, 1), cubic-bezier(0.85, 0, 0.15, 1), cubic-bezier(0.85, 0, 0.15, 1), cubic-bezier(0.85, 0, 0.15, 1);
+  width: 420px;
+  border-color: rgb(211, 211, 211);
+}
+
+.ara-el-49 {
+  --itemSize: 1fr;
+}
+
+.ara-el-49::before {
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-49::after {
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-50 {
+  cursor: pointer;
+  display: flex;
+  height: 24px;
+  line-height: 16.1px;
+  text-align: center;
+  width: 24px;
+}
+
+.ara-el-50 {
+  --itemSize: 1fr;
+}
+
+.ara-el-50::before {
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-50::after {
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-51 {
+  cursor: pointer;
+  height: 24px;
+  line-height: 16.1px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-align: center;
+  width: 24px;
+}
+
+.ara-el-51 {
+  --itemSize: 1fr;
+}
+
+.ara-el-51::before {
+  cursor: pointer;
+  display: inline;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-51::after {
+  cursor: pointer;
+  display: inline;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-52 {
+  cursor: pointer;
+  display: flex;
+  height: 24px;
+  line-height: 16.1px;
+  max-width: 100%;
+  overflow-x: clip;
+  overflow-y: clip;
+  text-align: center;
+  width: 24px;
+}
+
+.ara-el-52 {
+  --itemSize: 1fr;
+}
+
+.ara-el-52::before {
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-52::after {
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-53 {
+  align-items: center;
+  column-gap: 8px;
+  cursor: pointer;
+  display: flex;
+  height: 24px;
+  line-height: 16.1px;
+  row-gap: 8px;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-wrap-mode: nowrap;
+  width: 175.656px;
+}
+
+.ara-el-53 {
+  --itemSize: 1fr;
+}
+
+.ara-el-53::before {
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  text-wrap-mode: nowrap;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-53::after {
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  text-wrap-mode: nowrap;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-54 {
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  text-wrap-mode: nowrap;
+  width: 175.656px;
+}
+
+.ara-el-54 {
+  --itemSize: 1fr;
+}
+
+.ara-el-54::before {
+  cursor: pointer;
+  display: inline;
+  font-size: 17px;
+  font-weight: 600;
+  height: auto;
+  line-height: 24px;
+  text-align: center;
+  text-wrap-mode: nowrap;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-54::after {
+  cursor: pointer;
+  display: inline;
+  font-size: 17px;
+  font-weight: 600;
+  height: auto;
+  line-height: 24px;
+  text-align: center;
+  text-wrap-mode: nowrap;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-55 {
+  cursor: pointer;
+  display: flex;
+  line-height: 16.1px;
+  text-align: center;
+  width: 24px;
+}
+
+.ara-el-55 {
+  --itemSize: 1fr;
+}
+
+.ara-el-55::before {
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-55::after {
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-56 {
+  cursor: pointer;
+  line-height: 16.1px;
+  text-align: center;
+  width: 24px;
+}
+
+.ara-el-56 {
+  --itemSize: 1fr;
+}
+
+.ara-el-56::before {
+  cursor: pointer;
+  display: inline;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-56::after {
+  cursor: pointer;
+  display: inline;
+  height: auto;
+  line-height: 16.1px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: 1fr;
+  --easing-var: cubic-bezier(0,.55,.45,1);
+  --border-width-var: 1px;
+  --easing-var-1: cubic-bezier(.85,0,.15,1);
+  --spacing-var-1: 12px;
+  --spacing-var: 20px;
+  --column-min: 0px;
+  --transition-easing: cubic-bezier(.85,0,.15,1);
+  --duration-var: .1s;
+  --row-min: 0px;
+  --rowSize: auto;
+  --duration-var-1: .2s;
+  --sizing-var: 48px;
+  --row-max: auto;
+  --sizing-var-1: 24px;
+  --transition-duration: .2s;
+}
+
+.ara-el-57 {
+  background-color: rgb(229, 229, 229);
+  box-sizing: content-box;
+  color: rgb(128, 128, 128);
+  height: 1px;
+  outline-color: rgb(128, 128, 128);
+  width: 420px;
+  border-color: rgb(128, 128, 128);
+}
+
+.ara-el-57::before {
+  color: rgb(128, 128, 128);
+  display: inline;
+  height: auto;
+  outline-color: rgb(128, 128, 128);
+  width: auto;
+  border-color: rgb(128, 128, 128);
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-57::after {
+  color: rgb(128, 128, 128);
+  display: inline;
+  height: auto;
+  outline-color: rgb(128, 128, 128);
+  width: auto;
+  border-color: rgb(128, 128, 128);
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-58 {
+  height: 68px;
+  width: 420px;
+}
+
+.ara-el-58::before {
+  display: inline;
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-58::after {
+  display: inline;
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-59 {
+  font-size: 17px;
+  font-weight: 600;
+  height: 48px;
+  line-height: 24px;
+  text-align: center;
+  width: 420px;
+}
+
+.ara-el-59::before {
+  display: inline;
+  font-size: 17px;
+  font-weight: 600;
+  height: auto;
+  line-height: 24px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-59::after {
+  display: inline;
+  font-size: 17px;
+  font-weight: 600;
+  height: auto;
+  line-height: 24px;
+  text-align: center;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-60 {
+  color: rgb(118, 118, 118);
+  font-size: 15px;
+  height: 20px;
+  outline-color: rgb(118, 118, 118);
+  text-align: center;
+  width: 420px;
+  border-color: rgb(118, 118, 118);
+}
+
+.ara-el-60::before {
+  color: rgb(118, 118, 118);
+  display: inline;
+  font-size: 15px;
+  height: auto;
+  outline-color: rgb(118, 118, 118);
+  text-align: center;
+  width: auto;
+  border-color: rgb(118, 118, 118);
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-60::after {
+  color: rgb(118, 118, 118);
+  display: inline;
+  font-size: 15px;
+  height: auto;
+  outline-color: rgb(118, 118, 118);
+  text-align: center;
+  width: auto;
+  border-color: rgb(118, 118, 118);
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-61 {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  bottom: 0px;
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  display: inline;
+  font-size: 15px;
+  height: auto;
+  left: 0px;
+  outline-color: rgb(105, 80, 243);
+  position: relative;
+  right: 0px;
+  text-wrap-mode: nowrap;
+  top: 0px;
+  width: auto;
+  border-color: rgb(105, 80, 243);
+}
+
+.ara-el-61::before {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  bottom: 0px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  font-size: 15px;
+  height: 17px;
+  left: 0px;
+  opacity: 0;
+  outline-color: rgb(105, 80, 243);
+  padding-bottom: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  position: absolute;
+  right: 0px;
+  text-wrap-mode: nowrap;
+  top: 0px;
+  transition-duration: 0.1s;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  width: 182.578px;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-61::after {
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  display: inline;
+  font-size: 15px;
+  height: auto;
+  outline-color: rgb(105, 80, 243);
+  text-wrap-mode: nowrap;
+  width: auto;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: minmax(0px,1fr);
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --row-max: auto;
+}
+
+.ara-el-62 {
+  display: none;
+  margin-left: -1920px;
+  opacity: 0;
+  width: 0px;
+}
+
+.ara-el-62::before {
+  display: inline;
+  height: auto;
+  width: auto;
+}
+
+.ara-el-62::after {
+  display: inline;
+  height: auto;
+  width: auto;
+}
+
+.ara-el-63 {
+  height: 116px;
+  padding-top: 40px;
+  width: 920px;
+}
+
+.ara-el-63::before {
+  display: inline;
+  height: auto;
+  width: auto;
+}
+
+.ara-el-63::after {
+  display: inline;
+  height: auto;
+  width: auto;
+}
+
+.ara-el-64 {
+  column-gap: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 76px;
+  row-gap: 24px;
+  width: 920px;
+}
+
+.ara-el-64::before {
+  height: auto;
+  width: auto;
+  --display-default: flex;
+  --direction-default: column;
+}
+
+.ara-el-64::after {
+  height: auto;
+  width: auto;
+  --display-default: flex;
+  --direction-default: column;
+}
+
+.ara-el-65 {
+  height: 32px;
+  width: 920px;
+}
+
+.ara-el-65::before {
+  display: inline;
+  height: auto;
+  width: auto;
+  --display-default: flex;
+  --direction-default: column;
+}
+
+.ara-el-65::after {
+  display: inline;
+  height: auto;
+  width: auto;
+  --display-default: flex;
+  --direction-default: column;
+}
+
+.ara-el-66 {
+  color: rgb(118, 118, 118);
+  font-size: 13px;
+  height: 16px;
+  line-height: 16px;
+  outline-color: rgb(118, 118, 118);
+  text-align: center;
+  width: 920px;
+  border-color: rgb(118, 118, 118);
+}
+
+.ara-el-66::before {
+  color: rgb(118, 118, 118);
+  display: inline;
+  font-size: 13px;
+  height: auto;
+  line-height: 16px;
+  outline-color: rgb(118, 118, 118);
+  text-align: center;
+  width: auto;
+  border-color: rgb(118, 118, 118);
+  --display-default: flex;
+  --direction-default: column;
+}
+
+.ara-el-66::after {
+  color: rgb(118, 118, 118);
+  display: inline;
+  font-size: 13px;
+  height: auto;
+  line-height: 16px;
+  outline-color: rgb(118, 118, 118);
+  text-align: center;
+  width: auto;
+  border-color: rgb(118, 118, 118);
+  --display-default: flex;
+  --direction-default: column;
+}
+
+.ara-el-67 {
+  color: rgb(118, 118, 118);
+  font-size: 13px;
+  height: 16px;
+  line-height: 16px;
+  outline-color: rgb(118, 118, 118);
+  text-align: center;
+  width: 920px;
+  border-color: rgb(118, 118, 118);
+}
+
+.ara-el-67::before {
+  color: rgb(118, 118, 118);
+  display: inline;
+  font-size: 13px;
+  height: auto;
+  line-height: 16px;
+  outline-color: rgb(118, 118, 118);
+  text-align: center;
+  width: auto;
+  border-color: rgb(118, 118, 118);
+  --display-default: flex;
+  --direction-default: column;
+}
+
+.ara-el-67::after {
+  color: rgb(118, 118, 118);
+  display: inline;
+  font-size: 13px;
+  height: auto;
+  line-height: 16px;
+  outline-color: rgb(118, 118, 118);
+  text-align: center;
+  width: auto;
+  border-color: rgb(118, 118, 118);
+  --display-default: flex;
+  --direction-default: column;
+}
+
+.ara-el-68 {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  bottom: 0px;
+  color: rgb(118, 118, 118);
+  cursor: pointer;
+  display: inline;
+  font-size: 13px;
+  height: auto;
+  left: 0px;
+  line-height: 16px;
+  outline-color: rgb(118, 118, 118);
+  position: relative;
+  right: 0px;
+  text-wrap-mode: nowrap;
+  top: 0px;
+  width: auto;
+  border-color: rgb(118, 118, 118);
+}
+
+.ara-el-68::before {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  bottom: 0px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+  color: rgb(118, 118, 118);
+  cursor: pointer;
+  font-size: 13px;
+  height: 15px;
+  left: 0px;
+  line-height: 16px;
+  opacity: 0;
+  outline-color: rgb(118, 118, 118);
+  padding-bottom: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  position: absolute;
+  right: 0px;
+  text-wrap-mode: nowrap;
+  top: 0px;
+  transition-duration: 0.1s;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  width: 80.9219px;
+  border-color: rgb(118, 118, 118);
+  --display-default: flex;
+  --direction-default: column;
+}
+
+.ara-el-68::after {
+  color: rgb(118, 118, 118);
+  cursor: pointer;
+  display: inline;
+  font-size: 13px;
+  height: auto;
+  line-height: 16px;
+  outline-color: rgb(118, 118, 118);
+  text-wrap-mode: nowrap;
+  width: auto;
+  border-color: rgb(118, 118, 118);
+  --display-default: flex;
+  --direction-default: column;
+}
+
+.ara-el-69 {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  bottom: 0px;
+  color: rgb(118, 118, 118);
+  cursor: pointer;
+  display: inline;
+  font-size: 13px;
+  height: auto;
+  left: 0px;
+  line-height: 16px;
+  outline-color: rgb(118, 118, 118);
+  position: relative;
+  right: 0px;
+  text-wrap-mode: nowrap;
+  top: 0px;
+  width: auto;
+  border-color: rgb(118, 118, 118);
+}
+
+.ara-el-69::before {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  bottom: 0px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+  color: rgb(118, 118, 118);
+  cursor: pointer;
+  font-size: 13px;
+  height: 15px;
+  left: 0px;
+  line-height: 16px;
+  opacity: 0;
+  outline-color: rgb(118, 118, 118);
+  padding-bottom: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  position: absolute;
+  right: 0px;
+  text-wrap-mode: nowrap;
+  top: 0px;
+  transition-duration: 0.1s;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  width: 96.8125px;
+  border-color: rgb(118, 118, 118);
+  --display-default: flex;
+  --direction-default: column;
+}
+
+.ara-el-69::after {
+  color: rgb(118, 118, 118);
+  cursor: pointer;
+  display: inline;
+  font-size: 13px;
+  height: auto;
+  line-height: 16px;
+  outline-color: rgb(118, 118, 118);
+  text-wrap-mode: nowrap;
+  width: auto;
+  border-color: rgb(118, 118, 118);
+  --display-default: flex;
+  --direction-default: column;
+}
+
+.ara-el-70 {
+  align-items: center;
+  column-gap: 8px;
+  display: grid;
+  grid-template-columns: 108.203px 3px 76.5469px 3px 93.3594px;
+  grid-template-rows: 20px;
+  height: 20px;
+  justify-content: center;
+  row-gap: 24px;
+  width: 920px;
+}
+
+.ara-el-70 {
+  --itemSize: auto;
+}
+
+.ara-el-70::before {
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-70::after {
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-71 {
+  align-items: center;
+  appearance: button;
+  bottom: 0px;
+  box-sizing: content-box;
+  color: rgb(105, 80, 243);
+  column-gap: 4px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 20px;
+  left: 0px;
+  line-height: 16.1px;
+  margin-bottom: -8px;
+  margin-top: -8px;
+  outline-color: rgba(0, 0, 0, 0);
+  outline-offset: 2px;
+  outline-style: solid;
+  outline-width: 2px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  position: relative;
+  right: 0px;
+  row-gap: 4px;
+  text-align: center;
+  top: 0px;
+  vertical-align: middle;
+  width: 108.203px;
+  border-color: rgb(105, 80, 243);
+}
+
+.ara-el-71 {
+  --itemSize: auto;
+  --spacing-var-1: 8px;
+}
+
+.ara-el-71::before {
+  bottom: 0px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  height: 36px;
+  left: 0px;
+  line-height: 16.1px;
+  opacity: 0;
+  outline-color: rgb(105, 80, 243);
+  padding-bottom: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  top: 0px;
+  transition-duration: 0.1s;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  width: 108.203px;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --spacing-var-1: 8px;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-71::after {
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  outline-color: rgb(105, 80, 243);
+  text-align: center;
+  width: auto;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --spacing-var-1: 8px;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-72 {
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  height: 20px;
+  outline-color: rgb(105, 80, 243);
+  text-align: center;
+  width: 84.2031px;
+  border-color: rgb(105, 80, 243);
+}
+
+.ara-el-72 {
+  --itemSize: auto;
+  --spacing-var-1: 8px;
+}
+
+.ara-el-72::before {
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  display: inline;
+  font-size: 15px;
+  font-weight: 500;
+  height: auto;
+  outline-color: rgb(105, 80, 243);
+  text-align: center;
+  width: auto;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --spacing-var-1: 8px;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-72::after {
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  display: inline;
+  font-size: 15px;
+  font-weight: 500;
+  height: auto;
+  outline-color: rgb(105, 80, 243);
+  text-align: center;
+  width: auto;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --spacing-var-1: 8px;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-73 {
+  bottom: 0px;
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+  height: 20px;
+  left: 0px;
+  line-height: 16.1px;
+  outline-color: rgb(105, 80, 243);
+  position: relative;
+  right: 0px;
+  text-align: center;
+  top: 0px;
+  width: 20px;
+  border-color: rgb(105, 80, 243);
+}
+
+.ara-el-73 {
+  --itemSize: auto;
+  --spacing-var-1: 8px;
+}
+
+.ara-el-73::before {
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  outline-color: rgb(105, 80, 243);
+  text-align: center;
+  width: auto;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --spacing-var-1: 8px;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-73::after {
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  height: auto;
+  line-height: 16.1px;
+  outline-color: rgb(105, 80, 243);
+  text-align: center;
+  width: auto;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --spacing-var-1: 8px;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-74 {
+  bottom: 0px;
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  fill: rgb(105, 80, 243);
+  height: 20px;
+  left: 0px;
+  line-height: 16.1px;
+  outline-color: rgb(105, 80, 243);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  top: 0px;
+  width: 20px;
+  border-color: rgb(105, 80, 243);
+}
+
+.ara-el-74 {
+  --itemSize: auto;
+  --spacing-var-1: 8px;
+}
+
+.ara-el-74::before {
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  display: inline;
+  fill: rgb(105, 80, 243);
+  height: auto;
+  line-height: 16.1px;
+  outline-color: rgb(105, 80, 243);
+  text-align: center;
+  width: auto;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --spacing-var-1: 8px;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-74::after {
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  display: inline;
+  fill: rgb(105, 80, 243);
+  height: auto;
+  line-height: 16.1px;
+  outline-color: rgb(105, 80, 243);
+  text-align: center;
+  width: auto;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --spacing-var-1: 8px;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-75 {
+  clip-rule: evenodd;
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  d: path("M 19.429 3.457 C 24.944 4.96 29 10.007 29 16 C 29 18.022 28.538 19.937 27.715 21.643 A 1 1 0 0 1 27.627 21.823 L 27.621 21.833 C 25.537 25.977 21.302 28.853 16.383 28.994 A 1 1 0 0 1 16.214 28.998 L 16 29 C 8.82 29 3 23.18 3 16 S 8.82 3 16 3 C 17.105 3 18.177 3.138 19.201 3.397 Q 19.318 3.414 19.428 3.457 M 5 16 C 5 14.214 5.426 12.527 6.181 11.035 L 7.486 14.506 A 1.99 1.99 0 0 0 8.94 15.778 L 11.615 16.352 L 12.086 17.333 L 12.095 17.351 A 2.03 2.03 0 0 0 13.873 18.462 H 14.036 L 13.076 20.616 A 2 2 0 0 0 13.426 22.789 L 15.778 25.333 L 15.456 26.987 C 9.633 26.703 5 21.893 5 16 M 7.923 9.984 L 8.956 7.55 A 10.96 10.96 0 0 1 16 5 C 16.826 5 17.63 5.091 18.404 5.264 L 19.348 6.973 L 15.992 10.008 L 14.442 10.862 H 11.787 A 2.012 2.012 0 0 0 9.943 12.08 L 9.292 13.627 Z M 12.03 14.396 L 11.212 14.22 L 11.792 12.862 H 14.489 C 14.792 12.862 15.123 12.771 15.406 12.621 L 16.958 11.763 A 2 2 0 0 0 17.341 11.484 L 20.706 8.444 A 2.01 2.01 0 0 0 21.242 6.327 A 11 11 0 0 1 27 16 C 27 17.35 26.756 18.645 26.311 19.84 L 20.519 16.277 A 1.9 1.9 0 0 0 19.725 15.995 L 16.875 15.609 A 1.98 1.98 0 0 0 14.96 16.462 L 13.889 16.459 L 13.416 15.484 A 1.99 1.99 0 0 0 12.03 14.396 M 25.439 21.652 A 11 11 0 0 1 17.512 26.897 L 17.744 25.718 A 2.025 2.025 0 0 0 17.253 23.977 L 14.899 21.437 L 16.614 17.592 L 19.467 17.979 Z");
+  display: inline;
+  fill: rgb(105, 80, 243);
+  fill-rule: evenodd;
+  height: auto;
+  line-height: 16.1px;
+  outline-color: rgb(105, 80, 243);
+  text-align: center;
+  width: auto;
+  border-color: rgb(105, 80, 243);
+}
+
+.ara-el-75 {
+  --itemSize: auto;
+  --spacing-var-1: 8px;
+}
+
+.ara-el-75::before {
+  clip-rule: evenodd;
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  display: inline;
+  fill: rgb(105, 80, 243);
+  fill-rule: evenodd;
+  height: auto;
+  line-height: 16.1px;
+  outline-color: rgb(105, 80, 243);
+  text-align: center;
+  width: auto;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --spacing-var-1: 8px;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-75::after {
+  clip-rule: evenodd;
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  display: inline;
+  fill: rgb(105, 80, 243);
+  fill-rule: evenodd;
+  height: auto;
+  line-height: 16.1px;
+  outline-color: rgb(105, 80, 243);
+  text-align: center;
+  width: auto;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --spacing-var-1: 8px;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-76 {
+  align-items: center;
+  background-color: rgb(105, 80, 243);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  bottom: 0px;
+  display: flex;
+  height: 3px;
+  justify-content: center;
+  left: 0px;
+  position: relative;
+  right: 0px;
+  top: 0px;
+  transition-duration: 0.5s;
+  transition-property: background-color;
+  width: 3px;
+}
+
+.ara-el-76 {
+  --itemSize: auto;
+}
+
+.ara-el-76::before {
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-76::after {
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-77 {
+  align-items: center;
+  bottom: 0px;
+  box-sizing: content-box;
+  color: rgb(105, 80, 243);
+  column-gap: 4px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 20px;
+  left: 0px;
+  margin-bottom: -8px;
+  margin-top: -8px;
+  outline-color: rgb(105, 80, 243);
+  padding-bottom: 8px;
+  padding-top: 8px;
+  position: relative;
+  right: 0px;
+  row-gap: 4px;
+  top: 0px;
+  vertical-align: middle;
+  width: 76.5469px;
+  border-color: rgb(105, 80, 243);
+}
+
+.ara-el-77 {
+  --itemSize: auto;
+  --spacing-var-1: 8px;
+}
+
+.ara-el-77::before {
+  bottom: 0px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  height: 36px;
+  left: 0px;
+  opacity: 0;
+  outline-color: rgb(105, 80, 243);
+  padding-bottom: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  transition-duration: 0.1s;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  width: 76.5469px;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --spacing-var-1: 8px;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-77::after {
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  height: auto;
+  outline-color: rgb(105, 80, 243);
+  width: auto;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --spacing-var-1: 8px;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-78 {
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  height: 20px;
+  outline-color: rgb(105, 80, 243);
+  width: 52.5469px;
+  border-color: rgb(105, 80, 243);
+}
+
+.ara-el-78 {
+  --itemSize: auto;
+  --spacing-var-1: 8px;
+}
+
+.ara-el-78::before {
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  display: inline;
+  font-size: 15px;
+  font-weight: 500;
+  height: auto;
+  outline-color: rgb(105, 80, 243);
+  width: auto;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --spacing-var-1: 8px;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-78::after {
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  display: inline;
+  font-size: 15px;
+  font-weight: 500;
+  height: auto;
+  outline-color: rgb(105, 80, 243);
+  width: auto;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --spacing-var-1: 8px;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-79 {
+  bottom: 0px;
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+  height: 20px;
+  left: 0px;
+  outline-color: rgb(105, 80, 243);
+  position: relative;
+  right: 0px;
+  top: 0px;
+  width: 20px;
+  border-color: rgb(105, 80, 243);
+}
+
+.ara-el-79 {
+  --itemSize: auto;
+  --spacing-var-1: 8px;
+}
+
+.ara-el-79::before {
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  height: auto;
+  outline-color: rgb(105, 80, 243);
+  width: auto;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --spacing-var-1: 8px;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-79::after {
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  height: auto;
+  outline-color: rgb(105, 80, 243);
+  width: auto;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --spacing-var-1: 8px;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-80 {
+  bottom: 0px;
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  fill: rgb(105, 80, 243);
+  height: 20px;
+  left: 0px;
+  outline-color: rgb(105, 80, 243);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 20px;
+  border-color: rgb(105, 80, 243);
+}
+
+.ara-el-80 {
+  --itemSize: auto;
+  --spacing-var-1: 8px;
+}
+
+.ara-el-80::before {
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  display: inline;
+  fill: rgb(105, 80, 243);
+  height: auto;
+  outline-color: rgb(105, 80, 243);
+  width: auto;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --spacing-var-1: 8px;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-80::after {
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  display: inline;
+  fill: rgb(105, 80, 243);
+  height: auto;
+  outline-color: rgb(105, 80, 243);
+  width: auto;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --spacing-var-1: 8px;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-81 {
+  clip-rule: evenodd;
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  d: path("M 7.547 8.961 A 10.96 10.96 0 0 0 5 16 C 5 18.677 5.957 21.131 7.547 23.039 L 11.109 19.477 A 5.97 5.97 0 0 1 10 16 C 10 14.704 10.41 13.504 11.11 12.524 Z M 6.749 6.867 A 12.96 12.96 0 0 0 3 16 C 3 19.56 4.43 22.785 6.749 25.133 A 1 1 0 0 0 6.867 25.251 A 12.96 12.96 0 0 0 16 29 C 19.56 29 22.785 27.57 25.133 25.252 A 1 1 0 0 0 25.252 25.132 A 12.96 12.96 0 0 0 29 16 C 29 12.44 27.57 9.215 25.252 6.867 A 1 1 0 0 0 25.133 6.749 A 12.96 12.96 0 0 0 16 3 C 12.44 3 9.214 4.43 6.867 6.749 A 1 1 0 0 0 6.749 6.867 M 8.961 7.547 L 12.523 11.109 A 5.97 5.97 0 0 1 16 10 C 17.296 10 18.496 10.41 19.477 11.11 L 23.039 7.547 A 10.96 10.96 0 0 0 16 5 C 13.323 5 10.868 5.957 8.96 7.547 M 24.453 8.96 L 20.891 12.523 C 21.589 13.504 22 14.704 22 16 S 21.59 18.496 20.89 19.477 L 24.453 23.039 A 10.96 10.96 0 0 0 27 16 C 27 13.323 26.043 10.868 24.453 8.961 M 23.04 24.453 L 19.478 20.891 A 5.97 5.97 0 0 1 16 22 A 5.97 5.97 0 0 1 12.523 20.89 L 8.961 24.453 A 10.96 10.96 0 0 0 16 27 C 18.677 27 21.132 26.043 23.04 24.453 M 16 12 A 4 4 0 1 0 16 20 A 4 4 0 0 0 16 12");
+  display: inline;
+  fill: rgb(105, 80, 243);
+  fill-rule: evenodd;
+  height: auto;
+  outline-color: rgb(105, 80, 243);
+  width: auto;
+  border-color: rgb(105, 80, 243);
+}
+
+.ara-el-81 {
+  --itemSize: auto;
+  --spacing-var-1: 8px;
+}
+
+.ara-el-81::before {
+  clip-rule: evenodd;
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  display: inline;
+  fill: rgb(105, 80, 243);
+  fill-rule: evenodd;
+  height: auto;
+  outline-color: rgb(105, 80, 243);
+  width: auto;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --spacing-var-1: 8px;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-81::after {
+  clip-rule: evenodd;
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  display: inline;
+  fill: rgb(105, 80, 243);
+  fill-rule: evenodd;
+  height: auto;
+  outline-color: rgb(105, 80, 243);
+  width: auto;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --spacing-var-1: 8px;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-82 {
+  align-items: center;
+  background-color: rgb(105, 80, 243);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  bottom: 0px;
+  display: flex;
+  height: 3px;
+  justify-content: center;
+  left: 0px;
+  position: relative;
+  right: 0px;
+  top: 0px;
+  transition-duration: 0.5s;
+  transition-property: background-color;
+  width: 3px;
+}
+
+.ara-el-82 {
+  --itemSize: auto;
+}
+
+.ara-el-82::before {
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-82::after {
+  height: auto;
+  width: auto;
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-83 {
+  align-items: center;
+  bottom: 0px;
+  box-sizing: content-box;
+  color: rgb(105, 80, 243);
+  column-gap: 4px;
+  cursor: pointer;
+  display: flex;
+  height: 20px;
+  left: 0px;
+  margin-bottom: -8px;
+  margin-top: -8px;
+  outline-color: rgb(105, 80, 243);
+  padding-bottom: 8px;
+  padding-top: 8px;
+  position: relative;
+  right: 0px;
+  row-gap: 4px;
+  top: 0px;
+  vertical-align: middle;
+  width: 93.3594px;
+  border-color: rgb(105, 80, 243);
+}
+
+.ara-el-83 {
+  --itemSize: auto;
+  --spacing-var-1: 8px;
+}
+
+.ara-el-83::before {
+  bottom: 0px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(13, 13, 13) 0px 0px 0px 4px;
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  height: 36px;
+  left: 0px;
+  opacity: 0;
+  outline-color: rgb(105, 80, 243);
+  padding-bottom: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  transition-duration: 0.1s;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  width: 93.3594px;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --spacing-var-1: 8px;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-83::after {
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  height: auto;
+  outline-color: rgb(105, 80, 243);
+  width: auto;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --spacing-var-1: 8px;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-84 {
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  height: 20px;
+  outline-color: rgb(105, 80, 243);
+  width: 93.3594px;
+  border-color: rgb(105, 80, 243);
+}
+
+.ara-el-84 {
+  --itemSize: auto;
+  --spacing-var-1: 8px;
+}
+
+.ara-el-84::before {
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  display: inline;
+  font-size: 15px;
+  font-weight: 500;
+  height: auto;
+  outline-color: rgb(105, 80, 243);
+  width: auto;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --spacing-var-1: 8px;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-84::after {
+  color: rgb(105, 80, 243);
+  cursor: pointer;
+  display: inline;
+  font-size: 15px;
+  font-weight: 500;
+  height: auto;
+  outline-color: rgb(105, 80, 243);
+  width: auto;
+  border-color: rgb(105, 80, 243);
+  --column-max: 1fr;
+  --itemSize: auto;
+  --display-default: flex;
+  --spacing-var-1: 8px;
+  --column-min: 0px;
+  --row-min: 0px;
+  --rowSize: auto;
+  --direction-default: column;
+  --row-max: auto;
+}
+
+.ara-el-85 {
+  display: flex;
+  height: auto;
+  margin-left: -16px;
+  position: sticky;
+  right: 0px;
+  top: 0px;
+  width: 976px;
+  z-index: -1;
+}
+
+.ara-el-85::before {
+  height: auto;
+  width: auto;
+}
+
+.ara-el-85::after {
+  height: auto;
+  width: auto;
+}
+
+.ara-el-86 {
+  height: 911px;
+  object-fit: cover;
+  object-position: 100% 50%;
+  overflow-x: clip;
+  overflow-y: clip;
+  width: 976px;
+}
+
+.ara-el-86::before {
+  display: inline;
+  height: auto;
+  width: auto;
+}
+
+.ara-el-86::after {
+  display: inline;
+  height: auto;
+  width: auto;
+}
+
+@keyframes xy1AVv { 
+  0% { opacity: var(--skeleton-variant-primary-container-animation-keyframes-from-opacity); }
+  50% { opacity: var(--skeleton-variant-primary-container-animation-keyframes-to-opacity); }
+  100% { opacity: var(--skeleton-variant-primary-container-animation-keyframes-from-opacity); }
+}
+
+@keyframes rfWXCt { 
+  0% { opacity: 0; transform: translateY(var(--spacing-150)); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+
+@keyframes ZX-Zxu { 
+  0% { inset-inline-start: -40%; }
+  75% { inset-inline-start: 120%; }
+  100% { inset-inline-start: 120%; }
+}
+
+@keyframes gOIkFu { 
+  0% { inset-inline-start: -90%; }
+  37.5% { inset-inline-start: -90%; }
+  100% { inset-inline-start: 100%; }
+}
+
+@keyframes loader-show-w_bKK1 { 
+  0% { opacity: 0; }
+  20% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes load1-z0sfKa { 
+  0% { opacity: 1; }
+  33% { opacity: 0.66; }
+  66% { opacity: 0.33; }
+  100% { opacity: 0; }
+}
+
+@keyframes load2-HYj8ac { 
+  0% { opacity: 0.66; }
+  33% { opacity: 0.33; }
+  66% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes load3-nyRV_g { 
+  0% { opacity: 0.33; }
+  33% { opacity: 0; }
+  66% { opacity: 1; }
+  100% { opacity: 0.66; }
+}
+
+@keyframes growAndDisappear-ltr-nCcF4m { 
+  35% { opacity: 0.7; }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.2); }
+}
+
+@keyframes growAndDisappear-rtl-b4uQn1 { 
+  35% { opacity: 0.7; }
+  100% { opacity: 0; transform: translate(50%, -50%) scale(1.2); }
+}
+
+@keyframes beat-quHb4V { 
+  50% { opacity: 0.2; transform: scale(0.75); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes shimmer-ltr-KjI8jy { 
+  0% { background-position: -400px 100%; }
+  100% { background-position: 400px 300%; }
+}
+
+@keyframes shimmer-rtl-wojKYL { 
+  0% { background-position: right -400px top 100%; }
+  100% { background-position: right 400px top 300%; }
+}
+
+@keyframes shimmer-ltr-PqpViH { 
+  0% { background-position: -400px 100%; }
+  100% { background-position: 400px 300%; }
+}
+
+@keyframes shimmer-rtl-Nrm5j4 { 
+  0% { background-position: right -400px top 100%; }
+  100% { background-position: right 400px top 300%; }
+}
+
+@keyframes loadAnimation-ltr-qmyoap { 
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes loadAnimation-rtl-BWIZA7 { 
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+@keyframes FLASH_ON_ENTRY-Y6viE3 { 
+  0% { background-color: var(--color-background-warning-faded); }
+  99% { background-color: inherit; }
+}
+
+@keyframes FADE_IN-UlrHer { 
+  100% { opacity: 1; transform: translateY(0px); }
+}
+
+@keyframes show-N8n3z1 { 
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes show-S0VQK6 { 
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp-oXY_pf { 
+  0% { opacity: 0; transform: translateY(100%); }
+  60% { opacity: 1; transform: translateY(-10%); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+
+@keyframes moveToRight-ltr-W9oY5B { 
+  100% { font-size: 56px; transform: scale(0.5) translate(calc(100% - 55px), -50%); }
+}
+
+@keyframes moveToRight-rtl-sBtmTo { 
+  100% { font-size: 56px; transform: scale(0.5) translate(calc(-100% + 55px), -50%); }
+}
+
+@keyframes resizeWrapper-FziHA_ { 
+  0% { width: 98px; height: 98px; }
+  100% { width: 112px; height: 112px; }
+}
+
+@keyframes spin-ltr-El52xO { 
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spin-rtl-LrgCkI { 
+  100% { transform: rotate(-360deg); }
+}
+
+@keyframes moveClock-ltr-NcauHE { 
+  100% { transform: scale(0.5) translate(calc(100% - 32px), -5%); }
+}
+
+@keyframes moveClock-rtl-GxhcYr { 
+  100% { transform: scale(0.5) translate(calc(-100% + 32px), -5%); }
+}
+
+@keyframes slideUp-ifRJaA { 
+  0% { opacity: 0; transform: translateY(100%); }
+  60% { opacity: 1; transform: translateY(-10%); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+
+@keyframes moveToRight-ltr-_gy3KE { 
+  100% { transform: translate(calc(50% - 20px), -24px); }
+}
+
+@keyframes moveToRight-rtl-WdKSon { 
+  100% { transform: translate(calc(-50% + 20px), -24px); }
+}
+
+@keyframes scaleEmoji-EcDnTS { 
+  100% { transform: scale(0.45); }
+}
+
+@keyframes spin-ltr-CeclWz { 
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spin-rtl-UvIlB4 { 
+  100% { transform: rotate(-360deg); }
+}
+
+@keyframes scaleClock-KwtXq3 { 
+  100% { transform: scale(0.4); }
+}
+
+@keyframes moveWrapper-ltr-Mjbzor { 
+  100% { transform: translate(calc(50% - 12px), 8px); }
+}
+
+@keyframes moveWrapper-rtl-ZAgpF5 { 
+  100% { transform: translate(calc(-50% + 12px), 8px); }
+}
+
+@keyframes expand-fSb0nN { 
+  0% { transform: scale(var(--scaling-100)); }
+  50% { transform: scale(var(--scaling-170)); }
+  100% { transform: scale(var(--scaling-100)); }
+}
+
+@keyframes horizontal-shake-ltr-L8289v { 
+  0% { transform: translate(0px); }
+  25% { transform: translate(8px); }
+  50% { transform: translate(-8px); }
+  75% { transform: translate(8px); }
+  100% { transform: translate(0px); }
+}
+
+@keyframes horizontal-shake-rtl-CvAjYC { 
+  0% { transform: translate(0px); }
+  25% { transform: translate(-8px); }
+  50% { transform: translate(8px); }
+  75% { transform: translate(-8px); }
+  100% { transform: translate(0px); }
+}
+
+@keyframes dash-sOH3y7 { 
+  0% { stroke-dashoffset: 1000px; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes slide-in-right-to-left-ltr-Cc6gLt { 
+  0% { transform: translate(100vw); }
+  100% { transform: translate(0px); }
+}
+
+@keyframes slide-in-right-to-left-rtl-c52mZR { 
+  0% { transform: translate(-100vw); }
+  100% { transform: translate(0px); }
+}
+
+@keyframes fb_transform { 
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes rotateSpinner { 
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.ara-shell .ara-el-0 {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+  overflow: visible !important;
+}
+
+.ara-shell .ara-el-1 {
+  grid-column: 1 / 2 !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 100vh !important;
+  height: auto !important;
+}
+
+.ara-shell .ara-el-85 {
+  grid-column: 2 / 3 !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 100vh !important;
+  height: auto !important;
+  margin-left: 0 !important;
+  position: sticky !important;
+  right: auto !important;
+  top: 0 !important;
+  z-index: 1 !important;
+  overflow: hidden !important;
+}
+
+.ara-shell .ara-el-86 {
+  width: 100% !important;
+  min-width: 100% !important;
+  min-height: 100vh !important;
+  height: 100% !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: 100% 50% !important;
+}
+
+.ara-shell .ara-el-76, .ara-shell .ara-el-82 {
+  display: none !important;
+}
+
+.ara-shell .ara-el-67 {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 6px !important;
+  width: 100% !important;
+  height: auto !important;
+  line-height: 1.3 !important;
+  text-align: center !important;
+}
+
+.ara-shell .ara-el-68, .ara-shell .ara-el-69 {
+  white-space: nowrap !important;
+}
+
+.ara-shell .ara-el-70 {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  width: 100% !important;
+  height: auto !important;
+  grid-template-columns: none !important;
+  grid-template-rows: none !important;
+}
+
+.ara-shell .ara-el-39::before, .ara-shell .ara-el-48::before {
+  display: none !important;
+  box-shadow: none !important;
+  opacity: 0 !important;
+}
+
+.ara-shell .ara-el-39, .ara-shell .ara-el-48 {
+  transition: transform 0.14s ease, filter 0.14s ease !important;
+}
+
+.ara-shell .ara-el-39:hover .ara-el-40, .ara-shell .ara-el-48:hover .ara-el-49 {
+  background-color: rgb(249, 249, 251) !important;
+  border-color: rgb(187, 187, 193) !important;
+}
+
+.ara-shell .ara-el-39:hover, .ara-shell .ara-el-48:hover {
+  transform: translateY(-1px) !important;
+}

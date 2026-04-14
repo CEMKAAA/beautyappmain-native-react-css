@@ -1,0 +1,155 @@
+.gra-shell {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  overscroll-behavior: contain;
+  background: rgb(255, 255, 255);
+}
+
+.gra-shell *,
+.gra-shell *::before,
+.gra-shell *::after {
+  box-sizing: border-box;
+}
+
+.gra-shell button,
+.gra-shell a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.gra-native-hero {
+  position: relative;
+  z-index: 0;
+}
+
+.gra-native-top-rated {
+  position: relative;
+  z-index: 0;
+}
+
+.gra-native-boss {
+  position: relative;
+  z-index: 0;
+}
+
+.gra-native-final-cta {
+  position: relative;
+  z-index: 0;
+}
+
+.gra-generated-main [data-el-id='el-1'],
+.gra-generated-main [data-el-id='el-2'],
+.gra-generated-main [data-el-id='el-3'],
+.gra-generated-main [data-el-id='el-10'],
+.gra-generated-main [data-el-id='el-174'],
+.gra-generated-main [data-el-id='el-323'],
+.gra-generated-main [data-el-id='el-337'],
+.gra-generated-main [data-el-id='el-370'],
+.gra-generated-main [data-el-id='el-403'],
+.gra-generated-main [data-el-id='el-1068'],
+.gra-generated-main [data-el-id='el-1138'],
+.gra-generated-main [data-el-id='el-1161'],
+.gra-generated-main [data-el-id='el-1185'],
+.gra-generated-main [data-el-id='el-1264'] {
+  display: none !important;
+}
+
+.gra-header-dropdown {
+  position: fixed;
+  z-index: 2200;
+  pointer-events: auto;
+}
+
+.gra-header-dropdown .gra-mnu-el-0 {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+  top: 0 !important;
+  left: 0 !important;
+  max-height: calc(100vh - 28px) !important;
+  overflow-y: auto !important;
+}
+
+.gra-header-dropdown .gra-mnu-el-5 {
+  color: rgb(105, 80, 243) !important;
+}
+
+.gra-header-dropdown .gra-mnu-el-4,
+.gra-header-dropdown .gra-mnu-el-6,
+.gra-header-dropdown .gra-mnu-el-8,
+.gra-header-dropdown .gra-mnu-el-10,
+.gra-header-dropdown .gra-mnu-el-12,
+.gra-header-dropdown .gra-mnu-el-14,
+.gra-header-dropdown .gra-mnu-el-22 {
+  cursor: pointer !important;
+  transition: background-color 0.2s ease-in-out !important;
+}
+
+.gra-header-dropdown .gra-mnu-el-4:hover,
+.gra-header-dropdown .gra-mnu-el-6:hover,
+.gra-header-dropdown .gra-mnu-el-8:hover,
+.gra-header-dropdown .gra-mnu-el-10:hover,
+.gra-header-dropdown .gra-mnu-el-12:hover,
+.gra-header-dropdown .gra-mnu-el-14:hover,
+.gra-header-dropdown .gra-mnu-el-22:hover {
+  background-color: rgba(13, 22, 25, 0.04) !important;
+}
+
+.gra-header-dropdown .gra-mnu-el-4:active,
+.gra-header-dropdown .gra-mnu-el-6:active,
+.gra-header-dropdown .gra-mnu-el-8:active,
+.gra-header-dropdown .gra-mnu-el-10:active,
+.gra-header-dropdown .gra-mnu-el-12:active,
+.gra-header-dropdown .gra-mnu-el-14:active,
+.gra-header-dropdown .gra-mnu-el-22:active {
+  background-color: rgba(13, 22, 25, 0.08) !important;
+}
+
+.gra-header-dropdown .gra-mnu-el-14,
+.gra-header-dropdown .gra-mnu-el-19 {
+  background-color: transparent !important;
+  color: rgb(20, 20, 20) !important;
+}
+
+.gra-header-dropdown button {
+  border: 0;
+  background: transparent;
+  font: inherit;
+}
+
+.gra-language-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background-color: rgba(13, 22, 25, 0.44);
+}
+
+.gra-language-modal {
+  position: relative;
+  width: min(1024px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  pointer-events: auto;
+}
+
+.gra-language-modal .gra-lng-el-0 {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: calc(100vh - 32px) !important;
+  overflow-y: auto !important;
+  position: relative !important;
+}
+
+.gra-language-modal button {
+  font: inherit;
+}
