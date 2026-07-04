@@ -1,0 +1,2693 @@
+=== CSS VARIABLES ===
+  --tw-content: ""
+  --tw-shadow-colored: 
+  --tw-shadow: 0px 4px 8px 0px rgba(13,22,25,0.06),0px 12px 20px 0px rgba(13,22,25,0.06)
+  --tw-backdrop-blur: blur(8px)
+  --tw-text-opacity: 1
+  --tw-rotate: 0deg
+  --tw-gradient-to-position: 20%
+  --tw-gradient-from-position: -5%
+  --tw-gradient-from: transparent 
+  --tw-gradient-to: rgba(0,0,0,0.7) 
+  --tw-gradient-stops: transparent ,rgba(0,0,0,0.2) ,rgba(0,0,0,0.7) 
+  --tw-scroll-snap-strictness: mandatory
+  --tw-border-opacity: 1
+  --tw-bg-opacity: 1
+  --tw-space-x-reverse: 0
+
+=== KEYFRAMES ===
+@keyframes fade-in {
+}
+
+@keyframes slide-rtl {
+}
+
+@keyframes slide {
+}
+
+@keyframes bounce {
+}
+
+@keyframes pulse {
+}
+
+@keyframes enter {
+}
+
+@keyframes exit {
+}
+
+@keyframes fade-out {
+}
+
+@keyframes slide-in {
+}
+
+@keyframes yarl__delayed_fadein {
+}
+
+@keyframes yarl__stroke_opacity {
+}
+
+
+=== INTERACTIVE RULES ===
+[dir] .hover\:border-neutral-fadedHover:hover {
+  border-top-color: ;
+  border-right-color: ;
+  border-bottom-color: ;
+  border-left-color: ;
+}
+
+[dir] .hover\:border-neutral-hover:hover {
+  border-top-color: ;
+  border-right-color: ;
+  border-bottom-color: ;
+  border-left-color: ;
+}
+
+[dir] .hover\:bg-background-pageFadedHover:hover {
+  background-color: var(--color-background-page-faded-hover);
+}
+
+[dir] .hover\:bg-primary-hover:hover {
+  background-color: var(--color-granite-1400);
+}
+
+[dir] .hover\:bg-secondary-hover:hover {
+  background-color: var(--color-granite-100);
+}
+
+.hover\:shadow-\[0px_4px_8px_0px_rgba\(13\,22\,25\,0\.06\)\,0px_12px_20px_0px_rgba\(13\,22\,25\,0\.06\)\]:hover {
+  --tw-shadow: 0px 4px 8px 0px rgba(13,22,25,0.06),0px 12px 20px 0px rgba(13,22,25,0.06);
+  --tw-shadow-colored: 0px 4px 8px 0px var(--tw-shadow-color),0px 12px 20px 0px var(--tw-shadow-color);
+}
+
+[dir] .hover\:shadow-\[0px_4px_8px_0px_rgba\(13\,22\,25\,0\.06\)\,0px_12px_20px_0px_rgba\(13\,22\,25\,0\.06\)\]:hover {
+  box-shadow: var(--tw-ring-offset-shadow,0 0 rgba(0,0,0,0)),var(--tw-ring-shadow,0 0 rgba(0,0,0,0)),var(--tw-shadow);
+}
+
+[dir] .hover\:\[animation-play-state\:paused\]:hover {
+  animation-play-state: paused;
+}
+
+.active\:scale-active:active {
+  --tw-scale-x: var(--scaling-active);
+  --tw-scale-y: var(--scaling-active);
+}
+
+[dir] .active\:scale-active:active {
+  transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+[dir] .active\:border-neutral-active:active {
+  border-top-color: ;
+  border-right-color: ;
+  border-bottom-color: ;
+  border-left-color: ;
+}
+
+[dir] .active\:border-neutral-fadedActive:active {
+  border-top-color: ;
+  border-right-color: ;
+  border-bottom-color: ;
+  border-left-color: ;
+}
+
+[dir] .active\:bg-background-pageFadedActive:active {
+  background-color: var(--color-background-page-faded-active);
+}
+
+.group:hover .group-hover\:translate-x-1 {
+  --tw-translate-x: 0.25rem;
+}
+
+[dir] .group:hover .group-hover\:translate-x-1 {
+  transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:scale-\[1\.03\] {
+  --tw-scale-x: 1.03;
+  --tw-scale-y: 1.03;
+}
+
+[dir] .group:hover .group-hover\:scale-\[1\.03\] {
+  transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
+}
+
+.group:hover .\[\@media\(hover\:hover\)\]\:group-hover\:scale-\[1\.03\] {
+  --tw-scale-x: 1.03;
+  --tw-scale-y: 1.03;
+}
+
+[dir] .group:hover .\[\@media\(hover\:hover\)\]\:group-hover\:scale-\[1\.03\] {
+  transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .\[\@media\(hover\:hover\)\]\:group-hover\:opacity-100 {
+  opacity: 1;
+}
+
+
+======================================================================
+SECTION: HERO
+======================================================================
+el-1 (h1) {
+  font-size: 56px;
+  font-weight: 700;
+  height: 156px;
+  line-height: 60px;
+  margin-left: 438.5px;
+  margin-right: 438.5px;
+  max-width: 1028px;
+  padding-bottom: 16px;
+  padding-top: 80px;
+  text-align: center;
+  text-wrap-style: pretty;
+  width: 1028px;
+}
+el-2 (h2) {
+  font-size: 20px;
+  height: 60px;
+  line-height: 28px;
+  margin-left: 438.5px;
+  margin-right: 438.5px;
+  max-width: 1028px;
+  padding-bottom: 32px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  width: 1028px;
+}
+el-3 (div) {
+  column-gap: 16px;
+  display: grid;
+  grid-template-columns: 944.5px 944.5px;
+  grid-template-rows: 48px;
+  height: 48px;
+  justify-content: center;
+  row-gap: 16px;
+}
+  el-4 (a) {
+    align-items: center;
+    animation-duration: 0.2s;
+    animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+    appearance: button;
+    background-color: rgb(20, 20, 20);
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: flex;
+    font-size: 17px;
+    font-weight: 600;
+    height: 48px;
+    justify-content: center;
+    justify-self: end;
+    max-width: max-content;
+    outline-color: rgb(255, 255, 255);
+    padding-left: 24px;
+    padding-right: 24px;
+    text-wrap-mode: nowrap;
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+    width: 176.469px;
+    /* classes: typography-body-m-semibold text-nowrap flex items-center justify-center disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none transition-transform duration-short-m ease-ease-out  */
+  }
+  el-5 (div) {
+    height: 48px;
+    justify-content: center;
+    width: 944.5px;
+  }
+    el-6 (button) {
+      align-items: center;
+      animation-duration: 0.2s;
+      animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+      appearance: button;
+      background-color: rgb(255, 255, 255);
+      border-bottom-left-radius: 9999px;
+      border-bottom-right-radius: 9999px;
+      border-bottom-width: 1px;
+      border-left-width: 1px;
+      border-right-width: 1px;
+      border-top-left-radius: 9999px;
+      border-top-right-radius: 9999px;
+      border-top-width: 1px;
+      cursor: pointer;
+      display: flex;
+      font-size: 17px;
+      font-weight: 600;
+      height: 48px;
+      justify-content: center;
+      padding-left: 24px;
+      padding-right: 24px;
+      text-align: center;
+      text-wrap-mode: nowrap;
+      transition-duration: 0.2s;
+      transition-property: transform;
+      transition-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+      width: 230.422px;
+      /* classes: typography-body-m-semibold text-nowrap flex items-center justify-center disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none transition-transform duration-short-m ease-ease-out  */
+    }
+      el-7 (div) {
+        cursor: pointer;
+        font-size: 17px;
+        font-weight: 600;
+        height: 20px;
+        margin-right: 8px;
+        text-align: center;
+        text-wrap-mode: nowrap;
+        width: 20px;
+      }
+        el-8 (svg) {
+          cursor: pointer;
+          fill: rgb(20, 20, 20);
+          font-size: 17px;
+          font-weight: 600;
+          height: 20px;
+          overflow-x: hidden;
+          overflow-y: hidden;
+          text-align: center;
+          text-wrap-mode: nowrap;
+          vertical-align: middle;
+          width: 20px;
+        }
+          el-9 (path) {
+            clip-rule: evenodd;
+            cursor: pointer;
+            d: path("M 9.026 3.254 A 2 2 0 0 1 11.048 3.298 L 29.028 14.294 A 1.986 1.986 0 0 1 29.028 17.706 L 11.05 28.701 A 2.01 2.01 0 0 1 9.026 28.746 A 2 2 0 0 1 8 27 V 5 A 2 2 0 0 1 9.026 3.255 M 28 15.994 L 10 5 V 27 Z");
+            display: inline;
+            fill: rgb(20, 20, 20);
+            fill-rule: evenodd;
+            font-size: 17px;
+            font-weight: 600;
+            height: auto;
+            text-align: center;
+            text-wrap-mode: nowrap;
+            width: auto;
+          }
+
+======================================================================
+SECTION: PURPLE_STATS
+======================================================================
+el-323 (div) {
+  background-color: rgb(231, 232, 255);
+  bottom: 0px;
+  height: 532px;
+  left: 0px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 120px;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 120px;
+  position: relative;
+  right: 0px;
+  top: 0px;
+}
+  el-324 (section) {
+    height: 292px;
+    margin-left: 232.5px;
+    margin-right: 232.5px;
+    max-width: 1200px;
+    width: 1200px;
+  }
+    el-325 (h2) {
+      font-size: 48px;
+      font-weight: 700;
+      height: 48px;
+      line-height: 48px;
+      margin-bottom: 12px;
+      text-wrap-style: pretty;
+      width: 1200px;
+    }
+    el-326 (p) {
+      height: 112px;
+      max-width: 750px;
+      padding-bottom: 64px;
+      width: 750px;
+    }
+    el-327 (div) {
+      column-gap: 64px;
+      display: grid;
+      grid-template-columns: 357.328px 357.328px 357.344px;
+      grid-template-rows: 120px;
+      height: 120px;
+      row-gap: 64px;
+      width: 1200px;
+    }
+      el-328 (div) {
+        height: 120px;
+        width: 357.328px;
+      }
+        el-329 (h3) {
+          font-size: 24px;
+          font-weight: 600;
+          height: 32px;
+          line-height: 32px;
+          margin-bottom: 16px;
+          text-wrap-style: pretty;
+          width: 357.328px;
+        }
+        el-330 (p) {
+          font-size: 17px;
+          height: 72px;
+          width: 357.328px;
+        }
+      el-331 (div) {
+        height: 120px;
+        width: 357.328px;
+      }
+        el-332 (h3) {
+          font-size: 24px;
+          font-weight: 600;
+          height: 32px;
+          line-height: 32px;
+          margin-bottom: 16px;
+          text-wrap-style: pretty;
+          width: 357.328px;
+        }
+        el-333 (p) {
+          font-size: 17px;
+          height: 72px;
+          width: 357.328px;
+        }
+      el-334 (div) {
+        height: 120px;
+        width: 357.344px;
+      }
+        el-335 (h3) {
+          font-size: 24px;
+          font-weight: 600;
+          height: 32px;
+          line-height: 32px;
+          margin-bottom: 16px;
+          text-wrap-style: pretty;
+          width: 357.344px;
+        }
+        el-336 (p) {
+          font-size: 17px;
+          height: 72px;
+          width: 357.344px;
+        }
+
+======================================================================
+SECTION: COMMITTED_SUCCESS
+======================================================================
+el-1138 (div) {
+  background-color: rgb(245, 245, 245);
+  bottom: 0px;
+  height: 612px;
+  left: 0px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 128px;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 128px;
+  position: relative;
+  right: 0px;
+  top: 0px;
+}
+  el-1139 (section) {
+    height: 356px;
+    margin-left: 232.5px;
+    margin-right: 232.5px;
+    max-width: 1200px;
+    width: 1200px;
+  }
+    el-1140 (h2) {
+      font-size: 48px;
+      font-weight: 700;
+      height: 64px;
+      line-height: 52px;
+      padding-bottom: 12px;
+      text-wrap-style: pretty;
+      width: 1200px;
+    }
+    el-1141 (p) {
+      font-size: 20px;
+      height: 92px;
+      line-height: 28px;
+      padding-bottom: 64px;
+      width: 1200px;
+    }
+    el-1142 (div) {
+      column-gap: 96px;
+      display: grid;
+      grid-template-columns: 336px 336px 336px;
+      grid-template-rows: 80px 80px;
+      height: 200px;
+      row-gap: 40px;
+      width: 1200px;
+    }
+      el-1143 (div) {
+        height: 80px;
+        width: 336px;
+      }
+        el-1144 (h3) {
+          font-size: 20px;
+          font-weight: 600;
+          height: 40px;
+          line-height: 28px;
+          padding-bottom: 12px;
+          width: 336px;
+        }
+        el-1145 (p) {
+          font-size: 15px;
+          height: 40px;
+          line-height: 20px;
+          width: 336px;
+        }
+      el-1146 (div) {
+        height: 80px;
+        width: 336px;
+      }
+        el-1147 (h3) {
+          font-size: 20px;
+          font-weight: 600;
+          height: 40px;
+          line-height: 28px;
+          padding-bottom: 12px;
+          width: 336px;
+        }
+        el-1148 (p) {
+          font-size: 15px;
+          height: 40px;
+          line-height: 20px;
+          width: 336px;
+        }
+      el-1149 (div) {
+        height: 80px;
+        width: 336px;
+      }
+        el-1150 (h3) {
+          font-size: 20px;
+          font-weight: 600;
+          height: 40px;
+          line-height: 28px;
+          padding-bottom: 12px;
+          width: 336px;
+        }
+        el-1151 (p) {
+          font-size: 15px;
+          height: 40px;
+          line-height: 20px;
+          width: 336px;
+        }
+      el-1152 (div) {
+        height: 80px;
+        width: 336px;
+      }
+        el-1153 (h3) {
+          font-size: 20px;
+          font-weight: 600;
+          height: 40px;
+          line-height: 28px;
+          padding-bottom: 12px;
+          width: 336px;
+        }
+        el-1154 (p) {
+          font-size: 15px;
+          height: 40px;
+          line-height: 20px;
+          width: 336px;
+        }
+      el-1155 (div) {
+        height: 80px;
+        width: 336px;
+      }
+        el-1156 (h3) {
+          font-size: 20px;
+          font-weight: 600;
+          height: 40px;
+          line-height: 28px;
+          padding-bottom: 12px;
+          width: 336px;
+        }
+        el-1157 (p) {
+          font-size: 15px;
+          height: 40px;
+          line-height: 20px;
+          width: 336px;
+        }
+      el-1158 (div) {
+        height: 80px;
+        width: 336px;
+      }
+        el-1159 (h3) {
+          font-size: 20px;
+          font-weight: 600;
+          height: 40px;
+          line-height: 28px;
+          padding-bottom: 12px;
+          width: 336px;
+        }
+        el-1160 (p) {
+          font-size: 15px;
+          height: 40px;
+          line-height: 20px;
+          width: 336px;
+        }
+
+======================================================================
+SECTION: CUSTOMER_SUPPORT
+======================================================================
+el-1161 (div) {
+  bottom: 0px;
+  height: 606px;
+  left: 0px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 120px;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 120px;
+  position: relative;
+  right: 0px;
+  top: 0px;
+}
+  el-1162 (section) {
+    height: 366px;
+    margin-left: 232.5px;
+    margin-right: 232.5px;
+    max-width: 1200px;
+    width: 1200px;
+  }
+    el-1163 (div) {
+      height: 108px;
+      margin-bottom: 48px;
+      width: 1200px;
+    }
+      el-1164 (h2) {
+        font-size: 48px;
+        font-weight: 700;
+        height: 108px;
+        line-height: 54px;
+        text-wrap-style: pretty;
+        width: 1200px;
+      }
+        el-1165 (br) {
+          display: inline;
+          font-size: 48px;
+          font-weight: 700;
+          height: auto;
+          line-height: 54px;
+          text-wrap-style: pretty;
+          width: auto;
+        }
+    el-1166 (div) {
+      column-gap: 32px;
+      display: grid;
+      grid-template-columns: 584px 584px;
+      grid-template-rows: 210px;
+      height: 210px;
+      row-gap: 32px;
+      width: 1200px;
+    }
+      el-1167 (a) {
+        animation-duration: 0.1s;
+        animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        border-bottom-left-radius: 24px;
+        border-bottom-right-radius: 24px;
+        border-bottom-width: 1px;
+        border-left-width: 1px;
+        border-right-width: 1px;
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+        border-top-width: 1px;
+        column-gap: 32px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        height: 210px;
+        justify-content: space-between;
+        padding-bottom: 32px;
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-top: 32px;
+        row-gap: 32px;
+        transition-duration: 0.1s;
+        transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        width: 584px;
+        border-color: rgb(229, 229, 229);
+        /* classes: group flex flex-col justify-between gap-8 rounded-3xl border border-neutral-faded p-6 transition-colors duration-100 ease-in-out hover:border-neutral-fadedHover hover:bg-secondary-hover active:border- */
+      }
+        el-1168 (div) {
+          cursor: pointer;
+          height: 68px;
+          width: 518px;
+        }
+          el-1169 (h3) {
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: 600;
+            height: 32px;
+            line-height: 32px;
+            margin-bottom: 12px;
+            text-wrap-style: pretty;
+            width: 518px;
+          }
+          el-1170 (p) {
+            color: rgb(115, 115, 115);
+            cursor: pointer;
+            font-size: 17px;
+            height: 24px;
+            outline-color: rgb(115, 115, 115);
+            width: 518px;
+          }
+        el-1171 (div) {
+          align-items: center;
+          animation-duration: 0.2s;
+          animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+          appearance: button;
+          border-bottom-left-radius: 9999px;
+          border-bottom-right-radius: 9999px;
+          border-top-left-radius: 9999px;
+          border-top-right-radius: 9999px;
+          cursor: pointer;
+          display: flex;
+          font-size: 15px;
+          font-weight: 500;
+          height: 20px;
+          justify-content: flex-start;
+          line-height: 20px;
+          text-wrap-mode: nowrap;
+          transition-duration: 0.2s;
+          transition-property: transform;
+          transition-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+          width: 518px;
+          /* classes: typography-body-m-semibold text-nowrap flex items-center disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none transition-transform duration-short-m ease-ease-out bg-transparent  */
+        }
+          el-1172 (span) {
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 500;
+            height: 20px;
+            line-height: 20px;
+            text-wrap-mode: nowrap;
+            width: 115.078px;
+          }
+          el-1173 (div) {
+            animation-duration: 0.1s;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 500;
+            height: 24px;
+            line-height: 20px;
+            margin-left: 8px;
+            text-wrap-mode: nowrap;
+            transform: matrix(1, 0, 0, 1, 0, 0);
+            transition-duration: 0.1s;
+            transition-property: transform;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            width: 24px;
+            /* classes: rotate-0 h-6 w-6 transition-transform duration-100 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 */
+          }
+            el-1174 (svg) {
+              cursor: pointer;
+              fill: rgb(20, 20, 20);
+              font-size: 15px;
+              font-weight: 500;
+              height: 24px;
+              line-height: 20px;
+              overflow-x: hidden;
+              overflow-y: hidden;
+              text-wrap-mode: nowrap;
+              vertical-align: middle;
+              width: 24px;
+            }
+              el-1175 (path) {
+                clip-rule: evenodd;
+                cursor: pointer;
+                d: path("M 17.293 6.293 A 1 1 0 0 1 18.707 6.293 L 27.707 15.293 A 1 1 0 0 1 27.707 16.707 L 18.707 25.707 A 1 1 0 0 1 17.293 24.293 L 24.586 17 H 5 A 1 1 0 1 1 5 15 H 24.586 L 17.293 7.707 A 1 1 0 0 1 17.293 6.293");
+                display: inline;
+                fill: rgb(20, 20, 20);
+                fill-rule: evenodd;
+                font-size: 15px;
+                font-weight: 500;
+                height: auto;
+                line-height: 20px;
+                text-wrap-mode: nowrap;
+                width: auto;
+              }
+      el-1176 (a) {
+        animation-duration: 0.1s;
+        animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        border-bottom-left-radius: 24px;
+        border-bottom-right-radius: 24px;
+        border-bottom-width: 1px;
+        border-left-width: 1px;
+        border-right-width: 1px;
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+        border-top-width: 1px;
+        column-gap: 32px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        height: 210px;
+        justify-content: space-between;
+        padding-bottom: 32px;
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-top: 32px;
+        row-gap: 32px;
+        transition-duration: 0.1s;
+        transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        width: 584px;
+        border-color: rgb(229, 229, 229);
+        /* classes: group flex flex-col justify-between gap-8 rounded-3xl border border-neutral-faded p-6 transition-colors duration-100 ease-in-out hover:border-neutral-fadedHover hover:bg-secondary-hover active:border- */
+      }
+        el-1177 (div) {
+          cursor: pointer;
+          height: 92px;
+          width: 518px;
+        }
+          el-1178 (h3) {
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: 600;
+            height: 32px;
+            line-height: 32px;
+            margin-bottom: 12px;
+            text-wrap-style: pretty;
+            width: 518px;
+          }
+          el-1179 (p) {
+            color: rgb(115, 115, 115);
+            cursor: pointer;
+            font-size: 17px;
+            height: 48px;
+            outline-color: rgb(115, 115, 115);
+            width: 518px;
+          }
+        el-1180 (div) {
+          align-items: center;
+          animation-duration: 0.2s;
+          animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+          appearance: button;
+          border-bottom-left-radius: 9999px;
+          border-bottom-right-radius: 9999px;
+          border-top-left-radius: 9999px;
+          border-top-right-radius: 9999px;
+          cursor: pointer;
+          display: flex;
+          font-size: 15px;
+          font-weight: 500;
+          height: 20px;
+          justify-content: flex-start;
+          line-height: 20px;
+          text-wrap-mode: nowrap;
+          transition-duration: 0.2s;
+          transition-property: transform;
+          transition-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+          width: 518px;
+          /* classes: typography-body-m-semibold text-nowrap flex items-center disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none transition-transform duration-short-m ease-ease-out bg-transparent  */
+        }
+          el-1181 (span) {
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 500;
+            height: 20px;
+            line-height: 20px;
+            text-wrap-mode: nowrap;
+            width: 71.7188px;
+          }
+          el-1182 (div) {
+            animation-duration: 0.1s;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 500;
+            height: 24px;
+            line-height: 20px;
+            margin-left: 8px;
+            text-wrap-mode: nowrap;
+            transform: matrix(1, 0, 0, 1, 0, 0);
+            transition-duration: 0.1s;
+            transition-property: transform;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            width: 24px;
+            /* classes: rotate-0 h-6 w-6 transition-transform duration-100 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 */
+          }
+            el-1183 (svg) {
+              cursor: pointer;
+              fill: rgb(20, 20, 20);
+              font-size: 15px;
+              font-weight: 500;
+              height: 24px;
+              line-height: 20px;
+              overflow-x: hidden;
+              overflow-y: hidden;
+              text-wrap-mode: nowrap;
+              vertical-align: middle;
+              width: 24px;
+            }
+              el-1184 (path) {
+                clip-rule: evenodd;
+                cursor: pointer;
+                d: path("M 17.293 6.293 A 1 1 0 0 1 18.707 6.293 L 27.707 15.293 A 1 1 0 0 1 27.707 16.707 L 18.707 25.707 A 1 1 0 0 1 17.293 24.293 L 24.586 17 H 5 A 1 1 0 1 1 5 15 H 24.586 L 17.293 7.707 A 1 1 0 0 1 17.293 6.293");
+                display: inline;
+                fill: rgb(20, 20, 20);
+                fill-rule: evenodd;
+                font-size: 15px;
+                font-weight: 500;
+                height: auto;
+                line-height: 20px;
+                text-wrap-mode: nowrap;
+                width: auto;
+              }
+
+======================================================================
+SECTION: FINAL_CTA
+======================================================================
+el-2008 (div) {
+  align-items: flex-end;
+  background-size: cover;
+  bottom: 0px;
+  color: rgb(255, 255, 255);
+  height: 410px;
+  left: 0px;
+  outline-color: rgb(255, 255, 255);
+  position: relative;
+  right: 0px;
+  top: 0px;
+}
+  el-2009 (img) {
+    border-bottom-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-top-style: none;
+    bottom: 0px;
+    color: rgba(0, 0, 0, 0);
+    height: 410px;
+    left: 0px;
+    max-width: 100%;
+    object-fit: cover;
+    outline-color: rgba(0, 0, 0, 0);
+    overflow-x: clip;
+    overflow-y: clip;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    vertical-align: middle;
+  }
+  el-2010 (div) {
+    align-items: center;
+    bottom: 0px;
+    color: rgb(255, 255, 255);
+    column-gap: 8px;
+    display: flex;
+    flex-direction: column;
+    height: 410px;
+    left: 0px;
+    outline-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 120px;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 120px;
+    position: relative;
+    right: 0px;
+    row-gap: 8px;
+    top: 0px;
+  }
+    el-2011 (section) {
+      color: rgb(255, 255, 255);
+      height: 170px;
+      margin-left: 539.156px;
+      margin-right: 539.156px;
+      max-width: 1200px;
+      outline-color: rgb(255, 255, 255);
+      width: 586.688px;
+    }
+      el-2012 (h2) {
+        color: rgb(255, 255, 255);
+        font-size: 48px;
+        font-weight: 700;
+        height: 54px;
+        line-height: 54px;
+        margin-bottom: 8px;
+        outline-color: rgb(255, 255, 255);
+        text-align: center;
+        text-wrap-style: pretty;
+        width: 586.688px;
+      }
+      el-2013 (p) {
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        height: 28px;
+        line-height: 28px;
+        outline-color: rgb(255, 255, 255);
+        text-align: center;
+        width: 586.688px;
+      }
+      el-2014 (div) {
+        color: rgb(255, 255, 255);
+        display: flex;
+        height: 48px;
+        margin-top: 32px;
+        outline-color: rgb(255, 255, 255);
+        width: 586.688px;
+      }
+        el-2015 (a) {
+          align-items: center;
+          animation-duration: 0.2s;
+          animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+          appearance: button;
+          background-color: rgb(255, 255, 255);
+          border-bottom-left-radius: 9999px;
+          border-bottom-right-radius: 9999px;
+          border-bottom-width: 1px;
+          border-left-width: 1px;
+          border-right-width: 1px;
+          border-top-left-radius: 9999px;
+          border-top-right-radius: 9999px;
+          border-top-width: 1px;
+          column-gap: 8px;
+          cursor: pointer;
+          display: flex;
+          font-size: 17px;
+          font-weight: 600;
+          height: 48px;
+          justify-content: center;
+          margin-left: 188.109px;
+          margin-right: 188.109px;
+          padding-left: 24px;
+          padding-right: 24px;
+          row-gap: 8px;
+          text-wrap-mode: nowrap;
+          transition-duration: 0.2s;
+          transition-property: transform;
+          transition-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+          width: 210.469px;
+          /* classes: typography-body-m-semibold text-nowrap justify-center disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none transition-transform duration-short-m ease-ease-out bg-secondary text- */
+        }
+          el-2016 (div) {
+            animation-duration: 0.1s;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: 600;
+            height: 24px;
+            text-wrap-mode: nowrap;
+            transform: matrix(1, 0, 0, 1, 0, 0);
+            transition-duration: 0.1s;
+            transition-property: transform;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            width: 24px;
+            /* classes: rotate-0 h-6 w-6 transition-transform duration-100 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1 */
+          }
+            el-2017 (svg) {
+              cursor: pointer;
+              fill: rgb(20, 20, 20);
+              font-size: 17px;
+              font-weight: 600;
+              height: 24px;
+              overflow-x: hidden;
+              overflow-y: hidden;
+              text-wrap-mode: nowrap;
+              vertical-align: middle;
+              width: 24px;
+            }
+              el-2018 (path) {
+                clip-rule: evenodd;
+                cursor: pointer;
+                d: path("M 17.293 6.293 A 1 1 0 0 1 18.707 6.293 L 27.707 15.293 A 1 1 0 0 1 27.707 16.707 L 18.707 25.707 A 1 1 0 0 1 17.293 24.293 L 24.586 17 H 5 A 1 1 0 1 1 5 15 H 24.586 L 17.293 7.707 A 1 1 0 0 1 17.293 6.293");
+                display: inline;
+                fill: rgb(20, 20, 20);
+                fill-rule: evenodd;
+                font-size: 17px;
+                font-weight: 600;
+                height: auto;
+                text-wrap-mode: nowrap;
+                width: auto;
+              }
+
+======================================================================
+SECTION: FAQ_STRUCTURE
+======================================================================
+el-1185 (div) {
+  bottom: 0px;
+  height: 1084px;
+  left: 0px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 120px;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 120px;
+  position: relative;
+  right: 0px;
+  top: 0px;
+}
+  el-1186 (section) {
+    height: 844px;
+    margin-left: 432.5px;
+    margin-right: 432.5px;
+    max-width: 800px;
+    width: 800px;
+  }
+    el-1187 (h2) {
+      font-size: 48px;
+      font-weight: 700;
+      height: 64px;
+      line-height: 64px;
+      text-align: center;
+      width: 800px;
+    }
+    el-1188 (div) {
+      height: 684px;
+      margin-top: 96px;
+      width: 800px;
+    }
+      el-1189 (div) {
+        background-color: rgb(242, 242, 242);
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        bottom: 0px;
+        height: 96px;
+        left: 0px;
+        margin-bottom: 16px;
+        position: relative;
+        right: 0px;
+        top: 0px;
+        width: 800px;
+        /* classes: relative rounded-lg bg-background-pageFadedActive hover:bg-background-pageFadedHover active:bg-background-pageFadedActive mb-4 last-of-type:mb-0 */
+      }
+        el-1190 (button) {
+          align-items: center;
+          appearance: button;
+          border-bottom-style: none;
+          border-left-style: none;
+          border-right-style: none;
+          border-top-style: none;
+          column-gap: 12px;
+          cursor: pointer;
+          display: flex;
+          height: 96px;
+          justify-content: space-between;
+          padding-bottom: 20px;
+          padding-left: 24px;
+          padding-right: 24px;
+          padding-top: 20px;
+          row-gap: 12px;
+          text-align: center;
+          transition-duration: 0.15s;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          width: 800px;
+          border-color: rgb(20, 20, 20);
+          /* classes: group flex w-full items-center justify-between gap-3 mobile:px-6 mobile:py-5 p-4 transition-all cursor-pointer */
+        }
+          el-1191 (h3) {
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 600;
+            height: 56px;
+            line-height: 28px;
+            text-align: left;
+            width: 716px;
+          }
+          el-1192 (div) {
+            cursor: pointer;
+            flex-shrink: 0;
+            height: 24px;
+            text-align: center;
+            width: 24px;
+          }
+            el-1193 (svg) {
+              cursor: pointer;
+              fill: rgb(20, 20, 20);
+              height: 24px;
+              overflow-x: hidden;
+              overflow-y: hidden;
+              text-align: center;
+              vertical-align: middle;
+              width: 24px;
+            }
+              el-1194 (path) {
+                clip-rule: evenodd;
+                cursor: pointer;
+                d: path("M 16 5.333 A 1 1 0 0 1 17 6.333 V 15 H 25.667 A 1 1 0 1 1 25.667 17 H 17 V 25.667 A 1 1 0 1 1 15 25.667 V 17 H 6.333 A 1 1 0 1 1 6.333 15 H 15 V 6.333 A 1 1 0 0 1 16 5.333");
+                display: inline;
+                fill: rgb(20, 20, 20);
+                fill-rule: evenodd;
+                height: auto;
+                text-align: center;
+                width: auto;
+              }
+        el-1195 (div) {
+          animation-duration: 0.3s;
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          display: grid;
+          grid-template-columns: 800px;
+          grid-template-rows: 0px;
+          opacity: 0;
+          overflow-x: hidden;
+          overflow-y: hidden;
+          transition-duration: 0.3s;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          width: 800px;
+          /* classes: grid overflow-hidden transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0 */
+        }
+          el-1196 (div) {
+            overflow-x: hidden;
+            overflow-y: hidden;
+            width: 800px;
+          }
+            el-1197 (div) {
+              color: rgb(118, 118, 118);
+              height: 206px;
+              line-height: 22px;
+              margin-top: -4px;
+              max-width: 800px;
+              outline-color: rgb(118, 118, 118);
+              padding-bottom: 20px;
+              padding-left: 24px;
+              padding-right: 24px;
+              padding-top: 8px;
+              width: 800px;
+            }
+              el-1198 (p) {
+                color: rgb(118, 118, 118);
+                height: 56px;
+                line-height: 22px;
+                outline-color: rgb(118, 118, 118);
+                padding-bottom: 12px;
+                width: 752px;
+              }
+              el-1199 (p) {
+                color: rgb(118, 118, 118);
+                height: 78px;
+                line-height: 22px;
+                outline-color: rgb(118, 118, 118);
+                padding-bottom: 12px;
+                width: 752px;
+              }
+      el-1200 (div) {
+        background-color: rgb(242, 242, 242);
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        bottom: 0px;
+        height: 68px;
+        left: 0px;
+        margin-bottom: 16px;
+        position: relative;
+        right: 0px;
+        top: 0px;
+        width: 800px;
+        /* classes: relative rounded-lg bg-background-pageFadedActive hover:bg-background-pageFadedHover active:bg-background-pageFadedActive mb-4 last-of-type:mb-0 */
+      }
+        el-1201 (button) {
+          align-items: center;
+          appearance: button;
+          border-bottom-style: none;
+          border-left-style: none;
+          border-right-style: none;
+          border-top-style: none;
+          column-gap: 12px;
+          cursor: pointer;
+          display: flex;
+          height: 68px;
+          justify-content: space-between;
+          padding-bottom: 20px;
+          padding-left: 24px;
+          padding-right: 24px;
+          padding-top: 20px;
+          row-gap: 12px;
+          text-align: center;
+          transition-duration: 0.15s;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          width: 800px;
+          border-color: rgb(20, 20, 20);
+          /* classes: group flex w-full items-center justify-between gap-3 mobile:px-6 mobile:py-5 p-4 transition-all cursor-pointer */
+        }
+          el-1202 (h3) {
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 600;
+            height: 28px;
+            line-height: 28px;
+            text-align: left;
+            width: 404.531px;
+          }
+          el-1203 (div) {
+            cursor: pointer;
+            flex-shrink: 0;
+            height: 24px;
+            text-align: center;
+            width: 24px;
+          }
+            el-1204 (svg) {
+              cursor: pointer;
+              fill: rgb(20, 20, 20);
+              height: 24px;
+              overflow-x: hidden;
+              overflow-y: hidden;
+              text-align: center;
+              vertical-align: middle;
+              width: 24px;
+            }
+              el-1205 (path) {
+                clip-rule: evenodd;
+                cursor: pointer;
+                d: path("M 16 5.333 A 1 1 0 0 1 17 6.333 V 15 H 25.667 A 1 1 0 1 1 25.667 17 H 17 V 25.667 A 1 1 0 1 1 15 25.667 V 17 H 6.333 A 1 1 0 1 1 6.333 15 H 15 V 6.333 A 1 1 0 0 1 16 5.333");
+                display: inline;
+                fill: rgb(20, 20, 20);
+                fill-rule: evenodd;
+                height: auto;
+                text-align: center;
+                width: auto;
+              }
+        el-1206 (div) {
+          animation-duration: 0.3s;
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          display: grid;
+          grid-template-columns: 800px;
+          grid-template-rows: 0px;
+          opacity: 0;
+          overflow-x: hidden;
+          overflow-y: hidden;
+          transition-duration: 0.3s;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          width: 800px;
+          /* classes: grid overflow-hidden transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0 */
+        }
+          el-1207 (div) {
+            overflow-x: hidden;
+            overflow-y: hidden;
+            width: 800px;
+          }
+            el-1208 (div) {
+              color: rgb(118, 118, 118);
+              height: 182px;
+              line-height: 22px;
+              margin-top: -4px;
+              max-width: 800px;
+              outline-color: rgb(118, 118, 118);
+              padding-bottom: 20px;
+              padding-left: 24px;
+              padding-right: 24px;
+              padding-top: 8px;
+              width: 800px;
+            }
+      el-1209 (div) {
+        background-color: rgb(242, 242, 242);
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        bottom: 0px;
+        height: 68px;
+        left: 0px;
+        margin-bottom: 16px;
+        position: relative;
+        right: 0px;
+        top: 0px;
+        width: 800px;
+        /* classes: relative rounded-lg bg-background-pageFadedActive hover:bg-background-pageFadedHover active:bg-background-pageFadedActive mb-4 last-of-type:mb-0 */
+      }
+        el-1210 (button) {
+          align-items: center;
+          appearance: button;
+          border-bottom-style: none;
+          border-left-style: none;
+          border-right-style: none;
+          border-top-style: none;
+          column-gap: 12px;
+          cursor: pointer;
+          display: flex;
+          height: 68px;
+          justify-content: space-between;
+          padding-bottom: 20px;
+          padding-left: 24px;
+          padding-right: 24px;
+          padding-top: 20px;
+          row-gap: 12px;
+          text-align: center;
+          transition-duration: 0.15s;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          width: 800px;
+          border-color: rgb(20, 20, 20);
+          /* classes: group flex w-full items-center justify-between gap-3 mobile:px-6 mobile:py-5 p-4 transition-all cursor-pointer */
+        }
+          el-1211 (h3) {
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 600;
+            height: 28px;
+            line-height: 28px;
+            text-align: left;
+            width: 268.969px;
+          }
+          el-1212 (div) {
+            cursor: pointer;
+            flex-shrink: 0;
+            height: 24px;
+            text-align: center;
+            width: 24px;
+          }
+            el-1213 (svg) {
+              cursor: pointer;
+              fill: rgb(20, 20, 20);
+              height: 24px;
+              overflow-x: hidden;
+              overflow-y: hidden;
+              text-align: center;
+              vertical-align: middle;
+              width: 24px;
+            }
+              el-1214 (path) {
+                clip-rule: evenodd;
+                cursor: pointer;
+                d: path("M 16 5.333 A 1 1 0 0 1 17 6.333 V 15 H 25.667 A 1 1 0 1 1 25.667 17 H 17 V 25.667 A 1 1 0 1 1 15 25.667 V 17 H 6.333 A 1 1 0 1 1 6.333 15 H 15 V 6.333 A 1 1 0 0 1 16 5.333");
+                display: inline;
+                fill: rgb(20, 20, 20);
+                fill-rule: evenodd;
+                height: auto;
+                text-align: center;
+                width: auto;
+              }
+        el-1215 (div) {
+          animation-duration: 0.3s;
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          display: grid;
+          grid-template-columns: 800px;
+          grid-template-rows: 0px;
+          opacity: 0;
+          overflow-x: hidden;
+          overflow-y: hidden;
+          transition-duration: 0.3s;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          width: 800px;
+          /* classes: grid overflow-hidden transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0 */
+        }
+          el-1216 (div) {
+            overflow-x: hidden;
+            overflow-y: hidden;
+            width: 800px;
+          }
+            el-1217 (div) {
+              color: rgb(118, 118, 118);
+              height: 94px;
+              line-height: 22px;
+              margin-top: -4px;
+              max-width: 800px;
+              outline-color: rgb(118, 118, 118);
+              padding-bottom: 20px;
+              padding-left: 24px;
+              padding-right: 24px;
+              padding-top: 8px;
+              width: 800px;
+            }
+      el-1218 (div) {
+        background-color: rgb(242, 242, 242);
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        bottom: 0px;
+        height: 68px;
+        left: 0px;
+        margin-bottom: 16px;
+        position: relative;
+        right: 0px;
+        top: 0px;
+        width: 800px;
+        /* classes: relative rounded-lg bg-background-pageFadedActive hover:bg-background-pageFadedHover active:bg-background-pageFadedActive mb-4 last-of-type:mb-0 */
+      }
+        el-1219 (button) {
+          align-items: center;
+          appearance: button;
+          border-bottom-style: none;
+          border-left-style: none;
+          border-right-style: none;
+          border-top-style: none;
+          column-gap: 12px;
+          cursor: pointer;
+          display: flex;
+          height: 68px;
+          justify-content: space-between;
+          padding-bottom: 20px;
+          padding-left: 24px;
+          padding-right: 24px;
+          padding-top: 20px;
+          row-gap: 12px;
+          text-align: center;
+          transition-duration: 0.15s;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          width: 800px;
+          border-color: rgb(20, 20, 20);
+          /* classes: group flex w-full items-center justify-between gap-3 mobile:px-6 mobile:py-5 p-4 transition-all cursor-pointer */
+        }
+          el-1220 (h3) {
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 600;
+            height: 28px;
+            line-height: 28px;
+            text-align: left;
+            width: 428.984px;
+          }
+          el-1221 (div) {
+            cursor: pointer;
+            flex-shrink: 0;
+            height: 24px;
+            text-align: center;
+            width: 24px;
+          }
+            el-1222 (svg) {
+              cursor: pointer;
+              fill: rgb(20, 20, 20);
+              height: 24px;
+              overflow-x: hidden;
+              overflow-y: hidden;
+              text-align: center;
+              vertical-align: middle;
+              width: 24px;
+            }
+              el-1223 (path) {
+                clip-rule: evenodd;
+                cursor: pointer;
+                d: path("M 16 5.333 A 1 1 0 0 1 17 6.333 V 15 H 25.667 A 1 1 0 1 1 25.667 17 H 17 V 25.667 A 1 1 0 1 1 15 25.667 V 17 H 6.333 A 1 1 0 1 1 6.333 15 H 15 V 6.333 A 1 1 0 0 1 16 5.333");
+                display: inline;
+                fill: rgb(20, 20, 20);
+                fill-rule: evenodd;
+                height: auto;
+                text-align: center;
+                width: auto;
+              }
+        el-1224 (div) {
+          animation-duration: 0.3s;
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          display: grid;
+          grid-template-columns: 800px;
+          grid-template-rows: 0px;
+          opacity: 0;
+          overflow-x: hidden;
+          overflow-y: hidden;
+          transition-duration: 0.3s;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          width: 800px;
+          /* classes: grid overflow-hidden transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0 */
+        }
+          el-1225 (div) {
+            overflow-x: hidden;
+            overflow-y: hidden;
+            width: 800px;
+          }
+            el-1226 (div) {
+              color: rgb(118, 118, 118);
+              height: 94px;
+              line-height: 22px;
+              margin-top: -4px;
+              max-width: 800px;
+              outline-color: rgb(118, 118, 118);
+              padding-bottom: 20px;
+              padding-left: 24px;
+              padding-right: 24px;
+              padding-top: 8px;
+              width: 800px;
+            }
+      el-1227 (div) {
+        background-color: rgb(242, 242, 242);
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        bottom: 0px;
+        height: 68px;
+        left: 0px;
+        margin-bottom: 16px;
+        position: relative;
+        right: 0px;
+        top: 0px;
+        width: 800px;
+        /* classes: relative rounded-lg bg-background-pageFadedActive hover:bg-background-pageFadedHover active:bg-background-pageFadedActive mb-4 last-of-type:mb-0 */
+      }
+        el-1228 (button) {
+          align-items: center;
+          appearance: button;
+          border-bottom-style: none;
+          border-left-style: none;
+          border-right-style: none;
+          border-top-style: none;
+          column-gap: 12px;
+          cursor: pointer;
+          display: flex;
+          height: 68px;
+          justify-content: space-between;
+          padding-bottom: 20px;
+          padding-left: 24px;
+          padding-right: 24px;
+          padding-top: 20px;
+          row-gap: 12px;
+          text-align: center;
+          transition-duration: 0.15s;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          width: 800px;
+          border-color: rgb(20, 20, 20);
+          /* classes: group flex w-full items-center justify-between gap-3 mobile:px-6 mobile:py-5 p-4 transition-all cursor-pointer */
+        }
+          el-1229 (h3) {
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 600;
+            height: 28px;
+            line-height: 28px;
+            text-align: left;
+            width: 433.469px;
+          }
+          el-1230 (div) {
+            cursor: pointer;
+            flex-shrink: 0;
+            height: 24px;
+            text-align: center;
+            width: 24px;
+          }
+            el-1231 (svg) {
+              cursor: pointer;
+              fill: rgb(20, 20, 20);
+              height: 24px;
+              overflow-x: hidden;
+              overflow-y: hidden;
+              text-align: center;
+              vertical-align: middle;
+              width: 24px;
+            }
+              el-1232 (path) {
+                clip-rule: evenodd;
+                cursor: pointer;
+                d: path("M 16 5.333 A 1 1 0 0 1 17 6.333 V 15 H 25.667 A 1 1 0 1 1 25.667 17 H 17 V 25.667 A 1 1 0 1 1 15 25.667 V 17 H 6.333 A 1 1 0 1 1 6.333 15 H 15 V 6.333 A 1 1 0 0 1 16 5.333");
+                display: inline;
+                fill: rgb(20, 20, 20);
+                fill-rule: evenodd;
+                height: auto;
+                text-align: center;
+                width: auto;
+              }
+        el-1233 (div) {
+          animation-duration: 0.3s;
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          display: grid;
+          grid-template-columns: 800px;
+          grid-template-rows: 0px;
+          opacity: 0;
+          overflow-x: hidden;
+          overflow-y: hidden;
+          transition-duration: 0.3s;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          width: 800px;
+          /* classes: grid overflow-hidden transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0 */
+        }
+          el-1234 (div) {
+            overflow-x: hidden;
+            overflow-y: hidden;
+            width: 800px;
+          }
+            el-1235 (div) {
+              color: rgb(118, 118, 118);
+              height: 116px;
+              line-height: 22px;
+              margin-top: -4px;
+              max-width: 800px;
+              outline-color: rgb(118, 118, 118);
+              padding-bottom: 20px;
+              padding-left: 24px;
+              padding-right: 24px;
+              padding-top: 8px;
+              width: 800px;
+            }
+      el-1236 (div) {
+        background-color: rgb(242, 242, 242);
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        bottom: 0px;
+        height: 68px;
+        left: 0px;
+        margin-bottom: 16px;
+        position: relative;
+        right: 0px;
+        top: 0px;
+        width: 800px;
+        /* classes: relative rounded-lg bg-background-pageFadedActive hover:bg-background-pageFadedHover active:bg-background-pageFadedActive mb-4 last-of-type:mb-0 */
+      }
+        el-1237 (button) {
+          align-items: center;
+          appearance: button;
+          border-bottom-style: none;
+          border-left-style: none;
+          border-right-style: none;
+          border-top-style: none;
+          column-gap: 12px;
+          cursor: pointer;
+          display: flex;
+          height: 68px;
+          justify-content: space-between;
+          padding-bottom: 20px;
+          padding-left: 24px;
+          padding-right: 24px;
+          padding-top: 20px;
+          row-gap: 12px;
+          text-align: center;
+          transition-duration: 0.15s;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          width: 800px;
+          border-color: rgb(20, 20, 20);
+          /* classes: group flex w-full items-center justify-between gap-3 mobile:px-6 mobile:py-5 p-4 transition-all cursor-pointer */
+        }
+          el-1238 (h3) {
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 600;
+            height: 28px;
+            line-height: 28px;
+            text-align: left;
+            width: 409.016px;
+          }
+          el-1239 (div) {
+            cursor: pointer;
+            flex-shrink: 0;
+            height: 24px;
+            text-align: center;
+            width: 24px;
+          }
+            el-1240 (svg) {
+              cursor: pointer;
+              fill: rgb(20, 20, 20);
+              height: 24px;
+              overflow-x: hidden;
+              overflow-y: hidden;
+              text-align: center;
+              vertical-align: middle;
+              width: 24px;
+            }
+              el-1241 (path) {
+                clip-rule: evenodd;
+                cursor: pointer;
+                d: path("M 16 5.333 A 1 1 0 0 1 17 6.333 V 15 H 25.667 A 1 1 0 1 1 25.667 17 H 17 V 25.667 A 1 1 0 1 1 15 25.667 V 17 H 6.333 A 1 1 0 1 1 6.333 15 H 15 V 6.333 A 1 1 0 0 1 16 5.333");
+                display: inline;
+                fill: rgb(20, 20, 20);
+                fill-rule: evenodd;
+                height: auto;
+                text-align: center;
+                width: auto;
+              }
+        el-1242 (div) {
+          animation-duration: 0.3s;
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          display: grid;
+          grid-template-columns: 800px;
+          grid-template-rows: 0px;
+          opacity: 0;
+          overflow-x: hidden;
+          overflow-y: hidden;
+          transition-duration: 0.3s;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          width: 800px;
+          /* classes: grid overflow-hidden transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0 */
+        }
+          el-1243 (div) {
+            overflow-x: hidden;
+            overflow-y: hidden;
+            width: 800px;
+          }
+            el-1244 (div) {
+              color: rgb(118, 118, 118);
+              height: 204px;
+              line-height: 22px;
+              margin-top: -4px;
+              max-width: 800px;
+              outline-color: rgb(118, 118, 118);
+              padding-bottom: 20px;
+              padding-left: 24px;
+              padding-right: 24px;
+              padding-top: 8px;
+              width: 800px;
+            }
+      el-1245 (div) {
+        background-color: rgb(242, 242, 242);
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        bottom: 0px;
+        height: 68px;
+        left: 0px;
+        margin-bottom: 16px;
+        position: relative;
+        right: 0px;
+        top: 0px;
+        width: 800px;
+        /* classes: relative rounded-lg bg-background-pageFadedActive hover:bg-background-pageFadedHover active:bg-background-pageFadedActive mb-4 last-of-type:mb-0 */
+      }
+        el-1246 (button) {
+          align-items: center;
+          appearance: button;
+          border-bottom-style: none;
+          border-left-style: none;
+          border-right-style: none;
+          border-top-style: none;
+          column-gap: 12px;
+          cursor: pointer;
+          display: flex;
+          height: 68px;
+          justify-content: space-between;
+          padding-bottom: 20px;
+          padding-left: 24px;
+          padding-right: 24px;
+          padding-top: 20px;
+          row-gap: 12px;
+          text-align: center;
+          transition-duration: 0.15s;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          width: 800px;
+          border-color: rgb(20, 20, 20);
+          /* classes: group flex w-full items-center justify-between gap-3 mobile:px-6 mobile:py-5 p-4 transition-all cursor-pointer */
+        }
+          el-1247 (h3) {
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 600;
+            height: 28px;
+            line-height: 28px;
+            text-align: left;
+            width: 382.297px;
+          }
+          el-1248 (div) {
+            cursor: pointer;
+            flex-shrink: 0;
+            height: 24px;
+            text-align: center;
+            width: 24px;
+          }
+            el-1249 (svg) {
+              cursor: pointer;
+              fill: rgb(20, 20, 20);
+              height: 24px;
+              overflow-x: hidden;
+              overflow-y: hidden;
+              text-align: center;
+              vertical-align: middle;
+              width: 24px;
+            }
+              el-1250 (path) {
+                clip-rule: evenodd;
+                cursor: pointer;
+                d: path("M 16 5.333 A 1 1 0 0 1 17 6.333 V 15 H 25.667 A 1 1 0 1 1 25.667 17 H 17 V 25.667 A 1 1 0 1 1 15 25.667 V 17 H 6.333 A 1 1 0 1 1 6.333 15 H 15 V 6.333 A 1 1 0 0 1 16 5.333");
+                display: inline;
+                fill: rgb(20, 20, 20);
+                fill-rule: evenodd;
+                height: auto;
+                text-align: center;
+                width: auto;
+              }
+        el-1251 (div) {
+          animation-duration: 0.3s;
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          display: grid;
+          grid-template-columns: 800px;
+          grid-template-rows: 0px;
+          opacity: 0;
+          overflow-x: hidden;
+          overflow-y: hidden;
+          transition-duration: 0.3s;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          width: 800px;
+          /* classes: grid overflow-hidden transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0 */
+        }
+          el-1252 (div) {
+            overflow-x: hidden;
+            overflow-y: hidden;
+            width: 800px;
+          }
+            el-1253 (div) {
+              color: rgb(118, 118, 118);
+              height: 182px;
+              line-height: 22px;
+              margin-top: -4px;
+              max-width: 800px;
+              outline-color: rgb(118, 118, 118);
+              padding-bottom: 20px;
+              padding-left: 24px;
+              padding-right: 24px;
+              padding-top: 8px;
+              width: 800px;
+            }
+      el-1254 (div) {
+        background-color: rgb(242, 242, 242);
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        bottom: 0px;
+        height: 68px;
+        left: 0px;
+        position: relative;
+        right: 0px;
+        top: 0px;
+        width: 800px;
+        /* classes: relative rounded-lg bg-background-pageFadedActive hover:bg-background-pageFadedHover active:bg-background-pageFadedActive mb-4 last-of-type:mb-0 */
+      }
+        el-1255 (button) {
+          align-items: center;
+          appearance: button;
+          border-bottom-style: none;
+          border-left-style: none;
+          border-right-style: none;
+          border-top-style: none;
+          column-gap: 12px;
+          cursor: pointer;
+          display: flex;
+          height: 68px;
+          justify-content: space-between;
+          padding-bottom: 20px;
+          padding-left: 24px;
+          padding-right: 24px;
+          padding-top: 20px;
+          row-gap: 12px;
+          text-align: center;
+          transition-duration: 0.15s;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          width: 800px;
+          border-color: rgb(20, 20, 20);
+          /* classes: group flex w-full items-center justify-between gap-3 mobile:px-6 mobile:py-5 p-4 transition-all cursor-pointer */
+        }
+          el-1256 (h3) {
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 600;
+            height: 28px;
+            line-height: 28px;
+            text-align: left;
+            width: 563.516px;
+          }
+          el-1257 (div) {
+            cursor: pointer;
+            flex-shrink: 0;
+            height: 24px;
+            text-align: center;
+            width: 24px;
+          }
+            el-1258 (svg) {
+              cursor: pointer;
+              fill: rgb(20, 20, 20);
+              height: 24px;
+              overflow-x: hidden;
+              overflow-y: hidden;
+              text-align: center;
+              vertical-align: middle;
+              width: 24px;
+            }
+              el-1259 (path) {
+                clip-rule: evenodd;
+                cursor: pointer;
+                d: path("M 16 5.333 A 1 1 0 0 1 17 6.333 V 15 H 25.667 A 1 1 0 1 1 25.667 17 H 17 V 25.667 A 1 1 0 1 1 15 25.667 V 17 H 6.333 A 1 1 0 1 1 6.333 15 H 15 V 6.333 A 1 1 0 0 1 16 5.333");
+                display: inline;
+                fill: rgb(20, 20, 20);
+                fill-rule: evenodd;
+                height: auto;
+                text-align: center;
+                width: auto;
+              }
+        el-1260 (div) {
+          animation-duration: 0.3s;
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          display: grid;
+          grid-template-columns: 800px;
+          grid-template-rows: 0px;
+          opacity: 0;
+          overflow-x: hidden;
+          overflow-y: hidden;
+          transition-duration: 0.3s;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          width: 800px;
+          /* classes: grid overflow-hidden transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0 */
+        }
+          el-1261 (div) {
+            overflow-x: hidden;
+            overflow-y: hidden;
+            width: 800px;
+          }
+            el-1262 (div) {
+              color: rgb(118, 118, 118);
+              height: 94px;
+              line-height: 22px;
+              margin-top: -4px;
+              max-width: 800px;
+              outline-color: rgb(118, 118, 118);
+              padding-bottom: 20px;
+              padding-left: 24px;
+              padding-right: 24px;
+              padding-top: 8px;
+              width: 800px;
+            }
+    el-1263 (script) {
+      display: none;
+      height: auto;
+      width: auto;
+    }
+
+======================================================================
+SECTION: BOSS_CARDS
+======================================================================
+el-1068 (div) {
+  height: 882px;
+  padding-bottom: 96px;
+}
+  el-1069 (div) {
+    bottom: 0px;
+    height: 300px;
+    left: 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 64px;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 120px;
+    position: relative;
+    right: 0px;
+    top: 0px;
+  }
+    el-1070 (section) {
+      height: 116px;
+      margin-left: 232.5px;
+      margin-right: 232.5px;
+      max-width: 1200px;
+      width: 1200px;
+    }
+      el-1071 (div) {
+        height: 116px;
+        max-width: 800px;
+        width: 800px;
+      }
+        el-1072 (h2) {
+          font-size: 48px;
+          font-weight: 700;
+          height: 60px;
+          line-height: 52px;
+          padding-bottom: 8px;
+          width: 800px;
+        }
+        el-1073 (p) {
+          color: rgb(64, 64, 64);
+          font-size: 20px;
+          height: 56px;
+          line-height: 28px;
+          outline-color: rgb(64, 64, 64);
+          width: 800px;
+        }
+  el-1074 (div) {
+    bottom: 0px;
+    height: 486px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    top: 0px;
+  }
+    el-1075 (div) {
+      column-gap: 32px;
+      display: flex;
+      height: 418px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding-bottom: 2px;
+      padding-left: 352.5px;
+      padding-right: 352.5px;
+      row-gap: 32px;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      touch-action: pan-x pan-y;
+      /* classes: flex snap-x snap-mandatory gap-6 overflow-x-auto overflow-y-hidden scroll-smooth px-5 pb-0.5 laptop:gap-8 */
+    }
+      el-1076 (div) {
+        column-gap: 32px;
+        display: flex;
+        height: 416px;
+        row-gap: 32px;
+        width: 2712px;
+      }
+        el-1077 (div) {
+          height: 416px;
+          width: 360px;
+        }
+          el-1078 (div) {
+            background-color: rgb(249, 249, 249);
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            border-bottom-width: 1px;
+            border-left-width: 1px;
+            border-right-width: 1px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            border-top-width: 1px;
+            column-gap: 12px;
+            display: flex;
+            flex-direction: column;
+            height: 416px;
+            justify-content: space-between;
+            overflow-x: auto;
+            overflow-y: auto;
+            padding-bottom: 48px;
+            padding-left: 48px;
+            padding-right: 48px;
+            padding-top: 48px;
+            row-gap: 12px;
+            width: 360px;
+            border-color: rgb(229, 229, 229);
+            /* classes: flex h-[300px] snap-x snap-mandatory snap-center flex-col justify-between gap-3 overflow-x-auto rounded-xl border border-neutral-faded bg-muted p-6 text-muted-foreground laptop:h-[416px] laptop:p-12 */
+          }
+            el-1079 (div) {
+              column-gap: 16px;
+              display: flex;
+              flex-direction: column;
+              height: 112px;
+              row-gap: 16px;
+              width: 262px;
+            }
+              el-1080 (h3) {
+                color: rgb(105, 80, 243);
+                font-size: 64px;
+                font-weight: 700;
+                height: 64px;
+                line-height: 64px;
+                outline-color: rgb(105, 80, 243);
+                width: 262px;
+              }
+              el-1081 (p) {
+                font-size: 24px;
+                font-weight: 600;
+                height: 32px;
+                line-height: 32px;
+                width: 262px;
+              }
+            el-1082 (div) {
+              align-items: center;
+              display: flex;
+              height: 120px;
+              justify-content: space-between;
+              width: 262px;
+            }
+              el-1083 (p) {
+                height: 120px;
+                width: 262px;
+              }
+        el-1084 (div) {
+          height: 416px;
+          width: 360px;
+        }
+          el-1085 (div) {
+            background-color: rgb(249, 249, 249);
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            border-bottom-width: 1px;
+            border-left-width: 1px;
+            border-right-width: 1px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            border-top-width: 1px;
+            column-gap: 12px;
+            display: flex;
+            flex-direction: column;
+            height: 416px;
+            justify-content: space-between;
+            overflow-x: auto;
+            overflow-y: auto;
+            padding-bottom: 48px;
+            padding-left: 48px;
+            padding-right: 48px;
+            padding-top: 48px;
+            row-gap: 12px;
+            width: 360px;
+            border-color: rgb(229, 229, 229);
+            /* classes: flex h-[300px] snap-x snap-mandatory snap-center flex-col justify-between gap-3 overflow-x-auto rounded-xl border border-neutral-faded bg-muted p-6 text-muted-foreground laptop:h-[416px] laptop:p-12 */
+          }
+            el-1086 (div) {
+              column-gap: 16px;
+              display: flex;
+              flex-direction: column;
+              height: 112px;
+              row-gap: 16px;
+              width: 262px;
+            }
+              el-1087 (h3) {
+                color: rgb(105, 80, 243);
+                font-size: 64px;
+                font-weight: 700;
+                height: 64px;
+                line-height: 64px;
+                outline-color: rgb(105, 80, 243);
+                width: 262px;
+              }
+              el-1088 (p) {
+                font-size: 24px;
+                font-weight: 600;
+                height: 32px;
+                line-height: 32px;
+                width: 262px;
+              }
+            el-1089 (div) {
+              align-items: center;
+              display: flex;
+              height: 72px;
+              justify-content: space-between;
+              width: 262px;
+            }
+              el-1090 (p) {
+                height: 72px;
+                width: 262px;
+              }
+        el-1091 (div) {
+          height: 416px;
+          width: 360px;
+        }
+          el-1092 (div) {
+            background-color: rgb(249, 249, 249);
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            border-bottom-width: 1px;
+            border-left-width: 1px;
+            border-right-width: 1px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            border-top-width: 1px;
+            column-gap: 12px;
+            display: flex;
+            flex-direction: column;
+            height: 416px;
+            justify-content: space-between;
+            overflow-x: auto;
+            overflow-y: auto;
+            padding-bottom: 48px;
+            padding-left: 48px;
+            padding-right: 48px;
+            padding-top: 48px;
+            row-gap: 12px;
+            width: 360px;
+            border-color: rgb(229, 229, 229);
+            /* classes: flex h-[300px] snap-x snap-mandatory snap-center flex-col justify-between gap-3 overflow-x-auto rounded-xl border border-neutral-faded bg-muted p-6 text-muted-foreground laptop:h-[416px] laptop:p-12 */
+          }
+            el-1093 (div) {
+              column-gap: 16px;
+              display: flex;
+              flex-direction: column;
+              height: 112px;
+              row-gap: 16px;
+              width: 262px;
+            }
+              el-1094 (h3) {
+                color: rgb(105, 80, 243);
+                font-size: 64px;
+                font-weight: 700;
+                height: 64px;
+                line-height: 64px;
+                outline-color: rgb(105, 80, 243);
+                width: 262px;
+              }
+              el-1095 (p) {
+                font-size: 24px;
+                font-weight: 600;
+                height: 32px;
+                line-height: 32px;
+                width: 262px;
+              }
+            el-1096 (div) {
+              align-items: center;
+              display: flex;
+              height: 48px;
+              justify-content: space-between;
+              width: 262px;
+            }
+              el-1097 (p) {
+                height: 48px;
+                width: 262px;
+              }
+        el-1098 (div) {
+          height: 416px;
+          width: 360px;
+        }
+          el-1099 (div) {
+            background-color: rgb(249, 249, 249);
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            border-bottom-width: 1px;
+            border-left-width: 1px;
+            border-right-width: 1px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            border-top-width: 1px;
+            column-gap: 12px;
+            display: flex;
+            flex-direction: column;
+            height: 416px;
+            justify-content: space-between;
+            overflow-x: auto;
+            overflow-y: auto;
+            padding-bottom: 48px;
+            padding-left: 48px;
+            padding-right: 48px;
+            padding-top: 48px;
+            row-gap: 12px;
+            width: 360px;
+            border-color: rgb(229, 229, 229);
+            /* classes: flex h-[300px] snap-x snap-mandatory snap-center flex-col justify-between gap-3 overflow-x-auto rounded-xl border border-neutral-faded bg-muted p-6 text-muted-foreground laptop:h-[416px] laptop:p-12 */
+          }
+            el-1100 (div) {
+              column-gap: 16px;
+              display: flex;
+              flex-direction: column;
+              height: 112px;
+              row-gap: 16px;
+              width: 262px;
+            }
+              el-1101 (h3) {
+                color: rgb(105, 80, 243);
+                font-size: 64px;
+                font-weight: 700;
+                height: 64px;
+                line-height: 64px;
+                outline-color: rgb(105, 80, 243);
+                width: 262px;
+              }
+              el-1102 (p) {
+                font-size: 24px;
+                font-weight: 600;
+                height: 32px;
+                line-height: 32px;
+                width: 262px;
+              }
+            el-1103 (div) {
+              align-items: center;
+              display: flex;
+              height: 96px;
+              justify-content: space-between;
+              width: 262px;
+            }
+              el-1104 (p) {
+                height: 96px;
+                width: 262px;
+              }
+        el-1105 (div) {
+          height: 416px;
+          width: 360px;
+        }
+          el-1106 (div) {
+            background-color: rgb(249, 249, 249);
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            border-bottom-width: 1px;
+            border-left-width: 1px;
+            border-right-width: 1px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            border-top-width: 1px;
+            column-gap: 12px;
+            display: flex;
+            flex-direction: column;
+            height: 416px;
+            justify-content: space-between;
+            overflow-x: auto;
+            overflow-y: auto;
+            padding-bottom: 48px;
+            padding-left: 48px;
+            padding-right: 48px;
+            padding-top: 48px;
+            row-gap: 12px;
+            width: 360px;
+            border-color: rgb(229, 229, 229);
+            /* classes: flex h-[300px] snap-x snap-mandatory snap-center flex-col justify-between gap-3 overflow-x-auto rounded-xl border border-neutral-faded bg-muted p-6 text-muted-foreground laptop:h-[416px] laptop:p-12 */
+          }
+            el-1107 (div) {
+              column-gap: 16px;
+              display: flex;
+              flex-direction: column;
+              height: 112px;
+              row-gap: 16px;
+              width: 262px;
+            }
+              el-1108 (h3) {
+                color: rgb(105, 80, 243);
+                font-size: 64px;
+                font-weight: 700;
+                height: 64px;
+                line-height: 64px;
+                outline-color: rgb(105, 80, 243);
+                width: 262px;
+              }
+              el-1109 (p) {
+                font-size: 24px;
+                font-weight: 600;
+                height: 32px;
+                line-height: 32px;
+                width: 262px;
+              }
+            el-1110 (div) {
+              align-items: center;
+              display: flex;
+              height: 48px;
+              justify-content: space-between;
+              width: 262px;
+            }
+              el-1111 (p) {
+                height: 48px;
+                width: 262px;
+              }
+        el-1112 (div) {
+          height: 416px;
+          width: 360px;
+        }
+          el-1113 (div) {
+            background-color: rgb(249, 249, 249);
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            border-bottom-width: 1px;
+            border-left-width: 1px;
+            border-right-width: 1px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            border-top-width: 1px;
+            column-gap: 12px;
+            display: flex;
+            flex-direction: column;
+            height: 416px;
+            justify-content: space-between;
+            overflow-x: auto;
+            overflow-y: auto;
+            padding-bottom: 48px;
+            padding-left: 48px;
+            padding-right: 48px;
+            padding-top: 48px;
+            row-gap: 12px;
+            width: 360px;
+            border-color: rgb(229, 229, 229);
+            /* classes: flex h-[300px] snap-x snap-mandatory snap-center flex-col justify-between gap-3 overflow-x-auto rounded-xl border border-neutral-faded bg-muted p-6 text-muted-foreground laptop:h-[416px] laptop:p-12 */
+          }
+            el-1114 (div) {
+              column-gap: 16px;
+              display: flex;
+              flex-direction: column;
+              height: 112px;
+              row-gap: 16px;
+              width: 262px;
+            }
+              el-1115 (h3) {
+                color: rgb(105, 80, 243);
+                font-size: 64px;
+                font-weight: 700;
+                height: 64px;
+                line-height: 64px;
+                outline-color: rgb(105, 80, 243);
+                width: 262px;
+              }
+              el-1116 (p) {
+                font-size: 24px;
+                font-weight: 600;
+                height: 32px;
+                line-height: 32px;
+                width: 262px;
+              }
+            el-1117 (div) {
+              align-items: center;
+              display: flex;
+              height: 24px;
+              justify-content: space-between;
+              width: 262px;
+            }
+              el-1118 (p) {
+                height: 24px;
+                width: 228.531px;
+              }
+        el-1119 (div) {
+          height: 416px;
+          width: 360px;
+        }
+          el-1120 (div) {
+            background-color: rgb(249, 249, 249);
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            border-bottom-width: 1px;
+            border-left-width: 1px;
+            border-right-width: 1px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            border-top-width: 1px;
+            column-gap: 12px;
+            display: flex;
+            flex-direction: column;
+            height: 416px;
+            justify-content: space-between;
+            overflow-x: auto;
+            overflow-y: auto;
+            padding-bottom: 48px;
+            padding-left: 48px;
+            padding-right: 48px;
+            padding-top: 48px;
+            row-gap: 12px;
+            width: 360px;
+            border-color: rgb(229, 229, 229);
+            /* classes: flex h-[300px] snap-x snap-mandatory snap-center flex-col justify-between gap-3 overflow-x-auto rounded-xl border border-neutral-faded bg-muted p-6 text-muted-foreground laptop:h-[416px] laptop:p-12 */
+          }
+            el-1121 (div) {
+              column-gap: 16px;
+              display: flex;
+              flex-direction: column;
+              height: 144px;
+              row-gap: 16px;
+              width: 262px;
+            }
+              el-1122 (h3) {
+                color: rgb(105, 80, 243);
+                font-size: 64px;
+                font-weight: 700;
+                height: 64px;
+                line-height: 64px;
+                outline-color: rgb(105, 80, 243);
+                width: 262px;
+              }
+              el-1123 (p) {
+                font-size: 24px;
+                font-weight: 600;
+                height: 64px;
+                line-height: 32px;
+                width: 262px;
+              }
+            el-1124 (div) {
+              align-items: center;
+              display: flex;
+              height: 72px;
+              justify-content: space-between;
+              width: 262px;
+            }
+              el-1125 (p) {
+                height: 72px;
+                width: 262px;
+              }
+    el-1126 (div) {
+      height: 36px;
+      margin-top: 32px;
+      padding-left: 120px;
+      padding-right: 120px;
+    }
+      el-1127 (div) {
+        column-gap: 16px;
+        display: flex;
+        height: 36px;
+        justify-content: flex-start;
+        margin-left: 232.5px;
+        margin-right: 232.5px;
+        max-width: 1200px;
+        row-gap: 16px;
+        width: 1200px;
+      }
+        el-1128 (button) {
+          align-items: center;
+          animation-duration: 0.2s;
+          animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+          appearance: button;
+          border-bottom-left-radius: 9999px;
+          border-bottom-right-radius: 9999px;
+          border-bottom-width: 1px;
+          border-left-width: 1px;
+          border-right-width: 1px;
+          border-top-left-radius: 9999px;
+          border-top-right-radius: 9999px;
+          border-top-width: 1px;
+          cursor: pointer;
+          display: flex;
+          font-size: 17px;
+          font-weight: 600;
+          height: 36px;
+          justify-content: center;
+          padding-bottom: 4px;
+          padding-left: 4px;
+          padding-right: 4px;
+          padding-top: 4px;
+          text-align: center;
+          text-wrap-mode: nowrap;
+          transition-duration: 0.2s;
+          transition-property: transform;
+          transition-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+          width: 36px;
+          /* classes: typography-body-m-semibold text-nowrap flex items-center justify-center disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none transition-transform duration-short-m ease-ease-out  */
+        }
+          el-1129 (div) {
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: 600;
+            height: 24px;
+            text-align: center;
+            text-wrap-mode: nowrap;
+            transform: matrix(-1, 0, 0, -1, 0, 0);
+            width: 24px;
+          }
+            el-1130 (svg) {
+              cursor: pointer;
+              fill: rgb(20, 20, 20);
+              font-size: 17px;
+              font-weight: 600;
+              height: 24px;
+              overflow-x: hidden;
+              overflow-y: hidden;
+              text-align: center;
+              text-wrap-mode: nowrap;
+              vertical-align: middle;
+              width: 24px;
+            }
+              el-1131 (path) {
+                clip-rule: evenodd;
+                cursor: pointer;
+                d: path("M 12.293 9.043 A 1 1 0 0 1 13.707 9.043 L 19.957 15.293 A 1 1 0 0 1 19.957 16.707 L 13.707 22.957 A 1 1 0 0 1 12.293 21.543 L 17.836 16 L 12.293 10.457 A 1 1 0 0 1 12.293 9.043");
+                display: inline;
+                fill: rgb(20, 20, 20);
+                fill-rule: evenodd;
+                font-size: 17px;
+                font-weight: 600;
+                height: auto;
+                text-align: center;
+                text-wrap-mode: nowrap;
+                width: auto;
+              }
+          el-1132 (span) {
+            bottom: 18.5px;
+            clip: rect(0px, 0px, 0px, 0px);
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: 600;
+            height: 1px;
+            left: 371px;
+            margin-bottom: -1px;
+            margin-left: -1px;
+            margin-right: -1px;
+            margin-top: -1px;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            position: absolute;
+            right: 1535px;
+            text-align: center;
+            text-wrap-mode: nowrap;
+            top: 468.5px;
+            width: 1px;
+          }
+        el-1133 (button) {
+          align-items: center;
+          animation-duration: 0.2s;
+          animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+          appearance: button;
+          border-bottom-left-radius: 9999px;
+          border-bottom-right-radius: 9999px;
+          border-bottom-width: 1px;
+          border-left-width: 1px;
+          border-right-width: 1px;
+          border-top-left-radius: 9999px;
+          border-top-right-radius: 9999px;
+          border-top-width: 1px;
+          cursor: pointer;
+          display: flex;
+          font-size: 17px;
+          font-weight: 600;
+          height: 36px;
+          justify-content: center;
+          padding-bottom: 4px;
+          padding-left: 4px;
+          padding-right: 4px;
+          padding-top: 4px;
+          text-align: center;
+          text-wrap-mode: nowrap;
+          transition-duration: 0.2s;
+          transition-property: transform;
+          transition-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+          width: 36px;
+          /* classes: typography-body-m-semibold text-nowrap flex items-center justify-center disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none transition-transform duration-short-m ease-ease-out  */
+        }
+          el-1134 (div) {
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: 600;
+            height: 24px;
+            text-align: center;
+            text-wrap-mode: nowrap;
+            transform: matrix(1, 0, 0, 1, 0, 0);
+            width: 24px;
+          }
+            el-1135 (svg) {
+              cursor: pointer;
+              fill: rgb(20, 20, 20);
+              font-size: 17px;
+              font-weight: 600;
+              height: 24px;
+              overflow-x: hidden;
+              overflow-y: hidden;
+              text-align: center;
+              text-wrap-mode: nowrap;
+              vertical-align: middle;
+              width: 24px;
+            }
+              el-1136 (path) {
+                clip-rule: evenodd;
+                cursor: pointer;
+                d: path("M 12.293 9.043 A 1 1 0 0 1 13.707 9.043 L 19.957 15.293 A 1 1 0 0 1 19.957 16.707 L 13.707 22.957 A 1 1 0 0 1 12.293 21.543 L 17.836 16 L 12.293 10.457 A 1 1 0 0 1 12.293 9.043");
+                display: inline;
+                fill: rgb(20, 20, 20);
+                fill-rule: evenodd;
+                font-size: 17px;
+                font-weight: 600;
+                height: auto;
+                text-align: center;
+                text-wrap-mode: nowrap;
+                width: auto;
+              }
+          el-1137 (span) {
+            bottom: 18.5px;
+            clip: rect(0px, 0px, 0px, 0px);
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: 600;
+            height: 1px;
+            left: 423px;
+            margin-bottom: -1px;
+            margin-left: -1px;
+            margin-right: -1px;
+            margin-top: -1px;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            position: absolute;
+            right: 1483px;
+            text-align: center;
+            text-wrap-mode: nowrap;
+            top: 468.5px;
+            width: 1px;
+          }

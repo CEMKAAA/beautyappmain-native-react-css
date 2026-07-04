@@ -1,0 +1,212 @@
+﻿
+======================================================================
+SECTION: HERO_TITLE (el-1) ÔÇö 0 descendants
+======================================================================
+
+======================================================================
+SECTION: HERO_SUBTITLE (el-2) ÔÇö 0 descendants
+======================================================================
+
+======================================================================
+SECTION: HERO_CTA_BUTTONS (el-3) ÔÇö 6 descendants
+======================================================================
+el-4 (a) [0ch] d:flex | w:176.469px | h:48px | bg:rgb(20, 20, 20) | fs:17px | fw:600 ­şÄ¼ANIM ­şæåHOVER
+el-5 (div) [1ch] w:944.5px | h:48px 
+  el-6 (button) [1ch] d:flex | w:230.422px | h:48px | bg:rgb(255, 255, 255) | fs:17px | fw:600 ­şÄ¼ANIM ­şæåHOVER
+    el-7 (div) [1ch] w:20px | h:20px | fs:17px | fw:600 
+      el-8 (svg) [1ch] w:20px | h:20px | fs:17px | fw:600 
+
+======================================================================
+SECTION: HERO_SCREENSHOTS (el-10) ÔÇö 163 descendants
+======================================================================
+el-11 (img) [0ch] d:none | pos:absolute | w:100% | h:100% 
+el-12 (img) [0ch] pos:absolute | h:1139.23px 
+el-13 (div) [1ch] pos:relative | h:1139.23px 
+  el-14 (section) [3ch] w:1200px | h:955.234px 
+
+======================================================================
+SECTION: PLATFORM_FEATURES (el-174) ÔÇö 148 descendants
+======================================================================
+el-175 (section) [3ch] w:1200px | h:2038.69px 
+  el-176 (div) [3ch] d:flex | w:1200px | h:284px 
+  el-183 (div) [12ch] d:grid | w:1200px | h:1610.69px 
+  el-316 (div) [6ch] d:grid | w:1024px 
+
+======================================================================
+SECTION: PURPLE_STATS (el-323) ÔÇö 13 descendants
+======================================================================
+el-324 (section) [3ch] w:1200px | h:292px 
+  el-325 (h2) [0ch] w:1200px | h:48px | fs:48px | fw:700 
+  el-326 (p) [0ch] w:750px | h:112px 
+  el-327 (div) [3ch] d:grid | w:1200px | h:120px 
+    el-328 (div) [2ch] w:357.328px | h:120px 
+      el-329 (h3) [0ch] w:357.328px | h:32px | fs:24px | fw:600 
+      el-330 (p) [0ch] w:357.328px | h:72px | fs:17px 
+    el-331 (div) [2ch] w:357.328px | h:120px 
+      el-332 (h3) [0ch] w:357.328px | h:32px | fs:24px | fw:600 
+      el-333 (p) [0ch] w:357.328px | h:72px | fs:17px 
+    el-334 (div) [2ch] w:357.344px | h:120px 
+      el-335 (h3) [0ch] w:357.344px | h:32px | fs:24px | fw:600 
+      el-336 (p) [0ch] w:357.344px | h:72px | fs:17px 
+
+======================================================================
+SECTION: FEATURE_GRID (el-337) ÔÇö 32 descendants
+======================================================================
+el-338 (section) [1ch] w:1200px | h:618.547px 
+  el-339 (div) [2ch] d:grid | w:1200px | h:618.547px 
+    el-340 (div) [3ch] d:flex | w:560px | h:396px 
+    el-360 (div) [2ch] d:flex | w:560px | h:618.547px 
+
+======================================================================
+SECTION: MARKETPLACE_CARDS (el-370) ÔÇö 32 descendants
+======================================================================
+el-371 (section) [1ch] w:1200px | h:618.547px 
+  el-372 (div) [2ch] d:grid | w:1200px | h:618.547px 
+    el-373 (div) [2ch] d:flex | w:560px | h:618.547px 
+    el-383 (div) [3ch] d:flex | w:560px | h:378px 
+
+======================================================================
+SECTION: TOP_RATED (el-403) ÔÇö 664 descendants
+======================================================================
+el-404 (div) [1ch] pos:relative | h:356px 
+  el-405 (section) [1ch] w:1200px | h:172px 
+el-409 (div) [2ch] pos:relative | h:550px 
+  el-410 (div) [1ch] d:flex | h:482px ­şôîSNAP
+  el-1056 (div) [1ch] h:36px 
+
+======================================================================
+SECTION: BOSS_BUSINESS (el-1068) ÔÇö 69 descendants
+======================================================================
+el-1069 (div) [1ch] pos:relative | h:300px 
+  el-1070 (section) [1ch] w:1200px | h:116px 
+    el-1071 (div) [2ch] w:800px | h:116px 
+el-1074 (div) [2ch] pos:relative | h:486px 
+  el-1075 (div) [1ch] d:flex | h:418px ­şôîSNAP
+    el-1076 (div) [7ch] d:flex | w:2712px | h:416px 
+  el-1126 (div) [1ch] h:36px 
+    el-1127 (div) [2ch] d:flex | w:1200px | h:36px 
+
+======================================================================
+SECTION: COMMITTED_SUCCESS (el-1138) ÔÇö 22 descendants
+======================================================================
+el-1139 (section) [3ch] w:1200px | h:356px 
+  el-1140 (h2) [0ch] w:1200px | h:64px | fs:48px | fw:700 
+  el-1141 (p) [0ch] w:1200px | h:92px | fs:20px 
+  el-1142 (div) [6ch] d:grid | w:1200px | h:200px 
+    el-1143 (div) [2ch] w:336px | h:80px 
+      el-1144 (h3) [0ch] w:336px | h:40px | fs:20px | fw:600 
+      el-1145 (p) [0ch] w:336px | h:40px | fs:15px 
+    el-1146 (div) [2ch] w:336px | h:80px 
+      el-1147 (h3) [0ch] w:336px | h:40px | fs:20px | fw:600 
+      el-1148 (p) [0ch] w:336px | h:40px | fs:15px 
+    el-1149 (div) [2ch] w:336px | h:80px 
+      el-1150 (h3) [0ch] w:336px | h:40px | fs:20px | fw:600 
+      el-1151 (p) [0ch] w:336px | h:40px | fs:15px 
+    el-1152 (div) [2ch] w:336px | h:80px 
+      el-1153 (h3) [0ch] w:336px | h:40px | fs:20px | fw:600 
+      el-1154 (p) [0ch] w:336px | h:40px | fs:15px 
+    el-1155 (div) [2ch] w:336px | h:80px 
+      el-1156 (h3) [0ch] w:336px | h:40px | fs:20px | fw:600 
+      el-1157 (p) [0ch] w:336px | h:40px | fs:15px 
+    el-1158 (div) [2ch] w:336px | h:80px 
+      el-1159 (h3) [0ch] w:336px | h:40px | fs:20px | fw:600 
+      el-1160 (p) [0ch] w:336px | h:40px | fs:15px 
+
+======================================================================
+SECTION: CUSTOMER_SUPPORT (el-1161) ÔÇö 23 descendants
+======================================================================
+el-1162 (section) [2ch] w:1200px | h:366px 
+  el-1163 (div) [1ch] w:1200px | h:108px 
+    el-1164 (h2) [1ch] w:1200px | h:108px | fs:48px | fw:700 
+      el-1165 (br) [0ch] d:inline | w:auto | h:auto | fs:48px | fw:700 
+  el-1166 (div) [2ch] d:grid | w:1200px | h:210px 
+    el-1167 (a) [2ch] d:flex | w:584px | h:210px ­şÄ¼ANIM ­şæåHOVER
+      el-1168 (div) [2ch] w:518px | h:68px 
+      el-1171 (div) [2ch] d:flex | w:518px | h:20px | fs:15px | fw:500 ­şÄ¼ANIM ­şæåHOVER
+    el-1176 (a) [2ch] d:flex | w:584px | h:210px ­şÄ¼ANIM ­şæåHOVER
+      el-1177 (div) [2ch] w:518px | h:92px 
+      el-1180 (div) [2ch] d:flex | w:518px | h:20px | fs:15px | fw:500 ­şÄ¼ANIM ­şæåHOVER
+
+======================================================================
+SECTION: FAQ (el-1185) ÔÇö 78 descendants
+======================================================================
+el-1186 (section) [3ch] w:800px | h:844px 
+  el-1187 (h2) [0ch] w:800px | h:64px | fs:48px | fw:700 
+  el-1188 (div) [8ch] w:800px | h:684px 
+    el-1189 (div) [2ch] pos:relative | w:800px | h:96px | bg:rgb(242, 242, 242) ­şæåHOVER
+    el-1200 (div) [2ch] pos:relative | w:800px | h:68px | bg:rgb(242, 242, 242) ­şæåHOVER
+    el-1209 (div) [2ch] pos:relative | w:800px | h:68px | bg:rgb(242, 242, 242) ­şæåHOVER
+    el-1218 (div) [2ch] pos:relative | w:800px | h:68px | bg:rgb(242, 242, 242) ­şæåHOVER
+    el-1227 (div) [2ch] pos:relative | w:800px | h:68px | bg:rgb(242, 242, 242) ­şæåHOVER
+    el-1236 (div) [2ch] pos:relative | w:800px | h:68px | bg:rgb(242, 242, 242) ­şæåHOVER
+    el-1245 (div) [2ch] pos:relative | w:800px | h:68px | bg:rgb(242, 242, 242) ­şæåHOVER
+    el-1254 (div) [2ch] pos:relative | w:800px | h:68px | bg:rgb(242, 242, 242) ­şæåHOVER
+  el-1263 (script) [0ch] d:none | w:auto | h:auto 
+
+======================================================================
+SECTION: PLATFORM_CAROUSEL (el-1264) ÔÇö 743 descendants
+======================================================================
+el-1265 (div) [3ch] h:528px 
+  el-1266 (div) [1ch] w:1240px | h:116px 
+  el-1268 (div) [1ch] h:218px 
+  el-1586 (div) [1ch] h:194px 
+
+======================================================================
+SECTION: FINAL_CTA (el-2008) ÔÇö 10 descendants
+======================================================================
+el-2009 (img) [0ch] pos:absolute | h:410px 
+el-2010 (div) [1ch] d:flex | pos:relative | h:410px 
+  el-2011 (section) [3ch] w:586.688px | h:170px 
+    el-2012 (h2) [0ch] w:586.688px | h:54px | fs:48px | fw:700 
+    el-2013 (p) [0ch] w:586.688px | h:28px | fs:20px 
+    el-2014 (div) [1ch] d:flex | w:586.688px | h:48px 
+      el-2015 (a) [1ch] d:flex | w:210.469px | h:48px | bg:rgb(255, 255, 255) | fs:17px | fw:600 ­şÄ¼ANIM ­şæåHOVER
+
+======================================================================
+SECTION: DOWNLOAD_APPS (el-2019) ÔÇö 127 descendants
+======================================================================
+el-2020 (section) [3ch] w:1200px | h:555px 
+  el-2021 (h2) [0ch] w:1200px | h:60px | fs:48px | fw:700 
+  el-2022 (p) [0ch] w:700px | h:104px | fs:20px 
+  el-2023 (div) [2ch] d:grid | w:1200px | h:391px 
+
+======================================================================
+ELEMENTS WITH ANIMATIONS/SCROLL
+======================================================================
+el-410 (div) SCROLL|SNAP  ÔÇö classes: flex snap-x snap-mandatory gap-6 overflow-x-auto overflow-y-hidden scroll-smooth px-5 pb-0.5 laptop:gap-8
+el-413 (div) SNAP  ÔÇö classes: h-[480px] w-[80vw] shrink-0 snap-center overflow-hidden laptop:w-[853px]
+el-437 (div) SNAP  ÔÇö classes: shrink-0 snap-center overflow-hidden
+el-467 (div) SNAP  ÔÇö classes: shrink-0 snap-center overflow-hidden
+el-497 (div) SNAP  ÔÇö classes: shrink-0 snap-center overflow-hidden
+el-527 (div) SNAP  ÔÇö classes: shrink-0 snap-center overflow-hidden
+el-557 (div) SNAP  ÔÇö classes: shrink-0 snap-center overflow-hidden
+el-587 (div) SNAP  ÔÇö classes: shrink-0 snap-center overflow-hidden
+el-617 (div) SNAP  ÔÇö classes: shrink-0 snap-center overflow-hidden
+el-645 (div) SNAP  ÔÇö classes: shrink-0 snap-center overflow-hidden
+el-675 (div) SNAP  ÔÇö classes: shrink-0 snap-center overflow-hidden
+el-705 (div) SNAP  ÔÇö classes: shrink-0 snap-center overflow-hidden
+el-733 (div) SNAP  ÔÇö classes: shrink-0 snap-center overflow-hidden
+el-761 (div) SNAP  ÔÇö classes: shrink-0 snap-center overflow-hidden
+el-791 (div) SNAP  ÔÇö classes: shrink-0 snap-center overflow-hidden
+el-821 (div) SNAP  ÔÇö classes: shrink-0 snap-center overflow-hidden
+el-849 (div) SNAP  ÔÇö classes: shrink-0 snap-center overflow-hidden
+el-879 (div) SNAP  ÔÇö classes: shrink-0 snap-center overflow-hidden
+el-909 (div) SNAP  ÔÇö classes: shrink-0 snap-center overflow-hidden
+el-939 (div) SNAP  ÔÇö classes: shrink-0 snap-center overflow-hidden
+el-969 (div) SNAP  ÔÇö classes: shrink-0 snap-center overflow-hidden
+el-999 (div) SNAP  ÔÇö classes: shrink-0 snap-center overflow-hidden
+el-1027 (div) SNAP  ÔÇö classes: shrink-0 snap-center overflow-hidden
+el-1075 (div) SCROLL|SNAP  ÔÇö classes: flex snap-x snap-mandatory gap-6 overflow-x-auto overflow-y-hidden scroll-smooth px-5 pb-0.5 laptop:gap-8
+el-1078 (div) SCROLL|SNAP  ÔÇö classes: flex h-[300px] snap-x snap-mandatory snap-center flex-col justify-between gap-3 overflow-x-auto rounded-xl border border
+el-1085 (div) SCROLL|SNAP  ÔÇö classes: flex h-[300px] snap-x snap-mandatory snap-center flex-col justify-between gap-3 overflow-x-auto rounded-xl border border
+el-1092 (div) SCROLL|SNAP  ÔÇö classes: flex h-[300px] snap-x snap-mandatory snap-center flex-col justify-between gap-3 overflow-x-auto rounded-xl border border
+el-1099 (div) SCROLL|SNAP  ÔÇö classes: flex h-[300px] snap-x snap-mandatory snap-center flex-col justify-between gap-3 overflow-x-auto rounded-xl border border
+el-1106 (div) SCROLL|SNAP  ÔÇö classes: flex h-[300px] snap-x snap-mandatory snap-center flex-col justify-between gap-3 overflow-x-auto rounded-xl border border
+el-1113 (div) SCROLL|SNAP  ÔÇö classes: flex h-[300px] snap-x snap-mandatory snap-center flex-col justify-between gap-3 overflow-x-auto rounded-xl border border
+el-1120 (div) SCROLL|SNAP  ÔÇö classes: flex h-[300px] snap-x snap-mandatory snap-center flex-col justify-between gap-3 overflow-x-auto rounded-xl border border
+el-1273 (div) ANIM slide_90s_linear_infinite ÔÇö classes: flex w-fit items-start space-x-4 laptop:space-x-8 animate-[slide_90s_linear_infinite] hover:[animation-play-state:paused
+el-1591 (div) ANIM slide-rtl_90s_linear_infinite ÔÇö classes: flex w-fit items-start space-x-4 laptop:space-x-8 animate-[slide-rtl_90s_linear_infinite] hover:[animation-play-state:pa
+
+=== ELEMENT TYPE COUNTS ===
+SVGs: 225, Images: 89, Videos: 3
+Links: 80, Buttons: 98
